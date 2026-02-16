@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Car vs Ride-Hailing Break-Even Calculator (Singapore)</title>
-<meta name="description" content="Interactive calculator to compare car ownership vs ride-hailing cost in Singapore and estimate your financial break-even point." />
-<link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html" />
+  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore)</title>
+  <meta name="description" content="Compare the 5-year cost of owning a car vs using ride-hailing in Singapore. Transparent benchmark model included.">
 </head>
+
 <body>
 
 <p><a href="/">← Back to Ownership Guide</a></p>
@@ -15,72 +14,78 @@
 <p><em>Last updated: February 2026</em></p>
 
 <p>
-This calculator estimates whether owning a car or using ride-hailing is financially cheaper over a 5-year period.
+This calculator estimates whether owning a car or relying on ride-hailing
+is financially cheaper over a 5-year period in Singapore.
 </p>
 
 <hr>
 
 <h2>Enter Your Monthly Ride-Hailing Spend</h2>
 
-<input type="number" id="rideCost" placeholder="e.g. 2200" />
+<input type="number" id="rideCost" placeholder="e.g. 2200">
 <button onclick="calculate()">Calculate</button>
 
 <p id="result"></p>
 
-<script>
-function calculate() {
-  var monthly = document.getElementById("rideCost").value;
-  if (!monthly) {
-    document.getElementById("result").innerHTML = "Please enter a number.";
-    return;
-  }
-
-  var rideTotal = monthly * 60;
-  var midCarCost = 155000;
-
-  var verdict = rideTotal > midCarCost
-    ? "Owning a car may be financially comparable or cheaper over 5 years."
-    : "Ride-hailing is likely financially cheaper over 5 years.";
-
-  document.getElementById("result").innerHTML =
-    "5-Year Ride-Hailing Cost: $" + rideTotal.toLocaleString() +
-    "<br><br>" + verdict;
-}
-</script>
-
 <hr>
 
-<h2>Understanding the Numbers</h2>
+<h2>How This Comparison Works</h2>
 
 <p>
-This calculator uses a mid-range 5-year ownership estimate for comparison.
-For detailed modelling, see:
+For comparison, we use a mid-range 5-year Singapore car ownership model.
+This benchmark reflects realistic costs for a typical Category A/B vehicle
+under current COE conditions.
 </p>
 
+<p><strong>Estimated 5-Year Car Ownership Cost: $150,000</strong></p>
+
+<p>
+This estimate includes depreciation, COE, insurance, road tax,
+maintenance, fuel, parking, and opportunity cost.
+</p>
+
+<p>
+See full breakdown:
 <ul>
-  <li>
-    <a href="/car-ownership-cost.html">
-      The Real Cost of Owning a Car in Singapore (5-Year Breakdown)
-    </a>
-  </li>
-  <li>
-    <a href="/monthly-cost-of-owning-a-car-singapore.html">
-      True Monthly Cost of Owning a Car in Singapore
-    </a>
-  </li>
-  <li>
-    <a href="/car-vs-ride-hailing-cost.html">
-      Full Car vs Ride-Hailing Comparison
-    </a>
-  </li>
+  <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
+  <li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
 </ul>
+</p>
 
 <p>
 If you are evaluating leasing instead of buying, see:
-<a href="/car-leasing-vs-buying-singapore.html">
-Car Leasing vs Buying in Singapore
-</a>.
+<a href="/car-leasing-vs-buying.html">Car Leasing vs Buying in Singapore</a>.
 </p>
+
+<hr>
+
+<script>
+function calculate() {
+  var monthly = document.getElementById("rideCost").value;
+
+  if (monthly === "" || monthly <= 0) {
+    document.getElementById("result").innerHTML = "Please enter a valid monthly amount.";
+    return;
+  }
+
+  var rideFiveYear = monthly * 12 * 5;
+  var carFiveYear = 150000;
+  var difference = carFiveYear - rideFiveYear;
+
+  var output = "<h3>5-Year Ride-Hailing Cost: $" + rideFiveYear.toLocaleString() + "</h3>";
+  output += "<h3>5-Year Car Ownership Cost (Benchmark): $" + carFiveYear.toLocaleString() + "</h3>";
+
+  if (difference > 0) {
+    output += "<p><strong>Ride-hailing is cheaper by approximately $" + difference.toLocaleString() + " over 5 years.</strong></p>";
+  } else if (difference < 0) {
+    output += "<p><strong>Owning a car is cheaper by approximately $" + Math.abs(difference).toLocaleString() + " over 5 years.</strong></p>";
+  } else {
+    output += "<p><strong>The costs are approximately equal over 5 years.</strong></p>";
+  }
+
+  document.getElementById("result").innerHTML = output;
+}
+</script>
 
 </body>
 </html>
