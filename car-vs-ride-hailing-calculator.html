@@ -1,205 +1,91 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore) — Ownership Guide</title>
-  <meta name="description" content="Estimate whether owning a car or using ride-hailing is cheaper in Singapore over 5 years. Includes break-even point and a monthly cost breakdown table." />
+  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore)</title>
+  <meta name="description" content="Compare the 5-year cost of owning a car vs using ride-hailing in Singapore. Transparent benchmark model included.">
 </head>
 
 <body>
-  <p><a href="/">← Back to Ownership Guide</a></p>
 
-  <h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
-  <p><em>Last updated: February 2026</em></p>
+<p><a href="/">← Back to Ownership Guide</a></p>
 
-  <p>
-    This calculator estimates whether <strong>owning a car</strong> or <strong>using ride-hailing</strong> is financially cheaper over a 5-year period.
-    It’s designed to be a simple decision aid — not a perfect model.
-  </p>
+<h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
 
-  <hr>
+<p><em>Last updated: February 2026</em></p>
 
-  <h2>Enter Your Monthly Ride-Hailing Spend</h2>
+<p>
+This calculator estimates whether owning a car or relying on ride-hailing
+is financially cheaper over a 5-year period in Singapore.
+</p>
 
-  <p>
-    <label for="rideMonthly"><strong>Monthly ride-hailing spend (SGD):</strong></label><br>
-    <input
-      id="rideMonthly"
-      type="number"
-      inputmode="decimal"
-      min="0"
-      step="10"
-      placeholder="e.g. 1200"
-      style="padding:8px; width:240px; max-width:80%;"
-    />
-    <button id="calcBtn" style="padding:8px 12px; margin-left:8px;">Calculate</button>
-  </p>
+<hr>
 
-  <p style="margin-top:0;">
-    <small>
-      Tip: If you’re not sure, estimate: average rides/day × average fare × 30.
-    </small>
-  </p>
+<h2>Enter Your Monthly Ride-Hailing Spend</h2>
 
-  <div id="errorBox" style="display:none; padding:10px; border:1px solid #d33; background:#fff5f5; margin:12px 0;"></div>
+<input type="number" id="rideCost" placeholder="e.g. 2200">
+<button onclick="calculate()">Calculate</button>
 
-  <div id="resultBox" style="display:none; padding:12px; border:1px solid #ddd; background:#fafafa; margin:12px 0;">
-    <h3 style="margin-top:0;">Result</h3>
-    <p id="headline" style="font-size:1.05em;"></p>
+<p id="result"></p>
 
-    <ul>
-      <li><strong>Estimated 5-year car ownership cost (model):</strong> <span id="car5y"></span></li>
-      <li><strong>Equivalent monthly car cost:</strong> <span id="carMonthly"></span></li>
-      <li><strong>Your ride-hailing (monthly):</strong> <span id="rideMonthlyOut"></span></li>
-      <li><strong>Your ride-hailing (5 years):</strong> <span id="ride5yOut"></span></li>
-      <li><strong>5-year difference:</strong> <span id="diffOut"></span></li>
-      <li><strong>Break-even ride-hailing per month:</strong> <span id="breakevenOut"></span></li>
-    </ul>
+<hr>
 
-    <p style="margin-bottom:0;">
-      <small>
-        This uses a mid-range 5-year ownership estimate as the baseline. If your situation differs (COE tier, mileage, parking, financing, insurance profile),
-        treat this as directional.
-      </small>
-    </p>
-  </div>
+<h2>How This Comparison Works</h2>
 
-  <hr>
+<p>
+For comparison, we use a mid-range 5-year Singapore car ownership model.
+This benchmark reflects realistic costs for a typical Category A/B vehicle
+under current COE conditions.
+</p>
 
-  <h2>Monthly Breakdown (60 months)</h2>
-  <p><small>This table updates after you calculate.</small></p>
+<p><strong>Estimated 5-Year Car Ownership Cost: $150,000</strong></p>
 
-  <div style="overflow:auto; border:1px solid #eee; padding:8px;">
-    <table id="breakdownTable" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; min-width:520px;">
-      <thead>
-        <tr>
-          <th>Month</th>
-          <th>Car (monthly)</th>
-          <th>Car (cumulative)</th>
-          <th>Ride-hailing (monthly)</th>
-          <th>Ride-hailing (cumulative)</th>
-        </tr>
-      </thead>
-      <tbody id="breakdownBody">
-        <tr>
-          <td colspan="5"><em>Run a calculation to populate the table.</em></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<p>
+This estimate includes depreciation, COE, insurance, road tax,
+maintenance, fuel, parking, and opportunity cost.
+</p>
 
-  <hr>
+<p>
+See full breakdown:
+<ul>
+  <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
+  <li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
+</ul>
+</p>
 
-  <h2>Understanding the Numbers</h2>
-  <p>This calculator uses a mid-range 5-year ownership estimate for comparison. For detailed modelling, see:</p>
-  <ul>
-    <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
-    <li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
-  </ul>
+<p>
+If you are evaluating leasing instead of buying, see:
+<a href="/car-leasing-vs-buying.html">Car Leasing vs Buying in Singapore</a>.
+</p>
 
-  <p>If you are evaluating leasing instead of buying, see: <a href="/car-leasing-vs-buying.html">Car Leasing vs Buying in Singapore</a>.</p>
+<hr>
 
-  <script>
-    (function () {
-      // === EDITABLE ASSUMPTIONS (keep simple for now) ===
-      // Mid-range 5-year total ownership cost estimate (SGD).
-      // You can tune this number later as you improve your model.
-      const CAR_5Y_TOTAL = 120000; // SGD
-      const MONTHS = 60;
+<script>
+function calculate() {
+  var monthly = document.getElementById("rideCost").value;
 
-      // === Helpers ===
-      const fmt = (n) =>
-        new Intl.NumberFormat("en-SG", { style: "currency", currency: "SGD", maximumFractionDigits: 0 }).format(n);
+  if (monthly === "" || monthly <= 0) {
+    document.getElementById("result").innerHTML = "Please enter a valid monthly amount.";
+    return;
+  }
 
-      function showError(msg) {
-        const box = document.getElementById("errorBox");
-        box.textContent = msg;
-        box.style.display = "block";
-      }
+  var rideFiveYear = monthly * 12 * 5;
+  var carFiveYear = 150000;
+  var difference = carFiveYear - rideFiveYear;
 
-      function clearError() {
-        const box = document.getElementById("errorBox");
-        box.textContent = "";
-        box.style.display = "none";
-      }
+  var output = "<h3>5-Year Ride-Hailing Cost: $" + rideFiveYear.toLocaleString() + "</h3>";
+  output += "<h3>5-Year Car Ownership Cost (Benchmark): $" + carFiveYear.toLocaleString() + "</h3>";
 
-      function setText(id, value) {
-        document.getElementById(id).textContent = value;
-      }
+  if (difference > 0) {
+    output += "<p><strong>Ride-hailing is cheaper by approximately $" + difference.toLocaleString() + " over 5 years.</strong></p>";
+  } else if (difference < 0) {
+    output += "<p><strong>Owning a car is cheaper by approximately $" + Math.abs(difference).toLocaleString() + " over 5 years.</strong></p>";
+  } else {
+    output += "<p><strong>The costs are approximately equal over 5 years.</strong></p>";
+  }
 
-      function buildTable(carMonthly, rideMonthly) {
-        const tbody = document.getElementById("breakdownBody");
-        tbody.innerHTML = "";
+  document.getElementById("result").innerHTML = output;
+}
+</script>
 
-        let carCum = 0;
-        let rideCum = 0;
-
-        for (let m = 1; m <= MONTHS; m++) {
-          carCum += carMonthly;
-          rideCum += rideMonthly;
-
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${m}</td>
-            <td>${fmt(carMonthly)}</td>
-            <td>${fmt(carCum)}</td>
-            <td>${fmt(rideMonthly)}</td>
-            <td>${fmt(rideCum)}</td>
-          `;
-          tbody.appendChild(tr);
-        }
-      }
-
-      function calculate() {
-        clearError();
-
-        const raw = document.getElementById("rideMonthly").value;
-        const rideMonthly = Number(raw);
-
-        if (!raw || Number.isNaN(rideMonthly) || rideMonthly < 0) {
-          showError("Please enter a valid monthly ride-hailing amount (0 or more).");
-          return;
-        }
-
-        const carMonthly = CAR_5Y_TOTAL / MONTHS;
-        const ride5y = rideMonthly * MONTHS;
-        const diff = ride5y - CAR_5Y_TOTAL; // positive means ride-hailing costs MORE
-
-        // Headline logic
-        let headline;
-        if (Math.abs(diff) < 500) {
-          headline = `At ${fmt(rideMonthly)}/month, you’re roughly at break-even over 5 years.`;
-        } else if (diff > 0) {
-          headline = `At ${fmt(rideMonthly)}/month, owning a car is estimated to be cheaper than ride-hailing over 5 years by about ${fmt(diff)}.`;
-        } else {
-          headline = `At ${fmt(rideMonthly)}/month, ride-hailing is estimated to be cheaper than owning a car over 5 years by about ${fmt(Math.abs(diff))}.`;
-        }
-
-        // Output
-        document.getElementById("resultBox").style.display = "block";
-        setText("headline", headline);
-        setText("car5y", fmt(CAR_5Y_TOTAL));
-        setText("carMonthly", fmt(carMonthly));
-        setText("rideMonthlyOut", fmt(rideMonthly));
-        setText("ride5yOut", fmt(ride5y));
-        setText("diffOut", diff >= 0 ? `${fmt(diff)} (ride-hailing more)` : `${fmt(Math.abs(diff))} (car more)`);
-        setText("breakevenOut", fmt(carMonthly));
-
-        // Table
-        buildTable(carMonthly, rideMonthly);
-      }
-
-      // Wire up events safely after DOM loads
-      document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("calcBtn").addEventListener("click", calculate);
-
-        // Allow Enter key in the input box
-        document.getElementById("rideMonthly").addEventListener("keydown", (e) => {
-          if (e.key === "Enter") calculate();
-        });
-      });
-    })();
-  </script>
 </body>
 </html>
