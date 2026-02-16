@@ -1,375 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore) | Ownership Guide</title>
-  <meta name="description" content="Estimate whether owning a car or relying on ride-hailing is financially cheaper over 5 years in Singapore. Includes a transparent benchmark cost breakdown." />
-
-  <style>
-    :root{
-      --text:#111;
-      --muted:#555;
-      --border:#d7d7d7;
-      --bg:#fff;
-      --panel:#f7f7f7;
-      --panel2:#fafafa;
-      --accent:#111;
-      --good:#0b6b3a;
-      --bad:#8a1f1f;
-      --shadow: 0 1px 0 rgba(0,0,0,.04);
-    }
-    body{
-      margin:0;
-      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.5;
-    }
-    .wrap{
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 18px 16px 60px;
-    }
-    a{ color:#1a0dab; }
-    .toplink{
-      display:inline-block;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-    h1{
-      font-size: 44px;
-      line-height: 1.1;
-      margin: 12px 0 10px;
-      letter-spacing: -.2px;
-    }
-    .meta{
-      font-style: italic;
-      color: var(--muted);
-      margin: 0 0 10px;
-    }
-    .desc{
-      margin: 0 0 14px;
-      color: var(--text);
-    }
-    hr{
-      border:0;
-      border-top:1px solid var(--border);
-      margin: 16px 0;
-    }
-
-    .card{
-      border: 1px solid var(--border);
-      background: var(--panel2);
-      border-radius: 10px;
-      padding: 14px 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    @media(min-width: 720px){
-      .grid{ grid-template-columns: 1.1fr .9fr; }
-    }
-
-    label{
-      display:block;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .row{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap: wrap;
-    }
-    input{
-      font-family: inherit;
-      font-size: 18px;
-      padding: 9px 10px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      width: min(320px, 100%);
-      background: #fff;
-    }
-    button{
-      font-family: inherit;
-      font-size: 18px;
-      padding: 9px 14px;
-      border: 1px solid var(--accent);
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:active{ transform: translateY(1px); }
-
-    .hint{
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 8px;
-    }
-
-    .resultBox{
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px;
-      background: var(--panel);
-      box-shadow: var(--shadow);
-    }
-    .resultTitle{
-      font-weight: 800;
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-    .kpi{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-    @media(min-width: 560px){
-      .kpi{ grid-template-columns: 1fr 1fr; }
-    }
-    .kpiItem{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius: 10px;
-      padding: 10px 12px;
-    }
-    .kpiLabel{ color: var(--muted); font-size: 14px; margin: 0 0 3px; }
-    .kpiValue{ font-weight: 900; font-size: 20px; margin: 0; }
-    .verdict{
-      font-weight: 900;
-      font-size: 18px;
-      margin: 6px 0 0;
-    }
-    .verdict.good{ color: var(--good); }
-    .verdict.bad{ color: var(--bad); }
-
-    .mini{
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .breakdown{
-      margin-top: 10px;
-      border-top: 1px dashed var(--border);
-      padding-top: 10px;
-    }
-    .breakdown h3{
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-    table{
-      width:100%;
-      border-collapse: collapse;
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius: 10px;
-      overflow:hidden;
-    }
-    th, td{
-      text-align:left;
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--border);
-      font-size: 15px;
-    }
-    th{ background: #fcfcfc; }
-    tr:last-child td{ border-bottom:0; }
-
-    .sectionTitle{
-      font-size: 26px;
-      margin: 22px 0 8px;
-    }
-    ul{ margin: 8px 0 0 22px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car vs Ride-Hailing Break-Even Calculator (Singapore) | Ownership Guide</title>
+<meta name="description" content="Estimate whether owning a car or relying on ride-hailing is financially cheaper over 5 years in Singapore. Includes a transparent benchmark cost breakdown.">
+<link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html">
+<link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-  <div class="wrap">
-    <a class="toplink" href="/index.html">&larr; Back to Ownership Guide</a>
 
-    <h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
-    <p class="meta">Last updated: February 2026</p>
-    <p class="desc">
-      This calculator estimates whether owning a car or relying on ride-hailing is financially cheaper over a <strong>5-year</strong> period in Singapore.
-      It compares your ride-hailing spend against a transparent “typical car” benchmark.
-    </p>
+<div class="container">
 
-    <hr />
+<div class="nav"><a href="/">← Back to Ownership Guide</a></div>
 
-    <div class="grid">
-      <div class="card">
-        <label for="monthlySpend">Enter your monthly ride-hailing spend (SGD)</label>
-        <div class="row">
-          <input id="monthlySpend" type="number" inputmode="numeric" min="0" step="50" placeholder="e.g. 1200" />
-          <button id="calcBtn" type="button">Calculate</button>
-        </div>
-        <div class="hint">
-          Tip: use your last 2–3 months’ average (Grab/Gojek + taxis).
-        </div>
-      </div>
+<h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
 
-      <div class="resultBox" id="resultBox" aria-live="polite">
-        <div class="resultTitle">Your 5-year comparison</div>
+<p class="meta">Last updated: February 2026</p>
 
-        <div class="kpi">
-          <div class="kpiItem">
-            <p class="kpiLabel">5-Year Ride-Hailing Cost</p>
-            <p class="kpiValue" id="rideCost">$—</p>
-          </div>
-          <div class="kpiItem">
-            <p class="kpiLabel">5-Year Car Ownership Cost (Benchmark)</p>
-            <p class="kpiValue" id="carCost">$150,000</p>
-          </div>
-        </div>
+<p>
+This calculator estimates whether owning a car or relying on ride-hailing is financially cheaper over a <strong>5-year</strong> period in Singapore.
+It compares your ride-hailing spend against a transparent benchmark ownership model.
+</p>
 
-        <div class="kpi">
-          <div class="kpiItem">
-            <p class="kpiLabel">Difference (Ride-hailing − Car)</p>
-            <p class="kpiValue" id="diff">$—</p>
-          </div>
-          <div class="kpiItem">
-            <p class="kpiLabel">Break-even monthly ride-hailing spend</p>
-            <p class="kpiValue" id="breakeven">$—</p>
-          </div>
-        </div>
+<hr>
 
-        <p class="verdict" id="verdict">Enter a number and tap “Calculate”.</p>
+<h2>Enter Your Monthly Ride-Hailing Spend</h2>
 
-        <div class="mini">
-          Benchmark is a mid-range 5-year ownership model for a typical Cat A/B car in Singapore. See breakdown below.
-        </div>
-
-        <div class="breakdown">
-          <h3>Benchmark breakdown (5 years): $150,000</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Component</th>
-                <th>5-Year Estimate (SGD)</th>
-                <th>What it represents</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Depreciation + COE</td>
-                <td>$95,000</td>
-                <td>Value loss / COE cost over ownership horizon</td>
-              </tr>
-              <tr>
-                <td>Insurance + road tax</td>
-                <td>$12,000</td>
-                <td>Typical annual premiums + road tax</td>
-              </tr>
-              <tr>
-                <td>Maintenance + repairs</td>
-                <td>$10,000</td>
-                <td>Servicing, tyres, wear-and-tear, contingencies</td>
-              </tr>
-              <tr>
-                <td>Fuel</td>
-                <td>$16,000</td>
-                <td>Moderate driving profile</td>
-              </tr>
-              <tr>
-                <td>Parking + ERP</td>
-                <td>$10,000</td>
-                <td>Season parking + ad-hoc parking + ERP</td>
-              </tr>
-              <tr>
-                <td>Opportunity cost</td>
-                <td>$7,000</td>
-                <td>Conservative cost of capital on tied-up cash</td>
-              </tr>
-              <tr>
-                <td><strong>Total</strong></td>
-                <td><strong>$150,000</strong></td>
-                <td><strong>Used as benchmark for this calculator</strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="mini">
-            Want the full reasoning and assumptions? Use the articles below.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr />
-
-    <h2 class="sectionTitle">Next steps</h2>
-    <p>
-      For detailed modelling and assumptions, see:
-    </p>
-    <ul>
-      <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
-      <li><a href="/true-monthly-cost-of-owning-a-car.html">True Monthly Cost of Owning a Car in Singapore</a></li>
-      <li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
-    </ul>
-
-    <p class="mini">
-      If you are evaluating leasing instead of buying, see:
-      <a href="/car-leasing-vs-buying.html">Car Leasing vs Buying in Singapore</a>.
-    </p>
+<div class="box">
+  <div class="btn-row">
+    <input id="monthlySpend" type="number" inputmode="numeric" min="0" step="50" placeholder="e.g. 1200">
+    <button id="calcBtn" type="button">Calculate</button>
   </div>
+  <p class="muted">Tip: Use your last 2–3 months’ average (Grab/Gojek + taxis).</p>
+</div>
 
-  <script>
-    (function(){
-      const BENCHMARK_5Y = 150000; // SGD
-      const monthlySpendEl = document.getElementById('monthlySpend');
-      const calcBtn = document.getElementById('calcBtn');
+<div class="box" id="resultBox">
+  <h3>Your 5-Year Comparison</h3>
 
-      const rideCostEl = document.getElementById('rideCost');
-      const diffEl = document.getElementById('diff');
-      const breakevenEl = document.getElementById('breakeven');
-      const verdictEl = document.getElementById('verdict');
+  <p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
+  <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> $150,000</p>
+  <p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
+  <p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
 
-      function fmt(n){
-        return n.toLocaleString('en-SG', { maximumFractionDigits: 0 });
-      }
+  <p id="verdict" class="muted">Enter a number and click “Calculate”.</p>
+</div>
 
-      function calculate(){
-        const monthly = Number(monthlySpendEl.value);
-        if (!isFinite(monthly) || monthly < 0){
-          verdictEl.className = 'verdict';
-          verdictEl.textContent = 'Please enter a valid monthly amount (0 or above).';
-          rideCostEl.textContent = '$—';
-          diffEl.textContent = '$—';
-          breakevenEl.textContent = '$—';
-          return;
-        }
+<hr>
 
-        const ride5y = monthly * 12 * 5;
-        const diff = ride5y - BENCHMARK_5Y;
-        const breakevenMonthly = BENCHMARK_5Y / 60; // 60 months
+<h2>Benchmark Breakdown (5 Years: $150,000)</h2>
 
-        rideCostEl.textContent = '$' + fmt(ride5y);
-        diffEl.textContent = (diff >= 0 ? '+$' : '-$') + fmt(Math.abs(diff));
-        breakevenEl.textContent = '$' + fmt(breakevenMonthly);
+<table>
+<tr>
+<th>Component</th>
+<th>5-Year Estimate (SGD)</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Depreciation + COE</td>
+<td>$95,000</td>
+<td>Vehicle value loss and COE cost over ownership horizon</td>
+</tr>
+<tr>
+<td>Insurance + Road Tax</td>
+<td>$12,000</td>
+<td>Typical annual premiums and tax</td>
+</tr>
+<tr>
+<td>Maintenance + Repairs</td>
+<td>$10,000</td>
+<td>Servicing, tyres, wear-and-tear</td>
+</tr>
+<tr>
+<td>Fuel</td>
+<td>$16,000</td>
+<td>Moderate driving profile</td>
+</tr>
+<tr>
+<td>Parking + ERP</td>
+<td>$10,000</td>
+<td>Season parking and road usage charges</td>
+</tr>
+<tr>
+<td>Opportunity Cost</td>
+<td>$7,000</td>
+<td>Conservative cost of tied-up capital</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>$150,000</strong></td>
+<td><strong>Used as benchmark for this calculator</strong></td>
+</tr>
+</table>
 
-        if (ride5y < BENCHMARK_5Y){
-          verdictEl.className = 'verdict good';
-          verdictEl.textContent = `Ride-hailing is cheaper by about $${fmt(BENCHMARK_5Y - ride5y)} over 5 years (vs the benchmark car).`;
-        } else if (ride5y > BENCHMARK_5Y){
-          verdictEl.className = 'verdict bad';
-          verdictEl.textContent = `Owning the benchmark car is cheaper by about $${fmt(ride5y - BENCHMARK_5Y)} over 5 years (vs your ride-hailing spend).`;
-        } else {
-          verdictEl.className = 'verdict';
-          verdictEl.textContent = 'You are roughly at break-even over 5 years.';
-        }
-      }
+<hr>
 
-      calcBtn.addEventListener('click', calculate);
-      monthlySpendEl.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') calculate();
-      });
-    })();
-  </script>
+<h2>Next Steps</h2>
+
+<ul>
+<li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
+<li><a href="/monthly-cost-of-owning-a-car-singapore.html">True Monthly Cost of Owning a Car in Singapore</a></li>
+<li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
+<li><a href="/car-leasing-vs-buying-singapore.html">Car Leasing vs Buying in Singapore</a></li>
+</ul>
+
+</div>
+
+<script>
+(function(){
+  const BENCHMARK_5Y = 150000;
+  const monthlySpendEl = document.getElementById('monthlySpend');
+  const calcBtn = document.getElementById('calcBtn');
+
+  const rideCostEl = document.getElementById('rideCost');
+  const diffEl = document.getElementById('diff');
+  const breakevenEl = document.getElementById('breakeven');
+  const verdictEl = document.getElementById('verdict');
+
+  function fmt(n){
+    return n.toLocaleString('en-SG', { maximumFractionDigits: 0 });
+  }
+
+  function calculate(){
+    const monthly = Number(monthlySpendEl.value);
+
+    if (!isFinite(monthly) || monthly < 0){
+      verdictEl.className = 'muted';
+      verdictEl.textContent = 'Please enter a valid monthly amount.';
+      rideCostEl.textContent = '$—';
+      diffEl.textContent = '$—';
+      breakevenEl.textContent = '$—';
+      return;
+    }
+
+    const ride5y = monthly * 12 * 5;
+    const diff = ride5y - BENCHMARK_5Y;
+    const breakevenMonthly = BENCHMARK_5Y / 60;
+
+    rideCostEl.textContent = '$' + fmt(ride5y);
+    diffEl.textContent = (diff >= 0 ? '+$' : '-$') + fmt(Math.abs(diff));
+    breakevenEl.textContent = '$' + fmt(breakevenMonthly);
+
+    if (ride5y < BENCHMARK_5Y){
+      verdictEl.className = '';
+      verdictEl.textContent =
+        `Ride-hailing is cheaper by about $${fmt(BENCHMARK_5Y - ride5y)} over 5 years.`;
+    } else if (ride5y > BENCHMARK_5Y){
+      verdictEl.className = '';
+      verdictEl.textContent =
+        `Owning the benchmark car is cheaper by about $${fmt(ride5y - BENCHMARK_5Y)} over 5 years.`;
+    } else {
+      verdictEl.className = '';
+      verdictEl.textContent =
+        'You are roughly at break-even over 5 years.';
+    }
+  }
+
+  calcBtn.addEventListener('click', calculate);
+  monthlySpendEl.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') calculate();
+  });
+})();
+</script>
+
 </body>
 </html>
