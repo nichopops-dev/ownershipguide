@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://ownershipguide.com/</loc></url>
+  <url>
+    <loc>https://ownershipguide.com/</loc>
+  </url>
 
-  <url><loc>https://ownershipguide.com/car-ownership-cost.html</loc></url>
-  <url><loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc></url>
-  <url><loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc></url>
+  <url>
+    <loc>https://ownershipguide.com/car-ownership-cost.html</loc>
+  </url>
 
-  <url><loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc></url>
-  <url><loc>https://ownershipguide.com/condo-ownership-cost.html</loc></url>
-  <url><loc>https://ownershipguide.com/bto-vs-resale-cost.html</loc></url>
+  <url>
+    <loc>https://ownershipguide.com/monthly-cost-of-owning-a-car-singapore.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/car-leasing-vs-buying-singapore.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/condo-ownership-cost.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/bto-vs-resale-cost.html</loc>
+  </url>
 
 </urlset>
