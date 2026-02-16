@@ -1,241 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Car vs Ride-Hailing Calculator (Singapore) — Break-Even Tool</title>
-  <meta name="description" content="A simple break-even calculator to compare car ownership vs ride-hailing in Singapore over 5 years, including an optional opportunity cost estimate." />
-  <link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html" />
+<meta charset="UTF-8">
+<title>Car vs Ride-Hailing Break-Even Calculator (Singapore)</title>
+<meta name="description" content="Interactive calculator to compare car ownership vs ride-hailing cost in Singapore and estimate your financial break-even point." />
+<link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html" />
 </head>
 <body>
 
 <p><a href="/">← Back to Ownership Guide</a></p>
 
-<h1>Car vs Ride-Hailing Calculator (Singapore) — Break-Even Tool</h1>
+<h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
+
 <p><em>Last updated: February 2026</em></p>
 
 <p>
-Use this to compare your <strong>5-year total cost</strong> of owning a car vs using ride-hailing (Grab / Gojek / TADA).
-This tool is intentionally simple: it prioritises clarity, not false precision.
+This calculator estimates whether owning a car or using ride-hailing is financially cheaper over a 5-year period.
 </p>
 
 <hr>
 
-<h2>Inputs</h2>
+<h2>Enter Your Monthly Ride-Hailing Spend</h2>
 
-<form id="calcForm">
+<input type="number" id="rideCost" placeholder="e.g. 2200" />
+<button onclick="calculate()">Calculate</button>
 
-  <h3>A) Ride-Hailing</h3>
-  <p>
-    <label>
-      Monthly ride-hailing spend (SGD):
-      <input type="number" id="rideMonthly" min="0" step="50" value="2000" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Surge / irregular buffer (%):
-      <input type="number" id="rideBufferPct" min="0" max="100" step="1" value="10" />
-    </label>
-  </p>
-
-  <hr>
-
-  <h3>B) Car Ownership</h3>
-
-  <p>
-    <label>
-      Choose a preset (optional):
-      <select id="carPreset">
-        <option value="custom" selected>Custom (I will input my own)</option>
-        <option value="low">Typical “lower” 5-year total: $122,500</option>
-        <option value="mid">Typical “mid” 5-year total: $155,000</option>
-        <option value="high">Typical “higher” 5-year total: $190,500</option>
-      </select>
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Car total cost over 5 years (SGD):
-      <input type="number" id="carTotal5y" min="0" step="500" value="155000" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Upfront capital tied up (downpayment + fees) (SGD):
-      <input type="number" id="carUpfront" min="0" step="500" value="40000" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Opportunity cost rate (annual %, optional):
-      <input type="number" id="oppRate" min="0" max="50" step="0.5" value="5" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Time horizon (years):
-      <input type="number" id="years" min="1" max="10" step="1" value="5" />
-    </label>
-  </p>
-
-  <p>
-    <button type="button" id="btnCalc">Calculate</button>
-    <button type="button" id="btnReset">Reset</button>
-  </p>
-
-</form>
-
-<hr>
-
-<h2>Results</h2>
-
-<div id="results" style="border:1px solid #ddd; padding:12px;">
-  <p>Enter your numbers and click <strong>Calculate</strong>.</p>
-</div>
-
-<hr>
-
-<h2>How to Interpret This</h2>
-
-<ul>
-  <li><strong>Ride-hailing is usually cheaper</strong> if your monthly spend is relatively stable and below the car break-even point.</li>
-  <li><strong>Car ownership can win</strong> if ride-hailing usage is heavy, schedule-critical, and you can keep car total cost disciplined.</li>
-  <li>This calculator doesn’t price “stress” perfectly — but it will show the cost trade-off clearly.</li>
-</ul>
-
-<hr>
-
-<h3>Related Singapore Ownership Breakdowns</h3>
-<ul>
-  <li><a href="/car-vs-ride-hailing-cost.html">Car vs Ride-Hailing in Singapore: Full Cost Comparison (2026)</a></li>
-  <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car</a></li>
-</ul>
+<p id="result"></p>
 
 <script>
-  function fmt(n) {
-    return new Intl.NumberFormat('en-SG', { style: 'currency', currency: 'SGD', maximumFractionDigits: 0 }).format(n);
+function calculate() {
+  var monthly = document.getElementById("rideCost").value;
+  if (!monthly) {
+    document.getElementById("result").innerHTML = "Please enter a number.";
+    return;
   }
 
-  function clamp(n, min, max) {
-    return Math.max(min, Math.min(max, n));
-  }
+  var rideTotal = monthly * 60;
+  var midCarCost = 155000;
 
-  function calcOpportunityCost(upfront, annualRatePct, years) {
-    // Simple compounded opportunity cost estimate:
-    // FV = upfront * ( (1+r)^years - 1 )
-    const r = Math.max(0, annualRatePct) / 100.0;
-    return upfront * (Math.pow(1 + r, years) - 1);
-  }
+  var verdict = rideTotal > midCarCost
+    ? "Owning a car may be financially comparable or cheaper over 5 years."
+    : "Ride-hailing is likely financially cheaper over 5 years.";
 
-  function getNumber(id) {
-    const v = parseFloat(document.getElementById(id).value);
-    return isFinite(v) ? v : 0;
-  }
-
-  function setNumber(id, value) {
-    document.getElementById(id).value = value;
-  }
-
-  function applyPreset() {
-    const preset = document.getElementById('carPreset').value;
-    if (preset === 'low') setNumber('carTotal5y', 122500);
-    if (preset === 'mid') setNumber('carTotal5y', 155000);
-    if (preset === 'high') setNumber('carTotal5y', 190500);
-  }
-
-  function calculate() {
-    const years = clamp(getNumber('years'), 1, 10);
-
-    const rideMonthly = Math.max(0, getNumber('rideMonthly'));
-    const rideBufferPct = clamp(getNumber('rideBufferPct'), 0, 100);
-
-    const baseRide = rideMonthly * 12 * years;
-    const rideBuffer = baseRide * (rideBufferPct / 100.0);
-    const rideTotal = baseRide + rideBuffer;
-
-    const carTotal5y = Math.max(0, getNumber('carTotal5y'));
-    const carUpfront = Math.max(0, getNumber('carUpfront'));
-    const oppRate = clamp(getNumber('oppRate'), 0, 50);
-
-    const oppCost = calcOpportunityCost(carUpfront, oppRate, years);
-    const carTotalWithOpp = carTotal5y + oppCost;
-
-    const diff = carTotalWithOpp - rideTotal; // positive means car more expensive
-    const verdict = diff > 0
-      ? "Ride-hailing is cheaper (based on your inputs)."
-      : (diff < 0 ? "Car ownership is cheaper (based on your inputs)." : "They are approximately equal (based on your inputs).");
-
-    // Break-even monthly ride spend (approx):
-    // rideMonthlyBreakEven ≈ carTotalWithOpp / (12*years*(1+buffer))
-    const denom = 12 * years * (1 + rideBufferPct / 100.0);
-    const breakEvenMonthly = denom > 0 ? (carTotalWithOpp / denom) : 0;
-
-    const html = `
-      <p><strong>Verdict:</strong> ${verdict}</p>
-
-      <h3>Ride-hailing total</h3>
-      <ul>
-        <li>Base ride-hailing cost: ${fmt(baseRide)}</li>
-        <li>Buffer (${rideBufferPct}%): ${fmt(rideBuffer)}</li>
-        <li><strong>Total ride-hailing over ${years} years:</strong> ${fmt(rideTotal)}</li>
-      </ul>
-
-      <h3>Car ownership total</h3>
-      <ul>
-        <li>Car total cost over ${years} years: ${fmt(carTotal5y)}</li>
-        <li>Opportunity cost estimate on upfront capital (${oppRate}% p.a.): ${fmt(oppCost)}</li>
-        <li><strong>Total car cost (incl. opportunity cost):</strong> ${fmt(carTotalWithOpp)}</li>
-      </ul>
-
-      <h3>Difference</h3>
-      <p>
-        Car (incl. opportunity cost) minus ride-hailing = <strong>${fmt(diff)}</strong>
-        ${diff > 0 ? "(car costs more)" : (diff < 0 ? "(car costs less)" : "(roughly equal)")}
-      </p>
-
-      <h3>Break-even guide</h3>
-      <p>
-        Based on your car total + assumptions, ride-hailing becomes more expensive than owning a car at roughly:
-        <br>
-        <strong>${fmt(breakEvenMonthly)} per month</strong> in ride-hailing spend (including buffer).
-      </p>
-
-      <p style="font-size: 0.95em;">
-        Note: This is a simplified model. Real outcomes depend on your car choice, mileage, parking costs, and peak-hour behaviour.
-      </p>
-    `;
-
-    document.getElementById('results').innerHTML = html;
-  }
-
-  function resetForm() {
-    setNumber('rideMonthly', 2000);
-    setNumber('rideBufferPct', 10);
-    document.getElementById('carPreset').value = 'custom';
-    setNumber('carTotal5y', 155000);
-    setNumber('carUpfront', 40000);
-    setNumber('oppRate', 5);
-    setNumber('years', 5);
-    document.getElementById('results').innerHTML = "<p>Enter your numbers and click <strong>Calculate</strong>.</p>";
-  }
-
-  document.getElementById('carPreset').addEventListener('change', () => {
-    applyPreset();
-  });
-
-  document.getElementById('btnCalc').addEventListener('click', () => {
-    // If user selected preset, ensure it is applied (safe)
-    applyPreset();
-    calculate();
-  });
-
-  document.getElementById('btnReset').addEventListener('click', resetForm);
+  document.getElementById("result").innerHTML =
+    "5-Year Ride-Hailing Cost: $" + rideTotal.toLocaleString() +
+    "<br><br>" + verdict;
+}
 </script>
+
+<hr>
+
+<h2>Understanding the Numbers</h2>
+
+<p>
+This calculator uses a mid-range 5-year ownership estimate for comparison.
+For detailed modelling, see:
+</p>
+
+<ul>
+  <li>
+    <a href="/car-ownership-cost.html">
+      The Real Cost of Owning a Car in Singapore (5-Year Breakdown)
+    </a>
+  </li>
+  <li>
+    <a href="/monthly-cost-of-owning-a-car-singapore.html">
+      True Monthly Cost of Owning a Car in Singapore
+    </a>
+  </li>
+  <li>
+    <a href="/car-vs-ride-hailing-cost.html">
+      Full Car vs Ride-Hailing Comparison
+    </a>
+  </li>
+</ul>
+
+<p>
+If you are evaluating leasing instead of buying, see:
+<a href="/car-leasing-vs-buying-singapore.html">
+Car Leasing vs Buying in Singapore
+</a>.
+</p>
 
 </body>
 </html>
