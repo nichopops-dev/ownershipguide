@@ -2,50 +2,49 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core -->
   <url>
     <loc>https://ownershipguide.com/</loc>
   </url>
 
+  <!-- Hubs -->
   <url>
     <loc>https://ownershipguide.com/transport/</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/property/</loc>
   </url>
 
+  <!-- Transport Cluster -->
   <url>
     <loc>https://ownershipguide.com/car-ownership-cost.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/monthly-cost-of-owning-a-car-singapore.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/car-insurance-cost-singapore.html</loc>
   </url>
-
+  <url>
+    <loc>https://ownershipguide.com/coe-cost-singapore.html</loc>
+  </url>
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/car-leasing-vs-buying-singapore.html</loc>
   </url>
 
+  <!-- Property Cluster -->
   <url>
     <loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/condo-ownership-cost.html</loc>
   </url>
-
   <url>
     <loc>https://ownershipguide.com/bto-vs-resale-cost.html</loc>
   </url>
