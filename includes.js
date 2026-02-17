@@ -167,6 +167,7 @@
   const isTransport =
     path.startsWith("/transport") ||
     path.includes("car-") ||
+    path.includes("coe") ||
     path.includes("monthly-cost-of-owning-a-car") ||
     path.includes("ride-hailing") ||
     path.includes("leasing") ||
