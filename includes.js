@@ -27,10 +27,10 @@
 
     // Auto-related injection
     enableAutoRelated: true,
-    relatedMaxLinks: 6,              // hard cap, always
-    relatedPillarsCount: 2,          // always include this many pillars from the same cluster
-    relatedSameSubtopicCount: 3,      // include this many from same subtopic (excluding self)
-    relatedBridgeCount: 1,            // include this many cross-cluster bridges
+    relatedMaxLinks: 6,               // hard cap, always
+    relatedPillarsCount: 2,           // always include this many pillars from the same cluster
+    relatedSameSubtopicCount: 3,       // include this many from same subtopic (excluding self)
+    relatedBridgeCount: 1,             // include this many cross-cluster bridges
     relatedContainerId: "auto-related" // placeholder div id in articles
   };
 
@@ -44,12 +44,14 @@
       pillars: [
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
         { url: "/monthly-cost-of-owning-a-car-singapore.html", title: "True Monthly Cost of Owning a Car in Singapore", subtopic: "ownership" },
+        { url: "/car-insurance-cost-singapore.html", title: "Car Insurance Cost in Singapore (2026)", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" }
       ],
       pages: [
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
         { url: "/monthly-cost-of-owning-a-car-singapore.html", title: "True Monthly Cost of Owning a Car in Singapore", subtopic: "ownership" },
+        { url: "/car-insurance-cost-singapore.html", title: "Car Insurance Cost in Singapore (2026)", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", subtopic: "leasing" }
@@ -113,9 +115,17 @@
     });
   }
 
-  function getMeta(name) {
-    const el = document.querySelector(`meta[name="${name}"]`);
-    return el ? (el.getAttribute("content") || "").trim() : "";
+  // Supports both:
+  // <meta name="og:cluster" ...>
+  // <meta property="og:cluster" ...>
+  function getMetaAny(key) {
+    const byName = document.querySelector(`meta[name="${key}"]`);
+    if (byName) return (byName.getAttribute("content") || "").trim();
+
+    const byProp = document.querySelector(`meta[property="${key}"]`);
+    if (byProp) return (byProp.getAttribute("content") || "").trim();
+
+    return "";
   }
 
   function setActiveNav() {
@@ -125,7 +135,8 @@
       path.includes("car-") ||
       path.includes("monthly-cost-of-owning-a-car") ||
       path.includes("ride-hailing") ||
-      path.includes("leasing");
+      path.includes("leasing") ||
+      path.includes("insurance");
     const isProperty =
       path.includes("rental-property") ||
       path.includes("condo-") ||
@@ -253,16 +264,16 @@
   }
 
   // =========================
-  // 8) Auto-related links (NEW)
+  // 8) Auto-related links
   // =========================
   if (SETTINGS.enableAutoRelated) {
     const relatedHost = document.getElementById(SETTINGS.relatedContainerId);
     if (relatedHost) {
       const path = location.pathname;
 
-      // pull accuracy from meta tags (your preferred approach)
-      const cluster = getMeta("og:cluster");
-      const subtopic = getMeta("og:subtopic");
+      // Pull from meta tags (preferred). Works with name= or property=
+      const cluster = getMetaAny("og:cluster");
+      const subtopic = getMetaAny("og:subtopic");
 
       if (cluster && SITE[cluster]) {
         const bucket = SITE[cluster];
@@ -272,14 +283,15 @@
 
         const selfUrl = path === "/" ? "/index.html" : path;
 
-        const sameSubtopic = all.filter(
-          (p) => p.subtopic === subtopic && p.url !== selfUrl
-        );
+        const sameSubtopic = subtopic
+          ? all.filter((p) => p.subtopic === subtopic && p.url !== selfUrl)
+          : [];
 
         // build list: pillars + same subtopic + bridge
         let chosen = [];
-
-        chosen = chosen.concat(pillars.filter((p) => p.url !== selfUrl).slice(0, SETTINGS.relatedPillarsCount));
+        chosen = chosen.concat(
+          pillars.filter((p) => p.url !== selfUrl).slice(0, SETTINGS.relatedPillarsCount)
+        );
         chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
         chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
 
