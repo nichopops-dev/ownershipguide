@@ -2,86 +2,52 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ========================= -->
-  <!-- Homepage -->
-  <!-- ========================= -->
-
   <url>
     <loc>https://ownershipguide.com/</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
 
-  <!-- ========================= -->
-  <!-- Transport Cluster -->
-  <!-- ========================= -->
+  <url>
+    <loc>https://ownershipguide.com/transport/</loc>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/property/</loc>
+  </url>
 
   <url>
     <loc>https://ownershipguide.com/car-ownership-cost.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/monthly-cost-of-owning-a-car-singapore.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/car-insurance-cost-singapore.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/car-leasing-vs-buying-singapore.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
-  <!-- ========================= -->
-  <!-- Property Cluster -->
-  <!-- ========================= -->
 
   <url>
     <loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/condo-ownership-cost.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://ownershipguide.com/bto-vs-resale-cost.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>
