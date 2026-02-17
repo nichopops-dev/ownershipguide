@@ -156,35 +156,37 @@
   }
 
   function setActiveNav() {
-    const path = location.pathname;
+  const path = (location.pathname || "/").toLowerCase();
 
-    const isCalculator = path.includes("calculator");
+  const isCalculator =
+    path.startsWith("/calculator") ||
+    path.includes("calculator");
 
-    const isTransport =
-      path.startsWith("/transport") ||
-      path.includes("car-") ||
-      path.includes("monthly-cost-of-owning-a-car") ||
-      path.includes("ride-hailing") ||
-      path.includes("leasing") ||
-      path.includes("insurance");
+  const isTransport =
+    path.startsWith("/transport") ||
+    path.includes("car-") ||
+    path.includes("monthly-cost-of-owning-a-car") ||
+    path.includes("ride-hailing") ||
+    path.includes("leasing") ||
+    path.includes("insurance");
 
-    const isProperty =
-      path.startsWith("/property") ||
-      path.includes("rental-property") ||
-      path.includes("condo-") ||
-      path.includes("bto-") ||
-      path.includes("resale");
+  const isProperty =
+    path.startsWith("/property") ||
+    path.includes("rental-property") ||
+    path.includes("condo-") ||
+    path.includes("bto-") ||
+    path.includes("resale");
 
-    const activate = (key) => {
-      const a = document.querySelector(`[data-nav="${key}"]`);
-      if (a) a.classList.add("active");
-    };
+  const activate = (key) => {
+    const a = document.querySelector(`[data-nav="${key}"]`);
+    if (a) a.classList.add("active");
+  };
 
-    if (isCalculator) activate("calculator");
-    else if (isTransport) activate("transport");
-    else if (isProperty) activate("property");
-    else activate("home");
-  }
+  if (isCalculator) activate("calculator");
+  else if (isTransport) activate("transport");
+  else if (isProperty) activate("property");
+  else activate("home");
+}
 
   // =========================
   // 3) HEADER / FOOTER
