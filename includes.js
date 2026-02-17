@@ -17,8 +17,15 @@
     enableAutoAdSlots: false,
     autoAdSlotAfterH2: 2,
     maxAutoAdSlots: 2,
-    skipAdSlotsOn: ["/", "/index.html", "/404.html", "/car-vs-ride-hailing-calculator.html"],
     minH2ForAdSlots: 3,
+    skipAdSlotsOn: [
+      "/",
+      "/index.html",
+      "/404.html",
+      "/car-vs-ride-hailing-calculator.html",
+      "/transport/",
+      "/property/"
+    ],
 
     // Announcement banner (optional)
     enableAnnouncement: false,
@@ -57,7 +64,6 @@
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", subtopic: "leasing" }
       ],
       bridges: [
-        // cross cluster “bridge” links that help SEO + user flow
         { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore", cluster: "property" },
         { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: Full Cost Comparison", cluster: "property" }
       ]
@@ -128,30 +134,13 @@
     return "";
   }
 
-  function setActiveNav() {
-    const path = location.pathname;
-    const isCalculator = path.includes("calculator");
-    const isTransport =
-      path.includes("car-") ||
-      path.includes("monthly-cost-of-owning-a-car") ||
-      path.includes("ride-hailing") ||
-      path.includes("leasing") ||
-      path.includes("insurance");
-    const isProperty =
-      path.includes("rental-property") ||
-      path.includes("condo-") ||
-      path.includes("bto-") ||
-      path.includes("resale");
-
-    const activate = (key) => {
-      const a = document.querySelector(`[data-nav="${key}"]`);
-      if (a) a.classList.add("active");
-    };
-
-    if (isCalculator) activate("calculator");
-    else if (isTransport) activate("transport");
-    else if (isProperty) activate("property");
-    else activate("home");
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
   }
 
   function buildRelatedHTML(label, links) {
@@ -166,13 +155,35 @@
     `;
   }
 
-  function escapeHtml(str) {
-    return String(str)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+  function setActiveNav() {
+    const path = location.pathname;
+
+    const isCalculator = path.includes("calculator");
+
+    const isTransport =
+      path.startsWith("/transport") ||
+      path.includes("car-") ||
+      path.includes("monthly-cost-of-owning-a-car") ||
+      path.includes("ride-hailing") ||
+      path.includes("leasing") ||
+      path.includes("insurance");
+
+    const isProperty =
+      path.startsWith("/property") ||
+      path.includes("rental-property") ||
+      path.includes("condo-") ||
+      path.includes("bto-") ||
+      path.includes("resale");
+
+    const activate = (key) => {
+      const a = document.querySelector(`[data-nav="${key}"]`);
+      if (a) a.classList.add("active");
+    };
+
+    if (isCalculator) activate("calculator");
+    else if (isTransport) activate("transport");
+    else if (isProperty) activate("property");
+    else activate("home");
   }
 
   // =========================
@@ -271,7 +282,6 @@
     if (relatedHost) {
       const path = location.pathname;
 
-      // Pull from meta tags (preferred). Works with name= or property=
       const cluster = getMetaAny("og:cluster");
       const subtopic = getMetaAny("og:subtopic");
 
@@ -283,11 +293,13 @@
 
         const selfUrl = path === "/" ? "/index.html" : path;
 
-        const sameSubtopic = subtopic
+        // If it's a hub page (subtopic=hub), we intentionally avoid same-subtopic linking.
+        const isHub = subtopic === "hub";
+
+        const sameSubtopic = (!isHub && subtopic)
           ? all.filter((p) => p.subtopic === subtopic && p.url !== selfUrl)
           : [];
 
-        // build list: pillars + same subtopic + bridge
         let chosen = [];
         chosen = chosen.concat(
           pillars.filter((p) => p.url !== selfUrl).slice(0, SETTINGS.relatedPillarsCount)
@@ -295,7 +307,6 @@
         chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
         chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
 
-        // de-dup and cap
         chosen = uniqByUrl(chosen).slice(0, SETTINGS.relatedMaxLinks);
 
         if (chosen.length) {
