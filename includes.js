@@ -6,8 +6,8 @@
     enableHeaderFooter: true,
 
     // Analytics (Google Analytics 4)
-    enableGA4: false,
-    ga4MeasurementId: "G-XXXXXXXXXX",
+    enableGA4: true,
+    ga4MeasurementId: "G-Y0KDR8XMQC",
 
     // AdSense Auto Ads
     enableAdSenseAutoAds: false,
