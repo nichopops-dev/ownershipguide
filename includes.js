@@ -13,30 +13,75 @@
     enableAdSenseAutoAds: false,
     adSenseClientId: "ca-pub-XXXXXXXXXXXXXXX",
 
-    // In-content ad placeholders (future, optional)
+    // Auto insert ad slots (optional)
     enableAutoAdSlots: false,
     autoAdSlotAfterH2: 2,
     maxAutoAdSlots: 2,
-
-    // Pages to never inject ad slots into
-    skipAdSlotsOn: [
-      "/",
-      "/index.html",
-      "/404.html",
-      "/car-vs-ride-hailing-calculator.html"
-    ],
-
-    // Minimum content structure before injecting slots
+    skipAdSlotsOn: ["/", "/index.html", "/404.html", "/car-vs-ride-hailing-calculator.html"],
     minH2ForAdSlots: 3,
 
     // Announcement banner (optional)
     enableAnnouncement: false,
     announcementHtml:
-      "New: Transport cluster updated for 2026 → <a href='/car-vs-ride-hailing-calculator.html'>Try the calculator</a>"
+      "New: Transport cluster updated for 2026 → <a href='/car-vs-ride-hailing-calculator.html'>Try the calculator</a>",
+
+    // Auto-related injection
+    enableAutoRelated: true,
+    relatedMaxLinks: 6,              // hard cap, always
+    relatedPillarsCount: 2,          // always include this many pillars from the same cluster
+    relatedSameSubtopicCount: 3,      // include this many from same subtopic (excluding self)
+    relatedBridgeCount: 1,            // include this many cross-cluster bridges
+    relatedContainerId: "auto-related" // placeholder div id in articles
   };
 
   // =========================
-  // 1) HELPERS
+  // 1) CONTENT MAP (edit only here)
+  // =========================
+  // Add new pages here once, and related sections update everywhere automatically.
+  const SITE = {
+    transport: {
+      label: "Related Singapore Transport Breakdowns",
+      pillars: [
+        { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
+        { url: "/monthly-cost-of-owning-a-car-singapore.html", title: "True Monthly Cost of Owning a Car in Singapore", subtopic: "ownership" },
+        { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
+        { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" }
+      ],
+      pages: [
+        { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
+        { url: "/monthly-cost-of-owning-a-car-singapore.html", title: "True Monthly Cost of Owning a Car in Singapore", subtopic: "ownership" },
+        { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
+        { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
+        { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", subtopic: "leasing" }
+      ],
+      bridges: [
+        // cross cluster “bridge” links that help SEO + user flow
+        { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore", cluster: "property" },
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: Full Cost Comparison", cluster: "property" }
+      ]
+    },
+
+    property: {
+      label: "Related Singapore Property Breakdowns",
+      pillars: [
+        { url: "/rental-property-ownership-cost.html", title: "The Real Cost of Owning a Rental Property in Singapore (2026)", subtopic: "rental" },
+        { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" }
+      ],
+      pages: [
+        { url: "/rental-property-ownership-cost.html", title: "The Real Cost of Owning a Rental Property in Singapore (2026)", subtopic: "rental" },
+        { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" }
+      ],
+      bridges: [
+        { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
+        { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" }
+      ]
+    }
+  };
+
+  // =========================
+  // 2) HELPERS
   // =========================
   async function inject(id, url) {
     const el = document.getElementById(id);
@@ -58,9 +103,23 @@
     document.head.appendChild(s);
   }
 
+  function uniqByUrl(items) {
+    const seen = new Set();
+    return items.filter((x) => {
+      if (!x || !x.url) return false;
+      if (seen.has(x.url)) return false;
+      seen.add(x.url);
+      return true;
+    });
+  }
+
+  function getMeta(name) {
+    const el = document.querySelector(`meta[name="${name}"]`);
+    return el ? (el.getAttribute("content") || "").trim() : "";
+  }
+
   function setActiveNav() {
     const path = location.pathname;
-
     const isCalculator = path.includes("calculator");
     const isTransport =
       path.includes("car-") ||
@@ -84,8 +143,29 @@
     else activate("home");
   }
 
+  function buildRelatedHTML(label, links) {
+    const lis = links
+      .map((l) => `<li><a href="${l.url}">${escapeHtml(l.title)}</a></li>`)
+      .join("");
+    return `
+      <div class="related-box">
+        <h3>${escapeHtml(label)}</h3>
+        <ul>${lis}</ul>
+      </div>
+    `;
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
   // =========================
-  // 2) HEADER / FOOTER
+  // 3) HEADER / FOOTER
   // =========================
   if (SETTINGS.enableHeaderFooter) {
     await inject("site-header", "/header.html");
@@ -94,20 +174,19 @@
   }
 
   // =========================
-  // 3) ANNOUNCEMENT (optional)
+  // 4) ANNOUNCEMENT (optional)
   // =========================
   if (SETTINGS.enableAnnouncement) {
     const bar = document.createElement("div");
     bar.className = "announcement";
     bar.innerHTML = SETTINGS.announcementHtml;
-
     const container = document.querySelector(".container");
     if (container) container.prepend(bar);
     else document.body.prepend(bar);
   }
 
   // =========================
-  // 4) GA4 (optional)
+  // 5) GA4 (optional)
   // =========================
   if (
     SETTINGS.enableGA4 &&
@@ -129,7 +208,7 @@
   }
 
   // =========================
-  // 5) AdSense Auto Ads (optional)
+  // 6) AdSense Auto Ads (optional)
   // =========================
   if (
     SETTINGS.enableAdSenseAutoAds &&
@@ -145,33 +224,71 @@
   }
 
   // =========================
-  // 6) Auto insert ad slots (optional)
+  // 7) Auto ad slots (optional)
   // =========================
   if (SETTINGS.enableAutoAdSlots) {
     const path = location.pathname;
 
     if (!SETTINGS.skipAdSlotsOn.includes(path)) {
       const container = document.querySelector(".container");
-      if (!container) return;
+      if (container) {
+        const h2s = Array.from(container.querySelectorAll("h2"));
+        if (h2s.length >= SETTINGS.minH2ForAdSlots) {
+          let inserted = 0;
+          for (
+            let i = SETTINGS.autoAdSlotAfterH2 - 1;
+            i < h2s.length;
+            i += SETTINGS.autoAdSlotAfterH2
+          ) {
+            if (inserted >= SETTINGS.maxAutoAdSlots) break;
+            const slot = document.createElement("div");
+            slot.className = "ad-slot";
+            slot.setAttribute("aria-label", "Advertisement");
+            h2s[i].insertAdjacentElement("afterend", slot);
+            inserted++;
+          }
+        }
+      }
+    }
+  }
 
-      const h2s = Array.from(container.querySelectorAll("h2"));
-      if (h2s.length < SETTINGS.minH2ForAdSlots) return;
+  // =========================
+  // 8) Auto-related links (NEW)
+  // =========================
+  if (SETTINGS.enableAutoRelated) {
+    const relatedHost = document.getElementById(SETTINGS.relatedContainerId);
+    if (relatedHost) {
+      const path = location.pathname;
 
-      let inserted = 0;
+      // pull accuracy from meta tags (your preferred approach)
+      const cluster = getMeta("og:cluster");
+      const subtopic = getMeta("og:subtopic");
 
-      for (
-        let i = SETTINGS.autoAdSlotAfterH2 - 1;
-        i < h2s.length;
-        i += SETTINGS.autoAdSlotAfterH2
-      ) {
-        if (inserted >= SETTINGS.maxAutoAdSlots) break;
+      if (cluster && SITE[cluster]) {
+        const bucket = SITE[cluster];
+        const all = bucket.pages || [];
+        const pillars = bucket.pillars || [];
+        const bridges = bucket.bridges || [];
 
-        const slot = document.createElement("div");
-        slot.className = "ad-slot";
-        slot.setAttribute("aria-label", "Advertisement");
+        const selfUrl = path === "/" ? "/index.html" : path;
 
-        h2s[i].insertAdjacentElement("afterend", slot);
-        inserted++;
+        const sameSubtopic = all.filter(
+          (p) => p.subtopic === subtopic && p.url !== selfUrl
+        );
+
+        // build list: pillars + same subtopic + bridge
+        let chosen = [];
+
+        chosen = chosen.concat(pillars.filter((p) => p.url !== selfUrl).slice(0, SETTINGS.relatedPillarsCount));
+        chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
+        chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
+
+        // de-dup and cap
+        chosen = uniqByUrl(chosen).slice(0, SETTINGS.relatedMaxLinks);
+
+        if (chosen.length) {
+          relatedHost.innerHTML = buildRelatedHTML(bucket.label, chosen);
+        }
       }
     }
   }
