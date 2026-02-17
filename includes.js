@@ -7,7 +7,7 @@
 
     // Analytics (Google Analytics 4)
     enableGA4: true,
-    ga4MeasurementId: "G-Y0KDR8XMQC",
+    ga4MeasurementId: "G-RH8YDW5LFP",
 
     // AdSense Auto Ads
     enableAdSenseAutoAds: false,
