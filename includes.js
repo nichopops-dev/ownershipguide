@@ -67,8 +67,7 @@
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
       ],
       bridges: [
-        { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore", cluster: "property" },
-        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: Full Cost Comparison", cluster: "property" }
+  { url: "/property/", title: "Property Cost in Singapore (2026): Full Ownership Breakdown", cluster: "property" }
       ]
     },
 
