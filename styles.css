@@ -251,3 +251,31 @@ th {
   border-radius: 10px;
   background: #f3f4f6;
 }
+
+/* =========================
+   Footer Upgrade
+========================= */
+
+.footer {
+  margin-top: 60px;
+  padding: 40px 0;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.footer-links a {
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 0.85rem;
+}
