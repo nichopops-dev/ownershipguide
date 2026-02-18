@@ -10,8 +10,8 @@
     ga4MeasurementId: "G-RH8YDW5LFP",
 
     // AdSense Auto Ads
-    enableAdSenseAutoAds: false,
-    adSenseClientId: "ca-pub-XXXXXXXXXXXXXXX",
+    enableAdSenseAutoAds: true,
+    adSenseClientId: "ca-pub-8718234605112874",
 
     // Auto insert ad slots (optional)
     enableAutoAdSlots: false,
