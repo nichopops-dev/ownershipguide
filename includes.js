@@ -238,21 +238,28 @@
     gtag("config", SETTINGS.ga4MeasurementId, { anonymize_ip: true });
   }
 
-  // =========================
-  // 6) AdSense Auto Ads (optional)
-  // =========================
-  if (
-    SETTINGS.enableAdSenseAutoAds &&
-    SETTINGS.adSenseClientId &&
-    !SETTINGS.adSenseClientId.includes("XXXX")
-  ) {
-    addScriptToHead({
-      src:
-        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
-        encodeURIComponent(SETTINGS.adSenseClientId),
-      attrs: { crossorigin: "anonymous" }
-    });
-  }
+// =========================
+// 6) AdSense Auto Ads + Verification
+// =========================
+if (
+  SETTINGS.enableAdSenseAutoAds &&
+  SETTINGS.adSenseClientId &&
+  !SETTINGS.adSenseClientId.includes("XXXX")
+) {
+  // 1) Inject AdSense script
+  addScriptToHead({
+    src:
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
+      encodeURIComponent(SETTINGS.adSenseClientId),
+    attrs: { crossorigin: "anonymous" }
+  });
+
+  // 2) Inject verification meta tag (for site ownership verification)
+  const meta = document.createElement("meta");
+  meta.name = "google-adsense-account";
+  meta.content = SETTINGS.adSenseClientId;
+  document.head.appendChild(meta);
+}
 
   // =========================
   // 7) Auto ad slots (optional)
