@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore) | Ownership Guide</title>
-  <meta name="description" content="Estimate whether owning a car or relying on ride-hailing is financially cheaper over 5 years in Singapore. Includes a transparent benchmark cost breakdown.">
+  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore, 2026)</title>
+  <meta name="description" content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Uses a transparent ownership benchmark and explains what shifts the result (COE, holding period, financing, insurance)." />
   <link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html">
 
   <!-- Auto-related accuracy tags -->
@@ -13,6 +13,48 @@
   <meta name="og:subtopic" content="calculator">
 
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What does this calculator compare?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"It compares your 5-year ride-hailing spend (monthly spend × 60 months) against a transparent 5-year benchmark ownership cost model. The benchmark is a planning reference, not a quote."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the break-even monthly ride-hailing spend?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Break-even is the benchmark 5-year ownership cost divided by 60 months. With a $150,000 benchmark, break-even is about $2,500/month. Your real break-even can shift with COE cycle, car profile, financing, insurance and holding period."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Why isn’t the car loan instalment the true monthly cost?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Instalments are a payment method. The true monthly cost includes depreciation (COE embedded), insurance, fuel, maintenance, parking/ERP, opportunity cost of capital, and loan interest if financed."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"When is this calculator most useful?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"When you already spend meaningfully on ride-hailing and want a clean 5-year decision anchor. Use it first, then sanity-check with the monthly and 5-year cost models to avoid underbudgeting."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -21,41 +63,74 @@
 
   <div class="container">
 
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
     <h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
 
     <p class="meta">Last updated: February 2026</p>
 
     <p>
-      This calculator estimates whether owning a car or relying on ride-hailing is financially cheaper over a <strong>5-year</strong> period in Singapore.
-      It compares your ride-hailing spend against a transparent benchmark ownership model.
+      This calculator estimates whether owning a car or relying on ride-hailing is financially cheaper over a
+      <strong>5-year</strong> period in Singapore.
+      It compares your ride-hailing spend against a transparent <strong>benchmark ownership model</strong>.
     </p>
+
+    <div class="box">
+      <p><strong>How to use this properly</strong></p>
+      <ul>
+        <li><strong>Use your real average</strong> from the last 8–12 weeks (Grab/Gojek + taxis).</li>
+        <li><strong>Don’t use instalments</strong> as “car cost”. Instalments are a payment method, not the economic cost.</li>
+        <li>If you are in the <strong>grey zone</strong>, use the deeper models linked below before deciding.</li>
+      </ul>
+    </div>
 
     <hr>
 
-    <h2>Enter Your Monthly Ride-Hailing Spend</h2>
+    <h2>Jump to What You Need</h2>
+    <ul>
+      <li><a href="#calc">1) Run the calculator</a></li>
+      <li><a href="#benchmark">2) Benchmark breakdown (5 years)</a></li>
+      <li><a href="#moves">3) Why your break-even shifts</a></li>
+      <li><a href="#next">4) What to do after you get a result</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="calc">1) Run the Calculator</h2>
 
     <div class="box">
       <div class="btn-row">
         <input id="monthlySpend" type="number" inputmode="numeric" min="0" step="50" placeholder="e.g. 1200">
         <button id="calcBtn" type="button">Calculate</button>
       </div>
-      <p class="muted">Tip: Use your last 2–3 months’ average (Grab/Gojek + taxis).</p>
+      <p class="muted">Tip: If your spend fluctuates, use an average. If multiple family members use ride-hailing, use combined spend.</p>
     </div>
 
     <div class="box" id="resultBox">
       <h3>Your 5-Year Comparison</h3>
 
       <p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
-      <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> $150,000</p>
+      <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$150,000</span></p>
       <p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
       <p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
 
       <p id="verdict" class="muted">Enter a number and click “Calculate”.</p>
+
+      <p class="muted" id="greyNote">
+        If you are near break-even, don’t treat this like a “yes/no” button.
+        Timing (COE cycle), holding period, and liquidity stress matter.
+      </p>
     </div>
 
     <hr>
 
-    <h2>Benchmark Breakdown (5 Years: $150,000)</h2>
+    <h2 id="benchmark">2) Benchmark Breakdown (5 Years)</h2>
+
+    <p class="muted">
+      This is a planning benchmark to anchor the decision. Your real ownership cost can be lower or higher depending on COE level,
+      car profile, financing, insurance, mileage, and holding period.
+    </p>
 
     <table>
       <tr>
@@ -66,17 +141,17 @@
       <tr>
         <td>Depreciation + COE</td>
         <td>$95,000</td>
-        <td>Vehicle value loss and COE cost over ownership horizon</td>
+        <td>Vehicle value loss and COE decay across the ownership horizon</td>
       </tr>
       <tr>
         <td>Insurance + Road Tax</td>
         <td>$12,000</td>
-        <td>Typical annual premiums and tax</td>
+        <td>Typical premiums and road tax over 5 years (profile-dependent)</td>
       </tr>
       <tr>
         <td>Maintenance + Repairs</td>
         <td>$10,000</td>
-        <td>Servicing, tyres, wear-and-tear</td>
+        <td>Servicing, tyres, wear-and-tear (volatility risk exists)</td>
       </tr>
       <tr>
         <td>Fuel</td>
@@ -86,30 +161,78 @@
       <tr>
         <td>Parking + ERP</td>
         <td>$10,000</td>
-        <td>Season parking and road usage charges</td>
+        <td>Season parking + common ERP/usage assumptions</td>
       </tr>
       <tr>
         <td>Opportunity Cost</td>
         <td>$7,000</td>
-        <td>Conservative cost of tied-up capital</td>
+        <td>Conservative cost of tied-up upfront capital</td>
       </tr>
       <tr>
         <td><strong>Total</strong></td>
         <td><strong>$150,000</strong></td>
-        <td><strong>Used as benchmark for this calculator</strong></td>
+        <td><strong>Benchmark used for break-even</strong></td>
       </tr>
     </table>
 
     <hr>
 
-    <h2>Next Steps</h2>
+    <h2 id="moves">3) Why Your Break-Even Shifts (Read This If You’re Close)</h2>
 
     <ul>
-      <li><a href="/car-ownership-cost.html">The Real Cost of Owning a Car in Singapore (5-Year Breakdown)</a></li>
-      <li><a href="/monthly-cost-of-owning-a-car-singapore.html">True Monthly Cost of Owning a Car in Singapore</a></li>
-      <li><a href="/car-vs-ride-hailing-cost.html">Full Car vs Ride-Hailing Comparison</a></li>
-      <li><a href="/car-leasing-vs-buying-singapore.html">Car Leasing vs Buying in Singapore</a></li>
+      <li><strong>COE cycle:</strong> higher COE usually increases depreciation exposure. See <a href="/coe-cost-singapore.html">COE cost explained</a>.</li>
+      <li><strong>Holding period:</strong> short holding periods are more timing-sensitive. See <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now vs wait</a>.</li>
+      <li><strong>Financing:</strong> interest drag can be bigger than expected (flat rate ≠ true cost). See <a href="/car-loan-rates-singapore.html">car loan rates</a>.</li>
+      <li><strong>Insurance profile:</strong> age/claims/model risk can materially shift cost. See <a href="/car-insurance-cost-singapore.html">insurance cost</a>.</li>
+      <li><strong>Used vs new:</strong> depreciation vs volatility trade. See <a href="/used-car-vs-new-car-singapore.html">used vs new</a>.</li>
     </ul>
+
+    <hr>
+
+    <h2 id="next">4) What To Do After You Get a Result</h2>
+
+    <div class="box">
+      <p><strong>If ride-hailing is clearly cheaper:</strong></p>
+      <ul>
+        <li>Keep ride-hailing, but track spend monthly so you don’t drift into “car money”.</li>
+        <li>Use the decision framework: <a href="/is-it-worth-owning-a-car-singapore.html">Is it worth owning a car?</a></li>
+      </ul>
+
+      <p><strong>If ownership looks cheaper:</strong></p>
+      <ul>
+        <li>Sanity-check monthly realism: <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly cost model</a>.</li>
+        <li>Confirm affordability: <a href="/how-much-salary-to-own-a-car-singapore.html">salary reality check</a>.</li>
+        <li>If timing-sensitive: <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now or wait</a>.</li>
+      </ul>
+
+      <p><strong>If you’re close to break-even (grey zone):</strong></p>
+      <ul>
+        <li>Don’t decide on price alone — decide on <strong>logistics certainty</strong> + <strong>liquidity stress</strong>.</li>
+        <li>Consider alternatives: <a href="/car-leasing-vs-buying-singapore.html">leasing vs buying</a>.</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="faq">FAQ</h2>
+
+    <h3>What does this calculator compare?</h3>
+    <p>
+      It compares your 5-year ride-hailing spend (monthly spend × 60) against a 5-year benchmark ownership model.
+      The benchmark is a planning reference, not a quote.
+    </p>
+
+    <h3>What is the break-even monthly ride-hailing spend?</h3>
+    <p>
+      Break-even equals benchmark ÷ 60 months. With a $150,000 benchmark, break-even is about $2,500/month.
+      Your real break-even can shift with COE cycle, car profile, financing, insurance and holding period.
+    </p>
+
+    <h3>Why isn’t the car loan instalment the true monthly cost?</h3>
+    <p>
+      Instalments are a payment method. True monthly cost includes depreciation (COE embedded), insurance, fuel,
+      maintenance, parking/ERP, opportunity cost of capital, and loan interest if financed.
+    </p>
 
     <hr>
 
@@ -125,6 +248,7 @@
   <script>
     (function(){
       const BENCHMARK_5Y = 150000;
+
       const monthlySpendEl = document.getElementById('monthlySpend');
       const calcBtn = document.getElementById('calcBtn');
 
@@ -132,13 +256,17 @@
       const diffEl = document.getElementById('diff');
       const breakevenEl = document.getElementById('breakeven');
       const verdictEl = document.getElementById('verdict');
+      const benchmarkCostEl = document.getElementById('benchmarkCost');
+
+      benchmarkCostEl.textContent = '$' + Number(BENCHMARK_5Y).toLocaleString('en-SG', { maximumFractionDigits: 0 });
 
       function fmt(n){
-        return n.toLocaleString('en-SG', { maximumFractionDigits: 0 });
+        return Number(n).toLocaleString('en-SG', { maximumFractionDigits: 0 });
       }
 
       function calculate(){
-        const monthly = Number(monthlySpendEl.value);
+        const raw = monthlySpendEl.value;
+        const monthly = Number(raw);
 
         if (!isFinite(monthly) || monthly < 0){
           verdictEl.className = 'muted';
@@ -149,7 +277,7 @@
           return;
         }
 
-        const ride5y = monthly * 12 * 5;
+        const ride5y = monthly * 60;
         const diff = ride5y - BENCHMARK_5Y;
         const breakevenMonthly = BENCHMARK_5Y / 60;
 
@@ -157,24 +285,37 @@
         diffEl.textContent = (diff >= 0 ? '+$' : '-$') + fmt(Math.abs(diff));
         breakevenEl.textContent = '$' + fmt(breakevenMonthly);
 
+        const absDiff = Math.abs(diff);
+        const greyThreshold = 10000; // within ~$10k over 5 years is effectively “grey zone” for most households
+
+        if (absDiff <= greyThreshold){
+          verdictEl.className = '';
+          verdictEl.textContent =
+            `You are in the grey zone (within about $${fmt(greyThreshold)} over 5 years). Decide using logistics certainty + liquidity stress, not cost alone.`;
+          return;
+        }
+
         if (ride5y < BENCHMARK_5Y){
           verdictEl.className = '';
           verdictEl.textContent =
-            `Ride-hailing is cheaper by about $${fmt(BENCHMARK_5Y - ride5y)} over 5 years.`;
+            `Ride-hailing is cheaper by about $${fmt(BENCHMARK_5Y - ride5y)} over 5 years (vs this benchmark).`;
         } else if (ride5y > BENCHMARK_5Y){
           verdictEl.className = '';
           verdictEl.textContent =
             `Owning the benchmark car is cheaper by about $${fmt(ride5y - BENCHMARK_5Y)} over 5 years.`;
         } else {
           verdictEl.className = '';
-          verdictEl.textContent =
-            'You are roughly at break-even over 5 years.';
+          verdictEl.textContent = 'You are roughly at break-even over 5 years.';
         }
       }
 
       calcBtn.addEventListener('click', calculate);
       monthlySpendEl.addEventListener('keydown', function(e){
         if (e.key === 'Enter') calculate();
+      });
+      monthlySpendEl.addEventListener('input', function(){
+        // auto-update once there's a value (keeps it snappy without forcing)
+        if (monthlySpendEl.value !== '') calculate();
       });
     })();
   </script>
