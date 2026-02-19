@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Car vs Ride-Hailing Break-Even Calculator (Singapore, 2026)</title>
-  <meta name="description" content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Uses a transparent ownership benchmark and explains what shifts the result (COE, holding period, financing, insurance)." />
+  <meta name="description" content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Choose a transparent benchmark profile and see what shifts the result (COE, holding period, financing, insurance)." />
   <link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html">
 
   <!-- Auto-related accuracy tags -->
-  <meta name="og:cluster" content="transport">
-  <meta name="og:subtopic" content="calculator">
+  <meta property="og:cluster" content="transport">
+  <meta property="og:subtopic" content="calculator">
 
   <link rel="stylesheet" href="/styles.css">
 
@@ -79,6 +79,7 @@
       <p><strong>How to use this properly</strong></p>
       <ul>
         <li><strong>Use your real average</strong> from the last 8–12 weeks (Grab/Gojek + taxis).</li>
+        <li><strong>Pick a benchmark profile</strong> that matches your likely ownership exposure.</li>
         <li><strong>Don’t use instalments</strong> as “car cost”. Instalments are a payment method, not the economic cost.</li>
         <li>If you are in the <strong>grey zone</strong>, use the deeper models linked below before deciding.</li>
       </ul>
@@ -100,6 +101,22 @@
     <h2 id="calc">1) Run the Calculator</h2>
 
     <div class="box">
+      <p><strong>Choose a benchmark profile</strong></p>
+      <div class="btn-row">
+        <select id="benchmarkSelect" aria-label="Benchmark profile">
+          <option value="disciplined">Disciplined ownership (lower exposure)</option>
+          <option value="typical" selected>Typical ownership (benchmark)</option>
+          <option value="higher">Higher exposure (higher COE / higher cost profile)</option>
+        </select>
+      </div>
+      <p class="muted">
+        This does not predict your exact cost. It gives you a clean decision anchor.
+        If you are unsure, start with <strong>Typical</strong>.
+      </p>
+    </div>
+
+    <div class="box">
+      <p><strong>Enter your monthly ride-hailing spend</strong></p>
       <div class="btn-row">
         <input id="monthlySpend" type="number" inputmode="numeric" min="0" step="50" placeholder="e.g. 1200">
         <button id="calcBtn" type="button">Calculate</button>
@@ -111,11 +128,11 @@
       <h3>Your 5-Year Comparison</h3>
 
       <p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
-      <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$150,000</span></p>
+      <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$—</span></p>
       <p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
       <p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
 
-      <p id="verdict" class="muted">Enter a number and click “Calculate”.</p>
+      <p id="verdict" class="muted">Pick a benchmark, enter a number and click “Calculate”.</p>
 
       <p class="muted" id="greyNote">
         If you are near break-even, don’t treat this like a “yes/no” button.
@@ -140,37 +157,37 @@
       </tr>
       <tr>
         <td>Depreciation + COE</td>
-        <td>$95,000</td>
+        <td id="bDep">$—</td>
         <td>Vehicle value loss and COE decay across the ownership horizon</td>
       </tr>
       <tr>
         <td>Insurance + Road Tax</td>
-        <td>$12,000</td>
+        <td id="bIns">$—</td>
         <td>Typical premiums and road tax over 5 years (profile-dependent)</td>
       </tr>
       <tr>
         <td>Maintenance + Repairs</td>
-        <td>$10,000</td>
+        <td id="bMaint">$—</td>
         <td>Servicing, tyres, wear-and-tear (volatility risk exists)</td>
       </tr>
       <tr>
         <td>Fuel</td>
-        <td>$16,000</td>
+        <td id="bFuel">$—</td>
         <td>Moderate driving profile</td>
       </tr>
       <tr>
         <td>Parking + ERP</td>
-        <td>$10,000</td>
+        <td id="bPark">$—</td>
         <td>Season parking + common ERP/usage assumptions</td>
       </tr>
       <tr>
         <td>Opportunity Cost</td>
-        <td>$7,000</td>
+        <td id="bOpp">$—</td>
         <td>Conservative cost of tied-up upfront capital</td>
       </tr>
       <tr>
         <td><strong>Total</strong></td>
-        <td><strong>$150,000</strong></td>
+        <td id="bTotal"><strong>$—</strong></td>
         <td><strong>Benchmark used for break-even</strong></td>
       </tr>
     </table>
@@ -224,7 +241,7 @@
 
     <h3>What is the break-even monthly ride-hailing spend?</h3>
     <p>
-      Break-even equals benchmark ÷ 60 months. With a $150,000 benchmark, break-even is about $2,500/month.
+      Break-even equals benchmark ÷ 60 months. The benchmark you select changes the break-even.
       Your real break-even can shift with COE cycle, car profile, financing, insurance and holding period.
     </p>
 
@@ -247,8 +264,48 @@
 
   <script>
     (function(){
-      const BENCHMARK_5Y = 150000;
+      // Benchmark profiles: keep it simple and transparent.
+      // You can tune these numbers later without changing the page structure.
+      const PROFILES = {
+        disciplined: {
+          label: 'Disciplined ownership (lower exposure)',
+          total: 130000,
+          breakdown: {
+            dep: 80000,
+            ins: 11000,
+            maint: 9000,
+            fuel: 14000,
+            park: 9000,
+            opp: 7000
+          }
+        },
+        typical: {
+          label: 'Typical ownership (benchmark)',
+          total: 150000,
+          breakdown: {
+            dep: 95000,
+            ins: 12000,
+            maint: 10000,
+            fuel: 16000,
+            park: 10000,
+            opp: 7000
+          }
+        },
+        higher: {
+          label: 'Higher exposure (higher COE / higher cost profile)',
+          total: 180000,
+          breakdown: {
+            dep: 120000,
+            ins: 14000,
+            maint: 12000,
+            fuel: 17000,
+            park: 11000,
+            opp: 6000
+          }
+        }
+      };
 
+      const benchmarkSelect = document.getElementById('benchmarkSelect');
       const monthlySpendEl = document.getElementById('monthlySpend');
       const calcBtn = document.getElementById('calcBtn');
 
@@ -258,13 +315,39 @@
       const verdictEl = document.getElementById('verdict');
       const benchmarkCostEl = document.getElementById('benchmarkCost');
 
-      benchmarkCostEl.textContent = '$' + Number(BENCHMARK_5Y).toLocaleString('en-SG', { maximumFractionDigits: 0 });
+      const bDepEl = document.getElementById('bDep');
+      const bInsEl = document.getElementById('bIns');
+      const bMaintEl = document.getElementById('bMaint');
+      const bFuelEl = document.getElementById('bFuel');
+      const bParkEl = document.getElementById('bPark');
+      const bOppEl = document.getElementById('bOpp');
+      const bTotalEl = document.getElementById('bTotal');
 
       function fmt(n){
         return Number(n).toLocaleString('en-SG', { maximumFractionDigits: 0 });
       }
 
+      function currentProfile(){
+        const key = benchmarkSelect.value;
+        return PROFILES[key] || PROFILES.typical;
+      }
+
+      function updateBenchmarkUI(){
+        const p = currentProfile();
+
+        benchmarkCostEl.textContent = '$' + fmt(p.total);
+
+        bDepEl.textContent = '$' + fmt(p.breakdown.dep);
+        bInsEl.textContent = '$' + fmt(p.breakdown.ins);
+        bMaintEl.textContent = '$' + fmt(p.breakdown.maint);
+        bFuelEl.textContent = '$' + fmt(p.breakdown.fuel);
+        bParkEl.textContent = '$' + fmt(p.breakdown.park);
+        bOppEl.textContent = '$' + fmt(p.breakdown.opp);
+        bTotalEl.innerHTML = '<strong>$' + fmt(p.total) + '</strong>';
+      }
+
       function calculate(){
+        const p = currentProfile();
         const raw = monthlySpendEl.value;
         const monthly = Number(raw);
 
@@ -278,15 +361,16 @@
         }
 
         const ride5y = monthly * 60;
-        const diff = ride5y - BENCHMARK_5Y;
-        const breakevenMonthly = BENCHMARK_5Y / 60;
+        const diff = ride5y - p.total;
+        const breakevenMonthly = p.total / 60;
 
         rideCostEl.textContent = '$' + fmt(ride5y);
         diffEl.textContent = (diff >= 0 ? '+$' : '-$') + fmt(Math.abs(diff));
         breakevenEl.textContent = '$' + fmt(breakevenMonthly);
 
+        // Grey zone scales with benchmark size (keeps it proportional).
+        const greyThreshold = Math.round(p.total * 0.07); // ~7% of benchmark over 5 years
         const absDiff = Math.abs(diff);
-        const greyThreshold = 10000; // within ~$10k over 5 years is effectively “grey zone” for most households
 
         if (absDiff <= greyThreshold){
           verdictEl.className = '';
@@ -295,26 +379,35 @@
           return;
         }
 
-        if (ride5y < BENCHMARK_5Y){
+        if (ride5y < p.total){
           verdictEl.className = '';
           verdictEl.textContent =
-            `Ride-hailing is cheaper by about $${fmt(BENCHMARK_5Y - ride5y)} over 5 years (vs this benchmark).`;
-        } else if (ride5y > BENCHMARK_5Y){
+            `Ride-hailing is cheaper by about $${fmt(p.total - ride5y)} over 5 years (vs this benchmark).`;
+        } else if (ride5y > p.total){
           verdictEl.className = '';
           verdictEl.textContent =
-            `Owning the benchmark car is cheaper by about $${fmt(ride5y - BENCHMARK_5Y)} over 5 years.`;
+            `Owning the benchmark car is cheaper by about $${fmt(ride5y - p.total)} over 5 years.`;
         } else {
           verdictEl.className = '';
           verdictEl.textContent = 'You are roughly at break-even over 5 years.';
         }
       }
 
+      // Init
+      updateBenchmarkUI();
+
+      benchmarkSelect.addEventListener('change', function(){
+        updateBenchmarkUI();
+        if (monthlySpendEl.value !== '') calculate();
+      });
+
       calcBtn.addEventListener('click', calculate);
+
       monthlySpendEl.addEventListener('keydown', function(e){
         if (e.key === 'Enter') calculate();
       });
+
       monthlySpendEl.addEventListener('input', function(){
-        // auto-update once there's a value (keeps it snappy without forcing)
         if (monthlySpendEl.value !== '') calculate();
       });
     })();
