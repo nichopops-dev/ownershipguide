@@ -38,7 +38,15 @@
     relatedPillarsCount: 2,           // always include this many pillars from the same cluster
     relatedSameSubtopicCount: 3,       // include this many from same subtopic (excluding self)
     relatedBridgeCount: 1,             // include this many cross-cluster bridges
-    relatedContainerId: "auto-related" // placeholder div id in articles
+    relatedContainerId: "auto-related",// placeholder div id in articles
+
+    // Auto-related safety switches
+    // If a page has <meta name="og:norelated" content="true"> (or property=),
+    // we will NOT inject related links.
+    relatedOptOutMetaKey: "og:norelated",
+
+    // Nav activation (prefer meta-based classification, fallback to path heuristics)
+    preferMetaForNav: true
   };
 
   // =========================
@@ -82,7 +90,7 @@
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
       ],
       bridges: [
-  { url: "/property/", title: "Property Cost in Singapore (2026): Full Ownership Breakdown", cluster: "property" }
+        { url: "/property/", title: "Property Cost in Singapore (2026): Full Ownership Breakdown", cluster: "property" }
       ]
     },
 
@@ -108,32 +116,49 @@
   // =========================
   // 2) HELPERS
   // =========================
-  async function inject(id, url) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    try {
-      const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) throw new Error(String(res.status));
-      el.innerHTML = await res.text();
-    } catch (e) {
-      console.warn("Include failed:", url, e);
-    }
+  function normalizePath(p) {
+    if (!p) return "/";
+    let out = String(p).trim();
+    // strip query/hash if present
+    out = out.split("?")[0].split("#")[0];
+    // ensure leading slash for relative paths
+    if (!out.startsWith("/")) out = "/" + out;
+    // collapse duplicate slashes
+    out = out.replace(/\/{2,}/g, "/");
+    // keep "/" as-is
+    if (out === "/") return "/";
+    // preserve trailing slash ONLY for directory hubs (heuristic: no dot extension)
+    const hasExt = /\.[a-z0-9]+$/i.test(out);
+    if (!hasExt && !out.endsWith("/")) out = out + "/";
+    // for file pages, remove trailing slash if any
+    if (hasExt && out.endsWith("/")) out = out.slice(0, -1);
+    return out;
   }
 
-  function addScriptToHead({ src, async = true, attrs = {} }) {
-    const s = document.createElement("script");
-    if (src) s.src = src;
-    s.async = async;
-    Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
-    document.head.appendChild(s);
+  function getSelfPath() {
+    const path = normalizePath(location.pathname || "/");
+    // treat root "/" as "/"
+    return path;
+  }
+
+  function getCanonicalPath() {
+    const canon = document.querySelector('link[rel="canonical"]')?.getAttribute("href") || "";
+    if (!canon) return "";
+    try {
+      const u = new URL(canon, location.origin);
+      return normalizePath(u.pathname);
+    } catch {
+      return "";
+    }
   }
 
   function uniqByUrl(items) {
     const seen = new Set();
     return items.filter((x) => {
       if (!x || !x.url) return false;
-      if (seen.has(x.url)) return false;
-      seen.add(x.url);
+      const key = normalizePath(x.url);
+      if (seen.has(key)) return false;
+      seen.add(key);
       return true;
     });
   }
@@ -149,6 +174,11 @@
     if (byProp) return (byProp.getAttribute("content") || "").trim();
 
     return "";
+  }
+
+  function metaIsTrue(key) {
+    const v = (getMetaAny(key) || "").toLowerCase();
+    return v === "true" || v === "1" || v === "yes";
   }
 
   function escapeHtml(str) {
@@ -172,39 +202,126 @@
     `;
   }
 
+  async function inject(id, url) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) throw new Error(String(res.status));
+      el.innerHTML = await res.text();
+    } catch (e) {
+      console.warn("Include failed:", url, e);
+    }
+  }
+
+  function addScriptToHead({ src, async = true, attrs = {} }) {
+    const s = document.createElement("script");
+    if (src) s.src = src;
+    s.async = async;
+    Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
+    document.head.appendChild(s);
+  }
+
   function setActiveNav() {
-  const path = (location.pathname || "/").toLowerCase();
+    const path = (location.pathname || "/").toLowerCase();
 
-  const isCalculator =
-    path.startsWith("/calculator") ||
-    path.includes("calculator");
+    // Prefer meta-based nav if available, because it avoids heuristic drift
+    if (SETTINGS.preferMetaForNav) {
+      const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+      const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
 
-  const isTransport =
-    path.startsWith("/transport") ||
-    path.includes("car-") ||
-    path.includes("coe") ||
-    path.includes("monthly-cost-of-owning-a-car") ||
-    path.includes("ride-hailing") ||
-    path.includes("leasing") ||
-    path.includes("insurance");
+      const activate = (key) => {
+        const a = document.querySelector(`[data-nav="${key}"]`);
+        if (a) a.classList.add("active");
+      };
 
-  const isProperty =
-    path.startsWith("/property") ||
-    path.includes("rental-property") ||
-    path.includes("condo-") ||
-    path.includes("bto-") ||
-    path.includes("resale");
+      if (subtopic === "calculator" || path.includes("calculator")) {
+        activate("calculator");
+        return;
+      }
 
-  const activate = (key) => {
-    const a = document.querySelector(`[data-nav="${key}"]`);
-    if (a) a.classList.add("active");
-  };
+      if (cluster === "transport") {
+        activate("transport");
+        return;
+      }
 
-  if (isCalculator) activate("calculator");
-  else if (isTransport) activate("transport");
-  else if (isProperty) activate("property");
-  else activate("home");
-}
+      if (cluster === "property") {
+        activate("property");
+        return;
+      }
+
+      activate("home");
+      return;
+    }
+
+    // Fallback heuristics (kept, but meta is safer)
+    const isCalculator =
+      path.startsWith("/calculator") ||
+      path.includes("calculator");
+
+    const isTransport =
+      path.startsWith("/transport") ||
+      path.includes("car-") ||
+      path.includes("coe") ||
+      path.includes("monthly-cost-of-owning-a-car") ||
+      path.includes("ride-hailing") ||
+      path.includes("leasing") ||
+      path.includes("insurance");
+
+    const isProperty =
+      path.startsWith("/property") ||
+      path.includes("rental-property") ||
+      path.includes("condo-") ||
+      path.includes("bto-") ||
+      path.includes("resale");
+
+    const activate = (key) => {
+      const a = document.querySelector(`[data-nav="${key}"]`);
+      if (a) a.classList.add("active");
+    };
+
+    if (isCalculator) activate("calculator");
+    else if (isTransport) activate("transport");
+    else if (isProperty) activate("property");
+    else activate("home");
+  }
+
+  function isHubPage(subtopic, selfPath) {
+    // Treat directory pages as hubs even if meta is missing
+    const looksLikeDir = selfPath.endsWith("/") && selfPath !== "/";
+    return subtopic === "hub" || looksLikeDir;
+  }
+
+  function pickRelatedLinks({ bucket, cluster, subtopic, selfPath, isHub }) {
+    const all = bucket.pages || [];
+    const pillars = bucket.pillars || [];
+    const bridges = bucket.bridges || [];
+
+    // normalize everything once for accurate self-exclusion + de-dupe
+    const selfN = normalizePath(selfPath);
+
+    const sameSubtopic = (!isHub && subtopic)
+      ? all.filter((p) => p.subtopic === subtopic && normalizePath(p.url) !== selfN)
+      : [];
+
+    // Always include pillars first (excluding self)
+    let chosen = [];
+    chosen = chosen.concat(
+      pillars.filter((p) => normalizePath(p.url) !== selfN).slice(0, SETTINGS.relatedPillarsCount)
+    );
+
+    // Add same subtopic next (excluding self)
+    chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
+
+    // Add bridges last
+    chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
+
+    // Final dedupe + cap
+    chosen = uniqByUrl(chosen).slice(0, SETTINGS.relatedMaxLinks);
+
+    // Extra guard: never show an empty module
+    return chosen;
+  }
 
   // =========================
   // 3) HEADER / FOOTER
@@ -249,36 +366,39 @@
     gtag("config", SETTINGS.ga4MeasurementId, { anonymize_ip: true });
   }
 
-// =========================
-// 6) AdSense Auto Ads + Verification
-// =========================
-if (
-  SETTINGS.enableAdSenseAutoAds &&
-  SETTINGS.adSenseClientId &&
-  !SETTINGS.adSenseClientId.includes("XXXX")
-) {
-  // 1) Inject AdSense script
-  addScriptToHead({
-    src:
-      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
-      encodeURIComponent(SETTINGS.adSenseClientId),
-    attrs: { crossorigin: "anonymous" }
-  });
+  // =========================
+  // 6) AdSense Auto Ads + Verification
+  // =========================
+  if (
+    SETTINGS.enableAdSenseAutoAds &&
+    SETTINGS.adSenseClientId &&
+    !SETTINGS.adSenseClientId.includes("XXXX")
+  ) {
+    // 1) Inject AdSense script
+    addScriptToHead({
+      src:
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" +
+        encodeURIComponent(SETTINGS.adSenseClientId),
+      attrs: { crossorigin: "anonymous" }
+    });
 
-  // 2) Inject verification meta tag (for site ownership verification)
-  const meta = document.createElement("meta");
-  meta.name = "google-adsense-account";
-  meta.content = SETTINGS.adSenseClientId;
-  document.head.appendChild(meta);
-}
+    // 2) Inject verification meta tag (for site ownership verification)
+    const meta = document.createElement("meta");
+    meta.name = "google-adsense-account";
+    meta.content = SETTINGS.adSenseClientId;
+    document.head.appendChild(meta);
+  }
 
   // =========================
   // 7) Auto ad slots (optional)
   // =========================
   if (SETTINGS.enableAutoAdSlots) {
-    const path = location.pathname;
+    const selfPath = getSelfPath();
+    const canonPath = getCanonicalPath();
+    const comparePath = canonPath || selfPath;
 
-    if (!SETTINGS.skipAdSlotsOn.includes(path)) {
+    const normalizedSkip = new Set(SETTINGS.skipAdSlotsOn.map(normalizePath));
+    if (!normalizedSkip.has(normalizePath(comparePath))) {
       const container = document.querySelector(".container");
       if (container) {
         const h2s = Array.from(container.querySelectorAll("h2"));
@@ -302,42 +422,37 @@ if (
   }
 
   // =========================
-  // 8) Auto-related links
+  // 8) Auto-related links (cluster-aware, capped, non-clutter)
   // =========================
   if (SETTINGS.enableAutoRelated) {
     const relatedHost = document.getElementById(SETTINGS.relatedContainerId);
     if (relatedHost) {
-      const path = location.pathname;
+      // Per-page opt-out
+      if (metaIsTrue(SETTINGS.relatedOptOutMetaKey)) {
+        // Intentionally do nothing
+      } else {
+        const selfPath = getSelfPath();
+        const canonPath = getCanonicalPath();
+        const effectiveSelf = canonPath || selfPath;
 
-      const cluster = getMetaAny("og:cluster");
-      const subtopic = getMetaAny("og:subtopic");
+        const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+        const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
 
-      if (cluster && SITE[cluster]) {
-        const bucket = SITE[cluster];
-        const all = bucket.pages || [];
-        const pillars = bucket.pillars || [];
-        const bridges = bucket.bridges || [];
+        if (cluster && SITE[cluster]) {
+          const bucket = SITE[cluster];
+          const hub = isHubPage(subtopic, normalizePath(effectiveSelf));
 
-        const selfUrl = path === "/" ? "/index.html" : path;
+          const chosen = pickRelatedLinks({
+            bucket,
+            cluster,
+            subtopic,
+            selfPath: effectiveSelf,
+            isHub: hub
+          });
 
-        // If it's a hub page (subtopic=hub), we intentionally avoid same-subtopic linking.
-        const isHub = subtopic === "hub";
-
-        const sameSubtopic = (!isHub && subtopic)
-          ? all.filter((p) => p.subtopic === subtopic && p.url !== selfUrl)
-          : [];
-
-        let chosen = [];
-        chosen = chosen.concat(
-          pillars.filter((p) => p.url !== selfUrl).slice(0, SETTINGS.relatedPillarsCount)
-        );
-        chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
-        chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
-
-        chosen = uniqByUrl(chosen).slice(0, SETTINGS.relatedMaxLinks);
-
-        if (chosen.length) {
-          relatedHost.innerHTML = buildRelatedHTML(bucket.label, chosen);
+          if (chosen.length) {
+            relatedHost.innerHTML = buildRelatedHTML(bucket.label, chosen);
+          }
         }
       }
     }
