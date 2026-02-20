@@ -1,97 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  <!-- ===================================== -->
   <!-- Core -->
+  <!-- ===================================== -->
   <url>
     <loc>https://ownershipguide.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/privacy-policy.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
+  <!-- ===================================== -->
   <!-- Hubs -->
+  <!-- ===================================== -->
   <url>
     <loc>https://ownershipguide.com/transport/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/property/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
+  <!-- ===================================== -->
   <!-- Transport Cluster -->
+  <!-- ===================================== -->
+
+  <!-- Pillars / Core models -->
   <url>
     <loc>https://ownershipguide.com/car-ownership-cost.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/car-ownership-cost-per-year-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/monthly-cost-of-owning-a-car-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/car-insurance-cost-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/coe-cost-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/how-much-salary-to-own-a-car-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/car-leasing-vs-buying-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/is-it-worth-owning-a-car-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
+
+  <!-- Decision tools -->
   <url>
-    <loc>https://ownershipguide.com/car-loan-rates-singapore.html</loc>
+    <loc>https://ownershipguide.com/car-vs-ride-hailing-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
+
+  <!-- Comparisons / timing -->
   <url>
-    <loc>https://ownershipguide.com/used-car-vs-new-car-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/coe-renewal-worth-it-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/10-year-coe-renewal-worth-it-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/5-year-coe-renewal-worth-it-singapore.html</loc>
-  </url>
-  <url>
-    <loc>https://ownershipguide.com/how-much-cash-to-buy-car-singapore.html</loc>
+    <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/should-i-buy-car-now-or-wait-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/used-car-vs-new-car-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/car-leasing-vs-buying-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <!-- Cost engines -->
+  <url>
+    <loc>https://ownershipguide.com/coe-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/car-loan-rates-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/car-insurance-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <!-- COE renewal -->
+  <url>
+    <loc>https://ownershipguide.com/coe-renewal-worth-it-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/10-year-coe-renewal-worth-it-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/5-year-coe-renewal-worth-it-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <!-- Affordability -->
+  <url>
+    <loc>https://ownershipguide.com/how-much-salary-to-own-a-car-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/how-much-cash-to-buy-car-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+
+  <!-- Supporting pages -->
+  <url>
+    <loc>https://ownershipguide.com/car-ownership-cost-per-year-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.45</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/buying-car-financial-mistake-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
+  <!-- ===================================== -->
   <!-- Property Cluster -->
-  <url>
-    <loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc>
-  </url>
+  <!-- ===================================== -->
   <url>
     <loc>https://ownershipguide.com/condo-ownership-cost.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/rental-property-ownership-cost.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/bto-vs-resale-cost.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-01</lastmod>
   </url>
 
 </urlset>
