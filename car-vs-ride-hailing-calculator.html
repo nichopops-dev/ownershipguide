@@ -8,6 +8,8 @@
   <meta name="description" content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Choose a transparent benchmark profile and see what shifts the result (COE, holding period, financing, insurance)." />
   <link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html">
 
+  <meta name="robots" content="index,follow">
+
   <!-- Auto-related accuracy tags -->
   <meta property="og:cluster" content="transport">
   <meta property="og:subtopic" content="calculator">
@@ -118,7 +120,15 @@
     <div class="box">
       <p><strong>Enter your monthly ride-hailing spend</strong></p>
       <div class="btn-row">
-        <input id="monthlySpend" type="number" inputmode="numeric" min="0" step="50" placeholder="e.g. 1200">
+        <input
+          id="monthlySpend"
+          type="number"
+          inputmode="numeric"
+          min="0"
+          step="50"
+          placeholder="e.g. 1200"
+          autocomplete="off"
+        >
         <button id="calcBtn" type="button">Calculate</button>
       </div>
       <p class="muted">Tip: If your spend fluctuates, use an average. If multiple family members use ride-hailing, use combined spend.</p>
@@ -132,7 +142,7 @@
       <p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
       <p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
 
-      <p id="verdict" class="muted">Pick a benchmark, enter a number and click “Calculate”.</p>
+      <p id="verdict" class="muted" aria-live="polite">Pick a benchmark, enter a number and click “Calculate”.</p>
 
       <p class="muted" id="greyNote">
         If you are near break-even, don’t treat this like a “yes/no” button.
@@ -332,8 +342,18 @@
         return PROFILES[key] || PROFILES.typical;
       }
 
+      function sumBreakdown(b){
+        return (b.dep || 0) + (b.ins || 0) + (b.maint || 0) + (b.fuel || 0) + (b.park || 0) + (b.opp || 0);
+      }
+
       function updateBenchmarkUI(){
         const p = currentProfile();
+
+        // Console-only sanity check (helps future edits)
+        const bdSum = sumBreakdown(p.breakdown);
+        if (bdSum !== p.total){
+          console.warn('[OwnershipGuide] Benchmark breakdown sum mismatch:', p.label, { total: p.total, breakdownSum: bdSum });
+        }
 
         benchmarkCostEl.textContent = '$' + fmt(p.total);
 
@@ -346,12 +366,26 @@
         bTotalEl.innerHTML = '<strong>$' + fmt(p.total) + '</strong>';
       }
 
+      function clampMonthly(n){
+        if (!isFinite(n)) return null;
+        if (n < 0) return 0;
+        // Keep it clean: ride-hailing spend is usually whole dollars.
+        return Math.round(n);
+      }
+
+      function formatSigned(amount){
+        const abs = Math.abs(amount);
+        const s = '$' + fmt(abs);
+        return amount >= 0 ? '+' + s : '-' + s;
+      }
+
       function calculate(){
         const p = currentProfile();
         const raw = monthlySpendEl.value;
-        const monthly = Number(raw);
+        const monthlyRaw = Number(raw);
+        const monthly = clampMonthly(monthlyRaw);
 
-        if (!isFinite(monthly) || monthly < 0){
+        if (monthly === null){
           verdictEl.className = 'muted';
           verdictEl.textContent = 'Please enter a valid monthly amount.';
           rideCostEl.textContent = '$—';
@@ -360,12 +394,17 @@
           return;
         }
 
+        // Reflect cleaned number back into input (prevents decimals)
+        if (raw !== '' && String(monthly) !== String(monthlyRaw)){
+          monthlySpendEl.value = String(monthly);
+        }
+
         const ride5y = monthly * 60;
         const diff = ride5y - p.total;
         const breakevenMonthly = p.total / 60;
 
         rideCostEl.textContent = '$' + fmt(ride5y);
-        diffEl.textContent = (diff >= 0 ? '+$' : '-$') + fmt(Math.abs(diff));
+        diffEl.textContent = formatSigned(diff);
         breakevenEl.textContent = '$' + fmt(breakevenMonthly);
 
         // Grey zone scales with benchmark size (keeps it proportional).
