@@ -12,6 +12,40 @@
   <meta name="og:subtopic" content="hub">
 
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- Optional FAQ schema for hub discoverability -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How should I decide whether to own a car in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a 5-year exposure lens (depreciation/COE + running costs + liquidity impact), compare against your real ride-hailing spend using break-even logic, then decide using logistics certainty and risk tolerance rather than instalments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best place to start if I’m new to car cost modelling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with the 5-year ownership breakdown, then validate monthly realism, then use the COE timing framework if you are deciding buy now vs wait."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cleanest way to compare car ownership vs ride-hailing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Compare 5-year totals: ride-hailing spend × 60 versus ownership total exposure (depreciation + running costs + opportunity cost + financing drag if applicable)."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -19,13 +53,19 @@
 
   <div class="container">
 
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/transport/">Transport</a>
+    </p>
+
     <h1>Transport Cost in Singapore (2026)</h1>
 
-    <p class="meta">Cluster Overview</p>
+    <p class="meta">Cluster Overview · Last updated: February 2026</p>
 
     <p>
       Transport decisions in Singapore are capital allocation decisions.
-      COE, depreciation and liquidity exposure drive total cost — not instalments.
+      COE, depreciation, and liquidity exposure drive total cost — not instalments.
     </p>
 
     <hr>
@@ -34,21 +74,25 @@
 
     <div class="box">
       <ul>
-        <li><strong>1)</strong> Understand total exposure:
+        <li><strong>1) Understand total exposure:</strong>
           <a href="/car-ownership-cost.html">5-Year Car Ownership Breakdown</a>
         </li>
-        <li><strong>2)</strong> Decide if ownership is rational:
+        <li><strong>2) Decide if ownership is rational:</strong>
           <a href="/is-it-worth-owning-a-car-singapore.html">Is It Worth Owning a Car? (Decision Framework)</a>
         </li>
-        <li><strong>3)</strong> If you’re buying, choose structure:
+        <li><strong>3) If you’re buying, choose structure:</strong>
           <a href="/used-car-vs-new-car-singapore.html">Used vs New Car (5-Year Comparison)</a>
           ·
           <a href="/should-i-buy-car-now-or-wait-singapore.html">Buy Now or Wait? (COE Timing)</a>
         </li>
-        <li><strong>4)</strong> Compare against your current spend:
+        <li><strong>4) Compare against your current spend:</strong>
           <a href="/car-vs-ride-hailing-calculator.html">Car vs Ride-Hailing Break-Even Calculator</a>
         </li>
       </ul>
+      <p class="muted">
+        If you keep thinking “but the instalment is okay”, read:
+        <a href="/buying-car-financial-mistake-singapore.html">the instalment trap most buyers don’t see</a>.
+      </p>
     </div>
 
     <hr>
