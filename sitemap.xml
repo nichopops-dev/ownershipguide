@@ -195,6 +195,15 @@
   <!-- ===================================== -->
   <!-- Property Cluster -->
   <!-- ===================================== -->
+
+  <!-- Pillar / Core model -->
+  <url>
+    <loc>https://ownershipguide.com/property-ownership-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+
   <url>
     <loc>https://ownershipguide.com/condo-ownership-cost.html</loc>
     <changefreq>monthly</changefreq>
