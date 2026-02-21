@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost</title>
+  <meta name="description" content="Advanced car affordability calculator for Singapore (2026): true monthly cost (depreciation/COE, interest, insurance, fuel, maintenance, parking/ERP, opportunity cost) + stress tests (income drop, rate +0.5%, repair spike). Outputs Safe / Grey / Fragile." />
+  <link rel="canonical" href="https://ownershipguide.com/car-affordability-calculator-singapore.html" />
+
+  <meta name="og:cluster" content="transport">
+  <meta name="og:subtopic" content="calculator">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do I know if I can afford a car in Singapore?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Use a stress-tested model: true monthly ownership cost (depreciation/COE, interest, insurance, fuel, maintenance, parking/ERP, opportunity cost) compared against gross income and fixed commitments. Then run stress tests (income drop, rate increase, repair spike)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is a safe car cost ratio of income in Singapore?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A practical planning band is to keep true monthly car cost at about 15–20% of gross income for comfort, 20–25% as a stretch zone, and above 25% as high-stress, especially with dependents or large fixed commitments."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Why is the loan instalment not a good affordability measure?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Instalments are a payment method. True monthly cost includes depreciation (COE embedded), interest cost, insurance, fuel, maintenance, parking/ERP, and opportunity cost of upfront capital."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Minimal inline helpers (keeps your global styles intact) */
+    .calc-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 900px) { .calc-grid { grid-template-columns: 1.05fr 0.95fr; } }
+    .calc-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; }
+    .calc-row { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 10px 0; }
+    @media (min-width: 700px) { .calc-row { grid-template-columns: 1fr 1fr; } }
+    .calc-row-3 { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 10px 0; }
+    @media (min-width: 900px) { .calc-row-3 { grid-template-columns: 1fr 1fr 1fr; } }
+    label { font-weight: 600; display: block; margin-bottom: 6px; }
+    input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .small { font-size: 13px; }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid #e5e7eb;
+    }
+    .pill.safe { background: #ecfdf5; border-color: #a7f3d0; }
+    .pill.grey { background: #fffbeb; border-color: #fde68a; }
+    .pill.fragile { background: #fef2f2; border-color: #fecaca; }
+    .kpi { font-size: 26px; font-weight: 800; margin: 6px 0; }
+    .kpi-sub { margin: 0; }
+    .kpi-box { border: 1px dashed #d1d5db; border-radius: 12px; padding: 12px; }
+    .divider { height: 1px; background: #e5e7eb; margin: 12px 0; }
+    .btn {
+      display: inline-block;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 700;
+      cursor: pointer;
+      background: white;
+    }
+    .btn:active { transform: translateY(1px); }
+    .toggle-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .note { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 10px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/transport/">Transport</a> / Car Affordability Calculator
+    </p>
+
+    <h1>Car Affordability Calculator (Singapore, 2026)</h1>
+    <p class="meta">Last updated: February 2026</p>
+
+    <p class="muted">
+      Not financial advice. This is a simplified decision model (not quotes/approvals). Use it to avoid instalment illusions.
+    </p>
+
+    <div class="box">
+      <p><strong>What this calculator does</strong></p>
+      <ul>
+        <li>Builds a <strong>true monthly ownership cost</strong> (depreciation/COE + running costs + opportunity cost)</li>
+        <li>Checks your <strong>income ratio bands</strong> (comfort vs stretch vs stress)</li>
+        <li>Runs <strong>stress tests</strong> (income drop, interest +0.5%, repair spike) to classify: <strong>Safe / Grey Zone / Fragile</strong></li>
+      </ul>
+      <p class="muted">
+        Baseline models:
+        <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly cost</a> ·
+        <a href="/car-ownership-cost.html">5-year ownership breakdown</a> ·
+        <a href="/buying-car-financial-mistake-singapore.html">instalment trap</a>.
+      </p>
+    </div>
+
+    <!-- Monetisation placement (high attention, low annoyance) -->
+    <div class="ad-slot" aria-label="Advertisement"></div>
+
+    <hr>
+
+    <div class="calc-grid">
+
+      <!-- LEFT: INPUTS -->
+      <div class="calc-card">
+
+        <h2 style="margin-top:0;">Inputs</h2>
+
+        <div class="note small">
+          <strong>Planning band (used across the site):</strong>
+          Comfortable ≤ <strong>20%</strong> of gross income · Stretch <strong>20–25%</strong> · High-stress <strong>25%+</strong>
+        </div>
+
+        <div class="calc-row">
+          <div>
+            <label for="grossIncome">Gross monthly income (SGD)</label>
+            <input id="grossIncome" type="number" inputmode="numeric" min="0" step="100" value="12000">
+            <p class="muted small">Use household gross if sharing costs.</p>
+          </div>
+
+          <div>
+            <label for="fixedCommitments">Other fixed commitments (SGD/month)</label>
+            <input id="fixedCommitments" type="number" inputmode="numeric" min="0" step="50" value="3500">
+            <p class="muted small">Mortgage/rent, childcare, loans, family support, etc.</p>
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div>
+            <label for="targetSavings">Target savings/investing (SGD/month)</label>
+            <input id="targetSavings" type="number" inputmode="numeric" min="0" step="50" value="1500">
+            <p class="muted small">Optional but recommended (prevents “afford but stagnate”).</p>
+          </div>
+
+          <div>
+            <label for="rideHailSpend">Ride-hailing spend (optional, SGD/month)</label>
+            <input id="rideHailSpend" type="number" inputmode="numeric" min="0" step="50" value="1200">
+            <p class="muted small">Used for a sanity hint (not a full break-even tool).</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 style="margin:0;">Build true monthly car cost</h3>
+        <p class="muted small" style="margin-top:6px;">
+          If you already know your all-in monthly number, use “Direct mode”. Otherwise use “Components mode”.
+        </p>
+
+        <div class="calc-row">
+          <div>
+            <label for="costMode">Cost input mode</label>
+            <select id="costMode">
+              <option value="direct">Direct mode (enter all-in monthly cost)</option>
+              <option value="components" selected>Components mode (estimate from parts)</option>
+            </select>
+          </div>
+
+          <div id="directCostWrap" style="display:none;">
+            <label for="directMonthlyCost">All-in car cost (SGD/month)</label>
+            <input id="directMonthlyCost" type="number" inputmode="numeric" min="0" step="50" value="2800">
+            <p class="muted small">Use your own number if you already priced it.</p>
+          </div>
+        </div>
+
+        <div id="componentsWrap">
+
+          <div class="calc-row-3">
+            <div>
+              <label for="purchasePrice">Purchase price (SGD)</label>
+              <input id="purchasePrice" type="number" inputmode="numeric" min="0" step="1000" value="150000">
+              <p class="muted small">Including COE (because it’s embedded in price).</p>
+            </div>
+
+            <div>
+              <label for="resaleValue">Expected resale value (SGD)</label>
+              <input id="resaleValue" type="number" inputmode="numeric" min="0" step="1000" value="80000">
+              <p class="muted small">Be conservative. Optimism breaks decisions.</p>
+            </div>
+
+            <div>
+              <label for="holdingYears">Planned holding period (years)</label>
+              <input id="holdingYears" type="number" inputmode="numeric" min="1" max="10" step="1" value="5">
+              <p class="muted small">Short holds are timing-risk heavy.</p>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <div>
+              <label for="loanUsed">Financing?</label>
+              <select id="loanUsed">
+                <option value="no" selected>No (cash / no loan)</option>
+                <option value="yes">Yes (loan)</option>
+              </select>
+              <p class="muted small">If yes, we estimate interest drag monthly.</p>
+            </div>
+
+            <div>
+              <label for="loanAmount">Loan amount (SGD)</label>
+              <input id="loanAmount" type="number" inputmode="numeric" min="0" step="1000" value="90000" disabled>
+              <p class="muted small">Enable financing to edit.</p>
+            </div>
+          </div>
+
+          <div class="calc-row-3">
+            <div>
+              <label for="interestInputType">Interest input</label>
+              <select id="interestInputType" disabled>
+                <option value="eir" selected>Effective interest rate (APR/EIR)</option>
+                <option value="flat">Flat rate (we convert roughly)</option>
+              </select>
+              <p class="muted small">Flat → EIR conversion is an estimate.</p>
+            </div>
+
+            <div>
+              <label for="interestRate">Interest rate (% p.a.)</label>
+              <input id="interestRate" type="number" inputmode="decimal" min="0" step="0.1" value="3.0" disabled>
+              <p class="muted small">If flat, we estimate EIR internally.</p>
+            </div>
+
+            <div>
+              <label for="loanTenureYears">Loan tenure (years)</label>
+              <input id="loanTenureYears" type="number" inputmode="numeric" min="1" max="10" step="1" value="7" disabled>
+              <p class="muted small">Used for payment math. Holding can be shorter.</p>
+            </div>
+          </div>
+
+          <div class="calc-row-3">
+            <div>
+              <label for="insuranceMonthly">Insurance (SGD/month)</label>
+              <input id="insuranceMonthly" type="number" inputmode="numeric" min="0" step="10" value="170">
+            </div>
+
+            <div>
+              <label for="fuelMonthly">Fuel (SGD/month)</label>
+              <input id="fuelMonthly" type="number" inputmode="numeric" min="0" step="10" value="350">
+            </div>
+
+            <div>
+              <label for="parkingErpMonthly">Parking + ERP (SGD/month)</label>
+              <input id="parkingErpMonthly" type="number" inputmode="numeric" min="0" step="10" value="260">
+            </div>
+          </div>
+
+          <div class="calc-row-3">
+            <div>
+              <label for="maintenanceMonthly">Maintenance buffer (SGD/month)</label>
+              <input id="maintenanceMonthly" type="number" inputmode="numeric" min="0" step="10" value="180">
+              <p class="muted small">This is a buffer, not an “average fantasy”.</p>
+            </div>
+
+            <div>
+              <label for="upfrontCapital">Upfront cash/CPF committed (SGD)</label>
+              <input id="upfrontCapital" type="number" inputmode="numeric" min="0" step="1000" value="40000">
+              <p class="muted small">Downpayment + fees you lock up.</p>
+            </div>
+
+            <div>
+              <label for="oppReturn">Opportunity return (% p.a.)</label>
+              <input id="oppReturn" type="number" inputmode="decimal" min="0" step="0.5" value="5.0">
+              <p class="muted small">Simple monthly opportunity cost = capital × r / 12.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 style="margin:0;">Stress tests</h3>
+        <p class="muted small" style="margin-top:6px;">
+          These are intentionally basic. The goal is to catch fragile plans early.
+        </p>
+
+        <div class="toggle-row">
+          <button class="btn" id="stressIncomeBtn" type="button" aria-pressed="false">Income -20%</button>
+          <button class="btn" id="stressRateBtn" type="button" aria-pressed="false">Interest +0.5%</button>
+          <button class="btn" id="stressRepairBtn" type="button" aria-pressed="false">Repair spike +$300/m</button>
+        </div>
+
+        <p class="muted small" style="margin-top:10px;">
+          If you want the actual transport break-even tool, use:
+          <a href="/car-vs-ride-hailing-calculator.html">Car vs Ride-Hailing Calculator</a>.
+        </p>
+
+      </div>
+
+      <!-- RIGHT: OUTPUTS -->
+      <div class="calc-card">
+
+        <h2 style="margin-top:0;">Results</h2>
+
+        <div class="kpi-box">
+          <div id="statusPill" class="pill safe">SAFE</div>
+          <div class="kpi" id="monthlyAllIn">$0</div>
+          <p class="kpi-sub muted" id="summaryLine">—</p>
+        </div>
+
+        <div class="calc-row" style="margin-top:12px;">
+          <div class="kpi-box">
+            <div class="small muted">Car cost ratio (of gross)</div>
+            <div class="kpi" id="ratioPct">0%</div>
+            <div class="small muted">Comfort ≤ 20% · Stretch 20–25% · Stress 25%+</div>
+          </div>
+
+          <div class="kpi-box">
+            <div class="small muted">Disposable after car + commitments</div>
+            <div class="kpi" id="disposable">$0</div>
+            <div class="small muted">After fixed commitments + car cost (before lifestyle spend)</div>
+          </div>
+        </div>
+
+        <div class="kpi-box" style="margin-top:12px;">
+          <div class="small muted">Component breakdown (monthly)</div>
+          <div class="divider"></div>
+          <div class="small">
+            <div>Depreciation: <span class="mono" id="bDep">$0</span></div>
+            <div>Interest drag: <span class="mono" id="bInt">$0</span></div>
+            <div>Insurance: <span class="mono" id="bIns">$0</span></div>
+            <div>Fuel: <span class="mono" id="bFuel">$0</span></div>
+            <div>Maintenance buffer: <span class="mono" id="bMaint">$0</span></div>
+            <div>Parking + ERP: <span class="mono" id="bPark">$0</span></div>
+            <div>Opportunity cost: <span class="mono" id="bOpp">$0</span></div>
+          </div>
+        </div>
+
+        <div class="kpi-box" style="margin-top:12px;">
+          <div class="small muted">Stress view</div>
+          <div class="divider"></div>
+          <div class="small" id="stressText">No stress toggles active.</div>
+        </div>
+
+        <!-- Monetisation placement (results area) -->
+        <div class="ad-slot" aria-label="Advertisement"></div>
+
+        <div class="box" style="margin-top:12px;">
+          <p><strong>Next steps (use this in order)</strong></p>
+          <ul>
+            <li>Monthly cost model: <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly cost breakdown</a></li>
+            <li>5-year model: <a href="/car-ownership-cost.html">total exposure breakdown</a></li>
+            <li>COE structure: <a href="/coe-cost-singapore.html">why depreciation behaves differently here</a></li>
+            <li>Decision check: <a href="/is-it-worth-owning-a-car-singapore.html">is it worth owning at all?</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h2>How to Interpret “Safe / Grey / Fragile”</h2>
+    <ul>
+      <li><strong>Safe:</strong> your plan survives the ratio band (≤20%) and doesn’t break when life fluctuates.</li>
+      <li><strong>Grey Zone:</strong> you can do it, but you’re trading away resilience (watch buffers and holding period).</li>
+      <li><strong>Fragile:</strong> one shock forces a downgrade or sale. Re-structure: lower exposure car, delay, or increase buffers.</li>
+    </ul>
+
+    <p class="muted">
+      If you’re “Grey Zone”, don’t try to win by optimism — win by structure:
+      lower depreciation profile (<a href="/cheapest-car-to-own-singapore.html">cheapest-to-own profiles</a>),
+      or validate timing risk (<a href="/should-i-buy-car-now-or-wait-singapore.html">buy now vs wait</a>).
+    </p>
+
+    <hr>
+
+    <div id="auto-related"></div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js" defer></script>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+
+      // Inputs
+      const grossIncome = $("grossIncome");
+      const fixedCommitments = $("fixedCommitments");
+      const targetSavings = $("targetSavings");
+      const rideHailSpend = $("rideHailSpend");
+
+      const costMode = $("costMode");
+      const directCostWrap = $("directCostWrap");
+      const directMonthlyCost = $("directMonthlyCost");
+
+      const componentsWrap = $("componentsWrap");
+      const purchasePrice = $("purchasePrice");
+      const resaleValue = $("resaleValue");
+      const holdingYears = $("holdingYears");
+
+      const loanUsed = $("loanUsed");
+      const loanAmount = $("loanAmount");
+      const interestInputType = $("interestInputType");
+      const interestRate = $("interestRate");
+      const loanTenureYears = $("loanTenureYears");
+
+      const insuranceMonthly = $("insuranceMonthly");
+      const fuelMonthly = $("fuelMonthly");
+      const parkingErpMonthly = $("parkingErpMonthly");
+      const maintenanceMonthly = $("maintenanceMonthly");
+      const upfrontCapital = $("upfrontCapital");
+      const oppReturn = $("oppReturn");
+
+      // Stress toggles
+      const stressIncomeBtn = $("stressIncomeBtn");
+      const stressRateBtn = $("stressRateBtn");
+      const stressRepairBtn = $("stressRepairBtn");
+
+      // Outputs
+      const statusPill = $("statusPill");
+      const monthlyAllIn = $("monthlyAllIn");
+      const summaryLine = $("summaryLine");
+      const ratioPct = $("ratioPct");
+      const disposable = $("disposable");
+
+      const bDep = $("bDep");
+      const bInt = $("bInt");
+      const bIns = $("bIns");
+      const bFuel = $("bFuel");
+      const bMaint = $("bMaint");
+      const bPark = $("bPark");
+      const bOpp = $("bOpp");
+
+      const stressText = $("stressText");
+
+      function fmt(n) {
+        const x = Number.isFinite(n) ? n : 0;
+        return x.toLocaleString("en-SG", { maximumFractionDigits: 0 });
+      }
+      function money(n) { return "$" + fmt(n); }
+      function pct(n) {
+        const x = Number.isFinite(n) ? n : 0;
+        return (x * 100).toFixed(1) + "%";
+      }
+
+      function getNum(el) {
+        const v = parseFloat(el.value);
+        return Number.isFinite(v) ? v : 0;
+      }
+
+      function setBtn(btn, on) {
+        btn.setAttribute("aria-pressed", on ? "true" : "false");
+        btn.style.borderColor = on ? "#111827" : "#d1d5db";
+      }
+
+      function isOn(btn) { return btn.getAttribute("aria-pressed") === "true"; }
+
+      function convertFlatToEIR(flatPct) {
+        // Rough heuristic: EIR ≈ flat * 1.8 (common rule-of-thumb, not exact)
+        return flatPct * 1.8;
+      }
+
+      function monthlyPayment(principal, aprPct, tenureYears) {
+        // Standard amortization with APR (monthly comp)
+        const P = Math.max(0, principal);
+        const r = Math.max(0, aprPct) / 100 / 12;
+        const n = Math.max(1, Math.round(tenureYears * 12));
+        if (P === 0) return 0;
+        if (r === 0) return P / n;
+        return P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      }
+
+      function estimateMonthlyInterestDrag({ principal, aprPct, tenureYears, holdingYears }) {
+        // Estimate average monthly interest paid over the holding window (simplified but directionally correct):
+        // simulate monthly amortization for holdMonths, sum interest, / holdMonths
+        const P0 = Math.max(0, principal);
+        const r = Math.max(0, aprPct) / 100 / 12;
+        const n = Math.max(1, Math.round(tenureYears * 12));
+        const holdMonths = Math.max(1, Math.round(Math.max(1, holdingYears) * 12));
+
+        if (P0 === 0) return 0;
+        const pay = monthlyPayment(P0, aprPct, tenureYears);
+
+        let bal = P0;
+        let totalInterest = 0;
+
+        for (let i = 0; i < Math.min(holdMonths, n); i++) {
+          const interest = bal * r;
+          const principalPay = Math.max(0, pay - interest);
+          totalInterest += interest;
+          bal = Math.max(0, bal - principalPay);
+          if (bal <= 0) break;
+        }
+
+        return totalInterest / holdMonths;
+      }
+
+      function classify({ ratio, disposableAfterAll, savingsTarget, stressFailed }) {
+        // Base bands: <=20% safe, 20-25% grey, >25% fragile
+        // Also fail if disposable negative or cannot hit savings target
+        if (stressFailed) return "fragile";
+        if (disposableAfterAll < 0) return "fragile";
+        if (savingsTarget > 0 && disposableAfterAll < savingsTarget) {
+          // If you can't meet your own target, treat as at least grey
+          if (ratio <= 0.20) return "grey";
+          if (ratio <= 0.25) return "grey";
+          return "fragile";
+        }
+        if (ratio <= 0.20) return "safe";
+        if (ratio <= 0.25) return "grey";
+        return "fragile";
+      }
+
+      function renderPill(status) {
+        statusPill.className = "pill " + status;
+        statusPill.textContent = status.toUpperCase().replace("GREY", "GREY ZONE");
+      }
+
+      function recalc() {
+        // Stress toggles
+        const stressIncome = isOn(stressIncomeBtn);
+        const stressRate = isOn(stressRateBtn);
+        const stressRepair = isOn(stressRepairBtn);
+
+        // Base inputs
+        let gross = getNum(grossIncome);
+        const fixed = getNum(fixedCommitments);
+        const saveT = getNum(targetSavings);
+        const ride = getNum(rideHailSpend);
+
+        // Apply income stress
+        if (stressIncome) gross = gross * 0.8;
+
+        // Compute monthly car cost
+        let dep = 0, intDrag = 0, ins = 0, fuel = 0, maint = 0, park = 0, opp = 0;
+        let allIn = 0;
+
+        if (costMode.value === "direct") {
+          allIn = getNum(directMonthlyCost);
+
+          // Still show some blanks for breakdown
+          dep = 0; intDrag = 0;
+          ins = 0; fuel = 0; maint = 0; park = 0; opp = 0;
+        } else {
+          const price = getNum(purchasePrice);
+          const resale = getNum(resaleValue);
+          const holdY = Math.max(1, getNum(holdingYears));
+          const holdM = holdY * 12;
+
+          dep = Math.max(0, (price - resale) / holdM);
+
+          ins = getNum(insuranceMonthly);
+          fuel = getNum(fuelMonthly);
+          maint = getNum(maintenanceMonthly) + (stressRepair ? 300 : 0);
+          park = getNum(parkingErpMonthly);
+
+          const cap = getNum(upfrontCapital);
+          const r = Math.max(0, getNum(oppReturn)) / 100;
+          opp = cap * r / 12;
+
+          // Financing
+          if (loanUsed.value === "yes") {
+            const principal = getNum(loanAmount);
+            const tY = Math.max(1, getNum(loanTenureYears));
+            let ratePct = getNum(interestRate);
+
+            if (interestInputType.value === "flat") {
+              ratePct = convertFlatToEIR(ratePct);
+            }
+            if (stressRate) ratePct = ratePct + 0.5;
+
+            intDrag = estimateMonthlyInterestDrag({
+              principal,
+              aprPct: ratePct,
+              tenureYears: tY,
+              holdingYears: holdY
+            });
+          } else {
+            intDrag = 0;
+          }
+
+          allIn = dep + intDrag + ins + fuel + maint + park + opp;
+        }
+
+        // Affordability math
+        const ratio = gross > 0 ? (allIn / gross) : 0;
+        const disp = gross - fixed - allIn; // disposable after car+fixed (before lifestyle)
+        const dispAfterSavingsTarget = disp; // used in classifier as "capacity"
+
+        // Stress fail detection (basic): if any stress toggle on AND result becomes fragile, mark as stressFailed
+        // We'll compute base status and stressed status separately for clearer output
+        // Base status: recompute with all stress off
+        const base = computeBaseStatus();
+
+        // Current status (with stress toggles)
+        const currentStressFailed = (stressIncome || stressRate || stressRepair) && (computeCurrentStatus() === "fragile");
+
+        const status = classify({
+          ratio,
+          disposableAfterAll: dispAfterSavingsTarget,
+          savingsTarget: saveT,
+          stressFailed: currentStressFailed
+        });
+
+        // Render main numbers
+        renderPill(status);
+        monthlyAllIn.textContent = money(allIn);
+        ratioPct.textContent = pct(ratio);
+        disposable.textContent = money(disp);
+
+        // Summary line
+        let hint = "";
+        if (ride > 0) {
+          if (ride < allIn * 0.7) hint = "Ride-hailing is far below your ownership cost band → ownership is mostly a convenience premium.";
+          else if (ride <= allIn * 1.1) hint = "You’re near break-even vs your ride-hailing spend → grey zone logic applies (buffers + logistics).";
+          else hint = "Your ride-hailing spend is above your ownership estimate → ownership may be rational if buffers are strong.";
+        } else {
+          hint = "Use the stress toggles. If a small shock breaks you, the plan is fragile.";
+        }
+        summaryLine.textContent = hint;
+
+        // Breakdown
+        bDep.textContent = money(dep);
+        bInt.textContent = money(intDrag);
+        bIns.textContent = money(ins);
+        bFuel.textContent = money(fuel);
+        bMaint.textContent = money(maint);
+        bPark.textContent = money(park);
+        bOpp.textContent = money(opp);
+
+        // Stress text
+        const stressLabels = [];
+        if (stressIncome) stressLabels.push("Income -20%");
+        if (stressRate) stressLabels.push("Interest +0.5%");
+        if (stressRepair) stressLabels.push("Repair spike +$300/m");
+
+        if (!stressLabels.length) {
+          stressText.textContent = "No stress toggles active.";
+        } else {
+          stressText.textContent =
+            "Active: " + stressLabels.join(" · ") +
+            ". If this flips you to FRAGILE, restructure (lower exposure or build buffer).";
+        }
+
+        function computeBaseStatus() {
+          // Snapshot current inputs; temporarily compute with stress off
+          const sI = isOn(stressIncomeBtn), sR = isOn(stressRateBtn), sRep = isOn(stressRepairBtn);
+          setBtn(stressIncomeBtn, false);
+          setBtn(stressRateBtn, false);
+          setBtn(stressRepairBtn, false);
+          const baseStatus = computeCurrentStatus();
+          setBtn(stressIncomeBtn, sI);
+          setBtn(stressRateBtn, sR);
+          setBtn(stressRepairBtn, sRep);
+          return baseStatus;
+        }
+
+        function computeCurrentStatus() {
+          // Recompute quickly by calling recalcCore with current toggles; but we’re already in recalc.
+          // We’ll classify using current computed ratio/disp/allIn, but WITHOUT stressFailed forcing fragile.
+          const raw = classify({
+            ratio,
+            disposableAfterAll: dispAfterSavingsTarget,
+            savingsTarget: saveT,
+            stressFailed: false
+          });
+          return raw;
+        }
+      }
+
+      function syncModeUI() {
+        const mode = costMode.value;
+
+        if (mode === "direct") {
+          directCostWrap.style.display = "block";
+          componentsWrap.style.display = "none";
+        } else {
+          directCostWrap.style.display = "none";
+          componentsWrap.style.display = "block";
+        }
+        recalc();
+      }
+
+      function syncLoanUI() {
+        const on = loanUsed.value === "yes";
+        loanAmount.disabled = !on;
+        interestInputType.disabled = !on;
+        interestRate.disabled = !on;
+        loanTenureYears.disabled = !on;
+        recalc();
+      }
+
+      function hookInputs() {
+        const inputs = document.querySelectorAll("input, select");
+        inputs.forEach((el) => {
+          el.addEventListener("input", recalc);
+          el.addEventListener("change", recalc);
+        });
+
+        costMode.addEventListener("change", syncModeUI);
+        loanUsed.addEventListener("change", syncLoanUI);
+
+        // Stress buttons
+        stressIncomeBtn.addEventListener("click", () => { setBtn(stressIncomeBtn, !isOn(stressIncomeBtn)); recalc(); });
+        stressRateBtn.addEventListener("click", () => { setBtn(stressRateBtn, !isOn(stressRateBtn)); recalc(); });
+        stressRepairBtn.addEventListener("click", () => { setBtn(stressRepairBtn, !isOn(stressRepairBtn)); recalc(); });
+
+        // Default states
+        setBtn(stressIncomeBtn, false);
+        setBtn(stressRateBtn, false);
+        setBtn(stressRepairBtn, false);
+
+        // Interest type change
+        interestInputType.addEventListener("change", recalc);
+      }
+
+      hookInputs();
+      syncModeUI();
+      syncLoanUI();
+      recalc();
+    })();
+  </script>
+
+</body>
+</html>
