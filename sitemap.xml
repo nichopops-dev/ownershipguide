@@ -232,7 +232,13 @@
     <loc>https://ownershipguide.com/should-i-buy-property-now-or-wait-singapore.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  <lastmod>2026-02-21</lastmod>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/how-much-cash-to-buy-property-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-21</lastmod>
   </url>
 
 </urlset>
