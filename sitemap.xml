@@ -53,6 +53,12 @@
     <priority>0.7</priority>
     <lastmod>2026-02-01</lastmod>
   </url>
+  <url>
+    <loc>https://ownershipguide.com/calculators/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-02-22</lastmod>
+  </url>
 
   <!-- ===================================== -->
   <!-- Transport Cluster -->
