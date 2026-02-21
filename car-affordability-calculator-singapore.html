@@ -81,6 +81,7 @@
     .kpi-box { border: 1px dashed #d1d5db; border-radius: 12px; padding: 12px; }
     .divider { height: 1px; background: #e5e7eb; margin: 12px 0; }
     .btn {
+      color: #111827;
       display: inline-block;
       border: 1px solid #d1d5db;
       border-radius: 10px;
@@ -88,6 +89,11 @@
       font-weight: 700;
       cursor: pointer;
       background: white;
+    }
+    .btn[aria-pressed="true"]{
+      background:#111827;
+      color:#fff;
+      border-color:#111827;
     }
     .btn:active { transform: translateY(1px); }
     .toggle-row { display: flex; gap: 8px; flex-wrap: wrap; }
