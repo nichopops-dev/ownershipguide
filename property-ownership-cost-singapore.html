@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model (HDB + Condo)</title>
+  <meta name="description" content="The true cost of property ownership in Singapore (2026): a 5-year total exposure model covering interest drag, downpayment liquidity, taxes/fees, maintenance, opportunity cost, and exit risk. Includes HDB vs condo examples and a decision checklist." />
+  <link rel="canonical" href="https://ownershipguide.com/property-ownership-cost-singapore.html" />
+
+  <!-- Auto-related accuracy tags -->
+  <meta name="og:cluster" content="property">
+  <meta name="og:subtopic" content="ownership">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema (matches on-page FAQ section) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How much does it cost to own a property in Singapore over 5 years?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Over 5 years, the true ownership exposure is not just mortgage instalments. It includes interest cost, buyer costs (BSD/fees), ongoing costs (tax/maintenance), opportunity cost of upfront capital, and exit risk (sale costs + price movement). A disciplined 5-year model prices total exposure, not just monthly payments."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is buying a condo in Singapore still worth it in 2026?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"It depends on your holding period, interest sensitivity, and liquidity resilience. Condos often have higher entry friction (BSD, cash/CPF commitment) and ongoing costs (MCST/maintenance), so the decision should be tested using a 5-year exposure model rather than instalment affordability."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the biggest mistake people make when evaluating property affordability?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Using mortgage instalments as the affordability metric. Instalments are a payment method. The true cost includes interest drag, opportunity cost of upfront capital, taxes/fees, maintenance, and exit costs—plus the risk of needing to sell earlier than planned."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / Ownership Cost
+    </p>
+
+    <h1>Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model (HDB + Condo)</h1>
+
+    <p class="meta">Last updated: February 2026</p>
+
+    <p>
+      In Singapore, property is not mainly a “monthly mortgage” decision.
+      It is a <strong>multi-year capital allocation commitment</strong> with
+      <strong>interest sensitivity</strong>, <strong>liquidity lock-up</strong>, and <strong>exit risk</strong>.
+    </p>
+
+    <p>
+      The right way to evaluate buying is a <strong>5-year total exposure model</strong>:
+      not just instalments, but the full ownership cost structure that survives even if your price prediction is wrong.
+    </p>
+
+    <div class="box">
+      <p><strong>Decision Snapshot (do this in order)</strong></p>
+      <ul>
+        <li><strong>1) Price total exposure</strong> over your holding period (this page).</li>
+        <li><strong>2) Choose your subtype lens:</strong>
+          <a href="/condo-ownership-cost.html">Condo ownership</a> ·
+          <a href="/rental-property-ownership-cost.html">Rental property ownership</a> ·
+          <a href="/bto-vs-resale-cost.html">BTO vs resale</a>
+        </li>
+        <li><strong>3) If your decision is “transport vs property capital allocation”</strong>, compare against:
+          <a href="/car-ownership-cost.html">5-year car ownership model</a>.
+        </li>
+      </ul>
+      <p class="muted">
+        If you keep thinking “instalment looks okay so it’s affordable”, you are at risk of underpricing
+        <strong>interest drag + liquidity lock-up + exit friction</strong>.
+      </p>
+    </div>
+
+    <hr>
+
+    <h2 id="quick">Quick Answer (What This Model Actually Prices)</h2>
+
+    <p>
+      A clean 5-year ownership model prices:
+    </p>
+
+    <ul>
+      <li><strong>Buyer costs:</strong> stamp duties + legal/valuation/admin (one-time friction)</li>
+      <li><strong>Interest drag:</strong> the true cost of financing (rate sensitivity matters)</li>
+      <li><strong>Ongoing costs:</strong> property tax, maintenance/MCST, insurance, repairs</li>
+      <li><strong>Opportunity cost:</strong> what your downpayment/CPF/cash could have earned</li>
+      <li><strong>Exit costs + exit risk:</strong> agent fees, legal fees, and price movement</li>
+    </ul>
+
+    <div class="box">
+      <p><strong>One-line rule:</strong> If you cannot hold long enough, <strong>exit friction dominates</strong>.</p>
+      <p class="muted">
+        This is why “I might sell in 2–3 years” is not a minor detail — it changes the entire math.
+      </p>
+    </div>
+
+    <hr>
+
+    <h2>Jump to What You Need</h2>
+    <ul>
+      <li><a href="#structure">1) The full 5-year cost structure</a></li>
+      <li><a href="#formula">2) The model (simple formula)</a></li>
+      <li><a href="#assumptions">3) Assumptions used (transparent)</a></li>
+      <li><a href="#examples">4) Worked examples (HDB resale vs condo)</a></li>
+      <li><a href="#sensitivity">5) Interest rate sensitivity (why 0.5% matters)</a></li>
+      <li><a href="#exit">6) Exit risk (forced-sale penalties)</a></li>
+      <li><a href="#checklist">7) Final checklist (buy vs postpone)</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="structure">1) The Full 5-Year Cost Structure</h2>
+
+    <ul>
+      <li><strong>Buyer friction:</strong> BSD + legal/valuation/admin</li>
+      <li><strong>Interest cost:</strong> paid to the bank over your holding period</li>
+      <li><strong>Ongoing ownership:</strong> property tax + maintenance/MCST + insurance + repairs</li>
+      <li><strong>Opportunity cost:</strong> foregone return on cash/CPF locked in</li>
+      <li><strong>Exit friction:</strong> agent fees + legal + misc selling costs</li>
+      <li><strong>Price movement:</strong> upside/downside is real, but should not be assumed as guaranteed</li>
+    </ul>
+
+    <p class="muted">
+      This pillar is intentionally neutral across HDB + condo. Subtype deep dives:
+      <a href="/condo-ownership-cost.html">condo</a> ·
+      <a href="/rental-property-ownership-cost.html">rental property</a> ·
+      <a href="/bto-vs-resale-cost.html">BTO vs resale</a>.
+    </p>
+
+    <hr>
+
+    <h2 id="formula">2) The Model (Simple, Non-Delusional)</h2>
+
+    <div class="box">
+      <p><strong>5-year total exposure</strong> ≈</p>
+      <ul>
+        <li><strong>Buyer costs</strong></li>
+        <li>+ <strong>Interest paid (5 years)</strong></li>
+        <li>+ <strong>Ongoing costs (5 years)</strong></li>
+        <li>+ <strong>Opportunity cost of upfront capital</strong></li>
+        <li>+ <strong>Exit costs</strong></li>
+        <li>± <strong>Price movement</strong></li>
+      </ul>
+      <p class="muted">
+        Instalments include principal repayment, which is not a “cost” (it becomes equity).
+        The cost is the drag/friction around the asset and the risk of needing to exit early.
+      </p>
+    </div>
+
+    <hr>
+
+    <h2 id="assumptions">3) Assumptions Used (So You Can Stress-Test)</h2>
+
+    <p>
+      This page uses a planning baseline consistent with Singapore reality:
+    </p>
+
+    <ul>
+      <li><strong>Holding period:</strong> 5 years</li>
+      <li><strong>Loan tenure:</strong> 25 years</li>
+      <li><strong>Interest rate baseline:</strong> 3.5% (stress-test at 3.0% and 4.0%)</li>
+      <li><strong>Example A (HDB resale):</strong> $800,000</li>
+      <li><strong>Example B (Condo):</strong> $1.5M (your stated “average” band ~1.4–1.5M)</li>
+    </ul>
+
+    <p class="muted">
+      These are illustrative frameworks, not quotes. Your exact BSD, loan terms, and taxes differ.
+      The point is structure: you should still be making a good decision after changing assumptions.
+    </p>
+
+    <hr>
+
+    <h2 id="examples">4) Worked Examples (HDB Resale vs Condo)</h2>
+
+    <p>
+      Below are simplified examples to illustrate what dominates cost.
+      They are intentionally conservative and model-first (not sales brochure math).
+    </p>
+
+    <h3>Example A — $800k Resale HDB (5-year lens)</h3>
+    <div class="box">
+      <ul>
+        <li><strong>Buyer friction:</strong> BSD + legal/fees (one-time)</li>
+        <li><strong>Interest drag (5 years):</strong> depends on loan size and rate</li>
+        <li><strong>Ongoing (5 years):</strong> property tax + maintenance + repairs buffer</li>
+        <li><strong>Opportunity cost:</strong> cash/CPF tied up</li>
+        <li><strong>Exit friction:</strong> agent + legal selling fees</li>
+      </ul>
+      <p class="muted">
+        HDB typically has <strong>lower ongoing “building cost” friction</strong> vs condos (MCST),
+        but still has real maintenance and tax costs, plus the same exit-risk logic.
+      </p>
+    </div>
+
+    <h3>Example B — $1.5M Condo (5-year lens)</h3>
+    <div class="box">
+      <ul>
+        <li><strong>Buyer friction:</strong> BSD is larger in absolute dollars</li>
+        <li><strong>Ongoing (5 years):</strong> MCST/maintenance becomes a meaningful “always-on” cost</li>
+        <li><strong>Liquidity lock-up:</strong> higher upfront commitment increases opportunity cost</li>
+        <li><strong>Exit friction:</strong> selling costs are similar percentage-wise but larger absolute</li>
+      </ul>
+      <p class="muted">
+        Condos are more sensitive to “I might sell early” because absolute dollars are larger,
+        and <strong>ongoing fixed costs don’t care about your timeline</strong>.
+      </p>
+    </div>
+
+    <p class="muted">
+      If your question is specifically condo mechanics, go here:
+      <a href="/condo-ownership-cost.html">The Real Cost of Owning a Condo (2026)</a>.
+    </p>
+
+    <hr>
+
+    <h2 id="sensitivity">5) Interest Rate Sensitivity (Why 0.5% Matters)</h2>
+
+    <p>
+      Rate changes matter because they affect <strong>interest drag</strong> and your monthly cashflow.
+      The model survives when you stress-test:
+    </p>
+
+    <div class="box">
+      <ul>
+        <li><strong>Base:</strong> 3.5%</li>
+        <li><strong>Lower:</strong> 3.0%</li>
+        <li><strong>Higher:</strong> 4.0%</li>
+      </ul>
+      <p class="muted">
+        If 0.5% higher breaks the decision, your plan is fragile.
+        A good ownership decision should survive realistic rate movement.
+      </p>
+    </div>
+
+    <hr>
+
+    <h2 id="exit">6) Exit Risk (Forced-Sale Penalties)</h2>
+
+    <p>
+      The biggest real-world risk is not “price goes down 1%”.
+      It is: <strong>you need to sell earlier than planned</strong>.
+    </p>
+
+    <div class="box">
+      <p><strong>Exit risk rule:</strong></p>
+      <ul>
+        <li><strong>Short holds (1–2 years):</strong> friction dominates (buyer + seller costs get compressed)</li>
+        <li><strong>Medium holds (3–5 years):</strong> still sensitive; do not assume smooth exit</li>
+        <li><strong>Long holds (6–10 years):</strong> friction spreads out; decision becomes more resilient</li>
+      </ul>
+    </div>
+
+    <p class="muted">
+      This is why “I might upgrade in 2–3 years” should be treated as a high-risk assumption, not a casual plan.
+    </p>
+
+    <hr>
+
+    <h2 id="checklist">7) Final Checklist (Buy vs Postpone)</h2>
+
+    <div class="box">
+      <p><strong>Buy (or proceed) if:</strong></p>
+      <ul>
+        <li>You can hold ~5 years without forcing a sale under stress</li>
+        <li>You have buffers for higher interest / repairs / MCST increases (if condo)</li>
+        <li>Your downpayment/CPF lock-up does not starve investing/emergency reserves</li>
+        <li>You’re not deciding purely based on instalment affordability</li>
+      </ul>
+
+      <p><strong>Postpone / restructure if:</strong></p>
+      <ul>
+        <li>Your holding period is uncertain and you might exit early</li>
+        <li>A 0.5% rate increase breaks your monthly cashflow</li>
+        <li>You’re draining buffers to “make it work”</li>
+      </ul>
+    </div>
+
+    <p class="muted">
+      Next: choose the path that matches your situation:
+      <a href="/bto-vs-resale-cost.html">BTO vs resale</a> ·
+      <a href="/condo-ownership-cost.html">condo ownership</a> ·
+      <a href="/rental-property-ownership-cost.html">rental property ownership</a>.
+    </p>
+
+    <hr>
+
+    <h2 id="faq">FAQ</h2>
+
+    <h3>How much does it cost to own a property in Singapore over 5 years?</h3>
+    <p>
+      The true 5-year cost is not just mortgage payments. It includes interest drag, buyer costs (BSD/fees),
+      ongoing costs (tax/maintenance), opportunity cost of upfront capital, and exit costs—plus the risk of price movement.
+      A disciplined model prices total exposure, not instalments.
+    </p>
+
+    <h3>Is buying a condo in Singapore still worth it in 2026?</h3>
+    <p>
+      It depends on holding period, interest sensitivity, and liquidity resilience. Condos often have higher entry friction
+      and ongoing fixed costs (MCST), so you should decide using a 5-year exposure model, not instalment comfort.
+      See: <a href="/condo-ownership-cost.html">condo ownership cost model</a>.
+    </p>
+
+    <h3>What is the biggest mistake people make when evaluating property affordability?</h3>
+    <p>
+      Using instalments as the affordability metric. Instalments are a payment method. The true cost includes interest drag,
+      taxes/fees, ongoing maintenance, opportunity cost of locked-up capital, and exit friction.
+    </p>
+
+    <hr>
+
+    <div id="auto-related"></div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js" defer></script>
+
+</body>
+</html>
