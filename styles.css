@@ -325,3 +325,39 @@ th {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+
+/* =========================
+   Homepage cards (v0008)
+   ========================= */
+.card-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 18px 0;
+}
+@media (min-width: 860px){
+  .card-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card{
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 16px;
+  background: rgba(0,0,0,0.02);
+}
+.card h2{
+  margin-top: 0;
+}
+.button{
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.18);
+  text-decoration: none;
+}
+.button:hover{
+  text-decoration: none;
+  filter: brightness(0.98);
+}
