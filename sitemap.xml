@@ -130,6 +130,14 @@
     <lastmod>2026-02-23</lastmod>
   </url>
 
+  <!-- Alternatives / public transport baseline -->
+  <url>
+    <loc>https://ownershipguide.com/public-transport-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <lastmod>2026-02-23</lastmod>
+  </url>
+
 <!-- Comparisons / timing -->
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
