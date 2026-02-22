@@ -143,6 +143,33 @@ button:hover{ opacity: 0.92; }
   margin-top:16px;
 }
 
+/* Calculator CTA (injected near end of transport articles) */
+.cta-box{
+  border:1px solid #d7d7d7;
+  background:#ffffff;
+  padding:14px 14px;
+  border-radius:10px;
+  margin-top:16px;
+}
+
+.cta-box h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.cta-box p{
+  margin:0 0 10px;
+}
+
+.cta-button{
+  display:inline-block;
+  padding:10px 12px;
+  border:1px solid #111;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
 .related-box h3{
   margin:0 0 10px;
   font-size:18px;
