@@ -122,7 +122,15 @@
   </url>
 
 
-  <!-- Comparisons / timing -->
+  
+  <url>
+    <loc>https://ownershipguide.com/ev-vs-petrol-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-23</lastmod>
+  </url>
+
+<!-- Comparisons / timing -->
   <url>
     <loc>https://ownershipguide.com/car-vs-ride-hailing-cost.html</loc>
     <changefreq>monthly</changefreq>
