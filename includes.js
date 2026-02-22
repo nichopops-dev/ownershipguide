@@ -46,7 +46,18 @@
     relatedOptOutMetaKey: "og:norelated",
 
     // Nav activation (prefer meta-based classification, fallback to path heuristics)
-    preferMetaForNav: true
+    preferMetaForNav: true,
+
+    // Authority concentration
+    // Ensure every cluster reinforces a single canonical "master" pillar page.
+    primaryPillarByCluster: {
+      transport: "/car-ownership-cost.html",
+      property: "/property-ownership-cost-singapore.html"
+    },
+
+    // Calculator anchoring (transport only)
+    enableAutoCalculatorCTA: true,
+    calculatorCtaId: "auto-calculator-cta"
   };
 
   // =========================
@@ -314,14 +325,61 @@
       ? all.filter((p) => p.subtopic === subtopic && normalizePath(p.url) !== selfN)
       : [];
 
-    // Always include pillars first (excluding self)
+    function byUrl(url) {
+      const n = normalizePath(url);
+      return (bucket.pages || []).find((x) => normalizePath(x.url) === n)
+        || (bucket.pillars || []).find((x) => normalizePath(x.url) === n)
+        || (bucket.bridges || []).find((x) => normalizePath(x.url) === n)
+        || null;
+    }
+
+    function primaryPillarLink() {
+      const pUrl = SETTINGS.primaryPillarByCluster?.[cluster] || "";
+      if (!pUrl) return null;
+      const p = byUrl(pUrl);
+      if (!p) return null;
+      if (normalizePath(p.url) === selfN) return null;
+      return { url: p.url, title: p.title };
+    }
+
+    function pickCalculatorLink() {
+      if (cluster !== "transport") return null;
+      // If current page IS a calculator, don't reinforce calculators again.
+      if ((subtopic || "").toLowerCase() === "calculator") return null;
+
+      // Prefer the most context-relevant calculator.
+      const wantRide = (subtopic || "").toLowerCase() === "ridehailing";
+      const calcUrl = wantRide
+        ? "/car-vs-ride-hailing-calculator.html"
+        : "/car-affordability-calculator-singapore.html";
+      const c = byUrl(calcUrl);
+      if (!c) return null;
+      if (normalizePath(c.url) === selfN) return null;
+      return { url: c.url, title: c.title };
+    }
+
+    // Always include the primary pillar first (excluding self)
     let chosen = [];
+    const primary = primaryPillarLink();
+    if (primary) chosen.push(primary);
+
+    // Then include remaining pillars (excluding self + excluding primary)
+    const remainingPillars = pillars
+      .filter((p) => normalizePath(p.url) !== selfN)
+      .filter((p) => !primary || normalizePath(p.url) !== normalizePath(primary.url));
     chosen = chosen.concat(
-      pillars.filter((p) => normalizePath(p.url) !== selfN).slice(0, SETTINGS.relatedPillarsCount)
+      remainingPillars.slice(
+        0,
+        Math.max(0, SETTINGS.relatedPillarsCount - (primary ? 1 : 0))
+      )
     );
 
-    // Add same subtopic next (excluding self)
+    // Then include same-subtopic links
     chosen = chosen.concat(sameSubtopic.slice(0, SETTINGS.relatedSameSubtopicCount));
+
+    // Ensure at least 1 calculator anchor appears for transport (when relevant)
+    const calc = pickCalculatorLink();
+    if (calc) chosen.push(calc);
 
     // Add bridges last
     chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
@@ -331,6 +389,43 @@
 
     // Extra guard: never show an empty module
     return chosen;
+  }
+
+  function injectCalculatorCTA() {
+    if (!SETTINGS.enableAutoCalculatorCTA) return;
+
+    const host = document.getElementById(SETTINGS.relatedContainerId);
+    if (!host) return;
+
+    // Avoid double-inserting
+    if (document.getElementById(SETTINGS.calculatorCtaId)) return;
+
+    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+    if (cluster !== "transport") return;
+    if (subtopic === "calculator") return;
+
+    const wantRide = subtopic === "ridehailing";
+    const url = wantRide
+      ? "/car-vs-ride-hailing-calculator.html"
+      : "/car-affordability-calculator-singapore.html";
+    const title = wantRide
+      ? "Run the Car vs Ride-Hailing Break-Even Calculator"
+      : "Run the Car Affordability Stress Test Calculator";
+    const desc = wantRide
+      ? "Enter your monthly ride-hailing spend and see your personal break-even point versus ownership."
+      : "Stress-test your true monthly car cost (not just instalment) and see if it fits your income.";
+
+    const box = document.createElement("div");
+    box.className = "cta-box";
+    box.id = SETTINGS.calculatorCtaId;
+    box.innerHTML = `
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(desc)}</p>
+      <p><a class="cta-button" href="${url}">Open calculator →</a></p>
+    `;
+
+    host.insertAdjacentElement("beforebegin", box);
   }
 
   // =========================
@@ -430,6 +525,11 @@
       }
     }
   }
+
+  // =========================
+  // 7.5) Calculator CTA (authority anchoring)
+  // =========================
+  injectCalculatorCTA();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
