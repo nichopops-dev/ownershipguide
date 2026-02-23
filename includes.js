@@ -62,6 +62,14 @@
     // Auto insert "Back to Ownership Guide" link near top of every page (except home)
     enableAutoBackToHome: true,
     backToHomeHtml: "<p class='nav'><a href='/'>← Back to Ownership Guide</a></p>"
+  ,
+    // Auto insert "Back to Cluster" link (e.g., Transport / Property) under the Back-to-Home link.
+    // Uses <meta name="og:cluster" content="transport|property"> or <meta property="og:cluster" ...>
+    enableAutoBackToCluster: true,
+    backToClusterByCluster: {
+      transport: { href: "/transport/", text: "← Back to Transport" },
+      property: { href: "/property/", text: "← Back to Property" }
+    }
   };
 
   // =========================
@@ -255,7 +263,50 @@
     container.prepend(node);
   }
 
-  function buildRelatedHTML(label, links) {
+  
+  function injectBackToClusterLink() {
+    if (!SETTINGS.enableAutoBackToCluster) return;
+
+    // Allow per-page opt-out:
+    // <meta name="og:nobackcluster" content="true">
+    if (metaIsTrue("og:nobackcluster")) return;
+
+    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+    if (!cluster) return;
+
+    const def = SETTINGS.backToClusterByCluster && SETTINGS.backToClusterByCluster[cluster];
+    if (!def || !def.href || !def.text) return;
+
+    const selfPath = getSelfPath();
+    const canonPath = getCanonicalPath();
+    const path = canonPath || selfPath;
+
+    // Skip if you're already on the cluster hub
+    if (normalizePath(path) === normalizePath(def.href)) return;
+
+    const container = document.querySelector(".container");
+    if (!container) return;
+
+    // Avoid double insert if author already placed it
+    const existing = container.querySelector(`p.nav a[href="${def.href}"]`);
+    if (existing && (existing.textContent || "").toLowerCase().includes("back")) return;
+
+    const html = `<p class="nav"><a href="${def.href}">${escapeHtml(def.text)}</a></p>`;
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = html;
+    const node = wrapper.firstElementChild;
+    if (!node) return;
+
+    // Prefer inserting after the Back-to-Home link if it exists, otherwise prepend
+    const backHome = container.querySelector('p.nav a[href="/"]');
+    if (backHome && backHome.closest("p.nav") && backHome.closest("p.nav").parentElement === container) {
+      backHome.closest("p.nav").insertAdjacentElement("afterend", node);
+    } else {
+      container.prepend(node);
+    }
+  }
+
+function buildRelatedHTML(label, links) {
     const lis = links
       .map((l) => `<li><a href="${l.url}">${escapeHtml(l.title)}</a></li>`)
       .join("");
@@ -480,10 +531,12 @@
     await inject("site-footer", "/footer.html");
     setActiveNav();
     injectBackToHomeLink();
+    injectBackToClusterLink();
   }
 
-    // Ensure back-to-home link exists even if header/footer is disabled
+    // Ensure back-to-home (and back-to-cluster) links exist even if header/footer is disabled
   injectBackToHomeLink();
+  injectBackToClusterLink();
 
 // =========================
   // 4) ANNOUNCEMENT (optional)
