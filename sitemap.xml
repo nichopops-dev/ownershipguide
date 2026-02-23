@@ -129,7 +129,7 @@
   </url>
 
 
-  
+
   <url>
     <loc>https://ownershipguide.com/ev-vs-petrol-cost-singapore.html</loc>
     <changefreq>monthly</changefreq>
@@ -188,7 +188,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
     <lastmod>2026-02-23</lastmod>
-  </url> 
+  </url>
 
   <!-- Cost engines -->
   <url>
@@ -196,6 +196,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/coe-bidding-strategy-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-23</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/car-loan-rates-singapore.html</loc>
@@ -282,6 +288,13 @@
     <lastmod>2026-02-21</lastmod>
   </url>
 
+
+  <url>
+    <loc>https://ownershipguide.com/bsd-absd-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-23</lastmod>
+  </url>
   <url>
     <loc>https://ownershipguide.com/rent-vs-buy-property-singapore.html</loc>
     <changefreq>monthly</changefreq>
@@ -317,12 +330,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-02-21</lastmod>
-  </url>
-
-  <url>
-    <loc>https://ownershipguide.com/coe-bidding-strategy-singapore.html</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
