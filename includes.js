@@ -57,7 +57,11 @@
 
     // Calculator anchoring (transport only)
     enableAutoCalculatorCTA: true,
-    calculatorCtaId: "auto-calculator-cta"
+    calculatorCtaId: "auto-calculator-cta",
+
+    // Auto insert "Back to Ownership Guide" link near top of every page (except home)
+    enableAutoBackToHome: true,
+    backToHomeHtml: "<p class='nav'><a href='/'>← Back to Ownership Guide</a></p>"
   };
 
   // =========================
@@ -218,6 +222,37 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  function injectBackToHomeLink() {
+    if (!SETTINGS.enableAutoBackToHome) return;
+
+    const selfPath = getSelfPath();
+    const canonPath = getCanonicalPath();
+    const path = canonPath || selfPath;
+
+    // Skip home and 404
+    const skip = new Set([normalizePath("/"), normalizePath("/index.html"), normalizePath("/404.html")]);
+    if (skip.has(normalizePath(path))) return;
+
+    const container = document.querySelector(".container");
+    if (!container) return;
+
+    // If a page explicitly opts out, do nothing:
+    // <meta name="og:noback" content="true">
+    if (metaIsTrue("og:noback")) return;
+
+    // Avoid double insert if author already placed it
+    const existing = container.querySelector('p.nav a[href="/"]');
+    if (existing && (existing.textContent || "").toLowerCase().includes("back to ownership guide")) return;
+
+    // Insert at the top of the container (below header)
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = SETTINGS.backToHomeHtml;
+    const node = wrapper.firstElementChild;
+    if (!node) return;
+
+    container.prepend(node);
   }
 
   function buildRelatedHTML(label, links) {
@@ -444,9 +479,13 @@
     await inject("site-header", "/header.html");
     await inject("site-footer", "/footer.html");
     setActiveNav();
+    injectBackToHomeLink();
   }
 
-  // =========================
+    // Ensure back-to-home link exists even if header/footer is disabled
+  injectBackToHomeLink();
+
+// =========================
   // 4) ANNOUNCEMENT (optional)
   // =========================
   if (SETTINGS.enableAnnouncement) {
