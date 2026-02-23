@@ -218,6 +218,25 @@
     return "";
   }
 
+
+  // Prefer the "main" content container (avoid header/footer containers).
+  function getMainContainer() {
+    // Common layout: #site-header then .container for page content
+    const direct = document.querySelector("#site-header + .container");
+    if (direct) return direct;
+
+    const containers = Array.from(document.querySelectorAll(".container"));
+    if (!containers.length) return null;
+
+    // Prefer a container not nested inside header/footer includes
+    for (const c of containers) {
+      if (c.closest("#site-header") || c.closest("#site-footer")) continue;
+      return c;
+    }
+    // Fallback: last container in DOM
+    return containers[containers.length - 1];
+  }
+
   function metaIsTrue(key) {
     const v = (getMetaAny(key) || "").toLowerCase();
     return v === "true" || v === "1" || v === "yes";
@@ -243,7 +262,7 @@
     const skip = new Set([normalizePath("/"), normalizePath("/index.html"), normalizePath("/404.html")]);
     if (skip.has(normalizePath(path))) return;
 
-    const container = document.querySelector(".container");
+    const container = getMainContainer();
     if (!container) return;
 
     // If a page explicitly opts out, do nothing:
@@ -251,8 +270,9 @@
     if (metaIsTrue("og:noback")) return;
 
     // Avoid double insert if author already placed it
-    const existing = container.querySelector('p.nav a[href="/"]');
-    if (existing && (existing.textContent || "").toLowerCase().includes("back to ownership guide")) return;
+    const existing = Array.from(container.querySelectorAll('a[href="/"]'))
+      .find(a => /back to ownership guide/i.test((a.textContent || "").trim()));
+    if (existing) return;
 
     // Insert at the top of the container (below header)
     const wrapper = document.createElement("div");
@@ -284,12 +304,13 @@
     // Skip if you're already on the cluster hub
     if (normalizePath(path) === normalizePath(def.href)) return;
 
-    const container = document.querySelector(".container");
+    const container = getMainContainer();
     if (!container) return;
 
     // Avoid double insert if author already placed it
-    const existing = container.querySelector(`p.nav a[href="${def.href}"]`);
-    if (existing && (existing.textContent || "").toLowerCase().includes("back")) return;
+    const existing = Array.from(container.querySelectorAll(`a[href="${def.href}"]`))
+      .find(a => /back to/i.test((a.textContent || "").trim()));
+    if (existing) return;
 
     const html = `<p class="nav"><a href="${def.href}">${escapeHtml(def.text)}</a></p>`;
     const wrapper = document.createElement("div");
@@ -298,9 +319,16 @@
     if (!node) return;
 
     // Prefer inserting after the Back-to-Home link if it exists, otherwise prepend
-    const backHome = container.querySelector('p.nav a[href="/"]');
-    if (backHome && backHome.closest("p.nav") && backHome.closest("p.nav").parentElement === container) {
-      backHome.closest("p.nav").insertAdjacentElement("afterend", node);
+    const backHome = Array.from(container.querySelectorAll('a[href="/"]'))
+      .find(a => /back to ownership guide/i.test((a.textContent || "").trim()));
+
+    if (backHome) {
+      const p = backHome.closest("p");
+      if (p && p.parentElement === container) {
+        p.insertAdjacentElement("afterend", node);
+      } else {
+        backHome.insertAdjacentElement("afterend", node);
+      }
     } else {
       container.prepend(node);
     }
@@ -545,7 +573,7 @@ function buildRelatedHTML(label, links) {
     const bar = document.createElement("div");
     bar.className = "announcement";
     bar.innerHTML = SETTINGS.announcementHtml;
-    const container = document.querySelector(".container");
+    const container = getMainContainer();
     if (container) container.prepend(bar);
     else document.body.prepend(bar);
   }
@@ -605,7 +633,7 @@ function buildRelatedHTML(label, links) {
 
     const normalizedSkip = new Set(SETTINGS.skipAdSlotsOn.map(normalizePath));
     if (!normalizedSkip.has(normalizePath(comparePath))) {
-      const container = document.querySelector(".container");
+      const container = getMainContainer();
       if (container) {
         const h2s = Array.from(container.querySelectorAll("h2"));
         if (h2s.length >= SETTINGS.minH2ForAdSlots) {
