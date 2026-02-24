@@ -239,11 +239,30 @@ button:hover{ opacity: 0.92; }
 .site-search input[type="search"]{
   width: 260px;
   max-width: 260px;
-  padding: 8px 10px;
+  padding: 8px 38px 8px 10px;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   font-size: 14px;
   background: #fff;
+}
+
+
+.site-search-clear{
+  position: absolute;
+  right: 10px;
+  height: 28px;
+  width: 28px;
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.site-search-clear:hover{
+  background: #f3f4f6;
 }
 
 .site-search-results{

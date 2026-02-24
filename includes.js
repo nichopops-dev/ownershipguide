@@ -240,6 +240,14 @@
       pushAll(cluster.pages, "page");
       pushAll(cluster.bridges, "bridge");
     }
+    // Core pages (outside SITE map)
+    out.unshift(
+      { url: "/", title: "Ownership Guide (Home)", cluster: "home", subtopic: "start" },
+      { url: "/transport/", title: "Transport Hub", cluster: "transport", subtopic: "start" },
+      { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
+      { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" }
+    );
+
     // de-dupe by url (keep first)
     const seen = new Set();
     return out.filter((x) => {
@@ -293,6 +301,7 @@
   function initHeaderSearch() {
     const input = document.getElementById("og-site-search");
     const resultsEl = document.getElementById("og-site-search-results");
+    const clearBtn = document.getElementById("og-site-search-clear");
     if (!input || !resultsEl) return;
 
     const INDEX = buildSearchIndex();
@@ -304,13 +313,20 @@
       resultsEl.innerHTML = "";
       activeIndex = -1;
       current = [];
+      updateClear();
     }
 
     function open() {
       if (!resultsEl.classList.contains("open")) {
         resultsEl.classList.add("open");
       }
+    
+    function updateClear() {
+      if (!clearBtn) return;
+      const has = String(input.value || "").length > 0;
+      clearBtn.hidden = !has;
     }
+}
 
     function setActive(i) {
       activeIndex = i;
@@ -356,6 +372,7 @@
 
     function run() {
       const q = String(input.value || "").trim();
+      updateClear();
       if (q.length < 2) {
         close();
         return;
@@ -369,7 +386,16 @@
       render(q, scored);
     }
 
-    input.addEventListener("input", run);
+    
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        input.value = "";
+        input.focus();
+        updateClear();
+        close();
+      });
+    }
+input.addEventListener("input", run);
     input.addEventListener("focus", run);
 
     input.addEventListener("keydown", (e) => {
@@ -408,7 +434,21 @@
       if (!Number.isNaN(idx)) setActive(idx);
     });
 
-    document.addEventListener("click", (e) => {
+    
+    // Keyboard shortcuts: Cmd/Ctrl+K or / to focus search (unless typing in an input/textarea)
+    document.addEventListener("keydown", (e) => {
+      const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : "";
+      const typing = tag === "input" || tag === "textarea" || (e.target && e.target.isContentEditable);
+      const metaK = (e.ctrlKey || e.metaKey) && (e.key === "k" || e.key === "K");
+      const slash = e.key === "/" && !e.ctrlKey && !e.metaKey && !e.altKey;
+      if ((metaK || slash) && !typing) {
+        e.preventDefault();
+        input.focus();
+        input.select();
+        run();
+      }
+    });
+document.addEventListener("click", (e) => {
       const within = e.target?.closest?.(".site-search");
       if (!within) close();
     });
