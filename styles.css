@@ -246,6 +246,23 @@ button:hover{ opacity: 0.92; }
   background: #fff;
 }
 
+/* Hide the native browser clear ("x") for search inputs so we only show our custom clear button */
+.site-search input[type="search"]::-webkit-search-cancel-button,
+.site-search input[type="search"]::-webkit-search-decoration,
+.site-search input[type="search"]::-webkit-search-results-button,
+.site-search input[type="search"]::-webkit-search-results-decoration{
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.site-search input[type="search"]::-ms-clear,
+.site-search input[type="search"]::-ms-reveal{
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 
 .site-search-clear{
   position: absolute;
