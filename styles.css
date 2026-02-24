@@ -359,6 +359,27 @@ th {
 .card h2{
   margin-top: 0;
 }
+
+.card ul{
+  margin: 10px 0 12px;
+  padding-left: 18px;
+}
+.card li{
+  margin: 6px 0;
+}
+.micro-links{
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.micro-links .label{
+  font-weight: 800;
+  color: var(--text);
+}
+.micro-links .spacer{
+  height: 6px;
+}
 .button{
   display: inline-block;
   padding: 10px 12px;

@@ -57,6 +57,10 @@
 
     // Calculator anchoring (transport only)
     enableAutoCalculatorCTA: true,
+
+    // Auto insert property "key tools" CTA (property cluster)
+    enableAutoPropertyCTA: true,
+    propertyCtaId: "auto-property-cta",
     calculatorCtaId: "auto-calculator-cta",
 
     // Auto insert "Back to Ownership Guide" link near top of every page (except home)
@@ -476,20 +480,32 @@ function buildRelatedHTML(label, links) {
     }
 
     function pickCalculatorLink() {
-      if (cluster !== "transport") return null;
-      // If current page IS a calculator, don't reinforce calculators again.
-      if ((subtopic || "").toLowerCase() === "calculator") return null;
+      // Transport: reinforce calculators on non-calculator pages
+      if (cluster === "transport") {
+        if ((subtopic || "").toLowerCase() === "calculator") return null;
+        const wantRide = (subtopic || "").toLowerCase() === "ridehailing";
+        const calcUrl = wantRide
+          ? "/car-vs-ride-hailing-calculator.html"
+          : "/car-affordability-calculator-singapore.html";
+        const c = byUrl(calcUrl);
+        if (!c) return null;
+        if (normalizePath(c.url) === selfN) return null;
+        return { url: c.url, title: c.title };
+      }
 
-      // Prefer the most context-relevant calculator.
-      const wantRide = (subtopic || "").toLowerCase() === "ridehailing";
-      const calcUrl = wantRide
-        ? "/car-vs-ride-hailing-calculator.html"
-        : "/car-affordability-calculator-singapore.html";
-      const c = byUrl(calcUrl);
-      if (!c) return null;
-      if (normalizePath(c.url) === selfN) return null;
-      return { url: c.url, title: c.title };
+      // Property: reinforce the affordability stress test on non-calculator pages
+      if (cluster === "property") {
+        if ((subtopic || "").toLowerCase() === "calculator") return null;
+        const calcUrl = "/property-affordability-calculator-singapore.html";
+        const c = byUrl(calcUrl);
+        if (!c) return null;
+        if (normalizePath(c.url) === selfN) return null;
+        return { url: c.url, title: c.title };
+      }
+
+      return null;
     }
+
 
     // Always include the primary pillar first (excluding self)
     let chosen = [];
@@ -560,6 +576,40 @@ function buildRelatedHTML(label, links) {
 
     host.insertAdjacentElement("beforebegin", box);
   }
+  function injectPropertyCTA() {
+    if (!SETTINGS.enableAutoPropertyCTA) return;
+
+    const host = document.getElementById(SETTINGS.relatedContainerId);
+    if (!host) return;
+
+    // Avoid double-inserting
+    if (document.getElementById(SETTINGS.propertyCtaId)) return;
+
+    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+    if (cluster !== "property") return;
+    if (subtopic === "calculator") return;
+
+    const url = "/property-affordability-calculator-singapore.html";
+    const title = "Run the Property Affordability Stress Test";
+    const desc = "Model borrowing limits (TDSR/MSR), instalment sensitivity, and upfront cash exposure in one place.";
+
+    const box = document.createElement("div");
+    box.className = "cta-box";
+    box.id = SETTINGS.propertyCtaId;
+    box.innerHTML = `
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(desc)}</p>
+      <p><a class="cta-button" href="${url}">Open calculator →</a></p>
+      <p class="muted" style="margin-top:10px;">
+        Key mechanics: <a href="/cpf-accrued-interest-singapore.html">CPF accrued interest</a> ·
+        <a href="/sell-property-cost-singapore.html">Selling costs</a>
+      </p>
+    `;
+
+    host.insertAdjacentElement("beforebegin", box);
+  }
+
 
   // =========================
   // 3) HEADER / FOOTER
@@ -669,6 +719,7 @@ function buildRelatedHTML(label, links) {
   // 7.5) Calculator CTA (authority anchoring)
   // =========================
   injectCalculatorCTA();
+  injectPropertyCTA();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
