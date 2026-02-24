@@ -322,6 +322,12 @@ button:hover{ opacity: 0.92; }
 .site-search-results .sr-title{ font-weight: 700; font-size: 14px; }
 .site-search-results .sr-meta{ font-size: 12px; color: #6b7280; margin-top: 2px; }
 
+.site-search-results mark{
+  background: rgba(255, 214, 102, 0.55);
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
 @media (max-width: 760px){
   .site-header .nav{ flex-wrap: wrap; gap: 10px; }
   .nav-spacer{ display:none; }

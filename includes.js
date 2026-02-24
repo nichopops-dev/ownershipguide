@@ -231,7 +231,8 @@
           out.push({
             url: normalizePath(p.url),
             title: String(p.title),
-            cluster: clusterKey,
+            // allow individual entries (e.g., bridges) to override display cluster
+            cluster: String(p.cluster || clusterKey),
             subtopic: String(p.subtopic || kind || "").toLowerCase()
           });
         });
@@ -359,7 +360,7 @@
           const meta = [prettyCluster(m.cluster), m.subtopic].filter(Boolean).join(" · ");
           return `
             <a href="${m.url}" data-idx="${idx}">
-              <div class="sr-title">${escapeHtml(m.title)}</div>
+              <div class="sr-title">${highlightMatch(m.title, q)}</div>
               <div class="sr-meta">${escapeHtml(meta)}</div>
             </a>
           `;
@@ -499,6 +500,18 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  function highlightMatch(title, q) {
+    const text = String(title || "");
+    const query = String(q || "").trim();
+    if (!text || !query) return escapeHtml(text);
+    const i = text.toLowerCase().indexOf(query.toLowerCase());
+    if (i < 0) return escapeHtml(text);
+    const before = text.slice(0, i);
+    const mid = text.slice(i, i + query.length);
+    const after = text.slice(i + query.length);
+    return `${escapeHtml(before)}<mark>${escapeHtml(mid)}</mark>${escapeHtml(after)}`;
   }
 
   function injectBackToHomeLink() {
