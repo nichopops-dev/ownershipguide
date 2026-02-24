@@ -320,13 +320,14 @@
       if (!resultsEl.classList.contains("open")) {
         resultsEl.classList.add("open");
       }
-    
+      updateClear();
+    }
+
     function updateClear() {
       if (!clearBtn) return;
       const has = String(input.value || "").length > 0;
       clearBtn.hidden = !has;
     }
-}
 
     function setActive(i) {
       activeIndex = i;
@@ -386,7 +387,6 @@
       render(q, scored);
     }
 
-    
     if (clearBtn) {
       clearBtn.addEventListener("click", () => {
         input.value = "";
@@ -395,7 +395,8 @@
         close();
       });
     }
-input.addEventListener("input", run);
+
+    input.addEventListener("input", run);
     input.addEventListener("focus", run);
 
     input.addEventListener("keydown", (e) => {
@@ -448,7 +449,7 @@ input.addEventListener("input", run);
         run();
       }
     });
-document.addEventListener("click", (e) => {
+    document.addEventListener("click", (e) => {
       const within = e.target?.closest?.(".site-search");
       if (!within) close();
     });
