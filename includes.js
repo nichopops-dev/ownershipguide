@@ -317,9 +317,11 @@
     }
     score += hit * 10;
 
-    // small boosts
-    if (item?.subtopic === "calculator") score += 6;
-    if (item?.subtopic === "ownership") score += 3;
+    // small boosts (only after a real match)
+    if (score > 0) {
+      if (item?.subtopic === "calculator") score += 6;
+      if (item?.subtopic === "ownership") score += 3;
+    }
     return score;
   }
 
