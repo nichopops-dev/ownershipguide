@@ -35,9 +35,12 @@
           autocomplete="off"
           spellcheck="false"
           aria-label="Search Ownership Guide"
+          aria-controls="og-site-search-results"
+          aria-expanded="false"
+          aria-autocomplete="list"
         />
         <button id="og-site-search-clear" class="site-search-clear" type="button" aria-label="Clear search" title="Clear" hidden>×</button>
-        <div id="og-site-search-results" class="site-search-results" aria-live="polite"></div>
+        <div id="og-site-search-results" class="site-search-results" role="listbox" aria-label="Search results" aria-live="polite"></div>
       </div>
 
     </nav>

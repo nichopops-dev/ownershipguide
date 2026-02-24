@@ -305,6 +305,15 @@
     const clearBtn = document.getElementById("og-site-search-clear");
     if (!input || !resultsEl) return;
 
+    // Basic accessibility wiring (safe even if attributes already exist)
+    try {
+      resultsEl.setAttribute("role", "listbox");
+      if (!resultsEl.getAttribute("aria-label")) resultsEl.setAttribute("aria-label", "Search results");
+      input.setAttribute("aria-controls", resultsEl.id);
+      if (!input.getAttribute("aria-expanded")) input.setAttribute("aria-expanded", "false");
+      input.setAttribute("aria-autocomplete", "list");
+    } catch { /* no-op */ }
+
     const INDEX = buildSearchIndex();
     let activeIndex = -1;
     let current = [];
@@ -315,6 +324,7 @@
       activeIndex = -1;
       current = [];
       updateClear();
+      try { input.setAttribute("aria-expanded", "false"); } catch { /* no-op */ }
     }
 
     function open() {
@@ -322,6 +332,7 @@
         resultsEl.classList.add("open");
       }
       updateClear();
+      try { input.setAttribute("aria-expanded", "true"); } catch { /* no-op */ }
     }
 
     function updateClear() {
@@ -333,9 +344,13 @@
     function setActive(i) {
       activeIndex = i;
       const links = Array.from(resultsEl.querySelectorAll("a[data-idx]"));
-      links.forEach((a) => a.classList.remove("active"));
+      links.forEach((a) => {
+        a.classList.remove("active");
+        a.setAttribute("aria-selected", "false");
+      });
       if (activeIndex >= 0 && links[activeIndex]) {
         links[activeIndex].classList.add("active");
+        links[activeIndex].setAttribute("aria-selected", "true");
         links[activeIndex].scrollIntoView({ block: "nearest" });
       }
     }
@@ -347,9 +362,9 @@
       }
 
       current = matches;
-      const head = `<div class="sr-head">Top matches for “${escapeHtml(q)}”</div>`;
+      const head = `<div class="sr-head">Top matches for “${escapeHtml(q)}”${matches.length ? ` <span class="sr-count">(${matches.length})</span>` : ""}</div>`;
       if (!matches.length) {
-        resultsEl.innerHTML = head + `<a href="/" tabindex="-1"><div class="sr-title">No results</div><div class="sr-meta">Try fewer words, or search “car”, “property”, “calculator”.</div></a>`;
+        resultsEl.innerHTML = head + `<div class="sr-empty"><div class="sr-title">No results</div><div class="sr-meta">Try fewer words, or search “car”, “property”, “calculator”.</div></div>`;
         open();
         setActive(-1);
         return;
@@ -359,7 +374,7 @@
         .map((m, idx) => {
           const meta = [prettyCluster(m.cluster), m.subtopic].filter(Boolean).join(" · ");
           return `
-            <a href="${m.url}" data-idx="${idx}">
+            <a href="${m.url}" data-idx="${idx}" role="option" aria-selected="false">
               <div class="sr-title">${highlightMatch(m.title, q)}</div>
               <div class="sr-meta">${escapeHtml(meta)}</div>
             </a>
