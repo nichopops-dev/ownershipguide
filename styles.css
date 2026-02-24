@@ -225,6 +225,76 @@ button:hover{ opacity: 0.92; }
 }
 
 /* =========================
+   Header Site Search (v0031)
+========================= */
+
+.nav-spacer{ flex: 1 1 auto; }
+
+.site-search{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-search input[type="search"]{
+  width: 260px;
+  max-width: 260px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #fff;
+}
+
+.site-search-results{
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: none;
+  z-index: 999;
+}
+
+.site-search-results.open{ display: block; }
+
+.site-search-results .sr-head{
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.site-search-results a{
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.site-search-results a:hover,
+.site-search-results a.active{
+  background: #f9fafb;
+}
+
+.site-search-results .sr-title{ font-weight: 700; font-size: 14px; }
+.site-search-results .sr-meta{ font-size: 12px; color: #6b7280; margin-top: 2px; }
+
+@media (max-width: 760px){
+  .site-header .nav{ flex-wrap: wrap; gap: 10px; }
+  .nav-spacer{ display:none; }
+  .site-search{ width: 100%; }
+  .site-search input[type="search"]{ width: 100%; max-width: none; }
+  .site-search-results{ width: 100%; right: auto; left: 0; }
+}
+
+/* =========================
    Typography Upgrade
 ========================= */
 

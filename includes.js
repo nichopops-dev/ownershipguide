@@ -219,6 +219,201 @@
     });
   }
 
+  // =========================
+  // 2.5) SITE SEARCH (header)
+  // =========================
+  function buildSearchIndex() {
+    const out = [];
+    for (const [clusterKey, cluster] of Object.entries(SITE || {})) {
+      const pushAll = (arr, kind) => {
+        (arr || []).forEach((p) => {
+          if (!p || !p.url || !p.title) return;
+          out.push({
+            url: normalizePath(p.url),
+            title: String(p.title),
+            cluster: clusterKey,
+            subtopic: String(p.subtopic || kind || "").toLowerCase()
+          });
+        });
+      };
+      pushAll(cluster.pillars, "pillar");
+      pushAll(cluster.pages, "page");
+      pushAll(cluster.bridges, "bridge");
+    }
+    // de-dupe by url (keep first)
+    const seen = new Set();
+    return out.filter((x) => {
+      if (!x || !x.url) return false;
+      if (seen.has(x.url)) return false;
+      seen.add(x.url);
+      return true;
+    });
+  }
+
+  function tokens(s) {
+    return String(s || "")
+      .toLowerCase()
+      .trim()
+      .split(/[^a-z0-9]+/g)
+      .filter(Boolean);
+  }
+
+  function scoreResult(q, item) {
+    const qt = String(q || "").toLowerCase().trim();
+    const title = String(item?.title || "").toLowerCase();
+    if (!qt) return 0;
+
+    // base relevance
+    let score = 0;
+    if (title === qt) score += 100;
+    if (title.startsWith(qt)) score += 60;
+    if (title.includes(qt)) score += 35;
+
+    // token overlap
+    const qTokens = tokens(qt);
+    const tTokens = tokens(title);
+    const tSet = new Set(tTokens);
+    let hit = 0;
+    for (const t of qTokens) {
+      if (tSet.has(t)) hit++;
+    }
+    score += hit * 10;
+
+    // small boosts
+    if (item?.subtopic === "calculator") score += 6;
+    if (item?.subtopic === "ownership") score += 3;
+    return score;
+  }
+
+  function prettyCluster(c) {
+    if (!c) return "";
+    return c.charAt(0).toUpperCase() + c.slice(1);
+  }
+
+  function initHeaderSearch() {
+    const input = document.getElementById("og-site-search");
+    const resultsEl = document.getElementById("og-site-search-results");
+    if (!input || !resultsEl) return;
+
+    const INDEX = buildSearchIndex();
+    let activeIndex = -1;
+    let current = [];
+
+    function close() {
+      resultsEl.classList.remove("open");
+      resultsEl.innerHTML = "";
+      activeIndex = -1;
+      current = [];
+    }
+
+    function open() {
+      if (!resultsEl.classList.contains("open")) {
+        resultsEl.classList.add("open");
+      }
+    }
+
+    function setActive(i) {
+      activeIndex = i;
+      const links = Array.from(resultsEl.querySelectorAll("a[data-idx]"));
+      links.forEach((a) => a.classList.remove("active"));
+      if (activeIndex >= 0 && links[activeIndex]) {
+        links[activeIndex].classList.add("active");
+        links[activeIndex].scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    function render(q, matches) {
+      if (!q || q.trim().length < 2) {
+        close();
+        return;
+      }
+
+      current = matches;
+      const head = `<div class="sr-head">Top matches for “${escapeHtml(q)}”</div>`;
+      if (!matches.length) {
+        resultsEl.innerHTML = head + `<a href="/" tabindex="-1"><div class="sr-title">No results</div><div class="sr-meta">Try fewer words, or search “car”, “property”, “calculator”.</div></a>`;
+        open();
+        setActive(-1);
+        return;
+      }
+
+      const items = matches
+        .map((m, idx) => {
+          const meta = [prettyCluster(m.cluster), m.subtopic].filter(Boolean).join(" · ");
+          return `
+            <a href="${m.url}" data-idx="${idx}">
+              <div class="sr-title">${escapeHtml(m.title)}</div>
+              <div class="sr-meta">${escapeHtml(meta)}</div>
+            </a>
+          `;
+        })
+        .join("");
+
+      resultsEl.innerHTML = head + items;
+      open();
+      setActive(0);
+    }
+
+    function run() {
+      const q = String(input.value || "").trim();
+      if (q.length < 2) {
+        close();
+        return;
+      }
+      const scored = INDEX
+        .map((it) => ({ it, s: scoreResult(q, it) }))
+        .filter((x) => x.s > 0)
+        .sort((a, b) => b.s - a.s)
+        .slice(0, 8)
+        .map((x) => x.it);
+      render(q, scored);
+    }
+
+    input.addEventListener("input", run);
+    input.addEventListener("focus", run);
+
+    input.addEventListener("keydown", (e) => {
+      if (!resultsEl.classList.contains("open")) return;
+      const max = current.length;
+      if (e.key === "Escape") {
+        e.preventDefault();
+        close();
+        return;
+      }
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (!max) return;
+        setActive((activeIndex + 1) % max);
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!max) return;
+        setActive((activeIndex - 1 + max) % max);
+        return;
+      }
+      if (e.key === "Enter") {
+        if (!max) return;
+        e.preventDefault();
+        const links = Array.from(resultsEl.querySelectorAll("a[data-idx]"));
+        const a = links[activeIndex] || links[0];
+        if (a && a.getAttribute("href")) location.href = a.getAttribute("href");
+      }
+    });
+
+    resultsEl.addEventListener("mousemove", (e) => {
+      const a = e.target?.closest?.("a[data-idx]");
+      if (!a) return;
+      const idx = parseInt(a.getAttribute("data-idx"), 10);
+      if (!Number.isNaN(idx)) setActive(idx);
+    });
+
+    document.addEventListener("click", (e) => {
+      const within = e.target?.closest?.(".site-search");
+      if (!within) close();
+    });
+  }
+
   // Supports both:
   // <meta name="og:cluster" ...>
   // <meta property="og:cluster" ...>
@@ -618,6 +813,7 @@ function buildRelatedHTML(label, links) {
     await inject("site-header", "/header.html");
     await inject("site-footer", "/footer.html");
     setActiveNav();
+    initHeaderSearch();
     injectBackToHomeLink();
     injectBackToClusterLink();
   }
