@@ -227,6 +227,7 @@
           <div class="small muted">Max loan allowed (TDSR-style cap)</div>
           <div id="maxLoan" class="kpi">—</div>
           <p id="gateNote" class="small muted" style="margin:6px 0 0;">—</p>
+          <p id="gateLearn" class="small muted" style="margin:6px 0 0;"></p>
 
           <div class="divider"></div>
 
@@ -416,6 +417,16 @@
         $("maxLoan").textContent = fmt(maxLoan);
         const gateEl = $("gateNote");
         if (gateEl) gateEl.textContent = gateNote;
+        const gateLearnEl = $("gateLearn");
+        if (gateLearnEl){
+          // Link the user to the relevant borrowing-limit explainer based on which gate is binding.
+          if (gateNote.includes("MSR")){
+            gateLearnEl.innerHTML = 'Next: <a href="/tdsr-msr-singapore.html">MSR vs TDSR — what actually caps your HDB/EC loan</a>.';
+          } else {
+            gateLearnEl.innerHTML = 'Next: <a href="/tdsr-msr-singapore.html">TDSR &amp; bank stress rates — why your max loan is lower than expected</a>.';
+          }
+        }
+
         $("maxPrice").textContent = fmt(maxPrice);
         $("upfront").textContent = fmt(upfront);
 
