@@ -244,6 +244,7 @@
     // Core pages (outside SITE map)
     out.unshift(
       { url: "/", title: "Ownership Guide (Home)", cluster: "home", subtopic: "start" },
+      { url: "/start-here/", title: "Start Here", cluster: "home", subtopic: "start" },
       { url: "/transport/", title: "Transport Hub", cluster: "transport", subtopic: "start" },
       { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
       { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" }
@@ -657,8 +658,13 @@ function buildRelatedHTML(label, links) {
         if (a) a.classList.add("active");
       };
 
+      if (path.startsWith("/start-here")) {
+        activate("start");
+        return;
+      }
+
       if (subtopic === "calculator" || path.includes("calculator")) {
-        activate("calculator");
+        activate("calculators");
         return;
       }
 
@@ -681,6 +687,8 @@ function buildRelatedHTML(label, links) {
       path.startsWith("/calculator") ||
       path.includes("calculator");
 
+    const isStart = path.startsWith("/start-here");
+
     const isTransport =
       path.startsWith("/transport") ||
       path.includes("car-") ||
@@ -702,7 +710,8 @@ function buildRelatedHTML(label, links) {
       if (a) a.classList.add("active");
     };
 
-    if (isCalculator) activate("calculator");
+    if (isStart) activate("start");
+    else if (isCalculator) activate("calculators");
     else if (isTransport) activate("transport");
     else if (isProperty) activate("property");
     else activate("home");
