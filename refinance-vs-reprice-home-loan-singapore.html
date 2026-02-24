@@ -12,6 +12,48 @@
   <meta name="og:subtopic" content="comparison">
 
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is repricing always cheaper than refinancing in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually, yes — repricing tends to have lower friction (often no legal conveyancing) and fewer one-off costs. But refinancing can be cheaper overall if the rate/terms improvement is large enough to repay the extra costs within your break-even window."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What costs should I include when comparing refinance vs reprice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Include: legal fees (if refinancing), valuation fees (sometimes), admin fees, subsidies and potential clawbacks, early redemption/lock-in penalties, and any package conditions that change your effective rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a reasonable break-even period for refinancing a home loan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A practical rule is: if you can recover total switching costs within ~6–18 months, refinancing is worth serious consideration. Beyond that, the decision depends more on optionality, risk, and whether rates are likely to move."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I refinance if I might sell within 1–2 years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often no. If your sell timeline is short, lock-ins and clawbacks can erase the savings. In that case, attempt a reprice first, or choose packages with low penalties and clear exit optionality."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -41,8 +83,45 @@
   <h2>How to decide (Singapore)</h2>
   <div class="box"><ol><li><strong>Compute your “rate gap”</strong>: current effective rate vs best market rate.</li><li><strong>Estimate total costs</strong>: legal fees, valuation fees, subsidies, clawbacks, and time cost.</li><li><strong>Break-even</strong>: if savings recover costs within ~6–18 months, it’s usually worth serious consideration.</li></ol></div>
 
+  <h2>Break-even in 60 seconds (a simple math check)</h2>
+  <div class="box">
+    <p><strong>Monthly interest saving</strong> ≈ outstanding balance × (rate gap) ÷ 12.</p>
+    <p><strong>Break-even months</strong> ≈ total one-off costs ÷ monthly saving.</p>
+    <p class="meta">Example: $800k balance, 0.60% rate gap → ~$400/month saving. If total costs are ~$2,000, break-even is ~5 months.</p>
+  </div>
+
+  <h2>Cost checklist (what people forget)</h2>
+  <div class="box">
+    <ul>
+      <li><strong>Legal fees</strong> (usually refinance; sometimes waived via subsidies)</li>
+      <li><strong>Valuation fee</strong> (occasionally required)</li>
+      <li><strong>Package subsidies</strong> and <strong>clawback</strong> terms</li>
+      <li><strong>Lock-in</strong>, early redemption penalties, and notice periods</li>
+      <li><strong>Effective rate</strong> after promos end (don’t compare teaser vs steady-state)</li>
+    </ul>
+  </div>
+
+  <h2>Decision rules that work in practice</h2>
+  <div class="box">
+    <ul>
+      <li><strong>Try reprice first</strong> if your current bank is willing to match within ~0.20–0.40% of market and fees are low.</li>
+      <li><strong>Refinance</strong> when the rate/terms improvement is meaningful and you’re not likely to exit soon.</li>
+      <li>If you may sell/upgrade soon, prioritise <strong>optionality</strong> (low penalties, low clawbacks) over the absolute lowest headline rate.</li>
+    </ul>
+  </div>
+
   <h2>Pitfalls that destroy the savings</h2>
   <ul><li>Ignoring <strong>lock-in</strong> and <strong>early redemption</strong> penalties.</li><li>Missing <strong>subsidy clawbacks</strong> (if applicable).</li><li>Optimising rate but accepting a structure that increases fragility (e.g., too aggressive floating without buffer).</li></ul>
+
+  <h2>FAQ</h2>
+  <div class="box">
+    <h3>Reprice first or refinance first?</h3>
+    <p>Default: ask your current bank to reprice first. If they won’t move enough, refinance becomes worth the paperwork.</p>
+    <h3>What rate gap is “worth it”?</h3>
+    <p>It depends on loan size and switching costs, but 0.30–0.60% on a large balance can be meaningful quickly.</p>
+    <h3>What if rates are about to drop?</h3>
+    <p>Then avoid long lock-ins unless the discount is large. Prefer packages that keep your exit options open.</p>
+  </div>
 
   <hr />
 

@@ -268,6 +268,27 @@
       pushAll(cluster.pages, "page");
       pushAll(cluster.bridges, "bridge");
     }
+
+    // Also index the Comparisons map if present (kept under SETTINGS to avoid duplicating SITE pillars/pages).
+    // This ensures new comparison pages show up in header search even if they are not part of a specific cluster map.
+    if (SETTINGS && SETTINGS.comparisons) {
+      const cKey = "comparisons";
+      const c = SETTINGS.comparisons;
+      const pushAll = (arr, kind) => {
+        (arr || []).forEach((p) => {
+          if (!p || !p.url || !p.title) return;
+          out.push({
+            url: normalizePath(p.url),
+            title: String(p.title),
+            cluster: String(p.cluster || cKey),
+            subtopic: String(p.subtopic || kind || "").toLowerCase()
+          });
+        });
+      };
+      pushAll(c.pillars, "pillar");
+      pushAll(c.pages, "page");
+      pushAll(c.bridges, "bridge");
+    }
     // Core pages (outside SITE map)
     out.unshift(
       { url: "/", title: "Ownership Guide (Home)", cluster: "home", subtopic: "start" },

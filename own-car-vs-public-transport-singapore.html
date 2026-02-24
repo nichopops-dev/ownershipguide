@@ -12,6 +12,40 @@
   <meta name="og:subtopic" content="comparison">
 
   <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is owning a car ever financially rational in Singapore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but usually for lifestyle and time value reasons rather than pure dollars. Financially, it can make sense when you have high utilisation, high time value, or specific constraints (family logistics, work hours, accessibility)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I compare: monthly cost or 5-year exposure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use 5-year total exposure plus liquidity risk. Monthly cost hides large lump-sum and depreciation effects, especially under COE-driven pricing." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What’s a good first step before deciding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run a stress-tested monthly model and a break-even against ride-hailing/public transport using your actual commute pattern and buffer assumptions." 
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
