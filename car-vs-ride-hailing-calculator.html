@@ -136,6 +136,7 @@
 
     <div class="box" id="resultBox">
       <h3>Your 5-Year Comparison</h3>
+      <p><span id="verdictBadge" class="badge borderline">—</span></p>
 
       <p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
       <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$—</span></p>
@@ -323,6 +324,7 @@
       const diffEl = document.getElementById('diff');
       const breakevenEl = document.getElementById('breakeven');
       const verdictEl = document.getElementById('verdict');
+      const verdictBadgeEl = document.getElementById('verdictBadge');
       const benchmarkCostEl = document.getElementById('benchmarkCost');
 
       const bDepEl = document.getElementById('bDep');
@@ -388,6 +390,7 @@
         if (monthly === null){
           verdictEl.className = 'muted';
           verdictEl.textContent = 'Please enter a valid monthly amount.';
+          if (verdictBadgeEl) { verdictBadgeEl.className = 'badge borderline'; verdictBadgeEl.textContent = '—'; }
           rideCostEl.textContent = '$—';
           diffEl.textContent = '$—';
           breakevenEl.textContent = '$—';
@@ -415,6 +418,7 @@
           verdictEl.className = '';
           verdictEl.textContent =
             `You are in the grey zone (within about $${fmt(greyThreshold)} over 5 years). Decide using logistics certainty + liquidity stress, not cost alone.`;
+          if (verdictBadgeEl) { verdictBadgeEl.className = 'badge borderline'; verdictBadgeEl.textContent = 'GREY ZONE'; }
           return;
         }
 
@@ -422,13 +426,16 @@
           verdictEl.className = '';
           verdictEl.textContent =
             `Ride-hailing is cheaper by about $${fmt(p.total - ride5y)} over 5 years (vs this benchmark).`;
+          if (verdictBadgeEl) { verdictBadgeEl.className = 'badge safe'; verdictBadgeEl.textContent = 'RIDE-HAILING'; }
         } else if (ride5y > p.total){
           verdictEl.className = '';
           verdictEl.textContent =
             `Owning the benchmark car is cheaper by about $${fmt(ride5y - p.total)} over 5 years.`;
+          if (verdictBadgeEl) { verdictBadgeEl.className = 'badge safe'; verdictBadgeEl.textContent = 'CAR'; }
         } else {
           verdictEl.className = '';
           verdictEl.textContent = 'You are roughly at break-even over 5 years.';
+          if (verdictBadgeEl) { verdictBadgeEl.className = 'badge borderline'; verdictBadgeEl.textContent = 'BREAK-EVEN'; }
         }
       }
 

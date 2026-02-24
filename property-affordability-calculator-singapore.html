@@ -174,7 +174,7 @@
 
         <div class="kpi-box">
           <div class="small muted">Status</div>
-          <div id="statusPill" class="pill grey">—</div>
+          <span id="statusPill" class="badge borderline">—</span>
           <div class="divider"></div>
 
           <div class="small muted">Estimated monthly instalment (for your chosen price)</div>
@@ -316,16 +316,16 @@
         // Status based on instalment vs gross income ratio
         const ratio = (income > 0) ? (instalment / income) : 1;
         let status = "Borderline";
-        let cls = "grey";
+        let cls = "borderline";
         if (ratio <= 0.30) { status = "Safe"; cls = "safe"; }
-        else if (ratio <= 0.35) { status = "Borderline"; cls = "grey"; }
-        else { status = "Risky"; cls = "fragile"; }
+        else if (ratio <= 0.35) { status = "Borderline"; cls = "borderline"; }
+        else { status = "Risky"; cls = "risky"; }
 
         // If loan exceeds cap, force risky and add note
         const exceeds = loanNeeded > maxLoan + 1;
         const statusEl = $("statusPill");
-        statusEl.className = "pill " + (exceeds ? "fragile" : cls);
-        statusEl.textContent = exceeds ? "Capped" : status;
+        statusEl.className = "badge " + (exceeds ? "risky" : cls);
+        statusEl.textContent = exceeds ? "TDSR CAPPED" : status.toUpperCase();
 
         $("instalment").textContent = fmt(instalment);
         $("instalmentSub").textContent = (income > 0)

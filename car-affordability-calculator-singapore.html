@@ -331,7 +331,7 @@
         <h2 style="margin-top:0;">Results</h2>
 
         <div class="kpi-box">
-          <div id="statusPill" class="pill safe">SAFE</div>
+          <span id="statusPill" class="badge safe">SAFE</span>
           <div class="kpi" id="monthlyAllIn">$0</div>
           <p class="kpi-sub muted" id="summaryLine">—</p>
         </div>
@@ -544,8 +544,8 @@
       }
 
       function renderPill(status) {
-        statusPill.className = "pill " + status;
-        statusPill.textContent = status.toUpperCase().replace("GREY", "GREY ZONE");
+        statusPill.className = "badge " + (status === "safe" ? "safe" : (status === "grey" ? "borderline" : "risky"));
+        statusPill.textContent = (status === "grey" ? "BORDERLINE" : status.toUpperCase());
       }
 
       function recalc() {

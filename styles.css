@@ -420,3 +420,47 @@ body.home .card{
   padding-top: 14px;
   border-top: 1px solid #e5e7eb;
 }
+
+
+/* ============================
+   Calculator UI System (v0024)
+   ============================ */
+.result-card{
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+}
+.result-title{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.result-divider{
+  height: 1px;
+  background: #e5e7eb;
+  margin: 12px 0;
+}
+.badge{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.badge.safe{ background: #ecfdf5; border-color: #a7f3d0; color: #065f46; }
+.badge.borderline{ background: #fffbeb; border-color: #fde68a; color: #92400e; }
+.badge.risky{ background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+.interpret{
+  margin-top: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+}
+.interpret strong{ display: block; margin-bottom: 6px; }
+.interpret p{ margin: 0; font-size: 13px; color: #111827; }
