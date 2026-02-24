@@ -301,6 +301,13 @@
     <priority>0.7</priority>
     <lastmod>2026-02-23</lastmod>
   </url>
+  <url>
+    <loc>https://ownershipguide.com/tdsr-msr-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-24</lastmod>
+  </url>
+
 	  <url>
     <loc>https://ownershipguide.com/cpf-accrued-interest-singapore.html</loc>
     <changefreq>monthly</changefreq>
@@ -313,12 +320,12 @@
 	  <priority>0.7</priority>
 	  <lastmod>2026-02-23</lastmod>
 	</url>
-	<url>
-	  <loc>https://ownershipguide.com/sell-property-cost-singapore.html</loc>
-	  <changefreq>monthly</changefreq>
-	  <priority>0.7</priority>
-	  <lastmod>2026-02-24</lastmod>
-	</url>
+	  <url>
+    <loc>https://ownershipguide.com/sell-property-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-24</lastmod>
+  </url>
 
   <url>
     <loc>https://ownershipguide.com/rent-vs-buy-property-singapore.html</loc>
