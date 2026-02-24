@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Property Affordability Calculator Singapore (2026): Stress-Test Your Purchase Safely</title>
+  <meta name="description" content="Simple property affordability stress test for Singapore (2026): estimate max loan under TDSR, monthly instalment, and upfront cash exposure. Built to avoid instalment-only thinking." />
+  <link rel="canonical" href="https://ownershipguide.com/property-affordability-calculator-singapore.html" />
+
+  <meta name="og:cluster" content="property">
+  <meta name="og:subtopic" content="calculator">
+
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How accurate is this property affordability calculator?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"This is a simplified stress-test model. Banks may haircut variable income, include all debts, apply stress rates, and apply MSR for certain purchases. Use this to avoid instalment-only thinking, then validate with actual bank/agent figures."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Does this include MSR?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"This calculator uses a TDSR-style cap as the primary borrowing gate. MSR can apply for HDB/EC scenarios and may be tighter. Use the TDSR/MSR guide for the full framework."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What’s a safe monthly mortgage ratio?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A practical stress-tested band is to keep mortgage instalment at about 20–30% of gross income for comfort, 30–35% as a stretch zone, and above 35% as high-stress—especially with dependents or large fixed commitments."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Minimal inline helpers (keeps your global styles intact) */
+    .calc-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 900px) { .calc-grid { grid-template-columns: 1.05fr 0.95fr; } }
+    .calc-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; }
+    .calc-row { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 10px 0; }
+    @media (min-width: 700px) { .calc-row { grid-template-columns: 1fr 1fr; } }
+    label { font-weight: 600; display: block; margin-bottom: 6px; }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    .small { font-size: 13px; }
+    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; font-weight: 800; border: 1px solid #e5e7eb; }
+    .pill.safe { background: #ecfdf5; border-color: #a7f3d0; }
+    .pill.grey { background: #fffbeb; border-color: #fde68a; }
+    .pill.fragile { background: #fef2f2; border-color: #fecaca; }
+    .kpi { font-size: 26px; font-weight: 800; margin: 6px 0; }
+    .kpi-sub { margin: 0; }
+    .kpi-box { border: 1px dashed #d1d5db; border-radius: 12px; padding: 12px; }
+    .divider { height: 1px; background: #e5e7eb; margin: 12px 0; }
+    .note { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 10px; }
+  </style>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / Affordability Calculator
+    </p>
+
+    <h1>Property Affordability Stress Test (Singapore, 2026)</h1>
+    <p class="meta">Simple v1 calculator · Last updated: February 2026</p>
+
+    <p class="muted">
+      Not financial advice. This is a simplified stress-test model (not a bank approval). Banks can haircut variable income, include all debts, apply stress rates, and apply MSR for certain purchases.
+      If you want the framework behind the logic: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.
+    </p>
+
+    <div class="box">
+      <strong>Fast path</strong>
+      <ul>
+        <li>If you want the full ownership model: <a href="/property-ownership-cost-singapore.html">Property ownership cost (5-year exposure)</a></li>
+        <li>If you are planning upfront cash: <a href="/how-much-cash-to-buy-property-singapore.html">How much cash you need to buy property</a></li>
+        <li>If you are pricing stamp duty properly: <a href="/bsd-absd-singapore.html">BSD &amp; ABSD explained</a></li>
+      </ul>
+    </div>
+
+    <h2 id="jump">Jump to What You Need</h2>
+    <ul>
+      <li><a href="#calc">Calculator</a></li>
+      <li><a href="#rules">How to interpret the output</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="calc">Calculator</h2>
+
+    <div class="calc-grid">
+
+      <div class="calc-card">
+        <h3 style="margin-top:0;">Inputs</h3>
+
+        <div class="calc-row">
+          <div>
+            <label for="income">Gross monthly income (SGD)</label>
+            <input id="income" type="number" inputmode="decimal" min="0" step="100" value="12000">
+            <p class="small muted" style="margin:6px 0 0;">Use gross, not take-home (banks assess with gross).</p>
+          </div>
+          <div>
+            <label for="debt">Existing monthly debt commitments (SGD)</label>
+            <input id="debt" type="number" inputmode="decimal" min="0" step="50" value="500">
+            <p class="small muted" style="margin:6px 0 0;">Car loans, credit cards, student loans, other mortgages.</p>
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div>
+            <label for="rate">Interest rate assumption (% p.a.)</label>
+            <input id="rate" type="number" inputmode="decimal" min="0" step="0.1" value="3.5">
+            <p class="small muted" style="margin:6px 0 0;">Stress-test +0.5% to see fragility.</p>
+          </div>
+          <div>
+            <label for="tenure">Loan tenure (years)</label>
+            <input id="tenure" type="number" inputmode="numeric" min="1" step="1" value="25">
+          </div>
+        </div>
+
+        <div class="calc-row">
+          <div>
+            <label for="price">Property price (SGD)</label>
+            <input id="price" type="number" inputmode="decimal" min="0" step="10000" value="1200000">
+          </div>
+          <div>
+            <label for="dp">Downpayment (%)</label>
+            <input id="dp" type="number" inputmode="decimal" min="0" max="100" step="1" value="25">
+            <p class="small muted" style="margin:6px 0 0;">This is total downpayment (cash + CPF combined).</p>
+          </div>
+        </div>
+
+        <div class="note small">
+          <strong>Model assumptions (simple v1)</strong>
+          <ul style="margin:8px 0 0; padding-left:18px;">
+            <li>TDSR cap assumption: <strong>55%</strong> of gross income for total debt repayments.</li>
+            <li>MSR is not applied here and may be tighter for HDB/EC cases.</li>
+            <li>BSD is a rough estimate using tiered rates. Validate with IRAS schedule.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="calc-card">
+        <h3 style="margin-top:0;">Outputs</h3>
+
+        <div class="kpi-box">
+          <div class="small muted">Status</div>
+          <div id="statusPill" class="pill grey">—</div>
+          <div class="divider"></div>
+
+          <div class="small muted">Estimated monthly instalment (for your chosen price)</div>
+          <div id="instalment" class="kpi">—</div>
+          <p id="instalmentSub" class="kpi-sub muted">—</p>
+
+          <div class="divider"></div>
+
+          <div class="small muted">Max loan allowed (TDSR-style cap)</div>
+          <div id="maxLoan" class="kpi">—</div>
+
+          <div class="divider"></div>
+
+          <div class="small muted">Max property price (given your downpayment %)</div>
+          <div id="maxPrice" class="kpi">—</div>
+
+          <div class="divider"></div>
+
+          <div class="small muted">Upfront exposure estimate (downpayment + rough BSD)</div>
+          <div id="upfront" class="kpi">—</div>
+          <p class="small muted" style="margin:6px 0 0;">Upfront exposure ignores renovation and buffers — see <a href="/how-much-cash-to-buy-property-singapore.html">cash required</a>.</p>
+        </div>
+
+        <div class="note" style="margin-top:12px;">
+          <strong>Interpretation</strong>
+          <p class="small" style="margin:8px 0 0;">
+            If your instalment is close to the cap, your plan is fragile.
+            Property is a multi-year capital structure decision. Don’t ignore <a href="/mortgage-interest-cost-singapore.html">interest drag</a>, <a href="/renovation-cost-singapore.html">setup shock</a>, and <a href="/sell-property-cost-singapore.html">exit friction</a>.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h2 id="rules">How to Interpret the Output</h2>
+    <ul>
+      <li><strong>Safe:</strong> instalment ≤ 30% of gross income (and you still keep buffers).</li>
+      <li><strong>Borderline:</strong> 30%–35% of gross income (works only with strong buffer + stable income).</li>
+      <li><strong>Risky:</strong> &gt; 35% of gross income (fragile under rates, job risk, or life events).</li>
+    </ul>
+
+    <p class="muted">
+      Borrowing gates are only step 1. Your real outcomes are driven by: <a href="/cpf-accrued-interest-singapore.html">CPF refund mechanics</a> and <a href="/sell-property-cost-singapore.html">net proceeds reality</a>.
+    </p>
+
+    <hr>
+
+    <h2 id="faq">FAQ</h2>
+
+    <h3>Does this replace a bank approval?</h3>
+    <p>No. Treat it as a planning tool. Banks may haircut income, include all debts, and use stress rates that differ from your assumptions.</p>
+
+    <h3>Why is my max loan lower than expected?</h3>
+    <p>TDSR includes existing debts and banks apply stress rates. Read: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR guide</a>.</p>
+
+    <h3>Does this include renovation and buffers?</h3>
+    <p>No. This is a borrowing and upfront exposure stress test. Use <a href="/how-much-cash-to-buy-property-singapore.html">cash required</a> and <a href="/renovation-cost-singapore.html">renovation planning</a> for the full stack.</p>
+
+    <hr>
+
+    <div id="auto-related"></div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js" defer></script>
+
+  <script>
+    (function(){
+      const $ = (id) => document.getElementById(id);
+      const fmt = (n) => {
+        if (!isFinite(n)) return "—";
+        return "S$" + Math.round(n).toLocaleString("en-SG");
+      };
+
+      function bsdEstimate(price){
+        // Rough BSD estimate using tiered rates (validate against latest IRAS schedule)
+        // 1% first 180k, 2% next 180k, 3% next 640k, 4% next 500k, 5% next 1.5m, 6% above 3m
+        const tiers = [
+          { cap: 180000, rate: 0.01 },
+          { cap: 180000, rate: 0.02 },
+          { cap: 640000, rate: 0.03 },
+          { cap: 500000, rate: 0.04 },
+          { cap: 1500000, rate: 0.05 },
+          { cap: Infinity, rate: 0.06 }
+        ];
+        let remaining = Math.max(0, price);
+        let duty = 0;
+        for (const t of tiers){
+          if (remaining <= 0) break;
+          const slice = Math.min(remaining, t.cap);
+          duty += slice * t.rate;
+          remaining -= slice;
+        }
+        return duty;
+      }
+
+      function pvFromPmt(pmt, annualRatePct, years){
+        const n = Math.max(1, Math.round(years*12));
+        const r = Math.max(0, annualRatePct)/100/12;
+        if (r === 0) return pmt * n;
+        return pmt * (1 - Math.pow(1 + r, -n)) / r;
+      }
+
+      function pmtFromPv(pv, annualRatePct, years){
+        const n = Math.max(1, Math.round(years*12));
+        const r = Math.max(0, annualRatePct)/100/12;
+        if (r === 0) return pv / n;
+        return pv * r / (1 - Math.pow(1 + r, -n));
+      }
+
+      function compute(){
+        const income = parseFloat($("income").value || "0");
+        const debt = parseFloat($("debt").value || "0");
+        const rate = parseFloat($("rate").value || "0");
+        const tenure = parseFloat($("tenure").value || "25");
+        const price = parseFloat($("price").value || "0");
+        const dp = parseFloat($("dp").value || "25");
+
+        const tdsrCap = 0.55;
+        const maxDebtService = Math.max(0, income * tdsrCap);
+        const capForMortgage = Math.max(0, maxDebtService - Math.max(0, debt));
+
+        const maxLoan = pvFromPmt(capForMortgage, rate, tenure);
+
+        const dpFrac = Math.min(1, Math.max(0, dp/100));
+        const loanNeeded = Math.max(0, price * (1 - dpFrac));
+        const instalment = pmtFromPv(loanNeeded, rate, tenure);
+
+        const maxPrice = (1 - dpFrac) > 0 ? (maxLoan / (1 - dpFrac)) : 0;
+
+        const downpaymentAmt = Math.max(0, price * dpFrac);
+        const bsd = bsdEstimate(price);
+        const upfront = downpaymentAmt + bsd;
+
+        // Status based on instalment vs gross income ratio
+        const ratio = (income > 0) ? (instalment / income) : 1;
+        let status = "Borderline";
+        let cls = "grey";
+        if (ratio <= 0.30) { status = "Safe"; cls = "safe"; }
+        else if (ratio <= 0.35) { status = "Borderline"; cls = "grey"; }
+        else { status = "Risky"; cls = "fragile"; }
+
+        // If loan exceeds cap, force risky and add note
+        const exceeds = loanNeeded > maxLoan + 1;
+        const statusEl = $("statusPill");
+        statusEl.className = "pill " + (exceeds ? "fragile" : cls);
+        statusEl.textContent = exceeds ? "Capped" : status;
+
+        $("instalment").textContent = fmt(instalment);
+        $("instalmentSub").textContent = (income > 0)
+          ? `Instalment is ${(ratio*100).toFixed(1)}% of gross income` + (exceeds ? " (exceeds TDSR-style cap)" : "")
+          : "—";
+
+        $("maxLoan").textContent = fmt(maxLoan);
+        $("maxPrice").textContent = fmt(maxPrice);
+        $("upfront").textContent = fmt(upfront);
+      }
+
+      ["income","debt","rate","tenure","price","dp"].forEach(id => {
+        const el = $(id);
+        if (el) el.addEventListener("input", compute);
+      });
+
+      compute();
+    })();
+  </script>
+
+</body>
+</html>
