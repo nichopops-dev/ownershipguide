@@ -73,6 +73,27 @@
     backToClusterByCluster: {
       transport: { href: "/transport/", text: "← Back to Transport" },
       property: { href: "/property/", text: "← Back to Property" }
+    },
+
+    comparisons: {
+      label: "Decision Comparisons (Singapore)",
+      pillars: [
+        { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
+        { url: "/rent-vs-buy-property-singapore.html", title: "Rent vs Buy Property in Singapore (2026): 5-Year Cost & Liquidity Framework", cluster: "property", subtopic: "comparison" },
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", cluster: "property", subtopic: "comparison" }
+      ],
+      pages: [
+        { url: "/coe-renew-vs-replace-singapore.html", title: "Renew COE vs Replace Car in Singapore (2026): Decision Framework + Break-even", cluster: "transport", subtopic: "comparison" },
+        { url: "/own-car-vs-public-transport-singapore.html", title: "Own a Car vs Public Transport in Singapore (2026): The Real Decision", cluster: "transport", subtopic: "comparison" },
+        { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", cluster: "property", subtopic: "comparison" },
+        { url: "/rent-out-vs-sell-singapore.html", title: "Rent Out vs Sell Your Property in Singapore (2026): A No-Regret Framework", cluster: "property", subtopic: "comparison" },
+        { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
+        { url: "/used-car-vs-new-car-singapore.html", title: "Used vs New Car in Singapore (2026): Which Is Cheaper Over 5 Years?", cluster: "transport", subtopic: "comparison" }
+      ],
+      bridges: [
+        { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" },
+        { url: "/calculators/", title: "Calculators Hub", cluster: "calculators" }
+      ]
     }
   };
 
@@ -114,6 +135,8 @@
         { url: "/public-transport-cost-singapore.html", title: "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Models", subtopic: "alternative" },
         { url: "/motorcycle-ownership-cost-singapore.html", title: "Motorcycle Ownership Cost in Singapore (2026): Monthly Budget + 5-Year Reality Check", subtopic: "alternative" },
         { url: "/motorcycle-vs-car-cost-singapore.html", title: "Motorcycle vs Car Cost in Singapore (2026): Full Exposure Comparison", cluster: "transport", subtopic: "comparison" },
+        { url: "/own-car-vs-public-transport-singapore.html", title: "Own a Car vs Public Transport in Singapore (2026): The Real Decision", subtopic: "comparison" },
+        { url: "/coe-renew-vs-replace-singapore.html", title: "Renew COE vs Replace Car in Singapore (2026): Decision Framework + Break-even", subtopic: "comparison" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
@@ -155,9 +178,11 @@
         { url: "/rental-property-ownership-cost.html", title: "The Real Cost of Owning a Rental Property in Singapore (2026)", subtopic: "rental" },
         { url: "/should-i-buy-property-now-or-wait-singapore.html", title: "Should You Buy Property Now or Wait in Singapore? (2026 Timing Framework)", subtopic: "timing" },
         { url: "/rent-vs-buy-property-singapore.html", title: "Rent vs Buy Property in Singapore (2026): 5-Year Cost & Liquidity Framework", subtopic: "decision" },
+        { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", subtopic: "comparison" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/renovation-cost-singapore.html", title: "Renovation Cost in Singapore (2026): Realistic Budgets and Cash Shock Planning", subtopic: "setup" },
         { url: "/sell-property-cost-singapore.html", title: "Sell Property Cost in Singapore (2026): Fees, SSD, and Net Proceeds Reality", subtopic: "exit" },
+        { url: "/rent-out-vs-sell-singapore.html", title: "Rent Out vs Sell Your Property in Singapore (2026): A No-Regret Framework", subtopic: "comparison" },
         { url: "/how-much-cash-to-buy-property-singapore.html", title: "How Much Cash Do You Need to Buy Property in Singapore? (2026 Real Breakdown)", subtopic: "affordability" },
         { url: "/property-affordability-calculator-singapore.html", title: "Property Affordability Stress Test Calculator (Singapore, 2026)", subtopic: "calculator" },
         { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" }
@@ -247,7 +272,8 @@
       { url: "/start-here/", title: "Start Here", cluster: "home", subtopic: "start" },
       { url: "/transport/", title: "Transport Hub", cluster: "transport", subtopic: "start" },
       { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
-      { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" }
+      { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" },
+      { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
     );
 
     // de-dupe by url (keep first)
@@ -663,6 +689,11 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      if (path.startsWith("/comparisons")) {
+        activate("comparisons");
+        return;
+      }
+
       if (subtopic === "calculator" || path.includes("calculator")) {
         activate("calculators");
         return;
@@ -689,6 +720,8 @@ function buildRelatedHTML(label, links) {
 
     const isStart = path.startsWith("/start-here");
 
+    const isComparisons = path.startsWith("/comparisons");
+
     const isTransport =
       path.startsWith("/transport") ||
       path.includes("car-") ||
@@ -711,6 +744,7 @@ function buildRelatedHTML(label, links) {
     };
 
     if (isStart) activate("start");
+    else if (isComparisons) activate("comparisons");
     else if (isCalculator) activate("calculators");
     else if (isTransport) activate("transport");
     else if (isProperty) activate("property");

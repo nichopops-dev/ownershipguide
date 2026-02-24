@@ -59,6 +59,18 @@
     <priority>0.85</priority>
     <lastmod>2026-02-22</lastmod>
   </url>
+  <url>
+    <loc>https://ownershipguide.com/start-here/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <lastmod>2026-02-25</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/comparisons/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-02-25</lastmod>
+  </url>
 
   <!-- ===================================== -->
   <!-- Transport Cluster -->
@@ -164,6 +176,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/own-car-vs-public-transport-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <lastmod>2026-02-25</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/coe-renew-vs-replace-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <lastmod>2026-02-25</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/should-i-buy-car-now-or-wait-singapore.html</loc>
@@ -356,6 +380,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
     <lastmod>2026-02-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/hdb-vs-condo-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <lastmod>2026-02-25</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/rent-out-vs-sell-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+    <lastmod>2026-02-25</lastmod>
   </url>
   <url>
     <loc>https://ownershipguide.com/should-i-buy-property-now-or-wait-singapore.html</loc>

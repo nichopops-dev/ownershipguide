@@ -609,3 +609,93 @@ body.home .card{
 }
 .interpret strong{ display: block; margin-bottom: 6px; }
 .interpret p{ margin: 0; font-size: 13px; color: #111827; }
+
+/* =========================
+   Decision Engine UI blocks (v0040)
+========================= */
+
+.og-quicknav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin: 8px 0 14px;
+}
+
+.og-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  text-decoration:none;
+  font-size: 13px;
+  color: #111827;
+}
+
+.og-chip:hover{ background:#f9fafb; text-decoration:none; }
+
+.og-hero{
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(180deg, rgba(17,24,39,0.03), rgba(17,24,39,0.00));
+  border-radius: 16px;
+  padding: 14px 14px;
+  margin: 14px 0;
+}
+
+.og-hero p{ margin: 0 0 10px; }
+
+.og-hero-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.og-primary, .og-secondary{
+  display:inline-block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  border: 1px solid rgba(0,0,0,0.14);
+}
+
+.og-primary{
+  background:#111827;
+  color:#fff;
+}
+
+.og-primary:hover{ opacity:0.92; }
+
+.og-secondary{
+  background: rgba(17,24,39,0.04);
+  color:#111827;
+}
+
+.og-secondary:hover{ filter: brightness(0.98); }
+
+.og-card-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0 6px;
+}
+
+.og-card{
+  display:block;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  text-decoration:none;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.og-card:hover{ text-decoration:none; transform: translateY(-1px); }
+
+.og-card-title{ font-weight: 800; font-size: 15px; color:#111827; }
+.og-card-meta{ font-size: 13px; color:#6b7280; margin-top: 6px; }
+
+@media (max-width: 760px){
+  .og-card-grid{ grid-template-columns: 1fr; }
+}
