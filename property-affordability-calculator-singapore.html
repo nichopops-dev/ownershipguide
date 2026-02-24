@@ -158,11 +158,45 @@
           </div>
         </div>
 
+        <div class="note small" style="margin-top:12px;">
+          <label style="display:flex; gap:10px; align-items:center; margin:0;">
+            <input id="advToggle" type="checkbox" style="width:auto; transform: translateY(1px);">
+            <span><strong>Advanced mode</strong> (optional)</span>
+          </label>
+          <div id="advSection" style="display:none; margin-top:10px;">
+            <div class="calc-row">
+              <div>
+                <label for="propType">Purchase type</label>
+                <select id="propType">
+                  <option value="private" selected>Private property (TDSR only)</option>
+                  <option value="hdbec">HDB / EC scenario (MSR may apply)</option>
+                </select>
+                <p class="small muted" style="margin:6px 0 0;">If HDB/EC, MSR can be the tighter gate. This model uses a conservative MSR cap.</p>
+              </div>
+              <div>
+                <label for="netIncome">Net take-home income (optional, SGD)</label>
+                <input id="netIncome" type="number" inputmode="decimal" min="0" step="100" placeholder="e.g. 9000">
+                <p class="small muted" style="margin:6px 0 0;">Used only to add a second sanity check. Leave blank to use gross.</p>
+              </div>
+            </div>
+
+            <div class="calc-row">
+              <div>
+                <label style="display:flex; gap:10px; align-items:center; margin:0;">
+                  <input id="stressToggle" type="checkbox" checked style="width:auto; transform: translateY(1px);">
+                  <span>Show <strong>+1% interest rate</strong> stress test</span>
+                </label>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
         <div class="note small">
           <strong>Model assumptions (simple v1)</strong>
           <ul style="margin:8px 0 0; padding-left:18px;">
             <li>TDSR cap assumption: <strong>55%</strong> of gross income for total debt repayments.</li>
-            <li>MSR is not applied here and may be tighter for HDB/EC cases.</li>
+            <li>MSR is not applied in simple mode. Turn on <strong>Advanced mode</strong> for a conservative HDB/EC MSR gate.</li>
             <li>BSD is a rough estimate using tiered rates. Validate with IRAS schedule.</li>
           </ul>
         </div>
@@ -181,10 +215,18 @@
           <div id="instalment" class="kpi">—</div>
           <p id="instalmentSub" class="kpi-sub muted">—</p>
 
+          <div id="stressBlock" class="note small" style="margin:10px 0 0; display:none;">
+            <strong>Rate stress (+1%)</strong>
+            <div class="small muted" style="margin-top:6px;">Stressed instalment</div>
+            <div id="instalmentStress" class="kpi" style="font-size:22px;">—</div>
+            <p id="instalmentStressSub" class="kpi-sub muted">—</p>
+          </div>
+
           <div class="divider"></div>
 
           <div class="small muted">Max loan allowed (TDSR-style cap)</div>
           <div id="maxLoan" class="kpi">—</div>
+          <p id="gateNote" class="small muted" style="margin:6px 0 0;">—</p>
 
           <div class="divider"></div>
 
@@ -297,11 +339,34 @@
         const price = parseFloat($("price").value || "0");
         const dp = parseFloat($("dp").value || "25");
 
+        const adv = $("advToggle") ? $("advToggle").checked : false;
+        const propType = adv && $("propType") ? $("propType").value : "private";
+        const netIncome = adv && $("netIncome") ? parseFloat($("netIncome").value || "0") : 0;
+        const showStress = adv && $("stressToggle") ? $("stressToggle").checked : false;
+
+        // Borrowing gate (TDSR primary, optional MSR for HDB/EC scenarios)
         const tdsrCap = 0.55;
         const maxDebtService = Math.max(0, income * tdsrCap);
-        const capForMortgage = Math.max(0, maxDebtService - Math.max(0, debt));
+        const capForMortgageTdsr = Math.max(0, maxDebtService - Math.max(0, debt));
+        const maxLoanTdsr = pvFromPmt(capForMortgageTdsr, rate, tenure);
 
-        const maxLoan = pvFromPmt(capForMortgage, rate, tenure);
+        let maxLoan = maxLoanTdsr;
+        let gateNote = "Borrowing gate: TDSR (55% cap)";
+
+        if (adv && propType === "hdbec") {
+          // Conservative MSR gate (commonly 30% of gross for HDB/EC mortgage servicing)
+          const msrCap = 0.30;
+          const capForMortgageMsr = Math.max(0, income * msrCap);
+          const maxLoanMsr = pvFromPmt(capForMortgageMsr, rate, tenure);
+
+          if (maxLoanMsr < maxLoanTdsr) {
+            maxLoan = maxLoanMsr;
+            gateNote = "Borrowing gate: MSR binds (30% cap) — HDB/EC scenario";
+          } else {
+            maxLoan = maxLoanTdsr;
+            gateNote = "Borrowing gate: TDSR binds (55% cap) — HDB/EC scenario";
+          }
+        }
 
         const dpFrac = Math.min(1, Math.max(0, dp/100));
         const loanNeeded = Math.max(0, price * (1 - dpFrac));
@@ -313,34 +378,85 @@
         const bsd = bsdEstimate(price);
         const upfront = downpaymentAmt + bsd;
 
-        // Status based on instalment vs gross income ratio
-        const ratio = (income > 0) ? (instalment / income) : 1;
+        // Status based on instalment vs gross income ratio (with optional net sanity check)
+        const ratioGross = (income > 0) ? (instalment / income) : 1;
         let status = "Borderline";
         let cls = "borderline";
-        if (ratio <= 0.30) { status = "Safe"; cls = "safe"; }
-        else if (ratio <= 0.35) { status = "Borderline"; cls = "borderline"; }
+        if (ratioGross <= 0.30) { status = "Safe"; cls = "safe"; }
+        else if (ratioGross <= 0.35) { status = "Borderline"; cls = "borderline"; }
         else { status = "Risky"; cls = "risky"; }
 
-        // If loan exceeds cap, force risky and add note
+        let ratioNet = null;
+        if (netIncome && netIncome > 0) {
+          ratioNet = instalment / netIncome;
+          // Net check is a second sanity layer: bump status if net ratio is extreme
+          if (ratioNet > 0.55) { status = "Risky"; cls = "risky"; }
+          else if (status === "Safe" && ratioNet > 0.45) { status = "Borderline"; cls = "borderline"; }
+        }
+
+        // If loan exceeds cap, force capped status
         const exceeds = loanNeeded > maxLoan + 1;
         const statusEl = $("statusPill");
         statusEl.className = "badge " + (exceeds ? "risky" : cls);
-        statusEl.textContent = exceeds ? "TDSR CAPPED" : status.toUpperCase();
 
+        if (exceeds) {
+          const cappedLabel = (adv && propType === "hdbec" && gateNote.includes("MSR")) ? "MSR CAPPED" : "TDSR CAPPED";
+          statusEl.textContent = cappedLabel;
+        } else {
+          statusEl.textContent = status.toUpperCase();
+        }
+
+        const ratioGrossText = (income > 0) ? `${(ratioGross*100).toFixed(1)}% of gross income` : "—";
+        const ratioNetText = (ratioNet !== null) ? ` · ${(ratioNet*100).toFixed(1)}% of net` : "";
         $("instalment").textContent = fmt(instalment);
         $("instalmentSub").textContent = (income > 0)
-          ? `Instalment is ${(ratio*100).toFixed(1)}% of gross income` + (exceeds ? " (exceeds TDSR-style cap)" : "")
+          ? `Instalment is ${ratioGrossText}${ratioNetText}` + (exceeds ? " (exceeds borrowing gate)" : "")
           : "—";
 
         $("maxLoan").textContent = fmt(maxLoan);
+        const gateEl = $("gateNote");
+        if (gateEl) gateEl.textContent = gateNote;
         $("maxPrice").textContent = fmt(maxPrice);
         $("upfront").textContent = fmt(upfront);
-      }
 
-      ["income","debt","rate","tenure","price","dp"].forEach(id => {
+        // Rate stress (+1%) output (advanced mode)
+        const stressBlock = $("stressBlock");
+        if (stressBlock) {
+          if (showStress && income > 0) {
+            const stressRate = rate + 1.0;
+            const instStress = pmtFromPv(loanNeeded, stressRate, tenure);
+            const ratioStress = instStress / income;
+            $("instalmentStress").textContent = fmt(instStress);
+            $("instalmentStressSub").textContent = `At ${stressRate.toFixed(1)}% p.a. → ${(ratioStress*100).toFixed(1)}% of gross`;
+            stressBlock.style.display = "block";
+          } else {
+            stressBlock.style.display = "none";
+          }
+        }
+      }
+      ["income","debt","rate","tenure","price","dp","netIncome"].forEach(id => {
         const el = $(id);
         if (el) el.addEventListener("input", compute);
       });
+
+      // Advanced mode UI
+      const advToggle = $("advToggle");
+      const advSection = $("advSection");
+      const propTypeEl = $("propType");
+      const stressToggle = $("stressToggle");
+
+      function syncAdvUI(){
+        if (advToggle && advSection){
+          advSection.style.display = advToggle.checked ? "block" : "none";
+        }
+        compute();
+      }
+
+      if (advToggle) advToggle.addEventListener("change", syncAdvUI);
+      if (propTypeEl) propTypeEl.addEventListener("change", compute);
+      if (stressToggle) stressToggle.addEventListener("change", compute);
+
+      syncAdvUI();
 
       compute();
     })();
