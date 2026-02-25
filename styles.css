@@ -725,3 +725,39 @@ body.home .card{
 .og-table thead th {
   background: #f9fafb;
 }
+
+
+/* OG checklist + FAQ (comparisons consistency) */
+.og-checklist {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.og-checklist li {
+  padding-left: 28px;
+  position: relative;
+  margin: 10px 0;
+}
+.og-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+.og-faq details {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  margin: 10px 0;
+}
+.og-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.og-faq p {
+  margin: 10px 0 0 0;
+  color: #374151;
+}
