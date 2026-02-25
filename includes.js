@@ -45,11 +45,22 @@
       "/car-ownership-cost.html",
       "/monthly-cost-of-owning-a-car-singapore.html",
       "/car-ownership-cost-per-year-singapore.html",
+      "/car-depreciation-singapore.html",
+      "/car-loan-rates-singapore.html",
+      "/coe-renewal-worth-it-singapore.html",
+      "/5-year-coe-renewal-worth-it-singapore.html",
+      "/10-year-coe-renewal-worth-it-singapore.html",
+      "/should-i-buy-car-now-or-wait-singapore.html",
       "/tdsr-msr-singapore.html",
       "/cpf-accrued-interest-singapore.html",
       "/mortgage-interest-cost-singapore.html",
       "/condo-ownership-cost.html",
-      "/bsd-absd-singapore.html"
+      "/bsd-absd-singapore.html",
+      "/property-ownership-cost-singapore.html",
+      "/sell-property-cost-singapore.html",
+      "/rent-vs-buy-property-singapore.html",
+      "/bto-vs-resale-cost.html",
+      "/should-i-buy-property-now-or-wait-singapore.html"
     ],
 
     // Auto-related safety switches
