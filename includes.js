@@ -103,15 +103,15 @@ decisionPathOverrides: {
   },
   "/tdsr-msr-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs reprice (comparison)" }
+    runSecondary: { url: "/hdb-loan-vs-bank-loan-singapore.html", title: "HDB loan vs Bank loan (decision)" }
   },
   "/cpf-accrued-interest-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/sell-property-cost-singapore.html", title: "Sell property cost (net proceeds reality)" }
   },
   "/mortgage-interest-cost-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/fixed-vs-floating-home-loan-singapore.html", title: "Fixed vs floating (comparison)" }
+    runSecondary: { url: "/fixed-vs-floating-home-loan-singapore.html", title: "Fixed vs Floating loan (decision)" }
   },
   "/condo-ownership-cost": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
@@ -119,29 +119,28 @@ decisionPathOverrides: {
   },
   "/bsd-absd-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/sell-property-cost-singapore.html", title: "Selling costs checklist" }
+    runSecondary: { url: "/rent-vs-buy-property-singapore.html", title: "Rent vs Buy (framework)" }
   },
   "/property-ownership-cost-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest intuition" }
   },
   "/sell-property-cost-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/rent-out-vs-sell-singapore.html", title: "Rent out vs sell (comparison)" }
+    runSecondary: { url: "/cpf-accrued-interest-singapore.html", title: "CPF accrued interest (sale proceeds)" }
   },
   "/rent-vs-buy-property-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo (comparison)" }
+    runSecondary: { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay down mortgage vs Invest" }
   },
   "/bto-vs-resale-cost": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo (comparison)" }
+    runSecondary: { url: "/bsd-absd-singapore.html", title: "BSD & ABSD (stamp duty impact)" }
   },
   "/should-i-buy-property-now-or-wait-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs reprice (comparison)" }
-  }
-},
+    runSecondary: { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs Reprice (rates strategy)" }
+  }},
 
     // Auto-related safety switches
     // If a page has <meta name="og:norelated" content="true"> (or property=),
