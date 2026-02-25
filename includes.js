@@ -39,6 +39,18 @@
     relatedSameSubtopicCount: 3,       // include this many from same subtopic (excluding self)
     relatedBridgeCount: 1,             // include this many cross-cluster bridges
     relatedContainerId: "auto-related",// placeholder div id in articles
+    enableDecisionPathModule: true,
+    decisionPathModuleId: "og-next-steps",
+    decisionPathAllowPaths: [
+      "/car-ownership-cost.html",
+      "/monthly-cost-of-owning-a-car-singapore.html",
+      "/car-ownership-cost-per-year-singapore.html",
+      "/tdsr-msr-singapore.html",
+      "/cpf-accrued-interest-singapore.html",
+      "/mortgage-interest-cost-singapore.html",
+      "/condo-ownership-cost.html",
+      "/bsd-absd-singapore.html"
+    ],
 
     // Auto-related safety switches
     // If a page has <meta name="og:norelated" content="true"> (or property=),
@@ -942,6 +954,72 @@ function buildRelatedHTML(label, links) {
     host.insertAdjacentElement("beforebegin", box);
   }
 
+  function injectDecisionPathModule() {
+    if (!SETTINGS.enableDecisionPathModule) return;
+
+    const host = document.getElementById(SETTINGS.relatedContainerId);
+    if (!host) return;
+
+    // Avoid double-inserting
+    if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
+
+    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+    if (!cluster) return;
+
+    // Keep this module for "pillar/explainer" articles only
+    if (subtopic === "calculator" || subtopic === "comparison") return;
+
+    const path = (location.pathname || "/").replace(/\/+$/, "/");
+    const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => p === path || p === path.replace(/\/+$/, ""));
+    if (!allow) return;
+
+    const runPrimary = cluster === "property"
+      ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
+      : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" };
+
+    const runSecondary = cluster === "property"
+      ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost (model)" }
+      : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" };
+
+    const box = document.createElement("section");
+    box.className = "og-section";
+    box.id = SETTINGS.decisionPathModuleId;
+
+    box.innerHTML = `
+      <h2>Next steps</h2>
+      <p class="muted" style="margin-top:-8px;">Use the decision path: choose the right model → run the numbers → learn the mechanics.</p>
+
+      <div class="og-card-grid three" style="margin-top:14px;">
+        <a class="og-card" href="/start-here/">
+          <div class="og-card-title">Start here (10 min)</div>
+          <div class="og-card-meta">Recommended path</div>
+        </a>
+
+        <a class="og-card" href="/comparisons/">
+          <div class="og-card-title">Decision comparisons</div>
+          <div class="og-card-meta">Choose the right model</div>
+        </a>
+
+        <div class="og-card">
+          <div class="og-card-title">Run the numbers</div>
+          <div class="og-card-meta">
+            <a href="${runPrimary.url}">${escapeHtml(runPrimary.title)}</a>
+            <span class="muted"> · </span>
+            <a href="${runSecondary.url}">${escapeHtml(runSecondary.title)}</a>
+            <span class="muted"> · </span>
+            <a href="/calculators/">All calculators</a>
+          </div>
+        </div>
+      </div>
+      <hr style="margin-top:22px;">
+    `;
+
+    host.insertAdjacentElement("beforebegin", box);
+  }
+
+
+
 
   // =========================
   // 3) HEADER / FOOTER
@@ -1053,6 +1131,7 @@ function buildRelatedHTML(label, links) {
   // =========================
   injectCalculatorCTA();
   injectPropertyCTA();
+  injectDecisionPathModule();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
