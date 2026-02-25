@@ -332,7 +332,7 @@ decisionPathOverrides: {
   // These pages benefit from a financing-focused loop: mechanics → comparisons → calculators.
   const FINANCING_LOOP_PRESETS = {
     "/tdsr-msr-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "Borrowing limits & loan choices" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "Borrowing limits & loan choices" },
       related: [
         { href: "/hdb-loan-vs-bank-loan-singapore.html", label: "HDB loan vs Bank loan" },
         { href: "/fixed-vs-floating-home-loan-singapore.html", label: "Fixed vs Floating loan" },
@@ -340,7 +340,7 @@ decisionPathOverrides: {
       ]
     },
     "/cpf-accrued-interest-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "CPF + cashflow reality" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "CPF + cashflow reality" },
       related: [
         { href: "/sell-property-cost-singapore.html", label: "Sell property cost" },
         { href: "/rent-out-vs-sell-singapore.html", label: "Rent out vs Sell" },
@@ -348,7 +348,7 @@ decisionPathOverrides: {
       ]
     },
     "/mortgage-interest-cost-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "Rates, interest, amortisation" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "Rates, interest, amortisation" },
       related: [
         { href: "/fixed-vs-floating-home-loan-singapore.html", label: "Fixed vs Floating loan" },
         { href: "/pay-down-mortgage-vs-invest-singapore.html", label: "Pay down mortgage vs Invest" },
@@ -356,7 +356,7 @@ decisionPathOverrides: {
       ]
     },
     "/bsd-absd-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "Upfront cash & affordability" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "Upfront cash & affordability" },
       related: [
         { href: "/rent-vs-buy-property-singapore.html", label: "Rent vs Buy (property)" },
         { href: "/hdb-vs-condo-singapore.html", label: "HDB vs Condo" },
@@ -364,7 +364,7 @@ decisionPathOverrides: {
       ]
     },
     "/sell-property-cost-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "Exit costs & cashflow" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "Exit costs & cashflow" },
       related: [
         { href: "/rent-out-vs-sell-singapore.html", label: "Rent out vs Sell" },
         { href: "/cpf-accrued-interest-singapore.html", label: "CPF accrued interest" },
@@ -372,7 +372,7 @@ decisionPathOverrides: {
       ]
     },
     "/property-ownership-cost-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "All-in exposure & leverage" },
+      compare: { href: "/property/financing/", label: "Property financing", meta: "All-in exposure & leverage" },
       related: [
         { href: "/hdb-vs-condo-singapore.html", label: "HDB vs Condo" },
         { href: "/rent-vs-buy-property-singapore.html", label: "Rent vs Buy (property)" },
@@ -380,7 +380,7 @@ decisionPathOverrides: {
       ]
     },
     "/car-loan-rates-singapore": {
-      compare: { href: "/financing/", label: "Financing hub", meta: "Transport financing basics" },
+      compare: { href: "/transport/financing/", label: "Transport financing", meta: "Transport financing basics" },
       related: [
                 { href: "/balloon-loan-vs-normal-car-loan-singapore.html", label: "Balloon loan vs Normal loan" },
         { href: "/car-loan-vs-cash-singapore.html", label: "Car loan vs Pay cash" },
@@ -1281,14 +1281,28 @@ const runSecondary = (override && override.runSecondary)
 const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
 
 const compareCfg = (preset && preset.compare) ? preset.compare : null;
-const compareHref = compareCfg ? compareCfg.href : "/comparisons/";
-const compareLabel = compareCfg ? compareCfg.label : "Decision comparisons";
-const compareMeta = compareCfg ? compareCfg.meta : "Choose the right model";
+const financingDefault = (() => {
+  const p = pathN;
+  const isProp = (cluster === "property");
+  const isTrans = (cluster === "transport");
+  if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
+    return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
+  }
+  if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
+    return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
+  }
+  return null;
+})();
+
+const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
+const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
+const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
 
 const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
+const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
 const relatedHtml = (relatedLinks && relatedLinks.length)
   ? `<div class="og-nextsteps-related">
-        <div class="muted og-nextsteps-related-label">Related (financing)</div>
+        <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
         <div class="og-nextsteps-related-links">
           ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
         </div>
