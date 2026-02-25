@@ -485,14 +485,22 @@ decisionPathOverrides: {
       { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
     );
 
-    // de-dupe by url (keep first)
+    // de-dupe by url (keep first). Also warn if we detect potential cannibalisation (same URL indexed twice).
     const seen = new Set();
-    return out.filter((x) => {
+    const dupes = new Set();
+    const filtered = out.filter((x) => {
       if (!x || !x.url) return false;
-      if (seen.has(x.url)) return false;
+      if (seen.has(x.url)) {
+        dupes.add(x.url);
+        return false;
+      }
       seen.add(x.url);
       return true;
     });
+    if (dupes.size && typeof console !== "undefined" && console.warn) {
+      console.warn("[OG] Search index duplicates detected (deduped):", Array.from(dupes).slice(0, 20));
+    }
+    return filtered;
   }
 
   function tokens(s) {
