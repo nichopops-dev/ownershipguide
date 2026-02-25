@@ -681,6 +681,10 @@ body.home .card{
   margin: 12px 0 6px;
 }
 
+.og-card-grid.three{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .og-card{
   display:block;
   padding: 14px 14px;
