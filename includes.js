@@ -79,23 +79,23 @@ decisionPathOverrides: {
   },
   "/car-depreciation-singapore": {
     runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
-    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+    runSecondary: { url: "/car-loan-vs-cash-singapore.html", title: "Car loan vs pay cash" }
   },
   "/car-loan-rates-singapore": {
     runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
-    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+    runSecondary: { url: "/car-loan-vs-cash-singapore.html", title: "Car loan vs pay cash" }
   },
   "/coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
-    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/coe-renew-vs-replace-singapore.html", title: "COE renew vs replace" }
   },
   "/5-year-coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
-    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/coe-renew-vs-replace-singapore.html", title: "COE renew vs replace" }
   },
   "/10-year-coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
-    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/coe-renew-vs-replace-singapore.html", title: "COE renew vs replace" }
   },
   "/should-i-buy-car-now-or-wait-singapore": {
     runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
