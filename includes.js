@@ -278,6 +278,7 @@ decisionPathOverrides: {
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Stamp Duty Cost, Cash Impact, and Decision Rules", subtopic: "acquisition" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): How Much You Can Really Borrow for Property", subtopic: "financing" },
+        { url: "/property/financing/", title: "Property Financing (Singapore, 2026): Home Loans, Refinancing, Borrowing Rules", subtopic: "financing" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
         { url: "/renovation-cost-singapore.html", title: "Renovation Cost in Singapore (2026): Realistic Budgets and Cash Shock Planning", subtopic: "setup" },
         { url: "/sell-property-cost-singapore.html", title: "Sell Property Cost in Singapore (2026): Fees, SSD, and Net Proceeds Reality", subtopic: "exit" },
@@ -311,6 +312,8 @@ decisionPathOverrides: {
       label: "Related Singapore Financing & Leverage",
       pillars: [
         { url: "/financing/", title: "Financing Hub (Singapore, 2026): Property Loans, Car Loans, Leverage", subtopic: "hub" },
+        { url: "/property/financing/", title: "Property Financing (Singapore, 2026): Home Loans, Refinancing, Borrowing Rules", subtopic: "property" },
+        { url: "/transport/financing/", title: "Transport Financing (Singapore, 2026): Car Loans, Balloon Loans, Leasing", subtopic: "transport" },
         { url: "/car-loan-rates-singapore.html", title: "Car Loan Rates in Singapore (2026): What You Actually Pay", subtopic: "loan" },
         { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): What Limits Your Loan", subtopic: "rules" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore: The Intuition That Prevents Mistakes", subtopic: "mechanics" },
