@@ -1012,8 +1012,13 @@ function buildRelatedHTML(label, links) {
     // Keep this module for "pillar/explainer" articles only
     if (subtopic === "calculator" || subtopic === "comparison") return;
 
-    const path = (location.pathname || "/").replace(/\/+$/, "/");
-    const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => p === path || p === path.replace(/\/+$/, ""));
+    const rawPath = (location.pathname || "/");
+    const norm = (s) => (s || "/")
+      .trim()
+      .replace(/\/+$/, "")
+      .replace(/\.html$/i, "");
+    const pathN = norm(rawPath);
+    const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
     if (!allow) return;
 
     const runPrimary = cluster === "property"
