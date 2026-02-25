@@ -301,7 +301,21 @@ decisionPathOverrides: {
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" }
       ]
     }
-  };
+ 
+    ,
+    financing: {
+      label: "Related Singapore Financing & Leverage",
+      pillars: [
+        { url: "/financing/", title: "Financing Hub (Singapore, 2026): Property Loans, Car Loans, Leverage", subtopic: "hub" },
+        { url: "/car-loan-rates-singapore.html", title: "Car Loan Rates in Singapore (2026): What You Actually Pay", subtopic: "loan" },
+        { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): What Limits Your Loan", subtopic: "rules" },
+        { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore: The Intuition That Prevents Mistakes", subtopic: "mechanics" },
+        { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest: The Hidden Cost in Singapore Property", subtopic: "cpf" },
+        { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Property Taxes That Change Your Decision", subtopic: "tax" }
+      ],
+      bridges: []
+    }
+ };
 
   // =========================
   // 2) HELPERS
@@ -831,6 +845,11 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      if (path.startsWith("/financing")) {
+        activate("financing");
+        return;
+      }
+
       if (subtopic === "calculator" || path.includes("calculator")) {
         activate("calculators");
         return;
@@ -846,6 +865,11 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      if (cluster === "financing") {
+        activate("financing");
+        return;
+      }
+
       activate("home");
       return;
     }
@@ -854,6 +878,8 @@ function buildRelatedHTML(label, links) {
     const isCalculator =
       path.startsWith("/calculator") ||
       path.includes("calculator");
+
+    const isFinancing = path.startsWith("/financing");
 
     const isStart = path.startsWith("/start-here");
 
