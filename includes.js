@@ -65,6 +65,18 @@
 
 // Per-page overrides for the "Next steps" module (normalized paths, no trailing slash, no .html)
 decisionPathOverrides: {
+  "/car-ownership-cost": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/monthly-cost-of-owning-a-car-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/car-ownership-cost-per-year-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
   "/car-depreciation-singapore": {
     runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
     runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
@@ -74,16 +86,16 @@ decisionPathOverrides: {
     runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
   },
   "/coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
-    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
+    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
   },
   "/5-year-coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
-    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
+    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
   },
   "/10-year-coe-renewal-worth-it-singapore": {
-    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
-    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
+    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
   },
   "/should-i-buy-car-now-or-wait-singapore": {
     runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
@@ -91,7 +103,23 @@ decisionPathOverrides: {
   },
   "/tdsr-msr-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs reprice (comparison)" }
+  },
+  "/cpf-accrued-interest-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
     runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/mortgage-interest-cost-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/fixed-vs-floating-home-loan-singapore.html", title: "Fixed vs floating (comparison)" }
+  },
+  "/condo-ownership-cost": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/bsd-absd-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/sell-property-cost-singapore.html", title: "Selling costs checklist" }
   },
   "/property-ownership-cost-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
@@ -99,19 +127,19 @@ decisionPathOverrides: {
   },
   "/sell-property-cost-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/rent-out-vs-sell-singapore.html", title: "Rent out vs sell (comparison)" }
   },
   "/rent-vs-buy-property-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo (comparison)" }
   },
   "/bto-vs-resale-cost": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo (comparison)" }
   },
   "/should-i-buy-property-now-or-wait-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    runSecondary: { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs reprice (comparison)" }
   }
 },
 
