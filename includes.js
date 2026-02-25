@@ -824,6 +824,21 @@ function buildRelatedHTML(label, links) {
 
   function setActiveNav() {
     const path = (location.pathname || "/").toLowerCase();
+    const pathN = normalizePath(path);
+
+    // Pages that belong to the Financing cluster but are not under /financing/
+    // Keep this list short and intent-based.
+    const FINANCING_SLUG_HINTS = [
+      "fixed-vs-floating-home-loan",
+      "refinance-vs-reprice-home-loan",
+      "hdb-loan-vs-bank-loan",
+      "pay-down-mortgage-vs-invest",
+      "mortgage",
+      "home-loan",
+      "tdsr",
+      "msr"
+    ];
+    const looksLikeFinancingPage = FINANCING_SLUG_HINTS.some((s) => pathN.includes(s));
 
     // Prefer meta-based nav if available, because it avoids heuristic drift
     if (SETTINGS.preferMetaForNav) {
@@ -870,6 +885,12 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      // Meta can be missing on older pages; fall back to URL hints for financing.
+      if (looksLikeFinancingPage) {
+        activate("financing");
+        return;
+      }
+
       activate("home");
       return;
     }
@@ -908,6 +929,7 @@ function buildRelatedHTML(label, links) {
 
     if (isStart) activate("start");
     else if (isComparisons) activate("comparisons");
+    else if (isFinancing || looksLikeFinancingPage) activate("financing");
     else if (isCalculator) activate("calculators");
     else if (isTransport) activate("transport");
     else if (isProperty) activate("property");
