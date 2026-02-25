@@ -784,7 +784,12 @@ function buildRelatedHTML(label, links) {
   }
 
   async function inject(id, url) {
-    const el = document.getElementById(id);
+    // Back-compat: some pages still use older placeholder ids
+    let el = document.getElementById(id);
+    if (!el) {
+      if (id === 'site-header') el = document.getElementById('header-placeholder');
+      if (id === 'site-footer') el = document.getElementById('footer-placeholder');
+    }
     if (!el) return;
     try {
       const res = await fetch(url, { cache: "no-cache" });
