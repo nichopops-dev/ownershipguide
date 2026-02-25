@@ -1219,6 +1219,33 @@ function buildRelatedHTML(label, links) {
       .replace(/\/+$/, "")
       .replace(/\.html$/i, "");
     const pathN = norm(rawPath);
+
+// Do not inject on comparison pages (they already have their own next-step modules)
+const isComparisonPage = (() => {
+  try {
+    if (rawPath.startsWith("/comparisons")) return true;
+    const metaEl = document.querySelector(".meta");
+    if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
+
+    // Check against configured comparison URLs
+    const urls = [];
+    const walk = (node) => {
+      if (!node) return;
+      if (Array.isArray(node)) { node.forEach(walk); return; }
+      if (typeof node === "object") {
+        if (typeof node.url === "string") urls.push(node.url);
+        for (const k in node) walk(node[k]);
+      }
+    };
+    if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
+    const cmpSet = new Set(urls.map(u => norm(u)));
+    return cmpSet.has(pathN);
+  } catch (e) {
+    return false;
+  }
+})();
+if (isComparisonPage) return;
+
     const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
     if (!allow) return;
 
@@ -1242,7 +1269,7 @@ const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP
 const compareCfg = (preset && preset.compare) ? preset.compare : null;
 const compareHref = compareCfg ? compareCfg.href : "/comparisons/";
 const compareLabel = compareCfg ? compareCfg.label : "Decision comparisons";
-const compareMeta = compareCfg ? compareCfg.meta : "${escapeHtml(compareMeta)}";
+const compareMeta = compareCfg ? compareCfg.meta : "Choose the right model";
 
 const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
 const relatedHtml = (relatedLinks && relatedLinks.length)
