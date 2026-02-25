@@ -192,6 +192,10 @@ decisionPathOverrides: {
         { url: "/rent-out-vs-sell-singapore.html", title: "Rent Out vs Sell Your Property in Singapore (2026): A No-Regret Framework", cluster: "property", subtopic: "comparison" },
         { url: "/fixed-vs-floating-home-loan-singapore.html", title: "Fixed vs Floating Home Loan in Singapore (2026): Simple Decision Framework", cluster: "property", subtopic: "comparison" },
         { url: "/refinance-vs-reprice-home-loan-singapore.html", title: "Refinance vs Reprice Home Loan in Singapore (2026): Break-even Framework", cluster: "property", subtopic: "comparison" },
+        { url: "/hdb-loan-vs-bank-loan-singapore.html", title: "HDB Loan vs Bank Loan in Singapore (2026): Decision Framework + Worked Example", cluster: "property", subtopic: "comparison" },
+        { url: "/should-i-buy-property-now-or-wait-singapore.html", title: "Buy Property Now vs Wait in Singapore (2026): Decision Framework + Worked Example", cluster: "property", subtopic: "comparison" },
+        { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay Down Mortgage vs Invest in Singapore (2026): Framework + Worked Example", cluster: "property", subtopic: "comparison" },
+
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
         { url: "/used-car-vs-new-car-singapore.html", title: "Used vs New Car in Singapore (2026): Which Is Cheaper Over 5 Years?", cluster: "transport", subtopic: "comparison" }
       ],
