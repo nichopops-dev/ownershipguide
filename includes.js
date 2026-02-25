@@ -1331,7 +1331,7 @@ const box = document.createElement("section");
         <div class="og-card og-next-card">
           <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M8 7h8"/><path d="M9 11h1"/><path d="M13 11h1"/><path d="M9 14h1"/><path d="M13 14h1"/><path d="M9 17h1"/><path d="M13 17h1"/></svg></span><span>Run the numbers</span></div>
           <div class="og-card-meta">Use a calculator (2 min)</div>
-          <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} →</a>
+          <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} → <span class="og-pill">Recommended</span></a>
           <div class="og-card-links">
             <a href="${runSecondary.url}">${escapeHtml(runSecondary.title)}</a>
             <span class="muted"> · </span>

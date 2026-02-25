@@ -683,6 +683,19 @@ body.home .card{
   border: 1px solid rgba(0,0,0,0.14);
 }
 
+.og-pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  background: rgba(255,255,255,0.7);
+}
+
+
 .og-primary{
   background:#111827;
   color:#fff;
