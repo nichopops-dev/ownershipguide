@@ -198,6 +198,7 @@ decisionPathOverrides: {
 
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-loan-vs-cash-singapore.html", title: "Car Loan vs Pay Cash in Singapore (2026): Decision Rules + Worked Example", cluster: "transport", subtopic: "comparison" },
+        { url: "/balloon-loan-vs-normal-car-loan-singapore.html", title: "Balloon Loan vs Normal Car Loan in Singapore (2026): Decision Framework + Worked Example", cluster: "transport", subtopic: "comparison" },
         { url: "/used-car-vs-new-car-singapore.html", title: "Used vs New Car in Singapore (2026): Which Is Cheaper Over 5 Years?", cluster: "transport", subtopic: "comparison" }
       ],
       bridges: [
@@ -376,10 +377,9 @@ decisionPathOverrides: {
     "/car-loan-rates-singapore": {
       compare: { href: "/financing/", label: "Financing hub", meta: "Transport financing basics" },
       related: [
-        { href: "/own-car-vs-public-transport-singapore.html", label: "Own car vs Public transport" },
-        { href: "/car-vs-ride-hailing-calculator.html", label: "Car vs ride-hailing break-even" },
-        { href: "/car-affordability-calculator-singapore.html", label: "Car affordability stress test" }
-      ]
+                { href: "/balloon-loan-vs-normal-car-loan-singapore.html", label: "Balloon loan vs Normal loan" },
+        { href: "/car-loan-vs-cash-singapore.html", label: "Car loan vs Pay cash" },
+        { href: "/car-affordability-calculator-singapore.html", label: "Car affordability stress test" }]
     }
   };
 
