@@ -699,3 +699,29 @@ body.home .card{
 @media (max-width: 760px){
   .og-card-grid{ grid-template-columns: 1fr; }
 }
+
+/* =========================
+   Comparison tables
+========================= */
+.og-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.og-table th,
+.og-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.og-table tr:last-child td {
+  border-bottom: none;
+}
+
+.og-table thead th {
+  background: #f9fafb;
+}
