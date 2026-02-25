@@ -898,8 +898,15 @@ function buildRelatedHTML(label, links) {
   function injectCalculatorCTA() {
     if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId);
-    if (!host) return;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
+
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.calculatorCtaId)) return;
@@ -929,13 +936,25 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    host.insertAdjacentElement("beforebegin", box);
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
+      fallbackHost.appendChild(box);
+    }
   }
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId);
-    if (!host) return;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
+
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.propertyCtaId)) return;
@@ -962,14 +981,26 @@ function buildRelatedHTML(label, links) {
       </p>
     `;
 
-    host.insertAdjacentElement("beforebegin", box);
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
+      fallbackHost.appendChild(box);
+    }
   }
 
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId);
-    if (!host) return;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
+
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
@@ -1026,7 +1057,12 @@ function buildRelatedHTML(label, links) {
       <hr style="margin-top:22px;">
     `;
 
-    host.insertAdjacentElement("beforebegin", box);
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
+      fallbackHost.appendChild(box);
+    }
   }
 
 
