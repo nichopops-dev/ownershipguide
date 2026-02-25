@@ -792,3 +792,21 @@ body.home .card{
   margin: 10px 0 0 0;
   color: #374151;
 }
+
+
+/* Inline SVG icons (Next steps module) */
+.og-card-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.og-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  color:inherit;
+}
+.og-icon svg{ display:block; }

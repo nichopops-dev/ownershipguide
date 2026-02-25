@@ -1098,17 +1098,17 @@ const box = document.createElement("section");
 
       <div class="og-card-grid three og-nextsteps-grid" style="margin-top:14px;">
         <a class="og-card og-next-card" href="/start-here/">
-          <div class="og-card-title">🧭 Start here (10 min)</div>
+          <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.5 9.5l-2 6-6 2 2-6 6-2z"/></svg></span><span>Start here (10 min)</span></div>
           <div class="og-card-meta">Recommended path</div>
         </a>
 
         <a class="og-card og-next-card" href="/comparisons/">
-          <div class="og-card-title">⚖️ Decision comparisons</div>
+          <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 7h12"/><path d="M7 7l-4 7h8l-4-7z"/><path d="M21 14h-8l4-7 4 7z"/><path d="M6 21h12"/></svg></span><span>Decision comparisons</span></div>
           <div class="og-card-meta">Choose the right model</div>
         </a>
 
         <div class="og-card og-next-card">
-          <div class="og-card-title">🧮 Run the numbers</div>
+          <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M8 7h8"/><path d="M9 11h1"/><path d="M13 11h1"/><path d="M9 14h1"/><path d="M13 14h1"/><path d="M9 17h1"/><path d="M13 17h1"/></svg></span><span>Run the numbers</span></div>
           <div class="og-card-meta">Use a calculator (2 min)</div>
           <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} →</a>
           <div class="og-card-links">
