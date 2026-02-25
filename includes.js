@@ -318,6 +318,70 @@ decisionPathOverrides: {
  };
 
   // =========================
+
+  // =========================
+  // 1.5) DECISION PATH PRESETS (Financing loop)
+  // =========================
+  // These pages benefit from a financing-focused loop: mechanics → comparisons → calculators.
+  const FINANCING_LOOP_PRESETS = {
+    "/tdsr-msr-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "Borrowing limits & loan choices" },
+      related: [
+        { href: "/hdb-loan-vs-bank-loan-singapore.html", label: "HDB loan vs Bank loan" },
+        { href: "/fixed-vs-floating-home-loan-singapore.html", label: "Fixed vs Floating loan" },
+        { href: "/refinance-vs-reprice-home-loan-singapore.html", label: "Refinance vs Reprice" }
+      ]
+    },
+    "/cpf-accrued-interest-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "CPF + cashflow reality" },
+      related: [
+        { href: "/sell-property-cost-singapore.html", label: "Sell property cost" },
+        { href: "/rent-out-vs-sell-singapore.html", label: "Rent out vs Sell" },
+        { href: "/refinance-vs-reprice-home-loan-singapore.html", label: "Refinance vs Reprice" }
+      ]
+    },
+    "/mortgage-interest-cost-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "Rates, interest, amortisation" },
+      related: [
+        { href: "/fixed-vs-floating-home-loan-singapore.html", label: "Fixed vs Floating loan" },
+        { href: "/pay-down-mortgage-vs-invest-singapore.html", label: "Pay down mortgage vs Invest" },
+        { href: "/refinance-vs-reprice-home-loan-singapore.html", label: "Refinance vs Reprice" }
+      ]
+    },
+    "/bsd-absd-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "Upfront cash & affordability" },
+      related: [
+        { href: "/rent-vs-buy-property-singapore.html", label: "Rent vs Buy (property)" },
+        { href: "/hdb-vs-condo-singapore.html", label: "HDB vs Condo" },
+        { href: "/property-affordability-calculator-singapore.html", label: "Property affordability stress test" }
+      ]
+    },
+    "/sell-property-cost-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "Exit costs & cashflow" },
+      related: [
+        { href: "/rent-out-vs-sell-singapore.html", label: "Rent out vs Sell" },
+        { href: "/cpf-accrued-interest-singapore.html", label: "CPF accrued interest" },
+        { href: "/refinance-vs-reprice-home-loan-singapore.html", label: "Refinance vs Reprice" }
+      ]
+    },
+    "/property-ownership-cost-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "All-in exposure & leverage" },
+      related: [
+        { href: "/hdb-vs-condo-singapore.html", label: "HDB vs Condo" },
+        { href: "/rent-vs-buy-property-singapore.html", label: "Rent vs Buy (property)" },
+        { href: "/fixed-vs-floating-home-loan-singapore.html", label: "Fixed vs Floating loan" }
+      ]
+    },
+    "/car-loan-rates-singapore": {
+      compare: { href: "/financing/", label: "Financing hub", meta: "Transport financing basics" },
+      related: [
+        { href: "/own-car-vs-public-transport-singapore.html", label: "Own car vs Public transport" },
+        { href: "/car-vs-ride-hailing-calculator.html", label: "Car vs ride-hailing break-even" },
+        { href: "/car-affordability-calculator-singapore.html", label: "Car affordability stress test" }
+      ]
+    }
+  };
+
   // 2) HELPERS
   // =========================
   function normalizePath(p) {
@@ -1173,6 +1237,24 @@ const runSecondary = (override && override.runSecondary)
     ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
     : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
 
+const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
+
+const compareCfg = (preset && preset.compare) ? preset.compare : null;
+const compareHref = compareCfg ? compareCfg.href : "/comparisons/";
+const compareLabel = compareCfg ? compareCfg.label : "Decision comparisons";
+const compareMeta = compareCfg ? compareCfg.meta : "${escapeHtml(compareMeta)}";
+
+const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
+const relatedHtml = (relatedLinks && relatedLinks.length)
+  ? `<div class="og-nextsteps-related">
+        <div class="muted og-nextsteps-related-label">Related (financing)</div>
+        <div class="og-nextsteps-related-links">
+          ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
+        </div>
+      </div>`
+  : "";
+
+
 const box = document.createElement("section");
     box.className = "og-section";
     box.id = SETTINGS.decisionPathModuleId;
@@ -1187,9 +1269,9 @@ const box = document.createElement("section");
           <div class="og-card-meta">Recommended path</div>
         </a>
 
-        <a class="og-card og-next-card" href="/comparisons/">
-          <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 7h12"/><path d="M7 7l-4 7h8l-4-7z"/><path d="M21 14h-8l4-7 4 7z"/><path d="M6 21h12"/></svg></span><span>Decision comparisons</span></div>
-          <div class="og-card-meta">Choose the right model</div>
+        <a class="og-card og-next-card" href="${compareHref}">
+          <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 7h12"/><path d="M7 7l-4 7h8l-4-7z"/><path d="M21 14h-8l4-7 4 7z"/><path d="M6 21h12"/></svg></span><span>${escapeHtml(compareLabel)}</span></div>
+          <div class="og-card-meta">${escapeHtml(compareMeta)}</div>
         </a>
 
         <div class="og-card og-next-card">
@@ -1203,7 +1285,10 @@ const box = document.createElement("section");
           </div>
         </div>
       </div>
+      
+      ${relatedHtml}
       <hr style="margin-top:22px;">
+
 `;
 
     if (host) {

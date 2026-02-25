@@ -833,3 +833,20 @@ body.home .card{
   color:inherit;
 }
 .og-icon svg{ display:block; }
+
+
+/* Next steps: related links (financing loop) */
+.og-nextsteps-related{
+  margin-top:16px;
+  padding:14px 16px;
+  border:1px solid var(--border, rgba(0,0,0,0.08));
+  border-radius:14px;
+  background: rgba(0,0,0,0.02);
+}
+.og-nextsteps-related-label{
+  font-weight:600;
+  margin-bottom:6px;
+}
+.og-nextsteps-related-links a{
+  text-decoration: underline;
+}
