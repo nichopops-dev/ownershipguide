@@ -700,6 +700,33 @@ body.home .card{
 .og-card-title{ font-weight: 800; font-size: 15px; color:#111827; }
 .og-card-meta{ font-size: 13px; color:#6b7280; margin-top: 6px; }
 
+
+.og-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.14);
+  text-decoration:none;
+  font-weight: 800;
+  font-size: 13px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.og-card-links{
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.og-card-links a{
+  font-weight: 700;
+}
+
+
 @media (max-width: 760px){
   .og-card-grid{ grid-template-columns: 1fr; }
 }

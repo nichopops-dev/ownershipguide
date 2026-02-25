@@ -63,6 +63,58 @@
       "/should-i-buy-property-now-or-wait-singapore.html"
     ],
 
+// Per-page overrides for the "Next steps" module (normalized paths, no trailing slash, no .html)
+decisionPathOverrides: {
+  "/car-depreciation-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/car-loan-rates-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/coe-renewal-worth-it-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/5-year-coe-renewal-worth-it-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/10-year-coe-renewal-worth-it-singapore": {
+    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
+  },
+  "/should-i-buy-car-now-or-wait-singapore": {
+    runPrimary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" },
+    runSecondary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" }
+  },
+  "/tdsr-msr-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/property-ownership-cost-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/sell-property-cost-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/rent-vs-buy-property-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/bto-vs-resale-cost": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  },
+  "/should-i-buy-property-now-or-wait-singapore": {
+    runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+    runSecondary: { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+  }
+},
+
     // Auto-related safety switches
     // If a page has <meta name="og:norelated" content="true"> (or property=),
     // we will NOT inject related links.
@@ -1021,15 +1073,22 @@ function buildRelatedHTML(label, links) {
     const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
     if (!allow) return;
 
-    const runPrimary = cluster === "property"
-      ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
-      : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" };
+    
+const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
 
-    const runSecondary = cluster === "property"
-      ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost (model)" }
-      : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" };
+const runPrimary = (override && override.runPrimary)
+  ? override.runPrimary
+  : (cluster === "property"
+    ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
+    : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
 
-    const box = document.createElement("section");
+const runSecondary = (override && override.runSecondary)
+  ? override.runSecondary
+  : (cluster === "property"
+    ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
+
+const box = document.createElement("section");
     box.className = "og-section";
     box.id = SETTINGS.decisionPathModuleId;
 
@@ -1037,22 +1096,22 @@ function buildRelatedHTML(label, links) {
       <h2>Next steps</h2>
       <p class="muted" style="margin-top:-8px;">Use the decision path: choose the right model → run the numbers → learn the mechanics.</p>
 
-      <div class="og-card-grid three" style="margin-top:14px;">
-        <a class="og-card" href="/start-here/">
-          <div class="og-card-title">Start here (10 min)</div>
+      <div class="og-card-grid three og-nextsteps-grid" style="margin-top:14px;">
+        <a class="og-card og-next-card" href="/start-here/">
+          <div class="og-card-title">🧭 Start here (10 min)</div>
           <div class="og-card-meta">Recommended path</div>
         </a>
 
-        <a class="og-card" href="/comparisons/">
-          <div class="og-card-title">Decision comparisons</div>
+        <a class="og-card og-next-card" href="/comparisons/">
+          <div class="og-card-title">⚖️ Decision comparisons</div>
           <div class="og-card-meta">Choose the right model</div>
         </a>
 
-        <div class="og-card">
-          <div class="og-card-title">Run the numbers</div>
-          <div class="og-card-meta">
-            <a href="${runPrimary.url}">${escapeHtml(runPrimary.title)}</a>
-            <span class="muted"> · </span>
+        <div class="og-card og-next-card">
+          <div class="og-card-title">🧮 Run the numbers</div>
+          <div class="og-card-meta">Use a calculator (2 min)</div>
+          <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} →</a>
+          <div class="og-card-links">
             <a href="${runSecondary.url}">${escapeHtml(runSecondary.title)}</a>
             <span class="muted"> · </span>
             <a href="/calculators/">All calculators</a>
@@ -1060,7 +1119,7 @@ function buildRelatedHTML(label, links) {
         </div>
       </div>
       <hr style="margin-top:22px;">
-    `;
+`;
 
     if (host) {
       host.insertAdjacentElement("beforebegin", box);
