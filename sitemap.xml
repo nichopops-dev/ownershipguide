@@ -436,5 +436,15 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/balloon-loan-vs-normal-car-loan-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://ownershipguide.com/transport/financing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-02-26</lastmod>
   </url>
 </urlset>
