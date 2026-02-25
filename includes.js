@@ -1245,6 +1245,65 @@ const box = document.createElement("section");
     else document.body.prepend(bar);
   }
 
+
+
+  // =========================
+  // 4.9) BreadcrumbList JSON-LD (auto, based on nav.breadcrumbs)
+  // =========================
+  function injectBreadcrumbSchema() {
+    try {
+      // If the page already has BreadcrumbList schema, don't add another.
+      const existing = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+        .some(s => (s.textContent || '').includes('"BreadcrumbList"'));
+      if (existing) return;
+
+      const bc = document.querySelector('nav.breadcrumbs');
+      if (!bc) return;
+
+      const links = Array.from(bc.querySelectorAll('a'))
+        .map(a => ({
+          name: (a.textContent || '').trim(),
+          url: new URL(a.getAttribute('href') || '/', window.location.origin).href
+        }))
+        .filter(x => x.name && x.url);
+
+      const h1 = document.querySelector('h1');
+      const currentName = (h1 ? (h1.textContent || '').trim() : '').replace(/\s+/g, ' ');
+      const currentUrl = window.location.href.split('#')[0];
+
+      if (links.length === 0 || !currentName) return;
+
+      const itemListElement = [];
+      links.forEach((x, i) => {
+        itemListElement.push({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: x.name,
+          item: x.url
+        });
+      });
+      itemListElement.push({
+        '@type': 'ListItem',
+        position: links.length + 1,
+        name: currentName,
+        item: currentUrl
+      });
+
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    } catch (e) {
+      // Fail silently; breadcrumbs are non-critical.
+    }
+  }
+
   // =========================
   // 5) GA4 (optional)
   // =========================
@@ -1328,6 +1387,7 @@ const box = document.createElement("section");
   injectCalculatorCTA();
   injectPropertyCTA();
   injectDecisionPathModule();
+  injectBreadcrumbSchema();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
