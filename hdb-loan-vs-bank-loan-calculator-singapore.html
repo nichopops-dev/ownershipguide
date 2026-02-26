@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>HDB Loan vs Bank Loan Calculator Singapore (2026): Monthly + Total Interest</title>
+  <meta name="description" content="HDB loan vs bank loan calculator for Singapore (2026). Compare monthly instalment, total interest, and break-even vs fees. Useful when deciding HDB concessionary loan vs bank loan packages."/>
+
+  <link rel="canonical" href="https://ownershipguide.com/hdb-loan-vs-bank-loan-calculator-singapore.html"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="calculator"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/calculators/">Calculators</a> / HDB vs bank loan
+    </p>
+
+    <h1>HDB Loan vs Bank Loan Calculator (Singapore, 2026)</h1>
+    <p class="meta">Monthly repayment · Total interest · Simple break-even vs fees · Last updated: 2026-02-27</p>
+
+    <div class="box">
+      <p><strong>What this is for:</strong> turn “rate talk” into <em>monthly cashflow</em> and <em>interest exposure</em>.</p>
+      <ul>
+        <li>If you’re deciding structure: read the framework first → <a href="/hdb-loan-vs-bank-loan-singapore.html">HDB loan vs bank loan (decision)</a>.</li>
+        <li>If you’re choosing a package: pair this with <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.</li>
+        <li>If you want the full schedule view: use <a href="/mortgage-amortization-calculator-singapore.html">mortgage amortization calculator</a>.</li>
+      </ul>
+      <p class="muted" style="margin-bottom:0;">Note: This is simplified amortization math. Real packages can include lock-ins, subsidies, penalty clauses, and step-up rates. Use conservative inputs.</p>
+    </div>
+
+    <h2>Inputs</h2>
+
+    <div class="og-card" style="padding:16px;">
+      <div class="og-form-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px;">
+
+        <div>
+          <label for="loanAmount"><strong>Loan amount (S$)</strong></label>
+          <input id="loanAmount" type="number" inputmode="decimal" min="0" step="1000" value="500000" style="width:100%;"/>
+          <div class="muted">Outstanding principal borrowed.</div>
+        </div>
+
+        <div>
+          <label for="tenure"><strong>Tenure (years)</strong></label>
+          <input id="tenure" type="number" inputmode="numeric" min="1" step="1" value="25" style="width:100%;"/>
+          <div class="muted">Typical: 20–30 years.</div>
+        </div>
+
+        <div>
+          <label for="hdbRate"><strong>HDB loan rate (% p.a.)</strong></label>
+          <input id="hdbRate" type="number" inputmode="decimal" min="0" step="0.05" value="2.60" style="width:100%;"/>
+          <div class="muted">HDB concessionary rate is commonly ~2.6% p.a. (check latest).</div>
+        </div>
+
+        <div>
+          <label for="bankRate"><strong>Bank loan rate (% p.a.)</strong></label>
+          <input id="bankRate" type="number" inputmode="decimal" min="0" step="0.05" value="3.25" style="width:100%;"/>
+          <div class="muted">Use your expected average / stress-tested rate.</div>
+        </div>
+
+        <div>
+          <label for="bankFees"><strong>Bank switch/refinance fees (S$)</strong></label>
+          <input id="bankFees" type="number" inputmode="decimal" min="0" step="50" value="2500" style="width:100%;"/>
+          <div class="muted">Legal, valuation, clawbacks, admin (net of subsidies).</div>
+        </div>
+
+        <div>
+          <label for="hdbFees"><strong>HDB admin/other fees (S$)</strong></label>
+          <input id="hdbFees" type="number" inputmode="decimal" min="0" step="50" value="0" style="width:100%;"/>
+          <div class="muted">Set to 0 if not applicable for your case.</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn" id="btnCalc" type="button">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <h2>Results</h2>
+
+    <div class="og-card" id="results" style="padding:16px;">
+      <div class="muted">Enter inputs and click <strong>Calculate</strong>.</div>
+    </div>
+
+    <hr/>
+
+    <h2>What to do next</h2>
+    <div class="box">
+      <ul>
+        <li>Decision framework: <a href="/hdb-loan-vs-bank-loan-singapore.html">HDB vs bank loan (worked example)</a>.</li>
+        <li>Rate strategy: <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> · <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.</li>
+        <li>Borrowing constraint: <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> · <a href="/tdsr-msr-singapore.html">TDSR/MSR explainer</a>.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js"></script>
+
+  <script>
+    function fmtMoney(n) {
+      if (!isFinite(n)) return "-";
+      return "S$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+    function fmtMoney2(n) {
+      if (!isFinite(n)) return "-";
+      return "S$" + n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function amortPayment(P, annualRate, years) {
+      const n = Math.max(1, Math.round(years * 12));
+      const r = Math.max(0, annualRate) / 100 / 12;
+      if (r === 0) return { payment: P / n, totalInterest: 0, totalPaid: P };
+      const pow = Math.pow(1 + r, n);
+      const pay = (P * r * pow) / (pow - 1);
+
+      let bal = P;
+      let totalInt = 0;
+      let totalPaid = 0;
+      for (let i = 0; i < n; i++) {
+        const interest = bal * r;
+        let principal = pay - interest;
+        if (principal < 0) principal = 0;
+        if (principal > bal) principal = bal;
+        bal = Math.max(0, bal - principal);
+        totalInt += interest;
+        totalPaid += (principal + interest);
+        if (bal <= 0) break;
+      }
+
+      return { payment: pay, totalInterest: totalInt, totalPaid };
+    }
+
+    function clampNum(v, fallback) {
+      const n = Number(v);
+      return isFinite(n) ? n : fallback;
+    }
+
+    function calc() {
+      const P = Math.max(0, clampNum(document.getElementById('loanAmount').value, 0));
+      const years = Math.max(1, clampNum(document.getElementById('tenure').value, 25));
+      const hdbRate = Math.max(0, clampNum(document.getElementById('hdbRate').value, 2.6));
+      const bankRate = Math.max(0, clampNum(document.getElementById('bankRate').value, 3.25));
+      const bankFees = Math.max(0, clampNum(document.getElementById('bankFees').value, 0));
+      const hdbFees = Math.max(0, clampNum(document.getElementById('hdbFees').value, 0));
+
+      if (P <= 0) {
+        document.getElementById('results').innerHTML = "<div class='muted'>Loan amount must be greater than 0.</div>";
+        return;
+      }
+
+      const hdb = amortPayment(P, hdbRate, years);
+      const bank = amortPayment(P, bankRate, years);
+
+      const monthlyDiff = hdb.payment - bank.payment; // positive means bank is cheaper monthly
+      const feeDiff = bankFees - hdbFees;
+      const breakEvenMonths = (monthlyDiff > 0 && feeDiff > 0) ? (feeDiff / monthlyDiff) : null;
+
+      const totalHdb = hdb.totalPaid + hdbFees;
+      const totalBank = bank.totalPaid + bankFees;
+      const pick = totalBank < totalHdb ? "Bank loan" : "HDB loan";
+
+      const html = `
+        <div class="og-kpi-grid" style="display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:12px;">
+          <div class="kpi">
+            <div class="muted">Cheaper over full tenure (incl. fees)</div>
+            <div style="font-size:1.2rem;"><strong>${pick}</strong></div>
+          </div>
+          <div class="kpi">
+            <div class="muted">Monthly instalment difference</div>
+            <div style="font-size:1.2rem;"><strong>${fmtMoney2(Math.abs(monthlyDiff))}</strong></div>
+            <div class="muted">${monthlyDiff > 0 ? "Bank is lower" : (monthlyDiff < 0 ? "HDB is lower" : "Same")}</div>
+          </div>
+          <div class="kpi">
+            <div class="muted">Break-even vs fees</div>
+            <div style="font-size:1.2rem;"><strong>${breakEvenMonths ? breakEvenMonths.toFixed(1) + " months" : "-"}</strong></div>
+            <div class="muted">Only meaningful if bank fees &gt; HDB fees and bank monthly is lower.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; overflow:auto;">
+          <table style="width:100%; border-collapse: collapse;">
+            <thead>
+              <tr>
+                <th style="text-align:left; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Option</th>
+                <th style="text-align:right; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Rate</th>
+                <th style="text-align:right; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Monthly</th>
+                <th style="text-align:right; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Total interest</th>
+                <th style="text-align:right; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Fees</th>
+                <th style="text-align:right; padding:10px 8px; border-bottom:1px solid #e5e5e5;">Total paid (incl. fees)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:10px 8px; border-bottom:1px solid #f0f0f0;"><strong>HDB loan</strong></td>
+                <td style="padding:10px 8px; text-align:right; border-bottom:1px solid #f0f0f0;">${hdbRate.toFixed(2)}%</td>
+                <td style="padding:10px 8px; text-align:right; border-bottom:1px solid #f0f0f0;">${fmtMoney2(hdb.payment)}</td>
+                <td style="padding:10px 8px; text-align:right; border-bottom:1px solid #f0f0f0;">${fmtMoney(hdb.totalInterest)}</td>
+                <td style="padding:10px 8px; text-align:right; border-bottom:1px solid #f0f0f0;">${fmtMoney(hdbFees)}</td>
+                <td style="padding:10px 8px; text-align:right; border-bottom:1px solid #f0f0f0;">${fmtMoney(totalHdb)}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 8px;"><strong>Bank loan</strong></td>
+                <td style="padding:10px 8px; text-align:right;">${bankRate.toFixed(2)}%</td>
+                <td style="padding:10px 8px; text-align:right;">${fmtMoney2(bank.payment)}</td>
+                <td style="padding:10px 8px; text-align:right;">${fmtMoney(bank.totalInterest)}</td>
+                <td style="padding:10px 8px; text-align:right;">${fmtMoney(bankFees)}</td>
+                <td style="padding:10px 8px; text-align:right;"><strong>${fmtMoney(totalBank)}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="muted" style="margin-top:12px;">
+          Tip: if you’re unsure what “average bank rate” to use, plug in a conservative rate (higher) to stress-test. Then compare against HDB stability.
+        </p>
+      `;
+
+      document.getElementById('results').innerHTML = html;
+    }
+
+    function reset() {
+      document.getElementById('loanAmount').value = 500000;
+      document.getElementById('tenure').value = 25;
+      document.getElementById('hdbRate').value = 2.60;
+      document.getElementById('bankRate').value = 3.25;
+      document.getElementById('bankFees').value = 2500;
+      document.getElementById('hdbFees').value = 0;
+      document.getElementById('results').innerHTML = "<div class='muted'>Enter inputs and click <strong>Calculate</strong>.</div>";
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+  </script>
+
+</body>
+</html>
