@@ -281,6 +281,7 @@ decisionPathOverrides: {
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): How Much You Can Really Borrow for Property", subtopic: "financing" },
+        { url: "/tdsr-msr-calculator-singapore.html", title: "TDSR / MSR Calculator Singapore (2026): Max Home Loan & Borrowing Limit", subtopic: "calculator" },
         { url: "/property/financing/", title: "Property Financing (Singapore, 2026): Home Loans, Refinancing, Borrowing Rules", subtopic: "financing" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
         { url: "/renovation-cost-singapore.html", title: "Renovation Cost in Singapore (2026): Realistic Budgets and Cash Shock Planning", subtopic: "setup" },

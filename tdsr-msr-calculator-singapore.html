@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>TDSR / MSR Calculator Singapore (2026): Max Home Loan & Borrowing Limit</title>
+  <meta name="description" content="TDSR / MSR calculator for Singapore (2026): estimate your max housing loan based on income, existing debts, interest rate, and tenure. Adjustable caps for TDSR (55%) and MSR (30%)."/>
+
+  <link rel="canonical" href="https://ownershipguide.com/tdsr-msr-calculator-singapore.html"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="calculator"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+
+    <p class="nav">
+      <a href="/">Home</a> / <a href="/calculators/">Calculators</a> / TDSR &amp; MSR
+    </p>
+
+    <h1>TDSR / MSR Calculator (Singapore, 2026)</h1>
+    <p class="meta">Max housing instalment · Max loan amount · Debt-aware · Last updated: 2026-02-27</p>
+
+    <div class="box">
+      <p><strong>What this is for:</strong> estimate your <em>maximum housing loan</em> under the two common borrowing gates:</p>
+      <ul>
+        <li><strong>TDSR</strong>: total monthly debt obligations (including this housing loan) capped as % of gross monthly income.</li>
+        <li><strong>MSR</strong>: housing instalment alone capped as % of gross monthly income (commonly relevant for HDB / new EC style cases).</li>
+      </ul>
+      <p class="muted" style="margin-bottom:0;">
+        This is a <strong>planning calculator</strong>. Banks may apply additional haircuts, floor rates, age/tenure caps, and internal policies.
+        If you want the mental model first: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.
+      </p>
+    </div>
+
+    <h2>Inputs</h2>
+
+    <div class="og-card" style="padding:16px;">
+      <div class="og-form-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px;">
+
+        <div>
+          <label for="income"><strong>Gross monthly household income (S$)</strong></label>
+          <input id="income" type="number" inputmode="decimal" min="0" step="100" value="10000" style="width:100%;"/>
+          <div class="muted">Use gross income (before CPF). If you have variable income, be conservative.</div>
+        </div>
+
+        <div>
+          <label for="otherDebt"><strong>Other monthly debt obligations (S$)</strong></label>
+          <input id="otherDebt" type="number" inputmode="decimal" min="0" step="50" value="800" style="width:100%;"/>
+          <div class="muted">Car loan, credit cards, personal loans, other mortgages, etc.</div>
+        </div>
+
+        <div>
+          <label for="rate"><strong>Assumed interest rate (% p.a.)</strong></label>
+          <input id="rate" type="number" inputmode="decimal" min="0" step="0.05" value="3.8" style="width:100%;"/>
+          <div class="muted">Stress-test with a higher rate. Then check repayment details in the <a href="/mortgage-amortization-calculator-singapore.html">amortization calculator</a>.</div>
+        </div>
+
+        <div>
+          <label for="tenure"><strong>Loan tenure (years)</strong></label>
+          <input id="tenure" type="number" inputmode="numeric" min="1" step="1" value="25" style="width:100%;"/>
+          <div class="muted">Shorter tenure reduces max loan even if ratios pass.</div>
+        </div>
+
+        <div>
+          <label for="tdsrCap"><strong>TDSR cap (%)</strong></label>
+          <input id="tdsrCap" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="55" style="width:100%;"/>
+          <div class="muted">Adjust if rules change or your bank uses a tighter internal cap.</div>
+        </div>
+
+        <div>
+          <label for="msrCap"><strong>MSR cap (%)</strong></label>
+          <input id="msrCap" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="30" style="width:100%;"/>
+          <div class="muted">Set to 0 if MSR does not apply to your case.</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn" id="btnCalc" type="button">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <h2>Results</h2>
+    <div class="og-card" id="results" style="padding:16px;">
+      <div class="muted">Enter inputs and click <strong>Calculate</strong>.</div>
+    </div>
+
+    <hr/>
+
+    <h2>How to use this (without fooling yourself)</h2>
+    <div class="box">
+      <ol>
+        <li><strong>Ratios are necessary, not sufficient.</strong> Passing TDSR/MSR doesn’t mean the purchase is smart — it just means it might be allowable.</li>
+        <li><strong>Stress-test interest rates.</strong> If your plan breaks at +1% p.a., it’s fragile.</li>
+        <li><strong>Convert max instalment into exposure math.</strong> Use <a href="/property-affordability-calculator-singapore.html">property affordability</a> to see runway and buffers, and <a href="/mortgage-amortization-calculator-singapore.html">amortization</a> to see interest paid.</li>
+      </ol>
+    </div>
+
+    <h2>What to do next</h2>
+    <div class="box">
+      <ul>
+        <li>Understand the rules and tradeoffs: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.</li>
+        <li>Decide structure: <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> · <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.</li>
+        <li>Run repayment + interest: <a href="/mortgage-amortization-calculator-singapore.html">mortgage amortization calculator</a>.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js"></script>
+
+  <script>
+    function fmtMoney(n) {
+      if (!isFinite(n)) return "-";
+      return "S$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+
+    function clamp(n, lo, hi) {
+      n = Number(n);
+      if (!isFinite(n)) return lo;
+      return Math.min(hi, Math.max(lo, n));
+    }
+
+    // Present Value of an amortizing loan given payment (PMT), rate per period (r), number of periods (n)
+    function pvFromPmt(pmt, r, n) {
+      if (!isFinite(pmt) || !isFinite(r) || !isFinite(n) || n <= 0) return NaN;
+      if (Math.abs(r) < 1e-12) return pmt * n;
+      return pmt * (1 - Math.pow(1 + r, -n)) / r;
+    }
+
+    function renderResults(model) {
+      const { tdsrRoom, msrRoom, capHousingPayment, maxLoan, bindingGate } = model;
+
+      const html = `
+        <div class="og-card-grid three" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <div class="og-card" style="padding:14px;">
+            <div class="og-card-title">Max housing instalment (binding)</div>
+            <div class="og-card-meta">${bindingGate}</div>
+            <div style="font-size:22px; font-weight:800; margin-top:6px;">${fmtMoney(capHousingPayment)}</div>
+          </div>
+          <div class="og-card" style="padding:14px;">
+            <div class="og-card-title">Estimated max loan amount</div>
+            <div class="og-card-meta">Based on rate + tenure assumptions</div>
+            <div style="font-size:22px; font-weight:800; margin-top:6px;">${fmtMoney(maxLoan)}</div>
+          </div>
+          <div class="og-card" style="padding:14px;">
+            <div class="og-card-title">Headroom breakdown</div>
+            <div class="og-card-meta">Before converting to loan</div>
+            <div style="margin-top:6px;">
+              <div class="muted">TDSR housing room: <strong>${fmtMoney(tdsrRoom)}</strong></div>
+              <div class="muted">MSR housing room: <strong>${fmtMoney(msrRoom)}</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" style="margin-top:12px;">
+          <p style="margin-top:0;"><strong>Interpretation:</strong> your allowable housing instalment is capped by <strong>${bindingGate}</strong>. If you want to see monthly interest/principal split, plug this loan amount into the <a href="/mortgage-amortization-calculator-singapore.html">amortization calculator</a>.</p>
+          <ul style="margin-bottom:0;">
+            <li>If other debts are high, TDSR will bind first (reduce debt or increase income buffer).</li>
+            <li>If MSR applies (HDB / new EC style), it may bind even when you pass TDSR.</li>
+            <li>Real approvals can be stricter due to income haircuts, age/tenure constraints, or bank stress rates.</li>
+          </ul>
+        </div>
+      `;
+
+      document.getElementById('results').innerHTML = html;
+    }
+
+    function calc() {
+      const income = Number(document.getElementById('income').value || 0);
+      const otherDebt = Number(document.getElementById('otherDebt').value || 0);
+      const ratePa = Number(document.getElementById('rate').value || 0);
+      const tenureY = Number(document.getElementById('tenure').value || 0);
+      const tdsrCap = clamp(document.getElementById('tdsrCap').value, 0, 100);
+      const msrCap = clamp(document.getElementById('msrCap').value, 0, 100);
+
+      const monthlyRate = (ratePa / 100) / 12;
+      const n = Math.max(1, Math.round(tenureY * 12));
+
+      const maxTotalDebt = income * (tdsrCap / 100);
+      const tdsrRoom = Math.max(0, maxTotalDebt - otherDebt);
+
+      const msrRoom = msrCap <= 0 ? Infinity : (income * (msrCap / 100));
+
+      // Binding gate for housing payment
+      const capHousingPayment = Math.max(0, Math.min(tdsrRoom, msrRoom));
+      const bindingGate = (msrRoom < tdsrRoom) ? `MSR (${msrCap.toFixed(1)}%) binds` : `TDSR (${tdsrCap.toFixed(1)}%) binds`;
+
+      const maxLoan = pvFromPmt(capHousingPayment, monthlyRate, n);
+
+      renderResults({ tdsrRoom, msrRoom: (msrRoom === Infinity ? 0 : msrRoom), capHousingPayment, maxLoan, bindingGate });
+    }
+
+    function reset() {
+      document.getElementById('income').value = 10000;
+      document.getElementById('otherDebt').value = 800;
+      document.getElementById('rate').value = 3.8;
+      document.getElementById('tenure').value = 25;
+      document.getElementById('tdsrCap').value = 55;
+      document.getElementById('msrCap').value = 30;
+      document.getElementById('results').innerHTML = '<div class="muted">Enter inputs and click <strong>Calculate</strong>.</div>';
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+  </script>
+
+</body>
+</html>
