@@ -59,6 +59,7 @@
       "/mortgage-interest-cost-singapore.html",
       "/condo-ownership-cost.html",
       "/bsd-absd-singapore.html",
+      "/bsd-absd-calculator-singapore.html",
       "/property-ownership-cost-singapore.html",
       "/sell-property-cost-singapore.html",
       "/rent-vs-buy-property-singapore.html",
@@ -278,6 +279,7 @@ decisionPathOverrides: {
       pillars: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", subtopic: "ownership" },
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Stamp Duty Cost, Cash Impact, and Decision Rules", subtopic: "acquisition" },
+        { url: "/bsd-absd-calculator-singapore.html", title: "BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty", subtopic: "calculator" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): How Much You Can Really Borrow for Property", subtopic: "financing" },

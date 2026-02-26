@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty</title>
+  <meta name="description" content="BSD & ABSD calculator for Singapore (2026): estimate Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) for residential property using IRAS marginal tiers and current ABSD profiles."/>
+
+  <link rel="canonical" href="https://ownershipguide.com/bsd-absd-calculator-singapore.html"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="calculator"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="container">
+    <div class="nav" style="margin-top:12px;">
+      <a href="/">Home</a> <span class="muted">›</span>
+      <a href="/calculators/index.html">Calculators</a> <span class="muted">›</span>
+      <a href="/property/index.html">Property</a> <span class="muted">›</span>
+      <span class="muted">BSD & ABSD Calculator</span>
+    </div>
+
+    <h1 style="margin-top:14px;">BSD & ABSD Calculator (Singapore, 2026)</h1>
+    <p class="muted" style="max-width:900px;">
+      Estimate <strong>Buyer’s Stamp Duty (BSD)</strong> and <strong>Additional Buyer’s Stamp Duty (ABSD)</strong> for a
+      <strong>residential</strong> property. Rates follow IRAS BSD tiers (from <strong>15 Feb 2023</strong>) and ABSD profiles (on or after <strong>27 Apr 2023</strong>).
+    </p>
+
+    <div class="og-card">
+      <h2>Inputs</h2>
+
+      <div class="og-form-grid">
+        <div>
+          <label class="muted">Property value used for stamp duty (S$)</label>
+          <input id="value" class="box" type="number" min="0" step="1000" value="1500000"/>
+          <div class="muted" style="margin-top:6px;">Use the higher of purchase price or market value (IRAS rule).</div>
+        </div>
+
+        <div>
+          <label class="muted">Buyer profile</label>
+          <select id="profile" class="box">
+            <option value="sc">Singapore Citizen (SC)</option>
+            <option value="spr">Singapore Permanent Resident (SPR)</option>
+            <option value="fr">Foreigner (FR)</option>
+            <option value="entity">Entity / Company</option>
+            <option value="trustee">Trustee (living trust transfer)</option>
+          </select>
+          <div class="muted" style="margin-top:6px;">Quick estimate assumes a single profile (joint buyers can differ).</div>
+        </div>
+
+        <div>
+          <label class="muted">Residential properties currently owned</label>
+          <select id="owned" class="box">
+            <option value="0">0 (first property)</option>
+            <option value="1">1 (second property)</option>
+            <option value="2">2+ (third and subsequent)</option>
+          </select>
+          <div class="muted" style="margin-top:6px;">Count includes properties owned wholly, partially, or jointly (IRAS definition).</div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
+        <button id="calcBtn" class="btn">Calculate</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
+
+    <div class="og-card" id="resultsCard" style="display:none;">
+      <h2>Results</h2>
+
+      <div class="og-card-grid" style="margin-top:10px;">
+        <div class="kpi-box">
+          <div class="muted">BSD (estimated)</div>
+          <div class="kpi" id="bsdOut">—</div>
+        </div>
+        <div class="kpi-box">
+          <div class="muted">ABSD (estimated)</div>
+          <div class="kpi" id="absdOut">—</div>
+        </div>
+        <div class="kpi-box">
+          <div class="muted">Total stamp duty</div>
+          <div class="kpi" id="totalOut">—</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="meta">
+          <div><strong>ABSD rate used:</strong> <span id="absdRateOut">—</span></div>
+          <div class="muted" id="absdReasonOut" style="margin-top:4px;"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h3 style="margin-bottom:8px;">BSD breakdown (marginal tiers)</h3>
+        <table class="table" id="bsdTable"></table>
+      </div>
+
+      <p class="note small" style="margin-top:12px;">
+        <strong>Important:</strong> BSD/ABSD are rounded down to the nearest dollar by IRAS. This calculator follows that rule,
+        but special cases (joint buyers, remissions, living trust details, housing developers, etc.) can change outcomes.
+        Always verify with IRAS and your lawyer.
+      </p>
+    </div>
+
+    <div class="og-card">
+      <h2>Next steps</h2>
+      <ul>
+        <li>Read the explainer: <a href="/bsd-absd-singapore.html">BSD & ABSD in Singapore (simple guide)</a></li>
+        <li>Budget your downpayment + duties: <a href="/property-affordability-calculator-singapore.html">Property Affordability Calculator</a></li>
+        <li>Borrowing constraints: <a href="/tdsr-msr-singapore.html">TDSR / MSR guide</a> or <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a></li>
+        <li>Official tools: IRAS <a href="https://www.iras.gov.sg/quick-links/calculators" target="_blank" rel="noopener">stamp duty calculators</a></li>
+      </ul>
+    </div>
+
+    <div class="og-card">
+      <h2>Assumptions (rates)</h2>
+      <ul>
+        <li><strong>BSD tiers (residential)</strong>: 1% (first S$180k), 2% (next S$180k), 3% (next S$640k), 4% (next S$500k), 5% (next S$1.5m), 6% (remaining) — effective <strong>15 Feb 2023</strong>.</li>
+        <li><strong>ABSD (on or after 27 Apr 2023)</strong>: SC 2nd 20%, SC 3rd+ 30%; SPR 1st 5%, SPR 2nd 30%, SPR 3rd+ 35%; Foreigner 60%; Entity 65%; Trustee 65%.</li>
+      </ul>
+      <p class="muted" style="margin-top:8px;">Rates can change; confirm on IRAS before committing.</p>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+<script src="/includes.js"></script>
+<script>
+(function(){
+  const $ = (id) => document.getElementById(id);
+
+  const tiers = [
+    { cap: 180000, rate: 0.01, label: "First $180,000" },
+    { cap: 180000, rate: 0.02, label: "Next $180,000" },
+    { cap: 640000, rate: 0.03, label: "Next $640,000" },
+    { cap: 500000, rate: 0.04, label: "Next $500,000" },
+    { cap: 1500000, rate: 0.05, label: "Next $1,500,000" },
+    { cap: Infinity, rate: 0.06, label: "Remaining" },
+  ];
+
+  function floorDollar(x) {
+    return Math.floor(x);
+  }
+
+  function fmt(n) {
+    if (!isFinite(n)) return "—";
+    return "S$" + n.toLocaleString("en-SG");
+  }
+
+  function calcBSD(value) {
+    let remaining = Math.max(0, value);
+    const rows = [];
+    let total = 0;
+
+    for (const t of tiers) {
+      if (remaining <= 0) break;
+      const slice = Math.min(remaining, t.cap);
+      const duty = floorDollar(slice * t.rate);
+      total += duty;
+      rows.push({
+        label: t.label,
+        base: slice,
+        rate: t.rate,
+        duty: duty
+      });
+      remaining -= slice;
+    }
+
+    return { total: floorDollar(total), rows };
+  }
+
+  function absdRate(profile, owned) {
+    const o = String(owned);
+    if (profile === "sc") {
+      if (o === "0") return { rate: 0, why: "SC buying first residential property: no ABSD." };
+      if (o === "1") return { rate: 0.20, why: "SC buying second residential property: 20% ABSD." };
+      return { rate: 0.30, why: "SC buying third and subsequent residential property: 30% ABSD." };
+    }
+    if (profile === "spr") {
+      if (o === "0") return { rate: 0.05, why: "SPR buying first residential property: 5% ABSD." };
+      if (o === "1") return { rate: 0.30, why: "SPR buying second residential property: 30% ABSD." };
+      return { rate: 0.35, why: "SPR buying third and subsequent residential property: 35% ABSD." };
+    }
+    if (profile === "fr") {
+      return { rate: 0.60, why: "Foreigner buying any residential property: 60% ABSD." };
+    }
+    if (profile === "entity") {
+      return { rate: 0.65, why: "Entity buying any residential property: 65% ABSD." };
+    }
+    if (profile === "trustee") {
+      return { rate: 0.65, why: "Living trust transfer (trustee): 65% ABSD (trust)." };
+    }
+    return { rate: 0, why: "" };
+  }
+
+  function renderBsdTable(rows) {
+    const tbl = $("bsdTable");
+    tbl.innerHTML = "";
+    const thead = document.createElement("thead");
+    thead.innerHTML = "<tr><th>Tier</th><th>Amount</th><th>Rate</th><th>Duty</th></tr>";
+    tbl.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    rows.forEach(r => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${r.label}</td>
+        <td>${fmt(r.base)}</td>
+        <td>${(r.rate*100).toFixed(0)}%</td>
+        <td><strong>${fmt(r.duty)}</strong></td>
+      `;
+      tbody.appendChild(tr);
+    });
+    tbl.appendChild(tbody);
+  }
+
+  function calculate() {
+    const value = Number($("value").value || 0);
+    const profile = $("profile").value;
+    const owned = $("owned").value;
+
+    const bsd = calcBSD(value);
+    const ar = absdRate(profile, owned);
+    const absd = floorDollar(value * ar.rate);
+    const total = floorDollar(bsd.total + absd);
+
+    $("bsdOut").textContent = fmt(bsd.total);
+    $("absdOut").textContent = fmt(absd);
+    $("totalOut").textContent = fmt(total);
+
+    $("absdRateOut").textContent = ar.rate === 0 ? "0%" : (ar.rate*100).toFixed(0) + "%";
+    $("absdReasonOut").textContent = ar.why;
+
+    renderBsdTable(bsd.rows);
+
+    $("resultsCard").style.display = "block";
+    $("resultsCard").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function reset() {
+    $("value").value = 1500000;
+    $("profile").value = "sc";
+    $("owned").value = "0";
+    $("resultsCard").style.display = "none";
+  }
+
+  $("calcBtn").addEventListener("click", calculate);
+  $("resetBtn").addEventListener("click", reset);
+
+  calculate();
+})();
+</script>
+</body>
+</html>
