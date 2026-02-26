@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>Refinance Savings Calculator Singapore (2026): Break‑Even Months + Interest Saved</title>
+  <meta name="description" content="Singapore refinance savings calculator (2026): compare your current home loan vs a new rate. Estimate monthly savings, break-even months after fees, interest saved, and net savings over your remaining tenure."/>
+
+  <meta property="og:title" content="Refinance Savings Calculator Singapore (2026)"/>
+  <meta property="og:description" content="Estimate monthly savings, break-even months after fees, interest saved, and net savings when refinancing your home loan in Singapore."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="calculator"/>
+
+  <link rel="canonical" href="https://ownershipguide.com/refinance-savings-calculator-singapore.html"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+  <script defer src="/includes.js"></script>
+
+  <style>
+    .calc-wrap { max-width: 960px; margin: 0 auto; }
+    .og-form-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
+    .og-form-grid .field { grid-column: span 6; }
+    .og-form-grid .field.full { grid-column: span 12; }
+    .og-form-grid label { display:block; font-weight: 700; margin-bottom: 6px; }
+    .og-form-grid input, .og-form-grid select { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px; background: #fff; }
+    .og-kpi-grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 12px; margin-top: 14px; }
+    .kpi { grid-column: span 6; border: 1px solid #eee; border-radius: 14px; padding: 14px; background: #fff; }
+    .kpi .k { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; opacity: .75; }
+    .kpi .v { font-size: 22px; font-weight: 800; margin-top: 6px; }
+    .kpi .s { margin-top: 8px; font-size: 13px; opacity: .85; }
+    @media (max-width: 720px) {
+      .og-form-grid .field { grid-column: span 12; }
+      .kpi { grid-column: span 12; }
+    }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid #eee; text-align: left; }
+    th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; opacity: .75; }
+    .mini { font-size: 13px; opacity: .85; }
+    .btnrow { display:flex; gap:10px; flex-wrap: wrap; margin-top: 10px; }
+    .btn { display:inline-block; padding: 10px 12px; border-radius: 12px; border:1px solid #ddd; background:#fff; font-weight:700; cursor:pointer; }
+  </style>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="container calc-wrap">
+  <p class="nav"><a href="/">← Back to Ownership Guide</a> · <a href="/property/">Property</a> · <a href="/property/financing/">Property Financing</a></p>
+
+  <h1>Refinance Savings Calculator (Singapore, 2026)</h1>
+  <p class="lead">
+    Use this when you’re quoted a new rate and want a fast sanity check:
+    <strong>monthly savings</strong>, <strong>break‑even months after fees</strong>, and <strong>interest saved</strong>.
+    This assumes a standard amortising home loan with monthly repayments.
+  </p>
+
+  <section class="box">
+    <h2>Inputs</h2>
+
+    <div class="og-form-grid">
+      <div class="field">
+        <label for="balance">Outstanding balance (SGD)</label>
+        <input id="balance" inputmode="decimal" value="700000" />
+      </div>
+      <div class="field">
+        <label for="yearsLeft">Remaining tenure (years)</label>
+        <input id="yearsLeft" inputmode="decimal" value="25" />
+      </div>
+
+      <div class="field">
+        <label for="rateNow">Current interest rate (% p.a.)</label>
+        <input id="rateNow" inputmode="decimal" value="3.50" />
+      </div>
+      <div class="field">
+        <label for="rateNew">New interest rate (% p.a.)</label>
+        <input id="rateNew" inputmode="decimal" value="2.90" />
+      </div>
+
+      <div class="field">
+        <label for="fees">One‑time costs to switch (legal/valuation/etc, SGD)</label>
+        <input id="fees" inputmode="decimal" value="2500" />
+      </div>
+      <div class="field">
+        <label for="penalty">Prepayment / lock‑in penalty (SGD)</label>
+        <input id="penalty" inputmode="decimal" value="0" />
+      </div>
+
+      <div class="field">
+        <label for="horizon">Compare over</label>
+        <select id="horizon">
+          <option value="remaining" selected>Remaining tenure (recommended)</option>
+          <option value="24">24 months</option>
+          <option value="36">36 months</option>
+          <option value="60">60 months</option>
+          <option value="custom">Custom (months)</option>
+        </select>
+      </div>
+      <div class="field" id="customWrap" style="display:none;">
+        <label for="horizonCustom">Custom horizon (months)</label>
+        <input id="horizonCustom" inputmode="numeric" value="48" />
+      </div>
+
+      <div class="field full">
+        <div class="btnrow">
+          <button class="btn" id="calcBtn" type="button">Calculate</button>
+          <button class="btn" id="resetBtn" type="button">Reset defaults</button>
+        </div>
+        <p class="mini">Tip: If you are likely to refinance again soon, use a shorter horizon (e.g., 24–36 months) to avoid “paper” savings that never materialise.</p>
+      </div>
+    </div>
+
+    <div class="og-kpi-grid" id="kpis" style="display:none;">
+      <div class="kpi">
+        <div class="k">Current monthly payment</div>
+        <div class="v" id="kpiNow">—</div>
+        <div class="s" id="kpiNowS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">New monthly payment</div>
+        <div class="v" id="kpiNew">—</div>
+        <div class="s" id="kpiNewS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Monthly savings</div>
+        <div class="v" id="kpiSave">—</div>
+        <div class="s" id="kpiSaveS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Break‑even</div>
+        <div class="v" id="kpiBE">—</div>
+        <div class="s" id="kpiBES">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Interest saved</div>
+        <div class="v" id="kpiInt">—</div>
+        <div class="s" id="kpiIntS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Net savings (after fees)</div>
+        <div class="v" id="kpiNet">—</div>
+        <div class="s" id="kpiNetS">—</div>
+      </div>
+    </div>
+
+    <div id="detail" style="display:none; margin-top: 16px;">
+      <h2>Breakdown</h2>
+      <div class="box" style="padding:0;">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Current loan</th>
+              <th>New loan</th>
+              <th>Difference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monthly repayment</td>
+              <td id="tNowPay">—</td>
+              <td id="tNewPay">—</td>
+              <td id="tPayDiff">—</td>
+            </tr>
+            <tr>
+              <td>Interest paid over horizon</td>
+              <td id="tNowInt">—</td>
+              <td id="tNewInt">—</td>
+              <td id="tIntDiff">—</td>
+            </tr>
+            <tr>
+              <td>Balance remaining after horizon</td>
+              <td id="tNowBal">—</td>
+              <td id="tNewBal">—</td>
+              <td id="tBalDiff">—</td>
+            </tr>
+            <tr>
+              <td>One‑time costs (fees + penalty)</td>
+              <td>—</td>
+              <td id="tCosts">—</td>
+              <td id="tCostsNeg">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mini" style="margin-top:10px;">
+        Mechanics primer: <a href="/mortgage-interest-cost-singapore.html">mortgage interest intuition</a> ·
+        <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> ·
+        <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="box">
+    <h2>What to do with the result</h2>
+    <ul>
+      <li><strong>Break‑even under ~12–18 months</strong>: usually worth investigating seriously (unless you’re likely to sell soon).</li>
+      <li><strong>Break‑even longer than your “likely horizon”</strong>: savings may be theoretical.</li>
+      <li><strong>Small monthly savings + large fees</strong>: ask for legal subsidy / fee waiver, or consider repricing instead.</li>
+    </ul>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+(function() {
+  function num(v) {
+    if (typeof v !== "string") v = String(v ?? "");
+    v = v.replace(/[^0-9.\-]/g, "");
+    const x = parseFloat(v);
+    return Number.isFinite(x) ? x : 0;
+  }
+  function fmt(n) {
+    return n.toLocaleString("en-SG", { style: "currency", currency: "SGD", maximumFractionDigits: 0 });
+  }
+  function pmt(rateMonthly, n, pv) {
+    if (n <= 0) return 0;
+    if (Math.abs(rateMonthly) < 1e-12) return pv / n;
+    const r = rateMonthly;
+    const f = Math.pow(1 + r, n);
+    return pv * (r * f) / (f - 1);
+  }
+  function amortSummary(pv, rateAnnualPct, nMonths, horizonMonths) {
+    const r = (rateAnnualPct / 100) / 12;
+    const pay = pmt(r, nMonths, pv);
+    let bal = pv;
+    let interest = 0;
+    const m = Math.min(horizonMonths, nMonths);
+    for (let i = 0; i < m; i++) {
+      const int = bal * r;
+      let princ = pay - int;
+      if (princ < 0) princ = 0;
+      bal = bal - princ;
+      if (bal < 0) bal = 0;
+      interest += int;
+      if (bal === 0) break;
+    }
+    return { pay, interest, bal };
+  }
+
+  const el = (id) => document.getElementById(id);
+
+  function pickHorizon(nMonths) {
+    const mode = el("horizon").value;
+    if (mode === "remaining") return nMonths;
+    if (mode === "custom") return Math.max(1, Math.round(num(el("horizonCustom").value)));
+    return Math.max(1, parseInt(mode, 10));
+  }
+
+  function calc() {
+    const pv = Math.max(0, num(el("balance").value));
+    const years = Math.max(0, num(el("yearsLeft").value));
+    const nMonths = Math.max(1, Math.round(years * 12));
+    const rNow = Math.max(0, num(el("rateNow").value));
+    const rNew = Math.max(0, num(el("rateNew").value));
+    const fees = Math.max(0, num(el("fees").value));
+    const pen = Math.max(0, num(el("penalty").value));
+    const costs = fees + pen;
+    const h = Math.min(nMonths, pickHorizon(nMonths));
+
+    const now = amortSummary(pv, rNow, nMonths, h);
+    const nw  = amortSummary(pv, rNew, nMonths, h);
+
+    const mSave = now.pay - nw.pay;
+    const intSave = now.interest - nw.interest;
+    const net = intSave - costs;
+
+    let be = null;
+    if (mSave > 0) be = costs / mSave; // months
+    const beStr = (be === null) ? "—" : (be <= 0 ? "0 months" : `${Math.ceil(be)} months`);
+
+    el("kpis").style.display = "grid";
+    el("detail").style.display = "block";
+
+    el("kpiNow").textContent = fmt(now.pay);
+    el("kpiNowS").textContent = `At ${rNow.toFixed(2)}% p.a. · ${h} mo horizon`;
+    el("kpiNew").textContent = fmt(nw.pay);
+    el("kpiNewS").textContent = `At ${rNew.toFixed(2)}% p.a. · ${h} mo horizon`;
+
+    el("kpiSave").textContent = fmt(mSave);
+    el("kpiSaveS").textContent = (mSave > 0) ? "Lower repayment (cashflow relief)" : (mSave < 0 ? "Higher repayment (cashflow tighter)" : "No change");
+
+    el("kpiBE").textContent = beStr;
+    el("kpiBES").textContent = (be === null) ? "No break‑even if monthly savings ≤ 0" : `Costs: ${fmt(costs)}`;
+
+    el("kpiInt").textContent = fmt(intSave);
+    el("kpiIntS").textContent = `Interest paid: ${fmt(now.interest)} → ${fmt(nw.interest)}`;
+
+    el("kpiNet").textContent = fmt(net);
+    el("kpiNetS").textContent = `After one‑time costs (${fmt(costs)})`;
+
+    el("tNowPay").textContent = fmt(now.pay);
+    el("tNewPay").textContent = fmt(nw.pay);
+    el("tPayDiff").textContent = fmt(mSave);
+
+    el("tNowInt").textContent = fmt(now.interest);
+    el("tNewInt").textContent = fmt(nw.interest);
+    el("tIntDiff").textContent = fmt(intSave);
+
+    el("tNowBal").textContent = fmt(now.bal);
+    el("tNewBal").textContent = fmt(nw.bal);
+    el("tBalDiff").textContent = fmt(now.bal - nw.bal);
+
+    el("tCosts").textContent = fmt(costs);
+    el("tCostsNeg").textContent = "-" + fmt(costs);
+  }
+
+  el("horizon").addEventListener("change", () => {
+    const mode = el("horizon").value;
+    el("customWrap").style.display = (mode === "custom") ? "block" : "none";
+  });
+
+  el("calcBtn").addEventListener("click", calc);
+  el("resetBtn").addEventListener("click", () => {
+    el("balance").value = "700000";
+    el("yearsLeft").value = "25";
+    el("rateNow").value = "3.50";
+    el("rateNew").value = "2.90";
+    el("fees").value = "2500";
+    el("penalty").value = "0";
+    el("horizon").value = "remaining";
+    el("horizonCustom").value = "48";
+    el("customWrap").style.display = "none";
+    el("kpis").style.display = "none";
+    el("detail").style.display = "none";
+  });
+
+  calc();
+})();
+</script>
+</body>
+</html>
