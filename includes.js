@@ -5,6 +5,9 @@
   const SETTINGS = {
     enableHeaderFooter: true,
 
+    // Site base URL (for canonical/OG tags)
+    siteBaseUrl: "https://ownershipguide.com",
+
     // Analytics (Google Analytics 4)
     enableGA4: true,
     ga4MeasurementId: "G-RH8YDW5LFP",
@@ -622,11 +625,28 @@ decisionPathOverrides: {
 
       const items = matches
         .map((m, idx) => {
-          const meta = [prettyCluster(m.cluster), m.subtopic].filter(Boolean).join(" · ");
+          const clusterLabel = prettyCluster(m.cluster);
+          const typeLabel = (function(){
+            const st = String(m.subtopic || "").toLowerCase();
+            if (st === "calculator") return "Calculator";
+            if (st === "comparison") return "Comparison";
+            if (st.includes("hub") || String(m.url||"").endsWith("/")) return "Hub";
+            return "Guide";
+          })();
+
+          const badges = [
+            clusterLabel ? `<span class="sr-badge" data-badge="cluster">${escapeHtml(clusterLabel)}</span>` : "",
+            typeLabel ? `<span class="sr-badge" data-badge="type">${escapeHtml(typeLabel)}</span>` : ""
+          ].filter(Boolean).join("");
+
+          const metaText = [m.subtopic].filter(Boolean).join(" · ");
           return `
             <a href="${m.url}" data-idx="${idx}" role="option" aria-selected="false">
               <div class="sr-title">${highlightMatch(m.title, q)}</div>
-              <div class="sr-meta">${escapeHtml(meta)}</div>
+              <div class="sr-meta">
+                ${badges}
+                ${metaText ? `<span class="sr-meta-text">${escapeHtml(metaText)}</span>` : ""}
+              </div>
             </a>
           `;
         })
@@ -809,6 +829,44 @@ decisionPathOverrides: {
     if (!node) return;
 
     container.prepend(node);
+  }
+
+  function ensureCanonicalAndOgUrl() {
+    const base = String(SETTINGS.siteBaseUrl || "").replace(/\/$/, "");
+    if (!base) return;
+
+    const head = document.head || document.getElementsByTagName("head")[0];
+    if (!head) return;
+
+    const canonPath = getCanonicalPath() || getSelfPath() || "/";
+    const canonicalUrl = base + canonPath;
+
+    // <link rel="canonical" href="...">
+    const existingCanon = head.querySelector('link[rel="canonical"]');
+    if (!existingCanon) {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "canonical");
+      link.setAttribute("href", canonicalUrl);
+      head.appendChild(link);
+    }
+
+    // <meta property="og:url" content="...">
+    const existingOg = head.querySelector('meta[property="og:url"], meta[name="og:url"]');
+    if (!existingOg) {
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", "og:url");
+      meta.setAttribute("content", canonicalUrl);
+      head.appendChild(meta);
+    }
+
+    // Lightweight Twitter card defaults (safe even without images)
+    const existingTw = head.querySelector('meta[name="twitter:card"]');
+    if (!existingTw) {
+      const meta = document.createElement("meta");
+      meta.setAttribute("name", "twitter:card");
+      meta.setAttribute("content", "summary");
+      head.appendChild(meta);
+    }
   }
 
   
@@ -1366,11 +1424,13 @@ const box = document.createElement("section");
     initHeaderSearch();
     injectBackToHomeLink();
     injectBackToClusterLink();
+    ensureCanonicalAndOgUrl();
   }
 
     // Ensure back-to-home (and back-to-cluster) links exist even if header/footer is disabled
   injectBackToHomeLink();
   injectBackToClusterLink();
+  ensureCanonicalAndOgUrl();
 
 // =========================
   // 4) ANNOUNCEMENT (optional)
