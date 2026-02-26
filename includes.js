@@ -226,6 +226,7 @@ decisionPathOverrides: {
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
+        { url: "/car-loan-calculator-singapore.html", title: "Car Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/car-loan-rates-singapore.html", title: "Car Loan Rates in Singapore (2026): Flat Rate vs Effective Interest Explained", subtopic: "financing" },
         { url: "/transport/financing/", title: "Transport Financing (Singapore, 2026): Car Loans, Leasing, and Payment Structure", subtopic: "financing" },
         { url: "/coe-renewal-worth-it-singapore.html", title: "Should You Renew COE in Singapore? (2026 Decision Framework + Break-Even)", subtopic: "coe" },
@@ -1092,9 +1093,9 @@ function buildRelatedHTML(label, links) {
   }
 
   function pickRelatedLinks({ bucket, cluster, subtopic, selfPath, isHub }) {
-    const all = bucket.pages || [];
-    const pillars = bucket.pillars || [];
-    const bridges = bucket.bridges || [];
+    const all = dedupeByUrl(bucket.pages || []);
+    const pillars = dedupeByUrl(bucket.pillars || []);
+    const bridges = dedupeByUrl(bucket.bridges || []);
 
     // normalize everything once for accurate self-exclusion + de-dupe
     const selfN = normalizePath(selfPath);

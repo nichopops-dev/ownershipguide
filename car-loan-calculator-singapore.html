@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
+  <meta name="description" content="Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans. Includes an effective-rate estimator for flat-rate quotes.">
+
+  <meta property="og:title" content="Car Loan Calculator Singapore (2026): Monthly Instalment + Total Interest">
+  <meta property="og:description" content="Compute monthly instalment, total interest, and total paid. Flat-rate vs effective interest, with effective-rate estimator.">
+  <meta property="og:type" content="article">
+  <meta property="og:cluster" content="transport">
+  <meta property="og:subtopic" content="calculator">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/transport/financing/">Financing</a> / Car loan calculator
+    </nav>
+
+    <h1>Car Loan Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      Use this to sanity-check a car loan quote beyond the “monthly instalment” headline.
+      Singapore car loans are often quoted as a <b>flat rate</b> (simple interest), which can look deceptively low versus an <b>effective</b> rate.
+      This calculator shows both, and estimates the equivalent effective rate for flat-rate quotes.
+    </p>
+
+    <div class="box">
+      <h2>Inputs</h2>
+
+      <div class="og-form-grid">
+        <div>
+          <label for="carPrice">Car price (SGD)</label>
+          <input id="carPrice" type="number" inputmode="decimal" min="0" step="1000" value="120000">
+        </div>
+
+        <div>
+          <label for="downPct">Downpayment (%)</label>
+          <input id="downPct" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="30">
+        </div>
+
+        <div>
+          <label for="tenureYears">Tenure (years)</label>
+          <input id="tenureYears" type="number" inputmode="decimal" min="0.5" step="0.5" value="7">
+        </div>
+
+        <div>
+          <label for="rateMode">Interest quote type</label>
+          <select id="rateMode">
+            <option value="flat" selected>Flat rate (simple interest)</option>
+            <option value="effective">Effective interest (amortized APR)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="ratePa">Quoted interest rate (% p.a.)</label>
+          <input id="ratePa" type="number" inputmode="decimal" min="0" step="0.05" value="2.78">
+        </div>
+
+        <div>
+          <label for="fees">Upfront fees (SGD)</label>
+          <input id="fees" type="number" inputmode="decimal" min="0" step="50" value="0">
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+        Tip: If your quote is “flat 2.78% p.a.”, set <b>Interest quote type = Flat rate</b>.
+        If your lender provides an APR/effective rate, set it to <b>Effective</b>.
+      </p>
+
+      <button class="btn" id="btnCalc">Calculate</button>
+    </div>
+
+    <div class="box">
+      <h2>Results</h2>
+
+      <div class="og-kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Loan principal</div>
+          <div class="kpi-value" id="kLoan">—</div>
+          <div class="kpi-sub" id="kDown">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Monthly instalment</div>
+          <div class="kpi-value" id="kMonthly">—</div>
+          <div class="kpi-sub" id="kMonths">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Total interest</div>
+          <div class="kpi-value" id="kInterest">—</div>
+          <div class="kpi-sub" id="kType">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Total paid (incl. fees)</div>
+          <div class="kpi-value" id="kTotal">—</div>
+          <div class="kpi-sub">Principal + interest + fees</div>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top:14px">
+        <h3>Effective-rate estimate (for flat-rate quotes)</h3>
+        <p class="muted" style="margin-top:6px">
+          Flat-rate car loans charge interest on the original principal for the whole tenure.
+          The “equivalent effective rate” below is an estimate of the amortized APR that matches the same monthly instalment.
+        </p>
+        <ul>
+          <li><b>Equivalent effective APR:</b> <span id="kEqApr">—</span></li>
+          <li><b>Note:</b> This is a numerical estimate (not a lender disclosure APR). Fees can change the true APR materially.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>How to interpret this</h2>
+    <div class="box">
+      <ol>
+        <li><b>Separate “can pay” from “should pay”.</b> An instalment can be affordable while total ownership cost is still a bad trade.</li>
+        <li><b>Use the stress test.</b> Pair this with the car affordability calculator (true monthly cost, not just instalment).</li>
+        <li><b>Watch tenure creep.</b> A longer tenure reduces instalment but can increase your total interest exposure.</li>
+      </ol>
+
+      <div class="og-card-grid">
+        <a class="og-card og-card-link" href="/car-affordability-calculator-singapore.html">
+          <h3>Car affordability stress test</h3>
+          <p class="muted">True monthly cost (depreciation/COE, insurance, fuel, maintenance) vs your income buffer.</p>
+        </a>
+        <a class="og-card og-card-link" href="/car-loan-rates-singapore.html">
+          <h3>Car loan rates (flat vs effective)</h3>
+          <p class="muted">Understand why a flat rate “looks low” and how to compare offers properly.</p>
+        </a>
+        <a class="og-card og-card-link" href="/transport/financing/">
+          <h3>Transport financing hub</h3>
+          <p class="muted">Decision flow: loan vs cash, balloon vs normal, leasing vs buying.</p>
+        </a>
+      </div>
+    </div>
+
+    <div id="next-steps"></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/includes.js"></script>
+  <script>
+    (function () {
+      const fmt = (n) => {
+        if (!isFinite(n)) return "—";
+        return new Intl.NumberFormat("en-SG", { style: "currency", currency: "SGD", maximumFractionDigits: 0 }).format(n);
+      };
+      const fmtPct = (x) => {
+        if (!isFinite(x)) return "—";
+        return (x).toFixed(2) + "%";
+      };
+
+      function pmt(principal, annualRatePct, months) {
+        const r = (annualRatePct / 100) / 12;
+        if (months <= 0) return NaN;
+        if (Math.abs(r) < 1e-12) return principal / months;
+        return principal * (r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
+      }
+
+      function solveAprFromPayment(principal, payment, months) {
+        // Solve for monthly rate r in PMT formula via binary search, then convert to APR.
+        if (principal <= 0 || payment <= 0 || months <= 0) return NaN;
+
+        // bounds: 0% to 50% APR (very wide for robustness)
+        let lo = 0.0, hi = 0.50 / 12;
+        for (let i = 0; i < 80; i++) {
+          const mid = (lo + hi) / 2;
+          let calc;
+          if (mid < 1e-12) {
+            calc = principal / months;
+          } else {
+            calc = principal * (mid * Math.pow(1 + mid, months)) / (Math.pow(1 + mid, months) - 1);
+          }
+          if (calc > payment) {
+            hi = mid;
+          } else {
+            lo = mid;
+          }
+        }
+        const r = (lo + hi) / 2;
+        return r * 12 * 100;
+      }
+
+      function calc() {
+        const carPrice = Number(document.getElementById("carPrice").value) || 0;
+        const downPct = Math.min(100, Math.max(0, Number(document.getElementById("downPct").value) || 0));
+        const tenureYears = Number(document.getElementById("tenureYears").value) || 0;
+        const rateMode = document.getElementById("rateMode").value;
+        const ratePa = Math.max(0, Number(document.getElementById("ratePa").value) || 0);
+        const fees = Math.max(0, Number(document.getElementById("fees").value) || 0);
+
+        const down = carPrice * (downPct / 100);
+        const principal = Math.max(0, carPrice - down);
+        const months = Math.max(1, Math.round(tenureYears * 12));
+
+        let monthly = NaN, totalInterest = NaN, totalPaid = NaN, eqApr = NaN;
+        if (principal <= 0 || carPrice <= 0) {
+          monthly = 0; totalInterest = 0; totalPaid = fees; eqApr = 0;
+        } else if (rateMode === "flat") {
+          // Flat rate: interest = principal * rate * years (simple interest)
+          totalInterest = principal * (ratePa / 100) * tenureYears;
+          totalPaid = principal + totalInterest + fees;
+          monthly = (principal + totalInterest) / months;
+          eqApr = solveAprFromPayment(principal, monthly, months);
+        } else {
+          // Effective (amortized): standard PMT
+          monthly = pmt(principal, ratePa, months);
+          totalPaid = monthly * months + fees;
+          totalInterest = (monthly * months) - principal;
+          eqApr = ratePa;
+        }
+
+        document.getElementById("kLoan").textContent = fmt(principal);
+        document.getElementById("kDown").textContent = "Downpayment: " + fmt(down) + " (" + downPct.toFixed(1) + "%)";
+        document.getElementById("kMonthly").textContent = fmt(monthly);
+        document.getElementById("kMonths").textContent = months + " months";
+        document.getElementById("kInterest").textContent = fmt(totalInterest);
+        document.getElementById("kType").textContent = (rateMode === "flat") ? "Flat rate simple interest" : "Effective amortized interest";
+        document.getElementById("kTotal").textContent = fmt(totalPaid);
+        document.getElementById("kEqApr").textContent = (rateMode === "flat") ? fmtPct(eqApr) : fmtPct(eqApr);
+      }
+
+      document.getElementById("btnCalc").addEventListener("click", calc);
+      ["carPrice","downPct","tenureYears","rateMode","ratePa","fees"].forEach((id) => {
+        const el = document.getElementById(id);
+        el.addEventListener("input", () => {
+          // soft live update
+          calc();
+        });
+        el.addEventListener("change", calc);
+      });
+
+      // initial
+      calc();
+    })();
+  </script>
+</body>
+</html>

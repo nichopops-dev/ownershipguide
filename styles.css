@@ -881,3 +881,48 @@ body.home .card{
 
 /* v0064: small section label */
 .section-kicker{margin:18px 0 10px;font-weight:700;color:var(--text,#111827);opacity:.75;letter-spacing:.02em;text-transform:uppercase;font-size:12px;}
+
+
+/* v0081: calculator layout helpers (used across new + existing calculators) */
+.og-form-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:12px;
+}
+.og-form-grid label{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+.og-form-grid input,
+.og-form-grid select{
+  width:100%;
+}
+@media (max-width: 900px){
+  .og-form-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px){
+  .og-form-grid{ grid-template-columns: 1fr; }
+}
+
+.og-kpi-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap:12px;
+}
+@media (max-width: 900px){
+  .og-kpi-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px){
+  .og-kpi-grid{ grid-template-columns: 1fr; }
+}
+
+.kpi{
+  border:1px solid rgba(0,0,0,0.08);
+  border-radius:14px;
+  background: rgba(0,0,0,0.02);
+  padding:12px;
+}
+.kpi-label{ font-size:12px; opacity:.75; font-weight:700; text-transform:uppercase; letter-spacing:.02em; }
+.kpi-value{ font-size:24px; font-weight:800; margin-top:6px; }
+.kpi-sub{ margin-top:6px; font-size:13px; opacity:.8; }
