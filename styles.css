@@ -124,8 +124,14 @@ a.btn, button.btn{
 }
 a.btn:hover, button.btn:hover{ opacity: 0.92; }
 
-button.btn:disabled{ opacity: 0.55; cursor: not-allowed; }
-button.btn:disabled:hover{ opacity: 0.55; }
+button.btn:disabled{
+  opacity: 1;
+  cursor: not-allowed;
+  background: #e5e7eb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+}
+button.btn:disabled:hover{ background: #e5e7eb; border-color:#e5e7eb; color:#9ca3af; }
 
 a.btn.btn-secondary, button.btn.btn-secondary{
   background: #ffffff;

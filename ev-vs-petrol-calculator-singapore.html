@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost</title>
+  <meta name="description" content="Singapore EV vs petrol calculator (2026): compare running costs and total cost over your holding period. Includes mileage-based fuel vs electricity, maintenance/road tax differences, upfront price premium, and a break-even estimate."/>
+  <meta name="og:cluster" content="transport"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>EV vs Petrol Cost Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This model answers: <strong>“At my mileage, is an EV cheaper than a petrol car — and when does it break even?”</strong>
+      It’s a planning model (good for first-pass decisions). Real ownership varies by COE cycle, insurance, charging access, and resale.
+    </p>
+
+    <section class="card">
+      <h2>Inputs</h2>
+
+      <div class="og-form-grid">
+        <div>
+          <label for="annualKm">Annual mileage (km/year)</label>
+          <input id="annualKm" type="number" min="0" step="100" value="15000"/>
+        </div>
+
+        <div>
+          <label for="years">Holding period (years)</label>
+          <input id="years" type="number" min="1" step="1" value="5"/>
+        </div>
+
+        <div>
+          <label for="petrolKml">Petrol efficiency (km/L)</label>
+          <input id="petrolKml" type="number" min="1" step="0.1" value="12"/>
+        </div>
+
+        <div>
+          <label for="petrolPrice">Petrol price (SGD/L)</label>
+          <input id="petrolPrice" type="number" min="0" step="0.01" value="2.80"/>
+        </div>
+
+        <div>
+          <label for="evKwhPer100">EV energy use (kWh/100km)</label>
+          <input id="evKwhPer100" type="number" min="1" step="0.1" value="18"/>
+        </div>
+
+        <div>
+          <label for="elecPrice">Electricity price (SGD/kWh)</label>
+          <input id="elecPrice" type="number" min="0" step="0.01" value="0.35"/>
+        </div>
+
+        <div>
+          <label for="evUpfront">EV upfront premium vs petrol (SGD)</label>
+          <input id="evUpfront" type="number" step="100" value="15000"/>
+        </div>
+
+        <div>
+          <label for="evRoadTaxDelta">EV road tax difference (EV − petrol, SGD/year)</label>
+          <input id="evRoadTaxDelta" type="number" step="50" value="200"/>
+        </div>
+
+        <div>
+          <label for="evMaintDelta">EV maintenance difference (EV − petrol, SGD/year)</label>
+          <input id="evMaintDelta" type="number" step="50" value="-300"/>
+        </div>
+
+        <div>
+          <label for="resaleDelta">Resale difference at end (EV − petrol, SGD)</label>
+          <input id="resaleDelta" type="number" step="200" value="0"/>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+
+      <div class="og-kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">EV running cost</div>
+          <div class="kpi-value" id="evRunMonthly">—</div>
+          <div class="kpi-sub">electricity + road tax + maintenance (monthly)</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Petrol running cost</div>
+          <div class="kpi-value" id="petrolRunMonthly">—</div>
+          <div class="kpi-sub">fuel + road tax + maintenance (monthly)</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Break‑even</div>
+          <div class="kpi-value" id="breakeven">—</div>
+          <div class="kpi-sub">years to recover EV premium</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Net difference over holding period</div>
+          <div class="kpi-value" id="netDiff">—</div>
+          <div class="kpi-sub">positive = EV cheaper</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th class="right">EV (SGD)</th>
+              <th class="right">Petrol (SGD)</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="3" class="muted">Enter inputs and click Calculate.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+        Tip: if your charging is mostly public fast charging, your electricity price may be higher. If you mostly charge at home, it may be lower.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Next steps</h2>
+      <ul>
+        <li><a href="/car-ownership-cost-calculator-singapore.html">All‑in monthly car ownership cost calculator</a> (adds depreciation + financing)</li>
+        <li><a href="/used-car-vs-new-car-calculator-singapore.html">Used vs new car calculator</a></li>
+        <li><a href="/transport/financing/">Transport financing hub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function n(x){ return Number.isFinite(x) ? x : 0; }
+    function fmtMoney(x){
+      const v = Number(x);
+      if(!Number.isFinite(v)) return "—";
+      return "S$ " + v.toLocaleString(undefined,{maximumFractionDigits:0});
+    }
+    function fmtMoney2(x){
+      const v = Number(x);
+      if(!Number.isFinite(v)) return "—";
+      return "S$ " + v.toLocaleString(undefined,{maximumFractionDigits:2});
+    }
+
+    function calc(){
+      const annualKm = n(parseFloat($("annualKm").value));
+      const years = Math.max(1, n(parseFloat($("years").value)));
+      const petrolKml = Math.max(1e-6, n(parseFloat($("petrolKml").value)));
+      const petrolPrice = n(parseFloat($("petrolPrice").value));
+      const evKwhPer100 = Math.max(1e-6, n(parseFloat($("evKwhPer100").value)));
+      const elecPrice = n(parseFloat($("elecPrice").value));
+      const evUpfront = n(parseFloat($("evUpfront").value));
+      const evRoadTaxDelta = n(parseFloat($("evRoadTaxDelta").value)); // EV - petrol
+      const evMaintDelta = n(parseFloat($("evMaintDelta").value));     // EV - petrol
+      const resaleDelta = n(parseFloat($("resaleDelta").value));       // EV - petrol at end
+
+      const annualFuelLitres = annualKm / petrolKml;
+      const petrolFuelCostY = annualFuelLitres * petrolPrice;
+
+      const evKwhY = (annualKm/100) * evKwhPer100;
+      const evElecCostY = evKwhY * elecPrice;
+
+      // Differences EV - Petrol (positive means EV costs more)
+      const roadTaxDeltaY = evRoadTaxDelta;
+      const maintDeltaY = evMaintDelta;
+
+      const evRunY = evElecCostY + roadTaxDeltaY + maintDeltaY;
+      const petrolRunY = petrolFuelCostY;
+
+      // For table clarity, build both sides with deltas
+      const petrolRoadTaxY = 0;
+      const petrolMaintY = 0;
+
+      const evRunMonthly = evRunY/12;
+      const petrolRunMonthly = (petrolFuelCostY + petrolRoadTaxY + petrolMaintY)/12;
+
+      $("evRunMonthly").textContent = fmtMoney(evRunMonthly);
+      $("petrolRunMonthly").textContent = fmtMoney(petrolRunMonthly);
+
+      // Total cost over horizon
+      const petrolTotal = years * (petrolFuelCostY + petrolRoadTaxY + petrolMaintY);
+      const evTotal = evUpfront + years * (evElecCostY + (petrolRoadTaxY+roadTaxDeltaY) + (petrolMaintY+maintDeltaY)) - resaleDelta;
+
+      const net = petrolTotal - evTotal; // positive => EV cheaper (lower total)
+
+      // Break-even (years)
+      const annualSavings = (petrolFuelCostY + petrolRoadTaxY + petrolMaintY) - (evElecCostY + (petrolRoadTaxY+roadTaxDeltaY) + (petrolMaintY+maintDeltaY));
+      let be = "No break‑even";
+      if (annualSavings > 0){
+        const beYears = Math.max(0, (evUpfront - resaleDelta) / annualSavings);
+        be = beYears === 0 ? "Immediate" : (beYears.toFixed(1) + " years");
+      }
+
+      $("breakeven").textContent = be;
+      $("netDiff").textContent = (net>=0? fmtMoney(net) : "− " + fmtMoney(Math.abs(net)).replace("S$ ","S$ "));
+
+      const rows = [
+        ["Energy cost / year", years*evElecCostY, years*petrolFuelCostY],
+        ["Road tax difference (EV − petrol) / year", years*roadTaxDeltaY, 0],
+        ["Maintenance difference (EV − petrol) / year", years*maintDeltaY, 0],
+        ["Upfront premium (EV − petrol)", evUpfront, 0],
+        ["Resale difference at end (EV − petrol)", -resaleDelta, 0],
+        ["Total over holding period", evTotal, petrolTotal],
+      ];
+
+      const tbody = $("tbody");
+      tbody.innerHTML = rows.map(r=>{
+        return `<tr>
+          <td>${r[0]}</td>
+          <td class="right">${fmtMoney2(r[1])}</td>
+          <td class="right">${fmtMoney2(r[2])}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function reset(){
+      $("annualKm").value = 15000;
+      $("years").value = 5;
+      $("petrolKml").value = 12;
+      $("petrolPrice").value = 2.80;
+      $("evKwhPer100").value = 18;
+      $("elecPrice").value = 0.35;
+      $("evUpfront").value = 15000;
+      $("evRoadTaxDelta").value = 200;
+      $("evMaintDelta").value = -300;
+      $("resaleDelta").value = 0;
+      calc();
+    }
+
+    $("btnCalc").addEventListener("click", calc);
+    $("btnReset").addEventListener("click", reset);
+    reset();
+  </script>
+</body>
+</html>

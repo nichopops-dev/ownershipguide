@@ -232,6 +232,9 @@ decisionPathOverrides: {
         { url: "/coe-loan-calculator-singapore.html", title: "COE Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/car-leasing-vs-buying-calculator-singapore.html", title: "Car Leasing vs Buying Calculator (Singapore, 2026): Which Is Cheaper?", subtopic: "calculator" },
         { url: "/used-car-vs-new-car-calculator-singapore.html", title: "Used vs New Car Calculator (Singapore, 2026): All‑In Cost Over Your Holding Period", subtopic: "calculator" },
+        { url: "/ev-vs-petrol-calculator-singapore.html", title: "EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost", subtopic: "calculator" },
+        { url: "/coe-renew-vs-replace-calculator-singapore.html", title: "COE Renew vs Replace Calculator (Singapore, 2026): Which Costs Less?", subtopic: "calculator" },
+
         { url: "/car-loan-rates-singapore.html", title: "Car Loan Rates in Singapore (2026): Flat Rate vs Effective Interest Explained", subtopic: "financing" },
         { url: "/transport/financing/", title: "Transport Financing (Singapore, 2026): Car Loans, Leasing, and Payment Structure", subtopic: "financing" },
         { url: "/coe-renewal-worth-it-singapore.html", title: "Should You Renew COE in Singapore? (2026 Decision Framework + Break-Even)", subtopic: "coe" },
@@ -290,6 +293,8 @@ decisionPathOverrides: {
         { url: "/sell-property-proceeds-calculator-singapore.html", title: "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality", subtopic: "calculator" },
         { url: "/rent-out-vs-sell-calculator-singapore.html", title: "Rent Out vs Sell Calculator (Singapore, 2026): Net Worth After X Years", subtopic: "calculator" },
         { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
+        { url: "/property-upgrade-ladder-calculator-singapore.html", title: "Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer", subtopic: "calculator" },
+        
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/pay-down-mortgage-vs-invest-calculator-singapore.html", title: "Pay Down Mortgage vs Invest Calculator (Singapore, 2026)", subtopic: "calculator" },

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer</title>
+  <meta name="description" content="Singapore property upgrade ladder calculator (2026): enter a target property price and see (1) required household income (TDSR/MSR) and (2) cash/CPF buffer needed upfront, with a simple sell→buy bridge."/>
+  <meta name="og:cluster" content="property"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>Property Upgrade Ladder Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This tool answers: <strong>“If I want to buy a property at S$X, what income do I need — and what cash/CPF buffer is required upfront?”</strong>
+      It’s conservative by design and intended for planning.
+    </p>
+
+    <section class="card">
+      <h2>Inputs</h2>
+
+      <div class="og-form-grid">
+        <div>
+          <label for="price">Target property price (SGD)</label>
+          <input id="price" type="number" step="10000" value="1500000"/>
+        </div>
+
+        <div>
+          <label for="ltv">Loan‑to‑value (LTV, %)</label>
+          <input id="ltv" type="number" min="0" max="100" step="1" value="75"/>
+        </div>
+
+        <div>
+          <label for="minCashDp">Minimum cash downpayment (% of price)</label>
+          <input id="minCashDp" type="number" min="0" max="100" step="1" value="5"/>
+        </div>
+
+        <div>
+          <label for="bsd">BSD amount (SGD)</label>
+          <input id="bsd" type="number" step="100" value="0"/>
+        </div>
+
+        <div>
+          <label for="absd">ABSD amount (SGD)</label>
+          <input id="absd" type="number" step="100" value="0"/>
+        </div>
+
+        <div>
+          <label for="stampCpfPct">% of stamp duty paid by CPF</label>
+          <input id="stampCpfPct" type="number" min="0" max="100" step="1" value="100"/>
+        </div>
+
+        <div>
+          <label for="fees">Other upfront fees (legal/agent/valuation, SGD)</label>
+          <input id="fees" type="number" step="50" value="3500"/>
+        </div>
+
+        <div>
+          <label for="optionFee">Option / booking fee (cash, SGD)</label>
+          <input id="optionFee" type="number" step="50" value="1000"/>
+        </div>
+
+        <div>
+          <label for="cashOnly">Other cash‑only items (reno deposit, etc, SGD)</label>
+          <input id="cashOnly" type="number" step="50" value="0"/>
+        </div>
+
+        <div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
+
+        <div>
+          <label for="income">Household gross income (SGD/month)</label>
+          <input id="income" type="number" step="100" value="18000"/>
+        </div>
+
+        <div>
+          <label for="otherDebt">Other monthly debt payments (SGD/month)</label>
+          <input id="otherDebt" type="number" step="50" value="500"/>
+        </div>
+
+        <div>
+          <label for="tdsr">TDSR cap (%)</label>
+          <input id="tdsr" type="number" min="0" max="100" step="1" value="55"/>
+        </div>
+
+        <div>
+          <label for="msr">MSR cap (%) (0 if not applicable)</label>
+          <input id="msr" type="number" min="0" max="100" step="1" value="30"/>
+        </div>
+
+        <div>
+          <label for="rate">Stress interest rate (%/year)</label>
+          <input id="rate" type="number" min="0" step="0.1" value="4.0"/>
+        </div>
+
+        <div>
+          <label for="tenure">Loan tenure (years)</label>
+          <input id="tenure" type="number" min="1" step="1" value="25"/>
+        </div>
+
+        <div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
+
+        <div>
+          <label for="availCash">Available cash buffer (SGD)</label>
+          <input id="availCash" type="number" step="1000" value="80000"/>
+        </div>
+
+        <div>
+          <label for="availCpf">Available CPF OA buffer (SGD)</label>
+          <input id="availCpf" type="number" step="1000" value="200000"/>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:10px">
+        Tip: If you’re upgrading/downgrading, set “Available cash/CPF” to your expected buffers after selling your current home.
+        For a detailed sell→buy bridge, use the <a href="/upgrade-downgrade-property-calculator-singapore.html">upgrade/downgrade calculator</a>.
+      </p>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+
+      <div class="og-kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Needed loan (by LTV)</div>
+          <div class="kpi-value" id="neededLoan">—</div>
+          <div class="kpi-sub">target price × LTV</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Max loan (by TDSR/MSR)</div>
+          <div class="kpi-value" id="maxLoan">—</div>
+          <div class="kpi-sub" id="bindGate">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Required income (if short)</div>
+          <div class="kpi-value" id="reqIncome">—</div>
+          <div class="kpi-sub">to support needed loan</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Upfront cash shortfall</div>
+          <div class="kpi-value" id="cashShort">—</div>
+          <div class="kpi-sub">cash needed − available cash</div>
+        </div>
+      </div>
+
+      <div class="og-kpi-grid" style="margin-top:10px">
+        <div class="kpi">
+          <div class="kpi-label">Upfront cash needed</div>
+          <div class="kpi-value" id="cashNeed">—</div>
+          <div class="kpi-sub">min cash DP + cash duties + fees</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Upfront CPF used (plan)</div>
+          <div class="kpi-value" id="cpfNeed">—</div>
+          <div class="kpi-sub">CPF DP + CPF‑paid duties</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">CPF shortfall</div>
+          <div class="kpi-value" id="cpfShort">—</div>
+          <div class="kpi-sub">CPF needed − available CPF</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Max housing payment</div>
+          <div class="kpi-value" id="maxPay">—</div>
+          <div class="kpi-sub">after other debts</div>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:14px">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Upfront breakdown</th>
+              <th class="right">Cash (SGD)</th>
+              <th class="right">CPF (SGD)</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="3" class="muted">Enter inputs and click Calculate.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Next steps</h2>
+      <ul>
+        <li><a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> (max loan only, more focused)</li>
+        <li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF calculator</a> (more detailed upfront planning)</li>
+        <li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade/downgrade sell→buy bridge calculator</a> (sell proceeds + buy next)</li>
+        <li><a href="/property/financing/">Property financing hub</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    function n(x){ return Number.isFinite(x) ? x : 0; }
+    function fmt(x){
+      const v = Number(x);
+      if(!Number.isFinite(v)) return "—";
+      const sign = v < 0 ? "− " : "";
+      return sign + "S$ " + Math.abs(v).toLocaleString(undefined,{maximumFractionDigits:0});
+    }
+    function pmt(r, nper, pv){
+      if (r === 0) return pv / nper;
+      return (r*pv) / (1 - Math.pow(1+r, -nper));
+    }
+    function pvFromPayment(pay, r, nper){
+      if (r === 0) return pay * nper;
+      return pay * (1 - Math.pow(1+r, -nper)) / r;
+    }
+
+    function calc(){
+      const price = n(parseFloat($("price").value));
+      const ltv = Math.min(100, Math.max(0, n(parseFloat($("ltv").value))))/100;
+      const minCashDp = Math.min(100, Math.max(0, n(parseFloat($("minCashDp").value))))/100;
+
+      const bsd = n(parseFloat($("bsd").value));
+      const absd = n(parseFloat($("absd").value));
+      const stampCpfPct = Math.min(100, Math.max(0, n(parseFloat($("stampCpfPct").value))))/100;
+      const fees = n(parseFloat($("fees").value));
+      const optionFee = n(parseFloat($("optionFee").value));
+      const cashOnly = n(parseFloat($("cashOnly").value));
+
+      const income = Math.max(0, n(parseFloat($("income").value)));
+      const otherDebt = Math.max(0, n(parseFloat($("otherDebt").value)));
+      const tdsr = Math.min(100, Math.max(0, n(parseFloat($("tdsr").value))))/100;
+      const msr = Math.min(100, Math.max(0, n(parseFloat($("msr").value))))/100;
+      const rate = Math.max(0, n(parseFloat($("rate").value)))/100/12;
+      const tenure = Math.max(1, n(parseFloat($("tenure").value)));
+      const nper = tenure * 12;
+
+      const availCash = Math.max(0, n(parseFloat($("availCash").value)));
+      const availCpf = Math.max(0, n(parseFloat($("availCpf").value)));
+
+      const neededLoan = price * ltv;
+
+      // Max payment (binding gate)
+      const maxByTdsr = Math.max(0, income*tdsr - otherDebt);
+      const maxByMsr = (msr>0) ? Math.max(0, income*msr) : Infinity;
+      const maxPay = Math.min(maxByTdsr, maxByMsr);
+
+      const maxLoan = pvFromPayment(maxPay, rate, nper);
+
+      let gate = "Binding: TDSR";
+      if (msr>0 && maxByMsr < maxByTdsr) gate = "Binding: MSR";
+      if (maxPay === Infinity) gate = "No cap applied";
+
+      // Required income to support needed loan
+      const neededPay = pmt(rate, nper, neededLoan);
+      const reqIncomeTdsr = (neededPay + otherDebt) / (tdsr>0 ? tdsr : 1);
+      const reqIncomeMsr = (msr>0) ? (neededPay / msr) : 0;
+      const reqIncome = (msr>0) ? Math.max(reqIncomeTdsr, reqIncomeMsr) : reqIncomeTdsr;
+
+      // Upfront split
+      const minCash = price * minCashDp;
+      const totalDuties = bsd + absd;
+      const dutyCpf = totalDuties * stampCpfPct;
+      const dutyCash = totalDuties - dutyCpf;
+
+      const totalDown = price * (1 - ltv);
+      const cpfDown = Math.max(0, totalDown - minCash);
+      const cashNeed = minCash + dutyCash + fees + optionFee + cashOnly;
+      const cpfNeed = cpfDown + dutyCpf;
+
+      $("neededLoan").textContent = fmt(neededLoan);
+      $("maxLoan").textContent = fmt(maxLoan);
+      $("bindGate").textContent = gate;
+      $("maxPay").textContent = fmt(maxPay);
+
+      const cashShort = cashNeed - availCash;
+      const cpfShort = cpfNeed - availCpf;
+
+      $("cashNeed").textContent = fmt(cashNeed);
+      $("cpfNeed").textContent = fmt(cpfNeed);
+      $("cashShort").textContent = fmt(Math.max(0, cashShort));
+      $("cpfShort").textContent = fmt(Math.max(0, cpfShort));
+
+      const loanShort = neededLoan - maxLoan;
+      if (loanShort <= 0){
+        $("reqIncome").textContent = "—";
+      } else {
+        $("reqIncome").textContent = "S$ " + reqIncome.toLocaleString(undefined,{maximumFractionDigits:0}) + "/mo";
+      }
+
+      const rows = [
+        ["Minimum cash downpayment", minCash, 0],
+        ["CPF downpayment (planned)", 0, cpfDown],
+        ["Stamp duties (BSD+ABSD)", dutyCash, dutyCpf],
+        ["Other upfront fees", fees + optionFee + cashOnly, 0],
+        ["Total upfront", cashNeed, cpfNeed],
+      ];
+      $("tbody").innerHTML = rows.map(r=>`
+        <tr>
+          <td>${r[0]}</td>
+          <td class="right">${fmt(r[1])}</td>
+          <td class="right">${fmt(r[2])}</td>
+        </tr>`).join("");
+    }
+
+    function reset(){
+      $("price").value = 1500000;
+      $("ltv").value = 75;
+      $("minCashDp").value = 5;
+      $("bsd").value = 0;
+      $("absd").value = 0;
+      $("stampCpfPct").value = 100;
+      $("fees").value = 3500;
+      $("optionFee").value = 1000;
+      $("cashOnly").value = 0;
+      $("income").value = 18000;
+      $("otherDebt").value = 500;
+      $("tdsr").value = 55;
+      $("msr").value = 30;
+      $("rate").value = 4.0;
+      $("tenure").value = 25;
+      $("availCash").value = 80000;
+      $("availCpf").value = 200000;
+      calc();
+    }
+
+    $("btnCalc").addEventListener("click", calc);
+    $("btnReset").addEventListener("click", reset);
+    reset();
+  </script>
+</body>
+</html>
