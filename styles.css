@@ -926,3 +926,5 @@ body.home .card{
 .kpi-label{ font-size:12px; opacity:.75; font-weight:700; text-transform:uppercase; letter-spacing:.02em; }
 .kpi-value{ font-size:24px; font-weight:800; margin-top:6px; }
 .kpi-sub{ margin-top:6px; font-size:13px; opacity:.8; }
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:14px;}

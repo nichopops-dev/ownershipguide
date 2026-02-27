@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Leasing vs Buying Calculator Singapore (2026): Which Is Cheaper?</title>
+  <meta name="description" content="Compare car leasing vs buying in Singapore (2026). Model total cost and effective monthly cost over your chosen horizon. Includes depreciation/resale, financing (flat or effective), fees, insurance, road tax, maintenance, parking and fuel.">
+  <meta property="og:title" content="Car Leasing vs Buying Calculator Singapore (2026)">
+  <meta property="og:description" content="Lease vs buy calculator for Singapore: true cost comparison over 1–10 years, with a full breakdown.">
+  <meta property="og:type" content="website">
+  <meta property="og:cluster" content="transport">
+  <meta property="og:subtopic" content="financing">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/includes.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container">
+    <h1>Car Leasing vs Buying Calculator (Singapore, 2026)</h1>
+    <div class="box" style="margin-top:14px">
+      <strong>When to use this</strong>
+      <div style="margin-top:6px">
+        Leasing is often sold as “no hassle”, while buying is framed as “asset ownership”. This calculator answers the only question that matters:
+        <em>over the same time horizon, what’s the true total cost and all‑in monthly cost?</em>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:16px;gap:14px">
+      <section class="box">
+        <h2 style="margin-top:0">Lease scenario</h2>
+        <label>Monthly lease price (SGD)
+          <input id="leaseMonthly" type="number" min="0" step="10" value="1800">
+        </label>
+        <div class="grid-2" style="gap:10px">
+          <label>Upfront lease fees (SGD)
+            <input id="leaseUpfront" type="number" min="0" step="50" value="0">
+          </label>
+          <label>End/return fees (SGD)
+            <input id="leaseEndFees" type="number" min="0" step="50" value="0">
+          </label>
+        </div>
+        <div class="grid-2" style="gap:10px">
+          <label>Does lease include insurance?
+            <select id="leaseIncludesInsurance">
+              <option value="yes" selected>Yes</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+          <label>Does lease include road tax?
+            <select id="leaseIncludesRoadTax">
+              <option value="yes" selected>Yes</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+        </div>
+        <label>Maintenance included?
+          <select id="leaseIncludesMaint">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="box">
+        <h2 style="margin-top:0">Buy scenario</h2>
+        <div class="grid-2" style="gap:10px">
+          <label>On-road price (SGD)
+            <input id="buyPrice" type="number" min="0" step="1000" value="120000">
+          </label>
+          <label>Expected resale value at horizon (SGD)
+            <input id="resaleValue" type="number" min="0" step="1000" value="65000">
+          </label>
+        </div>
+        <div class="grid-2" style="gap:10px">
+          <label>Downpayment (%)
+            <input id="downPct" type="number" min="0" max="100" step="1" value="30">
+          </label>
+          <label>Loan tenure (years)
+            <input id="loanYears" type="number" min="1" max="7" step="1" value="5">
+          </label>
+        </div>
+        <div class="grid-2" style="gap:10px">
+          <label>Rate type
+            <select id="loanType">
+              <option value="effective" selected>Effective (APR)</option>
+              <option value="flat">Flat rate</option>
+            </select>
+          </label>
+          <label>Interest rate (% p.a.)
+            <input id="rate" type="number" min="0" step="0.01" value="2.78">
+          </label>
+        </div>
+        <label>One-time fees (bank + dealer) (SGD)
+          <input id="buyFees" type="number" min="0" step="50" value="0">
+        </label>
+      </section>
+    </div>
+
+    <section class="box" style="margin-top:14px">
+      <h2 style="margin-top:0">Running costs (if not included)</h2>
+      <div class="grid-3" style="gap:10px">
+        <label>Insurance (annual, SGD)
+          <input id="insAnnual" type="number" min="0" step="50" value="1200">
+        </label>
+        <label>Road tax (annual, SGD)
+          <input id="roadTaxAnnual" type="number" min="0" step="50" value="800">
+        </label>
+        <label>Maintenance (annual, SGD)
+          <input id="maintAnnual" type="number" min="0" step="50" value="900">
+        </label>
+      </div>
+      <div class="grid-3" style="gap:10px;margin-top:10px">
+        <label>Parking (monthly, SGD)
+          <input id="parkingMonthly" type="number" min="0" step="10" value="200">
+        </label>
+        <label>Mileage (annual, km)
+          <input id="mileageAnnual" type="number" min="0" step="500" value="12000">
+        </label>
+        <label>Fuel efficiency (km/L)
+          <input id="kmPerL" type="number" min="1" step="0.1" value="12">
+        </label>
+      </div>
+      <div style="margin-top:10px">
+        <label>Fuel price (SGD/L)
+          <input id="fuelPrice" type="number" min="0" step="0.01" value="2.75">
+        </label>
+      </div>
+      <div style="margin-top:10px" class="grid-2">
+        <label>Comparison horizon (years)
+          <input id="horizonYears" type="number" min="1" max="10" step="1" value="5">
+        </label>
+        <div class="box" style="margin:0;padding:10px">
+          <div style="font-size:14px;opacity:.9">Tip: choose the period you realistically keep the car (or lease).</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="box" style="margin-top:14px">
+      <h2 style="margin-top:0">Results</h2>
+      <div class="grid-3" style="gap:10px">
+        <div class="kpi-box">
+          <div class="kpi-label">Lease total cost</div>
+          <div class="kpi-value" id="leaseTotal">—</div>
+          <div class="kpi-sub" id="leaseMonthlyOut">—</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Buy total cost</div>
+          <div class="kpi-value" id="buyTotal">—</div>
+          <div class="kpi-sub" id="buyMonthlyOut">—</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">Winner</div>
+          <div class="kpi-value" id="winner">—</div>
+          <div class="kpi-sub" id="delta">—</div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;overflow:auto">
+        <table class="table" style="min-width:760px">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Lease (SGD)</th>
+              <th>Buy (SGD)</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:10px">
+        <a href="/car-leasing-vs-buying-singapore.html">Read the decision guide: leasing vs buying</a>
+      </div>
+    </section>
+
+  </main>
+  <div id="site-footer"></div>
+
+<script>
+(function(){
+  const $ = (id)=>document.getElementById(id);
+  const fmt = (n)=> (isFinite(n)? n.toLocaleString(undefined,{maximumFractionDigits:0}) : "—");
+  const fmt2 = (n)=> (isFinite(n)? n.toLocaleString(undefined,{maximumFractionDigits:2}) : "—");
+  function pvFromPmt(pmt, rateMonthly, n){
+    if(rateMonthly<=0) return pmt*n;
+    return pmt*(1-Math.pow(1+rateMonthly,-n))/rateMonthly;
+  }
+  // approximate effective APR for flat rate by binary search on APR that matches flat payment
+  function effectiveAprFromFlat(principal, flatRatePa, years){
+    const n = years*12;
+    const totalInterest = principal*flatRatePa*years;
+    const pmtFlat = (principal+totalInterest)/n;
+    let lo=0, hi=0.5; // 50% APR cap
+    for(let i=0;i<40;i++){
+      const mid=(lo+hi)/2;
+      const r=mid/12;
+      const pv=pvFromPmt(pmtFlat,r,n);
+      if(pv>principal) lo=mid; else hi=mid;
+    }
+    return (lo+hi)/2;
+  }
+  function loanMonthlyPayment(principal, ratePa, years, type){
+    const n = years*12;
+    if(principal<=0||years<=0) return {pmt:0, totalInterest:0};
+    if(type==="flat"){
+      const totalInterest = principal*ratePa*years;
+      const pmt = (principal+totalInterest)/n;
+      return {pmt, totalInterest, aprEq: effectiveAprFromFlat(principal, ratePa, years)};
+    } else {
+      const r = ratePa/12;
+      const pmt = (r<=0)? principal/n : principal*r/(1-Math.pow(1+r,-n));
+      const totalPaid = pmt*n;
+      const totalInterest = totalPaid - principal;
+      return {pmt, totalInterest};
+    }
+  }
+  function calc(){
+    const horizonYears = +$("horizonYears").value||1;
+    const months = Math.round(horizonYears*12);
+
+    // Lease
+    const leaseMonthly = +$("leaseMonthly").value||0;
+    const leaseUpfront = +$("leaseUpfront").value||0;
+    const leaseEndFees = +$("leaseEndFees").value||0;
+    const incIns = $("leaseIncludesInsurance").value==="yes";
+    const incRoad = $("leaseIncludesRoadTax").value==="yes";
+    const incMaint = $("leaseIncludesMaint").value==="yes";
+
+    // Buy
+    const buyPrice = +$("buyPrice").value||0;
+    const resaleValue = +$("resaleValue").value||0;
+    const downPct = (+$("downPct").value||0)/100;
+    const loanYears = +$("loanYears").value||1;
+    const loanType = $("loanType").value;
+    const ratePa = (+$("rate").value||0)/100;
+    const buyFees = +$("buyFees").value||0;
+
+    // Running
+    const insAnnual = +$("insAnnual").value||0;
+    const roadTaxAnnual = +$("roadTaxAnnual").value||0;
+    const maintAnnual = +$("maintAnnual").value||0;
+    const parkingMonthly = +$("parkingMonthly").value||0;
+    const mileageAnnual = +$("mileageAnnual").value||0;
+    const kmPerL = +$("kmPerL").value||1;
+    const fuelPrice = +$("fuelPrice").value||0;
+
+    const fuelAnnual = (mileageAnnual/Math.max(0.1,kmPerL))*fuelPrice;
+    const fuelMonthly = fuelAnnual/12;
+
+    // Lease cost: monthly * months + upfront + end + add running items if NOT included
+    const leaseRunMonthly =
+      (incIns?0:insAnnual/12) +
+      (incRoad?0:roadTaxAnnual/12) +
+      (incMaint?0:maintAnnual/12) +
+      parkingMonthly + fuelMonthly;
+
+    const leaseTotal = leaseMonthly*months + leaseUpfront + leaseEndFees + leaseRunMonthly*months;
+    const leaseEffMonthly = leaseTotal/months;
+
+    // Buy cost: depreciation + interest (over horizon payments) + running + fees
+    const down = buyPrice*downPct;
+    const principal = Math.max(0,buyPrice - down);
+    const loan = loanMonthlyPayment(principal, ratePa, loanYears, loanType);
+    // payments within horizon (cap at loan term)
+    const payMonths = Math.min(months, Math.round(loanYears*12));
+    const paidWithin = loan.pmt*payMonths;
+    // remaining balance after payMonths (for effective): amort; for flat: approximate linear on principal portion
+    function remainingBalance(){
+      const n=Math.round(loanYears*12);
+      if(principal<=0) return 0;
+      if(loanType==="flat"){
+        // flat: principal repaid evenly (approx)
+        const principalPaid = principal*(payMonths/n);
+        return Math.max(0, principal - principalPaid);
+      } else {
+        const r=ratePa/12;
+        if(r<=0) return Math.max(0, principal - principal*(payMonths/n));
+        return principal*Math.pow(1+r,payMonths) - loan.pmt*( (Math.pow(1+r,payMonths)-1)/r );
+      }
+    }
+    const rem = remainingBalance();
+    // Net asset effect at horizon: you have resaleValue, but if loan not fully paid, settle remaining
+    const depreciation = Math.max(0, buyPrice - resaleValue);
+    const runningMonthlyBuy = (insAnnual/12)+(roadTaxAnnual/12)+(maintAnnual/12)+parkingMonthly+fuelMonthly;
+    const runningTotalBuy = runningMonthlyBuy*months;
+    // Total outflow perspective: downpayment + payments + fees + running - (resale - remaining loan) as inflow at horizon
+    const resaleNetInflow = Math.max(0, resaleValue - rem);
+    const buyTotal = down + paidWithin + buyFees + runningTotalBuy - resaleNetInflow;
+    const buyEffMonthly = buyTotal/months;
+
+    // winner
+    let winText="—", deltaText="—";
+    if(isFinite(leaseTotal) && isFinite(buyTotal)){
+      const diff = leaseTotal - buyTotal; // positive => buy cheaper
+      if(Math.abs(diff)<1) winText="≈ Tie";
+      else winText = (diff>0) ? "Buying is cheaper" : "Leasing is cheaper";
+      deltaText = "Difference: SGD " + fmt(Math.abs(diff)) + " over " + months + " months";
+    }
+
+    $("leaseTotal").textContent = "SGD " + fmt(leaseTotal);
+    $("leaseMonthlyOut").textContent = "≈ SGD " + fmt(leaseEffMonthly) + " / month (all‑in)";
+    $("buyTotal").textContent = "SGD " + fmt(buyTotal);
+    $("buyMonthlyOut").textContent = "≈ SGD " + fmt(buyEffMonthly) + " / month (all‑in)";
+    $("winner").textContent = winText;
+    $("delta").textContent = deltaText;
+
+    const rows = [];
+    rows.push(["Lease payments", leaseMonthly*months, 0, "Monthly lease × horizon"]);
+    rows.push(["Lease fees", leaseUpfront+leaseEndFees, 0, "Upfront + end/return"]);
+    rows.push(["Depreciation (buy)", 0, depreciation, "Buy price − resale value"]);
+    rows.push(["Loan payments (within horizon)", 0, paidWithin, "Stops at loan term if shorter"]);
+    rows.push(["One‑time buy fees", 0, buyFees, "Bank + dealer fees"]);
+    rows.push(["Running costs (within horizon)", leaseRunMonthly*months, runningTotalBuy, "Insurance/road tax/maintenance/parking/fuel"]);
+    rows.push(["Resale net inflow (minus remaining loan)", -resaleNetInflow, -resaleNetInflow, "Applied only to buy (shown as negative cost)"]);
+
+    const tb = $("rows");
+    tb.innerHTML = rows.map(r=>{
+      return `<tr>
+        <td>${r[0]}</td>
+        <td>${"SGD "+fmt(r[1])}</td>
+        <td>${"SGD "+fmt(r[2])}</td>
+        <td style="opacity:.9">${r[3]}</td>
+      </tr>`;
+    }).join("");
+  }
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelectorAll("input,select").forEach(el=>el.addEventListener("input", calc));
+    calc();
+  });
+})();
+</script>
+</body>
+</html>
