@@ -36,7 +36,9 @@
     th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
     .mini{font-size:13px;opacity:.85}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid #ddd;background:#fff;font-weight:700;cursor:pointer}
+    /* Override global button theme safely: this page uses light buttons */
+    .btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid #ddd;background:#fff;color:#111827;font-weight:700;cursor:pointer}
+    .btn:hover{background:#f8fafc}
     .pill{display:inline-block;padding:4px 10px;border:1px solid #eee;border-radius:999px;font-size:12px;opacity:.85}
   </style>
 </head>
