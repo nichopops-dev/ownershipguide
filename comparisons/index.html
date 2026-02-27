@@ -50,6 +50,65 @@
       </div>
     </div>
 
+    <section class="og-wizard" aria-label="Comparisons quick path">
+      <div class="og-wizard-title">Quick comparison router</div>
+      <p class="og-wizard-sub">Choose what you're comparing — we'll route you to the right model + calculator combo.</p>
+
+      <div class="og-wizard-row">
+        <label class="sr-only" for="ogCompareWizard">Comparison router</label>
+        <select id="ogCompareWizard">
+          <option value="">Choose one…</option>
+          <optgroup label="Transport">
+            <option value="/car-vs-ride-hailing-cost.html">Car vs ride-hailing (framework)</option>
+            <option value="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing (run calculator)</option>
+            <option value="/car-leasing-vs-buying-singapore.html">Leasing vs buying (framework)</option>
+            <option value="/car-leasing-vs-buying-calculator-singapore.html">Leasing vs buying (run calculator)</option>
+            <option value="/used-car-vs-new-car-singapore.html">Used vs new (framework)</option>
+            <option value="/used-car-vs-new-car-calculator-singapore.html">Used vs new (run calculator)</option>
+            <option value="/coe-renew-vs-replace-singapore.html">Renew COE vs replace car</option>
+          </optgroup>
+          <optgroup label="Property">
+            <option value="/rent-vs-buy-property-singapore.html">Rent vs buy (framework)</option>
+            <option value="/rent-vs-buy-calculator-singapore.html">Rent vs buy (run calculator)</option>
+            <option value="/rent-out-vs-sell-singapore.html">Rent out vs sell (framework)</option>
+            <option value="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell (run calculator)</option>
+            <option value="/hdb-loan-vs-bank-loan-singapore.html">HDB loan vs bank loan (framework)</option>
+            <option value="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan (run calculator)</option>
+          </optgroup>
+        </select>
+        <a class="btn" id="ogCompareWizardGo" href="#" aria-disabled="true">Go</a>
+      </div>
+
+      <p class="og-wizard-foot"><span class="pill">Tip</span> If you're stuck, run a stress test first: <a href="/car-affordability-calculator-singapore.html">car affordability</a> or <a href="/property-affordability-calculator-singapore.html">property affordability</a>.</p>
+    </section>
+
+    <script>
+      (function () {
+        var sel = document.getElementById("ogCompareWizard");
+        var go = document.getElementById("ogCompareWizardGo");
+        if (!sel || !go) return;
+
+        function sync() {
+          var v = sel.value || "";
+          if (!v) {
+            go.setAttribute("aria-disabled", "true");
+            go.classList.add("is-disabled");
+            go.href = "#";
+            return;
+          }
+          go.setAttribute("aria-disabled", "false");
+          go.classList.remove("is-disabled");
+          go.href = v;
+        }
+
+        sel.addEventListener("change", sync);
+        go.addEventListener("click", function (e) {
+          if (go.getAttribute("aria-disabled") === "true") e.preventDefault();
+        });
+        sync();
+      })();
+    </script>
+
     <hr />
 
     <h2>Transport comparisons</h2>
@@ -89,6 +148,65 @@
         <div class="og-card-meta">Full exposure comparison, not vibes.</div>
       </a>
     </div>
+
+    <section class="og-wizard" aria-label="Comparisons quick path">
+      <div class="og-wizard-title">Quick comparison router</div>
+      <p class="og-wizard-sub">Choose what you're comparing — we'll route you to the right model + calculator combo.</p>
+
+      <div class="og-wizard-row">
+        <label class="sr-only" for="ogCompareWizard">Comparison router</label>
+        <select id="ogCompareWizard">
+          <option value="">Choose one…</option>
+          <optgroup label="Transport">
+            <option value="/car-vs-ride-hailing-cost.html">Car vs ride-hailing (framework)</option>
+            <option value="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing (run calculator)</option>
+            <option value="/car-leasing-vs-buying-singapore.html">Leasing vs buying (framework)</option>
+            <option value="/car-leasing-vs-buying-calculator-singapore.html">Leasing vs buying (run calculator)</option>
+            <option value="/used-car-vs-new-car-singapore.html">Used vs new (framework)</option>
+            <option value="/used-car-vs-new-car-calculator-singapore.html">Used vs new (run calculator)</option>
+            <option value="/coe-renew-vs-replace-singapore.html">Renew COE vs replace car</option>
+          </optgroup>
+          <optgroup label="Property">
+            <option value="/rent-vs-buy-property-singapore.html">Rent vs buy (framework)</option>
+            <option value="/rent-vs-buy-calculator-singapore.html">Rent vs buy (run calculator)</option>
+            <option value="/rent-out-vs-sell-singapore.html">Rent out vs sell (framework)</option>
+            <option value="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell (run calculator)</option>
+            <option value="/hdb-loan-vs-bank-loan-singapore.html">HDB loan vs bank loan (framework)</option>
+            <option value="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan (run calculator)</option>
+          </optgroup>
+        </select>
+        <a class="btn" id="ogCompareWizardGo" href="#" aria-disabled="true">Go</a>
+      </div>
+
+      <p class="og-wizard-foot"><span class="pill">Tip</span> If you're stuck, run a stress test first: <a href="/car-affordability-calculator-singapore.html">car affordability</a> or <a href="/property-affordability-calculator-singapore.html">property affordability</a>.</p>
+    </section>
+
+    <script>
+      (function () {
+        var sel = document.getElementById("ogCompareWizard");
+        var go = document.getElementById("ogCompareWizardGo");
+        if (!sel || !go) return;
+
+        function sync() {
+          var v = sel.value || "";
+          if (!v) {
+            go.setAttribute("aria-disabled", "true");
+            go.classList.add("is-disabled");
+            go.href = "#";
+            return;
+          }
+          go.setAttribute("aria-disabled", "false");
+          go.classList.remove("is-disabled");
+          go.href = v;
+        }
+
+        sel.addEventListener("change", sync);
+        go.addEventListener("click", function (e) {
+          if (go.getAttribute("aria-disabled") === "true") e.preventDefault();
+        });
+        sync();
+      })();
+    </script>
 
     <hr />
 
@@ -134,12 +252,72 @@
 
     </div>
 
+    <section class="og-wizard" aria-label="Comparisons quick path">
+      <div class="og-wizard-title">Quick comparison router</div>
+      <p class="og-wizard-sub">Choose what you're comparing — we'll route you to the right model + calculator combo.</p>
+
+      <div class="og-wizard-row">
+        <label class="sr-only" for="ogCompareWizard">Comparison router</label>
+        <select id="ogCompareWizard">
+          <option value="">Choose one…</option>
+          <optgroup label="Transport">
+            <option value="/car-vs-ride-hailing-cost.html">Car vs ride-hailing (framework)</option>
+            <option value="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing (run calculator)</option>
+            <option value="/car-leasing-vs-buying-singapore.html">Leasing vs buying (framework)</option>
+            <option value="/car-leasing-vs-buying-calculator-singapore.html">Leasing vs buying (run calculator)</option>
+            <option value="/used-car-vs-new-car-singapore.html">Used vs new (framework)</option>
+            <option value="/used-car-vs-new-car-calculator-singapore.html">Used vs new (run calculator)</option>
+            <option value="/coe-renew-vs-replace-singapore.html">Renew COE vs replace car</option>
+          </optgroup>
+          <optgroup label="Property">
+            <option value="/rent-vs-buy-property-singapore.html">Rent vs buy (framework)</option>
+            <option value="/rent-vs-buy-calculator-singapore.html">Rent vs buy (run calculator)</option>
+            <option value="/rent-out-vs-sell-singapore.html">Rent out vs sell (framework)</option>
+            <option value="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell (run calculator)</option>
+            <option value="/hdb-loan-vs-bank-loan-singapore.html">HDB loan vs bank loan (framework)</option>
+            <option value="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan (run calculator)</option>
+          </optgroup>
+        </select>
+        <a class="btn" id="ogCompareWizardGo" href="#" aria-disabled="true">Go</a>
+      </div>
+
+      <p class="og-wizard-foot"><span class="pill">Tip</span> If you're stuck, run a stress test first: <a href="/car-affordability-calculator-singapore.html">car affordability</a> or <a href="/property-affordability-calculator-singapore.html">property affordability</a>.</p>
+    </section>
+
+    <script>
+      (function () {
+        var sel = document.getElementById("ogCompareWizard");
+        var go = document.getElementById("ogCompareWizardGo");
+        if (!sel || !go) return;
+
+        function sync() {
+          var v = sel.value || "";
+          if (!v) {
+            go.setAttribute("aria-disabled", "true");
+            go.classList.add("is-disabled");
+            go.href = "#";
+            return;
+          }
+          go.setAttribute("aria-disabled", "false");
+          go.classList.remove("is-disabled");
+          go.href = v;
+        }
+
+        sel.addEventListener("change", sync);
+        go.addEventListener("click", function (e) {
+          if (go.getAttribute("aria-disabled") === "true") e.preventDefault();
+        });
+        sync();
+      })();
+    </script>
+
     <hr />
 
     <h2>Run the numbers (fast)</h2>
     <div class="box">
       <ul>
         <li><a href="/car-vs-ride-hailing-calculator.html">Car vs Ride-Hailing Break-Even Calculator</a></li>
+        <li><a href="/used-car-vs-new-car-calculator-singapore.html">Used vs New Car Calculator (all-in monthly)</a></li>
         <li><a href="/car-affordability-calculator-singapore.html">Car Affordability Stress Test</a></li>
         <li><a href="/property-affordability-calculator-singapore.html">Property Affordability Stress Test</a></li>
               <li><a href="/mortgage-interest-cost-singapore.html">Mortgage interest cost (mechanics + sensitivity)</a></li>

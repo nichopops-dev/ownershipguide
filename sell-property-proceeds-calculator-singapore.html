@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality</title>
+  <meta name="description" content="Singapore sell property proceeds calculator (2026): estimate cash proceeds after loan redemption, CPF refund, agent fee, legal fees, SSD, and other selling costs. See whether you have surplus cash or a shortfall."/>
+  <meta name="og:cluster" content="property"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <link rel="canonical" href="https://ownershipguide.com/sell-property-proceeds-calculator-singapore.html"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>Sell Property Proceeds Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This estimates your <strong>cash proceeds</strong> after selling: loan redemption + CPF refund + selling costs.
+      If the number feels “too low”, read <a href="/cpf-accrued-interest-singapore.html">CPF accrued interest</a>.
+    </p>
+
+    <div class="og-card" style="margin:14px 0;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+        <div>
+          <div class="og-card-title" style="margin:0;">Want the framework?</div>
+          <div class="og-card-meta" style="margin-top:4px;">
+            Read: <a href="/sell-property-cost-singapore.html">Sell Property Cost & Net Proceeds Reality</a>
+          </div>
+        </div>
+        <a class="btn btn-secondary" href="/bsd-absd-calculator-singapore.html">Also: BSD/ABSD calculator</a>
+      </div>
+    </div>
+
+    <h2>Inputs</h2>
+    <div class="og-card">
+      <div class="og-form-grid">
+        <label>
+          Sale price (SGD)
+          <input id="salePrice" type="number" min="0" step="10000" value="1200000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Outstanding loan to redeem (SGD)
+          <input id="loan" type="number" min="0" step="10000" value="650000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          CPF to refund (SGD)
+          <input id="cpfRefund" type="number" min="0" step="1000" value="280000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Agent fee (% of sale price)
+          <input id="agentPct" type="number" min="0" step="0.1" value="2.0" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Agent fee GST (% on agent fee)
+          <input id="gstPct" type="number" min="0" step="0.1" value="9.0" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Legal fee (SGD)
+          <input id="legal" type="number" min="0" step="50" value="2200" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Seller's Stamp Duty (SSD), if any (SGD)
+          <input id="ssd" type="number" min="0" step="1000" value="0" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Other selling costs (SGD)
+          <input id="other" type="number" min="0" step="100" value="800" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Buffer (SGD)
+          <input id="buffer" type="number" min="0" step="500" value="3000" inputmode="decimal"/>
+        </label>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        This is a planning estimate. Your bank redemption statement, CPF refund, and final fees are the source of truth.
+      </p>
+    </div>
+
+    <h2>Results</h2>
+    <div class="og-kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Cash proceeds (after CPF)</div>
+        <div class="kpi-value" id="kpiCash">—</div>
+        <div class="kpi-sub" id="kpiCashSub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">CPF refunded</div>
+        <div class="kpi-value" id="kpiCpf">—</div>
+        <div class="kpi-sub">Goes back into your CPF account</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Net proceeds before CPF</div>
+        <div class="kpi-value" id="kpiBeforeCpf">—</div>
+        <div class="kpi-sub">Sale price − loan − selling costs</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">All-in selling costs</div>
+        <div class="kpi-value" id="kpiCosts">—</div>
+        <div class="kpi-sub">Agent + GST + legal + SSD + others</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 style="margin-top:0;">Breakdown</h3>
+      <div style="overflow:auto;">
+        <table class="og-table" style="min-width:520px;">
+          <thead>
+            <tr><th>Item</th><th style="text-align:right;">Amount (SGD)</th></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="related-box">
+      <h3 style="margin-top:0;">Next steps</h3>
+      <ul>
+        <li><a href="/rent-vs-buy-calculator-singapore.html">Rent vs Buy calculator (net worth + break-even)</a></li>
+        <li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF needed to buy property</a></li>
+        <li><a href="/property/financing/">Property financing hub</a></li>
+      </ul>
+    </div>
+
+    <div id="site-footer"></div>
+  </main>
+
+  <script src="/includes.js"></script>
+  <script>
+    const fmt = (n) => {
+      const x = Number.isFinite(n) ? n : 0;
+      return x.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    };
+
+    function num(id){
+      const v = parseFloat(document.getElementById(id).value);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    function row(label, val){
+      const tr = document.createElement('tr');
+      const td1 = document.createElement('td');
+      const td2 = document.createElement('td');
+      td2.style.textAlign = 'right';
+      td1.textContent = label;
+      td2.textContent = val;
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      return tr;
+    }
+
+    function calc(){
+      const sale = num('salePrice');
+      const loan = num('loan');
+      const cpf = num('cpfRefund');
+      const agentPct = num('agentPct')/100;
+      const gstPct = num('gstPct')/100;
+      const legal = num('legal');
+      const ssd = num('ssd');
+      const other = num('other');
+      const buffer = num('buffer');
+
+      const agentFee = sale * agentPct;
+      const agentGst = agentFee * gstPct;
+      const sellingCosts = agentFee + agentGst + legal + ssd + other + buffer;
+      const beforeCpf = sale - loan - sellingCosts;
+      const cash = beforeCpf - cpf;
+
+      document.getElementById('kpiCash').textContent = `S$${fmt(cash)}`;
+      document.getElementById('kpiCashSub').textContent = cash >= 0 ? 'Cash you receive after CPF refund' : 'Shortfall (you may need top-up)';
+      document.getElementById('kpiCpf').textContent = `S$${fmt(cpf)}`;
+      document.getElementById('kpiBeforeCpf').textContent = `S$${fmt(beforeCpf)}`;
+      document.getElementById('kpiCosts').textContent = `S$${fmt(sellingCosts)}`;
+
+      const tb = document.getElementById('tbody');
+      tb.innerHTML = '';
+      tb.appendChild(row('Sale price', `S$${fmt(sale)}`));
+      tb.appendChild(row('Less: loan redeemed', `- S$${fmt(loan)}`));
+      tb.appendChild(row('Less: agent fee', `- S$${fmt(agentFee)}`));
+      tb.appendChild(row('Less: GST on agent fee', `- S$${fmt(agentGst)}`));
+      tb.appendChild(row('Less: legal fee', `- S$${fmt(legal)}`));
+      tb.appendChild(row('Less: SSD (if any)', `- S$${fmt(ssd)}`));
+      tb.appendChild(row('Less: other selling costs', `- S$${fmt(other)}`));
+      tb.appendChild(row('Less: buffer', `- S$${fmt(buffer)}`));
+      tb.appendChild(row('Net proceeds before CPF', `S$${fmt(beforeCpf)}`));
+      tb.appendChild(row('Less: CPF refund', `- S$${fmt(cpf)}`));
+      tb.appendChild(row('Cash proceeds (after CPF)', `S$${fmt(cash)}`));
+    }
+
+    function reset(){
+      document.getElementById('salePrice').value = 1200000;
+      document.getElementById('loan').value = 650000;
+      document.getElementById('cpfRefund').value = 280000;
+      document.getElementById('agentPct').value = 2.0;
+      document.getElementById('gstPct').value = 9.0;
+      document.getElementById('legal').value = 2200;
+      document.getElementById('ssd').value = 0;
+      document.getElementById('other').value = 800;
+      document.getElementById('buffer').value = 3000;
+      calc();
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+    calc();
+  </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Rent Out vs Sell Calculator (Singapore, 2026): Net Worth After X Years</title>
+  <meta name="description" content="Singapore rent out vs sell calculator (2026): compare selling now (invest proceeds) vs renting out for a holding period then selling. Includes mortgage amortization, vacancy, expenses, appreciation, selling costs, and a simple invest return for cashflows."/>
+  <meta name="og:cluster" content="property"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <link rel="canonical" href="https://ownershipguide.com/rent-out-vs-sell-calculator-singapore.html"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>Rent Out vs Sell Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This answers: <strong>“If I rent out for a few years, am I better off than selling now?”</strong>
+      It’s a planning model — the goal is to force the right variables into the open.
+    </p>
+
+    <div class="og-card" style="margin:14px 0;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+        <div>
+          <div class="og-card-title" style="margin:0;">Want the framework?</div>
+          <div class="og-card-meta" style="margin-top:4px;">
+            Read: <a href="/rent-out-vs-sell-singapore.html">Rent Out vs Sell (No‑Regret Framework)</a>
+          </div>
+        </div>
+        <a class="btn btn-secondary" href="/sell-property-proceeds-calculator-singapore.html">Also: Sell proceeds (cash vs CPF)</a>
+      </div>
+    </div>
+
+    <h2>Inputs</h2>
+    <div class="og-card">
+      <div class="og-form-grid">
+        <label>
+          Current market value (SGD)
+          <input id="valueNow" type="number" min="0" step="10000" value="1200000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Outstanding loan now (SGD)
+          <input id="loanNow" type="number" min="0" step="10000" value="650000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Remaining loan tenure (years)
+          <input id="tenure" type="number" min="1" step="1" value="22" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Interest rate (% p.a.)
+          <input id="rate" type="number" min="0" step="0.01" value="3.25" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Holding period if you rent out (years)
+          <input id="horizon" type="number" min="1" step="1" value="5" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Gross monthly rent today (SGD)
+          <input id="rent" type="number" min="0" step="50" value="4200" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Vacancy / downtime (% of year)
+          <input id="vacancy" type="number" min="0" max="100" step="0.5" value="5" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Landlord expenses (SGD / month)
+          <input id="expenses" type="number" min="0" step="10" value="650" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Property appreciation (% p.a.)
+          <input id="app" type="number" step="0.1" value="2.0" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Selling cost (% of sale price)
+          <input id="sellPct" type="number" min="0" step="0.1" value="2.0" inputmode="decimal"/>
+        </label>
+
+        <label>
+          CPF refund at sale (SGD)
+          <input id="cpf" type="number" min="0" step="1000" value="280000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Invest return on cashflows (% p.a.)
+          <input id="inv" type="number" step="0.1" value="4.5" inputmode="decimal"/>
+        </label>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Notes: This assumes you keep the current loan structure (standard amortization). Taxes, insurance, and major repairs are simplified into “expenses”.
+      </p>
+    </div>
+
+    <h2>Results</h2>
+    <div class="og-kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Sell now → invest (end value)</div>
+        <div class="kpi-value" id="kpiSell">—</div>
+        <div class="kpi-sub" id="kpiSellSub">—</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">Rent out → sell later (end value)</div>
+        <div class="kpi-value" id="kpiRentOut">—</div>
+        <div class="kpi-sub" id="kpiRentOutSub">—</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">Winner</div>
+        <div class="kpi-value" id="kpiWinner">—</div>
+        <div class="kpi-sub" id="kpiDelta">—</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">Net rent cashflow / month</div>
+        <div class="kpi-value" id="kpiNetRent">—</div>
+        <div class="kpi-sub">After vacancy + expenses + mortgage</div>
+      </div>
+    </div>
+
+    <details class="box">
+      <summary><strong>Show breakdown</strong> (what this model is doing)</summary>
+      <div style="margin-top:10px;">
+        <ul>
+          <li><strong>Sell now:</strong> estimate cash proceeds (excluding CPF). Invest proceeds for the holding period.</li>
+          <li><strong>Rent out:</strong> each month, net rent cashflow is invested (or topped up if negative). At the end, sell: net proceeds = sale price − remaining loan − selling costs − CPF refund.</li>
+          <li>End values are compared.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="box">
+      <h3 style="margin-top:0;">Key numbers</h3>
+      <div style="overflow:auto;">
+        <table class="og-table" style="min-width:640px;">
+          <thead><tr><th>Item</th><th style="text-align:right;">Value</th></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="related-box">
+      <h3 style="margin-top:0;">Next steps</h3>
+      <ul>
+        <li><a href="/rent-vs-buy-calculator-singapore.html">Rent vs Buy calculator (net worth + break-even)</a></li>
+        <li><a href="/refinance-savings-calculator-singapore.html">Refinance savings calculator (break-even)</a></li>
+        <li><a href="/property/financing/">Property financing hub</a></li>
+      </ul>
+    </div>
+
+    <div id="site-footer"></div>
+  </main>
+
+  <script src="/includes.js"></script>
+  <script>
+    const fmt0 = (n) => (Number.isFinite(n) ? n : 0).toLocaleString(undefined, {maximumFractionDigits:0});
+    const fmt = (n) => `S$${fmt0(n)}`;
+
+    function num(id){
+      const v = parseFloat(document.getElementById(id).value);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    function pmt(P, annualRate, years){
+      const r = annualRate/12;
+      const n = Math.max(1, Math.round(years*12));
+      if (r === 0) return P/n;
+      return P * (r*Math.pow(1+r,n)) / (Math.pow(1+r,n)-1);
+    }
+
+    function balAfter(P, annualRate, yearsTotal, monthsPaid){
+      const r = annualRate/12;
+      const n = Math.max(1, Math.round(yearsTotal*12));
+      const m = Math.min(n, Math.max(0, Math.round(monthsPaid)));
+      if (r === 0) return P * (1 - m/n);
+      const A = pmt(P, annualRate, yearsTotal);
+      return P*Math.pow(1+r,m) - A*(Math.pow(1+r,m)-1)/r;
+    }
+
+    function fvMonthly(seriesMonthly, annualReturn, months){
+      // assumes series paid at end of each month, compounded monthly
+      const r = annualReturn/12;
+      let fv = 0;
+      for (let i=0;i<months;i++){
+        fv = fv*(1+r) + seriesMonthly;
+      }
+      return fv;
+    }
+
+    function calc(){
+      const valueNow = num('valueNow');
+      const loanNow = num('loanNow');
+      const tenure = num('tenure');
+      const rate = num('rate')/100;
+      const horizonY = Math.max(1, Math.round(num('horizon')));
+      const months = horizonY*12;
+      const rent = num('rent');
+      const vacancy = num('vacancy')/100;
+      const expenses = num('expenses');
+      const app = num('app')/100;
+      const sellPct = num('sellPct')/100;
+      const cpf = num('cpf');
+      const inv = num('inv')/100;
+
+      // Sell now
+      const sellNowPrice = valueNow;
+      const sellNowCosts = sellNowPrice*sellPct;
+      const sellNowNetBeforeCpf = sellNowPrice - loanNow - sellNowCosts;
+      const sellNowCash = sellNowNetBeforeCpf - cpf; // cash after CPF
+
+      const sellNowEnd = sellNowCash * Math.pow(1 + inv/12, months);
+
+      // Rent out
+      const A = pmt(loanNow, rate, tenure);
+      const balEnd = balAfter(loanNow, rate, tenure, months);
+
+      const rentEff = rent * (1 - vacancy);
+      const netRentMonthly = rentEff - expenses - A;
+      const rentCashEnd = fvMonthly(netRentMonthly, inv, months);
+
+      const saleEndPrice = valueNow * Math.pow(1 + app, horizonY);
+      const saleEndCosts = saleEndPrice * sellPct;
+      const saleEndNetBeforeCpf = saleEndPrice - balEnd - saleEndCosts;
+      const saleEndCash = saleEndNetBeforeCpf - cpf;
+
+      const rentOutEnd = rentCashEnd + saleEndCash;
+
+      // KPIs
+      document.getElementById('kpiSell').textContent = fmt(sellNowEnd);
+      document.getElementById('kpiSellSub').textContent = `Sell now cash invested for ${horizonY}y`;
+      document.getElementById('kpiRentOut').textContent = fmt(rentOutEnd);
+      document.getElementById('kpiRentOutSub').textContent = `Rent cashflows + cash from sale in ${horizonY}y`;
+      document.getElementById('kpiNetRent').textContent = fmt(netRentMonthly);
+
+      const delta = rentOutEnd - sellNowEnd;
+      const winner = delta >= 0 ? 'RENT OUT' : 'SELL NOW';
+      document.getElementById('kpiWinner').textContent = winner;
+      document.getElementById('kpiDelta').textContent = `Difference: ${fmt(Math.abs(delta))}`;
+
+      // Table
+      const tb = document.getElementById('tbody');
+      tb.innerHTML = '';
+      const add = (k,v) => {
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        td2.style.textAlign='right';
+        td1.textContent=k;
+        td2.textContent=v;
+        tr.appendChild(td1); tr.appendChild(td2);
+        tb.appendChild(tr);
+      };
+
+      add('Mortgage monthly payment', fmt(A));
+      add('Net rent cashflow / month', fmt(netRentMonthly));
+      add('Remaining loan after horizon', fmt(balEnd));
+      add('Sale price after horizon (appreciation)', fmt(saleEndPrice));
+      add('Selling cost after horizon', fmt(saleEndCosts));
+      add('Cash from sale after horizon (after CPF)', fmt(saleEndCash));
+      add('FV of rent cashflows', fmt(rentCashEnd));
+      add('End value if rent out', fmt(rentOutEnd));
+      add('Sell now cash (after CPF)', fmt(sellNowCash));
+      add('End value if sell now (invest)', fmt(sellNowEnd));
+    }
+
+    function reset(){
+      document.getElementById('valueNow').value = 1200000;
+      document.getElementById('loanNow').value = 650000;
+      document.getElementById('tenure').value = 22;
+      document.getElementById('rate').value = 3.25;
+      document.getElementById('horizon').value = 5;
+      document.getElementById('rent').value = 4200;
+      document.getElementById('vacancy').value = 5;
+      document.getElementById('expenses').value = 650;
+      document.getElementById('app').value = 2.0;
+      document.getElementById('sellPct').value = 2.0;
+      document.getElementById('cpf').value = 280000;
+      document.getElementById('inv').value = 4.5;
+      calc();
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+    calc();
+  </script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Used vs New Car Calculator (Singapore, 2026): All‑In Cost Over Your Holding Period</title>
+  <meta name="description" content="Singapore used vs new car calculator (2026): compare depreciation, loan interest (flat/effective), and running costs to estimate true all-in monthly cost for used vs new over the same holding period."/>
+  <meta name="og:cluster" content="transport"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <link rel="canonical" href="https://ownershipguide.com/used-car-vs-new-car-calculator-singapore.html"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>Used vs New Car Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      The trap is comparing <strong>purchase price</strong> instead of <strong>depreciation + financing + maintenance risk</strong>.
+      This calculator estimates the all‑in monthly cost for used vs new over the same holding period.
+    </p>
+
+    <div class="og-card" style="margin:14px 0;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+        <div>
+          <div class="og-card-title" style="margin:0;">Want the framework?</div>
+          <div class="og-card-meta" style="margin-top:4px;">
+            Read: <a href="/used-car-vs-new-car-singapore.html">Used vs New Car (Decision Framework)</a>
+          </div>
+        </div>
+        <a class="btn btn-secondary" href="/car-ownership-cost-calculator-singapore.html">Also: All‑in ownership cost</a>
+      </div>
+    </div>
+
+    <h2>Inputs</h2>
+    <div class="og-card">
+      <div class="og-form-grid">
+        <label>
+          Holding period (years)
+          <input id="horizon" type="number" min="1" step="1" value="5" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Loan interest (% p.a.)
+          <input id="rate" type="number" min="0" step="0.01" value="2.88" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Interest type
+          <select id="rateType">
+            <option value="effective" selected>Effective (APR)</option>
+            <option value="flat">Flat rate (simple interest)</option>
+          </select>
+        </label>
+
+        <label>
+          Loan tenure (years)
+          <input id="tenure" type="number" min="1" step="1" value="7" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Downpayment (% of price)
+          <input id="down" type="number" min="0" max="100" step="0.5" value="30" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Fees (loan + admin, SGD)
+          <input id="fees" type="number" min="0" step="50" value="800" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Common running costs (SGD / month)
+          <input id="commonRun" type="number" min="0" step="10" value="850" inputmode="decimal"/>
+        </label>
+
+        <label>
+          Used extra maintenance risk (SGD / month)
+          <input id="usedExtra" type="number" min="0" step="10" value="250" inputmode="decimal"/>
+        </label>
+
+        <label>
+          New extra warranty/servicing (SGD / month)
+          <input id="newExtra" type="number" min="0" step="10" value="80" inputmode="decimal"/>
+        </label>
+
+        <label>
+          <strong>Used</strong> purchase price (SGD)
+          <input id="usedPrice" type="number" min="0" step="5000" value="90000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          <strong>Used</strong> resale value after holding (SGD)
+          <input id="usedResale" type="number" min="0" step="5000" value="45000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          <strong>New</strong> purchase price (SGD)
+          <input id="newPrice" type="number" min="0" step="5000" value="145000" inputmode="decimal"/>
+        </label>
+
+        <label>
+          <strong>New</strong> resale value after holding (SGD)
+          <input id="newResale" type="number" min="0" step="5000" value="75000" inputmode="decimal"/>
+        </label>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Tip: If you’re paying cash, set downpayment to 100% or set the interest rate to 0.
+      </p>
+    </div>
+
+    <h2>Results</h2>
+    <div class="og-kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Used all‑in monthly</div>
+        <div class="kpi-value" id="kpiUsed">—</div>
+        <div class="kpi-sub">Depreciation + interest + running</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">New all‑in monthly</div>
+        <div class="kpi-value" id="kpiNew">—</div>
+        <div class="kpi-sub">Depreciation + interest + running</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Cheaper option</div>
+        <div class="kpi-value" id="kpiWinner">—</div>
+        <div class="kpi-sub" id="kpiDelta">—</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Holding period</div>
+        <div class="kpi-value" id="kpiH">—</div>
+        <div class="kpi-sub">Used vs new flips by horizon</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 style="margin-top:0;">Breakdown</h3>
+      <div style="overflow:auto;">
+        <table class="og-table" style="min-width:720px;">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th style="text-align:right;">Used (S$/mo)</th>
+              <th style="text-align:right;">New (S$/mo)</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="related-box">
+      <h3 style="margin-top:0;">Next steps</h3>
+      <ul>
+        <li><a href="/car-ownership-cost-calculator-singapore.html">All‑in ownership cost calculator (TCO)</a></li>
+        <li><a href="/car-loan-calculator-singapore.html">Car loan calculator (flat vs effective)</a></li>
+        <li><a href="/transport/financing/">Transport financing hub</a></li>
+      </ul>
+    </div>
+
+    <div id="site-footer"></div>
+  </main>
+
+  <script src="/includes.js"></script>
+  <script>
+    const fmt0 = (n) => (Number.isFinite(n) ? n : 0).toLocaleString(undefined,{maximumFractionDigits:0});
+    const money = (n) => `S$${fmt0(n)}`;
+
+    function num(id){
+      const v = parseFloat(document.getElementById(id).value);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    function monthlyPaymentEffective(P, annualRate, years){
+      const r = annualRate/12;
+      const n = Math.max(1, Math.round(years*12));
+      if (r === 0) return P/n;
+      return P * (r*Math.pow(1+r,n)) / (Math.pow(1+r,n)-1);
+    }
+
+    function totalInterestEffective(P, annualRate, years){
+      const A = monthlyPaymentEffective(P, annualRate, years);
+      const n = Math.max(1, Math.round(years*12));
+      return A*n - P;
+    }
+
+    function totalInterestFlat(P, flatAnnualRate, years){
+      return P * flatAnnualRate * years;
+    }
+
+    function solveAPRFromFlat(P, flatAnnualRate, years){
+      // Returns an APR whose amortized payment gives similar total paid to flat interest method.
+      const n = Math.max(1, Math.round(years*12));
+      const targetTotal = P + totalInterestFlat(P, flatAnnualRate, years);
+      const targetPmt = targetTotal / n;
+
+      let lo = 0, hi = 0.5; // 50% APR upper bound
+      for (let i=0;i<40;i++){
+        const mid = (lo+hi)/2;
+        const pmt = monthlyPaymentEffective(P, mid, years);
+        if (pmt > targetPmt) hi = mid; else lo = mid;
+      }
+      return (lo+hi)/2;
+    }
+
+    function calcOne(price, resale, horizonY, rate, rateType, tenureY, downPct, fees, runMonthly){
+      const months = horizonY*12;
+      const down = price * (downPct/100);
+      const principal = Math.max(0, price - down);
+
+      const loanYears = Math.min(tenureY, horizonY); // we approximate interest cost within holding period by tenure cap
+      let interestTotal = 0;
+      if (principal > 0 && rate > 0){
+        if (rateType === 'flat'){
+          interestTotal = totalInterestFlat(principal, rate, loanYears);
+        } else {
+          interestTotal = totalInterestEffective(principal, rate, loanYears);
+        }
+      }
+
+      const dep = Math.max(0, price - resale);
+      const total = dep + interestTotal + fees + runMonthly*months;
+      const monthly = total / months;
+      return { monthly, depMo: dep/months, intMo: interestTotal/months, feeMo: fees/months, runMo: runMonthly, total, principal, interestTotal };
+    }
+
+    function buildRow(name, u, n){
+      const tr = document.createElement('tr');
+      const td0 = document.createElement('td');
+      const td1 = document.createElement('td');
+      const td2 = document.createElement('td');
+      td1.style.textAlign = td2.style.textAlign = 'right';
+      td0.textContent = name;
+      td1.textContent = money(u);
+      td2.textContent = money(n);
+      tr.appendChild(td0); tr.appendChild(td1); tr.appendChild(td2);
+      return tr;
+    }
+
+    function calc(){
+      const horizon = Math.max(1, Math.round(num('horizon')));
+      const rate = num('rate')/100;
+      const rateType = document.getElementById('rateType').value;
+      const tenure = Math.max(1, Math.round(num('tenure')));
+      const down = Math.min(100, Math.max(0, num('down')));
+      const fees = num('fees');
+      const commonRun = num('commonRun');
+      const usedExtra = num('usedExtra');
+      const newExtra = num('newExtra');
+
+      const usedPrice = num('usedPrice');
+      const usedResale = num('usedResale');
+      const newPrice = num('newPrice');
+      const newResale = num('newResale');
+
+      const used = calcOne(usedPrice, usedResale, horizon, rate, rateType, tenure, down, fees, commonRun + usedExtra);
+      const neu = calcOne(newPrice, newResale, horizon, rate, rateType, tenure, down, fees, commonRun + newExtra);
+
+      document.getElementById('kpiUsed').textContent = money(used.monthly);
+      document.getElementById('kpiNew').textContent = money(neu.monthly);
+      document.getElementById('kpiH').textContent = `${horizon}y`;
+
+      const delta = neu.monthly - used.monthly;
+      let winner = 'USED';
+      if (delta < 0) winner = 'NEW';
+      document.getElementById('kpiWinner').textContent = winner;
+      document.getElementById('kpiDelta').textContent = `Monthly difference: ${money(Math.abs(delta))}`;
+
+      const tb = document.getElementById('tbody');
+      tb.innerHTML = '';
+      tb.appendChild(buildRow('Depreciation', used.depMo, neu.depMo));
+      tb.appendChild(buildRow('Interest (approx)', used.intMo, neu.intMo));
+      tb.appendChild(buildRow('Fees (spread)', used.feeMo, neu.feeMo));
+      tb.appendChild(buildRow('Running costs', used.runMo, neu.runMo));
+      tb.appendChild(buildRow('All‑in monthly', used.monthly, neu.monthly));
+
+      // If flat: show equivalent APR hint (displayed as a note by updating placeholder in table footer? keep simple)
+      if (rateType === 'flat'){
+        const aprHint = solveAPRFromFlat(100000, rate, Math.min(tenure, horizon));
+        // not shown directly to avoid clutter; users can use car loan calculator for exact
+      }
+    }
+
+    function reset(){
+      document.getElementById('horizon').value = 5;
+      document.getElementById('rate').value = 2.88;
+      document.getElementById('rateType').value = 'effective';
+      document.getElementById('tenure').value = 7;
+      document.getElementById('down').value = 30;
+      document.getElementById('fees').value = 800;
+      document.getElementById('commonRun').value = 850;
+      document.getElementById('usedExtra').value = 250;
+      document.getElementById('newExtra').value = 80;
+      document.getElementById('usedPrice').value = 90000;
+      document.getElementById('usedResale').value = 45000;
+      document.getElementById('newPrice').value = 145000;
+      document.getElementById('newResale').value = 75000;
+      calc();
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+    calc();
+  </script>
+</body>
+</html>
