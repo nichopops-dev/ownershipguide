@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Car Ownership Cost Calculator Singapore (2026): True All‑In Monthly Cost (5‑Year TCO)</title>
+  <meta name="description" content="Singapore car ownership cost calculator (2026): model true all‑in monthly cost over 1–10 years. Includes depreciation (purchase vs resale), loan interest (flat or effective), insurance, road tax, parking, maintenance, and fuel based on mileage.">
+
+  <meta property="og:title" content="Car Ownership Cost Calculator (Singapore, 2026): True All‑In Monthly Cost">
+  <meta property="og:description" content="Model true all‑in monthly cost over your horizon: depreciation + financing + operating costs.">
+  <meta property="og:cluster" content="transport">
+  <meta property="og:subtopic" content="calculator">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/includes.js"></script>
+
+  <style>
+    .og-section{margin:18px 0;}
+    .og-table{width:100%; border-collapse:collapse;}
+    .og-table th,.og-table td{padding:10px; border-bottom:1px solid #e7e7e7; text-align:left; vertical-align:top;}
+    .og-table th{font-weight:700;}
+    .og-help{font-size:13px; line-height:1.35;}
+    .og-inline-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
+    .og-pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #e7e7e7; font-size:13px;}
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <div class="og-breadcrumbs"><a href="/">Home</a> / <a href="/calculators/">Calculators</a> / Car ownership cost</div>
+
+    <h1>Car Ownership Cost Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This is the “real monthly cost” calculator: depreciation + financing + operating costs.
+      It’s designed to complement the deep-dive breakdowns (not replace them).
+    </p>
+
+    <div class="og-card og-section">
+      <div class="og-card-title">Inputs</div>
+      <p class="muted og-help">Tip: if you’re unsure, start with a 5‑year horizon and a conservative resale value.</p>
+
+      <div class="og-form-grid">
+        <div>
+          <label for="horizonYears">Horizon (years)</label>
+          <input id="horizonYears" type="number" min="1" max="10" step="1" value="5">
+        </div>
+
+        <div>
+          <label for="onRoadPrice">On‑road price (SGD)</label>
+          <input id="onRoadPrice" type="number" min="0" step="1000" value="160000">
+        </div>
+
+        <div>
+          <label for="resaleValue">Expected resale at horizon (SGD)</label>
+          <input id="resaleValue" type="number" min="0" step="1000" value="60000">
+        </div>
+
+        <div>
+          <label for="downPct">Downpayment (%)</label>
+          <input id="downPct" type="number" min="0" max="100" step="1" value="30">
+        </div>
+
+        <div>
+          <label for="loanType">Loan interest type</label>
+          <select id="loanType">
+            <option value="effective" selected>Effective (APR)</option>
+            <option value="flat">Flat rate (simple interest)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="rate">Interest rate (% per year)</label>
+          <input id="rate" type="number" min="0" step="0.01" value="2.78">
+        </div>
+
+        <div>
+          <label for="loanYears">Loan tenure (years)</label>
+          <input id="loanYears" type="number" min="1" max="7" step="1" value="7">
+        </div>
+
+        <div>
+          <label for="fees">One‑time loan fees (SGD)</label>
+          <input id="fees" type="number" min="0" step="50" value="0">
+        </div>
+
+        <div>
+          <label for="insuranceAnnual">Insurance (SGD / year)</label>
+          <input id="insuranceAnnual" type="number" min="0" step="50" value="1800">
+        </div>
+
+        <div>
+          <label for="roadTaxAnnual">Road tax (SGD / year)</label>
+          <input id="roadTaxAnnual" type="number" min="0" step="50" value="900">
+        </div>
+
+        <div>
+          <label for="maintenanceAnnual">Maintenance + repairs (SGD / year)</label>
+          <input id="maintenanceAnnual" type="number" min="0" step="50" value="1200">
+        </div>
+
+        <div>
+          <label for="parkingMonthly">Parking (SGD / month)</label>
+          <input id="parkingMonthly" type="number" min="0" step="10" value="200">
+        </div>
+
+        <div>
+          <label for="mileageAnnual">Annual mileage (km)</label>
+          <input id="mileageAnnual" type="number" min="0" step="500" value="15000">
+        </div>
+
+        <div>
+          <label for="kmPerLitre">Fuel efficiency (km/L)</label>
+          <input id="kmPerLitre" type="number" min="1" step="0.1" value="12">
+        </div>
+
+        <div>
+          <label for="fuelPrice">Fuel price (SGD / L)</label>
+          <input id="fuelPrice" type="number" min="0" step="0.01" value="2.90">
+        </div>
+      </div>
+
+      <div class="og-inline-actions">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset">Reset defaults</button>
+        <span class="og-pill" id="loanPrincipalPill"></span>
+      </div>
+    </div>
+
+    <div class="og-card og-section">
+      <div class="og-card-title">Results</div>
+
+      <div class="og-kpi-grid" style="margin-top:12px;">
+        <div class="kpi">
+          <div class="kpi-label">True all‑in monthly cost</div>
+          <div class="kpi-value" id="kpiMonthly">—</div>
+          <div class="kpi-foot" id="kpiMonthlyFoot"></div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Total cost (horizon)</div>
+          <div class="kpi-value" id="kpiTotal">—</div>
+          <div class="kpi-foot">All‑in: depreciation + financing + operating</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Depreciation</div>
+          <div class="kpi-value" id="kpiDep">—</div>
+          <div class="kpi-foot">On‑road − resale</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Financing interest</div>
+          <div class="kpi-value" id="kpiInterest">—</div>
+          <div class="kpi-foot" id="kpiInterestFoot"></div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:18px;">Breakdown</h2>
+      <div class="table-wrap">
+        <table class="og-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Horizon total</th>
+              <th>Monthly equivalent</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="breakdownBody"></tbody>
+        </table>
+      </div>
+
+      <p class="muted og-help" style="margin-top:12px;">
+        If your “monthly instalment” feels affordable but this number doesn’t — that’s the instalment trap.
+        Use this together with the frameworks below.
+      </p>
+
+      <div class="og-inline-actions">
+        <a class="btn btn-secondary" href="/car-ownership-cost.html">Read: 5‑year cost breakdown (framework)</a>
+        <a class="btn btn-secondary" href="/car-depreciation-singapore.html">Read: depreciation in Singapore</a>
+        <a class="btn btn-secondary" href="/transport/financing/">Transport financing hub</a>
+      </div>
+    </div>
+
+    <div class="og-card og-section">
+      <div class="og-card-title">Notes (what this does and doesn’t do)</div>
+      <ul>
+        <li><b>Depreciation</b> is modeled as on‑road price minus your expected resale value at the horizon.</li>
+        <li><b>Financing</b> uses either an effective APR amortization model or flat‑rate simple interest (common in advertising). Flat‑rate monthly is approximated by adding simple interest across the loan tenure.</li>
+        <li><b>Fuel</b> uses annual mileage ÷ km/L × fuel price. It ignores rebates/discounts and assumes stable prices.</li>
+        <li>This is a <b>decision calculator</b>, not an accounting statement. Use conservative inputs.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+<script>
+(function(){
+  const $ = (id) => document.getElementById(id);
+
+  const fmt = (n) => {
+    if (!isFinite(n)) return "—";
+    return n.toLocaleString("en-SG", { style:"currency", currency:"SGD", maximumFractionDigits:0 });
+  };
+
+  const num = (id) => {
+    const v = parseFloat($(id).value);
+    return isFinite(v) ? v : 0;
+  };
+
+  function pmt(ratePerMonth, nper, pv){
+    if (nper <= 0) return 0;
+    if (Math.abs(ratePerMonth) < 1e-10) return pv / nper;
+    return (ratePerMonth * pv) / (1 - Math.pow(1 + ratePerMonth, -nper));
+  }
+
+  function loanModel(principal, annualRatePct, years, type){
+    const months = Math.max(1, Math.round(years * 12));
+    const r = Math.max(0, annualRatePct) / 100;
+
+    if (principal <= 0) return { months, monthly: 0, totalPaid: 0, interest: 0, type };
+
+    if (type === "flat"){
+      // simple interest over the full tenure, then spread across months
+      const interest = principal * r * (months / 12);
+      const totalPaid = principal + interest;
+      const monthly = totalPaid / months;
+      return { months, monthly, totalPaid, interest, type };
+    }
+
+    // effective APR amortization
+    const rm = r / 12;
+    const monthly = pmt(rm, months, principal);
+    const totalPaid = monthly * months;
+    const interest = Math.max(0, totalPaid - principal);
+    return { months, monthly, totalPaid, interest, type };
+  }
+
+  function calc(){
+    const horizonYears = Math.max(1, Math.min(10, Math.round(num("horizonYears") || 5)));
+    $("horizonYears").value = horizonYears;
+
+    const onRoad = Math.max(0, num("onRoadPrice"));
+    const resale = Math.max(0, num("resaleValue"));
+
+    const downPct = Math.max(0, Math.min(100, num("downPct")));
+    const loanType = $("loanType").value;
+    const rate = Math.max(0, num("rate"));
+    const loanYears = Math.max(1, Math.min(7, Math.round(num("loanYears") || 7)));
+    $("loanYears").value = loanYears;
+
+    const fees = Math.max(0, num("fees"));
+
+    const insuranceAnnual = Math.max(0, num("insuranceAnnual"));
+    const roadTaxAnnual = Math.max(0, num("roadTaxAnnual"));
+    const maintenanceAnnual = Math.max(0, num("maintenanceAnnual"));
+    const parkingMonthly = Math.max(0, num("parkingMonthly"));
+
+    const mileageAnnual = Math.max(0, num("mileageAnnual"));
+    const kmPerLitre = Math.max(1, num("kmPerLitre"));
+    const fuelPrice = Math.max(0, num("fuelPrice"));
+
+    const monthsH = horizonYears * 12;
+
+    const down = onRoad * (downPct/100);
+    const principal = Math.max(0, onRoad - down);
+    $("loanPrincipalPill").textContent = principal > 0 ? ("Loan principal: " + fmt(principal)) : "Loan principal: —";
+
+    const dep = Math.max(0, onRoad - resale);
+
+    const loan = loanModel(principal, rate, loanYears, loanType);
+    // allocate financing cost within horizon (if horizon < loan tenure, only count those months)
+    const loanMonthsCounted = Math.min(monthsH, loan.months);
+    const paidWithinH = loan.monthly * loanMonthsCounted;
+    const principalRepaidWithinH = Math.min(principal, paidWithinH); // conservative (overstates interest if horizon < tenure)
+    const interestWithinH = Math.max(0, paidWithinH - principalRepaidWithinH);
+
+    // operating costs
+    const insurance = insuranceAnnual * horizonYears;
+    const roadTax = roadTaxAnnual * horizonYears;
+    const maintenance = maintenanceAnnual * horizonYears;
+    const parking = parkingMonthly * monthsH;
+
+    const litresPerYear = mileageAnnual / kmPerLitre;
+    const fuel = litresPerYear * fuelPrice * horizonYears;
+
+    const financingTotal = interestWithinH + fees;
+    const operatingTotal = insurance + roadTax + maintenance + parking + fuel;
+    const total = dep + financingTotal + operatingTotal;
+    const monthly = total / monthsH;
+
+    $("kpiMonthly").textContent = fmt(monthly);
+    $("kpiMonthlyFoot").textContent = horizonYears + "‑year horizon (" + monthsH + " months)";
+    $("kpiTotal").textContent = fmt(total);
+    $("kpiDep").textContent = fmt(dep);
+    $("kpiInterest").textContent = fmt(financingTotal);
+    $("kpiInterestFoot").textContent = (loanType === "flat" ? "Flat rate + fees (within horizon)" : "APR interest + fees (within horizon)");
+
+    const rows = [
+      ["Depreciation", dep, dep/monthsH, "On‑road − resale (dominant in SG)"],
+      ["Financing (interest + fees)", financingTotal, financingTotal/monthsH, "Counts payments within horizon (fees counted upfront)"],
+      ["Insurance", insurance, insurance/monthsH, "Annual × horizon"],
+      ["Road tax", roadTax, roadTax/monthsH, "Annual × horizon"],
+      ["Maintenance + repairs", maintenance, maintenance/monthsH, "Annual × horizon"],
+      ["Parking", parking, parking/monthsH, "Monthly × horizon"],
+      ["Fuel", fuel, fuel/monthsH, "Mileage ÷ km/L × fuel price"]
+    ];
+
+    const body = $("breakdownBody");
+    body.innerHTML = rows.map(r => `
+      <tr>
+        <td><b>${r[0]}</b></td>
+        <td>${fmt(r[1])}</td>
+        <td>${fmt(r[2])}</td>
+        <td class="muted og-help">${r[3]}</td>
+      </tr>
+    `).join("");
+
+  }
+
+  function reset(){
+    $("horizonYears").value = 5;
+    $("onRoadPrice").value = 160000;
+    $("resaleValue").value = 60000;
+    $("downPct").value = 30;
+    $("loanType").value = "effective";
+    $("rate").value = 2.78;
+    $("loanYears").value = 7;
+    $("fees").value = 0;
+    $("insuranceAnnual").value = 1800;
+    $("roadTaxAnnual").value = 900;
+    $("maintenanceAnnual").value = 1200;
+    $("parkingMonthly").value = 200;
+    $("mileageAnnual").value = 15000;
+    $("kmPerLitre").value = 12;
+    $("fuelPrice").value = 2.90;
+    calc();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    $("btnCalc").addEventListener("click", calc);
+    $("btnReset").addEventListener("click", reset);
+    ["horizonYears","onRoadPrice","resaleValue","downPct","loanType","rate","loanYears","fees",
+     "insuranceAnnual","roadTaxAnnual","maintenanceAnnual","parkingMonthly","mileageAnnual","kmPerLitre","fuelPrice"]
+      .forEach(id => $(id).addEventListener("input", () => { /* lazy */ }));
+    calc();
+  });
+})();
+</script>
+</body>
+</html>

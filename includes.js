@@ -70,7 +70,7 @@
 // Per-page overrides for the "Next steps" module (normalized paths, no trailing slash, no .html)
 decisionPathOverrides: {
   "/car-ownership-cost": {
-    runPrimary: { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" },
+    runPrimary: { url: "/car-ownership-cost-calculator-singapore.html", title: "Car ownership cost (all-in monthly) calculator" },
     runSecondary: { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" }
   },
   "/monthly-cost-of-owning-a-car-singapore": {
@@ -225,6 +225,8 @@ decisionPathOverrides: {
         { url: "/car-insurance-cost-singapore.html", title: "Car Insurance Cost in Singapore (2026)", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
+        { url: "/car-ownership-cost-calculator-singapore.html", title: "Car Ownership Cost Calculator (Singapore, 2026): True All-In Monthly Cost (5-Year TCO)", subtopic: "calculator" },
+        
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
         { url: "/car-loan-calculator-singapore.html", title: "Car Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/coe-loan-calculator-singapore.html", title: "COE Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
