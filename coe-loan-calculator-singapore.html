@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>COE Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
+  <meta name="description" content="Singapore COE loan calculator (2026): estimate monthly instalment, total interest and total paid when financing the COE portion. Supports flat-rate quotes and effective interest loans.">
+
+  <meta property="og:title" content="COE Loan Calculator Singapore (2026)">
+  <meta property="og:description" content="Estimate COE loan instalment + total interest (flat vs effective) for the COE component.">
+  <meta property="og:type" content="article">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/includes.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> › <a href="/transport/">Transport</a> › <a href="/transport/financing/">Transport financing</a> › COE loan calculator
+    </nav>
+
+    <h1>COE Loan Calculator (Singapore, 2026)</h1>
+
+    <p class="muted">
+      This calculator estimates the <b>monthly instalment</b>, <b>total interest</b>, and <b>total paid</b> when you finance the
+      <b>COE portion</b>. Many quotes are advertised as a <b>flat rate</b> (simple interest). To compare apples-to-apples, this
+      page also estimates the <b>equivalent effective rate (APR)</b>.
+    </p>
+
+    <div class="box">
+      <h2>Inputs</h2>
+
+      <div class="og-form-grid">
+        <div>
+          <label for="coeAmount">COE amount (SGD)</label>
+          <input id="coeAmount" type="number" inputmode="decimal" min="0" step="500" value="100000">
+        </div>
+
+        <div>
+          <label for="downPct">Downpayment on COE (%)</label>
+          <input id="downPct" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="0">
+        </div>
+
+        <div>
+          <label for="tenureYears">Tenure (years)</label>
+          <input id="tenureYears" type="number" inputmode="decimal" min="0.5" step="0.5" value="5">
+        </div>
+
+        <div>
+          <label for="rateType">Rate type</label>
+          <select id="rateType">
+            <option value="flat">Flat rate (simple interest)</option>
+            <option value="effective">Effective rate (APR)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="ratePct">Interest rate (% per year)</label>
+          <input id="ratePct" type="number" inputmode="decimal" min="0" step="0.01" value="2.88">
+        </div>
+
+        <div>
+          <label for="fees">One-time fees (SGD)</label>
+          <input id="fees" type="number" inputmode="decimal" min="0" step="10" value="0">
+        </div>
+      </div>
+
+      <div class="og-hero-actions">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Results</h2>
+
+      <div class="og-kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Loan principal (COE financed)</div>
+          <div class="kpi-value" id="kpiPrincipal">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Monthly instalment (est.)</div>
+          <div class="kpi-value" id="kpiMonthly">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Total interest</div>
+          <div class="kpi-value" id="kpiInterest">—</div>
+        </div>
+
+        <div class="kpi">
+          <div class="kpi-label">Total paid (incl. fees)</div>
+          <div class="kpi-value" id="kpiTotal">—</div>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <p class="muted" id="effectiveNote">—</p>
+    </div>
+
+    <div class="box">
+      <h2>Next steps</h2>
+      <ul>
+        <li><a href="/car-loan-calculator-singapore.html">Car loan calculator (flat vs effective)</a> — for the full car price financing.</li>
+        <li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a> — test total monthly burden (not instalment).</li>
+        <li><a href="/coe-cost-singapore.html">COE cost framework</a> — what COE really means in the ownership equation.</li>
+      </ul>
+    </div>
+
+    <p class="muted small">
+      Notes: This is a planning calculator, not financial advice. Actual loan terms can include rebates, step-up rates, insurance add-ons, or different fee structures.
+    </p>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    function fmtMoney(x) {
+      if (!isFinite(x)) return "—";
+      return "S$" + x.toLocaleString(undefined, { maximumFractionDigits: 0 });
+    }
+
+    function clamp(n, a, b) { return Math.min(Math.max(n, a), b); }
+
+    // Payment for effective-rate amortizing loan (monthly)
+    function pmt(rateMonthly, nMonths, pv) {
+      if (nMonths <= 0) return 0;
+      if (Math.abs(rateMonthly) < 1e-12) return pv / nMonths;
+      const r = rateMonthly;
+      return pv * (r * Math.pow(1 + r, nMonths)) / (Math.pow(1 + r, nMonths) - 1);
+    }
+
+    // Estimate APR given principal and fixed monthly payment (binary search)
+    function estimateAprFromPayment(pv, nMonths, payment) {
+      // APR monthly in [0, 5%] -> 0 to ~60% APR, plenty wide for SG auto loans
+      let lo = 0, hi = 0.05;
+      for (let i = 0; i < 80; i++) {
+        const mid = (lo + hi) / 2;
+        const pm = pmt(mid, nMonths, pv);
+        if (pm > payment) hi = mid; else lo = mid;
+      }
+      const rMonthly = (lo + hi) / 2;
+      return (Math.pow(1 + rMonthly, 12) - 1) * 100;
+    }
+
+    function calculate() {
+      const coeAmount = Math.max(0, Number(document.getElementById("coeAmount").value || 0));
+      const downPctRaw = Number(document.getElementById("downPct").value || 0);
+      const tenureYears = Math.max(0.5, Number(document.getElementById("tenureYears").value || 0));
+      const rateType = document.getElementById("rateType").value;
+      const ratePct = Math.max(0, Number(document.getElementById("ratePct").value || 0));
+      const fees = Math.max(0, Number(document.getElementById("fees").value || 0));
+
+      const downPct = clamp(downPctRaw, 0, 100);
+      const principal = coeAmount * (1 - downPct / 100);
+      const nMonths = Math.round(tenureYears * 12);
+
+      let monthly = 0, totalInterest = 0, totalPaid = 0, aprNote = "";
+
+      if (principal === 0 || nMonths === 0) {
+        monthly = 0; totalInterest = 0; totalPaid = fees;
+        aprNote = "No COE financing (principal is zero).";
+      } else if (rateType === "flat") {
+        const flatRate = ratePct / 100;
+        totalInterest = principal * flatRate * (nMonths / 12);
+        const total = principal + totalInterest;
+        monthly = total / nMonths;
+        totalPaid = total + fees;
+
+        const estApr = estimateAprFromPayment(principal, nMonths, monthly);
+        aprNote = "Flat rate quotes hide the true cost. Estimated equivalent effective APR: <b>" + estApr.toFixed(2) + "%</b> (approx).";
+      } else {
+        const apr = ratePct / 100;
+        const rMonthly = Math.pow(1 + apr, 1/12) - 1;
+        monthly = pmt(rMonthly, nMonths, principal);
+        const total = monthly * nMonths;
+        totalInterest = total - principal;
+        totalPaid = total + fees;
+        aprNote = "Effective/APR loans amortize monthly. Your entered APR is used directly.";
+      }
+
+      document.getElementById("kpiPrincipal").innerHTML = fmtMoney(principal);
+      document.getElementById("kpiMonthly").innerHTML = fmtMoney(monthly);
+      document.getElementById("kpiInterest").innerHTML = fmtMoney(totalInterest);
+      document.getElementById("kpiTotal").innerHTML = fmtMoney(totalPaid);
+      document.getElementById("effectiveNote").innerHTML = aprNote;
+    }
+
+    document.getElementById("btnCalc").addEventListener("click", calculate);
+    document.getElementById("btnReset").addEventListener("click", function () {
+      document.getElementById("coeAmount").value = 100000;
+      document.getElementById("downPct").value = 0;
+      document.getElementById("tenureYears").value = 5;
+      document.getElementById("rateType").value = "flat";
+      document.getElementById("ratePct").value = 2.88;
+      document.getElementById("fees").value = 0;
+      calculate();
+    });
+
+    calculate();
+  </script>
+</body>
+</html>
