@@ -107,6 +107,36 @@ button{
 }
 button:hover{ opacity: 0.92; }
 
+/* Button + link-button system */
+a.btn, button.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.btn:hover, button.btn:hover{ opacity: 0.92; }
+
+a.btn.btn-secondary, button.btn.btn-secondary{
+  background: #ffffff;
+  color: #111827;
+}
+a.btn.btn-secondary:hover, button.btn.btn-secondary:hover{ background: #f3f4f6; }
+
+/* Primary variant (explicit) */
+a.btn.btn-primary, button.btn.btn-primary{
+  background: #111827;
+  color: #ffffff;
+}
+
+
 .btn-row{
   display:flex;
   gap:10px;

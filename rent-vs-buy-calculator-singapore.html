@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference</title>
+  <meta name="description" content="Singapore rent vs buy calculator (2026): compare owning vs renting over the same horizon. Includes mortgage amortization, appreciation, rent inflation, buying/selling costs, and a rent‑and‑invest model to estimate break‑even years."/>
+  <meta name="og:cluster" content="property"/>
+  <meta name="og:subtopic" content="calculator"/>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Rent vs Buy Calculator (Singapore, 2026)",
+    "description":"Compare owning vs renting over the same horizon (mortgage, appreciation, rent inflation, costs, rent-and-invest net worth)."
+  }
+  </script>
+
+  <link rel="canonical" href="https://ownershipguide.com/rent-vs-buy-calculator-singapore.html"/>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+    </nav>
+
+    <h1>Rent vs Buy Calculator (Singapore, 2026)</h1>
+    <p class="muted">
+      This model answers the question: <strong>“If I rent instead of buy, how much better (or worse) is my end net worth?”</strong>
+      It’s not perfect — but it’s vastly better than comparing monthly mortgage vs rent.
+    </p>
+
+    <div class="og-card" style="margin:14px 0;">
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+        <div>
+          <div class="og-card-title" style="margin:0;">Want the framework?</div>
+          <div class="og-card-meta" style="margin-top:4px;">
+            Read: <a href="/rent-vs-buy-property-singapore.html">Rent vs Buy Property (Singapore, 2026)</a>
+          </div>
+        </div>
+        <a class="btn btn-secondary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Also: Upfront cash + CPF</a>
+      </div>
+    </div>
+
+    <h2>Inputs</h2>
+    <div class="og-card">
+      <div class="og-form-grid">
+        <label>
+          Property price (SGD)
+          <input id="price" type="number" min="0" step="10000" value="1200000" inputmode="decimal">
+        </label>
+
+        <label>
+          Downpayment (% of price)
+          <input id="downPct" type="number" min="0" max="100" step="0.5" value="25" inputmode="decimal">
+        </label>
+
+        <label>
+          Interest rate (% p.a.)
+          <input id="rate" type="number" min="0" step="0.01" value="3.25" inputmode="decimal">
+        </label>
+
+        <label>
+          Loan tenure (years)
+          <input id="tenure" type="number" min="1" step="1" value="25" inputmode="decimal">
+        </label>
+
+        <label>
+          Holding period (years)
+          <input id="horizon" type="number" min="1" step="1" value="7" inputmode="decimal">
+        </label>
+
+        <label>
+          Monthly rent today (SGD)
+          <input id="rent" type="number" min="0" step="50" value="4200" inputmode="decimal">
+        </label>
+
+        <label>
+          Rent inflation (% p.a.)
+          <input id="rentInfl" type="number" step="0.1" value="2.0" inputmode="decimal">
+        </label>
+
+        <label>
+          Property price appreciation (% p.a.)
+          <input id="appreciation" type="number" step="0.1" value="2.0" inputmode="decimal">
+        </label>
+
+        <label>
+          Investment return for renter (% p.a.)
+          <input id="invReturn" type="number" step="0.1" value="5.0" inputmode="decimal">
+        </label>
+
+        <label>
+          Upfront buying costs (BSD/ABSD + legal, SGD)
+          <input id="buyCosts" type="number" min="0" step="1000" value="50000" inputmode="decimal">
+        </label>
+
+        <label>
+          Selling cost (% of sale price)
+          <input id="sellPct" type="number" min="0" step="0.1" value="2.0" inputmode="decimal">
+        </label>
+
+        <label>
+          Owner running costs (maintenance + tax, SGD / month)
+          <input id="ownerMonthly" type="number" min="0" step="10" value="450" inputmode="decimal">
+        </label>
+
+        <label>
+          Renter monthly costs (insurance/misc, SGD / month)
+          <input id="renterMonthly" type="number" min="0" step="10" value="0" inputmode="decimal">
+        </label>
+      </div>
+
+      <div class="btn-row" style="margin-top:12px;">
+        <button class="btn" id="btnCalc">Calculate</button>
+        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+      </div>
+
+      <p class="muted" style="margin-top:10px;">
+        Interpretation: this is a <strong>planning model</strong>. Real outcomes depend on valuation, borrowing approval, cash/CPF structure, vacancy, and behavioural discipline.
+      </p>
+    </div>
+
+    <h2>Results</h2>
+    <div class="og-kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Mortgage monthly payment</div>
+        <div class="kpi-value" id="kpiPmt">—</div>
+        <div class="kpi-sub">Principal + interest (excludes owner running costs)</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">End net worth (BUY)</div>
+        <div class="kpi-value" id="kpiBuyNW">—</div>
+        <div class="kpi-sub">Net sale proceeds after remaining loan & selling costs</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">End net worth (RENT + INVEST)</div>
+        <div class="kpi-value" id="kpiRentNW">—</div>
+        <div class="kpi-sub">Upfront invested + monthly savings invested (or withdrawals)</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">Winner (net worth)</div>
+        <div class="kpi-value" id="kpiWinner">—</div>
+        <div class="kpi-sub" id="kpiWinnerSub">—</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 style="margin-top:0;">Break‑even estimate</h3>
+      <p class="muted" style="margin-top:6px;">
+        Break‑even is the first year where the end net worth of buying becomes higher than rent‑and‑invest (or vice versa).
+        It’s a rough indicator — not a promise.
+      </p>
+      <div class="og-kpi-grid" style="margin-top:10px;">
+        <div class="kpi">
+          <div class="kpi-label">Break‑even year (approx)</div>
+          <div class="kpi-value" id="kpiBE">—</div>
+          <div class="kpi-sub">Within 1–15 years scan</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Average monthly cost (BUY)</div>
+          <div class="kpi-value" id="kpiBuyCost">—</div>
+          <div class="kpi-sub">Net cost over horizon / months</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Average monthly cost (RENT)</div>
+          <div class="kpi-value" id="kpiRentCost">—</div>
+          <div class="kpi-sub">Rent + renter costs (no investment effects)</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Key sensitivity</div>
+          <div class="kpi-value" id="kpiSense">—</div>
+          <div class="kpi-sub">Usually: appreciation vs rent inflation</div>
+        </div>
+      </div>
+    </div>
+
+    <details class="box">
+      <summary><strong>Show breakdown</strong> (how this model works)</summary>
+      <div style="margin-top:10px;">
+        <ol>
+          <li><strong>Buy:</strong> you pay upfront (downpayment + buying costs), then mortgage + owner monthly costs. At the end, you sell: net proceeds = sale price − remaining loan − selling costs.</li>
+          <li><strong>Rent + invest:</strong> you invest the upfront cash you didn’t spend buying. Each month, you invest (or withdraw) the difference between buy monthly outflow and rent monthly outflow.</li>
+          <li>End net worth is compared. This is not a “monthly payment” comparison — it’s a <strong>net worth comparison</strong>.</li>
+        </ol>
+      </div>
+    </details>
+
+    <div class="related-box">
+      <h3 style="margin-top:0;">Next steps</h3>
+      <ul>
+        <li><a href="/property-affordability-calculator-singapore.html">Stress-test property affordability</a> (borrowing + fragility)</li>
+        <li><a href="/mortgage-amortization-calculator-singapore.html">Mortgage amortization calculator</a> (payment + total interest)</li>
+        <li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD stamp duty calculator</a> (duties)</li>
+        <li><a href="/refinance-savings-calculator-singapore.html">Refinance savings calculator</a> (break-even months)</li>
+      </ul>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="/includes.js"></script>
+
+  <script>
+  function num(v){ const x = parseFloat(v); return isFinite(x) ? x : 0; }
+  function money(x){
+    const n = isFinite(x) ? x : 0;
+    return "S$ " + n.toLocaleString(undefined,{maximumFractionDigits:0});
+  }
+
+  function pmt(principal, annualRate, years){
+    const r = (annualRate/100)/12;
+    const n = Math.max(1, Math.round(years*12));
+    if(r === 0) return principal / n;
+    return principal * (r * Math.pow(1+r,n)) / (Math.pow(1+r,n) - 1);
+  }
+
+  function remainingBalance(principal, annualRate, years, monthsPaid){
+    const r = (annualRate/100)/12;
+    const n = Math.max(1, Math.round(years*12));
+    const m = Math.min(monthsPaid, n);
+    if(r === 0){
+      return Math.max(0, principal * (1 - (m/n)));
+    }
+    const payment = pmt(principal, annualRate, years);
+    // balance after m payments: P*(1+r)^m - PMT*((1+r)^m -1)/r
+    const pow = Math.pow(1+r, m);
+    const bal = principal*pow - payment*(pow-1)/r;
+    return Math.max(0, bal);
+  }
+
+  function simulate(hYears){
+    const price = num(document.getElementById('price').value);
+    const downPct = num(document.getElementById('downPct').value)/100;
+    const rate = num(document.getElementById('rate').value);
+    const tenure = num(document.getElementById('tenure').value);
+    const rent0 = num(document.getElementById('rent').value);
+    const rentInfl = num(document.getElementById('rentInfl').value)/100;
+    const appr = num(document.getElementById('appreciation').value)/100;
+    const inv = num(document.getElementById('invReturn').value)/100;
+    const buyCosts = num(document.getElementById('buyCosts').value);
+    const sellPct = num(document.getElementById('sellPct').value)/100;
+    const ownerMonthly = num(document.getElementById('ownerMonthly').value);
+    const renterMonthly = num(document.getElementById('renterMonthly').value);
+
+    const months = Math.max(1, Math.round(hYears*12));
+
+    const down = price * downPct;
+    const loan = Math.max(0, price - down);
+    const mortPmt = pmt(loan, rate, tenure);
+
+    // Buy cashflows
+    const upfrontBuy = down + buyCosts;
+    let buyOutflow = upfrontBuy; // start with upfront
+    let rentOutflow = 0;
+
+    // Rent+invest model
+    let investBal = upfrontBuy; // renter invests what buyer spent upfront
+    const invR = inv/12;
+
+    for(let m=1; m<=months; m++){
+      // monthly rent escalated yearly (approx monthly comp)
+      const rentMonth = rent0 * Math.pow(1+rentInfl, m/12);
+      const buyMonthOut = mortPmt + ownerMonthly;
+      const rentMonthOut = rentMonth + renterMonthly;
+
+      buyOutflow += buyMonthOut;
+      rentOutflow += rentMonthOut;
+
+      // invest the difference: if renting is cheaper, invest savings; if more expensive, withdraw
+      const diff = buyMonthOut - rentMonthOut; // positive => renting cheaper
+      investBal = investBal * (1 + invR) + diff;
+    }
+
+    // Buy sale at end
+    const salePrice = price * Math.pow(1+appr, hYears);
+    const sellCost = salePrice * sellPct;
+    const remBal = remainingBalance(loan, rate, tenure, months);
+    const netSale = Math.max(0, salePrice - sellCost - remBal);
+
+    // Buy end net worth: what you get after selling (assumes you don't invest monthly diff)
+    const buyNW = netSale;
+    const rentNW = investBal;
+
+    // Net cost for buy over horizon (outflows - net sale)
+    const buyNetCost = buyOutflow - netSale;
+    const rentNetCost = rentOutflow; // renting cost (ignores investment gains/losses)
+
+    return {mortPmt, buyNW, rentNW, buyNetCost, rentNetCost};
+  }
+
+  function calc(){
+    const horizon = Math.max(1, Math.round(num(document.getElementById('horizon').value)));
+    const res = simulate(horizon);
+
+    document.getElementById('kpiPmt').textContent = money(res.mortPmt);
+    document.getElementById('kpiBuyNW').textContent = money(res.buyNW);
+    document.getElementById('kpiRentNW').textContent = money(res.rentNW);
+
+    const diff = res.buyNW - res.rentNW;
+    const winner = diff >= 0 ? "BUY" : "RENT + INVEST";
+    document.getElementById('kpiWinner').textContent = winner;
+    document.getElementById('kpiWinnerSub').textContent = (diff>=0? "Ahead by " : "Ahead by ") + money(Math.abs(diff));
+
+    document.getElementById('kpiBuyCost').textContent = money(res.buyNetCost/(horizon*12));
+    document.getElementById('kpiRentCost').textContent = money(res.rentNetCost/(horizon*12));
+
+    // break-even scan 1..15 years
+    let be = "No crossover (1–15y)";
+    let prev = null;
+    for(let y=1; y<=15; y++){
+      const r = simulate(y);
+      const d = r.buyNW - r.rentNW;
+      if(prev !== null){
+        if((prev < 0 && d >= 0) || (prev > 0 && d <= 0)){
+          be = y + " years";
+          break;
+        }
+      }
+      prev = d;
+    }
+    document.getElementById('kpiBE').textContent = be;
+
+    // simple sensitivity hint
+    const appr = num(document.getElementById('appreciation').value);
+    const rentInfl = num(document.getElementById('rentInfl').value);
+    let sense = "—";
+    if(appr - rentInfl >= 1.5) sense = "Appreciation dominates";
+    else if(rentInfl - appr >= 1.5) sense = "Rent inflation dominates";
+    else sense = "Close call (rates/costs matter)";
+    document.getElementById('kpiSense').textContent = sense;
+  }
+
+  function resetDefaults(){
+    const defaults = {
+      price:1200000, downPct:25, rate:3.25, tenure:25, horizon:7,
+      rent:4200, rentInfl:2.0, appreciation:2.0, invReturn:5.0,
+      buyCosts:50000, sellPct:2.0, ownerMonthly:450, renterMonthly:0
+    };
+    Object.keys(defaults).forEach(k => {
+      const el = document.getElementById(k);
+      if(el) el.value = defaults[k];
+    });
+    calc();
+  }
+
+  document.getElementById('btnCalc').addEventListener('click', calc);
+  document.getElementById('btnReset').addEventListener('click', resetDefaults);
+
+  // initial
+  calc();
+  </script>
+</body>
+</html>

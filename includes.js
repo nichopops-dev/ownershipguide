@@ -135,7 +135,7 @@ decisionPathOverrides: {
   },
   "/rent-vs-buy-property-singapore": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
-    runSecondary: { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay down mortgage vs Invest" }
+    runSecondary: { url: "/rent-vs-buy-calculator-singapore.html", title: "Rent vs Buy calculator (break-even + net worth)" }
   },
   "/bto-vs-resale-cost": {
     runPrimary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
@@ -314,6 +314,7 @@ decisionPathOverrides: {
         { url: "/rent-out-vs-sell-singapore.html", title: "Rent Out vs Sell Your Property in Singapore (2026): A No-Regret Framework", subtopic: "comparison" },
         { url: "/how-much-cash-to-buy-property-singapore.html", title: "How Much Cash Do You Need to Buy Property in Singapore? (2026 Real Breakdown)", subtopic: "affordability" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "Upfront Cash to Buy Property Calculator (Singapore, 2026): Cash + CPF Split", subtopic: "calculator" },
+        { url: "/rent-vs-buy-calculator-singapore.html", title: "Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference", subtopic: "calculator" },
         { url: "/property-affordability-calculator-singapore.html", title: "Property Affordability Stress Test Calculator (Singapore, 2026)", subtopic: "calculator" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/hdb-loan-vs-bank-loan-calculator-singapore.html", title: "HDB vs Bank Loan Calculator Singapore (2026): Monthly + Total Interest", subtopic: "calculator" },
