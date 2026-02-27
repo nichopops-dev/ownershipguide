@@ -124,6 +124,9 @@ a.btn, button.btn{
 }
 a.btn:hover, button.btn:hover{ opacity: 0.92; }
 
+button.btn:disabled{ opacity: 0.55; cursor: not-allowed; }
+button.btn:disabled:hover{ opacity: 0.55; }
+
 a.btn.btn-secondary, button.btn.btn-secondary{
   background: #ffffff;
   color: #111827;

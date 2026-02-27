@@ -37,8 +37,6 @@
     .mini{font-size:13px;opacity:.85}
     .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     /* Override global button theme safely: this page uses light buttons */
-    .btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid #ddd;background:#fff;color:#111827;font-weight:700;cursor:pointer}
-    .btn:hover{background:#f8fafc}
     .pill{display:inline-block;padding:4px 10px;border:1px solid #eee;border-radius:999px;font-size:12px;opacity:.85}
   </style>
 </head>
@@ -113,8 +111,8 @@
 
       <div class="field full">
         <div class="btnrow">
-          <button class="btn" id="calcBtn" type="button">Calculate</button>
-          <button class="btn" id="resetBtn" type="button">Reset defaults</button>
+          <button class="btn btn-primary" id="calcBtn" type="button">Calculate</button>
+          <button class="btn btn-secondary" id="resetBtn" type="button">Reset defaults</button>
         </div>
         <p class="mini">
           Interpret this as <span class="pill">planning minimum</span>. Your actual cash/CPF split depends on your loan approval,

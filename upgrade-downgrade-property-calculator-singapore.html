@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upgrade / Downgrade Property Calculator Singapore (2026): Sell → Buy Next, Cash + CPF</title>
+  <meta name="description" content="Model a Singapore property upgrade/downgrade: sell current home, refund CPF, redeem loan, then estimate cash+CPF needed to buy the next property. See shortfall and planning minimum." />
+
+  <meta property="og:title" content="Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next" />
+  <meta property="og:description" content="Sell proceeds (cash vs CPF) → upfront cash+CPF needed for next purchase. See shortfall instantly." />
+  <meta property="og:cluster" content="property" />
+  <meta property="og:subtopic" content="calculator" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/includes.js"></script>
+
+  <style>
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--muted);font-size:13px}
+    .kpi .s{color:var(--muted);font-size:13px;margin-top:6px}
+    .table{width:100%;border-collapse:separate;border-spacing:0;margin-top:10px;overflow:hidden;border:1px solid var(--border);border-radius:12px;background:#fff}
+    .table th,.table td{padding:10px 12px;border-top:1px solid var(--border);text-align:left;vertical-align:top}
+    .table thead th{border-top:none;background:#f9fafb;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+    .right{text-align:right}
+    .mini{font-size:13px;color:var(--muted)}
+    .section-title{margin-top:22px}
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <div class="nav"><a href="/property/">Property</a> / <a href="/calculators/">Calculators</a></div>
+
+    <h1>Upgrade / Downgrade Property Calculator (Singapore, 2026)</h1>
+    <p class="meta">A planning tool: estimate whether selling your current home covers the <b>cash + CPF</b> you need to buy the next one. Not financial advice.</p>
+
+    <div class="box">
+      <div class="mini">Fast paths:</div>
+      <div class="btn-row" style="margin-top:10px">
+        <a class="btn btn-secondary" href="/sell-property-proceeds-calculator-singapore.html">Sell proceeds (cash vs CPF)</a>
+        <a class="btn btn-secondary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF needed</a>
+      </div>
+    </div>
+
+    <h2 class="section-title">A) Sell current property</h2>
+    <div class="og-form-grid">
+      <div class="field">
+        <label for="salePrice">Sale price (SGD)</label>
+        <input id="salePrice" inputmode="decimal" value="1200000" />
+      </div>
+      <div class="field">
+        <label for="loanOutstanding">Outstanding loan to redeem (SGD)</label>
+        <input id="loanOutstanding" inputmode="decimal" value="800000" />
+      </div>
+
+      <div class="field">
+        <label for="cpfRefund">CPF refund required (principal + accrued, SGD)</label>
+        <input id="cpfRefund" inputmode="decimal" value="240000" />
+      </div>
+      <div class="field">
+        <label for="sellOther">Other selling costs (legal/SSD/etc, SGD)</label>
+        <input id="sellOther" inputmode="decimal" value="3000" />
+      </div>
+
+      <div class="field">
+        <label for="agentPct">Agent fee (% of price)</label>
+        <input id="agentPct" inputmode="decimal" value="2" />
+      </div>
+      <div class="field">
+        <label for="agentGstPct">GST on agent fee (%)</label>
+        <input id="agentGstPct" inputmode="decimal" value="9" />
+      </div>
+    </div>
+
+    <h2 class="section-title">B) Buy next property (upfront plan)</h2>
+    <div class="og-form-grid">
+      <div class="field">
+        <label for="buyPrice">Next property price (SGD)</label>
+        <input id="buyPrice" inputmode="decimal" value="1500000" />
+      </div>
+      <div class="field">
+        <label for="ltv">Loan-to-value (LTV, %)</label>
+        <input id="ltv" inputmode="decimal" value="75" />
+      </div>
+
+      <div class="field">
+        <label for="minCashPct">Minimum cash downpayment (% of price)</label>
+        <input id="minCashPct" inputmode="decimal" value="5" />
+      </div>
+      <div class="field">
+        <label for="bsd">BSD amount (SGD)</label>
+        <input id="bsd" inputmode="decimal" value="0" />
+      </div>
+
+      <div class="field">
+        <label for="absd">ABSD amount (SGD)</label>
+        <input id="absd" inputmode="decimal" value="0" />
+      </div>
+      <div class="field">
+        <label for="dutyCpfPct">% of stamp duty paid by CPF</label>
+        <input id="dutyCpfPct" inputmode="decimal" value="100" />
+      </div>
+
+      <div class="field">
+        <label for="buyFees">Other upfront fees (legal/agent/valuation, SGD)</label>
+        <input id="buyFees" inputmode="decimal" value="3500" />
+      </div>
+      <div class="field">
+        <label for="optionFee">Option / booking fee (cash, SGD)</label>
+        <input id="optionFee" inputmode="decimal" value="1000" />
+      </div>
+
+      <div class="field">
+        <label for="miscCash">Other cash-only items (reno deposit, etc, SGD)</label>
+        <input id="miscCash" inputmode="decimal" value="0" />
+      </div>
+      <div class="field">
+        <label for="extraCash">Additional cash savings (beyond sale proceeds, SGD)</label>
+        <input id="extraCash" inputmode="decimal" value="0" />
+      </div>
+
+      <div class="field">
+        <label for="extraCpf">Additional CPF available (beyond refund, SGD)</label>
+        <input id="extraCpf" inputmode="decimal" value="0" />
+      </div>
+
+      <div class="field full">
+        <div class="btn-row" style="margin-top:8px">
+          <button class="btn btn-primary" id="calcBtn" type="button">Calculate</button>
+          <button class="btn btn-secondary" id="resetBtn" type="button">Reset defaults</button>
+        </div>
+        <p class="mini" style="margin-top:10px">
+          Interpret this as <span class="pill">planning minimum</span>. Actual cash/CPF rules depend on your loan approval, valuation, and transaction structure.
+        </p>
+      </div>
+    </div>
+
+    <div class="og-kpi-grid" id="kpis" style="display:none;">
+      <div class="kpi">
+        <div class="k">Cash available from sale</div>
+        <div class="v" id="kCashAvail">—</div>
+        <div class="s" id="kCashAvailS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">CPF available from sale</div>
+        <div class="v" id="kCpfAvail">—</div>
+        <div class="s" id="kCpfAvailS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Upfront needed (cash)</div>
+        <div class="v" id="kCashNeed">—</div>
+        <div class="s" id="kCashNeedS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Upfront needed (CPF)</div>
+        <div class="v" id="kCpfNeed">—</div>
+        <div class="s" id="kCpfNeedS">—</div>
+      </div>
+      <div class="kpi">
+        <div class="k">Result</div>
+        <div class="v" id="kResult">—</div>
+        <div class="s" id="kResultS">—</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Breakdown</h2>
+    <table class="table" aria-label="Breakdown table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th class="right">Cash (SGD)</th>
+          <th class="right">CPF (SGD)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="rows">
+        <tr><td colspan="4" class="mini">Enter inputs and click Calculate.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <div class="mini">Next: <a href="/property/financing/">Property financing hub</a> · <a href="/comparisons/">Decision comparisons</a></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    function num(v){
+      const x = parseFloat(String(v).replace(/,/g,''));
+      return isFinite(x) ? x : 0;
+    }
+
+    function money(n){
+      const sign = n < 0 ? '-' : '';
+      const v = Math.abs(n);
+      return sign + 'S$ ' + v.toLocaleString(undefined,{maximumFractionDigits:0});
+    }
+
+    function pct(v){ return num(v) / 100; }
+
+    function resetDefaults(){
+      $('salePrice').value = 1200000;
+      $('loanOutstanding').value = 800000;
+      $('cpfRefund').value = 240000;
+      $('sellOther').value = 3000;
+      $('agentPct').value = 2;
+      $('agentGstPct').value = 9;
+
+      $('buyPrice').value = 1500000;
+      $('ltv').value = 75;
+      $('minCashPct').value = 5;
+      $('bsd').value = 0;
+      $('absd').value = 0;
+      $('dutyCpfPct').value = 100;
+      $('buyFees').value = 3500;
+      $('optionFee').value = 1000;
+      $('miscCash').value = 0;
+      $('extraCash').value = 0;
+      $('extraCpf').value = 0;
+
+      $('kpis').style.display = 'none';
+      $('rows').innerHTML = '<tr><td colspan="4" class="mini">Enter inputs and click Calculate.</td></tr>';
+    }
+
+    function calc(){
+      // A) Sell
+      const salePrice = num($('salePrice').value);
+      const loanOutstanding = num($('loanOutstanding').value);
+      const cpfRefund = num($('cpfRefund').value);
+      const sellOther = num($('sellOther').value);
+      const agentFee = salePrice * pct($('agentPct').value);
+      const agentGst = agentFee * pct($('agentGstPct').value);
+      const sellCosts = agentFee + agentGst + sellOther;
+
+      const netAfterLoan = salePrice - loanOutstanding - sellCosts;
+      const cashFromSale = netAfterLoan - cpfRefund;
+      const cpfFromSale = Math.max(0, cpfRefund);
+
+      // B) Buy
+      const buyPrice = num($('buyPrice').value);
+      const ltv = Math.min(100, Math.max(0, num($('ltv').value)));
+      const loanAmt = buyPrice * (ltv/100);
+      const downPayment = Math.max(0, buyPrice - loanAmt);
+
+      const minCashDp = buyPrice * pct($('minCashPct').value);
+      const cashDp = Math.min(downPayment, minCashDp);
+      const cpfDp = Math.max(0, downPayment - cashDp);
+
+      const bsd = num($('bsd').value);
+      const absd = num($('absd').value);
+      const totalDuty = Math.max(0, bsd + absd);
+      const dutyCpf = totalDuty * pct($('dutyCpfPct').value);
+      const dutyCash = Math.max(0, totalDuty - dutyCpf);
+
+      const buyFees = num($('buyFees').value);
+      const optionFee = num($('optionFee').value);
+      const miscCash = num($('miscCash').value);
+
+      const cashNeeded = cashDp + dutyCash + buyFees + optionFee + miscCash;
+      const cpfNeeded = cpfDp + dutyCpf;
+
+      const extraCash = num($('extraCash').value);
+      const extraCpf = num($('extraCpf').value);
+
+      const cashAvail = cashFromSale + extraCash;
+      const cpfAvail = cpfFromSale + extraCpf;
+
+      const cashShort = cashNeeded - cashAvail;
+      const cpfShort = cpfNeeded - cpfAvail;
+
+      const okCash = cashShort <= 0;
+      const okCpf = cpfShort <= 0;
+      const ok = okCash && okCpf;
+
+      // KPIs
+      $('kpis').style.display = '';
+      $('kCashAvail').textContent = money(cashAvail);
+      $('kCashAvailS').textContent = okCash ? 'You cover cash upfront.' : ('Cash shortfall: ' + money(cashShort));
+      $('kCpfAvail').textContent = money(cpfAvail);
+      $('kCpfAvailS').textContent = okCpf ? 'You cover CPF upfront.' : ('CPF shortfall: ' + money(cpfShort));
+      $('kCashNeed').textContent = money(cashNeeded);
+      $('kCashNeedS').textContent = 'Cash dp + cash duties + fees.';
+      $('kCpfNeed').textContent = money(cpfNeeded);
+      $('kCpfNeedS').textContent = 'CPF dp + CPF-paid duties.';
+
+      if(ok){
+        $('kResult').textContent = 'Covered';
+        $('kResultS').textContent = 'Your sale proceeds appear sufficient for this plan.';
+      }else{
+        $('kResult').textContent = 'Shortfall';
+        const parts = [];
+        if(!okCash) parts.push('Cash short: ' + money(cashShort));
+        if(!okCpf) parts.push('CPF short: ' + money(cpfShort));
+        $('kResultS').textContent = parts.join(' · ');
+      }
+
+      // Breakdown rows
+      const rows = [];
+      rows.push(['Sell: sale price', 0, 0, money(salePrice)]);
+      rows.push(['Sell: redeem loan', 0, 0, '-' + money(loanOutstanding)]);
+      rows.push(['Sell: agent fee', 0, 0, '-' + money(agentFee) + ' (+GST below)']);
+      rows.push(['Sell: GST on agent', 0, 0, '-' + money(agentGst)]);
+      rows.push(['Sell: other selling costs', 0, 0, '-' + money(sellOther)]);
+      rows.push(['Sell: CPF refund', 0, cpfFromSale, 'CPF returned on sale (assumption)']);
+      rows.push(['Sell: cash proceeds', cashFromSale, 0, 'Cash received after loan + costs + CPF refund']);
+
+      rows.push(['Buy: cash downpayment', cashDp, 0, 'Minimum cash portion']);
+      rows.push(['Buy: CPF downpayment', 0, cpfDp, 'Remaining downpayment']);
+      rows.push(['Buy: stamp duties (cash)', dutyCash, 0, 'BSD + ABSD minus CPF portion']);
+      rows.push(['Buy: stamp duties (CPF)', 0, dutyCpf, 'CPF-paid duties']);
+      rows.push(['Buy: fees', buyFees, 0, 'Legal/agent/valuation (planning)']);
+      rows.push(['Buy: option/booking fee', optionFee, 0, 'Cash']);
+      rows.push(['Buy: other cash-only', miscCash, 0, 'Cash-only items']);
+
+      rows.push(['Totals: cash needed', cashNeeded, 0, 'Upfront cash']);
+      rows.push(['Totals: CPF needed', 0, cpfNeeded, 'Upfront CPF']);
+
+      rows.push(['Available: extra cash savings', extraCash, 0, 'Beyond sale cash proceeds']);
+      rows.push(['Available: extra CPF', 0, extraCpf, 'Beyond CPF refund']);
+      rows.push(['Available: total cash', cashAvail, 0, 'Cash proceeds + extra cash']);
+      rows.push(['Available: total CPF', 0, cpfAvail, 'CPF refund + extra CPF']);
+
+      rows.push(['Result: cash shortfall', Math.max(0, cashShort), 0, okCash ? 'Covered' : 'Top-up needed']);
+      rows.push(['Result: CPF shortfall', 0, Math.max(0, cpfShort), okCpf ? 'Covered' : 'Top-up needed']);
+
+      $('rows').innerHTML = rows.map(r => (
+        `<tr><td>${r[0]}</td><td class="right">${money(r[1])}</td><td class="right">${money(r[2])}</td><td class="mini">${r[3]}</td></tr>`
+      )).join('');
+    }
+
+    $('calcBtn').addEventListener('click', calc);
+    $('resetBtn').addEventListener('click', resetDefaults);
+  </script>
+</body>
+</html>

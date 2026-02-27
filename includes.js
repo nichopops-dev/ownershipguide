@@ -289,6 +289,7 @@ decisionPathOverrides: {
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "How Much Cash to Buy Property Calculator (Singapore, 2026): Upfront Cash + CPF", subtopic: "calculator" },
         { url: "/sell-property-proceeds-calculator-singapore.html", title: "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality", subtopic: "calculator" },
         { url: "/rent-out-vs-sell-calculator-singapore.html", title: "Rent Out vs Sell Calculator (Singapore, 2026): Net Worth After X Years", subtopic: "calculator" },
+        { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years", subtopic: "financing" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/pay-down-mortgage-vs-invest-calculator-singapore.html", title: "Pay Down Mortgage vs Invest Calculator (Singapore, 2026)", subtopic: "calculator" },
@@ -317,6 +318,7 @@ decisionPathOverrides: {
         { url: "/rent-out-vs-sell-singapore.html", title: "Rent Out vs Sell Your Property in Singapore (2026): A No-Regret Framework", subtopic: "comparison" },
         { url: "/how-much-cash-to-buy-property-singapore.html", title: "How Much Cash Do You Need to Buy Property in Singapore? (2026 Real Breakdown)", subtopic: "affordability" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "Upfront Cash to Buy Property Calculator (Singapore, 2026): Cash + CPF Split", subtopic: "calculator" },
+        { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
         { url: "/rent-vs-buy-calculator-singapore.html", title: "Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference", subtopic: "calculator" },
         { url: "/property-affordability-calculator-singapore.html", title: "Property Affordability Stress Test Calculator (Singapore, 2026)", subtopic: "calculator" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
@@ -340,6 +342,7 @@ decisionPathOverrides: {
         { url: "/tdsr-msr-singapore.html", title: "TDSR & MSR in Singapore (2026): What Limits Your Loan", subtopic: "rules" },
         { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage Interest Cost in Singapore: The Intuition That Prevents Mistakes", subtopic: "mechanics" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026)", subtopic: "calculator" },
+        { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next", subtopic: "calculator" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest: The Hidden Cost in Singapore Property", subtopic: "cpf" },
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Property Taxes That Change Your Decision", subtopic: "tax" }
       ],
@@ -397,6 +400,8 @@ decisionPathOverrides: {
     "/sell-property-cost-singapore": {
       compare: { href: "/property/financing/", label: "Property financing", meta: "Exit costs & cashflow" },
       related: [
+        { href: "/sell-property-proceeds-calculator-singapore.html", label: "Sell proceeds calculator" },
+        { href: "/upgrade-downgrade-property-calculator-singapore.html", label: "Upgrade / downgrade property" },
         { href: "/rent-out-vs-sell-singapore.html", label: "Rent out vs Sell" },
         { href: "/cpf-accrued-interest-singapore.html", label: "CPF accrued interest" },
         { href: "/refinance-vs-reprice-home-loan-singapore.html", label: "Refinance vs Reprice" }
