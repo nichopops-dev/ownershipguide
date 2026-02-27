@@ -958,3 +958,57 @@ body.home .card{
 .kpi-sub{ margin-top:6px; font-size:13px; opacity:.8; }
 
 .pill{display:inline-flex;align-items:center;gap:6px;font-size:14px;}
+
+
+/* === Quick decision wizard (hub pages) === */
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  white-space:nowrap;border:0;
+}
+.og-wizard{
+  border:1px solid rgba(0,0,0,0.10);
+  border-radius:16px;
+  background: rgba(0,0,0,0.02);
+  padding:14px;
+  margin: 14px 0 18px;
+}
+.og-wizard-title{
+  font-weight:900;
+  font-size:16px;
+  margin-bottom:6px;
+}
+.og-wizard-sub{
+  margin:0 0 12px;
+  opacity:.85;
+}
+.og-wizard-row{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:10px;
+  align-items:center;
+}
+.og-wizard select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.14);
+  background:#fff;
+  font-size:16px;
+}
+.btn.is-disabled{
+  pointer-events:none;
+  opacity: .55;
+}
+.og-wizard-foot{
+  margin:12px 0 0;
+  font-size:13px;
+  opacity:.85;
+}
+@media (max-width: 640px){
+  .og-wizard-row{ grid-template-columns: 1fr; }
+  .og-wizard .btn{ width:100%; text-align:center; }
+}
+

@@ -29,6 +29,61 @@
       <a href="/start-here/">Start Here</a> · <a href="/calculators/">Calculators</a> · <a href="/comparisons/">Comparisons</a> · <a href="/property/financing/">Financing</a> · <a href="/transport/">Transport</a> · <a href="/property/">Property</a>
     </p>
 
+
+    <section class="og-wizard" aria-label="Property quick path">
+      <div class="og-wizard-title">Quick decision path</div>
+      <p class="og-wizard-sub">Pick what you’re trying to figure out — we’ll send you to the right calculator or guide.</p>
+
+      <div class="og-wizard-row">
+        <label class="sr-only" for="ogPropWizard">Property quick path</label>
+        <select id="ogPropWizard">
+          <option value="">Choose one…</option>
+          <option value="/rent-vs-buy-calculator-singapore.html">Rent vs Buy (net worth + break-even)</option>
+          <option value="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF needed</option>
+          <option value="/bsd-absd-calculator-singapore.html">BSD + ABSD stamp duty</option>
+          <option value="/tdsr-msr-calculator-singapore.html">Max home loan (TDSR/MSR)</option>
+          <option value="/refinance-savings-calculator-singapore.html">Refinance savings + break-even</option>
+          <option value="/pay-down-mortgage-vs-invest-calculator-singapore.html">Pay down mortgage vs invest</option>
+          <option value="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan</option>
+        </select>
+
+        <a class="btn" id="ogPropWizardGo" href="#" aria-disabled="true">Go</a>
+      </div>
+
+      <p class="og-wizard-foot"><span class="pill">Tip</span> If you’re unsure, start with <a href="/how-much-cash-to-buy-property-calculator-singapore.html">upfront cash + CPF</a>, then do <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR</a>.</p>
+    </section>
+
+    <script>
+      (function () {
+        var sel = document.getElementById("ogPropWizard");
+        var go = document.getElementById("ogPropWizardGo");
+        if (!sel || !go) return;
+
+        function sync() {
+          var v = sel.value || "";
+          if (!v) {
+            go.setAttribute("aria-disabled", "true");
+            go.classList.add("is-disabled");
+            go.href = "#";
+            return;
+          }
+          go.setAttribute("aria-disabled", "false");
+          go.classList.remove("is-disabled");
+          go.href = v;
+        }
+
+        sel.addEventListener("change", sync);
+        go.addEventListener("click", function (e) {
+          if (go.getAttribute("aria-disabled") === "true") {
+            e.preventDefault();
+            return;
+          }
+        });
+
+        sync();
+      })();
+    </script>
+
     <h1>Property Cost in Singapore (2026)</h1>
     <p class="meta">Cluster Overview · Last updated: February 2026</p>
 
