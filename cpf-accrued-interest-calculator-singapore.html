@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <title>CPF Accrued Interest Calculator Singapore (OA): Estimate Refund on Sale</title>
+  <meta name="description" content="CPF accrued interest calculator for Singapore: estimate the CPF OA refund amount (principal + accrued interest) based on CPF used and holding period. Planning tool for selling, upgrading, and refinancing."/>
+
+  <meta property="og:title" content="CPF Accrued Interest Calculator Singapore (OA)"/>
+  <meta property="og:description" content="Estimate CPF refund (principal + accrued interest) from CPF used over a holding period. Useful for sell proceeds and upgrade planning."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="cpf"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+  <script src="/includes.js" defer></script>
+
+  <style>
+    .og-card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; }
+    .og-grid{ display:grid; gap:14px; }
+    @media(min-width:860px){ .og-grid.cols2{ grid-template-columns: 1fr 1fr; } }
+    .kpi{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px; }
+    .kpi .label{ color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    .kpi .value{ font-size:28px; font-weight:800; margin-top:6px; }
+    .hint{ color:var(--muted); font-size:14px; }
+    table{ width:100%; border-collapse:collapse; }
+    th,td{ padding:10px 10px; border-top:1px solid var(--border); text-align:left; vertical-align:top; }
+    thead th{ border-top:none; color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    input{ width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:12px; font-size:16px; background:#fff; }
+    .row{ display:grid; gap:10px; }
+    @media(min-width:860px){ .row.cols2{ grid-template-columns: 1fr 1fr; } }
+    .mini{ font-size:12px; color:var(--muted); }
+  </style>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="wrap">
+    <p class="eyebrow">PROPERTY • CPF</p>
+    <h1>CPF Accrued Interest Calculator (Singapore)</h1>
+    <p class="lead">
+      Use this to estimate the CPF refund when you sell: <b>CPF used + accrued interest</b>.
+      This is a planning model — exact refund depends on your CPF withdrawal history and timing.
+    </p>
+
+    <div class="og-grid cols2">
+      <section class="og-card">
+        <h2 style="margin-top:0">Inputs</h2>
+
+        <div class="row cols2">
+          <div>
+            <label for="cpfUsed"><b>Total CPF used (OA), SGD</b></label>
+            <input id="cpfUsed" type="number" min="0" step="1000" value="200000"/>
+            <div class="mini">Sum of CPF used for downpayment + monthly instalments (planning total).</div>
+          </div>
+          <div>
+            <label for="years"><b>Holding period, years</b></label>
+            <input id="years" type="number" min="0" step="0.5" value="5"/>
+            <div class="mini">How long the CPF was outstanding before sale/refund.</div>
+          </div>
+        </div>
+
+        <div class="row cols2" style="margin-top:10px">
+          <div>
+            <label for="oaRate"><b>CPF OA interest rate (% p.a.)</b></label>
+            <input id="oaRate" type="number" min="0" step="0.1" value="2.5"/>
+            <div class="mini">Default 2.5% p.a. (planning). If you want to be conservative, use 2.6–3.0%.</div>
+          </div>
+          <div>
+            <label for="compound"><b>Compounding</b></label>
+            <input id="compound" type="text" value="Monthly (approx.)" disabled/>
+            <div class="mini">We approximate CPF accrual with monthly compounding for planning.</div>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:14px">
+          <button class="btn btn-primary" id="btnCalc">Calculate</button>
+          <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+        </div>
+
+        <p class="hint" style="margin:12px 0 0">
+          Tip: if you’re using this for <b>sell proceeds</b> or <b>upgrade planning</b>, copy the “CPF refund” number into those calculators.
+        </p>
+
+        <div class="og-card" style="margin-top:14px">
+          <b>Related</b>
+          <ul style="margin:8px 0 0; padding-left:18px">
+            <li><a href="/sell-property-proceeds-calculator-singapore.html">Sell property proceeds (cash vs CPF)</a></li>
+            <li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade (sell → buy next)</a></li>
+            <li><a href="/property-upgrade-ladder-calculator-singapore.html">Property upgrade ladder (target price → required income)</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="og-grid" style="align-content:start">
+        <div class="kpi">
+          <div class="label">CPF refund (principal + accrued interest)</div>
+          <div class="value" id="kRefund">S$ —</div>
+          <div class="hint">Planning estimate of what CPF will claw back on sale.</div>
+        </div>
+
+        <div class="og-grid cols2">
+          <div class="kpi">
+            <div class="label">Accrued interest</div>
+            <div class="value" id="kInterest">S$ —</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Refund multiple</div>
+            <div class="value" id="kMultiple">—</div>
+            <div class="hint">Refund ÷ CPF used.</div>
+          </div>
+        </div>
+
+        <div class="og-card">
+          <h2 style="margin-top:0">Breakdown</h2>
+          <table>
+            <thead>
+              <tr><th>Component</th><th>SGD</th></tr>
+            </thead>
+            <tbody id="rows">
+              <tr><td colspan="2">Enter inputs and click Calculate.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="og-card">
+          <h2 style="margin-top:0">Notes</h2>
+          <ul style="margin:8px 0 0; padding-left:18px">
+            <li>This model assumes a single lump-sum CPF usage outstanding for the whole period (planning approximation).</li>
+            <li>If you used CPF monthly, actual accrued interest will differ (usually lower than lump-sum at time 0, but higher than ignoring compounding).</li>
+            <li>For conservative planning, increase the interest rate slightly or the holding period.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <a href="/property/">Back to Property</a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script>
+    function fmt(n){
+      if(!isFinite(n)) return "—";
+      return "S$ " + Math.round(n).toLocaleString("en-SG");
+    }
+    function calc(){
+      const used = Number(document.getElementById('cpfUsed').value || 0);
+      const years = Number(document.getElementById('years').value || 0);
+      const rate = Number(document.getElementById('oaRate').value || 0)/100;
+
+      const m = Math.max(0, years*12);
+      const r = rate/12;
+
+      const refund = used * Math.pow(1+r, m);
+      const interest = Math.max(0, refund - used);
+      const multiple = used>0 ? (refund/used) : NaN;
+
+      document.getElementById('kRefund').textContent = fmt(refund);
+      document.getElementById('kInterest').textContent = fmt(interest);
+      document.getElementById('kMultiple').textContent = isFinite(multiple) ? multiple.toFixed(2) + "×" : "—";
+
+      const rows = document.getElementById('rows');
+      rows.innerHTML = "";
+      rows.insertAdjacentHTML('beforeend', `<tr><td>CPF used (principal)</td><td>${fmt(used)}</td></tr>`);
+      rows.insertAdjacentHTML('beforeend', `<tr><td>Accrued interest (approx.)</td><td>${fmt(interest)}</td></tr>`);
+      rows.insertAdjacentHTML('beforeend', `<tr><td><b>Total CPF refund</b></td><td><b>${fmt(refund)}</b></td></tr>`);
+    }
+
+    function reset(){
+      document.getElementById('cpfUsed').value = 200000;
+      document.getElementById('years').value = 5;
+      document.getElementById('oaRate').value = 2.5;
+      document.getElementById('kRefund').textContent = "S$ —";
+      document.getElementById('kInterest').textContent = "S$ —";
+      document.getElementById('kMultiple').textContent = "—";
+      document.getElementById('rows').innerHTML = '<tr><td colspan="2">Enter inputs and click Calculate.</td></tr>';
+    }
+
+    document.getElementById('btnCalc').addEventListener('click', calc);
+    document.getElementById('btnReset').addEventListener('click', reset);
+  </script>
+</body>
+</html>

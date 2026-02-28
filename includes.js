@@ -304,6 +304,8 @@ decisionPathOverrides: {
         { url: "/tdsr-msr-calculator-singapore.html", title: "TDSR / MSR Calculator Singapore (2026): Max Home Loan & Borrowing Limit", subtopic: "calculator" },
         { url: "/property/financing/", title: "Property Financing (Singapore, 2026): Home Loans, Refinancing, Borrowing Rules", subtopic: "financing" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
+        { url: "/cpf-accrued-interest-calculator-singapore.html", title: "CPF Accrued Interest Calculator Singapore (OA): Estimate Refund on Sale", subtopic: "cpf" },
+        { url: "/property-upgrade-planner-singapore.html", title: "Property Upgrade Planner Singapore: Sell → Buy Next (Step-by-Step)", subtopic: "planning" },
         { url: "/renovation-cost-singapore.html", title: "Renovation Cost in Singapore (2026): Realistic Budgets and Cash Shock Planning", subtopic: "setup" },
         { url: "/sell-property-cost-singapore.html", title: "Sell Property Cost in Singapore (2026): Fees, SSD, and Net Proceeds Reality", subtopic: "exit" },
         { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
