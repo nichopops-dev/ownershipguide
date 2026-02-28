@@ -774,6 +774,12 @@ body.home .card{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.og-card-grid.one{
+  grid-template-columns: 1fr;
+}
+
+.og-card-wide{ grid-column: 1 / -1; }
+
 .og-card{
   display:block;
   padding: 14px 14px;
