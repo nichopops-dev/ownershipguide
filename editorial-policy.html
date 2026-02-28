@@ -1,77 +1,104 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Editorial policy | Ownership Guide</title>
-<meta content="How Ownership Guide creates and maintains calculators and decision guides, including sources, assumptions, and update practices." name="description"/>
-<meta content="Ownership Guide" property="og:site_name"/>
-<meta content="Editorial policy" property="og:title"/>
-<meta content="How Ownership Guide creates and maintains calculators and decision guides, including sources, assumptions, and update practices." property="og:description"/>
-<meta content="article" property="og:type">
-<meta content="meta" property="og:cluster">
-<meta content="policy" property="og:subtopic"/>
-<link href="/styles.css" rel="stylesheet"/>
-<script defer="" src="/includes.js"></script>
-</meta></meta></head>
-<body>
-<div id="site-header"></div>
-<main class="container">
-<p class="breadcrumb"><a href="/">Home</a> <span>›</span> Editorial policy</p>
-<h1>Editorial policy</h1>
-<p class="lead">Ownership Guide is a model‑driven site. We publish calculators and decision guides for Singapore ownership choices (transport, property, financing). This page explains how we create, maintain, and review content.</p>
-<h2>What we mean by “planning model”</h2>
-<ul>
-<li>Calculators here are built for <strong>decision planning</strong>: quick, transparent, conservative by default.</li>
-<li>They are not legal, tax, or financial advice. Final numbers depend on your bank, lawyer, agent, and official computations.</li>
-</ul>
-<h2>How we build calculators</h2>
-<ul>
-<li><strong>First principles:</strong> We model cashflows and constraints (loan caps, duties, fees) in a way users can understand.</li>
-<li><strong>Assumption transparency:</strong> Each calculator includes assumptions, a worked example, and common pitfalls.</li>
-<li><strong>Conservative mode:</strong> When uncertain, we recommend users test a conservative scenario.</li>
-</ul>
-<h2>Sources and updates</h2>
-<ul>
-<li>Where possible, we reference official sources (e.g., IRAS for stamp duty, CPF Board for CPF refund mechanics).</li>
-<li>We update calculators when rules or common market conventions change, and we mark pages with a “Last updated” date.</li>
-</ul>
-<h2>Quality checks</h2>
-<ul>
-<li><strong>Link integrity:</strong> we run sweeps to avoid broken links and duplicated paths.</li>
-<li><strong>Consistency:</strong> shared UI components (buttons, cards, headers/footers) are kept consistent site‑wide.</li>
-<li><strong>Duplication control:</strong> we prefer upgrading existing pages rather than creating overlapping topics.</li>
-</ul>
-<h2>Feedback</h2>
-<p>If you spot an error or want a new calculator, contact us via the <a href="/contact.html">contact page</a>. Include the page URL and what you expected to see.</p>
-</main>
-<section class="container og-editorial" id="og-editorial-policy-extended">
-<h2>How we decide what to publish</h2>
-<p>We prioritise pages that help Singapore readers make expensive decisions with clear numbers: property affordability, cash + CPF planning, stamp duties, mortgage mechanics, and car total cost of ownership.</p>
-<h2>Quality checklist</h2>
-<ul>
-<li><strong>Unique purpose:</strong> each page answers one specific question; we avoid duplicates.</li>
-<li><strong>Explicit assumptions:</strong> rates, horizons, and cost items are stated clearly.</li>
-<li><strong>Worked examples:</strong> we include at least one example so readers can sanity‑check outputs.</li>
-<li><strong>References:</strong> where official sources exist (IRAS, CPF Board, HDB), we link to them.</li>
-<li><strong>Maintenance:</strong> we update calculators when policy/rates change, and we log “last updated”.</li>
-</ul>
-<h2>Advertising disclosure</h2>
-<p>Ownership Guide may show ads via Google AdSense. Ads do not influence our editorial decisions or calculator assumptions. See: <a href="/advertising-disclosure.html">Advertising Disclosure</a>.</p>
-<p class="og-last-updated"><strong>Last updated:</strong> 2026-02-28</p>
-<h2>How we avoid “thin content”</h2>
-<p>Tools alone are not enough. Every calculator is paired with explanatory content: assumptions, worked examples, common mistakes and FAQs. This helps readers use outputs correctly and makes pages useful even when you don’t run the calculator.</p>
-<h2>Corrections</h2>
-<p>If you find an error, contact us with the page URL and the official source. We review and update quickly, and we note major changes in the page’s “last updated” section.</p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<h2>Sources we rely on</h2>
-<ul>
-<li>IRAS (stamp duties, property transaction taxes)</li>
-<li>CPF Board (CPF usage and accrued interest mechanics)</li>
-<li>HDB and bank documents for HDB vs bank loan comparisons</li>
-</ul>
-</section>
-<div id="site-footer"></div>
+  <title>Editorial Policy | Ownership Guide</title>
+  <meta name="description" content="How Ownership Guide creates and maintains Singapore ownership calculators and decision guides: sources, assumptions, update practice, and corrections policy." />
+
+  <link rel="canonical" href="https://ownershipguide.com/editorial-policy.html" />
+  <meta property="og:site_name" content="Ownership Guide" />
+  <meta property="og:title" content="Editorial Policy" />
+  <meta property="og:description" content="How Ownership Guide creates and maintains Singapore ownership calculators and decision guides: sources, assumptions, update practice, and corrections policy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:cluster" content="core" />
+  <meta property="og:subtopic" content="policy" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/includes.js"></script>
+
+  <!-- Editorial policy schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Editorial Policy | Ownership Guide",
+    "url":"https://ownershipguide.com/editorial-policy.html",
+    "isPartOf":{"@type":"WebSite","name":"Ownership Guide","url":"https://ownershipguide.com/"}
+  }
+  </script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <h1>Editorial Policy</h1>
+    <p class="meta">How we publish calculators and decision guides (Singapore). Last updated: 1 Mar 2026</p>
+
+    <div class="box">
+      <p><strong>Plain English:</strong> we build <em>planning models</em> so you can make better decisions faster. They are educational tools, not personalised financial, legal, tax, or investment advice.</p>
+    </div>
+
+    <hr />
+
+    <h2>What we publish (and what we avoid)</h2>
+    <ul>
+      <li><strong>Decision guides:</strong> frameworks for high‑commitment choices (car ownership, property, financing).</li>
+      <li><strong>Calculators:</strong> transparent models that convert complex rules into a small set of inputs and outputs.</li>
+      <li><strong>We avoid duplicates:</strong> if a new page overlaps an existing one, we upgrade the existing page instead.</li>
+    </ul>
+
+    <h2>How we build models</h2>
+    <ul>
+      <li><strong>First principles:</strong> model the cashflows and constraints (duties, fees, financing caps, CPF mechanics).</li>
+      <li><strong>Assumption transparency:</strong> every calculator should state what it assumes, what it ignores, and when it breaks.</li>
+      <li><strong>Conservative sanity checks:</strong> we encourage readers to run a downside scenario before committing.</li>
+      <li><strong>Interpretation help:</strong> calculators are paired with explanatory notes, examples, common mistakes, and FAQs.</li>
+    </ul>
+
+    <h2>Sources</h2>
+    <p>
+      Where official sources exist, we prefer them. Examples include IRAS (stamp duties), CPF Board (CPF usage and accrued
+      interest mechanics), and HDB guidance for policy constraints. We may also reference bank documents for rate structure
+      conventions and market practice (e.g., effective vs flat rates).
+    </p>
+
+    <h2>Updates and maintenance</h2>
+    <ul>
+      <li>We update pages when policy rules change, when calculators need clarification, or when readers report issues.</li>
+      <li>Many pages include a <strong>“Last updated”</strong> line to make review cycles visible.</li>
+      <li>We prioritise fixes that change decision outcomes (e.g., wrong rates, missing fees) over cosmetic changes.</li>
+    </ul>
+
+    <h2>Corrections policy</h2>
+    <p>
+      If you spot an error, email us at <a href="mailto:contact@ownershipguide.com">contact@ownershipguide.com</a> with:
+    </p>
+    <ul>
+      <li>the page URL,</li>
+      <li>what you entered (inputs) and what you expected, and</li>
+      <li>the official source link (if relevant).</li>
+    </ul>
+    <p>
+      We verify against primary sources where possible and ship a versioned update. If the change is material, we note it
+      on the relevant page.
+    </p>
+
+    <h2>Advertising and independence</h2>
+    <p>
+      Ownership Guide may display ads (including Google AdSense) to support operating costs.
+      Ads do not influence calculator assumptions or editorial conclusions.
+      See: <a href="/advertising-disclosure.html">Advertising Disclosure</a>.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For corrections, feedback, or requests for new tools, use the <a href="/contact.html">Contact page</a> or email
+      <a href="mailto:contact@ownershipguide.com">contact@ownershipguide.com</a>.
+    </p>
+  </main>
+
+  <div id="site-footer"></div>
 </body>
 </html>

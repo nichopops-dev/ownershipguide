@@ -1545,7 +1545,39 @@ const box = document.createElement("section");
     }
   }
 
+  
+
   // =========================
+  // 4.95) Organization JSON-LD (site-wide trust signal)
+  // =========================
+  function injectOrganizationSchema() {
+    try {
+      const existing = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+        .some(s => {
+          const t = (s.textContent || '').replace(/\s+/g, '');
+          return t.includes('"@type":"Organization"');
+        });
+      if (existing) return;
+
+      const org = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ownership Guide",
+        "url": (SETTINGS.siteBaseUrl || (window.location.origin + "/")),
+        "description": "Independent, model-driven breakdowns of ownership costs in Singapore — transport, property, and financing decision models.",
+        "sameAs": []
+      };
+
+      const s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.textContent = JSON.stringify(org);
+      document.head.appendChild(s);
+    } catch (e) {
+      // no-op
+    }
+  }
+
+// =========================
   // 5) GA4 (optional)
   // =========================
   if (
@@ -1629,6 +1661,7 @@ const box = document.createElement("section");
   injectPropertyCTA();
   injectDecisionPathModule();
   injectBreadcrumbSchema();
+  injectOrganizationSchema();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
