@@ -562,4 +562,12 @@
     <priority>0.4</priority>
   </url>
 
+
+  <url>
+    <loc>https://ownershipguide.com/advertising-disclosure.html</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>

@@ -1,13 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>Pay Down Mortgage vs Invest Calculator (Singapore, 2026): Interest Saved vs Future Value</title>
-  <meta name="description" content="Singapore pay down mortgage vs invest calculator (2026): compare extra repayment vs investing the same cash. See interest saved, remaining balance, investment future value, and which option is ahead for your horizon."/>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Pay Down Mortgage vs Invest Calculator (Singapore, 2026): Interest Saved vs Future Value</title>
+<meta content="Singapore pay down mortgage vs invest calculator (2026): compare extra repayment vs investing the same cash. See interest saved, remaining balance, investment future value, and which option is ahead for your horizon." name="description"/>
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
@@ -15,147 +14,136 @@
     "description":"Compare extra mortgage repayment vs investing the same amount: interest saved, remaining balance, and investment future value."
   }
   </script>
-
-  <link rel="canonical" href="https://ownershipguide.com/pay-down-mortgage-vs-invest-calculator-singapore.html"/>
-  <link rel="stylesheet" href="/styles.css"/>
+<link href="https://ownershipguide.com/pay-down-mortgage-vs-invest-calculator-singapore.html" rel="canonical"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <nav class="breadcrumbs">
-      <a href="/">Home</a> / <a href="/financing/">Financing</a> / <a href="/calculators/">Calculators</a>
-    </nav>
-
-    <h1>Pay Down Mortgage vs Invest Calculator (Singapore, 2026)</h1>
-    <p class="muted">This is a <strong>numbers-first</strong> model. It does not capture behavioural risk, liquidity value, or CPF constraints — but it helps you sanity-check trade-offs quickly.</p>
-
-    <div class="og-card" style="margin:14px 0;">
-      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-        <div>
-          <div class="og-card-title" style="margin:0;">Want the framework?</div>
-          <div class="og-card-meta" style="margin-top:4px;">Read: <a href="/pay-down-mortgage-vs-invest-singapore.html">Pay Down Mortgage vs Invest (Singapore, 2026)</a></div>
-        </div>
-        <a class="btn" href="/refinance-savings-calculator-singapore.html">Also: Refinance savings</a>
-      </div>
-    </div>
-
-    <h2>Inputs</h2>
-    <div class="og-card">
-      <div class="og-form-grid">
-        <label>
+<div id="site-header"></div>
+<main class="container">
+<nav class="breadcrumbs">
+<a href="/">Home</a> / <a href="/financing/">Financing</a> / <a href="/calculators/">Calculators</a>
+</nav>
+<h1>Pay Down Mortgage vs Invest Calculator (Singapore, 2026)</h1>
+<p class="muted">This is a <strong>numbers-first</strong> model. It does not capture behavioural risk, liquidity value, or CPF constraints — but it helps you sanity-check trade-offs quickly.</p>
+<div class="og-card" style="margin:14px 0;">
+<div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+<div>
+<div class="og-card-title" style="margin:0;">Want the framework?</div>
+<div class="og-card-meta" style="margin-top:4px;">Read: <a href="/pay-down-mortgage-vs-invest-singapore.html">Pay Down Mortgage vs Invest (Singapore, 2026)</a></div>
+</div>
+<a class="btn" href="/refinance-savings-calculator-singapore.html">Also: Refinance savings</a>
+</div>
+</div>
+<h2>Inputs</h2>
+<div class="og-card">
+<div class="og-form-grid">
+<label>
           Outstanding loan balance (SGD)
-          <input id="balance" inputmode="decimal" type="number" min="0" step="1000" value="500000">
-        </label>
-
-        <label>
+          <input id="balance" inputmode="decimal" min="0" step="1000" type="number" value="500000"/>
+</label>
+<label>
           Current interest rate (% p.a.)
-          <input id="rate" inputmode="decimal" type="number" min="0" step="0.01" value="3.25">
-        </label>
-
-        <label>
+          <input id="rate" inputmode="decimal" min="0" step="0.01" type="number" value="3.25"/>
+</label>
+<label>
           Remaining tenure (years)
-          <input id="years" inputmode="decimal" type="number" min="0.1" step="0.5" value="25">
-        </label>
-
-        <label>
+          <input id="years" inputmode="decimal" min="0.1" step="0.5" type="number" value="25"/>
+</label>
+<label>
           Extra amount each month (SGD)
-          <input id="extra" inputmode="decimal" type="number" min="0" step="50" value="500">
-        </label>
-
-        <label>
+          <input id="extra" inputmode="decimal" min="0" step="50" type="number" value="500"/>
+</label>
+<label>
           Investment return (% p.a.)
-          <input id="invRate" inputmode="decimal" type="number" min="-50" step="0.1" value="5.0">
-        </label>
-
-        <label>
+          <input id="invRate" inputmode="decimal" min="-50" step="0.1" type="number" value="5.0"/>
+</label>
+<label>
           Comparison horizon (years)
-          <input id="horizon" inputmode="decimal" type="number" min="0.1" step="0.5" value="10">
-        </label>
-
-        <label>
+          <input id="horizon" inputmode="decimal" min="0.1" step="0.5" type="number" value="10"/>
+</label>
+<label>
           Start investing after payoff?
           <select id="investAfterPayoff">
-            <option value="yes" selected>Yes (invest the same extra monthly after loan is cleared)</option>
-            <option value="no">No (compare only within horizon)</option>
-          </select>
-        </label>
-
-        <div style="display:flex; align-items:flex-end; gap:10px;">
-          <button class="btn" id="btnCalc" type="button">Calculate</button>
-          <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
-        </div>
-      </div>
-    </div>
-
-    <h2>Results</h2>
-    <div class="og-kpi-grid">
-      <div class="kpi">
-        <div class="kpi-label">Standard monthly payment</div>
-        <div class="kpi-value" id="kpiStdPay">—</div>
-        <div class="kpi-sub" id="kpiStdNote">—</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">Pay-down monthly payment</div>
-        <div class="kpi-value" id="kpiPdPay">—</div>
-        <div class="kpi-sub" id="kpiPdNote">—</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">Interest saved (within horizon)</div>
-        <div class="kpi-value" id="kpiIntSaved">—</div>
-        <div class="kpi-sub" id="kpiIntSavedNote">—</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">Debt reduction vs invest (net)</div>
-        <div class="kpi-value" id="kpiNet">—</div>
-        <div class="kpi-sub" id="kpiNetNote">—</div>
-      </div>
-    </div>
-
-    <div class="og-card" style="margin-top:14px;">
-      <h3 style="margin-top:0;">Details at horizon</h3>
-      <div class="og-form-grid">
-        <div>
-          <div class="muted">Remaining balance (standard)</div>
-          <div style="font-weight:700;" id="balStd">—</div>
-        </div>
-        <div>
-          <div class="muted">Remaining balance (pay-down)</div>
-          <div style="font-weight:700;" id="balPd">—</div>
-        </div>
-        <div>
-          <div class="muted">Investment future value</div>
-          <div style="font-weight:700;" id="fvInv">—</div>
-        </div>
-        <div>
-          <div class="muted">Loan payoff time (pay-down)</div>
-          <div style="font-weight:700;" id="payoffTime">—</div>
-        </div>
-      </div>
-
-      <p class="muted" style="margin:12px 0 0;">
+<option selected="" value="yes">Yes (invest the same extra monthly after loan is cleared)</option>
+<option value="no">No (compare only within horizon)</option>
+</select>
+</label>
+<div style="display:flex; align-items:flex-end; gap:10px;">
+<button class="btn" id="btnCalc" type="button">Calculate</button>
+<button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+</div>
+</div>
+</div>
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Standard monthly payment</div>
+<div class="kpi-value" id="kpiStdPay">—</div>
+<div class="kpi-sub" id="kpiStdNote">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Pay-down monthly payment</div>
+<div class="kpi-value" id="kpiPdPay">—</div>
+<div class="kpi-sub" id="kpiPdNote">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Interest saved (within horizon)</div>
+<div class="kpi-value" id="kpiIntSaved">—</div>
+<div class="kpi-sub" id="kpiIntSavedNote">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Debt reduction vs invest (net)</div>
+<div class="kpi-value" id="kpiNet">—</div>
+<div class="kpi-sub" id="kpiNetNote">—</div>
+</div>
+</div>
+<div class="og-card" style="margin-top:14px;">
+<h3 style="margin-top:0;">Details at horizon</h3>
+<div class="og-form-grid">
+<div>
+<div class="muted">Remaining balance (standard)</div>
+<div id="balStd" style="font-weight:700;">—</div>
+</div>
+<div>
+<div class="muted">Remaining balance (pay-down)</div>
+<div id="balPd" style="font-weight:700;">—</div>
+</div>
+<div>
+<div class="muted">Investment future value</div>
+<div id="fvInv" style="font-weight:700;">—</div>
+</div>
+<div>
+<div class="muted">Loan payoff time (pay-down)</div>
+<div id="payoffTime" style="font-weight:700;">—</div>
+</div>
+</div>
+<p class="muted" style="margin:12px 0 0;">
         Interpretation: within your horizon, <strong>paying down</strong> is “ahead” if the debt reduction (standard balance − pay-down balance)
         is larger than your investment future value for the same extra cash — or if you value certainty and liquidity buffers more than the expected return.
       </p>
-    </div>
-
-    <hr/>
-    <h2>Next steps</h2>
-    <ul>
-      <li><a href="/mortgage-interest-cost-singapore.html">Mortgage interest intuition (why rate matters)</a></li>
-      <li><a href="/fixed-vs-floating-home-loan-singapore.html">Fixed vs floating: when each wins</a></li>
-      <li><a href="/refinance-vs-reprice-home-loan-singapore.html">Refinance vs reprice: decision guide</a></li>
-    </ul>
-  </main>
-
-  <div id="site-footer"></div>
-  <script src="/includes.js"></script>
-
-  <script>
+</div>
+<hr/>
+<h2>Next steps</h2>
+<ul>
+<li><a href="/mortgage-interest-cost-singapore.html">Mortgage interest intuition (why rate matters)</a></li>
+<li><a href="/fixed-vs-floating-home-loan-singapore.html">Fixed vs floating: when each wins</a></li>
+<li><a href="/refinance-vs-reprice-home-loan-singapore.html">Refinance vs reprice: decision guide</a></li>
+</ul>
+<section class="og-editorial" id="og-editorial-paydown-invest">
+<h2>Pay down vs invest: what the calculator is really comparing</h2>
+<p>You’re comparing two uses of the same cash: <strong>guaranteed interest saved</strong> versus <strong>expected investment returns</strong>. The “winner” depends on your return assumption and how long you hold the strategy.</p>
+<h3>How to be conservative</h3>
+<ul>
+<li>Use a lower investment return (e.g., 3–5% p.a.) and see if investing still wins.</li>
+<li>Consider your risk tolerance: mortgage savings are “certain”, investments are not.</li>
+<li>Don’t forget liquidity: paying down locks cash into the property.</li>
+</ul>
+<p class="og-last-updated"><strong>Last updated:</strong> 2026-02-28</p>
+<h3>FAQ</h3><div class="og-faq"><details><summary>Should I use flat or effective rate?</summary><p>Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison.</p></details><details><summary>Why do my numbers differ from the bank’s quote?</summary><p>Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model.</p></details><details><summary>What horizon should I use?</summary><p>Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity.</p></details><details><summary>What’s the best way to decide?</summary><p>Run a conservative scenario. If the decision still holds, it’s likely robust.</p></details></div><h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
+</main>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
     function fmt(n){
       if(!isFinite(n)) return "—";
       return n.toLocaleString(undefined, {maximumFractionDigits: 0});

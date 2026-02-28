@@ -1,182 +1,194 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Car Leasing vs Buying Calculator Singapore (2026): Which Is Cheaper?</title>
-  <meta name="description" content="Compare car leasing vs buying in Singapore (2026). Model total cost and effective monthly cost over your chosen horizon. Includes depreciation/resale, financing (flat or effective), fees, insurance, road tax, maintenance, parking and fuel.">
-  <meta property="og:title" content="Car Leasing vs Buying Calculator Singapore (2026)">
-  <meta property="og:description" content="Lease vs buy calculator for Singapore: true cost comparison over 1–10 years, with a full breakdown.">
-  <meta property="og:type" content="website">
-  <meta property="og:cluster" content="transport">
-  <meta property="og:subtopic" content="financing">
-  <link rel="stylesheet" href="/styles.css">
-  <script defer src="/includes.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Car Leasing vs Buying Calculator Singapore (2026): Which Is Cheaper?</title>
+<meta content="Compare car leasing vs buying in Singapore (2026). Model total cost and effective monthly cost over your chosen horizon. Includes depreciation/resale, financing (flat or effective), fees, insurance, road tax, maintenance, parking and fuel." name="description"/>
+<meta content="Car Leasing vs Buying Calculator Singapore (2026)" property="og:title"/>
+<meta content="Lease vs buy calculator for Singapore: true cost comparison over 1–10 years, with a full breakdown." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="transport" property="og:cluster"/>
+<meta content="financing" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
 </head>
 <body>
-  <div id="site-header"></div>
-  <main class="container">
-    <h1>Car Leasing vs Buying Calculator (Singapore, 2026)</h1>
-    <div class="box" style="margin-top:14px">
-      <strong>When to use this</strong>
-      <div style="margin-top:6px">
+<div id="site-header"></div>
+<main class="container">
+<h1>Car Leasing vs Buying Calculator (Singapore, 2026)</h1>
+<div class="box" style="margin-top:14px">
+<strong>When to use this</strong>
+<div style="margin-top:6px">
         Leasing is often sold as “no hassle”, while buying is framed as “asset ownership”. This calculator answers the only question that matters:
         <em>over the same time horizon, what’s the true total cost and all‑in monthly cost?</em>
-      </div>
-    </div>
-
-    <div class="grid-2" style="margin-top:16px;gap:14px">
-      <section class="box">
-        <h2 style="margin-top:0">Lease scenario</h2>
-        <label>Monthly lease price (SGD)
-          <input id="leaseMonthly" type="number" min="0" step="10" value="1800">
-        </label>
-        <div class="grid-2" style="gap:10px">
-          <label>Upfront lease fees (SGD)
-            <input id="leaseUpfront" type="number" min="0" step="50" value="0">
-          </label>
-          <label>End/return fees (SGD)
-            <input id="leaseEndFees" type="number" min="0" step="50" value="0">
-          </label>
-        </div>
-        <div class="grid-2" style="gap:10px">
-          <label>Does lease include insurance?
+</div>
+</div>
+<div class="grid-2" style="margin-top:16px;gap:14px">
+<section class="box">
+<h2 style="margin-top:0">Lease scenario</h2>
+<label>Monthly lease price (SGD)
+          <input id="leaseMonthly" min="0" step="10" type="number" value="1800"/>
+</label>
+<div class="grid-2" style="gap:10px">
+<label>Upfront lease fees (SGD)
+            <input id="leaseUpfront" min="0" step="50" type="number" value="0"/>
+</label>
+<label>End/return fees (SGD)
+            <input id="leaseEndFees" min="0" step="50" type="number" value="0"/>
+</label>
+</div>
+<div class="grid-2" style="gap:10px">
+<label>Does lease include insurance?
             <select id="leaseIncludesInsurance">
-              <option value="yes" selected>Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
-          <label>Does lease include road tax?
+<option selected="" value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label>
+<label>Does lease include road tax?
             <select id="leaseIncludesRoadTax">
-              <option value="yes" selected>Yes</option>
-              <option value="no">No</option>
-            </select>
-          </label>
-        </div>
-        <label>Maintenance included?
+<option selected="" value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label>
+</div>
+<label>Maintenance included?
           <select id="leaseIncludesMaint">
-            <option value="yes" selected>Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-      </section>
-
-      <section class="box">
-        <h2 style="margin-top:0">Buy scenario</h2>
-        <div class="grid-2" style="gap:10px">
-          <label>On-road price (SGD)
-            <input id="buyPrice" type="number" min="0" step="1000" value="120000">
-          </label>
-          <label>Expected resale value at horizon (SGD)
-            <input id="resaleValue" type="number" min="0" step="1000" value="65000">
-          </label>
-        </div>
-        <div class="grid-2" style="gap:10px">
-          <label>Downpayment (%)
-            <input id="downPct" type="number" min="0" max="100" step="1" value="30">
-          </label>
-          <label>Loan tenure (years)
-            <input id="loanYears" type="number" min="1" max="7" step="1" value="5">
-          </label>
-        </div>
-        <div class="grid-2" style="gap:10px">
-          <label>Rate type
+<option selected="" value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label>
+</section>
+<section class="box">
+<h2 style="margin-top:0">Buy scenario</h2>
+<div class="grid-2" style="gap:10px">
+<label>On-road price (SGD)
+            <input id="buyPrice" min="0" step="1000" type="number" value="120000"/>
+</label>
+<label>Expected resale value at horizon (SGD)
+            <input id="resaleValue" min="0" step="1000" type="number" value="65000"/>
+</label>
+</div>
+<div class="grid-2" style="gap:10px">
+<label>Downpayment (%)
+            <input id="downPct" max="100" min="0" step="1" type="number" value="30"/>
+</label>
+<label>Loan tenure (years)
+            <input id="loanYears" max="7" min="1" step="1" type="number" value="5"/>
+</label>
+</div>
+<div class="grid-2" style="gap:10px">
+<label>Rate type
             <select id="loanType">
-              <option value="effective" selected>Effective (APR)</option>
-              <option value="flat">Flat rate</option>
-            </select>
-          </label>
-          <label>Interest rate (% p.a.)
-            <input id="rate" type="number" min="0" step="0.01" value="2.78">
-          </label>
-        </div>
-        <label>One-time fees (bank + dealer) (SGD)
-          <input id="buyFees" type="number" min="0" step="50" value="0">
-        </label>
-      </section>
-    </div>
-
-    <section class="box" style="margin-top:14px">
-      <h2 style="margin-top:0">Running costs (if not included)</h2>
-      <div class="grid-3" style="gap:10px">
-        <label>Insurance (annual, SGD)
-          <input id="insAnnual" type="number" min="0" step="50" value="1200">
-        </label>
-        <label>Road tax (annual, SGD)
-          <input id="roadTaxAnnual" type="number" min="0" step="50" value="800">
-        </label>
-        <label>Maintenance (annual, SGD)
-          <input id="maintAnnual" type="number" min="0" step="50" value="900">
-        </label>
-      </div>
-      <div class="grid-3" style="gap:10px;margin-top:10px">
-        <label>Parking (monthly, SGD)
-          <input id="parkingMonthly" type="number" min="0" step="10" value="200">
-        </label>
-        <label>Mileage (annual, km)
-          <input id="mileageAnnual" type="number" min="0" step="500" value="12000">
-        </label>
-        <label>Fuel efficiency (km/L)
-          <input id="kmPerL" type="number" min="1" step="0.1" value="12">
-        </label>
-      </div>
-      <div style="margin-top:10px">
-        <label>Fuel price (SGD/L)
-          <input id="fuelPrice" type="number" min="0" step="0.01" value="2.75">
-        </label>
-      </div>
-      <div style="margin-top:10px" class="grid-2">
-        <label>Comparison horizon (years)
-          <input id="horizonYears" type="number" min="1" max="10" step="1" value="5">
-        </label>
-        <div class="box" style="margin:0;padding:10px">
-          <div style="font-size:14px;opacity:.9">Tip: choose the period you realistically keep the car (or lease).</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="box" style="margin-top:14px">
-      <h2 style="margin-top:0">Results</h2>
-      <div class="grid-3" style="gap:10px">
-        <div class="kpi-box">
-          <div class="kpi-label">Lease total cost</div>
-          <div class="kpi-value" id="leaseTotal">—</div>
-          <div class="kpi-sub" id="leaseMonthlyOut">—</div>
-        </div>
-        <div class="kpi-box">
-          <div class="kpi-label">Buy total cost</div>
-          <div class="kpi-value" id="buyTotal">—</div>
-          <div class="kpi-sub" id="buyMonthlyOut">—</div>
-        </div>
-        <div class="kpi-box">
-          <div class="kpi-label">Winner</div>
-          <div class="kpi-value" id="winner">—</div>
-          <div class="kpi-sub" id="delta">—</div>
-        </div>
-      </div>
-
-      <div style="margin-top:12px;overflow:auto">
-        <table class="table" style="min-width:760px">
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>Lease (SGD)</th>
-              <th>Buy (SGD)</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
-
-      <div style="margin-top:10px">
-        <a href="/car-leasing-vs-buying-singapore.html">Read the decision guide: leasing vs buying</a>
-      </div>
-    </section>
-
-  </main>
-  <div id="site-footer"></div>
-
+<option selected="" value="effective">Effective (APR)</option>
+<option value="flat">Flat rate</option>
+</select>
+</label>
+<label>Interest rate (% p.a.)
+            <input id="rate" min="0" step="0.01" type="number" value="2.78"/>
+</label>
+</div>
+<label>One-time fees (bank + dealer) (SGD)
+          <input id="buyFees" min="0" step="50" type="number" value="0"/>
+</label>
+</section>
+</div>
+<section class="box" style="margin-top:14px">
+<h2 style="margin-top:0">Running costs (if not included)</h2>
+<div class="grid-3" style="gap:10px">
+<label>Insurance (annual, SGD)
+          <input id="insAnnual" min="0" step="50" type="number" value="1200"/>
+</label>
+<label>Road tax (annual, SGD)
+          <input id="roadTaxAnnual" min="0" step="50" type="number" value="800"/>
+</label>
+<label>Maintenance (annual, SGD)
+          <input id="maintAnnual" min="0" step="50" type="number" value="900"/>
+</label>
+</div>
+<div class="grid-3" style="gap:10px;margin-top:10px">
+<label>Parking (monthly, SGD)
+          <input id="parkingMonthly" min="0" step="10" type="number" value="200"/>
+</label>
+<label>Mileage (annual, km)
+          <input id="mileageAnnual" min="0" step="500" type="number" value="12000"/>
+</label>
+<label>Fuel efficiency (km/L)
+          <input id="kmPerL" min="1" step="0.1" type="number" value="12"/>
+</label>
+</div>
+<div style="margin-top:10px">
+<label>Fuel price (SGD/L)
+          <input id="fuelPrice" min="0" step="0.01" type="number" value="2.75"/>
+</label>
+</div>
+<div class="grid-2" style="margin-top:10px">
+<label>Comparison horizon (years)
+          <input id="horizonYears" max="10" min="1" step="1" type="number" value="5"/>
+</label>
+<div class="box" style="margin:0;padding:10px">
+<div style="font-size:14px;opacity:.9">Tip: choose the period you realistically keep the car (or lease).</div>
+</div>
+</div>
+</section>
+<section class="box" style="margin-top:14px">
+<h2 style="margin-top:0">Results</h2>
+<div class="grid-3" style="gap:10px">
+<div class="kpi-box">
+<div class="kpi-label">Lease total cost</div>
+<div class="kpi-value" id="leaseTotal">—</div>
+<div class="kpi-sub" id="leaseMonthlyOut">—</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">Buy total cost</div>
+<div class="kpi-value" id="buyTotal">—</div>
+<div class="kpi-sub" id="buyMonthlyOut">—</div>
+</div>
+<div class="kpi-box">
+<div class="kpi-label">Winner</div>
+<div class="kpi-value" id="winner">—</div>
+<div class="kpi-sub" id="delta">—</div>
+</div>
+</div>
+<div style="margin-top:12px;overflow:auto">
+<table class="table" style="min-width:760px">
+<thead>
+<tr>
+<th>Component</th>
+<th>Lease (SGD)</th>
+<th>Buy (SGD)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<div style="margin-top:10px">
+<a href="/car-leasing-vs-buying-singapore.html">Read the decision guide: leasing vs buying</a>
+</div>
+</section>
+<section class="og-editorial" id="og-editorial-lease-buy">
+<h2>Lease vs buy: how to interpret the result</h2>
+<p>This calculator compares <strong>all‑in cost over the same holding period</strong>. Leasing buys flexibility (easy exit, fewer surprises) while buying concentrates cost in <strong>depreciation + financing</strong>. Don’t compare only monthly payments — compare the <strong>total cost</strong> and the <strong>risk you’re taking</strong>.</p>
+<h3>What to include in leasing costs</h3>
+<ul>
+<li>Monthly lease payment</li>
+<li>Upfront deposit / admin fees (if any)</li>
+<li>Items not included (insurance, servicing, tyres, road tax, parking, fuel)</li>
+</ul>
+<h3>What drives buying costs</h3>
+<ul>
+<li>Depreciation (purchase price minus resale value)</li>
+<li>Interest (flat vs effective matters)</li>
+<li>Running costs (insurance, maintenance, road tax, parking, fuel)</li>
+</ul>
+<h3>Worked example (planning)</h3>
+<p>If the lease looks “only S$X/month more”, check if it includes insurance/servicing. A buy option may look cheaper on paper but can swing the other way after repairs or if resale is worse than expected.</p>
+<p class="og-last-updated"><strong>Last updated:</strong> 2026-02-28</p>
+<h3>FAQ</h3><div class="og-faq"><details><summary>Should I use flat or effective rate?</summary><p>Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison.</p></details><details><summary>Why do my numbers differ from the bank’s quote?</summary><p>Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model.</p></details><details><summary>What horizon should I use?</summary><p>Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity.</p></details><details><summary>What’s the best way to decide?</summary><p>Run a conservative scenario. If the decision still holds, it’s likely robust.</p></details></div><h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
+</main>
+<div id="site-footer"></div>
 <script>
 (function(){
   const $ = (id)=>document.getElementById(id);

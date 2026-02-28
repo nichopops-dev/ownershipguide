@@ -1,126 +1,122 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>COE Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
-  <meta name="description" content="Singapore COE loan calculator (2026): estimate monthly instalment, total interest and total paid when financing the COE portion. Supports flat-rate quotes and effective interest loans.">
-
-  <meta property="og:title" content="COE Loan Calculator Singapore (2026)">
-  <meta property="og:description" content="Estimate COE loan instalment + total interest (flat vs effective) for the COE component.">
-  <meta property="og:type" content="article">
-
-  <link rel="stylesheet" href="/styles.css">
-  <script defer src="/includes.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>COE Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
+<meta content="Singapore COE loan calculator (2026): estimate monthly instalment, total interest and total paid when financing the COE portion. Supports flat-rate quotes and effective interest loans." name="description"/>
+<meta content="COE Loan Calculator Singapore (2026)" property="og:title"/>
+<meta content="Estimate COE loan instalment + total interest (flat vs effective) for the COE component." property="og:description"/>
+<meta content="article" property="og:type"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
 </head>
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <nav class="breadcrumb">
-      <a href="/">Home</a> › <a href="/transport/">Transport</a> › <a href="/transport/financing/">Transport financing</a> › COE loan calculator
+<div id="site-header"></div>
+<main class="container">
+<nav class="breadcrumb">
+<a href="/">Home</a> › <a href="/transport/">Transport</a> › <a href="/transport/financing/">Transport financing</a> › COE loan calculator
     </nav>
-
-    <h1>COE Loan Calculator (Singapore, 2026)</h1>
-
-    <p class="muted">
+<h1>COE Loan Calculator (Singapore, 2026)</h1>
+<p class="muted">
       This calculator estimates the <b>monthly instalment</b>, <b>total interest</b>, and <b>total paid</b> when you finance the
       <b>COE portion</b>. Many quotes are advertised as a <b>flat rate</b> (simple interest). To compare apples-to-apples, this
       page also estimates the <b>equivalent effective rate (APR)</b>.
     </p>
-
-    <div class="box">
-      <h2>Inputs</h2>
-
-      <div class="og-form-grid">
-        <div>
-          <label for="coeAmount">COE amount (SGD)</label>
-          <input id="coeAmount" type="number" inputmode="decimal" min="0" step="500" value="100000">
-        </div>
-
-        <div>
-          <label for="downPct">Downpayment on COE (%)</label>
-          <input id="downPct" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="0">
-        </div>
-
-        <div>
-          <label for="tenureYears">Tenure (years)</label>
-          <input id="tenureYears" type="number" inputmode="decimal" min="0.5" step="0.5" value="5">
-        </div>
-
-        <div>
-          <label for="rateType">Rate type</label>
-          <select id="rateType">
-            <option value="flat">Flat rate (simple interest)</option>
-            <option value="effective">Effective rate (APR)</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="ratePct">Interest rate (% per year)</label>
-          <input id="ratePct" type="number" inputmode="decimal" min="0" step="0.01" value="2.88">
-        </div>
-
-        <div>
-          <label for="fees">One-time fees (SGD)</label>
-          <input id="fees" type="number" inputmode="decimal" min="0" step="10" value="0">
-        </div>
-      </div>
-
-      <div class="og-hero-actions">
-        <button class="btn" id="btnCalc">Calculate</button>
-        <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
-      </div>
-    </div>
-
-    <div class="box">
-      <h2>Results</h2>
-
-      <div class="og-kpi-grid">
-        <div class="kpi">
-          <div class="kpi-label">Loan principal (COE financed)</div>
-          <div class="kpi-value" id="kpiPrincipal">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Monthly instalment (est.)</div>
-          <div class="kpi-value" id="kpiMonthly">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Total interest</div>
-          <div class="kpi-value" id="kpiInterest">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Total paid (incl. fees)</div>
-          <div class="kpi-value" id="kpiTotal">—</div>
-        </div>
-      </div>
-
-      <div class="hr"></div>
-
-      <p class="muted" id="effectiveNote">—</p>
-    </div>
-
-    <div class="box">
-      <h2>Next steps</h2>
-      <ul>
-        <li><a href="/car-loan-calculator-singapore.html">Car loan calculator (flat vs effective)</a> — for the full car price financing.</li>
-        <li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a> — test total monthly burden (not instalment).</li>
-        <li><a href="/coe-cost-singapore.html">COE cost framework</a> — what COE really means in the ownership equation.</li>
-      </ul>
-    </div>
-
-    <p class="muted small">
+<div class="box">
+<h2>Inputs</h2>
+<div class="og-form-grid">
+<div>
+<label for="coeAmount">COE amount (SGD)</label>
+<input id="coeAmount" inputmode="decimal" min="0" step="500" type="number" value="100000"/>
+</div>
+<div>
+<label for="downPct">Downpayment on COE (%)</label>
+<input id="downPct" inputmode="decimal" max="100" min="0" step="0.5" type="number" value="0"/>
+</div>
+<div>
+<label for="tenureYears">Tenure (years)</label>
+<input id="tenureYears" inputmode="decimal" min="0.5" step="0.5" type="number" value="5"/>
+</div>
+<div>
+<label for="rateType">Rate type</label>
+<select id="rateType">
+<option value="flat">Flat rate (simple interest)</option>
+<option value="effective">Effective rate (APR)</option>
+</select>
+</div>
+<div>
+<label for="ratePct">Interest rate (% per year)</label>
+<input id="ratePct" inputmode="decimal" min="0" step="0.01" type="number" value="2.88"/>
+</div>
+<div>
+<label for="fees">One-time fees (SGD)</label>
+<input id="fees" inputmode="decimal" min="0" step="10" type="number" value="0"/>
+</div>
+</div>
+<div class="og-hero-actions">
+<button class="btn" id="btnCalc">Calculate</button>
+<button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+</div>
+</div>
+<div class="box">
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Loan principal (COE financed)</div>
+<div class="kpi-value" id="kpiPrincipal">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Monthly instalment (est.)</div>
+<div class="kpi-value" id="kpiMonthly">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Total interest</div>
+<div class="kpi-value" id="kpiInterest">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Total paid (incl. fees)</div>
+<div class="kpi-value" id="kpiTotal">—</div>
+</div>
+</div>
+<div class="hr"></div>
+<p class="muted" id="effectiveNote">—</p>
+</div>
+<div class="box">
+<h2>Next steps</h2>
+<ul>
+<li><a href="/car-loan-calculator-singapore.html">Car loan calculator (flat vs effective)</a> — for the full car price financing.</li>
+<li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a> — test total monthly burden (not instalment).</li>
+<li><a href="/coe-cost-singapore.html">COE cost framework</a> — what COE really means in the ownership equation.</li>
+</ul>
+</div>
+<p class="muted small">
       Notes: This is a planning calculator, not financial advice. Actual loan terms can include rebates, step-up rates, insurance add-ons, or different fee structures.
     </p>
-  </main>
-
-  <div id="site-footer"></div>
-
-  <script>
+<section class="og-editorial" id="og-editorial-coe-loan">
+<h2>How to use this COE loan calculator</h2>
+<p>COE financing often looks “cheap” because lenders advertise a <strong>flat rate</strong>. Flat rates understate the true cost because interest is charged on the original principal rather than the declining balance. Use this tool to translate a quote into a <strong>monthly instalment</strong> and a planning estimate of <strong>total interest</strong>.</p>
+<h3>What the inputs mean</h3>
+<ul>
+<li><strong>COE amount</strong>: the COE component you’re financing (not the whole car price).</li>
+<li><strong>Downpayment</strong>: reduces principal and total interest. Some COE loans require a minimum downpayment.</li>
+<li><strong>Rate type</strong>: choose flat if your quote is “x% flat p.a.”; choose effective if you have an APR/effective rate.</li>
+<li><strong>Fees</strong>: include processing/admin fees so the total paid is realistic.</li>
+</ul>
+<h3>Worked example (planning)</h3>
+<p>If COE is S$100,000 and you finance S$80,000 over 5 years, a <em>flat</em> 3.0% p.a. can translate to an effective rate meaningfully higher than 3.0%. The difference matters because COE is a large chunk of the all‑in cost.</p>
+<h3>Common mistakes</h3>
+<ul>
+<li>Comparing flat rates across lenders without translating to effective cost.</li>
+<li>Ignoring fees (they change break‑even vs paying cash).</li>
+<li>Mixing “car loan” and “COE loan” into one mental bucket (they can have different terms).</li>
+</ul>
+<p class="og-last-updated"><strong>Last updated:</strong> 2026-02-28</p>
+<h3>FAQ</h3><div class="og-faq"><details><summary>Should I use flat or effective rate?</summary><p>Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison.</p></details><details><summary>Why do my numbers differ from the bank’s quote?</summary><p>Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model.</p></details><details><summary>What horizon should I use?</summary><p>Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity.</p></details><details><summary>What’s the best way to decide?</summary><p>Run a conservative scenario. If the decision still holds, it’s likely robust.</p></details></div></section>
+</main>
+<div id="site-footer"></div>
+<script>
     function fmtMoney(x) {
       if (!isFinite(x)) return "—";
       return "S$" + x.toLocaleString(undefined, { maximumFractionDigits: 0 });

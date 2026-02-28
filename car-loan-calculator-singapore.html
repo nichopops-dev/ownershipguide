@@ -1,156 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
-  <meta name="description" content="Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans. Includes an effective-rate estimator for flat-rate quotes.">
-
-  <meta property="og:title" content="Car Loan Calculator Singapore (2026): Monthly Instalment + Total Interest">
-  <meta property="og:description" content="Compute monthly instalment, total interest, and total paid. Flat-rate vs effective interest, with effective-rate estimator.">
-  <meta property="og:type" content="article">
-  <meta property="og:cluster" content="transport">
-  <meta property="og:subtopic" content="calculator">
-
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
+<meta content="Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans. Includes an effective-rate estimator for flat-rate quotes." name="description"/>
+<meta content="Car Loan Calculator Singapore (2026): Monthly Instalment + Total Interest" property="og:title"/>
+<meta content="Compute monthly instalment, total interest, and total paid. Flat-rate vs effective interest, with effective-rate estimator." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="transport" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <nav class="breadcrumbs">
-      <a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/transport/financing/">Financing</a> / Car loan calculator
+<div id="site-header"></div>
+<main class="container">
+<nav class="breadcrumbs">
+<a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/transport/financing/">Financing</a> / Car loan calculator
     </nav>
-
-    <h1>Car Loan Calculator (Singapore, 2026)</h1>
-    <p class="muted">
+<h1>Car Loan Calculator (Singapore, 2026)</h1>
+<p class="muted">
       Use this to sanity-check a car loan quote beyond the “monthly instalment” headline.
       Singapore car loans are often quoted as a <b>flat rate</b> (simple interest), which can look deceptively low versus an <b>effective</b> rate.
       This calculator shows both, and estimates the equivalent effective rate for flat-rate quotes.
     </p>
-
-    <div class="box">
-      <h2>Inputs</h2>
-
-      <div class="og-form-grid">
-        <div>
-          <label for="carPrice">Car price (SGD)</label>
-          <input id="carPrice" type="number" inputmode="decimal" min="0" step="1000" value="120000">
-        </div>
-
-        <div>
-          <label for="downPct">Downpayment (%)</label>
-          <input id="downPct" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="30">
-        </div>
-
-        <div>
-          <label for="tenureYears">Tenure (years)</label>
-          <input id="tenureYears" type="number" inputmode="decimal" min="0.5" step="0.5" value="7">
-        </div>
-
-        <div>
-          <label for="rateMode">Interest quote type</label>
-          <select id="rateMode">
-            <option value="flat" selected>Flat rate (simple interest)</option>
-            <option value="effective">Effective interest (amortized APR)</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="ratePa">Quoted interest rate (% p.a.)</label>
-          <input id="ratePa" type="number" inputmode="decimal" min="0" step="0.05" value="2.78">
-        </div>
-
-        <div>
-          <label for="fees">Upfront fees (SGD)</label>
-          <input id="fees" type="number" inputmode="decimal" min="0" step="50" value="0">
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:10px">
+<div class="box">
+<h2>Inputs</h2>
+<div class="og-form-grid">
+<div>
+<label for="carPrice">Car price (SGD)</label>
+<input id="carPrice" inputmode="decimal" min="0" step="1000" type="number" value="120000"/>
+</div>
+<div>
+<label for="downPct">Downpayment (%)</label>
+<input id="downPct" inputmode="decimal" max="100" min="0" step="0.5" type="number" value="30"/>
+</div>
+<div>
+<label for="tenureYears">Tenure (years)</label>
+<input id="tenureYears" inputmode="decimal" min="0.5" step="0.5" type="number" value="7"/>
+</div>
+<div>
+<label for="rateMode">Interest quote type</label>
+<select id="rateMode">
+<option selected="" value="flat">Flat rate (simple interest)</option>
+<option value="effective">Effective interest (amortized APR)</option>
+</select>
+</div>
+<div>
+<label for="ratePa">Quoted interest rate (% p.a.)</label>
+<input id="ratePa" inputmode="decimal" min="0" step="0.05" type="number" value="2.78"/>
+</div>
+<div>
+<label for="fees">Upfront fees (SGD)</label>
+<input id="fees" inputmode="decimal" min="0" step="50" type="number" value="0"/>
+</div>
+</div>
+<p class="muted" style="margin-top:10px">
         Tip: If your quote is “flat 2.78% p.a.”, set <b>Interest quote type = Flat rate</b>.
         If your lender provides an APR/effective rate, set it to <b>Effective</b>.
       </p>
-
-      <button class="btn" id="btnCalc">Calculate</button>
-    </div>
-
-    <div class="box">
-      <h2>Results</h2>
-
-      <div class="og-kpi-grid">
-        <div class="kpi">
-          <div class="kpi-label">Loan principal</div>
-          <div class="kpi-value" id="kLoan">—</div>
-          <div class="kpi-sub" id="kDown">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Monthly instalment</div>
-          <div class="kpi-value" id="kMonthly">—</div>
-          <div class="kpi-sub" id="kMonths">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Total interest</div>
-          <div class="kpi-value" id="kInterest">—</div>
-          <div class="kpi-sub" id="kType">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Total paid (incl. fees)</div>
-          <div class="kpi-value" id="kTotal">—</div>
-          <div class="kpi-sub">Principal + interest + fees</div>
-        </div>
-      </div>
-
-      <div class="box" style="margin-top:14px">
-        <h3>Effective-rate estimate (for flat-rate quotes)</h3>
-        <p class="muted" style="margin-top:6px">
+<button class="btn" id="btnCalc">Calculate</button>
+</div>
+<div class="box">
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Loan principal</div>
+<div class="kpi-value" id="kLoan">—</div>
+<div class="kpi-sub" id="kDown">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Monthly instalment</div>
+<div class="kpi-value" id="kMonthly">—</div>
+<div class="kpi-sub" id="kMonths">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Total interest</div>
+<div class="kpi-value" id="kInterest">—</div>
+<div class="kpi-sub" id="kType">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Total paid (incl. fees)</div>
+<div class="kpi-value" id="kTotal">—</div>
+<div class="kpi-sub">Principal + interest + fees</div>
+</div>
+</div>
+<div class="box" style="margin-top:14px">
+<h3>Effective-rate estimate (for flat-rate quotes)</h3>
+<p class="muted" style="margin-top:6px">
           Flat-rate car loans charge interest on the original principal for the whole tenure.
           The “equivalent effective rate” below is an estimate of the amortized APR that matches the same monthly instalment.
         </p>
-        <ul>
-          <li><b>Equivalent effective APR:</b> <span id="kEqApr">—</span></li>
-          <li><b>Note:</b> This is a numerical estimate (not a lender disclosure APR). Fees can change the true APR materially.</li>
-        </ul>
-      </div>
-    </div>
-
-    <hr>
-
-    <h2>How to interpret this</h2>
-    <div class="box">
-      <ol>
-        <li><b>Separate “can pay” from “should pay”.</b> An instalment can be affordable while total ownership cost is still a bad trade.</li>
-        <li><b>Use the stress test.</b> Pair this with the car affordability calculator (true monthly cost, not just instalment).</li>
-        <li><b>Watch tenure creep.</b> A longer tenure reduces instalment but can increase your total interest exposure.</li>
-      </ol>
-
-      <div class="og-card-grid">
-        <a class="og-card og-card-link" href="/car-affordability-calculator-singapore.html">
-          <h3>Car affordability stress test</h3>
-          <p class="muted">True monthly cost (depreciation/COE, insurance, fuel, maintenance) vs your income buffer.</p>
-        </a>
-        <a class="og-card og-card-link" href="/car-loan-rates-singapore.html">
-          <h3>Car loan rates (flat vs effective)</h3>
-          <p class="muted">Understand why a flat rate “looks low” and how to compare offers properly.</p>
-        </a>
-        <a class="og-card og-card-link" href="/transport/financing/">
-          <h3>Transport financing hub</h3>
-          <p class="muted">Decision flow: loan vs cash, balloon vs normal, leasing vs buying.</p>
-        </a>
-      </div>
-    </div>
-
-    <div id="next-steps"></div>
-  </main>
-
-  <div id="site-footer"></div>
-
-  <script src="/includes.js"></script>
-  <script>
+<ul>
+<li><b>Equivalent effective APR:</b> <span id="kEqApr">—</span></li>
+<li><b>Note:</b> This is a numerical estimate (not a lender disclosure APR). Fees can change the true APR materially.</li>
+</ul>
+</div>
+</div>
+<hr/>
+<h2>How to interpret this</h2>
+<div class="box">
+<ol>
+<li><b>Separate “can pay” from “should pay”.</b> An instalment can be affordable while total ownership cost is still a bad trade.</li>
+<li><b>Use the stress test.</b> Pair this with the car affordability calculator (true monthly cost, not just instalment).</li>
+<li><b>Watch tenure creep.</b> A longer tenure reduces instalment but can increase your total interest exposure.</li>
+</ol>
+<div class="og-card-grid">
+<a class="og-card og-card-link" href="/car-affordability-calculator-singapore.html">
+<h3>Car affordability stress test</h3>
+<p class="muted">True monthly cost (depreciation/COE, insurance, fuel, maintenance) vs your income buffer.</p>
+</a>
+<a class="og-card og-card-link" href="/car-loan-rates-singapore.html">
+<h3>Car loan rates (flat vs effective)</h3>
+<p class="muted">Understand why a flat rate “looks low” and how to compare offers properly.</p>
+</a>
+<a class="og-card og-card-link" href="/transport/financing/">
+<h3>Transport financing hub</h3>
+<p class="muted">Decision flow: loan vs cash, balloon vs normal, leasing vs buying.</p>
+</a>
+</div>
+</div>
+<div id="next-steps"></div>
+<section class="og-editorial" id="og-editorial-car-loan">
+<h2>Car loan (flat vs effective): why this matters</h2>
+<p>Many Singapore car loans are advertised with a flat rate. Flat rates understate true cost because interest is effectively front‑loaded. Use this tool to compare loans on a like‑for‑like basis (monthly + total interest).</p>
+<h3>Quick checks</h3>
+<ul>
+<li>Compare two offers using <strong>total paid</strong>, not just rate.</li>
+<li>Include fees — they can flip the decision.</li>
+<li>Stress test your budget: what if your income dips for 3 months?</li>
+</ul>
+<p class="og-last-updated"><strong>Last updated:</strong> 2026-02-28</p>
+<h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
+</main>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
     (function () {
       const fmt = (n) => {
         if (!isFinite(n)) return "—";
