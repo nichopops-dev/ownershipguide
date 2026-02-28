@@ -1027,3 +1027,14 @@ body.home .card{
   .og-wizard .btn{ width:100%; text-align:center; }
 }
 
+
+
+/* Editorial blocks (AdSense quality layer) */
+.og-divider{ height:1px; background:var(--border); margin:28px 0; }
+.og-last-updated{ color:var(--muted); margin:0 0 12px; font-size:14px; }
+.og-bullets{ padding-left:18px; }
+.og-callout{ border:1px solid var(--border); background: #fff; border-radius:16px; padding:14px 16px; }
+.og-callout-title{ margin:0 0 6px; font-weight:700; }
+.og-faq details{ border:1px solid var(--border); background:#fff; border-radius:14px; padding:10px 12px; margin:10px 0; }
+.og-faq summary{ cursor:pointer; font-weight:600; }
+.og-faq-a{ margin-top:8px; color:var(--muted); }
