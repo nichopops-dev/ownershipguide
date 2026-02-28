@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Sell → Buy Next Pipeline Calculator (Singapore)</title>
+  <meta name="description" content="Enter your key numbers once. Jump into the right calculators pre-filled: CPF refund, sell proceeds, upfront cash+CPF needed, upgrade/downgrade bridge, and upgrade ladder."/>
+
+  <meta property="og:title" content="Sell → Buy Next Pipeline Calculator (Singapore)"/>
+  <meta property="og:description" content="One input layer that pre-fills the sell→buy planning tools for Singapore property owners."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:cluster" content="property"/>
+  <meta property="og:subtopic" content="planning"/>
+
+  <link rel="stylesheet" href="/styles.css"/>
+  <script src="/includes.js" defer></script>
+
+  <style>
+    .og-card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; }
+    .og-grid{ display:grid; gap:14px; }
+    @media(min-width:920px){ .og-grid.cols2{ grid-template-columns: 1.15fr .85fr; } }
+    .kpi{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px; }
+    .kpi .t{ font-size:12px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; }
+    .kpi .v{ font-weight:900; font-size:28px; margin-top:6px; }
+    .kpi .s{ color:var(--muted); font-size:13px; margin-top:4px; }
+    .kpi-grid{ display:grid; gap:10px; }
+    @media(min-width:920px){ .kpi-grid{ grid-template-columns: 1fr 1fr; } }
+    .mini{ color:var(--muted); font-size:14px; margin:6px 0 0; }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <p class="eyebrow">PROPERTY • PLANNING</p>
+    <h1>Sell → Buy Next Pipeline (One Input → Pre-filled Tools)</h1>
+    <p class="lead">Enter your key numbers once. This page generates <b>pre-filled</b> links into the right calculators so you don’t retype everything.</p>
+
+    <div class="og-grid cols2">
+      <section class="og-card">
+        <h2 style="margin-top:0">Inputs</h2>
+        <div class="og-form-grid" style="margin-top:10px">
+          <div>
+            <label><b>Current sale price (SGD)</b></label>
+            <input id="sale" inputmode="decimal" value="1200000"/>
+            <div class="help">Expected selling price of your current home.</div>
+          </div>
+          <div>
+            <label><b>Outstanding loan to redeem (SGD)</b></label>
+            <input id="loan" inputmode="decimal" value="650000"/>
+            <div class="help">Approx loan balance that will be redeemed on sale.</div>
+          </div>
+          <div>
+            <label><b>CPF used (OA) (SGD)</b></label>
+            <input id="cpfUsed" inputmode="decimal" value="200000"/>
+            <div class="help">Planning total CPF used (downpayment + instalments).</div>
+          </div>
+          <div>
+            <label><b>CPF usage duration (years)</b></label>
+            <input id="cpfYears" inputmode="decimal" value="5"/>
+            <div class="help">How long CPF was outstanding before sale/refund.</div>
+          </div>
+          <div>
+            <label><b>Target next purchase price (SGD)</b></label>
+            <input id="buy" inputmode="decimal" value="1500000"/>
+            <div class="help">Your next property price you’re aiming for.</div>
+          </div>
+          <div>
+            <label><b>Loan-to-value (LTV, %)</b></label>
+            <input id="ltv" inputmode="decimal" value="75"/>
+            <div class="help">Typical bank case: 75%.</div>
+          </div>
+          <div>
+            <label><b>Min cash downpayment (% of price)</b></label>
+            <input id="minCashPct" inputmode="decimal" value="5"/>
+            <div class="help">Planning minimum cash portion of downpayment.</div>
+          </div>
+          <div>
+            <label><b>BSD amount (SGD)</b></label>
+            <input id="bsd" inputmode="decimal" value="0"/>
+            <div class="help">Use the BSD/ABSD calculator if unsure.</div>
+          </div>
+          <div>
+            <label><b>ABSD amount (SGD)</b></label>
+            <input id="absd" inputmode="decimal" value="0"/>
+            <div class="help">Leave 0 if not applicable.</div>
+          </div>
+          <div>
+            <label><b>Other upfront fees (SGD)</b></label>
+            <input id="fees" inputmode="decimal" value="3500"/>
+            <div class="help">Legal / agent / valuation (planning).</div>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:12px">
+          <button class="btn btn-primary" id="btnUpdate" type="button">Update links</button>
+          <a class="btn btn-secondary" href="/property-upgrade-planner-singapore.html">Back to Planner</a>
+        </div>
+        <p class="mini">This page stores numbers in the URL query string so you can share it (no personal identifiers).</p>
+      </section>
+
+      <aside>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="t">Estimated CPF refund</div>
+            <div class="v" id="kCpf">S$—</div>
+            <div class="s">Planning estimate (CPF used + accrued interest).</div>
+          </div>
+          <div class="kpi">
+            <div class="t">Recommended next</div>
+            <div class="v" style="font-size:18px">Run the bridge</div>
+            <div class="s">Sell → buy next (cash + CPF shortfall).</div>
+          </div>
+        </div>
+
+        <div class="og-card" style="margin-top:14px">
+          <h3 style="margin-top:0">Pre-filled tools</h3>
+          <ul style="margin:10px 0 0; padding-left:18px">
+            <li><a id="lnCpf" href="#">CPF accrued interest calculator</a></li>
+            <li><a id="lnSell" href="#">Sell proceeds (cash vs CPF)</a></li>
+            <li><a id="lnBuy" href="#">Upfront cash + CPF needed</a></li>
+            <li><a id="lnBridge" href="#"><b>Upgrade / downgrade bridge</b> (sell → buy next)</a></li>
+            <li><a id="lnLadder" href="#">Upgrade ladder (target price → required income + buffer)</a></li>
+          </ul>
+          <div class="btn-row" style="margin-top:12px">
+            <button class="btn btn-secondary" id="btnCopy" type="button">Copy sharable link</button>
+          </div>
+        </div>
+
+        <div class="related-box" style="margin-top:14px">
+          <h3 style="margin-top:0">If you don’t know BSD/ABSD yet</h3>
+          <ul>
+            <li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a></li>
+            <li><a href="/property/financing/">Property financing hub</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <div id="site-footer"></div>
+  </main>
+
+  <script>
+    const fmt0=(n)=> (Number.isFinite(n)? n:0).toLocaleString(undefined,{maximumFractionDigits:0});
+    const num=(id)=>{ const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)? v:0; };
+
+    function cpfRefundEstimate(cpfUsed, years, ratePct){
+      const r = (ratePct/100)/12;
+      const m = Math.max(0, years*12);
+      return cpfUsed * Math.pow(1+r, m);
+    }
+
+    function buildQuery(obj){
+      const p=new URLSearchParams();
+      for(const [k,v] of Object.entries(obj)){
+        if(v===undefined || v===null) continue;
+        p.set(k, String(v));
+      }
+      return p.toString();
+    }
+
+    function applySelfPrefill(){
+      const p=new URLSearchParams(location.search);
+      const map={sale:'sale', loan:'loan', cpfUsed:'cpfUsed', cpfYears:'cpfYears', buy:'buy', ltv:'ltv', minCashPct:'minCashPct', bsd:'bsd', absd:'absd', fees:'fees'};
+      for(const [id,key] of Object.entries(map)){
+        if(p.has(key)) document.getElementById(id).value=p.get(key);
+      }
+    }
+
+    function update(){
+      const sale=num('sale');
+      const loan=num('loan');
+      const cpfUsed=num('cpfUsed');
+      const cpfYears=num('cpfYears');
+      const buy=num('buy');
+      const ltv=num('ltv');
+      const minCashPct=num('minCashPct');
+      const bsd=num('bsd');
+      const absd=num('absd');
+      const fees=num('fees');
+
+      const cpfRefund = cpfRefundEstimate(cpfUsed, cpfYears, 2.5);
+      document.getElementById('kCpf').textContent = `S$${fmt0(cpfRefund)}`;
+
+      document.getElementById('lnCpf').href = `/cpf-accrued-interest-calculator-singapore.html?${buildQuery({cpfUsed:cpfUsed, years:cpfYears, rate:2.5})}`;
+      document.getElementById('lnSell').href = `/sell-property-proceeds-calculator-singapore.html?${buildQuery({sale:sale, loan:loan, cpf:Math.round(cpfRefund)})}`;
+      document.getElementById('lnBuy').href = `/how-much-cash-to-buy-property-calculator-singapore.html?${buildQuery({price:buy, ltv:ltv, minCashPct:minCashPct, bsd:bsd, absd:absd, fees:fees})}`;
+      document.getElementById('lnBridge').href = `/upgrade-downgrade-property-calculator-singapore.html?${buildQuery({sell:sale, sellLoan:loan, cpf:Math.round(cpfRefund), buy:buy, ltv:ltv, minCashPct:minCashPct, bsd:bsd, absd:absd, fees:fees})}`;
+      document.getElementById('lnLadder').href = `/property-upgrade-ladder-calculator-singapore.html?${buildQuery({price:buy, ltv:ltv, minCashPct:minCashPct, bsd:bsd, absd:absd})}`;
+
+      const qp=buildQuery({sale, loan, cpfUsed, cpfYears, buy, ltv, minCashPct, bsd, absd, fees});
+      window.history.replaceState({}, '', `${location.pathname}?${qp}`);
+    }
+
+    document.getElementById('btnUpdate').addEventListener('click', update);
+    document.getElementById('btnCopy').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(location.href);
+        document.getElementById('btnCopy').textContent='Copied!';
+        setTimeout(()=>document.getElementById('btnCopy').textContent='Copy sharable link', 1200);
+      }catch(e){
+        prompt('Copy this link:', location.href);
+      }
+    });
+
+    applySelfPrefill();
+    update();
+  </script>
+</body>
+</html>

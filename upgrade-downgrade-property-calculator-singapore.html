@@ -187,6 +187,27 @@
   <div id="site-footer"></div>
 
   <script>
+
+
+    function applyQueryPrefill(map){
+      try{
+        const p = new URLSearchParams(window.location.search);
+        Object.entries(map).forEach(([id,key])=>{
+          if(p.has(key)){
+            const el=document.getElementById(id);
+            if(!el) return;
+            el.value = p.get(key);
+          }
+        });
+      }catch(e){}
+    }
+
+    function hasAnyQuery(keys){
+      try{
+        const p=new URLSearchParams(window.location.search);
+        return keys.some(k=>p.has(k));
+      }catch(e){ return false; }
+    }
     const $ = (id) => document.getElementById(id);
 
     function num(v){
@@ -334,6 +355,9 @@
 
     $('calcBtn').addEventListener('click', calc);
     $('resetBtn').addEventListener('click', resetDefaults);
+
+  applyQueryPrefill({sellPrice:"sell", sellLoan:"sellLoan", sellCpfRefund:"cpf", sellAgentPct:"agentPct", sellGstPct:"gstPct", sellLegal:"legal", sellOther:"other", buyPrice:"buy", buyLtv:"ltv", buyMinCashPct:"minCashPct", buyBsd:"bsd", buyAbsd:"absd", buyStampCpfPct:"bsdCpfPct", buyFees:"fees", buyOptionFee:"optionFee"});
+  if(hasAnyQuery(['sell','sellLoan','cpf','buy','ltv','minCashPct','bsd','absd','fees','agentPct','gstPct','legal','other','optionFee','bsdCpfPct'])){ calc(); }
   </script>
 </body>
 </html>

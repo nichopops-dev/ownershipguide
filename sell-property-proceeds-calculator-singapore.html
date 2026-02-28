@@ -151,6 +151,20 @@
   <script>
     const fmt = (n) => {
       const x = Number.isFinite(n) ? n : 0;
+
+
+    function applyQueryPrefill(map){
+      try{
+        const p = new URLSearchParams(window.location.search);
+        Object.entries(map).forEach(([id,key])=>{
+          if(p.has(key)){
+            const el=document.getElementById(id);
+            if(!el) return;
+            el.value = p.get(key);
+          }
+        });
+      }catch(e){}
+    }
       return x.toLocaleString(undefined, { maximumFractionDigits: 0 });
     };
 
@@ -224,7 +238,10 @@
 
     document.getElementById('btnCalc').addEventListener('click', calc);
     document.getElementById('btnReset').addEventListener('click', reset);
+    
+    applyQueryPrefill({salePrice:"sale", loan:"loan", cpfRefund:"cpf", agentPct:"agentPct", gstPct:"gstPct", legal:"legal", ssd:"ssd", other:"other", buffer:"buffer"});
     calc();
+
   </script>
 </body>
 </html>

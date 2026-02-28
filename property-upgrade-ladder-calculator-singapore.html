@@ -213,6 +213,27 @@
   <div id="site-footer"></div>
   <script src="/includes.js"></script>
   <script>
+
+
+    function applyQueryPrefill(map){
+      try{
+        const p = new URLSearchParams(window.location.search);
+        Object.entries(map).forEach(([id,key])=>{
+          if(p.has(key)){
+            const el=document.getElementById(id);
+            if(!el) return;
+            el.value = p.get(key);
+          }
+        });
+      }catch(e){}
+    }
+
+    function hasAnyQuery(keys){
+      try{
+        const p=new URLSearchParams(window.location.search);
+        return keys.some(k=>p.has(k));
+      }catch(e){ return false; }
+    }
     const $ = (id) => document.getElementById(id);
     function n(x){ return Number.isFinite(x) ? x : 0; }
     function fmt(x){
@@ -342,6 +363,9 @@
     $("btnCalc").addEventListener("click", calc);
     $("btnReset").addEventListener("click", reset);
     reset();
+
+    applyQueryPrefill({targetPrice:'price', income:'income', otherDebt:'otherDebt', ltv:'ltv', minCashDp:'minCashPct', bsd:'bsd', absd:'absd', availCash:'cash', availCpf:'cpf'});
+    if(hasAnyQuery(['price','income','otherDebt','ltv','minCashPct','bsd','absd','cash','cpf'])){ calc(); }
   </script>
 </body>
 </html>

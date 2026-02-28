@@ -177,6 +177,27 @@
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => {
     const x = Number.isFinite(n) ? n : 0;
+
+
+    function applyQueryPrefill(map){
+      try{
+        const p = new URLSearchParams(window.location.search);
+        Object.entries(map).forEach(([id,key])=>{
+          if(p.has(key)){
+            const el=document.getElementById(id);
+            if(!el) return;
+            el.value = p.get(key);
+          }
+        });
+      }catch(e){}
+    }
+
+    function hasAnyQuery(keys){
+      try{
+        const p=new URLSearchParams(window.location.search);
+        return keys.some(k=>p.has(k));
+      }catch(e){ return false; }
+    }
     return x.toLocaleString('en-SG', { maximumFractionDigits: 0 });
   };
   const num = (v) => {
@@ -251,6 +272,9 @@
     $('price').value = '1200000';
     $('preset').value = 'bank75';
     setPreset('bank75');
+
+  applyQueryPrefill({price:"price", ltv:"ltv", minCashPct:"minCashPct", bsd:"bsd", absd:"absd", bsdCpfPct:"bsdCpfPct", fees:"fees", optionFee:"optionFee", miscCash:"miscCash"});
+  if(hasAnyQuery(['price','ltv','minCashPct','bsd','absd','fees','optionFee','miscCash','bsdCpfPct'])){ calc(); $('kpis').style.display='grid'; }
     $('bsd').value = '0';
     $('absd').value = '0';
     $('bsdCpfPct').value = '100';
