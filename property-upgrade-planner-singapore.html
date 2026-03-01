@@ -1,22 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>Property Upgrade Planner Singapore: Sell → Buy Next (Step-by-Step)</title>
-  <meta name="description" content="A step-by-step property upgrade planner for Singapore: sell proceeds (cash vs CPF), CPF refund, upfront cash+CPF needed, max loan (TDSR/MSR), and upgrade ladder. One page to route you to the right calculator." />
-
-  <meta property="og:title" content="Property Upgrade Planner Singapore: Sell → Buy Next" />
-  <meta property="og:description" content="A step-by-step workflow (with calculators) for selling, upgrading, downgrading, and planning cash/CPF buffers." />
-  <meta property="og:type" content="article"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="planning"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
-  <script src="/includes.js" defer></script>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Property Upgrade Planner Singapore: Sell → Buy Next (Step-by-Step)</title>
+<meta content="A step-by-step property upgrade planner for Singapore: sell proceeds (cash vs CPF), CPF refund, upfront cash+CPF needed, max loan (TDSR/MSR), and upgrade ladder. One page to route you to the right calculator." name="description"/>
+<meta content="Property Upgrade Planner Singapore: Sell → Buy Next" property="og:title"/>
+<meta content="A step-by-step workflow (with calculators) for selling, upgrading, downgrading, and planning cash/CPF buffers." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="property" property="og:cluster"/>
+<meta content="planning" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
+<style>
     .og-card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; }
     .og-grid{ display:grid; gap:14px; }
     @media(min-width:860px){ .og-grid.cols2{ grid-template-columns: 1fr 1fr; } }
@@ -27,134 +24,133 @@
     select{ width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:12px; font-size:16px; background:#fff; }
   </style>
 </head>
-
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <p class="eyebrow">PROPERTY • PLANNING</p>
-    <h1>Property Upgrade Planner (Sell → Buy Next)</h1>
-    <p class="lead">
+<div id="site-header"></div>
+<main class="container">
+<p class="eyebrow">PROPERTY • PLANNING</p>
+<h1>Property Upgrade Planner (Sell → Buy Next)</h1>
+<p class="lead">
       This page is your <b>one-flow routing layer</b>.
       <span class="muted">Want faster? Use the <a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a> to prefill tools.</span>
       Pick your situation, then run the right calculators in the right order.
     </p>
-
-    <section class="og-card">
-      <h2 style="margin-top:0">Quick routing</h2>
-      <div class="og-grid cols2">
-        <div>
-          <label for="scenario"><b>What are you trying to do?</b></label>
-          <select id="scenario">
-            <option value="">Choose one…</option>
-            <option value="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade: sell current → buy next (cash + CPF gaps)</option>
-            <option value="/sell-property-proceeds-calculator-singapore.html">Selling: estimate cash proceeds + CPF refund impact</option>
-            <option value="/how-much-cash-to-buy-property-calculator-singapore.html">Buying: estimate upfront cash + CPF needed</option>
-            <option value="/property-upgrade-ladder-calculator-singapore.html">Planning: target property price → required income + buffer</option>
-            <option value="/rent-out-vs-sell-calculator-singapore.html">Decision: rent out vs sell (end value after X years)</option>
-            <option value="/rent-vs-buy-calculator-singapore.html">Decision: rent vs buy (net worth + break-even)</option>
-            <option value="/refinance-savings-calculator-singapore.html">Optimise: refinance savings + break-even</option>
-          </select>
-          <div class="btn-row" style="margin-top:10px">
-            <a class="btn btn-primary" id="goBtn" href="#" aria-disabled="true">Go</a>
-            <a class="btn btn-secondary" href="/property/">Back to Property hub</a>
-          </div>
-          <p class="mini">If the Go button doesn’t move, pick a scenario first.</p>
-        </div>
-
-        <div class="og-card" style="padding:14px">
-          <b>Common gotcha:</b> CPF refund
+<section class="og-card">
+<h2 style="margin-top:0">Quick routing</h2>
+<div class="og-grid cols2">
+<div>
+<label for="scenario"><b>What are you trying to do?</b></label>
+<select id="scenario">
+<option value="">Choose one…</option>
+<option value="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade: sell current → buy next (cash + CPF gaps)</option>
+<option value="/sell-property-proceeds-calculator-singapore.html">Selling: estimate cash proceeds + CPF refund impact</option>
+<option value="/how-much-cash-to-buy-property-calculator-singapore.html">Buying: estimate upfront cash + CPF needed</option>
+<option value="/property-upgrade-ladder-calculator-singapore.html">Planning: target property price → required income + buffer</option>
+<option value="/rent-out-vs-sell-calculator-singapore.html">Decision: rent out vs sell (end value after X years)</option>
+<option value="/rent-vs-buy-calculator-singapore.html">Decision: rent vs buy (net worth + break-even)</option>
+<option value="/refinance-savings-calculator-singapore.html">Optimise: refinance savings + break-even</option>
+</select>
+<div class="btn-row" style="margin-top:10px">
+<a aria-disabled="true" class="btn btn-primary" href="#" id="goBtn">Go</a>
+<a class="btn btn-secondary" href="/property/">Back to Property hub</a>
+</div>
+<p class="mini">If the Go button doesn’t move, pick a scenario first.</p>
+</div>
+<div class="og-card" style="padding:14px">
+<b>Common gotcha:</b> CPF refund
           <p class="mini" style="margin-top:6px">
             Your sale proceeds can look “high” until CPF refund is applied.
             If you don’t know the CPF refund yet, estimate it here:
             <a href="/cpf-accrued-interest-calculator-singapore.html">CPF accrued interest calculator</a>.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="og-grid cols2" style="margin-top:14px">
-      <section class="og-card">
-        <h2 style="margin-top:0">The recommended workflow</h2>
-
-        <div class="step" style="margin-top:12px">
-          <div class="badge">1</div>
-          <div>
-            <h3>Estimate your sell proceeds</h3>
-            <div class="mini">Start with how much cash you actually get after loan redemption + fees + CPF refund.</div>
-            <div class="btn-row" style="margin-top:10px">
-              <a class="btn btn-primary" href="/sell-property-proceeds-calculator-singapore.html">Run sell proceeds</a>
-              <a class="btn btn-secondary" href="/sell-property-cost-singapore.html">Read sell cost guide</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="step" style="margin-top:16px">
-          <div class="badge">2</div>
-          <div>
-            <h3>Estimate upfront cash + CPF needed (next purchase)</h3>
-            <div class="mini">Downpayment + duties + fees split into cash vs CPF.</div>
-            <div class="btn-row" style="margin-top:10px">
-              <a class="btn btn-primary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Run upfront cash + CPF</a>
-              <a class="btn btn-secondary" href="/bsd-absd-calculator-singapore.html">Stamp duty calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="step" style="margin-top:16px">
-          <div class="badge">3</div>
-          <div>
-            <h3>Check your loan ceiling (TDSR/MSR)</h3>
-            <div class="mini">Make sure your target price is actually financeable.</div>
-            <div class="btn-row" style="margin-top:10px">
-              <a class="btn btn-primary" href="/tdsr-msr-calculator-singapore.html">Run TDSR/MSR calculator</a>
-              <a class="btn btn-secondary" href="/mortgage-amortization-calculator-singapore.html">Amortization calculator</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="step" style="margin-top:16px">
-          <div class="badge">4</div>
-          <div>
-            <h3>Bridge it all in one shot</h3>
-            <div class="mini">If you’re upgrading/downgrading, use the combined bridge calculator.</div>
-            <div class="btn-row" style="margin-top:10px">
-              <a class="btn btn-primary" href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade/downgrade bridge</a>
-              <a class="btn btn-secondary" href="/property-upgrade-ladder-calculator-singapore.html">Upgrade ladder</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="og-card">
-        <h2 style="margin-top:0">If you’re deciding to rent out instead</h2>
-        <p class="mini">
+</div>
+</div>
+</section>
+<div class="og-grid cols2" style="margin-top:14px">
+<section class="og-card">
+<h2 style="margin-top:0">The recommended workflow</h2>
+<div class="step" style="margin-top:12px">
+<div class="badge">1</div>
+<div>
+<h3>Estimate your sell proceeds</h3>
+<div class="mini">Start with how much cash you actually get after loan redemption + fees + CPF refund.</div>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/sell-property-proceeds-calculator-singapore.html">Run sell proceeds</a>
+<a class="btn btn-secondary" href="/sell-property-cost-singapore.html">Read sell cost guide</a>
+</div>
+</div>
+</div>
+<div class="step" style="margin-top:16px">
+<div class="badge">2</div>
+<div>
+<h3>Estimate upfront cash + CPF needed (next purchase)</h3>
+<div class="mini">Downpayment + duties + fees split into cash vs CPF.</div>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Run upfront cash + CPF</a>
+<a class="btn btn-secondary" href="/bsd-absd-calculator-singapore.html">Stamp duty calculator</a>
+</div>
+</div>
+</div>
+<div class="step" style="margin-top:16px">
+<div class="badge">3</div>
+<div>
+<h3>Check your loan ceiling (TDSR/MSR)</h3>
+<div class="mini">Make sure your target price is actually financeable.</div>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/tdsr-msr-calculator-singapore.html">Run TDSR/MSR calculator</a>
+<a class="btn btn-secondary" href="/mortgage-amortization-calculator-singapore.html">Amortization calculator</a>
+</div>
+</div>
+</div>
+<div class="step" style="margin-top:16px">
+<div class="badge">4</div>
+<div>
+<h3>Bridge it all in one shot</h3>
+<div class="mini">If you’re upgrading/downgrading, use the combined bridge calculator.</div>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade/downgrade bridge</a>
+<a class="btn btn-secondary" href="/property-upgrade-ladder-calculator-singapore.html">Upgrade ladder</a>
+</div>
+</div>
+</div>
+</section>
+<section class="og-card">
+<h2 style="margin-top:0">If you’re deciding to rent out instead</h2>
+<p class="mini">
           Renting out isn’t free money. Compare “sell now → invest” vs “rent out → invest net rent → sell later”.
         </p>
-        <div class="btn-row" style="margin-top:10px">
-          <a class="btn btn-primary" href="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell calculator</a>
-          <a class="btn btn-secondary" href="/rent-out-vs-sell-singapore.html">Read decision guide</a>
-        </div>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell calculator</a>
+<a class="btn btn-secondary" href="/rent-out-vs-sell-singapore.html">Read decision guide</a>
+</div>
+<hr style="border:none;border-top:1px solid var(--border); margin:14px 0"/>
+<h2 style="margin-top:0">If you’re optimising financing</h2>
+<p class="mini">Run the “break-even” checks before you commit.</p>
+<div class="btn-row" style="margin-top:10px">
+<a class="btn btn-primary" href="/refinance-savings-calculator-singapore.html">Refinance savings</a>
+<a class="btn btn-secondary" href="/pay-down-mortgage-vs-invest-calculator-singapore.html">Pay down vs invest</a>
+</div>
+</section>
+</div>
+<div class="footer">
+<a href="/property/">Back to Property</a>
+</div>
 
-        <hr style="border:none;border-top:1px solid var(--border); margin:14px 0"/>
-
-        <h2 style="margin-top:0">If you’re optimising financing</h2>
-        <p class="mini">Run the “break-even” checks before you commit.</p>
-        <div class="btn-row" style="margin-top:10px">
-          <a class="btn btn-primary" href="/refinance-savings-calculator-singapore.html">Refinance savings</a>
-          <a class="btn btn-secondary" href="/pay-down-mortgage-vs-invest-calculator-singapore.html">Pay down vs invest</a>
-        </div>
-      </section>
-    </div>
-
-    <div class="footer">
-      <a href="/property/">Back to Property</a>
-    </div>
-  </main>
-
-  <div id="site-footer"></div>
-
-  <script>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">How to use the upgrade planner</h2>
+<p>This planner is meant to help you avoid the most common upgrade mistake: deciding based on a “nice monthly instalment” while ignoring <strong>timing risk</strong>, <strong>cash gaps</strong>, and <strong>sale/purchase friction</strong>.</p>
+<ul>
+<li><strong>Step 1:</strong> estimate conservative sale proceeds for your current home (after fees and CPF refund where applicable).</li>
+<li><strong>Step 2:</strong> estimate the full upfront cash needed for the next home (downpayment, BSD/ABSD if any, legal/agent, renovation buffer).</li>
+<li><strong>Step 3:</strong> check timing: if completion dates don’t align, you may need bridging or temporary housing.</li>
+</ul>
+<p class="muted">Treat outputs as planning ranges. Your actual eligibility, valuation, and CPF balances drive the real numbers.</p>
+<p><strong>Official references:</strong></p>
+<ul><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li><li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">CPF</a></li><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">IRAS</a></li></ul>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 1 Mar 2026</p>
+</section>
+</main>
+<div id="site-footer"></div>
+<script>
     const sel = document.getElementById('scenario');
     const goBtn = document.getElementById('goBtn');
 

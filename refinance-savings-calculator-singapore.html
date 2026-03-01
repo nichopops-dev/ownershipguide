@@ -1,24 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>Refinance Savings Calculator Singapore (2026): Break‑Even Months + Interest Saved</title>
-  <meta name="description" content="Singapore refinance savings calculator (2026): compare your current home loan vs a new rate. Estimate monthly savings, break-even months after fees, interest saved, and net savings over your remaining tenure."/>
-
-  <meta property="og:title" content="Refinance Savings Calculator Singapore (2026)"/>
-  <meta property="og:description" content="Estimate monthly savings, break-even months after fees, interest saved, and net savings when refinancing your home loan in Singapore."/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="calculator"/>
-
-  <link rel="canonical" href="https://ownershipguide.com/refinance-savings-calculator-singapore.html"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
-  <script defer src="/includes.js"></script>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Refinance Savings Calculator Singapore (2026): Break‑Even Months + Interest Saved</title>
+<meta content="Singapore refinance savings calculator (2026): compare your current home loan vs a new rate. Estimate monthly savings, break-even months after fees, interest saved, and net savings over your remaining tenure." name="description"/>
+<meta content="Refinance Savings Calculator Singapore (2026)" property="og:title"/>
+<meta content="Estimate monthly savings, break-even months after fees, interest saved, and net savings when refinancing your home loan in Singapore." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="property" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="https://ownershipguide.com/refinance-savings-calculator-singapore.html" rel="canonical"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
+<style>
     .calc-wrap { max-width: 960px; margin: 0 auto; }
     .og-form-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
     .og-form-grid .field { grid-column: span 6; }
@@ -44,201 +40,198 @@
 </head>
 <body>
 <div id="site-header"></div>
-
 <main class="container calc-wrap">
-  <p class="nav"><a href="/">← Back to Ownership Guide</a> · <a href="/property/">Property</a> · <a href="/property/financing/">Property Financing</a></p>
-
-  <h1>Refinance Savings Calculator (Singapore, 2026)</h1>
-  <p class="lead">
+<p class="nav"><a href="/">← Back to Ownership Guide</a> · <a href="/property/">Property</a> · <a href="/property/financing/">Property Financing</a></p>
+<h1>Refinance Savings Calculator (Singapore, 2026)</h1>
+<p class="lead">
     Use this when you’re quoted a new rate and want a fast sanity check:
     <strong>monthly savings</strong>, <strong>break‑even months after fees</strong>, and <strong>interest saved</strong>.
     This assumes a standard amortising home loan with monthly repayments.
   </p>
-
-  <section class="box">
-    <h2>Inputs</h2>
-
-    <div class="og-form-grid">
-      <div class="field">
-        <label for="balance">Outstanding balance (SGD)</label>
-        <input id="balance" inputmode="decimal" value="700000" />
-      </div>
-      <div class="field">
-        <label for="yearsLeft">Remaining tenure (years)</label>
-        <input id="yearsLeft" inputmode="decimal" value="25" />
-      </div>
-
-      <div class="field">
-        <label for="rateNow">Current interest rate (% p.a.)</label>
-        <input id="rateNow" inputmode="decimal" value="3.50" />
-      </div>
-      <div class="field">
-        <label for="rateNew">New interest rate (% p.a.)</label>
-        <input id="rateNew" inputmode="decimal" value="2.90" />
-      </div>
-
-      <div class="field">
-        <label for="fees">One‑time costs to switch (legal/valuation/etc, SGD)</label>
-        <input id="fees" inputmode="decimal" value="2500" />
-      </div>
-      <div class="field">
-        <label for="penalty">Prepayment / lock‑in penalty (SGD)</label>
-        <input id="penalty" inputmode="decimal" value="0" />
-      </div>
-
-      <div class="field">
-        <label for="horizon">Compare over</label>
-        <select id="horizon">
-          <option value="remaining" selected>Remaining tenure (recommended)</option>
-          <option value="24">24 months</option>
-          <option value="36">36 months</option>
-          <option value="60">60 months</option>
-          <option value="custom">Custom (months)</option>
-        </select>
-      </div>
-      <div class="field" id="customWrap" style="display:none;">
-        <label for="horizonCustom">Custom horizon (months)</label>
-        <input id="horizonCustom" inputmode="numeric" value="48" />
-      </div>
-
-      <div class="field full">
-        <div class="btnrow">
-          <button class="btn" id="calcBtn" type="button">Calculate</button>
-          <button class="btn" id="resetBtn" type="button">Reset defaults</button>
-        </div>
-        <p class="mini">Tip: If you are likely to refinance again soon, use a shorter horizon (e.g., 24–36 months) to avoid “paper” savings that never materialise.</p>
-      </div>
-    </div>
-
-    <div class="og-kpi-grid" id="kpis" style="display:none;">
-      <div class="kpi">
-        <div class="k">Current monthly payment</div>
-        <div class="v" id="kpiNow">—</div>
-        <div class="s" id="kpiNowS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">New monthly payment</div>
-        <div class="v" id="kpiNew">—</div>
-        <div class="s" id="kpiNewS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Monthly savings</div>
-        <div class="v" id="kpiSave">—</div>
-        <div class="s" id="kpiSaveS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Break‑even</div>
-        <div class="v" id="kpiBE">—</div>
-        <div class="s" id="kpiBES">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Interest saved</div>
-        <div class="v" id="kpiInt">—</div>
-        <div class="s" id="kpiIntS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Net savings (after fees)</div>
-        <div class="v" id="kpiNet">—</div>
-        <div class="s" id="kpiNetS">—</div>
-      </div>
-    </div>
-
-    <div id="detail" style="display:none; margin-top: 16px;">
-      <h2>Breakdown</h2>
-      <div class="box" style="padding:0;">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Current loan</th>
-              <th>New loan</th>
-              <th>Difference</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Monthly repayment</td>
-              <td id="tNowPay">—</td>
-              <td id="tNewPay">—</td>
-              <td id="tPayDiff">—</td>
-            </tr>
-            <tr>
-              <td>Interest paid over horizon</td>
-              <td id="tNowInt">—</td>
-              <td id="tNewInt">—</td>
-              <td id="tIntDiff">—</td>
-            </tr>
-            <tr>
-              <td>Balance remaining after horizon</td>
-              <td id="tNowBal">—</td>
-              <td id="tNewBal">—</td>
-              <td id="tBalDiff">—</td>
-            </tr>
-            <tr>
-              <td>One‑time costs (fees + penalty)</td>
-              <td>—</td>
-              <td id="tCosts">—</td>
-              <td id="tCostsNeg">—</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="mini" style="margin-top:10px;">
+<section class="box">
+<h2>Inputs</h2>
+<div class="og-form-grid">
+<div class="field">
+<label for="balance">Outstanding balance (SGD)</label>
+<input id="balance" inputmode="decimal" value="700000"/>
+</div>
+<div class="field">
+<label for="yearsLeft">Remaining tenure (years)</label>
+<input id="yearsLeft" inputmode="decimal" value="25"/>
+</div>
+<div class="field">
+<label for="rateNow">Current interest rate (% p.a.)</label>
+<input id="rateNow" inputmode="decimal" value="3.50"/>
+</div>
+<div class="field">
+<label for="rateNew">New interest rate (% p.a.)</label>
+<input id="rateNew" inputmode="decimal" value="2.90"/>
+</div>
+<div class="field">
+<label for="fees">One‑time costs to switch (legal/valuation/etc, SGD)</label>
+<input id="fees" inputmode="decimal" value="2500"/>
+</div>
+<div class="field">
+<label for="penalty">Prepayment / lock‑in penalty (SGD)</label>
+<input id="penalty" inputmode="decimal" value="0"/>
+</div>
+<div class="field">
+<label for="horizon">Compare over</label>
+<select id="horizon">
+<option selected="" value="remaining">Remaining tenure (recommended)</option>
+<option value="24">24 months</option>
+<option value="36">36 months</option>
+<option value="60">60 months</option>
+<option value="custom">Custom (months)</option>
+</select>
+</div>
+<div class="field" id="customWrap" style="display:none;">
+<label for="horizonCustom">Custom horizon (months)</label>
+<input id="horizonCustom" inputmode="numeric" value="48"/>
+</div>
+<div class="field full">
+<div class="btnrow">
+<button class="btn" id="calcBtn" type="button">Calculate</button>
+<button class="btn" id="resetBtn" type="button">Reset defaults</button>
+</div>
+<p class="mini">Tip: If you are likely to refinance again soon, use a shorter horizon (e.g., 24–36 months) to avoid “paper” savings that never materialise.</p>
+</div>
+</div>
+<div class="og-kpi-grid" id="kpis" style="display:none;">
+<div class="kpi">
+<div class="k">Current monthly payment</div>
+<div class="v" id="kpiNow">—</div>
+<div class="s" id="kpiNowS">—</div>
+</div>
+<div class="kpi">
+<div class="k">New monthly payment</div>
+<div class="v" id="kpiNew">—</div>
+<div class="s" id="kpiNewS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Monthly savings</div>
+<div class="v" id="kpiSave">—</div>
+<div class="s" id="kpiSaveS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Break‑even</div>
+<div class="v" id="kpiBE">—</div>
+<div class="s" id="kpiBES">—</div>
+</div>
+<div class="kpi">
+<div class="k">Interest saved</div>
+<div class="v" id="kpiInt">—</div>
+<div class="s" id="kpiIntS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Net savings (after fees)</div>
+<div class="v" id="kpiNet">—</div>
+<div class="s" id="kpiNetS">—</div>
+</div>
+</div>
+<div id="detail" style="display:none; margin-top: 16px;">
+<h2>Breakdown</h2>
+<div class="box" style="padding:0;">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Current loan</th>
+<th>New loan</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly repayment</td>
+<td id="tNowPay">—</td>
+<td id="tNewPay">—</td>
+<td id="tPayDiff">—</td>
+</tr>
+<tr>
+<td>Interest paid over horizon</td>
+<td id="tNowInt">—</td>
+<td id="tNewInt">—</td>
+<td id="tIntDiff">—</td>
+</tr>
+<tr>
+<td>Balance remaining after horizon</td>
+<td id="tNowBal">—</td>
+<td id="tNewBal">—</td>
+<td id="tBalDiff">—</td>
+</tr>
+<tr>
+<td>One‑time costs (fees + penalty)</td>
+<td>—</td>
+<td id="tCosts">—</td>
+<td id="tCostsNeg">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mini" style="margin-top:10px;">
         Mechanics primer: <a href="/mortgage-interest-cost-singapore.html">mortgage interest intuition</a> ·
         <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> ·
         <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.
       </p>
-    </div>
-  </section>
-
-  <section class="box">
-    <h2>What to do with the result</h2>
-    <ul>
-      <li><strong>Break‑even under ~12–18 months</strong>: usually worth investigating seriously (unless you’re likely to sell soon).</li>
-      <li><strong>Break‑even longer than your “likely horizon”</strong>: savings may be theoretical.</li>
-      <li><strong>Small monthly savings + large fees</strong>: ask for legal subsidy / fee waiver, or consider repricing instead.</li>
-    </ul>
-  </section>
-<section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong>Last updated:</strong> 1 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>Break-even is driven by (fees + penalties) versus monthly interest savings.</li><li>Short remaining tenure reduces total interest saved; long tenures make rate differences more valuable.</li><li>Always model both a ‘best case’ and ‘conservative’ rate path.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: break-even vs ‘total interest saved’</p>
-    <p>A deal can have a fast break-even but low total savings if the rate advantage is small. Conversely, a slow break-even can still be worth it if the rate difference is large and you hold long enough.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Refinance or reprice?</summary><div class='og-faq-a'><p>Reprice is usually lower friction. Refinance can unlock better rates but comes with legal/valuation costs.</p></div></details><details><summary>Do I include lock-in penalty?</summary><div class='og-faq-a'><p>If you are in lock-in, yes — it’s often the dominant cost.</p></div></details><details><summary>What horizon should I use?</summary><div class='og-faq-a'><p>Use how long you realistically expect to keep the loan before changing again (e.g., 2–3 years).</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>Bank product terms vary; confirm fees and penalties from your letter of offer.</li>
-  </ul>
+</div>
+</section>
+<section class="box">
+<h2>What to do with the result</h2>
+<ul>
+<li><strong>Break‑even under ~12–18 months</strong>: usually worth investigating seriously (unless you’re likely to sell soon).</li>
+<li><strong>Break‑even longer than your “likely horizon”</strong>: savings may be theoretical.</li>
+<li><strong>Small monthly savings + large fees</strong>: ask for legal subsidy / fee waiver, or consider repricing instead.</li>
+</ul>
+</section>
+<section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<p class="og-last-updated"><strong>Last updated:</strong> 1 Mar 2026</p>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>Break-even is driven by (fees + penalties) versus monthly interest savings.</li><li>Short remaining tenure reduces total interest saved; long tenures make rate differences more valuable.</li><li>Always model both a ‘best case’ and ‘conservative’ rate path.</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: break-even vs ‘total interest saved’</p>
+<p>A deal can have a fast break-even but low total savings if the rate advantage is small. Conversely, a slow break-even can still be worth it if the rate difference is large and you hold long enough.</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Refinance or reprice?</summary><div class="og-faq-a"><p>Reprice is usually lower friction. Refinance can unlock better rates but comes with legal/valuation costs.</p></div></details><details><summary>Do I include lock-in penalty?</summary><div class="og-faq-a"><p>If you are in lock-in, yes — it’s often the dominant cost.</p></div></details><details><summary>What horizon should I use?</summary><div class="og-faq-a"><p>Use how long you realistically expect to keep the loan before changing again (e.g., 2–3 years).</p></div></details>
+</div>
+<h2>References (official where possible)</h2>
+<ul class="og-bullets">
+<li>Bank product terms vary; confirm fees and penalties from your letter of offer.</li>
+</ul>
 </section>
 
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
+<p>This calculator is a <strong>decision model</strong> — it helps you sanity-check trade-offs and stress-test your downside. It is not a quote from a bank/dealer, and it does not include every edge-case fee.</p>
+<p><strong>How to use it:</strong></p>
+<ul>
+<li>Enter your remaining loan balance, remaining tenure, and current rate; then plug in the prospective new rate.</li><li>Include any fees/penalties you actually face (lock-in, legal subsidy clawback, admin fees).</li><li>Use the calculator to answer: <strong>how many months to break even</strong>, and what happens if rates move again.</li>
+</ul>
+<p><strong>What the model includes (and does not):</strong></p>
+<ul>
+<li><strong>Includes:</strong> the core cashflow/interest mechanics relevant to refinancing savings estimation.</li>
+<li><strong>Does not include:</strong> promotional packages, negotiated rebates, or your personal credit terms — use your own numbers where possible.</li>
+</ul>
+<p><strong>References (where applicable):</strong></p>
+<ul><li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">MAS</a></li><li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">CPF</a></li><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li></ul>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 1 Mar 2026</p>
+</section>
 </main>
-
 <div id="site-footer"></div>
-
 <script>
 (function() {
   function num(v) {

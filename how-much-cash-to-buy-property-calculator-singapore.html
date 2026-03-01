@@ -1,24 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <title>How Much Cash to Buy a Property in Singapore (2026) — Upfront Cash + CPF Calculator</title>
-  <meta name="description" content="Singapore property upfront cash/CPF calculator (2026): estimate minimum cash required, CPF used, stamp duty budget, and total upfront outlay for bank vs HDB loan scenarios."/>
-
-  <meta property="og:title" content="Upfront Cash + CPF Needed to Buy Property (Singapore, 2026)"/>
-  <meta property="og:description" content="Estimate upfront cash required, CPF used, stamp duty budget, and total upfront outlay for a property purchase in Singapore."/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="calculator"/>
-
-  <link rel="canonical" href="https://ownershipguide.com/how-much-cash-to-buy-property-calculator-singapore.html"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
-  <script defer src="/includes.js"></script>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>How Much Cash to Buy a Property in Singapore (2026) — Upfront Cash + CPF Calculator</title>
+<meta content="Singapore property upfront cash/CPF calculator (2026): estimate minimum cash required, CPF used, stamp duty budget, and total upfront outlay for bank vs HDB loan scenarios." name="description"/>
+<meta content="Upfront Cash + CPF Needed to Buy Property (Singapore, 2026)" property="og:title"/>
+<meta content="Estimate upfront cash required, CPF used, stamp duty budget, and total upfront outlay for a property purchase in Singapore." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="property" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="https://ownershipguide.com/how-much-cash-to-buy-property-calculator-singapore.html" rel="canonical"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
+<style>
     .calc-wrap{max-width:960px;margin:0 auto}
     .og-form-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
     .og-form-grid .field{grid-column:span 6}
@@ -42,173 +38,168 @@
 </head>
 <body>
 <div id="site-header"></div>
-
 <main class="container calc-wrap">
-  <p class="nav"><a href="/">← Back to Ownership Guide</a> · <a href="/property/">Property</a> · <a href="/property/financing/">Property Financing</a></p>
-
-  <h1>Upfront Cash Needed to Buy Property (Singapore, 2026)</h1>
-  <p class="lead">
+<p class="nav"><a href="/">← Back to Ownership Guide</a> · <a href="/property/">Property</a> · <a href="/property/financing/">Property Financing</a></p>
+<h1>Upfront Cash Needed to Buy Property (Singapore, 2026)</h1>
+<p class="lead">
     This calculator estimates your <strong>upfront outlay</strong> split into <strong>cash</strong> and <strong>CPF</strong>.
     It’s designed for planning and stress‑testing: tweak the assumptions to match your bank/HDB quote.
   </p>
-
-  <section class="box">
-    <h2>Inputs</h2>
-    <p class="mini">
+<section class="box">
+<h2>Inputs</h2>
+<p class="mini">
       Stamp duty varies by buyer profile. If you’re unsure, run the
       <a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a> and paste the amounts here.
     </p>
-
-    <div class="og-form-grid">
-      <div class="field">
-        <label for="price">Property price (SGD)</label>
-        <input id="price" inputmode="decimal" value="1200000"/>
-      </div>
-      <div class="field">
-        <label for="preset">Preset (editable)</label>
-        <select id="preset">
-          <option value="bank75" selected>Typical bank loan (75% LTV, 5% min cash downpayment)</option>
-          <option value="hdb80">Typical HDB loan (80% LTV, 0% min cash downpayment)</option>
-          <option value="custom">Custom</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="ltv">Loan-to-value (LTV, %)</label>
-        <input id="ltv" inputmode="decimal" value="75"/>
-      </div>
-      <div class="field">
-        <label for="minCashPct">Minimum cash downpayment (% of price)</label>
-        <input id="minCashPct" inputmode="decimal" value="5"/>
-      </div>
-
-      <div class="field">
-        <label for="bsd">BSD amount (SGD)</label>
-        <input id="bsd" inputmode="decimal" value="0"/>
-      </div>
-      <div class="field">
-        <label for="absd">ABSD amount (SGD)</label>
-        <input id="absd" inputmode="decimal" value="0"/>
-      </div>
-
-      <div class="field">
-        <label for="bsdCpfPct">% of stamp duty paid by CPF</label>
-        <input id="bsdCpfPct" inputmode="decimal" value="100"/>
-      </div>
-      <div class="field">
-        <label for="fees">Other upfront fees (legal/agent/valuation, SGD)</label>
-        <input id="fees" inputmode="decimal" value="3500"/>
-      </div>
-
-      <div class="field">
-        <label for="optionFee">Option fee / booking fee (cash, SGD)</label>
-        <input id="optionFee" inputmode="decimal" value="1000"/>
-      </div>
-      <div class="field">
-        <label for="miscCash">Other cash-only items (renov deposit, etc, SGD)</label>
-        <input id="miscCash" inputmode="decimal" value="0"/>
-      </div>
-
-      <div class="field full">
-        <div class="btnrow">
-          <button class="btn btn-primary" id="calcBtn" type="button">Calculate</button>
-          <button class="btn btn-secondary" id="resetBtn" type="button">Reset defaults</button>
-        </div>
-        <p class="mini">
+<div class="og-form-grid">
+<div class="field">
+<label for="price">Property price (SGD)</label>
+<input id="price" inputmode="decimal" value="1200000"/>
+</div>
+<div class="field">
+<label for="preset">Preset (editable)</label>
+<select id="preset">
+<option selected="" value="bank75">Typical bank loan (75% LTV, 5% min cash downpayment)</option>
+<option value="hdb80">Typical HDB loan (80% LTV, 0% min cash downpayment)</option>
+<option value="custom">Custom</option>
+</select>
+</div>
+<div class="field">
+<label for="ltv">Loan-to-value (LTV, %)</label>
+<input id="ltv" inputmode="decimal" value="75"/>
+</div>
+<div class="field">
+<label for="minCashPct">Minimum cash downpayment (% of price)</label>
+<input id="minCashPct" inputmode="decimal" value="5"/>
+</div>
+<div class="field">
+<label for="bsd">BSD amount (SGD)</label>
+<input id="bsd" inputmode="decimal" value="0"/>
+</div>
+<div class="field">
+<label for="absd">ABSD amount (SGD)</label>
+<input id="absd" inputmode="decimal" value="0"/>
+</div>
+<div class="field">
+<label for="bsdCpfPct">% of stamp duty paid by CPF</label>
+<input id="bsdCpfPct" inputmode="decimal" value="100"/>
+</div>
+<div class="field">
+<label for="fees">Other upfront fees (legal/agent/valuation, SGD)</label>
+<input id="fees" inputmode="decimal" value="3500"/>
+</div>
+<div class="field">
+<label for="optionFee">Option fee / booking fee (cash, SGD)</label>
+<input id="optionFee" inputmode="decimal" value="1000"/>
+</div>
+<div class="field">
+<label for="miscCash">Other cash-only items (renov deposit, etc, SGD)</label>
+<input id="miscCash" inputmode="decimal" value="0"/>
+</div>
+<div class="field full">
+<div class="btnrow">
+<button class="btn btn-primary" id="calcBtn" type="button">Calculate</button>
+<button class="btn btn-secondary" id="resetBtn" type="button">Reset defaults</button>
+</div>
+<p class="mini">
           Interpret this as <span class="pill">planning minimum</span>. Your actual cash/CPF split depends on your loan approval,
           valuation, and transaction specifics.
         </p>
-      </div>
-    </div>
-
-    <div class="og-kpi-grid" id="kpis" style="display:none;">
-      <div class="kpi">
-        <div class="k">Upfront cash needed</div>
-        <div class="v" id="kpiCash">—</div>
-        <div class="s" id="kpiCashS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Upfront CPF used</div>
-        <div class="v" id="kpiCpf">—</div>
-        <div class="s" id="kpiCpfS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Loan amount (assumption)</div>
-        <div class="v" id="kpiLoan">—</div>
-        <div class="s" id="kpiLoanS">—</div>
-      </div>
-      <div class="kpi">
-        <div class="k">Total upfront outlay</div>
-        <div class="v" id="kpiTotal">—</div>
-        <div class="s" id="kpiTotalS">—</div>
-      </div>
-    </div>
-
-    <h2 style="margin-top:18px;">Breakdown</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Cash (SGD)</th>
-          <th>CPF (SGD)</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody id="rows">
-        <tr><td colspan="4" class="mini">Enter inputs and click Calculate.</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="box">
-    <h2>Next steps</h2>
-    <ul>
-      <li><a href="/property-affordability-calculator-singapore.html">Property affordability calculator</a> — check the monthly burden.</li>
-      <li><a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> — estimate your borrowing ceiling.</li>
-      <li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a> — stamp duty budget by buyer profile.</li>
-    </ul>
-  </section>
-
-<section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong>Last updated:</strong> 1 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>This estimates minimum upfront outlay using your LTV and min cash downpayment assumptions.</li><li>BSD/ABSD are major drivers; confirm with IRAS and your conveyancing lawyer if your profile is non-standard.</li><li>CPF payment ability depends on CPF balances and CPF usage rules; this model treats CPF as available if you choose so.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: S$1.2M purchase with 75% LTV and 5% min cash downpayment</p>
-    <p>A common planning view: cash is needed for (1) minimum cash downpayment, (2) any cash-only fees, and (3) stamp duties if not CPF-paid. Use this to avoid “I can afford the loan but not the completion cash” surprises.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Why does the cash number jump so much when ABSD is included?</summary><div class='og-faq-a'><p>ABSD is a large one-off tax, often cash-heavy depending on CPF usage and timing.</p></div></details><details><summary>Does option fee always have to be cash?</summary><div class='og-faq-a'><p>Typically yes. Treat it as cash-first planning unless you have a confirmed structure otherwise.</p></div></details><details><summary>Is this ‘minimum cash’ guaranteed?</summary><div class='og-faq-a'><p>No. Your bank’s valuation and approval can change LTV; plan a buffer.</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>IRAS: BSD/ABSD rates and stamp duty guidance.</li><li>CPF Board: Property usage rules and CPF refund mechanics (accrued interest).</li>
-  </ul>
+</div>
+</div>
+<div class="og-kpi-grid" id="kpis" style="display:none;">
+<div class="kpi">
+<div class="k">Upfront cash needed</div>
+<div class="v" id="kpiCash">—</div>
+<div class="s" id="kpiCashS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Upfront CPF used</div>
+<div class="v" id="kpiCpf">—</div>
+<div class="s" id="kpiCpfS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Loan amount (assumption)</div>
+<div class="v" id="kpiLoan">—</div>
+<div class="s" id="kpiLoanS">—</div>
+</div>
+<div class="kpi">
+<div class="k">Total upfront outlay</div>
+<div class="v" id="kpiTotal">—</div>
+<div class="s" id="kpiTotalS">—</div>
+</div>
+</div>
+<h2 style="margin-top:18px;">Breakdown</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Cash (SGD)</th>
+<th>CPF (SGD)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody id="rows">
+<tr><td class="mini" colspan="4">Enter inputs and click Calculate.</td></tr>
+</tbody>
+</table>
+</section>
+<section class="box">
+<h2>Next steps</h2>
+<ul>
+<li><a href="/property-affordability-calculator-singapore.html">Property affordability calculator</a> — check the monthly burden.</li>
+<li><a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> — estimate your borrowing ceiling.</li>
+<li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a> — stamp duty budget by buyer profile.</li>
+</ul>
+</section>
+<section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<p class="og-last-updated"><strong>Last updated:</strong> 1 Mar 2026</p>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>This estimates minimum upfront outlay using your LTV and min cash downpayment assumptions.</li><li>BSD/ABSD are major drivers; confirm with IRAS and your conveyancing lawyer if your profile is non-standard.</li><li>CPF payment ability depends on CPF balances and CPF usage rules; this model treats CPF as available if you choose so.</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: S$1.2M purchase with 75% LTV and 5% min cash downpayment</p>
+<p>A common planning view: cash is needed for (1) minimum cash downpayment, (2) any cash-only fees, and (3) stamp duties if not CPF-paid. Use this to avoid “I can afford the loan but not the completion cash” surprises.</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Why does the cash number jump so much when ABSD is included?</summary><div class="og-faq-a"><p>ABSD is a large one-off tax, often cash-heavy depending on CPF usage and timing.</p></div></details><details><summary>Does option fee always have to be cash?</summary><div class="og-faq-a"><p>Typically yes. Treat it as cash-first planning unless you have a confirmed structure otherwise.</p></div></details><details><summary>Is this ‘minimum cash’ guaranteed?</summary><div class="og-faq-a"><p>No. Your bank’s valuation and approval can change LTV; plan a buffer.</p></div></details>
+</div>
+<h2>References (official where possible)</h2>
+<ul class="og-bullets">
+<li>IRAS: BSD/ABSD rates and stamp duty guidance.</li><li>CPF Board: Property usage rules and CPF refund mechanics (accrued interest).</li>
+</ul>
 </section>
 
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
+<p>This calculator is a <strong>decision model</strong> — it helps you sanity-check trade-offs and stress-test your downside. It is not a quote from a bank/dealer, and it does not include every edge-case fee.</p>
+<p><strong>How to use it:</strong></p>
+<ul>
+<li>Input your target price and financing assumptions; then see the implied cash you need to complete the purchase.</li><li>Treat this as a <strong>buffer planning</strong> tool: build extra margin for unknowns like valuation gaps.</li><li>If you are selling and buying, pair this with the sell→buy pipeline timeline page.</li>
+</ul>
+<p><strong>What the model includes (and does not):</strong></p>
+<ul>
+<li><strong>Includes:</strong> the core cashflow/interest mechanics relevant to upfront cash planning for property purchase.</li>
+<li><strong>Does not include:</strong> promotional packages, negotiated rebates, or your personal credit terms — use your own numbers where possible.</li>
+</ul>
+<p><strong>References (where applicable):</strong></p>
+<ul><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li><li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">CPF</a></li><li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">MAS</a></li><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">IRAS</a></li></ul>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 1 Mar 2026</p>
+</section>
 </main>
-
 <div id="site-footer"></div>
-
 <script>
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => {
