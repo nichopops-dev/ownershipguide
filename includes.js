@@ -1578,6 +1578,40 @@ const box = document.createElement("section");
   }
 
 // =========================
+// 4.96) WebSite JSON-LD (site-wide trust signal)
+// =========================
+function injectWebSiteSchema() {
+  try {
+    const existing = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+      .some(s => {
+        const t = (s.textContent || '').replace(/\s+/g, '');
+        return t.includes('"@type":"WebSite"');
+      });
+    if (existing) return;
+
+    const base = String(SETTINGS.siteBaseUrl || (window.location.origin + "/")).replace(/\/$/, "");
+    const site = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ownership Guide",
+      "url": base + "/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ownership Guide",
+        "url": base + "/"
+      }
+    };
+
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.textContent = JSON.stringify(site);
+    document.head.appendChild(s);
+  } catch (e) {
+    // no-op
+  }
+}
+
+// =========================
   // 5) GA4 (optional)
   // =========================
   if (
@@ -1662,6 +1696,7 @@ const box = document.createElement("section");
   injectDecisionPathModule();
   injectBreadcrumbSchema();
   injectOrganizationSchema();
+  injectWebSiteSchema();
 
   // =========================
   // 8) Auto-related links (cluster-aware, capped, non-clutter)
