@@ -1,15 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference</title>
-  <meta name="description" content="Singapore rent vs buy calculator (2026): compare owning vs renting over the same horizon. Includes mortgage amortization, appreciation, rent inflation, buying/selling costs, and a rent‑and‑invest model to estimate break‑even years."/>
-  <meta name="og:cluster" content="property"/>
-  <meta name="og:subtopic" content="calculator"/>
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference</title>
+<meta content="Singapore rent vs buy calculator (2026): compare owning vs renting over the same horizon. Includes mortgage amortization, appreciation, rent inflation, buying/selling costs, and a rent‑and‑invest model to estimate break‑even years." name="description"/>
+<meta content="property" name="og:cluster"/>
+<meta content="calculator" name="og:subtopic"/>
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebPage",
@@ -17,236 +16,200 @@
     "description":"Compare owning vs renting over the same horizon (mortgage, appreciation, rent inflation, costs, rent-and-invest net worth)."
   }
   </script>
-
-  <link rel="canonical" href="https://ownershipguide.com/rent-vs-buy-calculator-singapore.html"/>
-  <link rel="stylesheet" href="/styles.css"/>
+<link href="https://ownershipguide.com/rent-vs-buy-calculator-singapore.html" rel="canonical"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-    <nav class="breadcrumbs">
-      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
-    </nav>
-
-    <h1>Rent vs Buy Calculator (Singapore, 2026)</h1>
-    <p class="muted">
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<nav class="breadcrumbs">
+<a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+</nav>
+<h1>Rent vs Buy Calculator (Singapore, 2026)</h1>
+<p class="muted">
       This model answers the question: <strong>“If I rent instead of buy, how much better (or worse) is my end net worth?”</strong>
       It’s not perfect — but it’s vastly better than comparing monthly mortgage vs rent.
     </p>
-
-    <div class="og-card" style="margin:14px 0;">
-      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-        <div>
-          <div class="og-card-title" style="margin:0;">Want the framework?</div>
-          <div class="og-card-meta" style="margin-top:4px;">
+<div class="og-card" style="margin:14px 0;">
+<div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+<div>
+<div class="og-card-title" style="margin:0;">Want the framework?</div>
+<div class="og-card-meta" style="margin-top:4px;">
             Read: <a href="/rent-vs-buy-property-singapore.html">Rent vs Buy Property (Singapore, 2026)</a>
-          </div>
-        </div>
-        <a class="btn btn-secondary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Also: Upfront cash + CPF</a>
-      </div>
-    </div>
-
-    <h2>Inputs</h2>
-    <div class="og-card">
-      <div class="og-form-grid">
-        <label>
+</div>
+</div>
+<a class="btn btn-secondary" href="/how-much-cash-to-buy-property-calculator-singapore.html">Also: Upfront cash + CPF</a>
+</div>
+</div>
+<h2>Inputs</h2>
+<div class="og-card">
+<div class="og-form-grid">
+<label>
           Property price (SGD)
-          <input id="price" type="number" min="0" step="10000" value="1200000" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="price" inputmode="decimal" min="0" step="10000" type="number" value="1200000"/>
+</label>
+<label>
           Downpayment (% of price)
-          <input id="downPct" type="number" min="0" max="100" step="0.5" value="25" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="downPct" inputmode="decimal" max="100" min="0" step="0.5" type="number" value="25"/>
+</label>
+<label>
           Interest rate (% p.a.)
-          <input id="rate" type="number" min="0" step="0.01" value="3.25" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="rate" inputmode="decimal" min="0" step="0.01" type="number" value="3.25"/>
+</label>
+<label>
           Loan tenure (years)
-          <input id="tenure" type="number" min="1" step="1" value="25" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="tenure" inputmode="decimal" min="1" step="1" type="number" value="25"/>
+</label>
+<label>
           Holding period (years)
-          <input id="horizon" type="number" min="1" step="1" value="7" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="horizon" inputmode="decimal" min="1" step="1" type="number" value="7"/>
+</label>
+<label>
           Monthly rent today (SGD)
-          <input id="rent" type="number" min="0" step="50" value="4200" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="rent" inputmode="decimal" min="0" step="50" type="number" value="4200"/>
+</label>
+<label>
           Rent inflation (% p.a.)
-          <input id="rentInfl" type="number" step="0.1" value="2.0" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="rentInfl" inputmode="decimal" step="0.1" type="number" value="2.0"/>
+</label>
+<label>
           Property price appreciation (% p.a.)
-          <input id="appreciation" type="number" step="0.1" value="2.0" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="appreciation" inputmode="decimal" step="0.1" type="number" value="2.0"/>
+</label>
+<label>
           Investment return for renter (% p.a.)
-          <input id="invReturn" type="number" step="0.1" value="5.0" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="invReturn" inputmode="decimal" step="0.1" type="number" value="5.0"/>
+</label>
+<label>
           Upfront buying costs (BSD/ABSD + legal, SGD)
-          <input id="buyCosts" type="number" min="0" step="1000" value="50000" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="buyCosts" inputmode="decimal" min="0" step="1000" type="number" value="50000"/>
+</label>
+<label>
           Selling cost (% of sale price)
-          <input id="sellPct" type="number" min="0" step="0.1" value="2.0" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="sellPct" inputmode="decimal" min="0" step="0.1" type="number" value="2.0"/>
+</label>
+<label>
           Owner running costs (maintenance + tax, SGD / month)
-          <input id="ownerMonthly" type="number" min="0" step="10" value="450" inputmode="decimal">
-        </label>
-
-        <label>
+          <input id="ownerMonthly" inputmode="decimal" min="0" step="10" type="number" value="450"/>
+</label>
+<label>
           Renter monthly costs (insurance/misc, SGD / month)
-          <input id="renterMonthly" type="number" min="0" step="10" value="0" inputmode="decimal">
-        </label>
-      </div>
-
-      <div class="btn-row" style="margin-top:12px;">
-        <button class="btn" id="btnCalc">Calculate</button>
-        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
-      </div>
-
-      <p class="muted" style="margin-top:10px;">
+          <input id="renterMonthly" inputmode="decimal" min="0" step="10" type="number" value="0"/>
+</label>
+</div>
+<div class="btn-row" style="margin-top:12px;">
+<button class="btn" id="btnCalc">Calculate</button>
+<button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+</div>
+<p class="muted" style="margin-top:10px;">
         Interpretation: this is a <strong>planning model</strong>. Real outcomes depend on valuation, borrowing approval, cash/CPF structure, vacancy, and behavioural discipline.
       </p>
-    </div>
-
-    <h2>Results</h2>
-    <div class="og-kpi-grid">
-      <div class="kpi">
-        <div class="kpi-label">Mortgage monthly payment</div>
-        <div class="kpi-value" id="kpiPmt">—</div>
-        <div class="kpi-sub">Principal + interest (excludes owner running costs)</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">End net worth (BUY)</div>
-        <div class="kpi-value" id="kpiBuyNW">—</div>
-        <div class="kpi-sub">Net sale proceeds after remaining loan & selling costs</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">End net worth (RENT + INVEST)</div>
-        <div class="kpi-value" id="kpiRentNW">—</div>
-        <div class="kpi-sub">Upfront invested + monthly savings invested (or withdrawals)</div>
-      </div>
-
-      <div class="kpi">
-        <div class="kpi-label">Winner (net worth)</div>
-        <div class="kpi-value" id="kpiWinner">—</div>
-        <div class="kpi-sub" id="kpiWinnerSub">—</div>
-      </div>
-    </div>
-
-    <div class="box">
-      <h3 style="margin-top:0;">Break‑even estimate</h3>
-      <p class="muted" style="margin-top:6px;">
+</div>
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Mortgage monthly payment</div>
+<div class="kpi-value" id="kpiPmt">—</div>
+<div class="kpi-sub">Principal + interest (excludes owner running costs)</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">End net worth (BUY)</div>
+<div class="kpi-value" id="kpiBuyNW">—</div>
+<div class="kpi-sub">Net sale proceeds after remaining loan &amp; selling costs</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">End net worth (RENT + INVEST)</div>
+<div class="kpi-value" id="kpiRentNW">—</div>
+<div class="kpi-sub">Upfront invested + monthly savings invested (or withdrawals)</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Winner (net worth)</div>
+<div class="kpi-value" id="kpiWinner">—</div>
+<div class="kpi-sub" id="kpiWinnerSub">—</div>
+</div>
+</div>
+<div class="box">
+<h3 style="margin-top:0;">Break‑even estimate</h3>
+<p class="muted" style="margin-top:6px;">
         Break‑even is the first year where the end net worth of buying becomes higher than rent‑and‑invest (or vice versa).
         It’s a rough indicator — not a promise.
       </p>
-      <div class="og-kpi-grid" style="margin-top:10px;">
-        <div class="kpi">
-          <div class="kpi-label">Break‑even year (approx)</div>
-          <div class="kpi-value" id="kpiBE">—</div>
-          <div class="kpi-sub">Within 1–15 years scan</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Average monthly cost (BUY)</div>
-          <div class="kpi-value" id="kpiBuyCost">—</div>
-          <div class="kpi-sub">Net cost over horizon / months</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Average monthly cost (RENT)</div>
-          <div class="kpi-value" id="kpiRentCost">—</div>
-          <div class="kpi-sub">Rent + renter costs (no investment effects)</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Key sensitivity</div>
-          <div class="kpi-value" id="kpiSense">—</div>
-          <div class="kpi-sub">Usually: appreciation vs rent inflation</div>
-        </div>
-      </div>
-    </div>
+<div class="og-kpi-grid" style="margin-top:10px;">
+<div class="kpi">
+<div class="kpi-label">Break‑even year (approx)</div>
+<div class="kpi-value" id="kpiBE">—</div>
+<div class="kpi-sub">Within 1–15 years scan</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Average monthly cost (BUY)</div>
+<div class="kpi-value" id="kpiBuyCost">—</div>
+<div class="kpi-sub">Net cost over horizon / months</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Average monthly cost (RENT)</div>
+<div class="kpi-value" id="kpiRentCost">—</div>
+<div class="kpi-sub">Rent + renter costs (no investment effects)</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Key sensitivity</div>
+<div class="kpi-value" id="kpiSense">—</div>
+<div class="kpi-sub">Usually: appreciation vs rent inflation</div>
+</div>
+</div>
+</div>
+<details class="box">
+<summary><strong>Show breakdown</strong> (how this model works)</summary>
+<div style="margin-top:10px;">
+<ol>
+<li><strong>Buy:</strong> you pay upfront (downpayment + buying costs), then mortgage + owner monthly costs. At the end, you sell: net proceeds = sale price − remaining loan − selling costs.</li>
+<li><strong>Rent + invest:</strong> you invest the upfront cash you didn’t spend buying. Each month, you invest (or withdraw) the difference between buy monthly outflow and rent monthly outflow.</li>
+<li>End net worth is compared. This is not a “monthly payment” comparison — it’s a <strong>net worth comparison</strong>.</li>
+</ol>
+</div>
+</details>
+<div class="related-box">
+<h3 style="margin-top:0;">Next steps</h3>
+<ul>
+<li><a href="/property-affordability-calculator-singapore.html">Stress-test property affordability</a> (borrowing + fragility)</li>
+<li><a href="/mortgage-amortization-calculator-singapore.html">Mortgage amortization calculator</a> (payment + total interest)</li>
+<li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD stamp duty calculator</a> (duties)</li>
+<li><a href="/refinance-savings-calculator-singapore.html">Refinance savings calculator</a> (break-even months)</li>
+</ul>
+</div>
+<section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<p class="og-last-updated"><strong>Last updated:</strong> 2 Mar 2026</p>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<div class="og-callout"><p class="og-callout-title">Scenario 3: High-opportunity-cost case — rent &amp; invest wins even if prices rise</p><p>Try a higher investment return assumption (e.g., 5–7% p.a.) and include all buying/selling costs. If the break-even horizon becomes very long, the decision may be more about lifestyle stability than pure net worth.</p></div><div class="og-callout"><p class="og-callout-title">Scenario 2: First home — rent S$2,500 vs buy S$700k resale (10-year horizon)</p><p>Use conservative inputs first: 1–2% p.a. price growth, realistic rent inflation, and a lower investment return. Then toggle one variable at a time (horizon, appreciation, investment return) to see what actually flips the outcome.</p></div><div class="og-callout">
+<p class="og-callout-title">Scenario 1: S$2,800 rent vs S$1.3M purchase (5-year horizon)</p>
+<p>Try a conservative run: modest appreciation (e.g., 1–2% p.a.), realistic selling costs, and a lower investment return assumption. If buy still wins under conservative inputs, the decision is usually robust.</p>
+</div><h2>Scenario library (sanity checks)</h2><h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>Buy path includes: upfront cash/CPF, mortgage payments, owner costs, and selling costs; it assumes you sell at the chosen horizon.</li><li>Rent path assumes you invest the upfront amount you didn’t spend on buying and (optionally) invest the monthly difference between owning vs renting.</li><li>Property price appreciation, rent growth, investment return, and transaction costs drive the result; run at least one conservative scenario.</li>
+</ul>
 
-    <details class="box">
-      <summary><strong>Show breakdown</strong> (how this model works)</summary>
-      <div style="margin-top:10px;">
-        <ol>
-          <li><strong>Buy:</strong> you pay upfront (downpayment + buying costs), then mortgage + owner monthly costs. At the end, you sell: net proceeds = sale price − remaining loan − selling costs.</li>
-          <li><strong>Rent + invest:</strong> you invest the upfront cash you didn’t spend buying. Each month, you invest (or withdraw) the difference between buy monthly outflow and rent monthly outflow.</li>
-          <li>End net worth is compared. This is not a “monthly payment” comparison — it’s a <strong>net worth comparison</strong>.</li>
-        </ol>
-      </div>
-    </details>
 
-    <div class="related-box">
-      <h3 style="margin-top:0;">Next steps</h3>
-      <ul>
-        <li><a href="/property-affordability-calculator-singapore.html">Stress-test property affordability</a> (borrowing + fragility)</li>
-        <li><a href="/mortgage-amortization-calculator-singapore.html">Mortgage amortization calculator</a> (payment + total interest)</li>
-        <li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD stamp duty calculator</a> (duties)</li>
-        <li><a href="/refinance-savings-calculator-singapore.html">Refinance savings calculator</a> (break-even months)</li>
-      </ul>
-    </div>
-  <section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong>Last updated:</strong> 1 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>Buy path includes: upfront cash/CPF, mortgage payments, owner costs, and selling costs; it assumes you sell at the chosen horizon.</li><li>Rent path assumes you invest the upfront amount you didn’t spend on buying and (optionally) invest the monthly difference between owning vs renting.</li><li>Property price appreciation, rent growth, investment return, and transaction costs drive the result; run at least one conservative scenario.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: S$2,800 rent vs S$1.3M purchase (5-year horizon)</p>
-    <p>Try a conservative run: modest appreciation (e.g., 1–2% p.a.), realistic selling costs, and a lower investment return assumption. If buy still wins under conservative inputs, the decision is usually robust.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Why can rent win even if “mortgage is similar to rent”?</summary><div class='og-faq-a'><p>Because owning has big one-off costs (BSD/ABSD, fees) and opportunity cost on upfront cash. Short horizons punish buying.</p></div></details><details><summary>What horizon should I use?</summary><div class='og-faq-a'><p>Use the minimum time you’re confident you’ll hold. If you might move in 3–5 years, test that first.</p></div></details><details><summary>Should I include renovation?</summary><div class='og-faq-a'><p>Yes if it’s material. Treat it as a cash outflow on the buy path (and a resale uplift only if you’re confident).</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>CPF: CPF usage and refunds — see CPF Board guidance on property usage and accrued interest.</li><li>IRAS: Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD).</li>
-  </ul>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Why can rent win even if “mortgage is similar to rent”?</summary><div class="og-faq-a"><p>Because owning has big one-off costs (BSD/ABSD, fees) and opportunity cost on upfront cash. Short horizons punish buying.</p></div></details><details><summary>What horizon should I use?</summary><div class="og-faq-a"><p>Use the minimum time you’re confident you’ll hold. If you might move in 3–5 years, test that first.</p></div></details><details><summary>Should I include renovation?</summary><div class="og-faq-a"><p>Yes if it’s material. Treat it as a cash outflow on the buy path (and a resale uplift only if you’re confident).</p></div></details>
+</div>
+<h2>References (official where possible)</h2>
+<ul class="og-bullets">
+<li>CPF: CPF usage and refunds — see CPF Board guidance on property usage and accrued interest.</li><li>IRAS: Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD).</li>
+</ul>
 </section>
-
 </main>
-
-  <div id="site-footer"></div>
-  <script src="/includes.js"></script>
-
-  <script>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
   function num(v){ const x = parseFloat(v); return isFinite(x) ? x : 0; }
   function money(x){
     const n = isFinite(x) ? x : 0;

@@ -3,6 +3,9 @@
   // 0) SETTINGS (edit only here)
   // =========================
   const SETTINGS = {
+    // Content editing guardrail:
+    // For calculator pages, keep ONE FAQ section and ONE 'Last updated' line inside <main>.
+    // When adding Calculator Kit blocks, merge into existing editorial sections—do not append duplicates.
     enableHeaderFooter: true,
 
     // Site base URL (for canonical/OG tags)
