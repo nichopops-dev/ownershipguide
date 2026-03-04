@@ -1,190 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>TDSR / MSR Calculator Singapore (2026): Max Home Loan & Borrowing Limit</title>
-  <meta name="description" content="TDSR / MSR calculator for Singapore (2026): estimate your max housing loan based on income, existing debts, interest rate, and tenure. Adjustable caps for TDSR (55%) and MSR (30%)."/>
-
-  <link rel="canonical" href="https://ownershipguide.com/tdsr-msr-calculator-singapore.html"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="calculator"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>TDSR / MSR Calculator Singapore (2026): Max Home Loan &amp; Borrowing Limit</title>
+<meta content="TDSR / MSR calculator for Singapore (2026): estimate your max housing loan based on income, existing debts, interest rate, and tenure. Adjustable caps for TDSR (55%) and MSR (30%)." name="description"/>
+<link href="https://ownershipguide.com/tdsr-msr-calculator-singapore.html" rel="canonical"/>
+<meta content="property" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <div id="site-header"></div>
-
-  <main class="container">
-
-    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-
-    <p class="nav">
-      <a href="/">Home</a> / <a href="/calculators/">Calculators</a> / TDSR &amp; MSR
-    </p>
-
-    <h1>TDSR / MSR Calculator (Singapore, 2026)</h1>
-    <p class="meta">Max housing instalment · Max loan amount · Debt-aware ·</p>
-
-    <div class="box">
-      <p><strong>What this is for:</strong> estimate your <em>maximum housing loan</em> under the two common borrowing gates:</p>
-      <ul>
-        <li><strong>TDSR</strong>: total monthly debt obligations (including this housing loan) capped as % of gross monthly income.</li>
-        <li><strong>MSR</strong>: housing instalment alone capped as % of gross monthly income (commonly relevant for HDB / new EC style cases).</li>
-      </ul>
-      <p class="muted" style="margin-bottom:0;">
+<div id="site-header"></div>
+<main class="container"><p class="nav"><a href="/">← Back to Ownership Guide</a></p><p class="nav">
+<a href="/">Home</a> / <a href="/calculators/">Calculators</a> / TDSR &amp; MSR
+    </p><h1>TDSR / MSR Calculator (Singapore, 2026)</h1><p class="meta">Max housing instalment · Max loan amount · Debt-aware ·</p><div class="box">
+<p><strong>What this is for:</strong> estimate your <em>maximum housing loan</em> under the two common borrowing gates:</p>
+<ul>
+<li><strong>TDSR</strong>: total monthly debt obligations (including this housing loan) capped as % of gross monthly income.</li>
+<li><strong>MSR</strong>: housing instalment alone capped as % of gross monthly income (commonly relevant for HDB / new EC style cases).</li>
+</ul>
+<p class="muted" style="margin-bottom:0;">
         This is a <strong>planning calculator</strong>. Banks may apply additional haircuts, floor rates, age/tenure caps, and internal policies.
         If you want the mental model first: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.
       </p>
-    </div>
+</div><h2>Inputs</h2><div class="og-card" style="padding:16px;">
+<div class="og-form-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px;">
+<div>
+<label for="income"><strong>Gross monthly household income (S$)</strong></label>
+<input id="income" inputmode="decimal" min="0" step="100" style="width:100%;" type="number" value="10000"/>
+<div class="muted">Use gross income (before CPF). If you have variable income, be conservative.</div>
+</div>
+<div>
+<label for="otherDebt"><strong>Other monthly debt obligations (S$)</strong></label>
+<input id="otherDebt" inputmode="decimal" min="0" step="50" style="width:100%;" type="number" value="800"/>
+<div class="muted">Car loan, credit cards, personal loans, other mortgages, etc.</div>
+</div>
+<div>
+<label for="rate"><strong>Assumed interest rate (% p.a.)</strong></label>
+<input id="rate" inputmode="decimal" min="0" step="0.05" style="width:100%;" type="number" value="3.8"/>
+<div class="muted">Stress-test with a higher rate. Then check repayment details in the <a href="/mortgage-amortization-calculator-singapore.html">amortization calculator</a>.</div>
+</div>
+<div>
+<label for="tenure"><strong>Loan tenure (years)</strong></label>
+<input id="tenure" inputmode="numeric" min="1" step="1" style="width:100%;" type="number" value="25"/>
+<div class="muted">Shorter tenure reduces max loan even if ratios pass.</div>
+</div>
+<div>
+<label for="tdsrCap"><strong>TDSR cap (%)</strong></label>
+<input id="tdsrCap" inputmode="decimal" max="100" min="0" step="0.5" style="width:100%;" type="number" value="55"/>
+<div class="muted">Adjust if rules change or your bank uses a tighter internal cap.</div>
+</div>
+<div>
+<label for="msrCap"><strong>MSR cap (%)</strong></label>
+<input id="msrCap" inputmode="decimal" max="100" min="0" step="0.5" style="width:100%;" type="number" value="30"/>
+<div class="muted">Set to 0 if MSR does not apply to your case.</div>
+</div>
+</div>
+<div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+<button class="btn" id="btnCalc" type="button">Calculate</button>
+<button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
+</div>
+</div><h2>Results</h2><div class="og-card" id="results" style="padding:16px;">
+<div class="muted">Enter inputs and click <strong>Calculate</strong>.</div>
+</div><hr/><h2>How to use this (without fooling yourself)</h2><div class="box">
+<ol>
+<li><strong>Ratios are necessary, not sufficient.</strong> Passing TDSR/MSR doesn’t mean the purchase is smart — it just means it might be allowable.</li>
+<li><strong>Stress-test interest rates.</strong> If your plan breaks at +1% p.a., it’s fragile.</li>
+<li><strong>Convert max instalment into exposure math.</strong> Use <a href="/property-affordability-calculator-singapore.html">property affordability</a> to see runway and buffers, and <a href="/mortgage-amortization-calculator-singapore.html">amortization</a> to see interest paid.</li>
+</ol>
+</div><h2>What to do next</h2><div class="box">
+<ul>
+<li>Understand the rules and tradeoffs: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.</li>
+<li>Decide structure: <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> · <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.</li>
+<li>Run repayment + interest: <a href="/mortgage-amortization-calculator-singapore.html">mortgage amortization calculator</a>.</li>
+</ul>
+</div><section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>TDSR caps total monthly debt obligations as a % of gross income; MSR caps housing loan repayment for certain property types.</li><li>Your bank’s stressed interest rate assumption and your other debts change the maximum loan materially.</li><li>Use this as a planning ceiling, not a promise of approval.</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: income S$12,000, other debts S$800/month</p>
+<p>Run with a conservative rate and your actual debt obligations. If the max loan is tight, your realistic options are: lower purchase price, higher downpayment, or reduce debts.</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Does credit card spending count as debt?</summary><div class="og-faq-a"><p>Minimum payment obligations can be treated as debt. Use a conservative estimate if unsure.</p></div></details><details><summary>Is MSR always applicable?</summary><div class="og-faq-a"><p>MSR applies to certain purchases (commonly HDB and EC). Check your scenario.</p></div></details><details><summary>Why does a small debt reduce max loan a lot?</summary><div class="og-faq-a"><p>Because loans are sized off monthly instalment; small changes in available instalment compound into large principal changes.</p></div></details>
+</div>
 
-    <h2>Inputs</h2>
 
-    <div class="og-card" style="padding:16px;">
-      <div class="og-form-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:12px;">
-
-        <div>
-          <label for="income"><strong>Gross monthly household income (S$)</strong></label>
-          <input id="income" type="number" inputmode="decimal" min="0" step="100" value="10000" style="width:100%;"/>
-          <div class="muted">Use gross income (before CPF). If you have variable income, be conservative.</div>
-        </div>
-
-        <div>
-          <label for="otherDebt"><strong>Other monthly debt obligations (S$)</strong></label>
-          <input id="otherDebt" type="number" inputmode="decimal" min="0" step="50" value="800" style="width:100%;"/>
-          <div class="muted">Car loan, credit cards, personal loans, other mortgages, etc.</div>
-        </div>
-
-        <div>
-          <label for="rate"><strong>Assumed interest rate (% p.a.)</strong></label>
-          <input id="rate" type="number" inputmode="decimal" min="0" step="0.05" value="3.8" style="width:100%;"/>
-          <div class="muted">Stress-test with a higher rate. Then check repayment details in the <a href="/mortgage-amortization-calculator-singapore.html">amortization calculator</a>.</div>
-        </div>
-
-        <div>
-          <label for="tenure"><strong>Loan tenure (years)</strong></label>
-          <input id="tenure" type="number" inputmode="numeric" min="1" step="1" value="25" style="width:100%;"/>
-          <div class="muted">Shorter tenure reduces max loan even if ratios pass.</div>
-        </div>
-
-        <div>
-          <label for="tdsrCap"><strong>TDSR cap (%)</strong></label>
-          <input id="tdsrCap" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="55" style="width:100%;"/>
-          <div class="muted">Adjust if rules change or your bank uses a tighter internal cap.</div>
-        </div>
-
-        <div>
-          <label for="msrCap"><strong>MSR cap (%)</strong></label>
-          <input id="msrCap" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="30" style="width:100%;"/>
-          <div class="muted">Set to 0 if MSR does not apply to your case.</div>
-        </div>
-
-      </div>
-
-      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-        <button class="btn" id="btnCalc" type="button">Calculate</button>
-        <button class="btn btn-secondary" id="btnReset" type="button">Reset</button>
-      </div>
-    </div>
-
-    <h2>Results</h2>
-    <div class="og-card" id="results" style="padding:16px;">
-      <div class="muted">Enter inputs and click <strong>Calculate</strong>.</div>
-    </div>
-
-    <hr/>
-
-    <h2>How to use this (without fooling yourself)</h2>
-    <div class="box">
-      <ol>
-        <li><strong>Ratios are necessary, not sufficient.</strong> Passing TDSR/MSR doesn’t mean the purchase is smart — it just means it might be allowable.</li>
-        <li><strong>Stress-test interest rates.</strong> If your plan breaks at +1% p.a., it’s fragile.</li>
-        <li><strong>Convert max instalment into exposure math.</strong> Use <a href="/property-affordability-calculator-singapore.html">property affordability</a> to see runway and buffers, and <a href="/mortgage-amortization-calculator-singapore.html">amortization</a> to see interest paid.</li>
-      </ol>
-    </div>
-
-    <h2>What to do next</h2>
-    <div class="box">
-      <ul>
-        <li>Understand the rules and tradeoffs: <a href="/tdsr-msr-singapore.html">TDSR &amp; MSR explained</a>.</li>
-        <li>Decide structure: <a href="/fixed-vs-floating-home-loan-singapore.html">fixed vs floating</a> · <a href="/refinance-vs-reprice-home-loan-singapore.html">refinance vs reprice</a>.</li>
-        <li>Run repayment + interest: <a href="/mortgage-amortization-calculator-singapore.html">mortgage amortization calculator</a>.</li>
-      </ul>
-    </div>
-
-  <section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>TDSR caps total monthly debt obligations as a % of gross income; MSR caps housing loan repayment for certain property types.</li><li>Your bank’s stressed interest rate assumption and your other debts change the maximum loan materially.</li><li>Use this as a planning ceiling, not a promise of approval.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: income S$12,000, other debts S$800/month</p>
-    <p>Run with a conservative rate and your actual debt obligations. If the max loan is tight, your realistic options are: lower purchase price, higher downpayment, or reduce debts.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Does credit card spending count as debt?</summary><div class='og-faq-a'><p>Minimum payment obligations can be treated as debt. Use a conservative estimate if unsure.</p></div></details><details><summary>Is MSR always applicable?</summary><div class='og-faq-a'><p>MSR applies to certain purchases (commonly HDB and EC). Check your scenario.</p></div></details><details><summary>Why does a small debt reduce max loan a lot?</summary><div class='og-faq-a'><p>Because loans are sized off monthly instalment; small changes in available instalment compound into large principal changes.</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>MAS borrowing rules (TDSR/MSR) — confirm latest rules and bank practice.</li>
-  </ul>
-</section>
-
-<section class="box" style="margin-top:18px">
+</section><section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator</h2>
 <p>Use this to <strong>stress test</strong> whether your income supports a target mortgage amount under TDSR/MSR-style limits. For real approvals, banks apply their own stress rates and income rules.</p><ol><li>Enter income (and any existing debt repayments).</li><li>Enter target loan amount, rate, and tenure.</li><li>Check whether you breach an assumed ratio, then adjust loan size or tenure.</li></ol>
-</section>
-<section class="box" style="margin-top:18px">
+</section><section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">Scenario library (sanity checks)</h2>
 <p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
 <ul><li><strong>Example A (single income):</strong> <p>Gross monthly income: $8,000. Existing debt repayments: $500. Target loan: $600,000 over 25 years at 4.0% p.a. See how close you are to ratio limits.</p></li><li><strong>Example B (dual income):</strong> <p>Combined income: $14,000. Existing debts: $800. Target loan: $900,000 over 25 years at 4.0% p.a. Test how a 0.5% rate change affects eligibility.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology & assumptions</h2>
+</section><section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
 <ul><li>Uses simplified ratio maths for planning; does not replicate bank underwriting.</li><li>Excludes nuanced income haircuts, variable income treatment, dependents, and bank-specific stress rates.</li><li>Use as a planning model; confirm with your bank/MAS guidance.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References & updates</h2>
-<p><em>Last updated: 2 Mar 2026</em></p>
-<p><em></em></p>
-<h3>References (starting points)</h3>
-<ul><li><a href="https://www.mas.gov.sg/" target="_blank" rel="nofollow noopener">MAS</a></li><li><a href="https://www.hdb.gov.sg/" target="_blank" rel="nofollow noopener">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
-</section>
+</section><section class="box" style="margin-top:18px">
 
 
 
-<section class="og-card">
-  <h2>Calculator notes</h2>
-  <h2>Inputs explained</h2>
+
+</section><section class="og-card">
+<h2>Calculator notes</h2>
+<h2>Inputs explained</h2>
 <ul><li><strong>Income:</strong> use the amount that will be recognised for credit assessment (often lower than your gross).</li><li><strong>Obligations:</strong> include every monthly commitment, not just the new loan.</li><li><strong>Stress rate:</strong> banks may use a higher assessment rate than your offered rate.</li></ul>
-</section>
-
-</main>
-
-  <div id="site-footer"></div>
-  <script src="/includes.js"></script>
-
-  <script>
+</section><h2>References (starting points)</h2><ul class="og-bullets">
+<li>MAS borrowing rules (TDSR/MSR) — confirm latest rules and bank practice.</li>
+</ul><p><em></em></p><ul><li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">MAS</a></li><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p><p class="muted">Last updated: 3 Mar 2026</p></main>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
     function fmtMoney(n) {
       if (!isFinite(n)) return "-";
       return "S$" + n.toLocaleString(undefined, { maximumFractionDigits: 0 });
@@ -279,6 +220,5 @@
     document.getElementById('btnCalc').addEventListener('click', calc);
     document.getElementById('btnReset').addEventListener('click', reset);
   </script>
-
 </body>
 </html>

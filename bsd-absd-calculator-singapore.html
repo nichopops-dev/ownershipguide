@@ -1,198 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty</title>
-  <meta name="description" content="BSD & ABSD calculator for Singapore (2026): estimate Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) for residential property using IRAS marginal tiers and current ABSD profiles."/>
-
-  <link rel="canonical" href="https://ownershipguide.com/bsd-absd-calculator-singapore.html"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="calculator"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>BSD &amp; ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty</title>
+<meta content="BSD &amp; ABSD calculator for Singapore (2026): estimate Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) for residential property using IRAS marginal tiers and current ABSD profiles." name="description"/>
+<link href="https://ownershipguide.com/bsd-absd-calculator-singapore.html" rel="canonical"/>
+<meta content="property" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <div id="site-header"></div>
-
-  <main class="container">
-    <div class="nav" style="margin-top:12px;">
-      <a href="/">Home</a> <span class="muted">›</span>
-      <a href="/calculators/">Calculators</a> <span class="muted">›</span>
-      <a href="/property/">Property</a> <span class="muted">›</span>
-      <span class="muted">BSD & ABSD Calculator</span>
-    </div>
-
-    <h1 style="margin-top:14px;">BSD & ABSD Calculator (Singapore, 2026)</h1>
-    <p class="muted" style="max-width:900px;">
+<div id="site-header"></div>
+<main class="container"><div class="nav" style="margin-top:12px;">
+<a href="/">Home</a> <span class="muted">›</span>
+<a href="/calculators/">Calculators</a> <span class="muted">›</span>
+<a href="/property/">Property</a> <span class="muted">›</span>
+<span class="muted">BSD &amp; ABSD Calculator</span>
+</div><h1 style="margin-top:14px;">BSD &amp; ABSD Calculator (Singapore, 2026)</h1><p class="muted" style="max-width:900px;">
       Estimate <strong>Buyer’s Stamp Duty (BSD)</strong> and <strong>Additional Buyer’s Stamp Duty (ABSD)</strong> for a
       <strong>residential</strong> property. Rates follow IRAS BSD tiers (from <strong>15 Feb 2023</strong>) and ABSD profiles (on or after <strong>27 Apr 2023</strong>).
-    </p>
-
-    <div class="og-card">
-      <h2>Inputs</h2>
-
-      <div class="og-form-grid">
-        <div>
-          <label class="muted">Property value used for stamp duty (S$)</label>
-          <input id="value" class="box" type="number" min="0" step="1000" value="1500000"/>
-          <div class="muted" style="margin-top:6px;">Use the higher of purchase price or market value (IRAS rule).</div>
-        </div>
-
-        <div>
-          <label class="muted">Buyer profile</label>
-          <select id="profile" class="box">
-            <option value="sc">Singapore Citizen (SC)</option>
-            <option value="spr">Singapore Permanent Resident (SPR)</option>
-            <option value="fr">Foreigner (FR)</option>
-            <option value="entity">Entity / Company</option>
-            <option value="trustee">Trustee (living trust transfer)</option>
-          </select>
-          <div class="muted" style="margin-top:6px;">Quick estimate assumes a single profile (joint buyers can differ).</div>
-        </div>
-
-        <div>
-          <label class="muted">Residential properties currently owned</label>
-          <select id="owned" class="box">
-            <option value="0">0 (first property)</option>
-            <option value="1">1 (second property)</option>
-            <option value="2">2+ (third and subsequent)</option>
-          </select>
-          <div class="muted" style="margin-top:6px;">Count includes properties owned wholly, partially, or jointly (IRAS definition).</div>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
-        <button id="calcBtn" class="btn">Calculate</button>
-        <button id="resetBtn" class="btn btn-secondary">Reset</button>
-      </div>
-    </div>
-
-    <div class="og-card" id="resultsCard" style="display:none;">
-      <h2>Results</h2>
-
-      <div class="og-card-grid" style="margin-top:10px;">
-        <div class="kpi-box">
-          <div class="muted">BSD (estimated)</div>
-          <div class="kpi" id="bsdOut">—</div>
-        </div>
-        <div class="kpi-box">
-          <div class="muted">ABSD (estimated)</div>
-          <div class="kpi" id="absdOut">—</div>
-        </div>
-        <div class="kpi-box">
-          <div class="muted">Total stamp duty</div>
-          <div class="kpi" id="totalOut">—</div>
-        </div>
-      </div>
-
-      <div style="margin-top:12px;">
-        <div class="meta">
-          <div><strong>ABSD rate used:</strong> <span id="absdRateOut">—</span></div>
-          <div class="muted" id="absdReasonOut" style="margin-top:4px;"></div>
-        </div>
-      </div>
-
-      <div style="margin-top:12px;">
-        <h3 style="margin-bottom:8px;">BSD breakdown (marginal tiers)</h3>
-        <table class="table" id="bsdTable"></table>
-      </div>
-
-      <p class="note small" style="margin-top:12px;">
-        <strong>Important:</strong> BSD/ABSD are rounded down to the nearest dollar by IRAS. This calculator follows that rule,
+    </p><div class="og-card">
+<h2>Inputs</h2>
+<div class="og-form-grid">
+<div>
+<label class="muted">Property value used for stamp duty (S$)</label>
+<input class="box" id="value" min="0" step="1000" type="number" value="1500000"/>
+<div class="muted" style="margin-top:6px;">Use the higher of purchase price or market value (IRAS rule).</div>
+</div>
+<div>
+<label class="muted">Buyer profile</label>
+<select class="box" id="profile">
+<option value="sc">Singapore Citizen (SC)</option>
+<option value="spr">Singapore Permanent Resident (SPR)</option>
+<option value="fr">Foreigner (FR)</option>
+<option value="entity">Entity / Company</option>
+<option value="trustee">Trustee (living trust transfer)</option>
+</select>
+<div class="muted" style="margin-top:6px;">Quick estimate assumes a single profile (joint buyers can differ).</div>
+</div>
+<div>
+<label class="muted">Residential properties currently owned</label>
+<select class="box" id="owned">
+<option value="0">0 (first property)</option>
+<option value="1">1 (second property)</option>
+<option value="2">2+ (third and subsequent)</option>
+</select>
+<div class="muted" style="margin-top:6px;">Count includes properties owned wholly, partially, or jointly (IRAS definition).</div>
+</div>
+</div>
+<div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
+<button class="btn" id="calcBtn">Calculate</button>
+<button class="btn btn-secondary" id="resetBtn">Reset</button>
+</div>
+</div><div class="og-card" id="resultsCard" style="display:none;">
+<h2>Results</h2>
+<div class="og-card-grid" style="margin-top:10px;">
+<div class="kpi-box">
+<div class="muted">BSD (estimated)</div>
+<div class="kpi" id="bsdOut">—</div>
+</div>
+<div class="kpi-box">
+<div class="muted">ABSD (estimated)</div>
+<div class="kpi" id="absdOut">—</div>
+</div>
+<div class="kpi-box">
+<div class="muted">Total stamp duty</div>
+<div class="kpi" id="totalOut">—</div>
+</div>
+</div>
+<div style="margin-top:12px;">
+<div class="meta">
+<div><strong>ABSD rate used:</strong> <span id="absdRateOut">—</span></div>
+<div class="muted" id="absdReasonOut" style="margin-top:4px;"></div>
+</div>
+</div>
+<div style="margin-top:12px;">
+<h3 style="margin-bottom:8px;">BSD breakdown (marginal tiers)</h3>
+<table class="table" id="bsdTable"></table>
+</div>
+<p class="note small" style="margin-top:12px;">
+<strong>Important:</strong> BSD/ABSD are rounded down to the nearest dollar by IRAS. This calculator follows that rule,
         but special cases (joint buyers, remissions, living trust details, housing developers, etc.) can change outcomes.
         Always verify with IRAS and your lawyer.
       </p>
-    </div>
+</div><div class="og-card">
+<h2>Next steps</h2>
+<ul>
+<li>Read the explainer: <a href="/bsd-absd-singapore.html">BSD &amp; ABSD in Singapore (simple guide)</a></li>
+<li>Budget your downpayment + duties: <a href="/property-affordability-calculator-singapore.html">Property Affordability Calculator</a></li>
+<li>Borrowing constraints: <a href="/tdsr-msr-singapore.html">TDSR / MSR guide</a> or <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a></li>
+<li>Official tools: IRAS <a href="https://www.iras.gov.sg/quick-links/calculators" rel="noopener" target="_blank">stamp duty calculators</a></li>
+</ul>
+</div><div class="og-card">
+<h2>Assumptions (rates)</h2>
+<ul>
+<li><strong>BSD tiers (residential)</strong>: 1% (first S$180k), 2% (next S$180k), 3% (next S$640k), 4% (next S$500k), 5% (next S$1.5m), 6% (remaining) — effective <strong>15 Feb 2023</strong>.</li>
+<li><strong>ABSD (on or after 27 Apr 2023)</strong>: SC 2nd 20%, SC 3rd+ 30%; SPR 1st 5%, SPR 2nd 30%, SPR 3rd+ 35%; Foreigner 60%; Entity 65%; Trustee 65%.</li>
+</ul>
+<p class="muted" style="margin-top:8px;">Rates can change; confirm on IRAS before committing.</p>
+</div><section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>BSD is tiered (marginal) — higher portions of the price are taxed at higher rates.</li><li>ABSD depends on buyer profile (citizenship, number of properties, etc.).</li><li>This is a planning estimate; confirm with IRAS for your exact profile and date of purchase.</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: why BSD isn’t ‘one flat %’</p>
+<p>BSD is calculated in brackets. That’s why a small increase in price doesn’t apply the top rate to the whole price — only the portion in that bracket.</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Does ABSD apply to my case?</summary><div class="og-faq-a"><p>It depends on your profile and existing property count. Check IRAS guidance for the exact category.</p></div></details><details><summary>Do I pay BSD/ABSD in cash?</summary><div class="og-faq-a"><p>Often payable at completion; CPF usage may be possible depending on your situation.</p></div></details><details><summary>Should I include this in my upfront cash planning?</summary><div class="og-faq-a"><p>Yes — stamp duties are one of the biggest upfront cashflow items.</p></div></details>
+</div>
 
-    <div class="og-card">
-      <h2>Next steps</h2>
-      <ul>
-        <li>Read the explainer: <a href="/bsd-absd-singapore.html">BSD & ABSD in Singapore (simple guide)</a></li>
-        <li>Budget your downpayment + duties: <a href="/property-affordability-calculator-singapore.html">Property Affordability Calculator</a></li>
-        <li>Borrowing constraints: <a href="/tdsr-msr-singapore.html">TDSR / MSR guide</a> or <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a></li>
-        <li>Official tools: IRAS <a href="https://www.iras.gov.sg/quick-links/calculators" target="_blank" rel="noopener">stamp duty calculators</a></li>
-      </ul>
-    </div>
 
-    <div class="og-card">
-      <h2>Assumptions (rates)</h2>
-      <ul>
-        <li><strong>BSD tiers (residential)</strong>: 1% (first S$180k), 2% (next S$180k), 3% (next S$640k), 4% (next S$500k), 5% (next S$1.5m), 6% (remaining) — effective <strong>15 Feb 2023</strong>.</li>
-        <li><strong>ABSD (on or after 27 Apr 2023)</strong>: SC 2nd 20%, SC 3rd+ 30%; SPR 1st 5%, SPR 2nd 30%, SPR 3rd+ 35%; Foreigner 60%; Entity 65%; Trustee 65%.</li>
-      </ul>
-      <p class="muted" style="margin-top:8px;">Rates can change; confirm on IRAS before committing.</p>
-    </div>
-  <section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>BSD is tiered (marginal) — higher portions of the price are taxed at higher rates.</li><li>ABSD depends on buyer profile (citizenship, number of properties, etc.).</li><li>This is a planning estimate; confirm with IRAS for your exact profile and date of purchase.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: why BSD isn’t ‘one flat %’</p>
-    <p>BSD is calculated in brackets. That’s why a small increase in price doesn’t apply the top rate to the whole price — only the portion in that bracket.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Does ABSD apply to my case?</summary><div class='og-faq-a'><p>It depends on your profile and existing property count. Check IRAS guidance for the exact category.</p></div></details><details><summary>Do I pay BSD/ABSD in cash?</summary><div class='og-faq-a'><p>Often payable at completion; CPF usage may be possible depending on your situation.</p></div></details><details><summary>Should I include this in my upfront cash planning?</summary><div class='og-faq-a'><p>Yes — stamp duties are one of the biggest upfront cashflow items.</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>IRAS: Stamp Duty (BSD/ABSD) rates and guides.</li>
-  </ul>
-</section>
-
-<section class="box" style="margin-top:18px">
+</section><section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator</h2>
 <p>Use this to estimate Singapore <strong>BSD/ABSD</strong> and your upfront cash/CPF needs. Always verify rates and eligibility before paying option fees.</p><ol><li>Enter purchase price (or valuation if required).</li><li>Select buyer profile (citizen/PR/foreigner) and property count.</li><li>Use the output to plan your upfront cash buffer.</li></ol>
-</section>
-<section class="box" style="margin-top:18px">
+</section><section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">Scenario library (sanity checks)</h2>
 <p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
 <ul><li><strong>Example A (first home):</strong> <p>Purchase price: $800,000. Singapore Citizen buying first residential property. Use the estimate to plan option fee + BSD + legal/valuation buffers.</p></li><li><strong>Example B (additional property):</strong> <p>Purchase price: $1,500,000. Singapore Citizen buying second residential property. ABSD can be the largest upfront item — stress test your cashflow.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology & assumptions</h2>
+</section><section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
 <ul><li><strong>Uses published stamp duty tiers</strong> (BSD/ABSD).</li><li><strong>Excludes:</strong> seller’s stamp duty (SSD), legal fees, valuation fees, agent fees, renovation.</li><li>Rates can change; verify with IRAS before committing.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References & updates</h2>
-<p><em>Last updated: 2 Mar 2026</em></p>
-<h3>References (starting points)</h3>
-<ul><li><a href="https://www.iras.gov.sg/taxes/stamp-duty" target="_blank" rel="nofollow noopener">IRAS (Stamp Duties)</a></li><li><a href="https://www.hdb.gov.sg/" target="_blank" rel="nofollow noopener">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
-</section>
+</section><section class="box" style="margin-top:18px">
 
 
 
-<section class="og-card">
-  <h2>Calculator notes</h2>
-  <h2>Inputs explained</h2>
+</section><section class="og-card">
+<h2>Calculator notes</h2>
+<h2>Inputs explained</h2>
 <ul><li><strong>Property count:</strong> depends on beneficial ownership, not just your name on title.</li><li><strong>Profile:</strong> residency and marital purchase arrangements can change ABSD treatment.</li></ul>
-</section>
-
-</main>
-
-  <div id="site-footer"></div>
-
+</section><h2>References (starting points)</h2><ul class="og-bullets">
+<li>IRAS: Stamp Duty (BSD/ABSD) rates and guides.</li>
+</ul><ul><li><a href="https://www.iras.gov.sg/taxes/stamp-duty" rel="nofollow noopener" target="_blank">IRAS (Stamp Duties)</a></li><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p><p class="muted">Last updated: 3 Mar 2026</p></main>
+<div id="site-footer"></div>
 <script src="/includes.js"></script>
 <script>
 (function(){
