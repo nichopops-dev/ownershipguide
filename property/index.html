@@ -14,86 +14,10 @@
 <body>
 <div id="site-header"></div>
 <main class="container">
-<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-<p class="nav">
-<a href="/">Home</a> / <a href="/property/">Property</a>
-</p>
-<p class="nav">
-<a href="/start-here/">Start Here</a> · <a href="/calculators/">Calculators</a> · <a href="/comparisons/">Comparisons</a> · <a href="/property/financing/">Financing</a> · <a href="/transport/">Transport</a> · <a href="/property/">Property</a>
-</p>
-<section aria-label="Property quick path" class="og-wizard">
-<div class="og-wizard-title">Quick decision path</div>
-<p class="og-wizard-sub">Pick what you’re trying to figure out — we’ll send you to the right calculator or guide.</p>
-<div class="og-wizard-row">
-<label class="sr-only" for="ogPropWizard">Property quick path</label>
-<select id="ogPropWizard">
-<option value="">Choose one…</option>
-<option value="/rent-vs-buy-calculator-singapore.html">Rent vs Buy (net worth + break-even)</option>
-<option value="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF needed</option>
-<option value="/sell-property-proceeds-calculator-singapore.html">Sell proceeds (cash vs CPF)</option>
-<option value="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy next (pipeline, prefilled tools)</option>
-<option value="/property-upgrade-planner-singapore.html">Upgrade planner (sell → buy next workflow)</option>
-<option value="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell (end value after X years)</option>
-<option value="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade property (sell → buy next)</option>
-<option value="/property-upgrade-ladder-calculator-singapore.html">Property upgrade ladder (required income + buffer)</option>
-<option value="/bsd-absd-calculator-singapore.html">BSD + ABSD stamp duty</option>
-<option value="/tdsr-msr-calculator-singapore.html">Max home loan (TDSR/MSR)</option>
-<option value="/refinance-savings-calculator-singapore.html">Refinance savings + break-even</option>
-<option value="/pay-down-mortgage-vs-invest-calculator-singapore.html">Pay down mortgage vs invest</option>
-<option value="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan</option>
-</select>
-<a aria-disabled="true" class="btn" href="#" id="ogPropWizardGo">Go</a>
-</div>
-<p class="og-wizard-foot"><span class="pill">Tip</span> If you’re unsure, start with <a href="/how-much-cash-to-buy-property-calculator-singapore.html">upfront cash + CPF</a>, then do <a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR</a>.</p>
-</section>
-<script>
-      (function () {
-        var sel = document.getElementById("ogPropWizard");
-        var go = document.getElementById("ogPropWizardGo");
-        if (!sel || !go) return;
 
-        function sync() {
-          var v = sel.value || "";
-          if (!v) {
-            go.setAttribute("aria-disabled", "true");
-            go.classList.add("is-disabled");
-            go.href = "#";
-            return;
-          }
-          go.setAttribute("aria-disabled", "false");
-          go.classList.remove("is-disabled");
-          go.href = v;
-        }
-
-        sel.addEventListener("change", sync);
-        go.addEventListener("click", function (e) {
-          if (go.getAttribute("aria-disabled") === "true") {
-            e.preventDefault();
-            return;
-          }
-        });
-
-        sync();
-      })();
-    </script>
-<h1>Property Cost in Singapore (2026)</h1>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Property in Singapore: the 5-year exposure view</h2>
-<p>Property is a leveraged capital allocation decision. This cluster models <strong>cash + CPF + fees + interest + opportunity cost</strong>, so you can compare “own vs rent” and plan upgrades with eyes open.</p>
-<h3>Start with one of these</h3>
-<ol>
-<li><a href="/property-ownership-cost-singapore.html">Property ownership cost (5-year total exposure)</a></li>
-<li><a href="/rent-vs-buy-property-singapore.html">Rent vs buy (5-year comparison)</a></li>
-<li><a href="/how-much-cash-to-buy-property-singapore.html">How much cash is needed to buy</a></li>
-</ol>
-<h3>Then check financing constraints</h3>
-<ul>
-<li><a href="/tdsr-msr-singapore.html">TDSR/MSR guide</a> · <a href="/fixed-vs-floating-home-loan-singapore.html">Fixed vs floating</a> · <a href="/refinance-vs-reprice-home-loan-singapore.html">Refinance vs reprice</a></li>
-</ul>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 2 Mar 2026</p>
 </section>
 
-<p class="meta">Cluster Overview · Last updated: February 2026</p>
+
 <p>
       Property ownership in Singapore is a <strong>leveraged capital allocation</strong> decision.
       The drivers are not just mortgage instalments — they are <strong>interest sensitivity</strong>,

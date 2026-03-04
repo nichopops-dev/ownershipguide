@@ -47,84 +47,10 @@
 <body>
 <div id="site-header"></div>
 <main class="container">
-<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-<p class="nav">
-<a href="/">Home</a> / <a href="/transport/">Transport</a>
-</p>
-<p class="nav">
-<a href="/start-here/">Start Here</a> · <a href="/calculators/">Calculators</a> · <a href="/comparisons/">Comparisons</a> · <a href="/transport/">Transport</a> · <a href="/property/">Property</a> · <a href="/transport/financing/">Transport financing</a>
-</p>
-<section aria-label="Transport quick path" class="og-wizard">
-<div class="og-wizard-title">Quick decision path</div>
-<p class="og-wizard-sub">Pick what you’re trying to decide — we’ll send you to the right calculator or guide.</p>
-<div class="og-wizard-row">
-<label class="sr-only" for="ogTransportWizard">Transport quick path</label>
-<select id="ogTransportWizard">
-<option value="">Choose one…</option>
-<option value="/car-affordability-calculator-singapore.html">Can I afford a car?</option>
-<option value="/car-ownership-cost-calculator-singapore.html">True all-in monthly cost (TCO)</option>
-<option value="/car-leasing-vs-buying-calculator-singapore.html">Leasing vs buying (all-in)</option>
-<option value="/used-car-vs-new-car-calculator-singapore.html">Used vs new (all-in)</option>
-<option value="/ev-vs-petrol-calculator-singapore.html">EV vs petrol (break-even mileage)</option>
-<option value="/coe-renew-vs-replace-calculator-singapore.html">COE renew vs replace (calculator)</option>
-<option value="/car-loan-calculator-singapore.html">Car loan instalment (flat vs effective)</option>
-<option value="/coe-loan-calculator-singapore.html">COE loan instalment (flat vs effective)</option>
-<option value="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing cost</option>
-<option value="/coe-renew-vs-replace-singapore.html">COE renew vs replace</option>
-</select>
-<a aria-disabled="true" class="btn" href="#" id="ogTransportWizardGo">Go</a>
-</div>
-<p class="og-wizard-foot"><span class="pill">Tip</span> Start with <a href="/car-affordability-calculator-singapore.html">affordability</a>, then price a specific option with <a href="/car-ownership-cost-calculator-singapore.html">all-in monthly cost</a>.</p>
-</section>
-<script>
-      (function () {
-        var sel = document.getElementById("ogTransportWizard");
-        var go = document.getElementById("ogTransportWizardGo");
-        if (!sel || !go) return;
 
-        function sync() {
-          var v = sel.value || "";
-          if (!v) {
-            go.setAttribute("aria-disabled", "true");
-            go.classList.add("is-disabled");
-            go.href = "#";
-            return;
-          }
-          go.setAttribute("aria-disabled", "false");
-          go.classList.remove("is-disabled");
-          go.href = v;
-        }
-
-        sel.addEventListener("change", sync);
-        go.addEventListener("click", function (e) {
-          if (go.getAttribute("aria-disabled") === "true") {
-            e.preventDefault();
-            return;
-          }
-        });
-
-        sync();
-      })();
-    </script>
-<h1>Transport Cost in Singapore (2026)</h1>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Transport in Singapore: don’t buy a monthly payment</h2>
-<p>Transport decisions in Singapore are dominated by <strong>COE + depreciation</strong>. This cluster focuses on 5-year total exposure, liquidity impact, and break-even comparisons (own vs rent vs public transport).</p>
-<h3>Start with one of these</h3>
-<ol>
-<li><a href="/car-ownership-cost.html">Cost of owning a car (5-year model)</a></li>
-<li><a href="/car-vs-ride-hailing-cost.html">Car vs ride-hailing (when ownership makes sense)</a></li>
-<li><a href="/public-transport-cost-singapore.html">Public transport cost baseline</a></li>
-</ol>
-<h3>Then drill down</h3>
-<ul>
-<li>COE: <a href="/coe-cost-singapore.html">what it is</a> · <a href="/coe-bidding-strategy-singapore.html">bidding strategy</a> · <a href="/coe-renewal-worth-it-singapore.html">renewal decision</a></li>
-<li>Costs: <a href="/fuel-cost-singapore.html">fuel</a> · <a href="/parking-cost-singapore.html">parking</a> · <a href="/car-insurance-cost-singapore.html">insurance</a> · <a href="/car-maintenance-repair-cost-singapore.html">maintenance</a></li>
-</ul>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 2 Mar 2026</p>
 </section>
 
-<p class="meta">Cluster Overview · Last updated: February 2026</p>
+
 <p>
       Transport decisions in Singapore are capital allocation decisions.
       COE, depreciation, and liquidity exposure drive total cost — not instalments.
