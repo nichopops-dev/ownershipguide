@@ -1,7 +1,4 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.2";
-  try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
-  try { console.log('[OwnershipGuide] includes.js', OG_INCLUDES_VERSION); } catch(e) {}
   // =========================
   // 0) SETTINGS (edit only here)
   // =========================
@@ -1256,7 +1253,33 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    if (host) {
+    // Prefer inserting near the end of the article (but before References / Last updated),
+    // so the module doesn't appear above the page title or back-links.
+    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
+
+    const findHeadingByText = (tagNames, rx) => {
+      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
+      for (const el of els) {
+        const t = (el.textContent || "").trim();
+        if (rx.test(t)) return el;
+      }
+      return null;
+    };
+
+    const insertBeforeEl =
+      // 1) Before "References" (keeps References as last substantive section)
+      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
+      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
+      || (() => {
+        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
+          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+        return candidates.length ? candidates[candidates.length - 1] : null;
+      })();
+
+    if (insertBeforeEl) {
+      insertBeforeEl.insertAdjacentElement("beforebegin", box);
+    } else if (host) {
+      // If a related container exists, insert above it (legacy behavior).
       host.insertAdjacentElement("beforebegin", box);
     } else {
       // Append at the end of main content as a safe fallback.
@@ -1312,18 +1335,15 @@ function buildRelatedHTML(label, links) {
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-    // IMPORTANT: Anchor ONLY inside <main>.
-    // We do not fall back to generic .container or document.body because that can match header wrappers
-    // and cause "Next steps" to appear above the article title / nav.
-    const main = document.querySelector("main.container") || document.querySelector("main");
-    if (!main) return;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
 
-    // Look for the related placeholder ONLY within main.
-    const host = main.querySelector("#" + SETTINGS.relatedContainerId)
-      || main.querySelector(".related-box")
-      || main.querySelector("[data-related]")
-      || main.querySelector("section.related")
-      || main.querySelector(".og-related");
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
@@ -1342,81 +1362,83 @@ function buildRelatedHTML(label, links) {
       .replace(/\.html$/i, "");
     const pathN = norm(rawPath);
 
-    // Do not inject on comparison pages (they already have their own next-step modules)
-    const isComparisonPage = (() => {
-      try {
-        if (rawPath.startsWith("/comparisons")) return true;
-        const metaEl = document.querySelector(".meta");
-        if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
+// Do not inject on comparison pages (they already have their own next-step modules)
+const isComparisonPage = (() => {
+  try {
+    if (rawPath.startsWith("/comparisons")) return true;
+    const metaEl = document.querySelector(".meta");
+    if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
 
-        // Check against configured comparison URLs
-        const urls = [];
-        const walk = (node) => {
-          if (!node) return;
-          if (Array.isArray(node)) { node.forEach(walk); return; }
-          if (typeof node === "object") {
-            if (typeof node.url === "string") urls.push(node.url);
-            for (const k in node) walk(node[k]);
-          }
-        };
-        if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
-        const cmpSet = new Set(urls.map(u => norm(u)));
-        return cmpSet.has(pathN);
-      } catch (e) {
-        return false;
+    // Check against configured comparison URLs
+    const urls = [];
+    const walk = (node) => {
+      if (!node) return;
+      if (Array.isArray(node)) { node.forEach(walk); return; }
+      if (typeof node === "object") {
+        if (typeof node.url === "string") urls.push(node.url);
+        for (const k in node) walk(node[k]);
       }
-    })();
-    if (isComparisonPage) return;
+    };
+    if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
+    const cmpSet = new Set(urls.map(u => norm(u)));
+    return cmpSet.has(pathN);
+  } catch (e) {
+    return false;
+  }
+})();
+if (isComparisonPage) return;
 
     const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
     if (!allow) return;
 
-    const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
+    
+const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
 
-    const runPrimary = (override && override.runPrimary)
-      ? override.runPrimary
-      : (cluster === "property"
-        ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
-        : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
+const runPrimary = (override && override.runPrimary)
+  ? override.runPrimary
+  : (cluster === "property"
+    ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
+    : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
 
-    const runSecondary = (override && override.runSecondary)
-      ? override.runSecondary
-      : (cluster === "property"
-        ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
-        : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
+const runSecondary = (override && override.runSecondary)
+  ? override.runSecondary
+  : (cluster === "property"
+    ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+    : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
 
-    const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
+const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
 
-    const compareCfg = (preset && preset.compare) ? preset.compare : null;
-    const financingDefault = (() => {
-      const p = pathN;
-      const isProp = (cluster === "property");
-      const isTrans = (cluster === "transport");
-      if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
-        return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
-      }
-      if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
-        return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
-      }
-      return null;
-    })();
+const compareCfg = (preset && preset.compare) ? preset.compare : null;
+const financingDefault = (() => {
+  const p = pathN;
+  const isProp = (cluster === "property");
+  const isTrans = (cluster === "transport");
+  if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
+    return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
+  }
+  if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
+    return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
+  }
+  return null;
+})();
 
-    const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
-    const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
-    const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
+const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
+const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
+const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
 
-    const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
-    const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
-    const relatedHtml = (relatedLinks && relatedLinks.length)
-      ? `<div class="og-nextsteps-related">
-            <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
-            <div class="og-nextsteps-related-links">
-              ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
-            </div>
-          </div>`
-      : "";
+const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
+const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
+const relatedHtml = (relatedLinks && relatedLinks.length)
+  ? `<div class="og-nextsteps-related">
+        <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
+        <div class="og-nextsteps-related-links">
+          ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
+        </div>
+      </div>`
+  : "";
 
-    const box = document.createElement("section");
+
+const box = document.createElement("section");
     box.className = "og-section";
     box.id = SETTINGS.decisionPathModuleId;
 
@@ -1446,86 +1468,62 @@ function buildRelatedHTML(label, links) {
           </div>
         </div>
       </div>
-
+      
       ${relatedHtml}
       <hr style="margin-top:22px;">
 
 `;
 
-    // Placement rule (user preference): near the bottom, just before References (preferred) or Last updated.
-    // This prevents the module from appearing above the title when #auto-related is positioned early.
-    const findReferencesHeading = () => {
-      const headings = Array.from(main.querySelectorAll("h2, h3"));
-      for (const h of headings) {
-        const t = (h.textContent || "").trim().toLowerCase();
-        if (t === "references" || t.startsWith("references ")) return h;
-        if (t.startsWith("references &")) return h;
-      }
-      
-      // Fallback: <p><strong>References ...</strong></p> patterns
-      const strongs = Array.from(main.querySelectorAll("strong"));
-      for (const s of strongs) {
-        const t = (s.textContent || "").trim().toLowerCase();
-        if (t === "references" || t.startsWith("references")) {
-          return s.closest("p") || s;
-        }
+
+    // Prefer inserting near the end of the article (but before References / Last updated),
+    // so the module doesn't appear above the page title or back-links.
+    const main = document.querySelector("main.container") || document.querySelector("main");
+
+    const findHeadingByText = (tagNames, rx) => {
+      const root = main || document;
+      const els = Array.from(root.querySelectorAll(tagNames.join(",")));
+      for (const el of els) {
+        const t = (el.textContent || "").trim();
+        if (rx.test(t)) return el;
       }
       return null;
     };
 
-    const findLastUpdated = () => {
-      // Standard marker: <strong>Last updated:</strong> ...
-      const strongs = Array.from(main.querySelectorAll("strong"));
-      for (const s of strongs) {
-        if (((s.textContent || "").trim().toLowerCase()) === "last updated:") {
-          return s.closest("p") || s;
+    // 1) Prefer inserting before a real "References" heading.
+    //    Covers: <h2>References</h2>, <h2>References & updates</h2>, and inline strong labels like "References (where applicable):"
+    const referencesAnchor =
+      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
+      || (() => {
+        const root = main || document;
+        const strongs = Array.from(root.querySelectorAll("strong"));
+        for (const st of strongs) {
+          const t = (st.textContent || "").trim();
+          if (/^References\b/i.test(t)) return st.closest("p,div,section") || st;
         }
-      }
-      // Fallback: any <p> starting with "Last updated:"
-      const ps = Array.from(main.querySelectorAll("p"));
-      for (const p of ps) {
-        const t = (p.textContent || "").trim().toLowerCase();
-        if (t.startsWith("last updated:")) return p;
-      }
-      
-      // Additional fallback: elements with class meta/muted that contain 'last updated'
-      const metas = Array.from(main.querySelectorAll(".meta, .muted"));
-      for (const el of metas) {
-        const t = (el.textContent || "").trim().toLowerCase();
-        if (t.startsWith("last updated:") || t.includes("last updated:")) return el;
-      }
-      return null;
-    };
+        return null;
+      })();
 
-    const refH = findReferencesHeading();
-if (refH) {
-  refH.insertAdjacentElement("beforebegin", box);
-  return;
-}
+    // 2) Otherwise, insert before the *last* standalone "Last updated" marker (so it stays last).
+    const lastUpdatedAnchor = (() => {
+      const root = main || document;
+      const candidates = Array.from(root.querySelectorAll("p,div,section"))
+        .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+      return candidates.length ? candidates[candidates.length - 1] : null;
+    })();
 
-const lu = findLastUpdated();
-if (lu) {
-  lu.insertAdjacentElement("beforebegin", box);
-  return;
-}
+    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor;
 
-// Robust fallback:
-// - Prefer placing near the END of the article, not near the TOP.
-// - Only use #auto-related as an anchor if it appears AFTER the page title within <main>.
-const h1 = main.querySelector("h1");
-if (host && h1) {
-  const hostAfterH1 = (h1.compareDocumentPosition(host) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0;
-  if (hostAfterH1) {
-    // Put the module right before the related placeholder (near bottom for well-formed pages).
-    host.insertAdjacentElement("beforebegin", box);
-    return;
+    if (insertBeforeEl) {
+      insertBeforeEl.insertAdjacentElement("beforebegin", box);
+    } else if (main && host && main.contains(host)) {
+      // If a related container exists inside main, insert above it (legacy fallback).
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
+      (main || fallbackHost).appendChild(box);
+    }
   }
-}
 
-// If we cannot find References/Last updated, or if #auto-related is positioned before the title,
-// just append at the end of <main> to keep "Next steps" away from the top/nav.
-main.appendChild(box);
-  }
 
 
 
