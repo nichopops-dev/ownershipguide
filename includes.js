@@ -1257,12 +1257,21 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Prefer inserting near the end of the article (but before References / Last updated),
-    // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Prefer inserting near the end of the article (before References / Last updated).
+    // IMPORTANT: Only search/anchor within the same root container that holds the page H1/back-links.
+    const main = root;
+
+    const h1 = main.querySelector("h1");
+
+    const isAfter = (el, anchor) => {
+      if (!el || !anchor) return true;
+      try {
+        return !!(anchor.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING);
+      } catch (e) { return true; }
+    };
 
     const findHeadingByText = (tagNames, rx) => {
-      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
+      const els = Array.from(main.querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
         if (rx.test(t)) return el;
@@ -1270,24 +1279,45 @@ function buildRelatedHTML(label, links) {
       return null;
     };
 
-    const insertBeforeEl =
-      // 1) Before "References" (keeps References as last substantive section)
-      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
-      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
-      || (() => {
-        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
-          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
-        return candidates.length ? candidates[candidates.length - 1] : null;
-      })();
+    const referencesAnchor = (() => {
+      const h = findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i);
+      if (h && isAfter(h, h1)) return h;
+
+      const strongs = Array.from(main.querySelectorAll("strong"));
+      for (const st of strongs) {
+        const t = (st.textContent || "").trim();
+        if (/^References\b/i.test(t)) {
+          const a = st.closest("p,div,section") || st;
+          if (isAfter(a, h1)) return a;
+        }
+      }
+      return null;
+    })();
+
+    const lastUpdatedAnchor = (() => {
+      const candidates = Array.from(main.querySelectorAll("p,div,section"))
+        .filter(el => {
+          // Skip top meta lines (common on older templates)
+          if (el.classList && el.classList.contains("meta")) return false;
+          const txt = (el.textContent || "").trim();
+          return /Last\s+updated\s*:/i.test(txt);
+        })
+        .filter(el => isAfter(el, h1));
+
+      return candidates.length ? candidates[candidates.length - 1] : null;
+    })();
+
+    // Only use host if it's in main and after the H1 (avoid inserting above title).
+    const safeHost = (host && main.contains(host) && isAfter(host, h1)) ? host : null;
+
+    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor || safeHost;
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (host) {
-      // If a related container exists, insert above it (legacy behavior).
-      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
+      // Append at end of the article container as a safe fallback.
+      main.appendChild(box);
+    }
     }
   }
   function injectPropertyCTA() {
