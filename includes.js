@@ -1215,15 +1215,21 @@ function buildRelatedHTML(label, links) {
   function injectCalculatorCTA() {
     if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
-
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Next steps insertion anchor:
+    // We anchor AFTER the page title inside <main> so it can never appear above the H1.
+    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
+    const h1El = mainEl ? (mainEl.querySelector("h1") || document.querySelector("h1")) : document.querySelector("h1");
+    // Prefer inserting after the first intro paragraph (immediately after H1) if it exists.
+    const introP = (() => {
+      try {
+        if (!h1El) return null;
+        let n = h1El.nextElementSibling;
+        while (n && n.tagName && n.tagName.toLowerCase() in { 'script':1, 'style':1 }) n = n.nextElementSibling;
+        return (n && n.tagName && n.tagName.toLowerCase() === 'p') ? n : null;
+      } catch (e) { return null; }
+    })();
+    const insertAfterEl = introP || h1El;
+    const fallbackHost = mainEl;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.calculatorCtaId)) return;
@@ -1253,10 +1259,15 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    if (host) {
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
+    // Insert after title (or intro paragraph) so it never appears above the H1.
+    try {
+      if (insertAfterEl && insertAfterEl.parentNode) {
+        insertAfterEl.parentNode.insertBefore(box, insertAfterEl.nextSibling);
+      } else {
+        // Fallback: append at end of main content.
+        fallbackHost.appendChild(box);
+      }
+    } catch (e) {
       fallbackHost.appendChild(box);
     }
   }
