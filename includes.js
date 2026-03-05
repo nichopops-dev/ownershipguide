@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix5";
+  const OG_INCLUDES_VERSION = "v0126.5-fix6";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -1265,13 +1265,10 @@ function buildRelatedHTML(label, links) {
       <p>${escapeHtml(desc)}</p>
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
-
     // Prefer inserting near the end of the article (but before References / Last updated),
-    // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
-
+    // so the CTA doesn't appear above the page title or back-links.
     const findHeadingByText = (tagNames, rx) => {
-      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
+      const els = Array.from(main.querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
         if (rx.test(t)) return el;
@@ -1282,23 +1279,21 @@ function buildRelatedHTML(label, links) {
     const insertBeforeEl =
       // 1) Before "References" (keeps References as last substantive section)
       findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
-      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
+      // 2) Otherwise, before the LAST standalone "Last updated" marker (so last updated stays last)
       || (() => {
-        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
-          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+        const candidates = Array.from(main.querySelectorAll("p,div,section"))
+          .filter(el => /^\s*Last\s+updated\s*:/i.test((el.textContent || "").trim()));
         return candidates.length ? candidates[candidates.length - 1] : null;
       })();
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (host) {
-      // If a related container exists, insert above it (legacy behavior).
-      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
+      // Safe fallback: append to end of main content (never above title)
+      main.appendChild(box);
     }
   }
+
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
 
@@ -1519,7 +1514,7 @@ const box = document.createElement("section");
     // 2) Otherwise, insert before the *last* standalone "Last updated" marker (so it stays last).
     const lastUpdatedAnchor = (() => {
       // Prefer the true bottom marker, not inline/meta mentions.
-      const candidates = Array.from(root.querySelectorAll("p,div,section"))
+      const candidates = Array.from(main.querySelectorAll("p,div,section"))
         .filter(el => {
           if (el.classList && el.classList.contains("meta")) return false;
           const t = (el.textContent || "").trim();
