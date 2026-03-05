@@ -1,4 +1,7 @@
 (async function () {
+  const OG_INCLUDES_VERSION = "v0126.1";
+  try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
+  try { console.log('[OwnershipGuide] includes.js', OG_INCLUDES_VERSION); } catch(e) {}
   // =========================
   // 0) SETTINGS (edit only here)
   // =========================
@@ -1449,26 +1452,28 @@ function buildRelatedHTML(label, links) {
 
 `;
 
-    // Preferred placement: near the bottom, just before References / Last updated.
-    // This keeps "Next steps" close to related content without ever appearing above the title.
+    // Placement rule (user preference): near the bottom, just before References (preferred) or Last updated.
+    // This prevents the module from appearing above the title when #auto-related is positioned early.
     const findReferencesHeading = () => {
-      const heads = main.querySelectorAll("h2, h3");
-      for (const h of heads) {
+      const headings = Array.from(main.querySelectorAll("h2, h3"));
+      for (const h of headings) {
         const t = (h.textContent || "").trim().toLowerCase();
-        if (t === "references" || t === "references & updates" || t === "references and updates") return h;
+        if (t === "references" || t.startsWith("references ")) return h;
+        if (t.startsWith("references &")) return h;
       }
       return null;
     };
 
     const findLastUpdated = () => {
-      // Common pattern: <p class=\"muted\"><strong>Last updated:</strong> ...</p>
-      const strongs = main.querySelectorAll("p.muted strong, p.meta strong, strong");
+      // Standard marker: <strong>Last updated:</strong> ...
+      const strongs = Array.from(main.querySelectorAll("strong"));
       for (const s of strongs) {
-        const t = (s.textContent || "").trim().toLowerCase();
-        if (t === "last updated:" || t === "last updated") return s.closest("p") || s;
+        if (((s.textContent || "").trim().toLowerCase()) === "last updated:") {
+          return s.closest("p") || s;
+        }
       }
-      // Fallback: any paragraph starting with 'Last updated:'
-      const ps = main.querySelectorAll("p");
+      // Fallback: any <p> starting with "Last updated:"
+      const ps = Array.from(main.querySelectorAll("p"));
       for (const p of ps) {
         const t = (p.textContent || "").trim().toLowerCase();
         if (t.startsWith("last updated:")) return p;
@@ -1477,34 +1482,20 @@ function buildRelatedHTML(label, links) {
     };
 
     const refH = findReferencesHeading();
-    const lastU = findLastUpdated();
-
-    // Insert before the lowest-priority anchor available.
-    // Order: References heading -> Last updated -> auto-related host -> after H1 -> append.
     if (refH) {
       refH.insertAdjacentElement("beforebegin", box);
       return;
     }
-    if (lastU) {
-      lastU.insertAdjacentElement("beforebegin", box);
-      return;
-    }
-    if (host) {
-      // If host exists but is located very early, placing before it can float the module to the top.
-      // Prefer placing after the title instead.
-      const h1 = main.querySelector("h1");
-      if (h1) {
-        h1.insertAdjacentElement("afterend", box);
-      } else {
-        main.appendChild(box);
-      }
+
+    const lu = findLastUpdated();
+    if (lu) {
+      lu.insertAdjacentElement("beforebegin", box);
       return;
     }
 
-    // No anchors found: place right after the title.
-    const h1 = main.querySelector("h1");
-    if (h1) {
-      h1.insertAdjacentElement("afterend", box);
+    // Fallback: if a related placeholder exists, place after it (still within main); else append to end.
+    if (host) {
+      host.insertAdjacentElement("afterend", box);
     } else {
       main.appendChild(box);
     }
