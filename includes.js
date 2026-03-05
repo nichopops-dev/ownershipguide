@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.1";
+  const OG_INCLUDES_VERSION = "v0126.2";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log('[OwnershipGuide] includes.js', OG_INCLUDES_VERSION); } catch(e) {}
   // =========================
@@ -1461,6 +1461,15 @@ function buildRelatedHTML(label, links) {
         if (t === "references" || t.startsWith("references ")) return h;
         if (t.startsWith("references &")) return h;
       }
+      
+      // Fallback: <p><strong>References ...</strong></p> patterns
+      const strongs = Array.from(main.querySelectorAll("strong"));
+      for (const s of strongs) {
+        const t = (s.textContent || "").trim().toLowerCase();
+        if (t === "references" || t.startsWith("references")) {
+          return s.closest("p") || s;
+        }
+      }
       return null;
     };
 
@@ -1478,27 +1487,44 @@ function buildRelatedHTML(label, links) {
         const t = (p.textContent || "").trim().toLowerCase();
         if (t.startsWith("last updated:")) return p;
       }
+      
+      // Additional fallback: elements with class meta/muted that contain 'last updated'
+      const metas = Array.from(main.querySelectorAll(".meta, .muted"));
+      for (const el of metas) {
+        const t = (el.textContent || "").trim().toLowerCase();
+        if (t.startsWith("last updated:") || t.includes("last updated:")) return el;
+      }
       return null;
     };
 
     const refH = findReferencesHeading();
-    if (refH) {
-      refH.insertAdjacentElement("beforebegin", box);
-      return;
-    }
+if (refH) {
+  refH.insertAdjacentElement("beforebegin", box);
+  return;
+}
 
-    const lu = findLastUpdated();
-    if (lu) {
-      lu.insertAdjacentElement("beforebegin", box);
-      return;
-    }
+const lu = findLastUpdated();
+if (lu) {
+  lu.insertAdjacentElement("beforebegin", box);
+  return;
+}
 
-    // Fallback: if a related placeholder exists, place after it (still within main); else append to end.
-    if (host) {
-      host.insertAdjacentElement("afterend", box);
-    } else {
-      main.appendChild(box);
-    }
+// Robust fallback:
+// - Prefer placing near the END of the article, not near the TOP.
+// - Only use #auto-related as an anchor if it appears AFTER the page title within <main>.
+const h1 = main.querySelector("h1");
+if (host && h1) {
+  const hostAfterH1 = (h1.compareDocumentPosition(host) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0;
+  if (hostAfterH1) {
+    // Put the module right before the related placeholder (near bottom for well-formed pages).
+    host.insertAdjacentElement("beforebegin", box);
+    return;
+  }
+}
+
+// If we cannot find References/Last updated, or if #auto-related is positioned before the title,
+// just append at the end of <main> to keep "Next steps" away from the top/nav.
+main.appendChild(box);
   }
 
 
