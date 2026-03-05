@@ -1312,10 +1312,12 @@ function buildRelatedHTML(label, links) {
     // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
     // inside <main>, so it can never appear above the H1.
     try {
-      const main = document.querySelector("main.container") || document.querySelector("main") || document.querySelector(".container");
-      const h1 = main ? main.querySelector("h1") : document.querySelector("h1");
-      const cta = document.getElementById(SETTINGS.calculatorCtaId) || document.querySelector(".cta-box");
-      const anchor = (cta && main && main.contains(cta)) ? cta : h1;
+      const main = document.querySelector("main.container") || document.querySelector("main");
+      if (!main) return; // do not fall back to generic .container; prevents injecting into header wrappers
+      const h1 = main.querySelector("h1");
+      // Prefer CTA inside main (if present) so the module appears after it; otherwise after H1
+      const cta = main.querySelector(`#${SETTINGS.calculatorCtaId}`) || main.querySelector(".cta-box") || main.querySelector(".og-cta") || main.querySelector(".og-cta-card");
+      const anchor = cta || h1;
 
       if (anchor && anchor.parentNode) {
         anchor.parentNode.insertBefore(box, anchor.nextSibling);
@@ -1475,10 +1477,12 @@ const box = document.createElement("section");
     // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
     // inside <main>, so it can never appear above the H1.
     try {
-      const main = document.querySelector("main.container") || document.querySelector("main") || document.querySelector(".container");
-      const h1 = main ? main.querySelector("h1") : document.querySelector("h1");
-      const cta = document.getElementById(SETTINGS.calculatorCtaId) || document.querySelector(".cta-box");
-      const anchor = (cta && main && main.contains(cta)) ? cta : h1;
+      const main = document.querySelector("main.container") || document.querySelector("main");
+      if (!main) return; // do not fall back to generic .container; prevents injecting into header wrappers
+      const h1 = main.querySelector("h1");
+      // Prefer CTA inside main (if present) so the module appears after it; otherwise after H1
+      const cta = main.querySelector(`#${SETTINGS.calculatorCtaId}`) || main.querySelector(".cta-box") || main.querySelector(".og-cta") || main.querySelector(".og-cta-card");
+      const anchor = cta || h1;
 
       if (anchor && anchor.parentNode) {
         anchor.parentNode.insertBefore(box, anchor.nextSibling);
