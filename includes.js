@@ -1253,36 +1253,12 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Insert location: never above title. Prefer placing near the end of <main>.
-    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
-
-    const findReferencesHeading = () => {
-      const hs = Array.from(mainEl.querySelectorAll("h2, h3"));
-      return hs.find(h => {
-        const t = (h.textContent || "").trim().toLowerCase();
-        return t === "references" || t === "references & updates" || t === "references and updates";
-      }) || null;
-    };
-
-    const findLastUpdatedLine = () => {
-      // Match the canonical marker: <strong>Last updated:</strong>
-      const strongs = Array.from(mainEl.querySelectorAll("strong"));
-      const s = strongs.find(el => ((el.textContent || "").trim().toLowerCase() === "last updated:"));
-      return s ? (s.closest("p") || s.parentElement) : null;
-    };
-
-    const refHeading = findReferencesHeading();
-    const lastUpdatedLine = findLastUpdatedLine();
-
-    if (refHeading) {
-      refHeading.insertAdjacentElement("beforebegin", box);
-    } else if (lastUpdatedLine) {
-      lastUpdatedLine.insertAdjacentElement("beforebegin", box);
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Fallback: append at end of main content.
-      mainEl.appendChild(box);
+      // Append at the end of main content as a safe fallback.
+      fallbackHost.appendChild(box);
     }
-
   }
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
@@ -1472,11 +1448,34 @@ const box = document.createElement("section");
 
 `;
 
-    if (host) {
-      host.insertAdjacentElement("beforebegin", box);
+    // Insert location: never above title. Prefer placing near the end of <main>.
+    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
+
+    const findReferencesHeading = () => {
+      const hs = Array.from(mainEl.querySelectorAll("h2, h3"));
+      return hs.find(h => {
+        const t = (h.textContent || "").trim().toLowerCase();
+        return t === "references" || t === "references & updates" || t === "references and updates";
+      }) || null;
+    };
+
+    const findLastUpdatedLine = () => {
+      // Match the canonical marker: <strong>Last updated:</strong>
+      const strongs = Array.from(mainEl.querySelectorAll("strong"));
+      const s = strongs.find(el => ((el.textContent || "").trim().toLowerCase() === "last updated:"));
+      return s ? (s.closest("p") || s.parentElement) : null;
+    };
+
+    const refHeading = findReferencesHeading();
+    const lastUpdatedLine = findLastUpdatedLine();
+
+    if (refHeading) {
+      refHeading.insertAdjacentElement("beforebegin", box);
+    } else if (lastUpdatedLine) {
+      lastUpdatedLine.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
+      // Fallback: append at end of main content.
+      mainEl.appendChild(box);
     }
   }
 
