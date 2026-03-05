@@ -1,7 +1,8 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix";
+  const OG_INCLUDES_VERSION = "v0126.5-fix3";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
+
   // =========================
   // 0) SETTINGS (edit only here)
   // =========================
@@ -980,22 +981,37 @@ function buildRelatedHTML(label, links) {
     `;
   }
 
-  async function inject(id, url) {
-    // Back-compat: some pages still use older placeholder ids
-    let el = document.getElementById(id);
-    if (!el) {
-      if (id === 'site-header') el = document.getElementById('header-placeholder');
-      if (id === 'site-footer') el = document.getElementById('footer-placeholder');
-    }
-    if (!el) return;
+  async function inject(id, urlOrUrls) {
+  // Back-compat: some pages still use older placeholder ids
+  let el = document.getElementById(id);
+  if (!el) {
+    if (id === "site-header") el = document.getElementById("header-placeholder");
+    if (id === "site-footer") el = document.getElementById("footer-placeholder");
+  }
+  if (!el) {
+    console.warn("Include skipped: missing placeholder", id);
+    return;
+  }
+
+  const urls = Array.isArray(urlOrUrls) ? urlOrUrls : [urlOrUrls];
+  let lastErr = null;
+
+  for (const url of urls) {
     try {
       const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) throw new Error(String(res.status));
-      el.innerHTML = await res.text();
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      // Basic sanity: don't inject empty
+      if (!html || !html.trim()) throw new Error("Empty response");
+      el.innerHTML = html;
+      return;
     } catch (e) {
-      console.warn("Include failed:", url, e);
+      lastErr = e;
     }
   }
+
+  console.warn("Include failed:", id, urls, lastErr);
+}
 
   function addScriptToHead({ src, async = true, attrs = {} }) {
     const s = document.createElement("script");
@@ -1287,6 +1303,7 @@ function buildRelatedHTML(label, links) {
     } else {
       // Append at the end of main content as a safe fallback.
       fallbackHost.appendChild(box);
+    }
   }
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
@@ -1534,8 +1551,8 @@ const box = document.createElement("section");
   // 3) HEADER / FOOTER
   // =========================
   if (SETTINGS.enableHeaderFooter) {
-    await inject("site-header", "/header.html");
-    await inject("site-footer", "/footer.html");
+    await inject("site-header", ["/header.html", "header.html", "/ownershipguide-main/header.html"]);
+    await inject("site-footer", ["/footer.html", "footer.html", "/ownershipguide-main/footer.html"]);
     setActiveNav();
     initHeaderSearch();
     injectBackToHomeLink();
