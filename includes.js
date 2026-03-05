@@ -1449,12 +1449,59 @@ function buildRelatedHTML(label, links) {
 
 `;
 
+    // Preferred placement: near the bottom, just before References / Last updated.
+    // This keeps "Next steps" close to related content without ever appearing above the title.
+    const findReferencesHeading = () => {
+      const heads = main.querySelectorAll("h2, h3");
+      for (const h of heads) {
+        const t = (h.textContent || "").trim().toLowerCase();
+        if (t === "references" || t === "references & updates" || t === "references and updates") return h;
+      }
+      return null;
+    };
+
+    const findLastUpdated = () => {
+      // Common pattern: <p class=\"muted\"><strong>Last updated:</strong> ...</p>
+      const strongs = main.querySelectorAll("p.muted strong, p.meta strong, strong");
+      for (const s of strongs) {
+        const t = (s.textContent || "").trim().toLowerCase();
+        if (t === "last updated:" || t === "last updated") return s.closest("p") || s;
+      }
+      // Fallback: any paragraph starting with 'Last updated:'
+      const ps = main.querySelectorAll("p");
+      for (const p of ps) {
+        const t = (p.textContent || "").trim().toLowerCase();
+        if (t.startsWith("last updated:")) return p;
+      }
+      return null;
+    };
+
+    const refH = findReferencesHeading();
+    const lastU = findLastUpdated();
+
+    // Insert before the lowest-priority anchor available.
+    // Order: References heading -> Last updated -> auto-related host -> after H1 -> append.
+    if (refH) {
+      refH.insertAdjacentElement("beforebegin", box);
+      return;
+    }
+    if (lastU) {
+      lastU.insertAdjacentElement("beforebegin", box);
+      return;
+    }
     if (host) {
-      host.insertAdjacentElement("beforebegin", box);
+      // If host exists but is located very early, placing before it can float the module to the top.
+      // Prefer placing after the title instead.
+      const h1 = main.querySelector("h1");
+      if (h1) {
+        h1.insertAdjacentElement("afterend", box);
+      } else {
+        main.appendChild(box);
+      }
       return;
     }
 
-    // No related placeholder inside main: place the module in a deterministic location inside main.
+    // No anchors found: place right after the title.
     const h1 = main.querySelector("h1");
     if (h1) {
       h1.insertAdjacentElement("afterend", box);
