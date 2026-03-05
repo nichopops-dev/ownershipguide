@@ -1396,8 +1396,20 @@ const isComparisonPage = (() => {
 })();
 if (isComparisonPage) return;
 
-    const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
-    if (!allow) return;
+    const allowList = (SETTINGS.decisionPathAllowPaths || []);
+    const canonicalHref = document.querySelector('link[rel="canonical"]')?.getAttribute('href') || "";
+    let canonicalPathN = "";
+    try { canonicalPathN = norm(new URL(canonicalHref, location.origin).pathname); } catch(e) { canonicalPathN = ""; }
+
+    const allow = allowList.length === 0 || allowList.some(p => {
+      const pn = norm(p);
+      return pn === pathN || (canonicalPathN && pn === canonicalPathN);
+    });
+
+    // Failsafe: if page has a real cluster tag and an H1, we still inject even if allowList misses this path.
+    // (Prevents silent disappearance when URL rewrites differ.)
+    const hasH1 = !!document.querySelector("main h1, h1");
+    if (!allow && !hasH1) return;
 
     
 const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
