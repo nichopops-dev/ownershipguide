@@ -1253,38 +1253,36 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Prefer inserting near the end of the article (but before References / Last updated),
-    // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Insert location: never above title. Prefer placing near the end of <main>.
+    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
 
-    const findHeadingByText = (tagNames, rx) => {
-      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
-      for (const el of els) {
-        const t = (el.textContent || "").trim();
-        if (rx.test(t)) return el;
-      }
-      return null;
+    const findReferencesHeading = () => {
+      const hs = Array.from(mainEl.querySelectorAll("h2, h3"));
+      return hs.find(h => {
+        const t = (h.textContent || "").trim().toLowerCase();
+        return t === "references" || t === "references & updates" || t === "references and updates";
+      }) || null;
     };
 
-    const insertBeforeEl =
-      // 1) Before "References" (keeps References as last substantive section)
-      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
-      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
-      || (() => {
-        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
-          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
-        return candidates.length ? candidates[candidates.length - 1] : null;
-      })();
+    const findLastUpdatedLine = () => {
+      // Match the canonical marker: <strong>Last updated:</strong>
+      const strongs = Array.from(mainEl.querySelectorAll("strong"));
+      const s = strongs.find(el => ((el.textContent || "").trim().toLowerCase() === "last updated:"));
+      return s ? (s.closest("p") || s.parentElement) : null;
+    };
 
-    if (insertBeforeEl) {
-      insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (host) {
-      // If a related container exists, insert above it (legacy behavior).
-      host.insertAdjacentElement("beforebegin", box);
+    const refHeading = findReferencesHeading();
+    const lastUpdatedLine = findLastUpdatedLine();
+
+    if (refHeading) {
+      refHeading.insertAdjacentElement("beforebegin", box);
+    } else if (lastUpdatedLine) {
+      lastUpdatedLine.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
+      // Fallback: append at end of main content.
+      mainEl.appendChild(box);
     }
+
   }
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
