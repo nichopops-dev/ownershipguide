@@ -1215,15 +1215,21 @@ function buildRelatedHTML(label, links) {
   function injectCalculatorCTA() {
     if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
-
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Next steps insertion anchor:
+    // We anchor AFTER the page title inside <main> so it can never appear above the H1.
+    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
+    const h1El = mainEl ? (mainEl.querySelector("h1") || document.querySelector("h1")) : document.querySelector("h1");
+    // Prefer inserting after the first intro paragraph (immediately after H1) if it exists.
+    const introP = (() => {
+      try {
+        if (!h1El) return null;
+        let n = h1El.nextElementSibling;
+        while (n && n.tagName && n.tagName.toLowerCase() in { 'script':1, 'style':1 }) n = n.nextElementSibling;
+        return (n && n.tagName && n.tagName.toLowerCase() === 'p') ? n : null;
+      } catch (e) { return null; }
+    })();
+    const insertAfterEl = introP || h1El;
+    const fallbackHost = mainEl;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.calculatorCtaId)) return;
@@ -1253,36 +1259,15 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Prefer inserting near the end of the article (but before References / Last updated),
-    // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
-
-    const findHeadingByText = (tagNames, rx) => {
-      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
-      for (const el of els) {
-        const t = (el.textContent || "").trim();
-        if (rx.test(t)) return el;
+    // Insert after title (or intro paragraph) so it never appears above the H1.
+    try {
+      if (insertAfterEl && insertAfterEl.parentNode) {
+        insertAfterEl.parentNode.insertBefore(box, insertAfterEl.nextSibling);
+      } else {
+        // Fallback: append at end of main content.
+        fallbackHost.appendChild(box);
       }
-      return null;
-    };
-
-    const insertBeforeEl =
-      // 1) Before "References" (keeps References as last substantive section)
-      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
-      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
-      || (() => {
-        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
-          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
-        return candidates.length ? candidates[candidates.length - 1] : null;
-      })();
-
-    if (insertBeforeEl) {
-      insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (host) {
-      // If a related container exists, insert above it (legacy behavior).
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
+    } catch (e) {
       fallbackHost.appendChild(box);
     }
   }
@@ -1324,23 +1309,23 @@ function buildRelatedHTML(label, links) {
       </p>
     `;
 
-    const main = getMainContainer()
-      || document.querySelector("main")
-      || document.querySelector(".container");
+    // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
+    // inside <main>, so it can never appear above the H1.
+    try {
+      const main = document.querySelector("main.container") || document.querySelector("main") || document.querySelector(".container");
+      const h1 = main ? main.querySelector("h1") : document.querySelector("h1");
+      const cta = document.getElementById(SETTINGS.calculatorCtaId) || document.querySelector(".cta-box");
+      const anchor = (cta && main && main.contains(cta)) ? cta : h1;
 
-    // Place "Next steps" AFTER the page title so it can never appear above the H1.
-    const h1 = main ? main.querySelector("h1") : null;
-
-    if (h1) {
-      h1.insertAdjacentElement("afterend", box);
-    } else if (main) {
-      // If we cannot find a title, keep it near the top of the main content (still below header).
-      main.prepend(box);
-    } else if (host) {
-      // Legacy fallback
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
+      if (anchor && anchor.parentNode) {
+        anchor.parentNode.insertBefore(box, anchor.nextSibling);
+      } else if (main) {
+        // Fallback: keep it inside main, below header/nav.
+        main.insertBefore(box, main.firstChild);
+      } else {
+        fallbackHost.appendChild(box);
+      }
+    } catch (e) {
       fallbackHost.appendChild(box);
     }
   }
@@ -1487,10 +1472,23 @@ const box = document.createElement("section");
 
 `;
 
-    if (host) {
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
+    // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
+    // inside <main>, so it can never appear above the H1.
+    try {
+      const main = document.querySelector("main.container") || document.querySelector("main") || document.querySelector(".container");
+      const h1 = main ? main.querySelector("h1") : document.querySelector("h1");
+      const cta = document.getElementById(SETTINGS.calculatorCtaId) || document.querySelector(".cta-box");
+      const anchor = (cta && main && main.contains(cta)) ? cta : h1;
+
+      if (anchor && anchor.parentNode) {
+        anchor.parentNode.insertBefore(box, anchor.nextSibling);
+      } else if (main) {
+        // Fallback: keep it inside main, below header/nav.
+        main.insertBefore(box, main.firstChild);
+      } else {
+        fallbackHost.appendChild(box);
+      }
+    } catch (e) {
       fallbackHost.appendChild(box);
     }
   }
