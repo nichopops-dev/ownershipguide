@@ -1,4 +1,8 @@
 (async function () {
+  const OG_INCLUDES_VERSION = "v0126.4";
+  try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
+  try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
+
   // =========================
   // 0) SETTINGS (edit only here)
   // =========================
@@ -1335,15 +1339,17 @@ function buildRelatedHTML(label, links) {
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+        const root = getMainContainer() || document.querySelector("main.container") || document.querySelector("main");
+    if (!root) return;
 
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Anchor ONLY within the main article container (never header/footer containers).
+    const host = root.querySelector("#" + SETTINGS.relatedContainerId)
+      || root.querySelector(".related-box")
+      || root.querySelector("[data-related]")
+      || root.querySelector("section.related")
+      || root.querySelector(".og-related");
+
+    const fallbackHost = root;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
@@ -1475,12 +1481,8 @@ const box = document.createElement("section");
 `;
 
 
-    // Prefer inserting near the end of the article (but before References / Last updated),
-    // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main.container") || document.querySelector("main");
-
+        // Prefer placing near the end of the article: before References, else before Last updated, else before auto-related, else end of article.
     const findHeadingByText = (tagNames, rx) => {
-      const root = main || document;
       const els = Array.from(root.querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
@@ -1489,12 +1491,9 @@ const box = document.createElement("section");
       return null;
     };
 
-    // 1) Prefer inserting before a real "References" heading.
-    //    Covers: <h2>References</h2>, <h2>References & updates</h2>, and inline strong labels like "References (where applicable):"
     const referencesAnchor =
       findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
       || (() => {
-        const root = main || document;
         const strongs = Array.from(root.querySelectorAll("strong"));
         for (const st of strongs) {
           const t = (st.textContent || "").trim();
@@ -1503,26 +1502,22 @@ const box = document.createElement("section");
         return null;
       })();
 
-    // 2) Otherwise, insert before the *last* standalone "Last updated" marker (so it stays last).
     const lastUpdatedAnchor = (() => {
-      const root = main || document;
       const candidates = Array.from(root.querySelectorAll("p,div,section"))
         .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
       return candidates.length ? candidates[candidates.length - 1] : null;
     })();
 
-    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor;
+    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor || (host && root.contains(host) ? host : null);
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (main && host && main.contains(host)) {
-      // If a related container exists inside main, insert above it (legacy fallback).
-      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at the end of main content as a safe fallback.
-      (main || fallbackHost).appendChild(box);
+      fallbackHost.appendChild(box);
     }
+
   }
+
 
 
 
