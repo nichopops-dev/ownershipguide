@@ -798,22 +798,63 @@ decisionPathOverrides: {
 
     return "";
   }
+// Prefer the "main" content container (avoid header/footer containers).
+function getMainContainer() {
+  // Common layout: #site-header then .container for page content
+  const direct = document.querySelector("#site-header + .container");
+  if (direct) return direct;
 
+  const containers = Array.from(document.querySelectorAll(".container"));
+  if (!containers.length) return null;
 
-  // Prefer the "main" content container (avoid header/footer containers).
-  function getMainContainer() {
-    // Common layout: #site-header then .container for page content
-    const direct = document.querySelector("#site-header + .container");
-    if (direct) return direct;
+  // Prefer a container not nested inside header/footer includes
+  for (const c of containers) {
+    if (c.closest("#site-header") || c.closest("#site-footer")) continue;
+    return c;
+  }
+  // Fallback: last container in DOM
+  return containers[containers.length - 1];
+}
 
-    const containers = Array.from(document.querySelectorAll(".container"));
-    if (!containers.length) return null;
+// Article root used for module injection. This avoids accidentally anchoring into header/footer containers.
+function getArticleRoot() {
+  return document.querySelector("main") || getMainContainer() || document.body;
+}
 
-    // Prefer a container not nested inside header/footer includes
-    for (const c of containers) {
-      if (c.closest("#site-header") || c.closest("#site-footer")) continue;
-      return c;
+function findLastUpdatedBlock(root) {
+  if (!root) return null;
+  // Standard marker: <p class="muted"><strong>Last updated:</strong> ...</p>
+  const strongs = Array.from(root.querySelectorAll("strong"));
+  for (const s of strongs) {
+    const t = (s.textContent || "").trim().toLowerCase();
+    if (t === "last updated:" || t === "last updated") {
+      const p = s.closest("p");
+      if (p) return p;
     }
+  }
+  // Fallback: any paragraph starting with "Last updated:"
+  const ps = Array.from(root.querySelectorAll("p"));
+  for (const p of ps) {
+    const t = (p.textContent || "").trim();
+    if (/^last\s+updated\s*:/i.test(t)) return p;
+  }
+  return null;
+}
+
+function findReferencesHeading(root) {
+  if (!root) return null;
+  const heads = Array.from(root.querySelectorAll("h2, h3, h4"));
+  for (const h of heads) {
+    const t = (h.textContent || "").trim().toLowerCase();
+    if (t === "references" || t.startsWith("references ") || t.startsWith("references&") || t.startsWith("references:") || t.startsWith("references (") || t.startsWith("references &")) {
+      return h;
+    }
+    if (t.startsWith("references & updates") || t.startsWith("references and updates")) return h;
+  }
+  // Id-based fallbacks
+  return root.querySelector("#references, [data-section='references']");
+}
+
     // Fallback: last container in DOM
     return containers[containers.length - 1];
   }
@@ -1213,145 +1254,245 @@ function buildRelatedHTML(label, links) {
   }
 
   function injectCalculatorCTA() {
-    if (!SETTINGS.enableAutoCalculatorCTA) return;
+  if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+  // Avoid double-inserting
+  if (document.getElementById(SETTINGS.calculatorCtaId)) return;
 
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+  const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+  const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+  if (cluster !== "transport") return;
+  if (subtopic === "calculator") return;
 
-    // Avoid double-inserting
-    if (document.getElementById(SETTINGS.calculatorCtaId)) return;
+  const wantRide = subtopic === "ridehailing";
+  const url = wantRide
+    ? "/car-vs-ride-hailing-calculator.html"
+    : "/car-affordability-calculator-singapore.html";
+  const title = wantRide
+    ? "Run the Car vs Ride-Hailing Break-Even Calculator"
+    : "Run the Car Affordability Stress Test Calculator";
+  const desc = wantRide
+    ? "Enter your monthly ride-hailing spend and see your personal break-even point versus ownership."
+    : "Stress-test your true monthly car cost (not just instalment) and see if it fits your income.";
 
-    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
-    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
-    if (cluster !== "transport") return;
-    if (subtopic === "calculator") return;
+  const box = document.createElement("div");
+  box.className = "cta-box";
+  box.id = SETTINGS.calculatorCtaId;
+  box.innerHTML = `
+    <h3>${escapeHtml(title)}</h3>
+    <p>${escapeHtml(desc)}</p>
+    <p><a class="cta-button" href="${url}">Open calculator →</a></p>
+  `;
 
-    const wantRide = subtopic === "ridehailing";
-    const url = wantRide
-      ? "/car-vs-ride-hailing-calculator.html"
-      : "/car-affordability-calculator-singapore.html";
-    const title = wantRide
-      ? "Run the Car vs Ride-Hailing Break-Even Calculator"
-      : "Run the Car Affordability Stress Test Calculator";
-    const desc = wantRide
-      ? "Enter your monthly ride-hailing spend and see your personal break-even point versus ownership."
-      : "Stress-test your true monthly car cost (not just instalment) and see if it fits your income.";
+  // Intentional: "top-ish" CTA on eligible pages, but always inside the article body (never in header).
+  const root = getArticleRoot();
+  const h1 = root ? root.querySelector("h1") : document.querySelector("h1");
+  const introP = h1 && h1.nextElementSibling && h1.nextElementSibling.tagName === "P" ? h1.nextElementSibling : null;
 
-    const box = document.createElement("div");
-    box.className = "cta-box";
-    box.id = SETTINGS.calculatorCtaId;
-    box.innerHTML = `
-      <h3>${escapeHtml(title)}</h3>
-      <p>${escapeHtml(desc)}</p>
-      <p><a class="cta-button" href="${url}">Open calculator →</a></p>
-    `;
+  if (introP) {
+    introP.insertAdjacentElement("afterend", box);
+  } else if (h1) {
+    h1.insertAdjacentElement("afterend", box);
+  } else if (root) {
+    root.prepend(box);
+  } else {
+    document.body.prepend(box);
+  }
+}
 
-    if (host) {
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
-    }
   }
   function injectPropertyCTA() {
-    if (!SETTINGS.enableAutoPropertyCTA) return;
+  if (!SETTINGS.enableAutoPropertyCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+  // Avoid double-inserting
+  if (document.getElementById(SETTINGS.propertyCtaId)) return;
 
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+  const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+  const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+  if (cluster !== "property") return;
+  if (subtopic === "calculator") return;
 
-    // Avoid double-inserting
-    if (document.getElementById(SETTINGS.propertyCtaId)) return;
+  const url = "/property-affordability-calculator-singapore.html";
+  const title = "Run the Property Affordability Stress Test";
+  const desc = "Model borrowing limits (TDSR/MSR), instalment sensitivity, and upfront cash exposure in one place.";
 
-    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
-    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
-    if (cluster !== "property") return;
-    if (subtopic === "calculator") return;
+  const box = document.createElement("div");
+  box.className = "cta-box";
+  box.id = SETTINGS.propertyCtaId;
+  box.innerHTML = `
+    <h3>${escapeHtml(title)}</h3>
+    <p>${escapeHtml(desc)}</p>
+    <p><a class="cta-button" href="${url}">Open calculator →</a></p>
+    <p class="muted" style="margin-top:10px;">
+      Key mechanics: <a href="/cpf-accrued-interest-singapore.html">CPF accrued interest</a> ·
+      <a href="/sell-property-cost-singapore.html">Selling costs</a>
+    </p>
+  `;
 
-    const url = "/property-affordability-calculator-singapore.html";
-    const title = "Run the Property Affordability Stress Test";
-    const desc = "Model borrowing limits (TDSR/MSR), instalment sensitivity, and upfront cash exposure in one place.";
+  // Intentional: "top-ish" CTA on eligible pages, but always inside the article body (never in header).
+  const root = getArticleRoot();
+  const h1 = root ? root.querySelector("h1") : document.querySelector("h1");
+  const introP = h1 && h1.nextElementSibling && h1.nextElementSibling.tagName === "P" ? h1.nextElementSibling : null;
 
-    const box = document.createElement("div");
-    box.className = "cta-box";
-    box.id = SETTINGS.propertyCtaId;
-    box.innerHTML = `
-      <h3>${escapeHtml(title)}</h3>
-      <p>${escapeHtml(desc)}</p>
-      <p><a class="cta-button" href="${url}">Open calculator →</a></p>
-      <p class="muted" style="margin-top:10px;">
-        Key mechanics: <a href="/cpf-accrued-interest-singapore.html">CPF accrued interest</a> ·
-        <a href="/sell-property-cost-singapore.html">Selling costs</a>
-      </p>
-    `;
+  if (introP) {
+    introP.insertAdjacentElement("afterend", box);
+  } else if (h1) {
+    h1.insertAdjacentElement("afterend", box);
+  } else if (root) {
+    root.prepend(box);
+  } else {
+    document.body.prepend(box);
+  }
+}
 
-    if (host) {
-      host.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Append at the end of main content as a safe fallback.
-      fallbackHost.appendChild(box);
-    }
   }
 
   function injectDecisionPathModule() {
-    if (!SETTINGS.enableDecisionPathModule) return;
+  if (!SETTINGS.enableDecisionPathModule) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+  // Avoid double-inserting
+  if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
 
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+  const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
+  const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
+  if (!cluster) return;
 
-    // Avoid double-inserting
-    if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
+  // Keep this module for "pillar/explainer" articles only
+  if (subtopic === "calculator" || subtopic === "comparison") return;
 
-    const cluster = (getMetaAny("og:cluster") || "").toLowerCase();
-    const subtopic = (getMetaAny("og:subtopic") || "").toLowerCase();
-    if (!cluster) return;
+  const rawPath = (location.pathname || "/");
+  const norm = (s) => (s || "/")
+    .trim()
+    .replace(/\/+$/, "")
+    .replace(/\.html$/i, "");
+  const pathN = norm(rawPath);
 
-    // Keep this module for "pillar/explainer" articles only
-    if (subtopic === "calculator" || subtopic === "comparison") return;
+  // Do not inject on comparison pages (they already have their own next-step modules)
+  const isComparisonPage = (() => {
+    try {
+      if (rawPath.startsWith("/comparisons")) return true;
+      const metaEl = document.querySelector(".meta");
+      if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
 
-    const rawPath = (location.pathname || "/");
-    const norm = (s) => (s || "/")
-      .trim()
-      .replace(/\/+$/, "")
-      .replace(/\.html$/i, "");
-    const pathN = norm(rawPath);
+      // Check against configured comparison URLs
+      const urls = [];
+      const walk = (node) => {
+        if (!node) return;
+        if (Array.isArray(node)) { node.forEach(walk); return; }
+        if (typeof node === "object") {
+          if (typeof node.url === "string") urls.push(node.url);
+          for (const k in node) walk(node[k]);
+        }
+      };
+      if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
+      const cmpSet = new Set(urls.map(u => norm(u)));
+      return cmpSet.has(pathN);
+    } catch (e) {
+      return false;
+    }
+  })();
+  if (isComparisonPage) return;
 
-// Do not inject on comparison pages (they already have their own next-step modules)
-const isComparisonPage = (() => {
-  try {
-    if (rawPath.startsWith("/comparisons")) return true;
-    const metaEl = document.querySelector(".meta");
-    if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
+  const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
+  if (!allow) return;
 
-    // Check against configured comparison URLs
-    const urls = [];
-    const walk = (node) => {
-      if (!node) return;
-      if (Array.isArray(node)) { node.forEach(walk); return; }
-      if (typeof node === "object") {
-        if (typeof node.url === "string") urls.push(node.url);
-        for (const k in node) walk(node[k]);
-      }
+  const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
+
+  const runPrimary = (override && override.runPrimary)
+    ? override.runPrimary
+    : (cluster === "property"
+      ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
+      : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
+
+  const runSecondary = (override && override.runSecondary)
+    ? override.runSecondary
+    : (cluster === "property"
+      ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+      : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
+
+  const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
+
+  const compareCfg = (preset && preset.compare) ? preset.compare : null;
+  const financingDefault = (() => {
+    const p = pathN;
+    const isProp = (cluster === "property");
+    const isTrans = (cluster === "transport");
+    if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
+      return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
+    }
+    if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
+      return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
+    }
+    return null;
+  })();
+
+  const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
+  const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
+  const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
+
+  const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
+  const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
+  const relatedHtml = (relatedLinks && relatedLinks.length)
+    ? `<div class="og-nextsteps-related">
+        <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
+        <div class="og-nextsteps-related-links">
+          ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
+        </div>
+      </div>`
+    : "";
+
+  const box = document.createElement("section");
+  box.className = "og-section";
+  box.id = SETTINGS.decisionPathModuleId;
+
+  box.innerHTML = `
+    <h2>Next steps</h2>
+    <p class="muted" style="margin-top:-8px;">Use the decision path: choose the right model → run the numbers → learn the mechanics.</p>
+
+    <div class="og-card-grid three og-nextsteps-grid" style="margin-top:14px;">
+      <a class="og-card og-next-card" href="/start-here/">
+        <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.5 9.5l-2 6-6 2 2-6 6-2z"/></svg></span><span>Start here (10 min)</span></div>
+        <div class="og-card-meta">Recommended path</div>
+      </a>
+
+      <a class="og-card og-next-card" href="${compareHref}">
+        <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 7h12"/><path d="M7 7l-4 7h8l-4-7z"/><path d="M21 14h-8l4-7 4 7z"/><path d="M6 21h12"/></svg></span><span>${escapeHtml(compareLabel)}</span></div>
+        <div class="og-card-meta">${escapeHtml(compareMeta)}</div>
+      </a>
+
+      <div class="og-card og-next-card">
+        <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M8 7h8"/><path d="M9 11h1"/><path d="M13 11h1"/><path d="M9 14h1"/><path d="M13 14h1"/><path d="M9 17h1"/><path d="M13 17h1"/></svg></span><span>Run the numbers</span></div>
+        <div class="og-card-meta">Use a calculator (2 min)</div>
+        <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} → <span class="og-pill">Recommended</span></a>
+        <div class="og-card-links">
+          <a href="${runSecondary.url}">${escapeHtml(runSecondary.title)}</a>
+          <span class="muted"> · </span>
+          <a href="/calculators/">All calculators</a>
+        </div>
+      </div>
+    </div>
+
+    ${relatedHtml}
+    <hr style="margin-top:22px;">
+  `;
+
+  // Placement: keep it inside article body, and keep References last.
+  const root = getArticleRoot();
+  const refH = findReferencesHeading(root);
+  const lastUpd = findLastUpdatedBlock(root);
+
+  if (refH) {
+    refH.insertAdjacentElement("beforebegin", box);
+  } else if (lastUpd) {
+    lastUpd.insertAdjacentElement("beforebegin", box);
+  } else if (root) {
+    root.appendChild(box);
+  } else {
+    // last-resort fallback
+    (document.querySelector("main") || document.body).appendChild(box);
+  }
+}
+
     };
     if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
     const cmpSet = new Set(urls.map(u => norm(u)));
@@ -1448,24 +1589,12 @@ const box = document.createElement("section");
 
 `;
 
-    
-    // Insert AFTER the page title (and intro paragraph if present),
-    // so it never appears above the H1/back-links.
-    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
-    const h1 = mainEl ? mainEl.querySelector("h1") : document.querySelector("h1");
-    const introP = h1 ? (h1.nextElementSibling && h1.nextElementSibling.tagName === "P" ? h1.nextElementSibling : null) : null;
-
-    if (introP) {
-      introP.insertAdjacentElement("afterend", box);
-    } else if (h1) {
-      h1.insertAdjacentElement("afterend", box);
-    } else if (mainEl) {
-      mainEl.appendChild(box);
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Last-resort fallback
+      // Append at the end of main content as a safe fallback.
       fallbackHost.appendChild(box);
     }
-
   }
 
 
