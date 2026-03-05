@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix3";
+  const OG_INCLUDES_VERSION = "v0126.5-fix4";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -1534,9 +1534,6 @@ const box = document.createElement("section");
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
-    } else if (main && host && main.contains(host)) {
-      // If a related container exists inside main, insert above it (legacy fallback).
-      host.insertAdjacentElement("beforebegin", box);
     } else {
       // Append at the end of main content as a safe fallback.
       (main || fallbackHost).appendChild(box);
