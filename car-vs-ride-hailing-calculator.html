@@ -1,23 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Car vs Ride-Hailing Break-Even Calculator (Singapore, 2026)</title>
-  <meta name="description" content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Choose a transparent benchmark profile and see what shifts the result (COE, holding period, financing, insurance)." />
-  <link rel="canonical" href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html">
-
-  <meta name="robots" content="index,follow">
-
-  <!-- Auto-related accuracy tags -->
-  <meta property="og:cluster" content="transport">
-  <meta property="og:subtopic" content="calculator">
-
-  <link rel="stylesheet" href="/styles.css">
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Car vs Ride-Hailing Break-Even Calculator (Singapore, 2026)</title>
+<meta content="Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Choose a transparent benchmark profile and see what shifts the result (COE, holding period, financing, insurance)." name="description">
+<link href="https://ownershipguide.com/car-vs-ride-hailing-calculator.html" rel="canonical"/>
+<meta content="index,follow" name="robots"/>
+<!-- Auto-related accuracy tags -->
+<meta content="transport" property="og:cluster"/>
+<meta content="calculator" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
+<!-- FAQ Schema -->
+<script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
@@ -57,235 +53,183 @@
     ]
   }
   </script>
-</head>
-
+</meta></head>
 <body>
-
-  <div id="site-header"></div>
-
-  <main class="container">
-
-    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-
-    <h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
-
-    <p class="meta"></p>
-
-    <p>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<h1>Car vs Ride-Hailing Break-Even Calculator (Singapore)</h1>
+<p class="meta"></p>
+<p>
       This calculator estimates whether owning a car or relying on ride-hailing is financially cheaper over a
       <strong>5-year</strong> period in Singapore.
       It compares your ride-hailing spend against a transparent <strong>benchmark ownership model</strong>.
     </p>
-
-    <div class="box">
-      <p><strong>How to use this properly</strong></p>
-      <ul>
-        <li><strong>Use your real average</strong> from the last 8–12 weeks (Grab/Gojek + taxis).</li>
-        <li><strong>Pick a benchmark profile</strong> that matches your likely ownership exposure.</li>
-        <li><strong>Don’t use instalments</strong> as “car cost”. Instalments are a payment method, not the economic cost.</li>
-        <li>If you are in the <strong>grey zone</strong>, use the deeper models linked below before deciding.</li>
-      </ul>
-    </div>
-
-    <hr>
-
-    <h2>Jump to What You Need</h2>
-    <ul>
-      <li><a href="#calc">1) Run the calculator</a></li>
-      <li><a href="#benchmark">2) Benchmark breakdown (5 years)</a></li>
-      <li><a href="#moves">3) Why your break-even shifts</a></li>
-      <li><a href="#next">4) What to do after you get a result</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
-
-    <hr>
-
-    <h2 id="calc">1) Run the Calculator</h2>
-
-    <div class="box">
-      <p><strong>Choose a benchmark profile</strong></p>
-      <div class="btn-row">
-        <select id="benchmarkSelect" aria-label="Benchmark profile">
-          <option value="disciplined">Disciplined ownership (lower exposure)</option>
-          <option value="typical" selected>Typical ownership (benchmark)</option>
-          <option value="higher">Higher exposure (higher COE / higher cost profile)</option>
-        </select>
-      </div>
-      <p class="muted">
+<div class="box">
+<p><strong>How to use this properly</strong></p>
+<ul>
+<li><strong>Use your real average</strong> from the last 8–12 weeks (Grab/Gojek + taxis).</li>
+<li><strong>Pick a benchmark profile</strong> that matches your likely ownership exposure.</li>
+<li><strong>Don’t use instalments</strong> as “car cost”. Instalments are a payment method, not the economic cost.</li>
+<li>If you are in the <strong>grey zone</strong>, use the deeper models linked below before deciding.</li>
+</ul>
+</div>
+<hr/>
+<h2>Jump to What You Need</h2>
+<ul>
+<li><a href="#calc">1) Run the calculator</a></li>
+<li><a href="#benchmark">2) Benchmark breakdown (5 years)</a></li>
+<li><a href="#moves">3) Why your break-even shifts</a></li>
+<li><a href="#next">4) What to do after you get a result</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">1) Run the Calculator</h2>
+<div class="box">
+<p><strong>Choose a benchmark profile</strong></p>
+<div class="btn-row">
+<select aria-label="Benchmark profile" id="benchmarkSelect">
+<option value="disciplined">Disciplined ownership (lower exposure)</option>
+<option selected="" value="typical">Typical ownership (benchmark)</option>
+<option value="higher">Higher exposure (higher COE / higher cost profile)</option>
+</select>
+</div>
+<p class="muted">
         This does not predict your exact cost. It gives you a clean decision anchor.
         If you are unsure, start with <strong>Typical</strong>.
       </p>
-    </div>
-
-    <div class="box">
-      <p><strong>Enter your monthly ride-hailing spend</strong></p>
-      <div class="btn-row">
-        <input
-          id="monthlySpend"
-          type="number"
-          inputmode="numeric"
-          min="0"
-          step="50"
-          placeholder="e.g. 1200"
-          autocomplete="off"
-        >
-        <button id="calcBtn" type="button">Calculate</button>
-      </div>
-      <p class="muted">Tip: If your spend fluctuates, use an average. If multiple family members use ride-hailing, use combined spend.</p>
-    </div>
-
-    <div class="box" id="resultBox">
-      <h3>Your 5-Year Comparison</h3>
-      <p><span id="verdictBadge" class="badge borderline">—</span></p>
-
-      <p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
-      <p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$—</span></p>
-      <p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
-      <p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
-
-      <p id="verdict" class="muted" aria-live="polite">Pick a benchmark, enter a number and click “Calculate”.</p>
-
-      <p class="muted" id="greyNote">
+</div>
+<div class="box">
+<p><strong>Enter your monthly ride-hailing spend</strong></p>
+<div class="btn-row">
+<input autocomplete="off" id="monthlySpend" inputmode="numeric" min="0" placeholder="e.g. 1200" step="50" type="number"/>
+<button id="calcBtn" type="button">Calculate</button>
+</div>
+<p class="muted">Tip: If your spend fluctuates, use an average. If multiple family members use ride-hailing, use combined spend.</p>
+</div>
+<div class="box" id="resultBox">
+<h3>Your 5-Year Comparison</h3>
+<p><span class="badge borderline" id="verdictBadge">—</span></p>
+<p><strong>5-Year Ride-Hailing Cost:</strong> <span id="rideCost">$—</span></p>
+<p><strong>5-Year Car Ownership Cost (Benchmark):</strong> <span id="benchmarkCost">$—</span></p>
+<p><strong>Difference (Ride-hailing − Car):</strong> <span id="diff">$—</span></p>
+<p><strong>Break-even monthly ride-hailing spend:</strong> <span id="breakeven">$—</span></p>
+<p aria-live="polite" class="muted" id="verdict">Pick a benchmark, enter a number and click “Calculate”.</p>
+<p class="muted" id="greyNote">
         If you are near break-even, don’t treat this like a “yes/no” button.
         Timing (COE cycle), holding period, and liquidity stress matter.
       </p>
-    </div>
-
-    <hr>
-
-    <h2 id="benchmark">2) Benchmark Breakdown (5 Years)</h2>
-
-    <p class="muted">
+</div>
+<hr/>
+<h2 id="benchmark">2) Benchmark Breakdown (5 Years)</h2>
+<p class="muted">
       This is a planning benchmark to anchor the decision. Your real ownership cost can be lower or higher depending on COE level,
       car profile, financing, insurance, mileage, and holding period.
     </p>
-
-    <table>
-      <tr>
-        <th>Component</th>
-        <th>5-Year Estimate (SGD)</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Depreciation + COE</td>
-        <td id="bDep">$—</td>
-        <td>Vehicle value loss and COE decay across the ownership horizon</td>
-      </tr>
-      <tr>
-        <td>Insurance + Road Tax</td>
-        <td id="bIns">$—</td>
-        <td>Typical premiums and road tax over 5 years (profile-dependent)</td>
-      </tr>
-      <tr>
-        <td>Maintenance + Repairs</td>
-        <td id="bMaint">$—</td>
-        <td>Servicing, tyres, wear-and-tear (volatility risk exists)</td>
-      </tr>
-      <tr>
-        <td>Fuel</td>
-        <td id="bFuel">$—</td>
-        <td>Moderate driving profile</td>
-      </tr>
-      <tr>
-        <td>Parking + ERP</td>
-        <td id="bPark">$—</td>
-        <td>Season parking + common ERP/usage assumptions</td>
-      </tr>
-      <tr>
-        <td>Opportunity Cost</td>
-        <td id="bOpp">$—</td>
-        <td>Conservative cost of tied-up upfront capital</td>
-      </tr>
-      <tr>
-        <td><strong>Total</strong></td>
-        <td id="bTotal"><strong>$—</strong></td>
-        <td><strong>Benchmark used for break-even</strong></td>
-      </tr>
-    </table>
-
-    <hr>
-
-    <h2 id="moves">3) Why Your Break-Even Shifts (Read This If You’re Close)</h2>
-
-    <ul>
-      <li><strong>COE cycle:</strong> higher COE usually increases depreciation exposure. See <a href="/coe-cost-singapore.html">COE cost explained</a>.</li>
-      <li><strong>Holding period:</strong> short holding periods are more timing-sensitive. See <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now vs wait</a>.</li>
-      <li><strong>Financing:</strong> interest drag can be bigger than expected (flat rate ≠ true cost). See <a href="/car-loan-rates-singapore.html">car loan rates</a>.</li>
-      <li><strong>Insurance profile:</strong> age/claims/model risk can materially shift cost. See <a href="/car-insurance-cost-singapore.html">insurance cost</a>.</li>
-      <li><strong>Used vs new:</strong> depreciation vs volatility trade. See <a href="/used-car-vs-new-car-singapore.html">used vs new</a>.</li>
-    </ul>
-
-    <hr>
-
-    <h2 id="next">4) What To Do After You Get a Result</h2>
-
-    <div class="box">
-      <p><strong>If ride-hailing is clearly cheaper:</strong></p>
-      <ul>
-        <li>Keep ride-hailing, but track spend monthly so you don’t drift into “car money”.</li>
-        <li>Use the decision framework: <a href="/is-it-worth-owning-a-car-singapore.html">Is it worth owning a car?</a></li>
-      </ul>
-
-      <p><strong>If ownership looks cheaper:</strong></p>
-      <ul>
-        <li>Sanity-check monthly realism: <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly cost model</a>.</li>
-        <li>Confirm affordability: <a href="/how-much-salary-to-own-a-car-singapore.html">salary reality check</a>.</li>
-        <li>If timing-sensitive: <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now or wait</a>.</li>
-      </ul>
-
-      <p><strong>If you’re close to break-even (grey zone):</strong></p>
-      <ul>
-        <li>Don’t decide on price alone — decide on <strong>logistics certainty</strong> + <strong>liquidity stress</strong>.</li>
-        <li>Consider alternatives: <a href="/car-leasing-vs-buying-singapore.html">leasing vs buying</a>.</li>
-      </ul>
-    </div>
-
-    <hr>
-
-    <h2 id="faq">FAQ</h2>
-
-    <h3>What does this calculator compare?</h3>
-    <p>
+<table>
+<tr>
+<th>Component</th>
+<th>5-Year Estimate (SGD)</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>Depreciation + COE</td>
+<td id="bDep">$—</td>
+<td>Vehicle value loss and COE decay across the ownership horizon</td>
+</tr>
+<tr>
+<td>Insurance + Road Tax</td>
+<td id="bIns">$—</td>
+<td>Typical premiums and road tax over 5 years (profile-dependent)</td>
+</tr>
+<tr>
+<td>Maintenance + Repairs</td>
+<td id="bMaint">$—</td>
+<td>Servicing, tyres, wear-and-tear (volatility risk exists)</td>
+</tr>
+<tr>
+<td>Fuel</td>
+<td id="bFuel">$—</td>
+<td>Moderate driving profile</td>
+</tr>
+<tr>
+<td>Parking + ERP</td>
+<td id="bPark">$—</td>
+<td>Season parking + common ERP/usage assumptions</td>
+</tr>
+<tr>
+<td>Opportunity Cost</td>
+<td id="bOpp">$—</td>
+<td>Conservative cost of tied-up upfront capital</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td id="bTotal"><strong>$—</strong></td>
+<td><strong>Benchmark used for break-even</strong></td>
+</tr>
+</table>
+<hr/>
+<h2 id="moves">3) Why Your Break-Even Shifts (Read This If You’re Close)</h2>
+<ul>
+<li><strong>COE cycle:</strong> higher COE usually increases depreciation exposure. See <a href="/coe-cost-singapore.html">COE cost explained</a>.</li>
+<li><strong>Holding period:</strong> short holding periods are more timing-sensitive. See <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now vs wait</a>.</li>
+<li><strong>Financing:</strong> interest drag can be bigger than expected (flat rate ≠ true cost). See <a href="/car-loan-rates-singapore.html">car loan rates</a>.</li>
+<li><strong>Insurance profile:</strong> age/claims/model risk can materially shift cost. See <a href="/car-insurance-cost-singapore.html">insurance cost</a>.</li>
+<li><strong>Used vs new:</strong> depreciation vs volatility trade. See <a href="/used-car-vs-new-car-singapore.html">used vs new</a>.</li>
+</ul>
+<hr/>
+<h2 id="next">4) What To Do After You Get a Result</h2>
+<div class="box">
+<p><strong>If ride-hailing is clearly cheaper:</strong></p>
+<ul>
+<li>Keep ride-hailing, but track spend monthly so you don’t drift into “car money”.</li>
+<li>Use the decision framework: <a href="/is-it-worth-owning-a-car-singapore.html">Is it worth owning a car?</a></li>
+</ul>
+<p><strong>If ownership looks cheaper:</strong></p>
+<ul>
+<li>Sanity-check monthly realism: <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly cost model</a>.</li>
+<li>Confirm affordability: <a href="/how-much-salary-to-own-a-car-singapore.html">salary reality check</a>.</li>
+<li>If timing-sensitive: <a href="/should-i-buy-car-now-or-wait-singapore.html">buy now or wait</a>.</li>
+</ul>
+<p><strong>If you’re close to break-even (grey zone):</strong></p>
+<ul>
+<li>Don’t decide on price alone — decide on <strong>logistics certainty</strong> + <strong>liquidity stress</strong>.</li>
+<li>Consider alternatives: <a href="/car-leasing-vs-buying-singapore.html">leasing vs buying</a>.</li>
+</ul>
+</div>
+<hr/>
+<h2 id="faq">FAQ</h2>
+<h3>What does this calculator compare?</h3>
+<p>
       It compares your 5-year ride-hailing spend (monthly spend × 60) against a 5-year benchmark ownership model.
       The benchmark is a planning reference, not a quote.
     </p>
-
-    <h3>What is the break-even monthly ride-hailing spend?</h3>
-    <p>
+<h3>What is the break-even monthly ride-hailing spend?</h3>
+<p>
       Break-even equals benchmark ÷ 60 months. The benchmark you select changes the break-even.
       Your real break-even can shift with COE cycle, car profile, financing, insurance and holding period.
     </p>
-
-    <h3>Why isn’t the car loan instalment the true monthly cost?</h3>
-    <p>
+<h3>Why isn’t the car loan instalment the true monthly cost?</h3>
+<p>
       Instalments are a payment method. True monthly cost includes depreciation (COE embedded), insurance, fuel,
       maintenance, parking/ERP, opportunity cost of capital, and loan interest if financed.
     </p>
-
-    <hr>
-
-    <!-- Auto-related links injected here -->
-    <div id="auto-related"></div>
-
-  
-
+<hr/>
+<!-- Auto-related links injected here -->
+<div id="auto-related"></div>
 <section class="og-editorial-note" style="margin-top:2rem; padding:1.25rem; border:1px solid #e5e7eb; border-radius:12px; background:#fff;">
-  <h2 style="margin-top:0;">How to use this page</h2>
-  <p>This page is a decision helper. Use it to get a first-pass estimate and compare options. If you’re making a high-stakes decision (loan, property purchase, vehicle purchase), treat results as directional and verify with official sources and your provider.</p>
-  <h3>Assumptions and limitations</h3>
-  <ul>
-    <li>Figures are simplified to keep the model usable. Real-world quotes vary by provider, profile, timing, and eligibility.</li>
-    <li>Taxes, fees, incentives, and rules can change. Check the latest references below before acting.</li>
-    <li>This is not financial, legal, or tax advice.</li>
-  </ul>
-  <h3>References (starting points)</h3>
-  <ul>
-    <li><a href="https://www.lta.gov.sg/" target="_blank" rel="noopener">LTA</a></li><li><a href="https://onemotoring.lta.gov.sg/" target="_blank" rel="noopener">OneMotoring</a></li><li><a href="https://www.iras.gov.sg/" target="_blank" rel="noopener">IRAS</a></li>
-  </ul>
-  <p style="margin-bottom:0;"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
+<h2 style="margin-top:0;">How to use this page</h2>
+<p>This page is a decision helper. Use it to get a first-pass estimate and compare options. If you’re making a high-stakes decision (loan, property purchase, vehicle purchase), treat results as directional and verify with official sources and your provider.</p>
+<h3>Assumptions and limitations</h3>
+<ul>
+<li>Figures are simplified to keep the model usable. Real-world quotes vary by provider, profile, timing, and eligibility.</li>
+<li>Taxes, fees, incentives, and rules can change. Check the latest references below before acting.</li>
+<li>This is not financial, legal, or tax advice.</li>
+</ul>
+
+
+
 </section>
-
-
 <section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator</h2>
 <p>Use this to compare the <strong>monthly cost</strong> of owning a car vs ride-hailing, using your own mileage and ride frequency. Focus on total monthly cost, not just instalments.</p><ol><li>Enter your estimated monthly mileage and ride-hailing spend.</li><li>Enter car costs (depreciation/loan, insurance, fuel, parking, maintenance).</li><li>Find the break-even point: when ownership costs less than ride-hailing.</li></ol>
@@ -296,24 +240,20 @@
 <ul><li><strong>Example A (light usage):</strong> <p>Ride-hailing spend: $600/month. Car total monthly cost estimate: $1,400/month. Ownership rarely wins at low usage unless you value convenience highly.</p></li><li><strong>Example B (heavy usage):</strong> <p>Ride-hailing spend: $1,600/month. Car cost: $1,600/month. This is near break-even; test fuel/parking assumptions.</p></li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology & assumptions</h2>
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
 <ul><li>Depreciation is usually the biggest driver; use realistic depreciation, not monthly instalment alone.</li><li>Ride-hailing prices vary by peak periods and availability.</li><li>Planning model; not advice.</li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References & updates</h2>
+<h2 style="margin-top:0">References &amp; updates</h2>
 <p><em>Last updated: 2 Mar 2026</em></p>
 <p><em></em></p>
 <h3>References (starting points)</h3>
-<ul><li><a href="https://www.lta.gov.sg/" target="_blank" rel="nofollow noopener">LTA</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
+<ul><li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
 </section>
-
 </main>
-
-  <div id="site-footer"></div>
-
-  <script src="/includes.js" defer></script>
-
-  <script>
+<div id="site-footer"></div>
+<script defer="" src="/includes.js"></script>
+<script>
     (function(){
       // Benchmark profiles: keep it simple and transparent.
       // You can tune these numbers later without changing the page structure.
@@ -498,6 +438,5 @@
       });
     })();
   </script>
-
 </body>
 </html>

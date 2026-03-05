@@ -1,250 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-  <title>Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer</title>
-  <meta name="description" content="Singapore property upgrade ladder calculator (2026): enter a target property price and see (1) required household income (TDSR/MSR) and (2) cash/CPF buffer needed upfront, with a simple sell→buy bridge."/>
-  <meta name="og:cluster" content="property"/>
-  <meta name="og:subtopic" content="calculator"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer</title>
+<meta content="Singapore property upgrade ladder calculator (2026): enter a target property price and see (1) required household income (TDSR/MSR) and (2) cash/CPF buffer needed upfront, with a simple sell→buy bridge." name="description"/>
+<meta content="property" name="og:cluster"/>
+<meta content="calculator" name="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-    <nav class="breadcrumbs">
-      <a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
-    </nav>
-
-    <h1>Property Upgrade Ladder Calculator (Singapore, 2026)</h1>
-    <p class="muted">
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<nav class="breadcrumbs">
+<a href="/">Home</a> / <a href="/property/">Property</a> / <a href="/calculators/">Calculators</a>
+</nav>
+<h1>Property Upgrade Ladder Calculator (Singapore, 2026)</h1>
+<p class="muted">
       This tool answers: <strong>“If I want to buy a property at S$X, what income do I need — and what cash/CPF buffer is required upfront?”</strong>
       It’s conservative by design and intended for planning.
     </p>
-
-    <section class="card">
-      <h2>Inputs</h2>
-
-      <div class="og-form-grid">
-        <div>
-          <label for="price">Target property price (SGD)</label>
-          <input id="price" type="number" step="10000" value="1500000"/>
-        </div>
-
-        <div>
-          <label for="ltv">Loan‑to‑value (LTV, %)</label>
-          <input id="ltv" type="number" min="0" max="100" step="1" value="75"/>
-        </div>
-
-        <div>
-          <label for="minCashDp">Minimum cash downpayment (% of price)</label>
-          <input id="minCashDp" type="number" min="0" max="100" step="1" value="5"/>
-        </div>
-
-        <div>
-          <label for="bsd">BSD amount (SGD)</label>
-          <input id="bsd" type="number" step="100" value="0"/>
-        </div>
-
-        <div>
-          <label for="absd">ABSD amount (SGD)</label>
-          <input id="absd" type="number" step="100" value="0"/>
-        </div>
-
-        <div>
-          <label for="stampCpfPct">% of stamp duty paid by CPF</label>
-          <input id="stampCpfPct" type="number" min="0" max="100" step="1" value="100"/>
-        </div>
-
-        <div>
-          <label for="fees">Other upfront fees (legal/agent/valuation, SGD)</label>
-          <input id="fees" type="number" step="50" value="3500"/>
-        </div>
-
-        <div>
-          <label for="optionFee">Option / booking fee (cash, SGD)</label>
-          <input id="optionFee" type="number" step="50" value="1000"/>
-        </div>
-
-        <div>
-          <label for="cashOnly">Other cash‑only items (reno deposit, etc, SGD)</label>
-          <input id="cashOnly" type="number" step="50" value="0"/>
-        </div>
-
-        <div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
-
-        <div>
-          <label for="income">Household gross income (SGD/month)</label>
-          <input id="income" type="number" step="100" value="18000"/>
-        </div>
-
-        <div>
-          <label for="otherDebt">Other monthly debt payments (SGD/month)</label>
-          <input id="otherDebt" type="number" step="50" value="500"/>
-        </div>
-
-        <div>
-          <label for="tdsr">TDSR cap (%)</label>
-          <input id="tdsr" type="number" min="0" max="100" step="1" value="55"/>
-        </div>
-
-        <div>
-          <label for="msr">MSR cap (%) (0 if not applicable)</label>
-          <input id="msr" type="number" min="0" max="100" step="1" value="30"/>
-        </div>
-
-        <div>
-          <label for="rate">Stress interest rate (%/year)</label>
-          <input id="rate" type="number" min="0" step="0.1" value="4.0"/>
-        </div>
-
-        <div>
-          <label for="tenure">Loan tenure (years)</label>
-          <input id="tenure" type="number" min="1" step="1" value="25"/>
-        </div>
-
-        <div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
-
-        <div>
-          <label for="availCash">Available cash buffer (SGD)</label>
-          <input id="availCash" type="number" step="1000" value="80000"/>
-        </div>
-
-        <div>
-          <label for="availCpf">Available CPF OA buffer (SGD)</label>
-          <input id="availCpf" type="number" step="1000" value="200000"/>
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:10px">
+<section class="card">
+<h2>Inputs</h2>
+<div class="og-form-grid">
+<div>
+<label for="price">Target property price (SGD)</label>
+<input id="price" step="10000" type="number" value="1500000"/>
+</div>
+<div>
+<label for="ltv">Loan‑to‑value (LTV, %)</label>
+<input id="ltv" max="100" min="0" step="1" type="number" value="75"/>
+</div>
+<div>
+<label for="minCashDp">Minimum cash downpayment (% of price)</label>
+<input id="minCashDp" max="100" min="0" step="1" type="number" value="5"/>
+</div>
+<div>
+<label for="bsd">BSD amount (SGD)</label>
+<input id="bsd" step="100" type="number" value="0"/>
+</div>
+<div>
+<label for="absd">ABSD amount (SGD)</label>
+<input id="absd" step="100" type="number" value="0"/>
+</div>
+<div>
+<label for="stampCpfPct">% of stamp duty paid by CPF</label>
+<input id="stampCpfPct" max="100" min="0" step="1" type="number" value="100"/>
+</div>
+<div>
+<label for="fees">Other upfront fees (legal/agent/valuation, SGD)</label>
+<input id="fees" step="50" type="number" value="3500"/>
+</div>
+<div>
+<label for="optionFee">Option / booking fee (cash, SGD)</label>
+<input id="optionFee" step="50" type="number" value="1000"/>
+</div>
+<div>
+<label for="cashOnly">Other cash‑only items (reno deposit, etc, SGD)</label>
+<input id="cashOnly" step="50" type="number" value="0"/>
+</div>
+<div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
+<div>
+<label for="income">Household gross income (SGD/month)</label>
+<input id="income" step="100" type="number" value="18000"/>
+</div>
+<div>
+<label for="otherDebt">Other monthly debt payments (SGD/month)</label>
+<input id="otherDebt" step="50" type="number" value="500"/>
+</div>
+<div>
+<label for="tdsr">TDSR cap (%)</label>
+<input id="tdsr" max="100" min="0" step="1" type="number" value="55"/>
+</div>
+<div>
+<label for="msr">MSR cap (%) (0 if not applicable)</label>
+<input id="msr" max="100" min="0" step="1" type="number" value="30"/>
+</div>
+<div>
+<label for="rate">Stress interest rate (%/year)</label>
+<input id="rate" min="0" step="0.1" type="number" value="4.0"/>
+</div>
+<div>
+<label for="tenure">Loan tenure (years)</label>
+<input id="tenure" min="1" step="1" type="number" value="25"/>
+</div>
+<div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
+<div>
+<label for="availCash">Available cash buffer (SGD)</label>
+<input id="availCash" step="1000" type="number" value="80000"/>
+</div>
+<div>
+<label for="availCpf">Available CPF OA buffer (SGD)</label>
+<input id="availCpf" step="1000" type="number" value="200000"/>
+</div>
+</div>
+<p class="muted" style="margin-top:10px">
         Tip: If you’re upgrading/downgrading, set “Available cash/CPF” to your expected buffers after selling your current home.
         For a detailed sell→buy bridge, use the <a href="/upgrade-downgrade-property-calculator-singapore.html">upgrade/downgrade calculator</a>.
       </p>
-
-      <div class="btn-row">
-        <button class="btn btn-primary" id="btnCalc">Calculate</button>
-        <button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Results</h2>
-
-      <div class="og-kpi-grid">
-        <div class="kpi">
-          <div class="kpi-label">Needed loan (by LTV)</div>
-          <div class="kpi-value" id="neededLoan">—</div>
-          <div class="kpi-sub">target price × LTV</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Max loan (by TDSR/MSR)</div>
-          <div class="kpi-value" id="maxLoan">—</div>
-          <div class="kpi-sub" id="bindGate">—</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Required income (if short)</div>
-          <div class="kpi-value" id="reqIncome">—</div>
-          <div class="kpi-sub">to support needed loan</div>
-        </div>
-
-        <div class="kpi">
-          <div class="kpi-label">Upfront cash shortfall</div>
-          <div class="kpi-value" id="cashShort">—</div>
-          <div class="kpi-sub">cash needed − available cash</div>
-        </div>
-      </div>
-
-      <div class="og-kpi-grid" style="margin-top:10px">
-        <div class="kpi">
-          <div class="kpi-label">Upfront cash needed</div>
-          <div class="kpi-value" id="cashNeed">—</div>
-          <div class="kpi-sub">min cash DP + cash duties + fees</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Upfront CPF used (plan)</div>
-          <div class="kpi-value" id="cpfNeed">—</div>
-          <div class="kpi-sub">CPF DP + CPF‑paid duties</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">CPF shortfall</div>
-          <div class="kpi-value" id="cpfShort">—</div>
-          <div class="kpi-sub">CPF needed − available CPF</div>
-        </div>
-        <div class="kpi">
-          <div class="kpi-label">Max housing payment</div>
-          <div class="kpi-value" id="maxPay">—</div>
-          <div class="kpi-sub">after other debts</div>
-        </div>
-      </div>
-
-      <div class="table-wrap" style="margin-top:14px">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Upfront breakdown</th>
-              <th class="right">Cash (SGD)</th>
-              <th class="right">CPF (SGD)</th>
-            </tr>
-          </thead>
-          <tbody id="tbody">
-            <tr><td colspan="3" class="muted">Enter inputs and click Calculate.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Next steps</h2>
-      <ul>
-        <li><a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> (max loan only, more focused)</li>
-        <li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF calculator</a> (more detailed upfront planning)</li>
-        <li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade/downgrade sell→buy bridge calculator</a> (sell proceeds + buy next)</li>
-        <li><a href="/property/financing/">Property financing hub</a></li>
-      </ul>
-    </section>
-  <section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>This is a target-price planning tool: it tells you the income/buffer implied by a target purchase price and your financing assumptions.</li><li>If your required income is ‘too high’, reduce target price, increase cash downpayment, or shorten other debts to free TDSR.</li><li>Use it for scenario planning (conservative interest rate + realistic fees).</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: target price S$1.8M — what needs to change?</p>
-    <p>Try: (1) higher downpayment, (2) longer tenure (if allowed), (3) reduce other debts. The output shows which lever moves the needle most.</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Why does increasing downpayment help so much?</summary><div class='og-faq-a'><p>It reduces loan size, which reduces monthly instalment and TDSR pressure.</p></div></details><details><summary>Should I use a stressed rate?</summary><div class='og-faq-a'><p>Yes. Use a conservative rate to avoid passing the model but failing actual approval.</p></div></details><details><summary>Is this a guarantee of approval?</summary><div class='og-faq-a'><p>No. Banks assess credit history, job stability, and property valuation.</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>MAS / bank lending guidance (stress tests vary by bank); use as planning.</li><li>CPF Board: CPF usage rules for property.</li>
-  </ul>
+<div class="btn-row">
+<button class="btn btn-primary" id="btnCalc">Calculate</button>
+<button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
+</div>
 </section>
+<section class="card">
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Needed loan (by LTV)</div>
+<div class="kpi-value" id="neededLoan">—</div>
+<div class="kpi-sub">target price × LTV</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Max loan (by TDSR/MSR)</div>
+<div class="kpi-value" id="maxLoan">—</div>
+<div class="kpi-sub" id="bindGate">—</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Required income (if short)</div>
+<div class="kpi-value" id="reqIncome">—</div>
+<div class="kpi-sub">to support needed loan</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Upfront cash shortfall</div>
+<div class="kpi-value" id="cashShort">—</div>
+<div class="kpi-sub">cash needed − available cash</div>
+</div>
+</div>
+<div class="og-kpi-grid" style="margin-top:10px">
+<div class="kpi">
+<div class="kpi-label">Upfront cash needed</div>
+<div class="kpi-value" id="cashNeed">—</div>
+<div class="kpi-sub">min cash DP + cash duties + fees</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Upfront CPF used (plan)</div>
+<div class="kpi-value" id="cpfNeed">—</div>
+<div class="kpi-sub">CPF DP + CPF‑paid duties</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">CPF shortfall</div>
+<div class="kpi-value" id="cpfShort">—</div>
+<div class="kpi-sub">CPF needed − available CPF</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Max housing payment</div>
+<div class="kpi-value" id="maxPay">—</div>
+<div class="kpi-sub">after other debts</div>
+</div>
+</div>
+<div class="table-wrap" style="margin-top:14px">
+<table class="table">
+<thead>
+<tr>
+<th>Upfront breakdown</th>
+<th class="right">Cash (SGD)</th>
+<th class="right">CPF (SGD)</th>
+</tr>
+</thead>
+<tbody id="tbody">
+<tr><td class="muted" colspan="3">Enter inputs and click Calculate.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="card">
+<h2>Next steps</h2>
+<ul>
+<li><a href="/tdsr-msr-calculator-singapore.html">TDSR/MSR calculator</a> (max loan only, more focused)</li>
+<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash + CPF calculator</a> (more detailed upfront planning)</li>
+<li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade/downgrade sell→buy bridge calculator</a> (sell proceeds + buy next)</li>
+<li><a href="/property/financing/">Property financing hub</a></li>
+</ul>
+</section>
+<section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>This is a target-price planning tool: it tells you the income/buffer implied by a target purchase price and your financing assumptions.</li><li>If your required income is ‘too high’, reduce target price, increase cash downpayment, or shorten other debts to free TDSR.</li><li>Use it for scenario planning (conservative interest rate + realistic fees).</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: target price S$1.8M — what needs to change?</p>
+<p>Try: (1) higher downpayment, (2) longer tenure (if allowed), (3) reduce other debts. The output shows which lever moves the needle most.</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Why does increasing downpayment help so much?</summary><div class="og-faq-a"><p>It reduces loan size, which reduces monthly instalment and TDSR pressure.</p></div></details><details><summary>Should I use a stressed rate?</summary><div class="og-faq-a"><p>Yes. Use a conservative rate to avoid passing the model but failing actual approval.</p></div></details><details><summary>Is this a guarantee of approval?</summary><div class="og-faq-a"><p>No. Banks assess credit history, job stability, and property valuation.</p></div></details>
+</div>
 
 
+</section>
 <section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator</h2>
 <p>Use this to model an upgrade ladder in steps (e.g., first home → upgrade). The goal is to ensure each step is feasible and doesn’t destroy liquidity.</p><ol><li>Enter Step 1 property price and equity build assumptions.</li><li>Enter Step 2 target price and financing assumptions.</li><li>Check whether your equity and savings bridge the gap.</li></ol>
@@ -255,21 +212,19 @@
 <ul><li><strong>Example A (two-step ladder):</strong> <p>Step 1: $600k. Step 2: $1.0m. Model equity build and fees between steps.</p></li><li><strong>Example B (aggressive ladder):</strong> <p>Step 1: $700k. Step 2: $1.4m. Aggressive ladders often fail on stamp duty + cash buffer.</p></li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology & assumptions</h2>
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
 <ul><li>Uses simplified equity and appreciation assumptions; treat as a planning sketch.</li><li>Excludes market volatility and rate shocks; stress test rates.</li><li>Planning tool; not advice.</li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References & updates</h2>
+<h2 style="margin-top:0">References &amp; updates</h2>
 <p><em>Last updated: 2 Mar 2026</em></p>
 <h3>References (starting points)</h3>
-<ul><li><a href="https://www.mas.gov.sg/" target="_blank" rel="nofollow noopener">MAS</a></li><li><a href="https://www.iras.gov.sg/" target="_blank" rel="nofollow noopener">IRAS</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
+<ul><li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">MAS</a></li><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">IRAS</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
 </section>
-
 </main>
-
-  <div id="site-footer"></div>
-  <script src="/includes.js"></script>
-  <script>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
 
 
     function applyQueryPrefill(map){

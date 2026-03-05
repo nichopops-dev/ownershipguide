@@ -1,21 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>Sell → Buy Next Pipeline Calculator (Singapore)</title>
-  <meta name="description" content="Enter your key numbers once. Jump into the right calculators pre-filled: CPF refund, sell proceeds, upfront cash+CPF needed, upgrade/downgrade bridge, and upgrade ladder."/>
-
-  <meta property="og:title" content="Sell → Buy Next Pipeline Calculator (Singapore)"/>
-  <meta property="og:description" content="One input layer that pre-fills the sell→buy planning tools for Singapore property owners."/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:cluster" content="property"/>
-  <meta property="og:subtopic" content="planning"/>
-
-  <link rel="stylesheet" href="/styles.css"/>
-  <script src="/includes.js" defer></script>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Sell → Buy Next Pipeline Calculator (Singapore)</title>
+<meta content="Enter your key numbers once. Jump into the right calculators pre-filled: CPF refund, sell proceeds, upfront cash+CPF needed, upgrade/downgrade bridge, and upgrade ladder." name="description"/>
+<meta content="Sell → Buy Next Pipeline Calculator (Singapore)" property="og:title"/>
+<meta content="One input layer that pre-fills the sell→buy planning tools for Singapore property owners." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="property" property="og:cluster"/>
+<meta content="planning" property="og:subtopic"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/includes.js"></script>
+<style>
     .og-card{ background:#fff; border:1px solid var(--border); border-radius:14px; padding:16px; }
     .og-grid{ display:grid; gap:14px; }
     @media(min-width:920px){ .og-grid.cols2{ grid-template-columns: 1.15fr .85fr; } }
@@ -29,149 +27,134 @@
   </style>
 </head>
 <body>
-  <div id="site-header"></div>
-
-  <main class="container">
-    <p class="eyebrow">PROPERTY • PLANNING</p>
-    <h1>Sell → Buy Next Pipeline (One Input → Pre-filled Tools)</h1>
-    <p class="lead">Enter your key numbers once. This page generates <b>pre-filled</b> links into the right calculators so you don’t retype everything.</p>
-
-    <div class="og-grid cols2">
-      <section class="og-card">
-        <h2 style="margin-top:0">Inputs</h2>
-        <div class="og-form-grid" style="margin-top:10px">
-          <div>
-            <label><b>Current sale price (SGD)</b></label>
-            <input id="sale" inputmode="decimal" value="1200000"/>
-            <div class="help">Expected selling price of your current home.</div>
-          </div>
-          <div>
-            <label><b>Outstanding loan to redeem (SGD)</b></label>
-            <input id="loan" inputmode="decimal" value="650000"/>
-            <div class="help">Approx loan balance that will be redeemed on sale.</div>
-          </div>
-          <div>
-            <label><b>CPF used (OA) (SGD)</b></label>
-            <input id="cpfUsed" inputmode="decimal" value="200000"/>
-            <div class="help">Planning total CPF used (downpayment + instalments).</div>
-          </div>
-          <div>
-            <label><b>CPF usage duration (years)</b></label>
-            <input id="cpfYears" inputmode="decimal" value="5"/>
-            <div class="help">How long CPF was outstanding before sale/refund.</div>
-          </div>
-          <div>
-            <label><b>Target next purchase price (SGD)</b></label>
-            <input id="buy" inputmode="decimal" value="1500000"/>
-            <div class="help">Your next property price you’re aiming for.</div>
-          </div>
-          <div>
-            <label><b>Loan-to-value (LTV, %)</b></label>
-            <input id="ltv" inputmode="decimal" value="75"/>
-            <div class="help">Typical bank case: 75%.</div>
-          </div>
-          <div>
-            <label><b>Min cash downpayment (% of price)</b></label>
-            <input id="minCashPct" inputmode="decimal" value="5"/>
-            <div class="help">Planning minimum cash portion of downpayment.</div>
-          </div>
-          <div>
-            <label><b>BSD amount (SGD)</b></label>
-            <input id="bsd" inputmode="decimal" value="0"/>
-            <div class="help">Use the BSD/ABSD calculator if unsure.</div>
-          </div>
-          <div>
-            <label><b>ABSD amount (SGD)</b></label>
-            <input id="absd" inputmode="decimal" value="0"/>
-            <div class="help">Leave 0 if not applicable.</div>
-          </div>
-          <div>
-            <label><b>Other upfront fees (SGD)</b></label>
-            <input id="fees" inputmode="decimal" value="3500"/>
-            <div class="help">Legal / agent / valuation (planning).</div>
-          </div>
-        </div>
-
-        <div class="btn-row" style="margin-top:12px">
-          <button class="btn btn-primary" id="btnUpdate" type="button">Update links</button>
-          <a class="btn btn-secondary" href="/property-upgrade-planner-singapore.html">Back to Planner</a>
-        </div>
-        <p class="mini">This page stores numbers in the URL query string so you can share it (no personal identifiers).</p>
-      </section>
-
-      <aside>
-        <div class="kpi-grid">
-          <div class="kpi">
-            <div class="t">Estimated CPF refund</div>
-            <div class="v" id="kCpf">S$—</div>
-            <div class="s">Planning estimate (CPF used + accrued interest).</div>
-          </div>
-          <div class="kpi">
-            <div class="t">Recommended next</div>
-            <div class="v" style="font-size:18px">Run the bridge</div>
-            <div class="s">Sell → buy next (cash + CPF shortfall).</div>
-          </div>
-        </div>
-
-        <div class="og-card" style="margin-top:14px">
-          <h3 style="margin-top:0">Pre-filled tools</h3>
-          <ul style="margin:10px 0 0; padding-left:18px">
-            <li><a id="lnCpf" href="#">CPF accrued interest calculator</a></li>
-            <li><a id="lnSell" href="#">Sell proceeds (cash vs CPF)</a></li>
-            <li><a id="lnBuy" href="#">Upfront cash + CPF needed</a></li>
-            <li><a id="lnBridge" href="#"><b>Upgrade / downgrade bridge</b> (sell → buy next)</a></li>
-            <li><a id="lnLadder" href="#">Upgrade ladder (target price → required income + buffer)</a></li>
-          </ul>
-          <div class="btn-row" style="margin-top:12px">
-            <button class="btn btn-secondary" id="btnCopy" type="button">Copy sharable link</button>
-          </div>
-        </div>
-
-        <div class="related-box" style="margin-top:14px">
-          <h3 style="margin-top:0">If you don’t know BSD/ABSD yet</h3>
-          <ul>
-            <li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a></li>
-            <li><a href="/property/financing/">Property financing hub</a></li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-<section class="og-editorial" aria-label="Notes and assumptions">
-  <div class="og-divider"></div>
-  <p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
-
-  <h2>How to use this</h2>
-  <p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-
-  <h2>Key assumptions (what this model does and doesn’t do)</h2>
-  <ul class="og-bullets">
-    <li>This tool exists to reduce re-typing: enter core numbers once, then jump into prefilled calculators.</li><li>Inputs are stored in the URL query string for sharing; do not include personal identifiers.</li><li>Always re-check fees/taxes with your agent/lawyer for the final transaction.</li>
-  </ul>
-
-  <h2>Worked example</h2>
-  <div class="og-callout">
-    <p class="og-callout-title">Example: share a scenario with spouse/partner</p>
-    <p>Use the generated links to share the exact same assumptions so both of you can discuss the same numbers (especially CPF refund and cash shortfall).</p>
-  </div>
-
-  <h2>Common mistakes</h2>
-  <ul class="og-bullets">
-    <li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-    <li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-    <li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <div class="og-faq">
-    <details><summary>Is my data uploaded anywhere?</summary><div class='og-faq-a'><p>No. It’s a static site; values are in the URL only.</p></div></details><details><summary>Why do some calculators still require ‘Calculate’ click?</summary><div class='og-faq-a'><p>To keep normal browsing safe; auto-run happens only when prefilled values exist.</p></div></details><details><summary>Can I use this for multiple properties?</summary><div class='og-faq-a'><p>Yes — save separate links for each scenario.</p></div></details>
-  </div>
-
-  <h2>References (official where possible)</h2>
-  <ul class="og-bullets">
-    <li>General planning guidance; confirm taxes/fees with official sources.</li>
-  </ul>
+<div id="site-header"></div>
+<main class="container">
+<p class="eyebrow">PROPERTY • PLANNING</p>
+<h1>Sell → Buy Next Pipeline (One Input → Pre-filled Tools)</h1>
+<p class="lead">Enter your key numbers once. This page generates <b>pre-filled</b> links into the right calculators so you don’t retype everything.</p>
+<div class="og-grid cols2">
+<section class="og-card">
+<h2 style="margin-top:0">Inputs</h2>
+<div class="og-form-grid" style="margin-top:10px">
+<div>
+<label><b>Current sale price (SGD)</b></label>
+<input id="sale" inputmode="decimal" value="1200000"/>
+<div class="help">Expected selling price of your current home.</div>
+</div>
+<div>
+<label><b>Outstanding loan to redeem (SGD)</b></label>
+<input id="loan" inputmode="decimal" value="650000"/>
+<div class="help">Approx loan balance that will be redeemed on sale.</div>
+</div>
+<div>
+<label><b>CPF used (OA) (SGD)</b></label>
+<input id="cpfUsed" inputmode="decimal" value="200000"/>
+<div class="help">Planning total CPF used (downpayment + instalments).</div>
+</div>
+<div>
+<label><b>CPF usage duration (years)</b></label>
+<input id="cpfYears" inputmode="decimal" value="5"/>
+<div class="help">How long CPF was outstanding before sale/refund.</div>
+</div>
+<div>
+<label><b>Target next purchase price (SGD)</b></label>
+<input id="buy" inputmode="decimal" value="1500000"/>
+<div class="help">Your next property price you’re aiming for.</div>
+</div>
+<div>
+<label><b>Loan-to-value (LTV, %)</b></label>
+<input id="ltv" inputmode="decimal" value="75"/>
+<div class="help">Typical bank case: 75%.</div>
+</div>
+<div>
+<label><b>Min cash downpayment (% of price)</b></label>
+<input id="minCashPct" inputmode="decimal" value="5"/>
+<div class="help">Planning minimum cash portion of downpayment.</div>
+</div>
+<div>
+<label><b>BSD amount (SGD)</b></label>
+<input id="bsd" inputmode="decimal" value="0"/>
+<div class="help">Use the BSD/ABSD calculator if unsure.</div>
+</div>
+<div>
+<label><b>ABSD amount (SGD)</b></label>
+<input id="absd" inputmode="decimal" value="0"/>
+<div class="help">Leave 0 if not applicable.</div>
+</div>
+<div>
+<label><b>Other upfront fees (SGD)</b></label>
+<input id="fees" inputmode="decimal" value="3500"/>
+<div class="help">Legal / agent / valuation (planning).</div>
+</div>
+</div>
+<div class="btn-row" style="margin-top:12px">
+<button class="btn btn-primary" id="btnUpdate" type="button">Update links</button>
+<a class="btn btn-secondary" href="/property-upgrade-planner-singapore.html">Back to Planner</a>
+</div>
+<p class="mini">This page stores numbers in the URL query string so you can share it (no personal identifiers).</p>
 </section>
+<aside>
+<div class="kpi-grid">
+<div class="kpi">
+<div class="t">Estimated CPF refund</div>
+<div class="v" id="kCpf">S$—</div>
+<div class="s">Planning estimate (CPF used + accrued interest).</div>
+</div>
+<div class="kpi">
+<div class="t">Recommended next</div>
+<div class="v" style="font-size:18px">Run the bridge</div>
+<div class="s">Sell → buy next (cash + CPF shortfall).</div>
+</div>
+</div>
+<div class="og-card" style="margin-top:14px">
+<h3 style="margin-top:0">Pre-filled tools</h3>
+<ul style="margin:10px 0 0; padding-left:18px">
+<li><a href="#" id="lnCpf">CPF accrued interest calculator</a></li>
+<li><a href="#" id="lnSell">Sell proceeds (cash vs CPF)</a></li>
+<li><a href="#" id="lnBuy">Upfront cash + CPF needed</a></li>
+<li><a href="#" id="lnBridge"><b>Upgrade / downgrade bridge</b> (sell → buy next)</a></li>
+<li><a href="#" id="lnLadder">Upgrade ladder (target price → required income + buffer)</a></li>
+</ul>
+<div class="btn-row" style="margin-top:12px">
+<button class="btn btn-secondary" id="btnCopy" type="button">Copy sharable link</button>
+</div>
+</div>
+<div class="related-box" style="margin-top:14px">
+<h3 style="margin-top:0">If you don’t know BSD/ABSD yet</h3>
+<ul>
+<li><a href="/bsd-absd-calculator-singapore.html">BSD/ABSD calculator</a></li>
+<li><a href="/property/financing/">Property financing hub</a></li>
+</ul>
+</div>
+</aside>
+</div>
+<section aria-label="Notes and assumptions" class="og-editorial">
+<div class="og-divider"></div>
+<p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
+<h2>How to use this</h2>
+<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
+<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<ul class="og-bullets">
+<li>This tool exists to reduce re-typing: enter core numbers once, then jump into prefilled calculators.</li><li>Inputs are stored in the URL query string for sharing; do not include personal identifiers.</li><li>Always re-check fees/taxes with your agent/lawyer for the final transaction.</li>
+</ul>
+<h2>Worked example</h2>
+<div class="og-callout">
+<p class="og-callout-title">Example: share a scenario with spouse/partner</p>
+<p>Use the generated links to share the exact same assumptions so both of you can discuss the same numbers (especially CPF refund and cash shortfall).</p>
+</div>
+<h2>Common mistakes</h2>
+<ul class="og-bullets">
+<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
+<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
+<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+</ul>
+<h2>FAQ</h2>
+<div class="og-faq">
+<details><summary>Is my data uploaded anywhere?</summary><div class="og-faq-a"><p>No. It’s a static site; values are in the URL only.</p></div></details><details><summary>Why do some calculators still require ‘Calculate’ click?</summary><div class="og-faq-a"><p>To keep normal browsing safe; auto-run happens only when prefilled values exist.</p></div></details><details><summary>Can I use this for multiple properties?</summary><div class="og-faq-a"><p>Yes — save separate links for each scenario.</p></div></details>
+</div>
 
+
+</section>
 <section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator</h2>
 <p>Use this to plan the <strong>sell → buy</strong> timeline and cashflow pinch points (option fees, stamp duty, bridging gaps). The key is timing mismatches.</p><ol><li>Enter sale completion date assumptions.</li><li>Enter purchase milestones (OTP, exercise, completion).</li><li>Check for periods where you need cash before sale proceeds arrive.</li></ol>
@@ -182,22 +165,18 @@
 <ul><li><strong>Example A (tight overlap):</strong> <p>If purchase OTP is exercised before sale completes, you may need bridging cash. Use this to identify the worst month.</p></li><li><strong>Example B (sell first):</strong> <p>Sell first reduces bridging risk but may require temporary housing. Compare the trade-off.</p></li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology & assumptions</h2>
+<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
 <ul><li>Transaction timelines vary; treat this as a planning map.</li><li>Excludes bank bridging loan terms and costs; verify with lender.</li><li>Planning tool; not advice.</li></ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References & updates</h2>
+<h2 style="margin-top:0">References &amp; updates</h2>
 <p><em>Last updated: 2 Mar 2026</em></p>
 <h3>References (starting points)</h3>
-<ul><li><a href="https://www.iras.gov.sg/" target="_blank" rel="nofollow noopener">IRAS</a></li><li><a href="https://www.hdb.gov.sg/" target="_blank" rel="nofollow noopener">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
+<ul><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">IRAS</a></li><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><strong></strong> 2 Mar 2026<a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
 </section>
-
 </main>
-
 <div id="site-footer"></div>
-
-
-  <script>
+<script>
     const fmt0=(n)=> (Number.isFinite(n)? n:0).toLocaleString(undefined,{maximumFractionDigits:0});
     const num=(id)=>{ const v=parseFloat(document.getElementById(id).value); return Number.isFinite(v)? v:0; };
 
