@@ -1253,7 +1253,33 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    if (host) {
+    // Prefer inserting near the end of the article (but before References / Last updated),
+    // so the module doesn't appear above the page title or back-links.
+    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
+
+    const findHeadingByText = (tagNames, rx) => {
+      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
+      for (const el of els) {
+        const t = (el.textContent || "").trim();
+        if (rx.test(t)) return el;
+      }
+      return null;
+    };
+
+    const insertBeforeEl =
+      // 1) Before "References" (keeps References as last substantive section)
+      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
+      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
+      || (() => {
+        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
+          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+        return candidates.length ? candidates[candidates.length - 1] : null;
+      })();
+
+    if (insertBeforeEl) {
+      insertBeforeEl.insertAdjacentElement("beforebegin", box);
+    } else if (host) {
+      // If a related container exists, insert above it (legacy behavior).
       host.insertAdjacentElement("beforebegin", box);
     } else {
       // Append at the end of main content as a safe fallback.
