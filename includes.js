@@ -1215,21 +1215,15 @@ function buildRelatedHTML(label, links) {
   function injectCalculatorCTA() {
     if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    // Next steps insertion anchor:
-    // We anchor AFTER the page title inside <main> so it can never appear above the H1.
-    const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
-    const h1El = mainEl ? (mainEl.querySelector("h1") || document.querySelector("h1")) : document.querySelector("h1");
-    // Prefer inserting after the first intro paragraph (immediately after H1) if it exists.
-    const introP = (() => {
-      try {
-        if (!h1El) return null;
-        let n = h1El.nextElementSibling;
-        while (n && n.tagName && n.tagName.toLowerCase() in { 'script':1, 'style':1 }) n = n.nextElementSibling;
-        return (n && n.tagName && n.tagName.toLowerCase() === 'p') ? n : null;
-      } catch (e) { return null; }
-    })();
-    const insertAfterEl = introP || h1El;
-    const fallbackHost = mainEl;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
+
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.calculatorCtaId)) return;
@@ -1259,15 +1253,10 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Insert after title (or intro paragraph) so it never appears above the H1.
-    try {
-      if (insertAfterEl && insertAfterEl.parentNode) {
-        insertAfterEl.parentNode.insertBefore(box, insertAfterEl.nextSibling);
-      } else {
-        // Fallback: append at end of main content.
-        fallbackHost.appendChild(box);
-      }
-    } catch (e) {
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
       fallbackHost.appendChild(box);
     }
   }
@@ -1309,25 +1298,10 @@ function buildRelatedHTML(label, links) {
       </p>
     `;
 
-    // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
-    // inside <main>, so it can never appear above the H1.
-    try {
-      const main = document.querySelector("main.container") || document.querySelector("main");
-      if (!main) return; // do not fall back to generic .container; prevents injecting into header wrappers
-      const h1 = main.querySelector("h1");
-      // Prefer CTA inside main (if present) so the module appears after it; otherwise after H1
-      const cta = main.querySelector(`#${SETTINGS.calculatorCtaId}`) || main.querySelector(".cta-box") || main.querySelector(".og-cta") || main.querySelector(".og-cta-card");
-      const anchor = cta || h1;
-
-      if (anchor && anchor.parentNode) {
-        anchor.parentNode.insertBefore(box, anchor.nextSibling);
-      } else if (main) {
-        // Fallback: keep it inside main, below header/nav.
-        main.insertBefore(box, main.firstChild);
-      } else {
-        fallbackHost.appendChild(box);
-      }
-    } catch (e) {
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+    } else {
+      // Append at the end of main content as a safe fallback.
       fallbackHost.appendChild(box);
     }
   }
@@ -1335,15 +1309,18 @@ function buildRelatedHTML(label, links) {
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+    // IMPORTANT: Anchor ONLY inside <main>.
+    // We do not fall back to generic .container or document.body because that can match header wrappers
+    // and cause "Next steps" to appear above the article title / nav.
+    const main = document.querySelector("main.container") || document.querySelector("main");
+    if (!main) return;
 
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Look for the related placeholder ONLY within main.
+    const host = main.querySelector("#" + SETTINGS.relatedContainerId)
+      || main.querySelector(".related-box")
+      || main.querySelector("[data-related]")
+      || main.querySelector("section.related")
+      || main.querySelector(".og-related");
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
@@ -1362,83 +1339,81 @@ function buildRelatedHTML(label, links) {
       .replace(/\.html$/i, "");
     const pathN = norm(rawPath);
 
-// Do not inject on comparison pages (they already have their own next-step modules)
-const isComparisonPage = (() => {
-  try {
-    if (rawPath.startsWith("/comparisons")) return true;
-    const metaEl = document.querySelector(".meta");
-    if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
+    // Do not inject on comparison pages (they already have their own next-step modules)
+    const isComparisonPage = (() => {
+      try {
+        if (rawPath.startsWith("/comparisons")) return true;
+        const metaEl = document.querySelector(".meta");
+        if (metaEl && /decision\s+comparison/i.test(metaEl.textContent || "")) return true;
 
-    // Check against configured comparison URLs
-    const urls = [];
-    const walk = (node) => {
-      if (!node) return;
-      if (Array.isArray(node)) { node.forEach(walk); return; }
-      if (typeof node === "object") {
-        if (typeof node.url === "string") urls.push(node.url);
-        for (const k in node) walk(node[k]);
+        // Check against configured comparison URLs
+        const urls = [];
+        const walk = (node) => {
+          if (!node) return;
+          if (Array.isArray(node)) { node.forEach(walk); return; }
+          if (typeof node === "object") {
+            if (typeof node.url === "string") urls.push(node.url);
+            for (const k in node) walk(node[k]);
+          }
+        };
+        if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
+        const cmpSet = new Set(urls.map(u => norm(u)));
+        return cmpSet.has(pathN);
+      } catch (e) {
+        return false;
       }
-    };
-    if (SETTINGS.comparisons) walk(SETTINGS.comparisons);
-    const cmpSet = new Set(urls.map(u => norm(u)));
-    return cmpSet.has(pathN);
-  } catch (e) {
-    return false;
-  }
-})();
-if (isComparisonPage) return;
+    })();
+    if (isComparisonPage) return;
 
     const allow = (SETTINGS.decisionPathAllowPaths || []).some(p => norm(p) === pathN);
     if (!allow) return;
 
-    
-const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
+    const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
 
-const runPrimary = (override && override.runPrimary)
-  ? override.runPrimary
-  : (cluster === "property"
-    ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
-    : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
+    const runPrimary = (override && override.runPrimary)
+      ? override.runPrimary
+      : (cluster === "property"
+        ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
+        : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
 
-const runSecondary = (override && override.runSecondary)
-  ? override.runSecondary
-  : (cluster === "property"
-    ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
-    : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
+    const runSecondary = (override && override.runSecondary)
+      ? override.runSecondary
+      : (cluster === "property"
+        ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
+        : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
 
-const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
+    const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
 
-const compareCfg = (preset && preset.compare) ? preset.compare : null;
-const financingDefault = (() => {
-  const p = pathN;
-  const isProp = (cluster === "property");
-  const isTrans = (cluster === "transport");
-  if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
-    return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
-  }
-  if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
-    return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
-  }
-  return null;
-})();
+    const compareCfg = (preset && preset.compare) ? preset.compare : null;
+    const financingDefault = (() => {
+      const p = pathN;
+      const isProp = (cluster === "property");
+      const isTrans = (cluster === "transport");
+      if (isProp && /(tdsr|msr|mortgage|home-loan|refinance|bsd|absd|cpf|interest-cost|sell-property|property-ownership)/.test(p)) {
+        return { href: "/property/financing/", label: "Property financing", meta: "Loans, limits, and cashflow" };
+      }
+      if (isTrans && /(car-loan|balloon-loan|leasing|loan-vs-cash)/.test(p)) {
+        return { href: "/transport/financing/", label: "Transport financing", meta: "Loan structure & fragility" };
+      }
+      return null;
+    })();
 
-const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
-const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
-const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
+    const compareHref = compareCfg ? compareCfg.href : (financingDefault ? financingDefault.href : "/comparisons/");
+    const compareLabel = compareCfg ? compareCfg.label : (financingDefault ? financingDefault.label : "Decision comparisons");
+    const compareMeta = compareCfg ? compareCfg.meta : (financingDefault ? financingDefault.meta : "Choose the right model");
 
-const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
-const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
-const relatedHtml = (relatedLinks && relatedLinks.length)
-  ? `<div class="og-nextsteps-related">
-        <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
-        <div class="og-nextsteps-related-links">
-          ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
-        </div>
-      </div>`
-  : "";
+    const relatedLinks = (preset && Array.isArray(preset.related)) ? preset.related : null;
+    const relatedLabel = (preset && preset.relatedLabel) ? preset.relatedLabel : (financingDefault ? (financingDefault.href.includes("/transport/") ? "Related (transport financing)" : "Related (property financing)") : "Related");
+    const relatedHtml = (relatedLinks && relatedLinks.length)
+      ? `<div class="og-nextsteps-related">
+            <div class="muted og-nextsteps-related-label">${escapeHtml(relatedLabel)}</div>
+            <div class="og-nextsteps-related-links">
+              ${relatedLinks.map((l, i) => `${i ? '<span class="muted"> · </span>' : ''}<a href="${l.href}">${escapeHtml(l.label)}</a>`).join('')}
+            </div>
+          </div>`
+      : "";
 
-
-const box = document.createElement("section");
+    const box = document.createElement("section");
     box.className = "og-section";
     box.id = SETTINGS.decisionPathModuleId;
 
@@ -1468,32 +1443,23 @@ const box = document.createElement("section");
           </div>
         </div>
       </div>
-      
+
       ${relatedHtml}
       <hr style="margin-top:22px;">
 
 `;
 
-    // Place "Next steps" AFTER the page title (and after the primary CTA box if present),
-    // inside <main>, so it can never appear above the H1.
-    try {
-      const main = document.querySelector("main.container") || document.querySelector("main");
-      if (!main) return; // do not fall back to generic .container; prevents injecting into header wrappers
-      const h1 = main.querySelector("h1");
-      // Prefer CTA inside main (if present) so the module appears after it; otherwise after H1
-      const cta = main.querySelector(`#${SETTINGS.calculatorCtaId}`) || main.querySelector(".cta-box") || main.querySelector(".og-cta") || main.querySelector(".og-cta-card");
-      const anchor = cta || h1;
+    if (host) {
+      host.insertAdjacentElement("beforebegin", box);
+      return;
+    }
 
-      if (anchor && anchor.parentNode) {
-        anchor.parentNode.insertBefore(box, anchor.nextSibling);
-      } else if (main) {
-        // Fallback: keep it inside main, below header/nav.
-        main.insertBefore(box, main.firstChild);
-      } else {
-        fallbackHost.appendChild(box);
-      }
-    } catch (e) {
-      fallbackHost.appendChild(box);
+    // No related placeholder inside main: place the module in a deterministic location inside main.
+    const h1 = main.querySelector("h1");
+    if (h1) {
+      h1.insertAdjacentElement("afterend", box);
+    } else {
+      main.appendChild(box);
     }
   }
 
