@@ -1448,35 +1448,24 @@ const box = document.createElement("section");
 
 `;
 
-    // Insert location: never above title. Prefer placing near the end of <main>.
+    
+    // Insert AFTER the page title (and intro paragraph if present),
+    // so it never appears above the H1/back-links.
     const mainEl = document.querySelector("main") || document.querySelector(".container") || document.body;
+    const h1 = mainEl ? mainEl.querySelector("h1") : document.querySelector("h1");
+    const introP = h1 ? (h1.nextElementSibling && h1.nextElementSibling.tagName === "P" ? h1.nextElementSibling : null) : null;
 
-    const findReferencesHeading = () => {
-      const hs = Array.from(mainEl.querySelectorAll("h2, h3"));
-      return hs.find(h => {
-        const t = (h.textContent || "").trim().toLowerCase();
-        return t === "references" || t === "references & updates" || t === "references and updates";
-      }) || null;
-    };
-
-    const findLastUpdatedLine = () => {
-      // Match the canonical marker: <strong>Last updated:</strong>
-      const strongs = Array.from(mainEl.querySelectorAll("strong"));
-      const s = strongs.find(el => ((el.textContent || "").trim().toLowerCase() === "last updated:"));
-      return s ? (s.closest("p") || s.parentElement) : null;
-    };
-
-    const refHeading = findReferencesHeading();
-    const lastUpdatedLine = findLastUpdatedLine();
-
-    if (refHeading) {
-      refHeading.insertAdjacentElement("beforebegin", box);
-    } else if (lastUpdatedLine) {
-      lastUpdatedLine.insertAdjacentElement("beforebegin", box);
-    } else {
-      // Fallback: append at end of main content.
+    if (introP) {
+      introP.insertAdjacentElement("afterend", box);
+    } else if (h1) {
+      h1.insertAdjacentElement("afterend", box);
+    } else if (mainEl) {
       mainEl.appendChild(box);
+    } else {
+      // Last-resort fallback
+      fallbackHost.appendChild(box);
     }
+
   }
 
 
