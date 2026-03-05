@@ -1,8 +1,7 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.4";
+  const OG_INCLUDES_VERSION = "v0126.5-fix";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
-
   // =========================
   // 0) SETTINGS (edit only here)
   // =========================
@@ -1257,21 +1256,12 @@ function buildRelatedHTML(label, links) {
       <p><a class="cta-button" href="${url}">Open calculator →</a></p>
     `;
 
-    // Prefer inserting near the end of the article (before References / Last updated).
-    // IMPORTANT: Only search/anchor within the same root container that holds the page H1/back-links.
-    const main = root;
-
-    const h1 = main.querySelector("h1");
-
-    const isAfter = (el, anchor) => {
-      if (!el || !anchor) return true;
-      try {
-        return !!(anchor.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING);
-      } catch (e) { return true; }
-    };
+    // Prefer inserting near the end of the article (but before References / Last updated),
+    // so the module doesn't appear above the page title or back-links.
+    const main = document.querySelector("main") || document.querySelector(".container") || document.body;
 
     const findHeadingByText = (tagNames, rx) => {
-      const els = Array.from(main.querySelectorAll(tagNames.join(",")));
+      const els = Array.from((main || document).querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
         if (rx.test(t)) return el;
@@ -1279,46 +1269,24 @@ function buildRelatedHTML(label, links) {
       return null;
     };
 
-    const referencesAnchor = (() => {
-      const h = findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i);
-      if (h && isAfter(h, h1)) return h;
-
-      const strongs = Array.from(main.querySelectorAll("strong"));
-      for (const st of strongs) {
-        const t = (st.textContent || "").trim();
-        if (/^References\b/i.test(t)) {
-          const a = st.closest("p,div,section") || st;
-          if (isAfter(a, h1)) return a;
-        }
-      }
-      return null;
-    })();
-
-    const lastUpdatedAnchor = (() => {
-      const candidates = Array.from(main.querySelectorAll("p,div,section"))
-        .filter(el => {
-          // Skip top meta lines (common on older templates)
-          if (el.classList && el.classList.contains("meta")) return false;
-          const txt = (el.textContent || "").trim();
-          return /Last\s+updated\s*:/i.test(txt);
-        })
-        .filter(el => isAfter(el, h1));
-
-      return candidates.length ? candidates[candidates.length - 1] : null;
-    })();
-
-    // Only use host if it's in main and after the H1 (avoid inserting above title).
-    const safeHost = (host && main.contains(host) && isAfter(host, h1)) ? host : null;
-
-    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor || safeHost;
+    const insertBeforeEl =
+      // 1) Before "References" (keeps References as last substantive section)
+      findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
+      // 2) Otherwise, before a standalone "Last updated" marker (so last updated stays last)
+      || (() => {
+        const candidates = Array.from((main || document).querySelectorAll("p,div,section"))
+          .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+        return candidates.length ? candidates[candidates.length - 1] : null;
+      })();
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
+    } else if (host) {
+      // If a related container exists, insert above it (legacy behavior).
+      host.insertAdjacentElement("beforebegin", box);
     } else {
-      // Append at end of the article container as a safe fallback.
-      main.appendChild(box);
-    }
-    }
+      // Append at the end of main content as a safe fallback.
+      fallbackHost.appendChild(box);
   }
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
@@ -1369,17 +1337,15 @@ function buildRelatedHTML(label, links) {
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-        const root = getMainContainer() || document.querySelector("main.container") || document.querySelector("main");
-    if (!root) return;
+    const host = document.getElementById(SETTINGS.relatedContainerId)
+      || document.querySelector(".related-box")
+      || document.querySelector("[data-related]")
+      || document.querySelector("section.related")
+      || document.querySelector(".og-related");
 
-    // Anchor ONLY within the main article container (never header/footer containers).
-    const host = root.querySelector("#" + SETTINGS.relatedContainerId)
-      || root.querySelector(".related-box")
-      || root.querySelector("[data-related]")
-      || root.querySelector("section.related")
-      || root.querySelector(".og-related");
-
-    const fallbackHost = root;
+    // If the page uses an older template without the expected related container,
+    // fall back to inserting near the end of the main content.
+    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.decisionPathModuleId)) return;
@@ -1511,8 +1477,12 @@ const box = document.createElement("section");
 `;
 
 
-        // Prefer placing near the end of the article: before References, else before Last updated, else before auto-related, else end of article.
+    // Prefer inserting near the end of the article (but before References / Last updated),
+    // so the module doesn't appear above the page title or back-links.
+    const main = document.querySelector("main.container") || document.querySelector("main");
+
     const findHeadingByText = (tagNames, rx) => {
+      const root = main || document;
       const els = Array.from(root.querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
@@ -1521,9 +1491,12 @@ const box = document.createElement("section");
       return null;
     };
 
+    // 1) Prefer inserting before a real "References" heading.
+    //    Covers: <h2>References</h2>, <h2>References & updates</h2>, and inline strong labels like "References (where applicable):"
     const referencesAnchor =
       findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
       || (() => {
+        const root = main || document;
         const strongs = Array.from(root.querySelectorAll("strong"));
         for (const st of strongs) {
           const t = (st.textContent || "").trim();
@@ -1532,22 +1505,26 @@ const box = document.createElement("section");
         return null;
       })();
 
+    // 2) Otherwise, insert before the *last* standalone "Last updated" marker (so it stays last).
     const lastUpdatedAnchor = (() => {
+      const root = main || document;
       const candidates = Array.from(root.querySelectorAll("p,div,section"))
         .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
       return candidates.length ? candidates[candidates.length - 1] : null;
     })();
 
-    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor || (host && root.contains(host) ? host : null);
+    const insertBeforeEl = referencesAnchor || lastUpdatedAnchor;
 
     if (insertBeforeEl) {
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
+    } else if (main && host && main.contains(host)) {
+      // If a related container exists inside main, insert above it (legacy fallback).
+      host.insertAdjacentElement("beforebegin", box);
     } else {
-      fallbackHost.appendChild(box);
+      // Append at the end of main content as a safe fallback.
+      (main || fallbackHost).appendChild(box);
     }
-
   }
-
 
 
 
