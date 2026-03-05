@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix4";
+  const OG_INCLUDES_VERSION = "v0126.5-fix5";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -1234,15 +1234,9 @@ function buildRelatedHTML(label, links) {
   function injectCalculatorCTA() {
     if (!SETTINGS.enableAutoCalculatorCTA) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
-
-    // If the page uses an older template without the expected related container,
-    // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    // Anchor all inserts inside the same main content container used by back-links & titles.
+    const main = getMainContainer() || document.querySelector("main.container") || document.querySelector("main");
+    if (!main) return;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.calculatorCtaId)) return;
@@ -1496,10 +1490,10 @@ const box = document.createElement("section");
 
     // Prefer inserting near the end of the article (but before References / Last updated),
     // so the module doesn't appear above the page title or back-links.
-    const main = document.querySelector("main.container") || document.querySelector("main");
+    // main already resolved above
 
     const findHeadingByText = (tagNames, rx) => {
-      const root = main || document;
+      const root = main;
       const els = Array.from(root.querySelectorAll(tagNames.join(",")));
       for (const el of els) {
         const t = (el.textContent || "").trim();
@@ -1513,7 +1507,7 @@ const box = document.createElement("section");
     const referencesAnchor =
       findHeadingByText(["h2","h3"], /^References(\s*&\s*updates)?$/i)
       || (() => {
-        const root = main || document;
+        const root = main;
         const strongs = Array.from(root.querySelectorAll("strong"));
         for (const st of strongs) {
           const t = (st.textContent || "").trim();
@@ -1524,9 +1518,16 @@ const box = document.createElement("section");
 
     // 2) Otherwise, insert before the *last* standalone "Last updated" marker (so it stays last).
     const lastUpdatedAnchor = (() => {
-      const root = main || document;
+      // Prefer the true bottom marker, not inline/meta mentions.
       const candidates = Array.from(root.querySelectorAll("p,div,section"))
-        .filter(el => /Last\s+updated\s*:/i.test((el.textContent || "").trim()));
+        .filter(el => {
+          if (el.classList && el.classList.contains("meta")) return false;
+          const t = (el.textContent || "").trim();
+          // Match either the strong marker or line-start marker.
+          const hasStrong = !!(el.querySelector && el.querySelector("strong") && /last\s+updated\s*:/i.test(el.querySelector("strong").textContent || ""));
+          const hasLine = /^last\s+updated\s*:/i.test(t);
+          return hasStrong || hasLine;
+        });
       return candidates.length ? candidates[candidates.length - 1] : null;
     })();
 
@@ -1536,7 +1537,7 @@ const box = document.createElement("section");
       insertBeforeEl.insertAdjacentElement("beforebegin", box);
     } else {
       // Append at the end of main content as a safe fallback.
-      (main || fallbackHost).appendChild(box);
+      main.appendChild(box);
     }
   }
 
