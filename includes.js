@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix6";
+  const OG_INCLUDES_VERSION = "v0126.5-fix8";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -1298,14 +1298,14 @@ function buildRelatedHTML(label, links) {
     if (!SETTINGS.enableAutoPropertyCTA) return;
 
     const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+      || main.querySelector(".related-box")
+      || main.querySelector("[data-related]")
+      || main.querySelector("section.related")
+      || main.querySelector(".og-related");
 
     // If the page uses an older template without the expected related container,
     // fall back to inserting near the end of the main content.
-    const fallbackHost = host || document.querySelector("main") || document.querySelector(".container") || document.body;
+    const fallbackHost = host || main;
 
     // Avoid double-inserting
     if (document.getElementById(SETTINGS.propertyCtaId)) return;
@@ -1343,11 +1343,17 @@ function buildRelatedHTML(label, links) {
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
 
-    const host = document.getElementById(SETTINGS.relatedContainerId)
-      || document.querySelector(".related-box")
-      || document.querySelector("[data-related]")
-      || document.querySelector("section.related")
-      || document.querySelector(".og-related");
+    // Anchor ALL decision-path logic to the same main container used for article content.
+    const main = (typeof getMainContainer === "function" ? getMainContainer() : null)
+      || document.querySelector("main.container")
+      || document.querySelector("main");
+    if (!main) return;
+
+    const host = main.querySelector("#" + SETTINGS.relatedContainerId)
+      || main.querySelector(".related-box")
+      || main.querySelector("[data-related]")
+      || main.querySelector("section.related")
+      || main.querySelector(".og-related");
 
     // If the page uses an older template without the expected related container,
     // fall back to inserting near the end of the main content.
@@ -1408,7 +1414,7 @@ if (isComparisonPage) return;
 
     // Failsafe: if page has a real cluster tag and an H1, we still inject even if allowList misses this path.
     // (Prevents silent disappearance when URL rewrites differ.)
-    const hasH1 = !!document.querySelector("main h1, h1");
+    const hasH1 = !!main.querySelector("h1");
     if (!allow && !hasH1) return;
 
     
