@@ -133,6 +133,156 @@
 <!-- Monetisation placement (high attention, low annoyance) -->
 <div aria-label="Advertisement" class="ad-slot"></div>
 <section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Calculator</h2>
+<p class="muted">Use either a direct monthly cost estimate or build the cost from components. The result is a planning guide, not loan approval advice.</p>
+<div class="og-form-grid">
+<div>
+<label for="grossIncome">Gross monthly income (SGD)</label>
+<input id="grossIncome" min="0" step="100" type="number" value="8000"/>
+</div>
+<div>
+<label for="fixedCommitments">Fixed monthly commitments (SGD)</label>
+<input id="fixedCommitments" min="0" step="100" type="number" value="3000"/>
+</div>
+<div>
+<label for="targetSavings">Target monthly savings / buffer (SGD)</label>
+<input id="targetSavings" min="0" step="100" type="number" value="1500"/>
+</div>
+<div>
+<label for="rideHailSpend">Current ride-hailing / taxi spend (SGD / month)</label>
+<input id="rideHailSpend" min="0" step="50" type="number" value="600"/>
+</div>
+<div>
+<label for="costMode">Cost input mode</label>
+<select id="costMode">
+<option selected="" value="direct">Direct total monthly estimate</option>
+<option value="components">Build from components</option>
+</select>
+</div>
+<div>
+<label for="oppReturn">Opportunity cost return assumption (% p.a.)</label>
+<input id="oppReturn" min="0" step="0.1" type="number" value="3.0"/>
+</div>
+</div>
+<div class="box" id="directCostWrap" style="margin-top:14px">
+<h3 style="margin-top:0">Direct monthly estimate</h3>
+<label for="directMonthlyCost">Estimated all-in car ownership cost (SGD / month)</label>
+<input id="directMonthlyCost" min="0" step="50" type="number" value="1400"/>
+<p class="muted" style="margin-top:8px">Use this if you already have a realistic all-in monthly estimate from the car ownership cost calculator.</p>
+</div>
+<div class="box" id="componentsWrap" style="margin-top:14px;display:none">
+<h3 style="margin-top:0">Build monthly cost from components</h3>
+<div class="og-form-grid">
+<div>
+<label for="purchasePrice">Purchase price / on-road price (SGD)</label>
+<input id="purchasePrice" min="0" step="1000" type="number" value="140000"/>
+</div>
+<div>
+<label for="resaleValue">Expected resale value at exit (SGD)</label>
+<input id="resaleValue" min="0" step="1000" type="number" value="70000"/>
+</div>
+<div>
+<label for="holdingYears">Planned holding period (years)</label>
+<input id="holdingYears" min="1" step="1" type="number" value="5"/>
+</div>
+<div>
+<label for="upfrontCapital">Upfront capital / downpayment used (SGD)</label>
+<input id="upfrontCapital" min="0" step="1000" type="number" value="42000"/>
+</div>
+<div>
+<label for="loanUsed">Use financing?</label>
+<select id="loanUsed">
+<option selected="" value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</div>
+<div>
+<label for="loanAmount">Loan amount (SGD)</label>
+<input id="loanAmount" min="0" step="1000" type="number" value="98000"/>
+</div>
+<div>
+<label for="interestInputType">Interest quote type</label>
+<select id="interestInputType">
+<option selected="" value="effective">Effective rate</option>
+<option value="flat">Flat rate</option>
+</select>
+</div>
+<div>
+<label for="interestRate">Interest rate (% p.a.)</label>
+<input id="interestRate" min="0" step="0.01" type="number" value="2.78"/>
+</div>
+<div>
+<label for="loanTenureYears">Loan tenure (years)</label>
+<input id="loanTenureYears" min="1" step="1" type="number" value="7"/>
+</div>
+<div>
+<label for="insuranceMonthly">Insurance (SGD / month)</label>
+<input id="insuranceMonthly" min="0" step="10" type="number" value="150"/>
+</div>
+<div>
+<label for="fuelMonthly">Fuel (SGD / month)</label>
+<input id="fuelMonthly" min="0" step="10" type="number" value="220"/>
+</div>
+<div>
+<label for="maintenanceMonthly">Maintenance + repairs (SGD / month)</label>
+<input id="maintenanceMonthly" min="0" step="10" type="number" value="120"/>
+</div>
+<div>
+<label for="parkingErpMonthly">Parking + ERP (SGD / month)</label>
+<input id="parkingErpMonthly" min="0" step="10" type="number" value="240"/>
+</div>
+</div>
+<p class="muted" style="margin-top:8px">This mode estimates monthly affordability by combining depreciation drag, financing drag, operating costs, and opportunity cost on upfront capital.</p>
+</div>
+<div class="box" style="margin-top:14px">
+<h3 style="margin-top:0">Stress test toggles</h3>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button class="btn btn-secondary" id="stressIncomeBtn" type="button">Income -20%</button>
+<button class="btn btn-secondary" id="stressRateBtn" type="button">Interest +0.5%</button>
+<button class="btn btn-secondary" id="stressRepairBtn" type="button">Repair spike +$300/m</button>
+</div>
+<p class="muted" id="stressText" style="margin-top:10px">No stress toggles active.</p>
+</div>
+</section>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi">
+<div class="kpi-label">Estimated all-in monthly cost</div>
+<div class="kpi-value" id="monthlyAllIn">—</div>
+<div class="kpi-sub">Ownership cost used by this calculator</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Car cost / income ratio</div>
+<div class="kpi-value" id="ratioPct">—</div>
+<div class="kpi-sub">Higher is more fragile</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Disposable after car + savings target</div>
+<div class="kpi-value" id="disposable">—</div>
+<div class="kpi-sub">What remains after commitments</div>
+</div>
+<div class="kpi">
+<div class="kpi-label">Affordability status</div>
+<div class="kpi-value" id="statusPill">—</div>
+<div class="kpi-sub" id="summaryLine">—</div>
+</div>
+</div>
+<div class="box" style="margin-top:14px">
+<h3 style="margin-top:0">Monthly cost breakdown (components mode)</h3>
+<ul>
+<li><strong>Depreciation / COE drag:</strong> <span id="bDep">—</span></li>
+<li><strong>Financing drag:</strong> <span id="bInt">—</span></li>
+<li><strong>Insurance:</strong> <span id="bIns">—</span></li>
+<li><strong>Fuel:</strong> <span id="bFuel">—</span></li>
+<li><strong>Maintenance:</strong> <span id="bMaint">—</span></li>
+<li><strong>Parking + ERP:</strong> <span id="bPark">—</span></li>
+<li><strong>Opportunity cost on upfront capital:</strong> <span id="bOpp">—</span></li>
+</ul>
+</div>
+</section>
+
+<section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">How to use this calculator well</h2>
 <p>Use this as a <strong>stress test</strong> for whether a car fits your monthly budget after including all running costs. It’s not about the instalment — it’s about total monthly burn.</p><ol><li>Enter your monthly income and fixed commitments.</li><li>Enter estimated car monthly costs (loan/depreciation, insurance, fuel, parking, maintenance).</li><li>Keep a buffer: if the tool says “barely affordable”, treat it as not affordable.</li></ol>
 </section>
@@ -200,7 +350,6 @@
 <p>A good affordability result leaves room for savings, buffer, and a slightly worse-than-expected month. If the result only works in a “clean” month, the plan is weak.</p>
 <p>Approval standards and personal affordability are not the same thing. A bank might approve a loan that still leaves you feeling stretched once parking, fuel, and the normal unpredictability of life show up. This is why a calculator like this should be treated as a personal planning tool rather than a proxy for lender approval.</p>
 <h2>Why affordability is more than approval</h2>
-
 <p>If the output tells you the car is only just manageable, try one more test: increase insurance, parking, and maintenance slightly and see whether the answer still feels acceptable. If that small stress test flips the decision, the plan is probably too tight.</p>
 <h2>Sanity check before you act</h2>
 <h3>References (starting points)</h3>
