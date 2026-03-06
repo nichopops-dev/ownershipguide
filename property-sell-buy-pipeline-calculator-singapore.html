@@ -130,85 +130,67 @@
 </div>
 <section aria-label="Notes and assumptions" class="og-editorial">
 <div class="og-divider"></div>
-<p class="og-last-updated"><strong></strong> 2 Mar 2026</p>
 <h2>Using the planner step by step</h2>
-<p>This page is a planning model. Use it to get a <em>directionally correct</em> answer fast, then confirm final numbers with your bank/lawyer/agent and official calculators where relevant.</p>
-<h2>Key assumptions (what this model does and doesn’t do)</h2>
+<p>This planner is best used as the transition dashboard for an existing move. Enter the core numbers once, generate the pre-filled links, then go deeper only where you need more precision. In practice, most users should validate the sale side first, then the buy side, then the transition gap.</p>
+<ol>
+<li>Enter a conservative sale price and your current loan balance.</li>
+<li>Estimate CPF used and the likely refund duration.</li>
+<li>Enter the next purchase price and planned LTV.</li>
+<li>Add BSD, ABSD if relevant, and other upfront fees.</li>
+<li>Open the pre-filled tools to validate sale proceeds, CPF refund, buy-side cash need, and the bridge.</li>
+</ol>
+
+<h2>What this planner does and does not do</h2>
 <ul class="og-bullets">
-<li>This tool exists to reduce re-typing: enter core numbers once, then jump into prefilled calculators.</li><li>Inputs are stored in the URL query string for sharing; do not include personal identifiers.</li><li>Always re-check fees/taxes with your agent/lawyer for the final transaction.</li>
+<li>This page reduces re-typing. It creates a clean input layer for the related property calculators.</li>
+<li>It is most useful when the move already exists conceptually and you want to pressure-test the sequence.</li>
+<li>It does not replace legal, tax, bank, or conveyancing confirmation for a live transaction.</li>
+<li>Inputs are stored in the URL query string for sharing. Do not include personal identifiers.</li>
 </ul>
+
 <h2>Worked example</h2>
 <div class="og-callout">
-<p class="og-callout-title">Example: share a scenario with spouse/partner</p>
-<p>Use the generated links to share the exact same assumptions so both of you can discuss the same numbers (especially CPF refund and cash shortfall).</p>
+<p class="og-callout-title">Example: align both spouses on one set of assumptions</p>
+<p>Instead of discussing five different versions of the same move, enter one sale price, one loan balance, one CPF estimate, and one next purchase price. Then share the generated link so both of you are looking at the same inputs before debating whether the upgrade is worth it.</p>
 </div>
+
+<h2>Scenario library</h2>
+<ul class="og-bullets">
+<li><strong>Sell-first, safer route:</strong> use the pipeline to see whether sale proceeds and CPF refund likely clear the next purchase cleanly.</li>
+<li><strong>Buy-first, tighter route:</strong> use the bridge calculator after the pipeline to check whether the timing gap creates a real cash shortfall.</li>
+<li><strong>Downgrade for liquidity:</strong> the pipeline helps distinguish between headline sale gains and actual usable cash after CPF refund and fees.</li>
+</ul>
+
 <h2>Common mistakes</h2>
 <ul class="og-bullets">
-<li>Mixing up <strong>cash</strong> vs <strong>CPF</strong> (they behave differently in approvals and refunds).</li>
-<li>Using optimistic assumptions (resale value, appreciation, investment return) without testing a conservative scenario.</li>
-<li>Forgetting one-off costs (fees, penalties, duties) that dominate short horizons.</li>
+<li>Typing optimistic sale numbers here and then treating all downstream results as reliable.</li>
+<li>Forgetting that CPF refund and cash available are different pools.</li>
+<li>Leaving BSD or other fees at zero when they are material to the move.</li>
+<li>Sharing the link without re-checking whether the assumptions are still current.</li>
 </ul>
+
 <h2>FAQ</h2>
 <div class="og-faq">
-<details><summary>Is my data uploaded anywhere?</summary><div class="og-faq-a"><p>No. It’s a static site; values are in the URL only.</p></div></details><details><summary>Why do some calculators still require ‘Calculate’ click?</summary><div class="og-faq-a"><p>To keep normal browsing safe; auto-run happens only when prefilled values exist.</p></div></details><details><summary>Can I use this for multiple properties?</summary><div class="og-faq-a"><p>Yes — save separate links for each scenario.</p></div></details>
+<details><summary>Should I start with this page or with the bridge calculator?</summary><div class="og-faq-a"><p>Start here if you want one input layer and faster routing. Start with the bridge calculator if you already know the exact cash-versus-CPF question you need answered.</p></div></details>
+<details><summary>Can this tell me whether I definitely need bridging?</summary><div class="og-faq-a"><p>Not on its own. It helps structure the numbers and route you into the bridge model. The real answer depends on timing, liquidity, and whether the core move is already viable without heroic assumptions.</p></div></details>
+<details><summary>What if I do not know my BSD or CPF refund yet?</summary><div class="og-faq-a"><p>Use planning estimates first, then validate them with the BSD/ABSD calculator and CPF accrued interest calculator. The point is to identify whether the move is roughly sound before you polish the numbers.</p></div></details>
 </div>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Using the calculator step by step</h2>
-<p>Use this to plan the <strong>sell → buy</strong> timeline and cashflow pinch points (option fees, stamp duty, bridging gaps). The key is timing mismatches.</p><ol><li>Enter sale completion date assumptions.</li><li>Enter purchase milestones (OTP, exercise, completion).</li><li>Check for periods where you need cash before sale proceeds arrive.</li></ol>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Scenario library (sanity checks)</h2>
-<p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
-<ul><li><strong>Example A (tight overlap):</strong> <p>If purchase OTP is exercised before sale completes, you may need bridging cash. Use this to identify the worst month.</p></li><li><strong>Example B (sell first):</strong> <p>Sell first reduces bridging risk but may require temporary housing. Compare the trade-off.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
-<ul><li>Transaction timelines vary; treat this as a planning map.</li><li>Excludes bank bridging loan terms and costs; verify with lender.</li><li>Planning tool; not advice.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<p>The more moving parts your plan has, the more useful it is to run a conservative version first.</p>
-<ul>
-<li>Assuming all sale proceeds are “free cash” without accounting for loan redemption and CPF refund effects.</li>
-<li>Forgetting bridging periods, temporary housing, or timing mismatches.</li>
-<li>Underestimating transaction costs on the next purchase.</li>
+
+<h2>Best way to use the output</h2>
+<p>Think of the generated links as a routing layer, not a final answer. If the bridge looks tight, the next action is not to “hope it works” — it is to identify whether the problem is sale proceeds, CPF timing, duties, or borrowing limit. This planner is useful because it shows you where the pressure is likely to come from.</p>
+
+<h2>References</h2>
+<ul class="og-bullets">
+<li><a href="/property-upgrade-planner-singapore.html">Property Upgrade Planner</a></li>
+<li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / Downgrade Property Calculator</a></li>
+<li><a href="/sell-property-proceeds-calculator-singapore.html">Sell Property Proceeds Calculator</a></li>
+<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">How Much Cash to Buy Property Calculator</a></li>
+<li><a href="/cpf-accrued-interest-calculator-singapore.html">CPF Accrued Interest Calculator</a></li>
+<li><a href="/bsd-absd-calculator-singapore.html">BSD / ABSD Calculator</a></li>
+<li><a href="/property/financing/">Property Financing Hub</a></li>
 </ul>
-<h2>Where people get tripped up</h2>
-<p>Start with conservative estimates for your current sale and your next purchase. Then use the pre-filled links to pressure-test the weak spots: stamp duty, affordability, and cash needed at completion. The goal is not to predict the transaction down to the dollar on the first pass. The goal is to identify whether the move is broadly feasible before you spend time on granular optimisation.</p>
-<h2>Best way to use the planner</h2>
-<p>This page is not trying to be one giant calculator that does everything. Its job is to map your sell→buy pipeline and pre-fill the next tools so you can work through the sequence logically: sale proceeds, CPF returned, cash available, stamp duties, and affordability for the next purchase. That sequencing matters because many mistakes happen when people solve each number in isolation instead of following the pipeline end-to-end.</p>
-<h2>What makes this planner different</h2>
-<p>Before acting on the result, ask whether the output still makes sense after a conservative stress test. Good calculator use is not about precision to the last dollar; it is about avoiding decisions that only work in the optimistic case. If the answer still holds after you use harsher assumptions, that is usually a sign the decision is robust enough to move forward.</p>
-<h2>Output checklist</h2>
-<p>Re-run the calculator whenever one of the major assumptions changes meaningfully: rate, tenure, resale value, rent, energy cost, or your expected holding period. Small updates to these inputs often matter more than trying to make the original run more precise.</p><h2>When to re-run the model</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the calculator cannot decide for you</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the model leaves out</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Common interpretation mistakes</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Mistakes to avoid when reading the output</h2>
-<p>Run one optimistic case, one conservative case, and one “messy real life” case. The messy case is the most useful: slightly worse rates, slightly lower resale, slightly higher costs, and a shorter holding period than planned. If the decision still looks acceptable, you have a more resilient answer.</p>
-<h2>Quick scenario ideas</h2>
-<h2 style="margin-top:0">References</h2>
-<p class="muted">Starting points — verify the latest terms/policies before acting.</p>
-<ul><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">IRAS</a></li><li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li></ul>
-<p class="muted" style="margin-top:12px;margin-bottom:0"><strong>Last updated:</strong> 2 Mar 2026 — <a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
-</section>
-</main>
+<p class="muted" style="margin-top:12px;margin-bottom:0"><strong>Last updated:</strong> 7 Mar 2026 — <a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
+</section></main>
 <div id="site-footer"></div>
 <script>
     const fmt0=(n)=> (Number.isFinite(n)? n:0).toLocaleString(undefined,{maximumFractionDigits:0});
