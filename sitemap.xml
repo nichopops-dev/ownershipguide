@@ -175,6 +175,18 @@
 
   <!-- Alternatives / public transport baseline -->
   <url>
+    <loc>https://ownershipguide.com/road-tax-cost-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/parf-paper-value-deregistration-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
     <loc>https://ownershipguide.com/public-transport-cost-singapore.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
