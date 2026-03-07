@@ -263,6 +263,8 @@ decisionPathOverrides: {
         { url: "/parking-cost-singapore.html", title: "Parking Cost in Singapore (2026): Season Parking, Office, Mall Rates + Real Monthly Budget", subtopic: "variable-cost" },
         { url: "/fuel-cost-singapore.html", title: "Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios", subtopic: "variable-cost" },
         { url: "/road-tax-cost-singapore.html", title: "Road Tax Cost in Singapore (2026): How to Budget It Properly for Car Ownership", subtopic: "variable-cost" },
+        { url: "/omv-arf-car-taxes-singapore.html", title: "OMV, ARF, and Car Taxes in Singapore (2026): How Car Prices Are Built", subtopic: "pricing" },
+        { url: "/car-price-breakdown-singapore.html", title: "Car Price Breakdown in Singapore (2026): What You're Actually Paying For", subtopic: "buying" },
         { url: "/parf-paper-value-deregistration-singapore.html", title: "PARF, Paper Value, and Deregistration in Singapore (2026): What Exit Value Really Means", subtopic: "coe" },
         { url: "/ev-vs-petrol-cost-singapore.html", title: "EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even", subtopic: "variable-cost" },
         { url: "/public-transport-cost-singapore.html", title: "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Models", subtopic: "alternative" },
