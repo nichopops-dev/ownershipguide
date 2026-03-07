@@ -319,6 +319,9 @@ decisionPathOverrides: {
         { url: "/tdsr-msr-calculator-singapore.html", title: "TDSR / MSR Calculator Singapore (2026): Max Home Loan & Borrowing Limit", subtopic: "calculator" },
         { url: "/property/financing/", title: "Property Financing (Singapore, 2026): Home Loans, Refinancing, Borrowing Rules", subtopic: "financing" },
         { url: "/cash-over-valuation-cov-singapore.html", title: "Cash Over Valuation (COV) in Singapore (2026): Why Resale Deals Can Still Fail", subtopic: "acquisition" },
+        { url: "/property-tax-singapore.html", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
+        { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore.html", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
+        { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" },
         { url: "/progressive-payment-vs-resale-payment-timeline-singapore.html", title: "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different", subtopic: "mechanics" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
         { url: "/cpf-accrued-interest-calculator-singapore.html", title: "CPF Accrued Interest Calculator Singapore (OA): Estimate Refund on Sale", subtopic: "cpf" },
@@ -328,7 +331,10 @@ decisionPathOverrides: {
         { url: "/sell-property-cost-singapore.html", title: "Sell Property Cost in Singapore (2026): Fees, SSD, and Net Proceeds Reality", subtopic: "exit" },
         { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
         { url: "/rental-property-ownership-cost.html", title: "The Real Cost of Owning a Rental Property in Singapore (2026)", subtopic: "rental" },
-        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" }
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" },
+        { url: "/property-tax-singapore.html", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
+        { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore.html", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
+        { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
       ],
       pages: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", subtopic: "ownership" },
@@ -347,6 +353,9 @@ decisionPathOverrides: {
         { url: "/home-loan-refinancing-costs-singapore.html", title: "Home Loan Refinancing Costs in Singapore (2026): Fees, Subsidies, and Break-Even Reality", subtopic: "financing" },
         { url: "/how-much-cash-to-buy-property-singapore.html", title: "How Much Cash Do You Need to Buy Property in Singapore? (2026 Real Breakdown)", subtopic: "affordability" },
         { url: "/cash-over-valuation-cov-singapore.html", title: "Cash Over Valuation (COV) in Singapore (2026): Why Resale Deals Can Still Fail", subtopic: "acquisition" },
+        { url: "/property-tax-singapore.html", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
+        { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore.html", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
+        { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" },
         { url: "/progressive-payment-vs-resale-payment-timeline-singapore.html", title: "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different", subtopic: "mechanics" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "Upfront Cash to Buy Property Calculator (Singapore, 2026): Cash + CPF Split", subtopic: "calculator" },
         { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
@@ -354,7 +363,10 @@ decisionPathOverrides: {
         { url: "/property-affordability-calculator-singapore.html", title: "Property Affordability Stress Test Calculator (Singapore, 2026)", subtopic: "calculator" },
         { url: "/mortgage-amortization-calculator-singapore.html", title: "Mortgage Amortization Calculator (Singapore, 2026): Monthly Payment + Total Interest", subtopic: "calculator" },
         { url: "/hdb-loan-vs-bank-loan-calculator-singapore.html", title: "HDB vs Bank Loan Calculator Singapore (2026): Monthly + Total Interest", subtopic: "calculator" },
-        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" }
+        { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" },
+        { url: "/property-tax-singapore.html", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
+        { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore.html", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
+        { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
       ],
       bridges: [
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
