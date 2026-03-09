@@ -230,6 +230,8 @@ decisionPathOverrides: {
         { url: "/monthly-cost-of-owning-a-car-singapore.html", title: "True Monthly Cost of Owning a Car in Singapore", subtopic: "ownership" },
         { url: "/should-i-buy-car-now-or-wait-singapore.html", title: "Should You Buy a Car Now or Wait in Singapore? (2026 COE Timing Framework)", subtopic: "timing" },
         { url: "/car-insurance-cost-singapore.html", title: "Car Insurance Cost in Singapore (2026)", subtopic: "insurance" },
+        { url: "/no-claim-discount-ncd-singapore.html", title: "No-Claim Discount (NCD) in Singapore Car Insurance (2026): Why One Claim Can Echo for Years", subtopic: "insurance" },
+        { url: "/car-insurance-excess-and-claims-singapore.html", title: "Car Insurance Excess and Claims in Singapore (2026): When Making a Claim Actually Makes Sense", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-ownership-cost-calculator-singapore.html", title: "Car Ownership Cost Calculator (Singapore, 2026): True All-In Monthly Cost (5-Year TCO)", subtopic: "calculator" },
