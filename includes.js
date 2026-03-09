@@ -304,6 +304,8 @@ decisionPathOverrides: {
         { url: "/bsd-absd-calculator-singapore.html", title: "BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty", subtopic: "calculator" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "How Much Cash to Buy Property Calculator (Singapore, 2026): Upfront Cash + CPF", subtopic: "calculator" },
         { url: "/sell-property-proceeds-calculator-singapore.html", title: "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality", subtopic: "calculator" },
+        { url: "/property-valuation-vs-asking-price-singapore.html", title: "Property Valuation vs Asking Price in Singapore (2026): Why Sellers Misread What Their Home Can Actually Fetch", subtopic: "exit" },
+        { url: "/selling-property-timeline-singapore.html", title: "Selling Property Timeline in Singapore (2026): How Long It Really Takes and Why Timing Assumptions Break Plans", subtopic: "exit" },
         { url: "/rent-out-vs-sell-calculator-singapore.html", title: "Rent Out vs Sell Calculator (Singapore, 2026): Net Worth After X Years", subtopic: "calculator" },
         { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
         { url: "/property-upgrade-ladder-calculator-singapore.html", title: "Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer", subtopic: "calculator" },
