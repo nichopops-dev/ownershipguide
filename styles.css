@@ -1348,6 +1348,13 @@ body.home .box{ background: #ffffff; }
 .compact-links{ display:flex; flex-wrap:wrap; gap:8px 14px; }
 .compact-links a{ white-space: nowrap; }
 
+.route-list--structured p:last-of-type{ margin-bottom: 0; }
+.route-buckets{ display:grid; gap:12px; margin: 14px 18px 18px; }
+.route-bucket{ padding:14px 16px; border:1px solid var(--border); border-radius: 14px; background:#fff; box-shadow: var(--shadowSm); }
+.route-bucket h4{ margin:0 0 8px; font-size: 15px; color: var(--text); }
+.route-bucket ul{ margin:0; padding-left: 18px; }
+.route-bucket li{ margin: 6px 0; }
+
 .footer{
   border-top: 1px solid rgba(200,212,229,0.9);
   color: var(--muted);
