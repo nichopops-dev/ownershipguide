@@ -549,6 +549,18 @@ th {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.start-here-lanes{
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 860px){
+  .start-here-lanes{
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    justify-content: center;
+  }
+}
 .card{
   border: 1px solid rgba(0,0,0,0.10);
   border-radius: 14px;
