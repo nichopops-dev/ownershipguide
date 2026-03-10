@@ -868,6 +868,10 @@ body.home .card{
 /* OG checklist + FAQ (comparisons consistency) */
 .og-checklist {
   margin: 0;
+}
+.og-checklist ul,
+.og-checklist ol {
+  margin: 0;
   padding-left: 0;
   list-style: none;
 }
