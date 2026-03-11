@@ -751,4 +751,23 @@
   <url><loc>https://ownershipguide.com/family-grant-singapore.html</loc></url>
   <url><loc>https://ownershipguide.com/proximity-housing-grant-phg-singapore.html</loc></url>
   <url><loc>https://ownershipguide.com/hdb-income-ceiling-singapore.html</loc></url>
+
+  <url>
+    <loc>https://ownershipguide.com/hfe-letter-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/deferred-income-assessment-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <lastmod>2026-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/staggered-downpayment-singapore.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <lastmod>2026-03-11</lastmod>
+  </url>
 </urlset>
