@@ -280,6 +280,8 @@ decisionPathOverrides: {
         { url: "/ev-battery-degradation-singapore.html", title: "EV Battery Degradation in Singapore (2026): What Matters, What Doesn't, and When to Worry", subtopic: "ownership-risk" },
         { url: "/ev-battery-replacement-cost-singapore.html", title: "EV Battery Replacement Cost in Singapore (2026): Real Risk, Warranty Buffer, and When It Matters", subtopic: "ownership-risk" },
         { url: "/should-you-buy-a-used-ev-singapore.html", title: "Should You Buy a Used EV in Singapore? (2026 Decision Framework)", subtopic: "decision" },
+        { url: "/ev-resale-value-singapore.html", title: "EV Resale Value in Singapore (2026): What Actually Matters", subtopic: "ownership-risk" },
+        { url: "/ev-battery-warranty-singapore.html", title: "EV Battery Warranty in Singapore (2026): Why It Matters More Than Buyers Think", subtopic: "ownership-risk" },
         { url: "/public-transport-cost-singapore.html", title: "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Models", subtopic: "alternative" },
         { url: "/motorcycle-ownership-cost-singapore.html", title: "Motorcycle Ownership Cost in Singapore (2026): Monthly Budget + 5-Year Reality Check", subtopic: "alternative" },
         { url: "/motorcycle-vs-car-cost-singapore.html", title: "Motorcycle vs Car Cost in Singapore (2026): Full Exposure Comparison", cluster: "transport", subtopic: "comparison" },
