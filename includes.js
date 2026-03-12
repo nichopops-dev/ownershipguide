@@ -362,6 +362,8 @@ decisionPathOverrides: {
         { url: "/joint-tenancy-vs-tenancy-in-common-singapore.html", title: "Joint Tenancy vs Tenancy in Common in Singapore (2026): The Ownership Choice That Shapes Exit, Inheritance, and Flexibility", subtopic: "ownership-structure" },
         { url: "/property-decoupling-singapore.html", title: "Property Decoupling in Singapore (2026): When It Helps, When It Backfires, and Why It Is Not a Default Trick", subtopic: "ownership-structure" },
         { url: "/buying-property-with-parents-or-family-singapore.html", title: "Buying Property With Parents or Family in Singapore (2026): When Co-Ownership Helps and When It Becomes Future Friction", subtopic: "ownership-structure" },
+        { url: "/what-happens-to-property-when-an-owner-dies-singapore.html", title: "What Happens to Property When an Owner Dies in Singapore (2026): Title Structure, Survivorship, and the Decisions Families Face Next", subtopic: "inheritance" },
+        { url: "/selling-an-inherited-property-singapore.html", title: "Selling an Inherited Property in Singapore (2026): Why Succession Sales Feel Different from Ordinary Resales", subtopic: "inheritance" },
         { url: "/sales-of-balance-flats-sbf-singapore.html", title: "Sales of Balance Flats (SBF) in Singapore (2026): When It Beats Waiting for BTO or Stretching for Resale", subtopic: "hdb" },
         { url: "/open-booking-of-flats-singapore.html", title: "Open Booking of Flats in Singapore (2026): When Immediate Access Beats Waiting for the Ideal Launch", subtopic: "hdb" },
         { url: "/bto-ballot-and-wait-time-singapore.html", title: "BTO Ballot and Wait Time in Singapore (2026): When a Cheaper Route Becomes Expensive Through Delay and Uncertainty", subtopic: "hdb" },
