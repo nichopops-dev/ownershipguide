@@ -218,6 +218,10 @@ decisionPathOverrides: {
         { url: "/hdb-loan-vs-bank-loan-singapore.html", title: "HDB Loan vs Bank Loan in Singapore (2026): Decision Framework + Worked Example", cluster: "property", subtopic: "comparison" },
         { url: "/should-i-buy-property-now-or-wait-singapore.html", title: "Buy Property Now vs Wait in Singapore (2026): Decision Framework + Worked Example", cluster: "property", subtopic: "comparison" },
         { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay Down Mortgage vs Invest in Singapore (2026): Framework + Worked Example", cluster: "property", subtopic: "comparison" },
+        { url: "/should-you-make-partial-prepayment-home-loan-singapore.html", title: "Should You Make a Partial Prepayment on Your Home Loan in Singapore? (2026)", cluster: "property", subtopic: "financing" },
+        { url: "/reduce-tenure-vs-lower-monthly-instalment-singapore.html", title: "Reduce Tenure vs Lower Monthly Instalment in Singapore (2026)", cluster: "property", subtopic: "financing" },
+        { url: "/cpf-oa-vs-cash-for-home-loan-singapore.html", title: "CPF OA vs Cash for Home Loan in Singapore (2026)", cluster: "property", subtopic: "financing" },
+        { url: "/what-to-do-when-home-loan-lock-in-ends-singapore.html", title: "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)", cluster: "property", subtopic: "financing" },
 
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-loan-vs-cash-singapore.html", title: "Car Loan vs Pay Cash in Singapore (2026): Decision Rules + Worked Example", cluster: "transport", subtopic: "comparison" },
