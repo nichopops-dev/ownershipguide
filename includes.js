@@ -234,7 +234,11 @@ decisionPathOverrides: {
         { url: "/hybrid-vs-petrol-singapore.html", title: "Hybrid vs Petrol in Singapore (2026): Is Hybrid Actually the Smarter Middle Path?", cluster: "transport", subtopic: "comparison" },
         { url: "/hybrid-vs-ev-singapore.html", title: "Hybrid vs EV in Singapore (2026): Which Transition Route Actually Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/should-you-buy-a-hybrid-car-singapore.html", title: "Should You Buy a Hybrid Car in Singapore? (2026): Who It Fits, When It Works, and When It Quietly Becomes the Wrong Compromise", cluster: "transport", subtopic: "decision" },
-        { url: "/self-charging-hybrid-vs-plug-in-hybrid-singapore.html", title: "Self-Charging Hybrid vs Plug-In Hybrid in Singapore (2026): Which Hybrid Route Actually Fits Better?", cluster: "transport", subtopic: "comparison" }
+        { url: "/self-charging-hybrid-vs-plug-in-hybrid-singapore.html", title: "Self-Charging Hybrid vs Plug-In Hybrid in Singapore (2026): Which Hybrid Route Actually Fits Better?", cluster: "transport", subtopic: "comparison" },
+        { url: "/comprehensive-vs-third-party-car-insurance-singapore.html", title: "Comprehensive vs Third-Party Car Insurance in Singapore (2026): Which Policy Structure Actually Fits Your Risk?", cluster: "transport", subtopic: "insurance" },
+        { url: "/high-excess-vs-low-excess-car-insurance-singapore.html", title: "High Excess vs Low Excess Car Insurance in Singapore (2026): Which Trade-Off Actually Fits Your Buffer?", cluster: "transport", subtopic: "insurance" },
+        { url: "/named-driver-vs-any-authorised-driver-car-insurance-singapore.html", title: "Named Driver vs Any Authorised Driver Car Insurance in Singapore (2026): Are You Saving Money or Making the Car Less Usable?", cluster: "transport", subtopic: "insurance" },
+        { url: "/when-cheap-car-insurance-becomes-false-savings-singapore.html", title: "When Cheap Car Insurance Becomes False Savings in Singapore (2026): The Premium Is Lower, but Is the Policy Actually Right?", cluster: "transport", subtopic: "insurance" }
       ],
       bridges: [
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" },
@@ -257,6 +261,10 @@ decisionPathOverrides: {
         { url: "/car-insurance-cost-singapore.html", title: "Car Insurance Cost in Singapore (2026)", subtopic: "insurance" },
         { url: "/no-claim-discount-ncd-singapore.html", title: "No-Claim Discount (NCD) in Singapore Car Insurance (2026): Why One Claim Can Echo for Years", subtopic: "insurance" },
         { url: "/car-insurance-excess-and-claims-singapore.html", title: "Car Insurance Excess and Claims in Singapore (2026): When Making a Claim Actually Makes Sense", subtopic: "insurance" },
+        { url: "/comprehensive-vs-third-party-car-insurance-singapore.html", title: "Comprehensive vs Third-Party Car Insurance in Singapore (2026): Which Policy Structure Actually Fits Your Risk?", subtopic: "insurance" },
+        { url: "/high-excess-vs-low-excess-car-insurance-singapore.html", title: "High Excess vs Low Excess Car Insurance in Singapore (2026): Which Trade-Off Actually Fits Your Buffer?", subtopic: "insurance" },
+        { url: "/named-driver-vs-any-authorised-driver-car-insurance-singapore.html", title: "Named Driver vs Any Authorised Driver Car Insurance in Singapore (2026): Are You Saving Money or Making the Car Less Usable?", subtopic: "insurance" },
+        { url: "/when-cheap-car-insurance-becomes-false-savings-singapore.html", title: "When Cheap Car Insurance Becomes False Savings in Singapore (2026): The Premium Is Lower, but Is the Policy Actually Right?", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-ownership-cost-calculator-singapore.html", title: "Car Ownership Cost Calculator (Singapore, 2026): True All-In Monthly Cost (5-Year TCO)", subtopic: "calculator" },
