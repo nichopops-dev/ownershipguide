@@ -230,7 +230,11 @@ decisionPathOverrides: {
         { url: "/mileage-vs-age-when-buying-used-car-singapore.html", title: "Mileage vs Age When Buying a Used Car in Singapore (2026): Which Signal Matters More — and When One Quietly Lies to You", cluster: "transport", subtopic: "buying" },
         { url: "/used-car-listing-red-flags-singapore.html", title: "Used-Car Listing Red Flags in Singapore (2026): Which Listings Are Not Worth Your Time — Even Before Viewing", cluster: "transport", subtopic: "buying" },
         { url: "/questions-to-answer-before-you-commit-to-car-deal-singapore.html", title: "Questions to Answer Before You Commit to a Car Deal in Singapore (2026): A Final Decision Filter Before Deposit, Loan, and Regret", cluster: "transport", subtopic: "decision" },
-        { url: "/low-monthly-payment-traps-when-buying-car-singapore.html", title: "Low Monthly Payment Traps When Buying a Car in Singapore (2026): Why ‘Can Afford the Monthly’ Is Not the Same as ‘Good Deal’", cluster: "transport", subtopic: "financing" }
+        { url: "/low-monthly-payment-traps-when-buying-car-singapore.html", title: "Low Monthly Payment Traps When Buying a Car in Singapore (2026): Why ‘Can Afford the Monthly’ Is Not the Same as ‘Good Deal’", cluster: "transport", subtopic: "financing" },
+        { url: "/hybrid-vs-petrol-singapore.html", title: "Hybrid vs Petrol in Singapore (2026): Is Hybrid Actually the Smarter Middle Path?", cluster: "transport", subtopic: "comparison" },
+        { url: "/hybrid-vs-ev-singapore.html", title: "Hybrid vs EV in Singapore (2026): Which Transition Route Actually Fits Better?", cluster: "transport", subtopic: "comparison" },
+        { url: "/should-you-buy-a-hybrid-car-singapore.html", title: "Should You Buy a Hybrid Car in Singapore? (2026): Who It Fits, When It Works, and When It Quietly Becomes the Wrong Compromise", cluster: "transport", subtopic: "decision" },
+        { url: "/self-charging-hybrid-vs-plug-in-hybrid-singapore.html", title: "Self-Charging Hybrid vs Plug-In Hybrid in Singapore (2026): Which Hybrid Route Actually Fits Better?", cluster: "transport", subtopic: "comparison" }
       ],
       bridges: [
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" },
@@ -310,6 +314,10 @@ decisionPathOverrides: {
         { url: "/should-you-buy-a-used-ev-singapore.html", title: "Should You Buy a Used EV in Singapore? (2026 Decision Framework)", subtopic: "decision" },
         { url: "/ev-resale-value-singapore.html", title: "EV Resale Value in Singapore (2026): What Actually Matters", subtopic: "ownership-risk" },
         { url: "/ev-battery-warranty-singapore.html", title: "EV Battery Warranty in Singapore (2026): Why It Matters More Than Buyers Think", subtopic: "ownership-risk" },
+        { url: "/hybrid-vs-petrol-singapore.html", title: "Hybrid vs Petrol in Singapore (2026): Is Hybrid Actually the Smarter Middle Path?", subtopic: "comparison" },
+        { url: "/hybrid-vs-ev-singapore.html", title: "Hybrid vs EV in Singapore (2026): Which Transition Route Actually Fits Better?", subtopic: "comparison" },
+        { url: "/should-you-buy-a-hybrid-car-singapore.html", title: "Should You Buy a Hybrid Car in Singapore? (2026): Who It Fits, When It Works, and When It Quietly Becomes the Wrong Compromise", subtopic: "decision" },
+        { url: "/self-charging-hybrid-vs-plug-in-hybrid-singapore.html", title: "Self-Charging Hybrid vs Plug-In Hybrid in Singapore (2026): Which Hybrid Route Actually Fits Better?", subtopic: "comparison" },
         { url: "/public-transport-cost-singapore.html", title: "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Models", subtopic: "alternative" },
         { url: "/motorcycle-ownership-cost-singapore.html", title: "Motorcycle Ownership Cost in Singapore (2026): Monthly Budget + 5-Year Reality Check", subtopic: "alternative" },
         { url: "/motorcycle-vs-car-cost-singapore.html", title: "Motorcycle vs Car Cost in Singapore (2026): Full Exposure Comparison", cluster: "transport", subtopic: "comparison" },
