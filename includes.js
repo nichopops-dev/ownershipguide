@@ -226,7 +226,11 @@ decisionPathOverrides: {
         { url: "/car-leasing-vs-buying-singapore.html", title: "Car Leasing vs Buying in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-loan-vs-cash-singapore.html", title: "Car Loan vs Pay Cash in Singapore (2026): Decision Rules + Worked Example", cluster: "transport", subtopic: "comparison" },
         { url: "/balloon-loan-vs-normal-car-loan-singapore.html", title: "Balloon Loan vs Normal Car Loan in Singapore (2026): Decision Framework + Worked Example", cluster: "transport", subtopic: "comparison" },
-        { url: "/used-car-vs-new-car-singapore.html", title: "Used vs New Car in Singapore (2026): Which Is Cheaper Over 5 Years?", cluster: "transport", subtopic: "comparison" }
+        { url: "/used-car-vs-new-car-singapore.html", title: "Used vs New Car in Singapore (2026): Which Is Cheaper Over 5 Years?", cluster: "transport", subtopic: "comparison" },
+        { url: "/mileage-vs-age-when-buying-used-car-singapore.html", title: "Mileage vs Age When Buying a Used Car in Singapore (2026): Which Signal Matters More — and When One Quietly Lies to You", cluster: "transport", subtopic: "buying" },
+        { url: "/used-car-listing-red-flags-singapore.html", title: "Used-Car Listing Red Flags in Singapore (2026): Which Listings Are Not Worth Your Time — Even Before Viewing", cluster: "transport", subtopic: "buying" },
+        { url: "/questions-to-answer-before-you-commit-to-car-deal-singapore.html", title: "Questions to Answer Before You Commit to a Car Deal in Singapore (2026): A Final Decision Filter Before Deposit, Loan, and Regret", cluster: "transport", subtopic: "decision" },
+        { url: "/low-monthly-payment-traps-when-buying-car-singapore.html", title: "Low Monthly Payment Traps When Buying a Car in Singapore (2026): Why ‘Can Afford the Monthly’ Is Not the Same as ‘Good Deal’", cluster: "transport", subtopic: "financing" }
       ],
       bridges: [
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" },
@@ -337,6 +341,10 @@ decisionPathOverrides: {
         { url: "/used-car-records-checklist-singapore.html", title: "Used-Car Records Checklist in Singapore (2026): What Paperwork Can — and Cannot — Tell You", subtopic: "buying" },
         { url: "/used-car-dealer-warranty-singapore.html", title: "Used-Car Dealer Warranty in Singapore (2026): What It Actually Protects — and What It Does Not", subtopic: "buying" },
         { url: "/buy-used-car-from-dealer-vs-direct-owner-singapore.html", title: "Buy Used Car From Dealer vs Direct Owner in Singapore (2026): Which Route Actually Fits You?", subtopic: "comparison" },
+        { url: "/mileage-vs-age-when-buying-used-car-singapore.html", title: "Mileage vs Age When Buying a Used Car in Singapore (2026): Which Signal Matters More — and When One Quietly Lies to You", subtopic: "buying" },
+        { url: "/used-car-listing-red-flags-singapore.html", title: "Used-Car Listing Red Flags in Singapore (2026): Which Listings Are Not Worth Your Time — Even Before Viewing", subtopic: "buying" },
+        { url: "/questions-to-answer-before-you-commit-to-car-deal-singapore.html", title: "Questions to Answer Before You Commit to a Car Deal in Singapore (2026): A Final Decision Filter Before Deposit, Loan, and Regret", subtopic: "decision" },
+        { url: "/low-monthly-payment-traps-when-buying-car-singapore.html", title: "Low Monthly Payment Traps When Buying a Car in Singapore (2026): Why ‘Can Afford the Monthly’ Is Not the Same as ‘Good Deal’", subtopic: "financing" },
         { url: "/trade-in-vs-direct-sale-car-singapore.html", title: "Trade-In vs Direct Sale for Cars in Singapore (2026): Which Exit Route Actually Leaves You Better Off?", subtopic: "comparison" },
         { url: "/consignment-vs-dealer-sale-car-singapore.html", title: "Consignment vs Dealer Sale for Cars in Singapore (2026): More Upside, More Waiting, or Just More Uncertainty?", subtopic: "comparison" },
         { url: "/should-you-repair-car-before-selling-singapore.html", title: "Should You Repair Your Car Before Selling in Singapore? (2026): What to Fix, What to Leave, and When ‘As-Is’ Is Smarter", subtopic: "decision" },
