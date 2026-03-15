@@ -54,6 +54,12 @@
     <lastmod>2026-02-01</lastmod>
   </url>
   <url>
+    <loc>https://ownershipguide.com/family/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-03-16</lastmod>
+  </url>
+  <url>
     <loc>https://ownershipguide.com/calculators/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
@@ -1058,4 +1064,9 @@
   <url><loc>https://ownershipguide.com/trade-in-vs-direct-sale-motorcycle-singapore.html</loc></url>
   <url><loc>https://ownershipguide.com/consignment-vs-dealer-sale-motorcycle-singapore.html</loc></url>
   <url><loc>https://ownershipguide.com/should-you-repair-motorcycle-before-selling-singapore.html</loc></url>
+
+
+  <url><loc>https://ownershipguide.com/cost-of-having-a-baby-singapore.html</loc></url>
+  <url><loc>https://ownershipguide.com/infantcare-vs-childcare-cost-singapore.html</loc></url>
+  <url><loc>https://ownershipguide.com/how-much-does-it-cost-to-raise-a-child-singapore.html</loc></url>
 </urlset>

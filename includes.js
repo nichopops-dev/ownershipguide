@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.5-fix8";
+  const OG_INCLUDES_VERSION = "v0126.6-family";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -34,7 +34,8 @@
       "/404.html",
       "/car-vs-ride-hailing-calculator.html",
       "/transport/",
-      "/property/"
+      "/property/",
+      "/family/"
     ],
 
     // Announcement banner (optional)
@@ -165,7 +166,8 @@ decisionPathOverrides: {
     // Ensure every cluster reinforces a single canonical "master" pillar page.
     primaryPillarByCluster: {
       transport: "/car-ownership-cost.html",
-      property: "/property-ownership-cost-singapore.html"
+      property: "/property-ownership-cost-singapore.html",
+      family: "/how-much-does-it-cost-to-raise-a-child-singapore.html"
     },
 
     // Calculator anchoring (transport only)
@@ -185,7 +187,32 @@ decisionPathOverrides: {
     enableAutoBackToCluster: true,
     backToClusterByCluster: {
       transport: { href: "/transport/", text: "← Back to Transport" },
-      property: { href: "/property/", text: "← Back to Property" }
+      family: {
+      label: "Related Singapore Family Cost Guides",
+      pillars: [
+        { url: "/family/", title: "Family Cost Hub in Singapore (2026)", subtopic: "hub" },
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" },
+        { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
+        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" }
+      ],
+      pages: [
+        { url: "/family/", title: "Family Cost Hub in Singapore (2026)", subtopic: "hub" },
+        { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
+        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" }
+      ],
+      bridges: [
+        { url: "/buy-for-current-needs-or-one-stage-ahead-property-singapore.html", title: "Buy for Current Needs or One Stage Ahead Property in Singapore? (2026)", cluster: "property", subtopic: "planning" },
+        { url: "/does-your-household-need-a-second-car-singapore.html", title: "Does Your Household Need a Second Car in Singapore? (2026 Decision Framework)", cluster: "transport", subtopic: "comparison" },
+        { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", cluster: "family", subtopic: "baby" },
+        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
+        { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" }
+      ]
+    },
+
+    property: { href: "/property/", text: "← Back to Property" },
+      family: { href: "/family/", text: "← Back to Family" }
     },
 
     comparisons: {
@@ -205,6 +232,9 @@ decisionPathOverrides: {
         { url: "/do-you-really-need-a-7-seater-singapore.html", title: "Do You Really Need a 7-Seater in Singapore? (2026): When Extra Seats Solve Real Life — and When They Become Expensive Dead Capacity", cluster: "transport", subtopic: "comparison" },
         { url: "/small-car-vs-big-car-singapore.html", title: "Small Car vs Big Car in Singapore (2026): Which Everyday Size Actually Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/does-your-household-need-a-second-car-singapore.html", title: "Does Your Household Need a Second Car in Singapore? (2026 Decision Framework)", cluster: "transport", subtopic: "comparison" },
+        { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", cluster: "family", subtopic: "baby" },
+        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
         { url: "/second-car-vs-ride-hailing-singapore.html", title: "Second Car vs Ride-Hailing in Singapore (2026): Which Is Smarter for a One-Car Household?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-sharing-vs-ride-hailing-singapore.html", title: "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", cluster: "property", subtopic: "comparison" },
@@ -795,6 +825,7 @@ decisionPathOverrides: {
       { url: "/start-here/", title: "Start Here", cluster: "home", subtopic: "start" },
       { url: "/transport/", title: "Transport Hub", cluster: "transport", subtopic: "start" },
       { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
+      { url: "/family/", title: "Family Hub", cluster: "family", subtopic: "start" },
       { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" },
       { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
     );
@@ -1337,6 +1368,11 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      if (cluster === "family") {
+        activate("family");
+        return;
+      }
+
       if (cluster === "financing") {
         activate("financing");
         return;
@@ -1379,6 +1415,12 @@ function buildRelatedHTML(label, links) {
       path.includes("bto-") ||
       path.includes("resale");
 
+    const isFamily =
+      path.startsWith("/family") ||
+      path.includes("baby") ||
+      path.includes("childcare") ||
+      path.includes("raise-a-child");
+
     const activate = (key) => {
       const a = document.querySelector(`[data-nav="${key}"]`);
       if (a) a.classList.add("active");
@@ -1390,6 +1432,7 @@ function buildRelatedHTML(label, links) {
     else if (isCalculator) activate("calculators");
     else if (isTransport) activate("transport");
     else if (isProperty) activate("property");
+    else if (isFamily) activate("family");
     else activate("home");
   }
 
