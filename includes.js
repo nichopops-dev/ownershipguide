@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.6-family";
+  const OG_INCLUDES_VERSION = "v0126.7-family-early-years";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -193,13 +193,19 @@ decisionPathOverrides: {
         { url: "/family/", title: "Family Cost Hub in Singapore (2026)", subtopic: "hub" },
         { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" },
         { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
-        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" }
+        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
+        { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", subtopic: "comparison" },
+        { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", subtopic: "comparison" },
+        { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", subtopic: "preschool" }
       ],
       pages: [
         { url: "/family/", title: "Family Cost Hub in Singapore (2026)", subtopic: "hub" },
         { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
         { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
-        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" }
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" },
+        { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", subtopic: "comparison" },
+        { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", subtopic: "comparison" },
+        { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", subtopic: "preschool" }
       ],
       bridges: [
         { url: "/buy-for-current-needs-or-one-stage-ahead-property-singapore.html", title: "Buy for Current Needs or One Stage Ahead Property in Singapore? (2026)", cluster: "property", subtopic: "planning" },
@@ -207,6 +213,9 @@ decisionPathOverrides: {
         { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", cluster: "family", subtopic: "baby" },
         { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", cluster: "family", subtopic: "comparison" },
         { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
+        { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", cluster: "family", subtopic: "comparison" },
+        { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", cluster: "family", subtopic: "preschool" },
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" }
       ]
     },
@@ -235,6 +244,9 @@ decisionPathOverrides: {
         { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", cluster: "family", subtopic: "baby" },
         { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", cluster: "family", subtopic: "comparison" },
         { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
+        { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", cluster: "family", subtopic: "comparison" },
+        { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", cluster: "family", subtopic: "preschool" },
         { url: "/second-car-vs-ride-hailing-singapore.html", title: "Second Car vs Ride-Hailing in Singapore (2026): Which Is Smarter for a One-Car Household?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-sharing-vs-ride-hailing-singapore.html", title: "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", cluster: "property", subtopic: "comparison" },
