@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0209
+> Last updated: March 2026 · Based on repo v0209.1
 
 ---
 
@@ -34,7 +34,7 @@
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0209
+**Current version:** v0209.1
 
 ### Key files
 | File | Purpose |
@@ -42,7 +42,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~253 URLs |
+| `sitemap.xml` | ~282 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -177,6 +177,12 @@ These were established over a long build history and must be followed:
 - **Numbers:** Always show ranges, never single figures. Always label as planning ranges, not quotes.
 - **CTAs:** Always point to a specific next page. Follow framework → calculator → mechanics order.
 - **Never:** Marketing language, promises, superlatives, false certainty.
+
+### Tone consistency note (added v0209.1)
+Two generations of pages exist:
+- **Older pages (~42):** Numbered H2s (1) 2) 3)), "Jump to" TOC, Decision Snapshot boxes
+- **Newer pages:** Flowing narrative H2s, "Key takeaways" opener, no TOC
+**Rule:** Do not rewrite old pages for tone alone. New pages must follow the newer narrative style. Old pages updated only when there is another substantive reason to touch them.
 - **Internal linking principle:** Framework page first, then calculator, then mechanics/drill-down. Never send users to a calculator before they've read a framework page.
 
 ---
@@ -350,19 +356,22 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 | v0207 | Family primary-school / post-school care / second-child branch |
 | v0208 | Family secondary-school / tuition / enrichment branch |
 | v0209 | Family junior-college / JC-vs-poly / university branch |
+| v0209.1 | Structural fix bundle: References added to 29 article pages, meta tags standardised across 29 pages, tone note added to brief |
 
 ---
 
 ## 10. SEO Status
 
 - ✅ Canonical tags on all pages (injected via includes.js)
-- ✅ Sitemap at /sitemap.xml (~253 URLs)
-- ✅ FAQPage schema on ~86 pages
+- ✅ Sitemap at /sitemap.xml (~282 URLs)
+- ✅ FAQPage schema on ~142 pages (newer pages); see note below
 - ✅ "Last updated" visible on all pages (freshness signal)
 - ✅ URL pattern: `{topic}-singapore.html`
+- ✅ References section on all article pages (fixed v0209.1)
+- ✅ Meta tags standardised to `name="og:cluster"` on all pages (fixed v0209.1)
+- ⚠️ ~140 older pages have FAQ h2 sections but are missing FAQPage JSON-LD schema — dedicated fix bundle needed
 - ⚠️ Article schema only on ~3 pages (expand to top traffic pages opportunistically)
 - ⚠️ HowTo schema: 0 pages (add to checklist pages opportunistically)
-- ⚠️ Some meta tag inconsistency: standardise to `name="og:cluster"` not `property="og:cluster"`
 
 ---
 
