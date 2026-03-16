@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0213
+> Last updated: March 2026 · Based on repo v0214
 
 ---
 
@@ -37,7 +37,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0213
+**Current version:** v0214
 
 ### Key files
 | File | Purpose |
@@ -297,6 +297,9 @@ how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school
 **Household scaling / anchor pages**
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
 
+**Cross-cluster bridges**
+should-i-buy-bigger-home-before-having-kids-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html
+
 **Hub**
 family/index.html
 
@@ -382,6 +385,8 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0212 | Protection deepening: accident insurance + hospital cash + CI-vs-hospitalisation comparison; FAQ schema completion closed across all current FAQ-bearing pages |
 | v0212 | Protection deepening: accident insurance, CI vs hospitalisation, hospital cash |
 | v0212.1 | Search fix (includes.js overwrite recurrence fixed); 9 family pages missing refs fixed; auto-related div added to 41 pages; CI vs hospitalisation page expanded to 1,610w |
+| v0213 | Protection deepening: early CI vs CI, hospitalisation vs accident, whole life vs CI |
+| v0214 | Cross-cluster bridge pages (5 pages): property×family, transport×family, property/financing×family, protection×property, protection×family; v0213 fixes (dup Last updated, 2 short pages, 3 new pages missing from search index) |
 
 ---
 
