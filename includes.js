@@ -218,11 +218,11 @@ decisionPathOverrides: {
         { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore? (2026): The Post-School Supervision Trade-off Families Misprice", subtopic: "comparison" },
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" },
         { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", subtopic: "school" },
-        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" },,
-        { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness Insurance in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
+        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" }, { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness Insurance in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-accident-insurance-singapore.html", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", subtopic: "comparison" },
-        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" }
-      
+        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" },
+        { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" }
+      ],
       bridges: [
         { url: "/buy-for-current-needs-or-one-stage-ahead-property-singapore.html", title: "Buy for Current Needs or One Stage Ahead Property in Singapore? (2026)", cluster: "property", subtopic: "planning" },
         { url: "/does-your-household-need-a-second-car-singapore.html", title: "Does Your Household Need a Second Car in Singapore? (2026 Decision Framework)", cluster: "transport", subtopic: "comparison" },
@@ -259,8 +259,7 @@ decisionPathOverrides: {
         { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
-        { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026): How Your Insurance Needs Change When a Child Arrives", subtopic: "planning" },
-        { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" }
+        { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026): How Your Insurance Needs Change When a Child Arrives", subtopic: "planning" }
       ],
       pages: [
         { url: "/coe-renew-vs-replace-singapore.html", title: "Renew COE vs Replace Car in Singapore (2026): Decision Framework + Break-even", cluster: "transport", subtopic: "comparison" },
@@ -760,6 +759,11 @@ decisionPathOverrides: {
         { url: "/how-much-does-junior-college-cost-singapore.html", title: "How Much Does Junior College Cost in Singapore? (2026): The Post-Secondary Stage Families Still Need to Budget For", subtopic: "school" },
         { url: "/polytechnic-vs-junior-college-cost-singapore.html", title: "Polytechnic vs Junior College Cost in Singapore (2026): The Post-Secondary Branch Point Families Often Oversimplify", subtopic: "comparison" },
         { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", subtopic: "education" }
+      ,
+        { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
+        { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
+        { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
+        { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026)", subtopic: "planning" }
       ],
       bridges: []
     },
@@ -781,7 +785,8 @@ decisionPathOverrides: {
         { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", subtopic: "comparison" },
         { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-accident-insurance-singapore.html", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", subtopic: "comparison" },
-        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" }
+        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" },
+        { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" }
       ],
       bridges: []
     }
