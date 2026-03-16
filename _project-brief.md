@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0204
+> Last updated: March 2026 · Based on repo v0208
 
 ---
 
@@ -18,7 +18,7 @@
 - **Do not architect for global expansion yet.** Build SG depth first. Note this intent so no structural decisions accidentally block it later.
 
 ### Topic scope
-- **Now:** Transport, Property, Family/Children (next cluster)
+- **Now:** Transport, Property, Family/Children
 - **Future clusters (non-exhaustive):** Investments, luxury assets (watches, yachts, art), other wealth ownership topics
 - The site name "Ownership Guide" was chosen deliberately to be non-restrictive — it can cover any major ownership decision
 - Luxury content tone: **slightly more aspirational but still analytical** — same decision-framework DNA, elevated subject matter. E.g. "5-year total cost of watch ownership including service intervals, resale depreciation by brand, and authentication friction at exit."
@@ -34,7 +34,7 @@
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0204
+**Current version:** v0208
 
 ### Key files
 | File | Purpose |
@@ -44,7 +44,7 @@
 | `index.html` | Homepage |
 | `sitemap.xml` | ~253 URLs |
 | `footer.html` | Shared footer partial |
-| `_project-brief.md` | This file |
+| `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
 ### Directory structure
 ```
@@ -181,7 +181,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0204)
+## 7. Current Site Health (as of v0208)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -192,7 +192,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding (deepening existing clusters or starting new ones). Not in cleanup mode. Not in aesthetics mode.
+**Current mode:** Content compounding. Family is now an active pillar being deepened; still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -280,33 +280,24 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ---
 
-### Family/Children cluster 🔴 NOT STARTED — Confirmed next cluster
+### Family/Children (~12 pages) 🟡 Growing and now structurally integrated
 
-**Why:** Natural extension of brand positioning. Strong SG search volume. High AdSense CPM. Cross-links naturally to both existing clusters.
+**Current state:** Launched in v0205 and deepened through v0208. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, and cross-links into selected property and transport pages.
 
-**Pillar page (build first)**
-`cost-of-raising-a-child-singapore.html` — 0–18 year total cost model
+**Early-years / arrival / care branch**
+cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
 
-**Phase 1 branch pages**
-- `infant-care-childcare-cost-singapore.html`
-- `primary-school-vs-international-school-cost-singapore.html`
-- `cost-of-second-child-singapore.html`
-- `baby-essentials-cost-singapore.html`
-- `child-medical-insurance-cost-singapore.html`
-- `maternity-leave-income-gap-singapore.html`
-- `university-education-savings-singapore.html`
-- `baby-bonus-cda-singapore.html`
+**School-stage / supervision / education-spend branch**
+how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school-care-cost-singapore.html · how-much-does-secondary-school-cost-singapore.html · tuition-cost-singapore.html · enrichment-classes-cost-singapore.html
 
-**Cross-cluster bridge pages (high SEO value)**
-- `should-i-buy-bigger-home-before-having-kids-singapore.html` (property + family)
-- `family-car-decision-after-baby-singapore.html` (transport + family)
-- `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html` (property financing + family)
+**Household scaling / anchor pages**
+how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
 
-**Cluster meta tag for new pages**
-```html
-<meta name="og:cluster" content="family">
-```
-Add `family` to `backToClusterByCluster` and `primaryPillarByCluster` in includes.js when building out.
+**Hub**
+family/index.html
+
+**Build rule going forward**
+Family is now an active cluster, not a future concept. New family pages should be added to the Family hub, Family related-link graph in `includes.js`, and only bridged into property/transport where the connection is natural and specific.
 
 ---
 
@@ -344,7 +335,17 @@ Add `family` to `backToClusterByCluster` and `primaryPillarByCluster` in include
 | v0195 | Transport insurance structure / policy-fit branch |
 | v0196 | Property right-sizing / later-life housing re-fit |
 | v0197 | Transport aging-car economics / reliability branch |
-| v0198–v0204 | (Update this as new versions ship) |
+| v0198 | Motorcycle affordability / used-vs-new / loan-vs-cash branch |
+| v0199 | Used-motorcycle diligence branch |
+| v0200 | Used-motorcycle records + pre-commitment branch |
+| v0201 | Motorcycle insurance / maintenance / upfront-cash branch |
+| v0202 | Motorcycle depreciation / financed exit / pre-COE sale timing branch |
+| v0203 | Motorcycle renewal / replace branch + same-page anchor hotfix sweep |
+| v0204 | Motorcycle sell-side execution branch |
+| v0205 | Family cluster launch: hub + baby cost + infantcare vs childcare + child-cost anchor |
+| v0206 | Family early-years care alternatives + preschool branch |
+| v0207 | Family primary-school / post-school care / second-child branch |
+| v0208 | Family secondary-school / tuition / enrichment branch |
 
 ---
 

@@ -199,7 +199,10 @@ decisionPathOverrides: {
         { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", subtopic: "preschool" },
         { url: "/how-much-does-primary-school-cost-singapore.html", title: "How Much Does Primary School Cost in Singapore? (2026): The Budget Shift Many Families Underestimate", subtopic: "school" },
         { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore? (2026): The Post-School Supervision Trade-off Families Misprice", subtopic: "comparison" },
-        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
+        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" },
+        { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", subtopic: "school" },
+        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" },
+        { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", subtopic: "education" }
       ],
       pages: [
         { url: "/family/", title: "Family Cost Hub in Singapore (2026)", subtopic: "hub" },
@@ -211,7 +214,10 @@ decisionPathOverrides: {
         { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", subtopic: "preschool" },
         { url: "/how-much-does-primary-school-cost-singapore.html", title: "How Much Does Primary School Cost in Singapore? (2026): The Budget Shift Many Families Underestimate", subtopic: "school" },
         { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore? (2026): The Post-School Supervision Trade-off Families Misprice", subtopic: "comparison" },
-        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
+        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" },
+        { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", subtopic: "school" },
+        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" },
+        { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", subtopic: "education" }
       ],
       bridges: [
         { url: "/buy-for-current-needs-or-one-stage-ahead-property-singapore.html", title: "Buy for Current Needs or One Stage Ahead Property in Singapore? (2026)", cluster: "property", subtopic: "planning" },
@@ -225,6 +231,9 @@ decisionPathOverrides: {
         { url: "/how-much-does-primary-school-cost-singapore.html", title: "How Much Does Primary School Cost in Singapore? (2026): The Budget Shift Many Families Underestimate", cluster: "family", subtopic: "school" },
         { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore? (2026): The Post-School Supervision Trade-off Families Misprice", cluster: "family", subtopic: "comparison" },
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", cluster: "family", subtopic: "planning" },
+        { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", cluster: "family", subtopic: "school" },
+        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", cluster: "family", subtopic: "education" },
+        { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", cluster: "family", subtopic: "education" },
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" }
       ]
     },
@@ -259,6 +268,9 @@ decisionPathOverrides: {
         { url: "/how-much-does-primary-school-cost-singapore.html", title: "How Much Does Primary School Cost in Singapore? (2026): The Budget Shift Many Families Underestimate", cluster: "family", subtopic: "school" },
         { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore? (2026): The Post-School Supervision Trade-off Families Misprice", cluster: "family", subtopic: "comparison" },
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", cluster: "family", subtopic: "planning" },
+        { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", cluster: "family", subtopic: "school" },
+        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", cluster: "family", subtopic: "education" },
+        { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", cluster: "family", subtopic: "education" },
         { url: "/second-car-vs-ride-hailing-singapore.html", title: "Second Car vs Ride-Hailing in Singapore (2026): Which Is Smarter for a One-Car Household?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-sharing-vs-ride-hailing-singapore.html", title: "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", cluster: "property", subtopic: "comparison" },
