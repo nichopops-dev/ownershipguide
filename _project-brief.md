@@ -376,6 +376,8 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0210 | Protection cluster launch: life insurance, term vs whole life, hospitalisation vs rider |
 | v0210.1 | FAQ schema added to 142 pages; nav header redesigned with Topics dropdown; 2 invalid schema fixes |
 | v0211 | Protection deepening: disability-income + critical-illness + term-vs-CI comparison; FAQ schema standardised across remaining hubs/calculators |
+| v0211 | Protection deepening: critical illness, disability income, term vs critical illness |
+| v0211.1 | Search fix (family + protection missing from index, URL scoring added); HowTo schema (8 pages); Article schema (20 pillar pages); homepage FAQ updated |
 
 ---
 
