@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.9-family-tertiary-stage";
+  const OG_INCLUDES_VERSION = "v0127.0-protection-launch";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -35,7 +35,8 @@
       "/car-vs-ride-hailing-calculator.html",
       "/transport/",
       "/property/",
-      "/family/"
+      "/family/",
+      "/protection/"
     ],
 
     // Announcement banner (optional)
@@ -167,7 +168,8 @@ decisionPathOverrides: {
     primaryPillarByCluster: {
       transport: "/car-ownership-cost.html",
       property: "/property-ownership-cost-singapore.html",
-      family: "/how-much-does-it-cost-to-raise-a-child-singapore.html"
+      family: "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+      protection: "/how-much-life-insurance-do-you-need-singapore.html"
     },
 
     // Calculator anchoring (transport only)
@@ -242,7 +244,8 @@ decisionPathOverrides: {
     },
 
     property: { href: "/property/", text: "← Back to Property" },
-      family: { href: "/family/", text: "← Back to Family" }
+      family: { href: "/family/", text: "← Back to Family" },
+      protection: { href: "/protection/", text: "← Back to Protection" }
     },
 
     comparisons: {
@@ -323,6 +326,28 @@ decisionPathOverrides: {
       bridges: [
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" },
         { url: "/calculators/", title: "Calculators Hub", cluster: "calculators" }
+      ]
+    },
+    protection: {
+      label: "Related Singapore Protection & Insurance Guides",
+      pillars: [
+        { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
+        { url: "/how-much-life-insurance-do-you-need-singapore.html", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
+        { url: "/term-life-vs-whole-life-cost-singapore.html", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
+        { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" }
+      ],
+      pages: [
+        { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
+        { url: "/how-much-life-insurance-do-you-need-singapore.html", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
+        { url: "/term-life-vs-whole-life-cost-singapore.html", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
+        { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
+        { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) in Singapore (2026): What It Protects, What It Does Not, and Why HDB Owners Confuse It with Home Insurance", cluster: "property", subtopic: "protection" }
+      ],
+      bridges: [
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
+        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", cluster: "family", subtopic: "planning" },
+        { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) in Singapore (2026): What It Protects, What It Does Not, and Why HDB Owners Confuse It with Home Insurance", cluster: "property", subtopic: "protection" },
+        { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" }
       ]
     }
   };
@@ -868,6 +893,7 @@ decisionPathOverrides: {
       { url: "/transport/", title: "Transport Hub", cluster: "transport", subtopic: "start" },
       { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
       { url: "/family/", title: "Family Hub", cluster: "family", subtopic: "start" },
+      { url: "/protection/", title: "Protection Hub", cluster: "protection", subtopic: "start" },
       { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" },
       { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
     );
@@ -1415,6 +1441,11 @@ function buildRelatedHTML(label, links) {
         return;
       }
 
+      if (cluster === "protection") {
+        activate("protection");
+        return;
+      }
+
       if (cluster === "financing") {
         activate("financing");
         return;
@@ -1466,6 +1497,14 @@ function buildRelatedHTML(label, links) {
       path.includes("second-child") ||
       path.includes("student-care");
 
+    const isProtection =
+      path.startsWith("/protection") ||
+      path.includes("life-insurance") ||
+      path.includes("whole-life") ||
+      path.includes("hospitalisation-insurance") ||
+      path.includes("home-protection-scheme") ||
+      path.includes("rider-cost");
+
     const activate = (key) => {
       const a = document.querySelector(`[data-nav="${key}"]`);
       if (a) a.classList.add("active");
@@ -1478,6 +1517,7 @@ function buildRelatedHTML(label, links) {
     else if (isTransport) activate("transport");
     else if (isProperty) activate("property");
     else if (isFamily) activate("family");
+    else if (isProtection) activate("protection");
     else activate("home");
   }
 

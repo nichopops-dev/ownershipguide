@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0209.1
+> Last updated: March 2026 · Based on repo v0210
 
 ---
 
@@ -18,7 +18,7 @@
 - **Do not architect for global expansion yet.** Build SG depth first. Note this intent so no structural decisions accidentally block it later.
 
 ### Topic scope
-- **Now:** Transport, Property, Family/Children
+- **Now:** Transport, Property, Family/Children, Protection/Insurance
 - **Future clusters (non-exhaustive):** Investments, luxury assets (watches, yachts, art), other wealth ownership topics
 - The site name "Ownership Guide" was chosen deliberately to be non-restrictive — it can cover any major ownership decision
 - Luxury content tone: **slightly more aspirational but still analytical** — same decision-framework DNA, elevated subject matter. E.g. "5-year total cost of watch ownership including service intervals, resale depreciation by brand, and authentication friction at exit."
@@ -34,7 +34,7 @@
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0209.1
+**Current version:** v0210
 
 ### Key files
 | File | Purpose |
@@ -42,7 +42,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~282 URLs |
+| `sitemap.xml` | ~257 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -57,11 +57,12 @@
 /comparisons/         — Comparisons hub index
 /financing/           — Top-level financing hub
 /start-here/          — Guided entry path
+/protection/          — Protection / Insurance hub index
 ```
 
 ### Page taxonomy (required on every page)
 ```html
-<meta name="og:cluster" content="transport|property|family|core">
+<meta name="og:cluster" content="transport|property|family|protection|core">
 <meta name="og:subtopic" content="comparison|calculator|decision|financing|exit|...">
 ```
 These drive auto-related link injection via includes.js. Every new page must have both.
@@ -177,17 +178,11 @@ These were established over a long build history and must be followed:
 - **Numbers:** Always show ranges, never single figures. Always label as planning ranges, not quotes.
 - **CTAs:** Always point to a specific next page. Follow framework → calculator → mechanics order.
 - **Never:** Marketing language, promises, superlatives, false certainty.
-
-### Tone consistency note (added v0209.1)
-Two generations of pages exist:
-- **Older pages (~42):** Numbered H2s (1) 2) 3)), "Jump to" TOC, Decision Snapshot boxes
-- **Newer pages:** Flowing narrative H2s, "Key takeaways" opener, no TOC
-**Rule:** Do not rewrite old pages for tone alone. New pages must follow the newer narrative style. Old pages updated only when there is another substantive reason to touch them.
 - **Internal linking principle:** Framework page first, then calculator, then mechanics/drill-down. Never send users to a calculator before they've read a framework page.
 
 ---
 
-## 7. Current Site Health (as of v0209)
+## 7. Current Site Health (as of v0210)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -198,7 +193,7 @@ Two generations of pages exist:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Family is now an active pillar being deepened through post-secondary / tertiary education-cost coverage; still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Family is now a credible active pillar, and Protection / Insurance has now been launched as a new pillar through hospitalisation-vs-rider, term-vs-whole-life, and life-insurance sizing coverage. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -310,6 +305,27 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
+### Protection / Insurance (~4 pages) 🟡 Newly launched and structurally integrated
+
+**Current state:** Launched in v0210. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, and natural bridges into Family and Property where protection sizing and mortgage continuity genuinely overlap.
+
+**Medical / health-cover structure**
+hospitalisation-insurance-vs-rider-cost-singapore.html
+
+**Life-insurance structure / sizing**
+term-life-vs-whole-life-cost-singapore.html · how-much-life-insurance-do-you-need-singapore.html
+
+**Hub**
+protection/index.html
+
+**Build rule going forward**
+Protection is now an active cluster, not a future concept. New protection pages should be added to the Protection hub, Protection related-link graph in `includes.js`, and only bridged into Family, Property, or Transport where the connection is specific and not generic.
+
+**Current expansion rule**
+Protection should begin with household-protection fundamentals before branching into narrower product leaves. New pages should preserve role clarity between sizing, product comparison, and medical-cover structure.
+
+---
+
 ### Future clusters (not started, long-term)
 - Investments (CPF investment, stocks, REITs, etc.)
 - Luxury assets (watches, yachts, art) — analytical tone, slightly aspirational
@@ -356,22 +372,20 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 | v0207 | Family primary-school / post-school care / second-child branch |
 | v0208 | Family secondary-school / tuition / enrichment branch |
 | v0209 | Family junior-college / JC-vs-poly / university branch |
-| v0209.1 | Structural fix bundle: References added to 29 article pages, meta tags standardised across 29 pages, tone note added to brief |
+| v0210 | Protection / Insurance cluster launch: hub + hospitalisation vs rider + term vs whole life + life-insurance sizing |
 
 ---
 
 ## 10. SEO Status
 
 - ✅ Canonical tags on all pages (injected via includes.js)
-- ✅ Sitemap at /sitemap.xml (~282 URLs)
-- ✅ FAQPage schema on ~142 pages (newer pages); see note below
+- ✅ Sitemap at /sitemap.xml (~253 URLs)
+- ✅ FAQPage schema on ~86 pages
 - ✅ "Last updated" visible on all pages (freshness signal)
 - ✅ URL pattern: `{topic}-singapore.html`
-- ✅ References section on all article pages (fixed v0209.1)
-- ✅ Meta tags standardised to `name="og:cluster"` on all pages (fixed v0209.1)
-- ⚠️ ~140 older pages have FAQ h2 sections but are missing FAQPage JSON-LD schema — dedicated fix bundle needed
 - ⚠️ Article schema only on ~3 pages (expand to top traffic pages opportunistically)
 - ⚠️ HowTo schema: 0 pages (add to checklist pages opportunistically)
+- ⚠️ Some meta tag inconsistency: standardise to `name="og:cluster"` not `property="og:cluster"`
 
 ---
 
