@@ -42,7 +42,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~257 URLs |
+| `sitemap.xml` | ~286 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -373,6 +373,8 @@ Protection should begin with household-protection fundamentals before branching 
 | v0208 | Family secondary-school / tuition / enrichment branch |
 | v0209 | Family junior-college / JC-vs-poly / university branch |
 | v0210 | Protection / Insurance cluster launch: hub + hospitalisation vs rider + term vs whole life + life-insurance sizing |
+| v0210 | Protection cluster launch: life insurance, term vs whole life, hospitalisation vs rider |
+| v0210.1 | FAQ schema added to 142 pages; nav header redesigned with Topics dropdown; 2 invalid schema fixes |
 
 ---
 
