@@ -334,13 +334,19 @@ decisionPathOverrides: {
         { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
         { url: "/how-much-life-insurance-do-you-need-singapore.html", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
         { url: "/term-life-vs-whole-life-cost-singapore.html", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
-        { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" }
+        { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
+        { url: "/disability-income-insurance-cost-singapore.html", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", cluster: "protection", subtopic: "income-protection" },
+        { url: "/critical-illness-insurance-cost-singapore.html", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", cluster: "protection", subtopic: "ci" },
+        { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", cluster: "protection", subtopic: "comparison" }
       ],
       pages: [
         { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
         { url: "/how-much-life-insurance-do-you-need-singapore.html", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
         { url: "/term-life-vs-whole-life-cost-singapore.html", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
+        { url: "/disability-income-insurance-cost-singapore.html", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", cluster: "protection", subtopic: "income-protection" },
+        { url: "/critical-illness-insurance-cost-singapore.html", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", cluster: "protection", subtopic: "ci" },
+        { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", cluster: "protection", subtopic: "comparison" },
         { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) in Singapore (2026): What It Protects, What It Does Not, and Why HDB Owners Confuse It with Home Insurance", cluster: "property", subtopic: "protection" }
       ],
       bridges: [
