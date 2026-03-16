@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0212
+> Last updated: March 2026 · Based on repo v0212.1
 
 ---
 
@@ -33,8 +33,10 @@
 ## 2. Technical Stack
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
+
+> ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0212
+**Current version:** v0212.1
 
 ### Key files
 | File | Purpose |
@@ -377,6 +379,8 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0210.1 | FAQ schema added to 142 pages; nav header redesigned with Topics dropdown; 2 invalid schema fixes |
 | v0211 | Protection deepening: disability-income + critical-illness + term-vs-CI comparison; FAQ schema standardised across remaining hubs/calculators |
 | v0212 | Protection deepening: accident insurance + hospital cash + CI-vs-hospitalisation comparison; FAQ schema completion closed across all current FAQ-bearing pages |
+| v0212 | Protection deepening: accident insurance, CI vs hospitalisation, hospital cash |
+| v0212.1 | Search fix (includes.js overwrite recurrence fixed); 9 family pages missing refs fixed; auto-related div added to 41 pages; CI vs hospitalisation page expanded to 1,610w |
 
 ---
 
