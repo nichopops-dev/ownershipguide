@@ -42,7 +42,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~253 URLs |
+| `sitemap.xml` | ~266 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -352,7 +352,7 @@ Family is now an active cluster, not a future concept. New family pages should b
 ## 10. SEO Status
 
 - ✅ Canonical tags on all pages (injected via includes.js)
-- ✅ Sitemap at /sitemap.xml (~253 URLs)
+- ✅ Sitemap at /sitemap.xml (~266 URLs)
 - ✅ FAQPage schema on ~86 pages
 - ✅ "Last updated" visible on all pages (freshness signal)
 - ✅ URL pattern: `{topic}-singapore.html`
