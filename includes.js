@@ -221,6 +221,9 @@ decisionPathOverrides: {
         { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" }, { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness Insurance in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-accident-insurance-singapore.html", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", subtopic: "comparison" },
         { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" },
+        { url: "/how-much-critical-illness-insurance-do-you-need-singapore.html", title: "How Much Critical Illness Insurance Do You Need in Singapore? (2026): Sizing the Lump-Sum Buffer Without Guessing", subtopic: "planning" },
+        { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" },
+        { url: "/critical-illness-vs-disability-income-insurance-singapore.html", title: "Critical Illness vs Disability Income Insurance in Singapore (2026): Why Lump-Sum Illness Cover and Income Replacement Are Not the Same Job", subtopic: "comparison" },
         { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" }
       ],
       bridges: [

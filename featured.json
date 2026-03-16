@@ -22,47 +22,68 @@
       "date": "2026-03-16"
     },
     {
-      "url": "/how-much-life-insurance-do-you-need-singapore.html",
-      "title": "How Much Life Insurance Do You Need?",
+      "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
+      "title": "How Much Critical Illness Insurance Do You Need in Singapore? (2026)",
       "cluster": "protection",
       "clusterLabel": "Protection",
-      "date": "2026-03-16"
+      "date": "2026-03-17"
     }
   ],
   "new": [
     {
+      "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
+      "title": "How Much Critical Illness Insurance Do You Need?",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Size diagnosis-stage lump-sum cover around real household disruption instead of copying a random number."
+    },
+    {
+      "url": "/how-much-disability-income-insurance-do-you-need-singapore.html",
+      "title": "How Much Disability Income Insurance Do You Need?",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Estimate income-replacement needs based on earnings dependence, reserves, and disruption horizon."
+    },
+    {
+      "url": "/critical-illness-vs-disability-income-insurance-singapore.html",
+      "title": "Critical Illness vs Disability Income Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Separate lump-sum illness protection from structured income replacement before comparing premiums."
+    },
+    {
       "url": "/should-i-buy-bigger-home-before-having-kids-singapore.html",
       "title": "Should I Buy a Bigger Home Before Having Kids?",
       "cluster": "property",
-      "clusterLabel": "Property \u00d7 Family",
+      "clusterLabel": "Property × Family",
       "desc": "How property sizing, TDSR, and family cost interact before you commit to a larger home."
     },
     {
       "url": "/family-car-decision-after-baby-singapore.html",
       "title": "Does Having a Baby Mean You Need a Car?",
       "cluster": "transport",
-      "clusterLabel": "Transport \u00d7 Family",
+      "clusterLabel": "Transport × Family",
       "desc": "A cost framework for the car decision after a child arrives."
     },
     {
       "url": "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html",
       "title": "How a Child Affects Your TDSR",
       "cluster": "property",
-      "clusterLabel": "Financing \u00d7 Family",
+      "clusterLabel": "Financing × Family",
       "desc": "What childcare costs and income reduction mean for your home loan capacity."
     },
     {
       "url": "/life-insurance-and-home-loan-singapore.html",
       "title": "Life Insurance and Your Home Loan",
       "cluster": "protection",
-      "clusterLabel": "Protection \u00d7 Property",
-      "desc": "What happens to your property if you die \u2014 and how to make sure it doesn't become a burden."
+      "clusterLabel": "Protection × Property",
+      "desc": "What happens to your property if you die — and how to make sure it doesn't become a burden."
     },
     {
       "url": "/protection-gap-after-having-a-baby-singapore.html",
       "title": "Protection Gap After Having a Baby",
       "cluster": "protection",
-      "clusterLabel": "Protection \u00d7 Family",
+      "clusterLabel": "Protection × Family",
       "desc": "How your insurance needs change when a child arrives."
     }
   ],
@@ -110,5 +131,5 @@
       "inbound": 12
     }
   ],
-  "generated": "2026-03-16"
+  "generated": "2026-03-17"
 }
