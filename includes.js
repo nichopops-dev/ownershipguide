@@ -337,7 +337,13 @@ decisionPathOverrides: {
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
         { url: "/disability-income-insurance-cost-singapore.html", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", cluster: "protection", subtopic: "income-protection" },
         { url: "/critical-illness-insurance-cost-singapore.html", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", cluster: "protection", subtopic: "ci" },
-        { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", cluster: "protection", subtopic: "comparison" }
+        { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", cluster: "protection", subtopic: "comparison" },
+        { url: "/accident-insurance-cost-singapore.html", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
+        { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
+        { url: "/critical-illness-vs-hospitalisation-insurance-singapore.html", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" },
+        { url: "/accident-insurance-cost-singapore.html", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
+        { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
+        { url: "/critical-illness-vs-hospitalisation-insurance-singapore.html", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" }
       ],
       pages: [
         { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
@@ -723,45 +729,6 @@ decisionPathOverrides: {
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Property Taxes That Change Your Decision", subtopic: "tax" }
       ],
       bridges: []
-    },
-    family: {
-      label: "Related Singapore Family Cost Guides",
-      pillars: [
-        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" },
-        { url: "/cost-of-having-a-baby-singapore.html", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
-        { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
-      ],
-      pages: [
-        { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
-        { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", subtopic: "comparison" },
-        { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", subtopic: "comparison" },
-        { url: "/how-much-does-preschool-cost-singapore.html", title: "How Much Does Preschool Cost in Singapore? (2026): Early-Years Fees, Recurring Pressure, and What Parents Underestimate", subtopic: "preschool" },
-        { url: "/how-much-does-primary-school-cost-singapore.html", title: "How Much Does Primary School Cost in Singapore? (2026): The Budget Shift Many Families Underestimate", subtopic: "school" },
-        { url: "/student-care-vs-after-school-care-cost-singapore.html", title: "Student Care vs After-School Care Cost in Singapore (2026): The Post-School Supervision Trade-off Families Misprice", subtopic: "comparison" },
-        { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", subtopic: "school" },
-        { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" },
-        { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", subtopic: "education" },
-        { url: "/how-much-does-junior-college-cost-singapore.html", title: "How Much Does Junior College Cost in Singapore? (2026): The Post-Secondary Stage Families Still Need to Budget For", subtopic: "school" },
-        { url: "/polytechnic-vs-junior-college-cost-singapore.html", title: "Polytechnic vs Junior College Cost in Singapore (2026): The Post-Secondary Branch Point Families Often Oversimplify", subtopic: "comparison" },
-        { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", subtopic: "education" }
-      ],
-      bridges: []
-    },
-    protection: {
-      label: "Related Singapore Protection & Insurance Guides",
-      pillars: [
-        { url: "/how-much-life-insurance-do-you-need-singapore.html", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", subtopic: "planning" },
-        { url: "/term-life-vs-whole-life-cost-singapore.html", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", subtopic: "comparison" },
-        { url: "/critical-illness-insurance-cost-singapore.html", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", subtopic: "planning" }
-      ],
-      pages: [
-        { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", subtopic: "planning" },
-        { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", subtopic: "comparison" },
-        { url: "/disability-income-insurance-cost-singapore.html", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", subtopic: "planning" },
-        { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) Singapore (2026): The Compulsory HDB Mortgage Insurance Most Buyers Underread", subtopic: "planning" },
-        { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance Singapore (2026): Coverage Gap, Structural Risk, and What Actually Protects Your Asset", subtopic: "comparison" }
-      ],
-      bridges: []
     }
  };
 
@@ -972,28 +939,21 @@ decisionPathOverrides: {
   function scoreResult(q, item) {
     const qt = String(q || "").toLowerCase().trim();
     const title = String(item?.title || "").toLowerCase();
-    const url = String(item?.url || "").toLowerCase();
     if (!qt) return 0;
 
-    // base relevance on title
+    // base relevance
     let score = 0;
     if (title === qt) score += 100;
     if (title.startsWith(qt)) score += 60;
     if (title.includes(qt)) score += 35;
 
-    // URL slug match (catches cases where title wording differs from search term)
-    if (url.includes(qt)) score += 20;
-
-    // token overlap on title
+    // token overlap
     const qTokens = tokens(qt);
     const tTokens = tokens(title);
-    const uTokens = tokens(url.replace(/-/g, " "));
     const tSet = new Set(tTokens);
-    const uSet = new Set(uTokens);
     let hit = 0;
     for (const t of qTokens) {
       if (tSet.has(t)) hit++;
-      else if (uSet.has(t)) hit += 0.5; // partial credit for URL token match
     }
     score += hit * 10;
 

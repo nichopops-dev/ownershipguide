@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0211
+> Last updated: March 2026 · Based on repo v0212
 
 ---
 
@@ -34,7 +34,7 @@
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0211
+**Current version:** v0212
 
 ### Key files
 | File | Purpose |
@@ -182,7 +182,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0211)
+## 7. Current Site Health (as of v0212)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -193,7 +193,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Protection / Insurance has now been deepened beyond launch into income-protection, critical-illness, and protection-purpose comparison pages. FAQPage schema has also now been standardised across the remaining hub/calculator backlog. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Protection / Insurance has now been deepened further into accident-cover, hospital-cash, and CI-vs-hospitalisation distinction pages. FAQPage schema has now been standardised across all current FAQ-bearing pages. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -305,15 +305,15 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
-### Protection / Insurance (~7 pages) 🟡 Growing and structurally integrated
+### Protection / Insurance (~10 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened in v0211. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, and a clearer internal ladder from medical-cover structure to life-insurance sizing, disability-income protection, critical-illness cover, and protection-purpose comparison.
+**Current state:** Launched in v0210 and deepened through v0212. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, and a clearer internal ladder from medical-cover structure to life-insurance sizing, disability-income protection, accident-cover, hospital-cash add-on judgment, critical-illness cover, and protection-purpose comparison.
 
 **Medical / health-cover structure**
-hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html
+hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html
 
 **Life-insurance / income-protection / sizing**
-term-life-vs-whole-life-cost-singapore.html · how-much-life-insurance-do-you-need-singapore.html · disability-income-insurance-cost-singapore.html · term-life-vs-critical-illness-insurance-singapore.html
+term-life-vs-whole-life-cost-singapore.html · how-much-life-insurance-do-you-need-singapore.html · disability-income-insurance-cost-singapore.html · term-life-vs-critical-illness-insurance-singapore.html · accident-insurance-cost-singapore.html
 
 **Hub**
 protection/index.html
@@ -322,7 +322,7 @@ protection/index.html
 Protection is now an active cluster, not a future concept. New protection pages should be added to the Protection hub, Protection related-link graph in `includes.js`, and only bridged into Family, Property, or Transport where the connection is specific and not generic.
 
 **Current expansion rule**
-Protection should continue to branch carefully by protection purpose. New pages should preserve role clarity between sizing, product-structure comparison, income protection, illness-event protection, and medical-cover structure.
+Protection should continue to branch carefully by protection purpose. New pages should preserve role clarity between sizing, product-structure comparison, income protection, accident-event cover, illness-event protection, and medical-cover structure.
 
 ---
 
@@ -376,8 +376,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0210 | Protection cluster launch: life insurance, term vs whole life, hospitalisation vs rider |
 | v0210.1 | FAQ schema added to 142 pages; nav header redesigned with Topics dropdown; 2 invalid schema fixes |
 | v0211 | Protection deepening: disability-income + critical-illness + term-vs-CI comparison; FAQ schema standardised across remaining hubs/calculators |
-| v0211 | Protection deepening: critical illness, disability income, term vs critical illness |
-| v0211.1 | Search fix (family + protection missing from index, URL scoring added); HowTo schema (8 pages); Article schema (20 pillar pages); homepage FAQ updated |
+| v0212 | Protection deepening: accident insurance + hospital cash + CI-vs-hospitalisation comparison; FAQ schema completion closed across all current FAQ-bearing pages |
 
 ---
 
