@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0208
+> Last updated: March 2026 · Based on repo v0209
 
 ---
 
@@ -34,7 +34,7 @@
 
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0208
+**Current version:** v0209
 
 ### Key files
 | File | Purpose |
@@ -42,7 +42,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~266 URLs |
+| `sitemap.xml` | ~253 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -181,7 +181,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0208)
+## 7. Current Site Health (as of v0209)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -192,7 +192,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Family is now an active pillar being deepened; still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Family is now an active pillar being deepened through post-secondary / tertiary education-cost coverage; still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -280,15 +280,15 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ---
 
-### Family/Children (~12 pages) 🟡 Growing and now structurally integrated
+### Family/Children (~15 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0208. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, and cross-links into selected property and transport pages.
+**Current state:** Launched in v0205 and deepened through v0209. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, and a clearer education-cost ladder extending from preschool to university.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
 
 **School-stage / supervision / education-spend branch**
-how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school-care-cost-singapore.html · how-much-does-secondary-school-cost-singapore.html · tuition-cost-singapore.html · enrichment-classes-cost-singapore.html
+how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school-care-cost-singapore.html · how-much-does-secondary-school-cost-singapore.html · tuition-cost-singapore.html · enrichment-classes-cost-singapore.html · how-much-does-junior-college-cost-singapore.html · polytechnic-vs-junior-college-cost-singapore.html · how-much-does-university-cost-singapore.html
 
 **Household scaling / anchor pages**
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
@@ -298,6 +298,9 @@ family/index.html
 
 **Build rule going forward**
 Family is now an active cluster, not a future concept. New family pages should be added to the Family hub, Family related-link graph in `includes.js`, and only bridged into property/transport where the connection is natural and specific.
+
+**Current expansion rule**
+Family should now be treated as a full lifecycle cost cluster. New pages should preserve stage-specific roles rather than collapsing multiple education phases into one master article.
 
 ---
 
@@ -346,13 +349,14 @@ Family is now an active cluster, not a future concept. New family pages should b
 | v0206 | Family early-years care alternatives + preschool branch |
 | v0207 | Family primary-school / post-school care / second-child branch |
 | v0208 | Family secondary-school / tuition / enrichment branch |
+| v0209 | Family junior-college / JC-vs-poly / university branch |
 
 ---
 
 ## 10. SEO Status
 
 - ✅ Canonical tags on all pages (injected via includes.js)
-- ✅ Sitemap at /sitemap.xml (~266 URLs)
+- ✅ Sitemap at /sitemap.xml (~253 URLs)
 - ✅ FAQPage schema on ~86 pages
 - ✅ "Last updated" visible on all pages (freshness signal)
 - ✅ URL pattern: `{topic}-singapore.html`

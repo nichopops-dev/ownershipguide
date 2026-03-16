@@ -1,5 +1,5 @@
 (async function () {
-  const OG_INCLUDES_VERSION = "v0126.8-family-primary-stage";
+  const OG_INCLUDES_VERSION = "v0126.9-family-tertiary-stage";
   try { document.documentElement.dataset.ogIncludesVersion = OG_INCLUDES_VERSION; } catch(e) {}
   try { console.log("[OwnershipGuide] includes.js", OG_INCLUDES_VERSION); } catch(e) {}
 
@@ -234,6 +234,9 @@ decisionPathOverrides: {
         { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", cluster: "family", subtopic: "school" },
         { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", cluster: "family", subtopic: "education" },
         { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", cluster: "family", subtopic: "education" },
+        { url: "/how-much-does-junior-college-cost-singapore.html", title: "How Much Does Junior College Cost in Singapore? (2026): The Post-Secondary Stage Families Still Need to Budget For", cluster: "family", subtopic: "school" },
+        { url: "/polytechnic-vs-junior-college-cost-singapore.html", title: "Polytechnic vs Junior College Cost in Singapore (2026): The Post-Secondary Branch Point Families Often Oversimplify", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", cluster: "family", subtopic: "education" },
         { url: "/start-here/", title: "Start Here (10-Minute Paths)", cluster: "home" }
       ]
     },
@@ -271,6 +274,9 @@ decisionPathOverrides: {
         { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", cluster: "family", subtopic: "school" },
         { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", cluster: "family", subtopic: "education" },
         { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", cluster: "family", subtopic: "education" },
+        { url: "/how-much-does-junior-college-cost-singapore.html", title: "How Much Does Junior College Cost in Singapore? (2026): The Post-Secondary Stage Families Still Need to Budget For", cluster: "family", subtopic: "school" },
+        { url: "/polytechnic-vs-junior-college-cost-singapore.html", title: "Polytechnic vs Junior College Cost in Singapore (2026): The Post-Secondary Branch Point Families Often Oversimplify", cluster: "family", subtopic: "comparison" },
+        { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", cluster: "family", subtopic: "education" },
         { url: "/second-car-vs-ride-hailing-singapore.html", title: "Second Car vs Ride-Hailing in Singapore (2026): Which Is Smarter for a One-Car Household?", cluster: "transport", subtopic: "comparison" },
         { url: "/car-sharing-vs-ride-hailing-singapore.html", title: "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?", cluster: "transport", subtopic: "comparison" },
         { url: "/hdb-vs-condo-singapore.html", title: "HDB vs Condo in Singapore (2026): The Real Cost, Lifestyle, and Regret Tradeoffs", cluster: "property", subtopic: "comparison" },
