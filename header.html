@@ -20,16 +20,16 @@
         Comparisons
       </a>
 
-      <div class="nav-dropdown" id="nav-topics-dropdown">
-        <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="nav-topics-menu" type="button">
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" type="button" aria-haspopup="true">
           Topics <span class="nav-dropdown-arrow" aria-hidden="true">▾</span>
         </button>
-        <div class="nav-dropdown-menu" id="nav-topics-menu" role="menu">
-          <a href="/transport/" data-nav="transport" role="menuitem">Transport</a>
-          <a href="/property/" data-nav="property" role="menuitem">Property</a>
-          <a href="/family/" data-nav="family" role="menuitem">Family</a>
-          <a href="/protection/" data-nav="protection" role="menuitem">Protection</a>
-          <a href="/financing/" data-nav="financing" role="menuitem">Financing</a>
+        <div class="nav-dropdown-menu">
+          <a href="/transport/" data-nav="transport">Transport</a>
+          <a href="/property/" data-nav="property">Property</a>
+          <a href="/family/" data-nav="family">Family</a>
+          <a href="/protection/" data-nav="protection">Protection</a>
+          <a href="/financing/" data-nav="financing">Financing</a>
         </div>
       </div>
 
@@ -58,53 +58,3 @@
 
   <hr>
 </header>
-
-<script>
-(function() {
-  var dropdown = document.getElementById('nav-topics-dropdown');
-  var trigger = dropdown && dropdown.querySelector('.nav-dropdown-trigger');
-  var menu = document.getElementById('nav-topics-menu');
-  if (!trigger || !menu) return;
-
-  function openMenu() {
-    trigger.setAttribute('aria-expanded', 'true');
-    menu.classList.add('open');
-  }
-  function closeMenu() {
-    trigger.setAttribute('aria-expanded', 'false');
-    menu.classList.remove('open');
-  }
-  function toggleMenu() {
-    if (menu.classList.contains('open')) { closeMenu(); } else { openMenu(); }
-  }
-
-  trigger.addEventListener('click', function(e) {
-    e.stopPropagation();
-    toggleMenu();
-  });
-
-  // Close on outside click
-  document.addEventListener('click', function(e) {
-    if (!dropdown.contains(e.target)) closeMenu();
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  // Highlight active cluster inside dropdown
-  var path = (location.pathname || '/').toLowerCase();
-  var clusterMap = {
-    '/transport': 'transport', '/property': 'property',
-    '/family': 'family', '/protection': 'protection', '/financing': 'financing'
-  };
-  Object.keys(clusterMap).forEach(function(prefix) {
-    if (path.startsWith(prefix) || path.includes(clusterMap[prefix])) {
-      var link = menu.querySelector('a[data-nav="' + clusterMap[prefix] + '"]');
-      if (link) link.classList.add('active');
-      trigger.classList.add('active');
-    }
-  });
-})();
-</script>

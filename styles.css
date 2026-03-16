@@ -1386,7 +1386,7 @@ body.home .box{ background: #ffffff; }
 }
 
 /* =========================
-   Nav Topics Dropdown (v0210.1)
+   Nav Topics Dropdown (v0210.2 — CSS-only, no JS required)
 ========================= */
 
 .nav-dropdown {
@@ -1410,16 +1410,12 @@ body.home .box{ background: #ffffff; }
   transition: all 0.15s ease;
   white-space: nowrap;
 }
-.nav-dropdown-trigger:hover {
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger:focus {
   color: #0f172a;
   background: rgba(20,42,92,0.04);
   border-color: rgba(200,212,229,0.95);
-}
-.nav-dropdown-trigger.active {
-  background: #ffffff;
-  border-color: rgba(20,42,92,0.12);
-  box-shadow: 0 4px 12px rgba(15,23,42,0.04);
-  font-weight: 600;
+  outline: none;
 }
 .nav-dropdown-arrow {
   font-size: 10px;
@@ -1438,11 +1434,15 @@ body.home .box{ background: #ffffff; }
   box-shadow: 0 8px 24px rgba(15,23,42,0.10);
   padding: 6px;
   z-index: 200;
-}
-.nav-dropdown-menu.open {
-  display: flex;
   flex-direction: column;
 }
+
+/* Open on hover (desktop) or when trigger/menu has focus (click + keyboard) */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: flex;
+}
+
 .nav-dropdown-menu a {
   display: block;
   padding: 8px 12px;
@@ -1458,7 +1458,8 @@ body.home .box{ background: #ffffff; }
   background: rgba(20,42,92,0.05);
   color: #0f172a;
 }
-.nav-dropdown-menu a.active {
+.nav-dropdown-menu a.active,
+.nav-dropdown-menu a[data-nav].active {
   background: rgba(20,42,92,0.07);
   color: #0f172a;
   font-weight: 600;
