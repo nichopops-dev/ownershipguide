@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0212.1
+> Last updated: March 2026 · Based on repo v0213
 
 ---
 
@@ -35,8 +35,9 @@
 **Repo:** Static HTML site. No CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
+> ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0212.1
+**Current version:** v0213
 
 ### Key files
 | File | Purpose |
@@ -44,7 +45,7 @@
 | `includes.js` | ⚠️ Central nervous system — controls ALL shared behaviour. See Section 5. |
 | `styles.css` | Global stylesheet (~28KB) |
 | `index.html` | Homepage |
-| `sitemap.xml` | ~286 URLs |
+| `sitemap.xml` | ~289 URLs |
 | `footer.html` | Shared footer partial |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 

@@ -341,6 +341,9 @@ decisionPathOverrides: {
         { url: "/accident-insurance-cost-singapore.html", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
         { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore.html", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" },
+        { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", cluster: "protection", subtopic: "comparison" },
+        { url: "/hospitalisation-insurance-vs-accident-insurance-singapore.html", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", cluster: "protection", subtopic: "comparison" },
+        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", cluster: "protection", subtopic: "comparison" },
         { url: "/accident-insurance-cost-singapore.html", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
         { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore.html", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" }
@@ -768,7 +771,10 @@ decisionPathOverrides: {
         { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance Singapore (2026): Coverage Gap, Structural Risk, and What Actually Protects Your Asset", subtopic: "comparison" },
         { url: "/accident-insurance-cost-singapore.html", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", subtopic: "comparison" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore.html", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", subtopic: "comparison" },
-        { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", subtopic: "comparison" }
+        { url: "/hospital-cash-insurance-worth-it-singapore.html", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", subtopic: "comparison" },
+        { url: "/early-critical-illness-vs-critical-illness-singapore.html", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
+        { url: "/hospitalisation-insurance-vs-accident-insurance-singapore.html", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", subtopic: "comparison" },
+        { url: "/whole-life-vs-critical-illness-insurance-singapore.html", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" }
       ],
       bridges: []
     }
