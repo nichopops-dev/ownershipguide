@@ -22,14 +22,35 @@
       "date": "2026-03-16"
     },
     {
-      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
-      "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
+      "url": "/how-a-second-child-changes-your-insurance-needs-singapore.html",
+      "title": "How a Second Child Changes Your Insurance Needs in Singapore (2026)",
       "cluster": "protection",
       "clusterLabel": "Protection",
-      "date": "2026-03-17"
+      "date": "2026-03-18"
     }
   ],
   "new": [
+    {
+      "url": "/accident-insurance-vs-critical-illness-insurance-singapore.html",
+      "title": "Accident Insurance vs Critical Illness Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Compare narrow accident-event cover with diagnosis-stage lump-sum protection before reading cheap premiums as broad usefulness."
+    },
+    {
+      "url": "/term-life-vs-disability-income-insurance-singapore.html",
+      "title": "Term Life vs Disability Income Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Separate death-benefit protection from income-continuity protection before treating one as a substitute for the other."
+    },
+    {
+      "url": "/how-a-second-child-changes-your-insurance-needs-singapore.html",
+      "title": "How a Second Child Changes Your Insurance Needs",
+      "cluster": "protection",
+      "clusterLabel": "Protection \u00d7 Family",
+      "desc": "See how a move from one child to two changes life cover, CI flexibility, and income-continuity priorities."
+    },
     {
       "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
       "title": "Accident Insurance vs Disability Income Insurance",
@@ -48,8 +69,8 @@
       "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
       "title": "Home Protection Scheme vs Term Life Insurance",
       "cluster": "protection",
-      "clusterLabel": "Protection × Property",
-      "desc": "Mortgage-linked HPS is not the same thing as broader family life cover — compare their roles properly."
+      "clusterLabel": "Protection \u00d7 Property",
+      "desc": "Mortgage-linked HPS is not the same thing as broader family life cover \u2014 compare their roles properly."
     },
     {
       "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
@@ -76,35 +97,35 @@
       "url": "/should-i-buy-bigger-home-before-having-kids-singapore.html",
       "title": "Should I Buy a Bigger Home Before Having Kids?",
       "cluster": "property",
-      "clusterLabel": "Property × Family",
+      "clusterLabel": "Property \u00d7 Family",
       "desc": "How property sizing, TDSR, and family cost interact before you commit to a larger home."
     },
     {
       "url": "/family-car-decision-after-baby-singapore.html",
       "title": "Does Having a Baby Mean You Need a Car?",
       "cluster": "transport",
-      "clusterLabel": "Transport × Family",
+      "clusterLabel": "Transport \u00d7 Family",
       "desc": "A cost framework for the car decision after a child arrives."
     },
     {
       "url": "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html",
       "title": "How a Child Affects Your TDSR",
       "cluster": "property",
-      "clusterLabel": "Financing × Family",
+      "clusterLabel": "Financing \u00d7 Family",
       "desc": "What childcare costs and income reduction mean for your home loan capacity."
     },
     {
       "url": "/life-insurance-and-home-loan-singapore.html",
       "title": "Life Insurance and Your Home Loan",
       "cluster": "protection",
-      "clusterLabel": "Protection × Property",
-      "desc": "What happens to your property if you die — and how to make sure it doesn't become a burden."
+      "clusterLabel": "Protection \u00d7 Property",
+      "desc": "What happens to your property if you die \u2014 and how to make sure it doesn't become a burden."
     },
     {
       "url": "/protection-gap-after-having-a-baby-singapore.html",
       "title": "Protection Gap After Having a Baby",
       "cluster": "protection",
-      "clusterLabel": "Protection × Family",
+      "clusterLabel": "Protection \u00d7 Family",
       "desc": "How your insurance needs change when a child arrives."
     }
   ],

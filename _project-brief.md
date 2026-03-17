@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0216
+> Last updated: March 2026 · Based on repo v0217
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0216
+**Current version:** v0217
 
 ### Key files
 | File | Purpose |
@@ -188,7 +188,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0216)
+## 7. Current Site Health (as of v0217)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -199,7 +199,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Protection / Insurance has now been deepened further into accident-versus-disability-income comparison, hospital-cash-versus-critical-illness comparison, and the first explicit Property–Protection bridge page around HPS versus term life. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Protection / Insurance has now been deepened further into accident-versus-critical-illness comparison, term-life-versus-disability-income comparison, and a new Family–Protection bridge around how a second child changes the household protection review. The dynamic homepage remains powered by `featured.json`. The recent structural pass also corrected `auto-related` placement on affected content/calculator pages and brought the v0216 comparison pages above the word-floor. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -314,21 +314,24 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
-### Protection / Insurance (~15 pages) 🟡 Growing and structurally integrated
+### Protection / Insurance (~18 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0216. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, and a clearer internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, protection-purpose comparison, and the first explicit Property–Protection bridge page.
+**Current state:** Launched in v0210 and deepened through v0217. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, and a clearer internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, protection-purpose comparison, the first explicit Property–Protection bridge page, and a new Family–Protection bridge focused on the second-child protection review.
 
 **Medical / health-cover structure**
-hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html
+hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
 
 **Life-insurance / income-protection / sizing**
-term-life-vs-whole-life-cost-singapore.html · how-much-life-insurance-do-you-need-singapore.html · disability-income-insurance-cost-singapore.html · how-much-disability-income-insurance-do-you-need-singapore.html · term-life-vs-critical-illness-insurance-singapore.html · accident-insurance-cost-singapore.html · accident-insurance-vs-disability-income-insurance-singapore.html
+term-life-vs-whole-life-cost-singapore.html · how-much-life-insurance-do-you-need-singapore.html · disability-income-insurance-cost-singapore.html · how-much-disability-income-insurance-do-you-need-singapore.html · term-life-vs-critical-illness-insurance-singapore.html · accident-insurance-cost-singapore.html · accident-insurance-vs-disability-income-insurance-singapore.html · term-life-vs-disability-income-insurance-singapore.html
 
 **Critical-illness / protection-purpose comparison**
 critical-illness-insurance-cost-singapore.html · early-critical-illness-vs-critical-illness-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · whole-life-vs-critical-illness-insurance-singapore.html · how-much-critical-illness-insurance-do-you-need-singapore.html · critical-illness-vs-disability-income-insurance-singapore.html
 
 **Property–Protection bridge**
 home-protection-scheme-vs-term-life-insurance-singapore.html
+
+**Family–Protection bridge**
+how-a-second-child-changes-your-insurance-needs-singapore.html
 
 **Hub**
 protection/index.html
@@ -337,7 +340,7 @@ protection/index.html
 Protection is now an active cluster, not a future concept. New protection pages should be added to the Protection hub, Protection related-link graph in `includes.js`, and only bridged into Family, Property, or Transport where the connection is specific and not generic.
 
 **Current expansion rule**
-Protection should continue to branch carefully by protection purpose. New pages should preserve role clarity between sizing, product-structure comparison, income protection, accident-event cover, illness-event protection, medical-cover structure, and bridge pages only where the purpose distinction is still clean. The first deliberate Property–Protection bridge now exists, so future bridge pages should stay explicit and narrow rather than becoming generic cross-cluster essays.
+Protection should continue to branch carefully by protection purpose. New pages should preserve role clarity between sizing, product-structure comparison, income protection, accident-event cover, illness-event protection, medical-cover structure, and bridge pages only where the purpose distinction is still clean. Property–Protection and Family–Protection bridge pages now exist, so future bridge pages should stay explicit and narrow rather than becoming generic cross-cluster essays.
 
 ---
 
@@ -398,6 +401,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0214.1 | Internal linking audit (0 orphans fixed, 34 links added); dynamic homepage with featured.json; how-much-does-it-cost-to-raise-a-child refs fixed |
 | v0215 | Protection sizing branch: how much CI, how much disability-income cover, and CI-vs-disability-income comparison; featured.json updated |
 | v0216 | Protection comparison branch: accident-vs-disability-income, hospital-cash-vs-CI, and HPS-vs-term-life bridge; featured.json updated |
+| v0217 | Protection bridge/comparison branch: accident-vs-critical-illness, term-life-vs-disability-income, and second-child protection review bridge; auto-related placement normalized on affected content/calculator pages |
 
 ---
 
