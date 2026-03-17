@@ -2073,16 +2073,17 @@ const box = document.createElement("section");
     
     var box = document.createElement('div');
     box.id = 'og-email-capture';
-    box.style.cssText = 'margin:24px 0;padding:16px 18px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;';
+    box.className = 'box';
+    box.style.cssText = 'margin:24px 0;border-left:3px solid #1d4ed8;';
     box.innerHTML = [
-      '<p style="margin:0 0 8px;font-weight:600;font-size:15px">Get notified when rules change</p>',
-      '<p style="margin:0 0 12px;font-size:14px;color:#374151">COE thresholds, property cooling measures, CPF rule updates — we send one email when something material changes. No spam.</p>',
-      '<div id="og-email-form" style="display:flex;gap:8px;flex-wrap:wrap">',
-      '<input type="email" id="og-email-input" placeholder="your@email.com" style="flex:1;min-width:200px;padding:9px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px">',
-      '<button type="button" id="og-email-submit" style="padding:9px 16px;background:#111827;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;white-space:nowrap">Notify me</button>',
-      '<button type="button" id="og-email-dismiss" style="padding:9px 12px;background:none;border:none;font-size:13px;color:#6b7280;cursor:pointer">No thanks</button>',
+      '<p style="margin:0 0 4px;font-weight:600;font-size:15px;color:#111827">Get notified when rules change</p>',
+      '<p style="margin:0 0 14px;font-size:14px;color:var(--muted);line-height:1.5">COE thresholds, property cooling measures, CPF rule updates — one email when something material changes. No spam.</p>',
+      '<div id="og-email-form" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">',
+      '<input type="email" id="og-email-input" placeholder="your@email.com" style="flex:1;min-width:180px;padding:9px 12px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:#fff;color:var(--text)">',
+      '<button type="button" id="og-email-submit" class="btn btn-primary" style="padding:9px 18px;font-size:14px;white-space:nowrap">Notify me</button>',
+      '<button type="button" id="og-email-dismiss" style="padding:9px 10px;background:none;border:none;font-size:13px;color:var(--muted);cursor:pointer;text-decoration:underline">No thanks</button>',
       '</div>',
-      '<p id="og-email-msg" style="margin:8px 0 0;font-size:13px;display:none"></p>'
+      '<p id="og-email-msg" style="margin:10px 0 0;font-size:13px;display:none"></p>'
     ].join('');
     
     // Insert before auto-related or References
