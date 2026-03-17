@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0219
+> Last updated: March 2026 · Based on repo v0220
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0219
+**Current version:** v0220
 
 ### Key files
 | File | Purpose |
@@ -188,7 +188,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0219)
+## 7. Current Site Health (as of v0220)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -199,7 +199,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Protection / Insurance has now expanded further into life-stage and obligation bridge pages covering self-employment, single-income household fragility, and the protection consequences of supporting aging parents. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Protection / Insurance has now expanded further into life-stage, property, and later-stage bridge pages covering self-employment, single-income household fragility, aging-parent support, divorce/separation reset, investment-property leverage, and retirement-stage protection restructuring. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -329,6 +329,7 @@ critical-illness-insurance-cost-singapore.html · early-critical-illness-vs-crit
 
 **Property–Protection bridge**
 home-protection-scheme-vs-term-life-insurance-singapore.html
+how-buying-an-investment-property-changes-your-insurance-needs-singapore.html
 
 **Family–Protection bridge**
 how-a-second-child-changes-your-insurance-needs-singapore.html
@@ -338,6 +339,8 @@ when-insurance-starts-to-matter-more-than-investing-singapore.html
 how-becoming-self-employed-changes-your-insurance-needs-singapore.html
 how-a-single-income-household-changes-your-insurance-needs-singapore.html
 how-supporting-aging-parents-changes-your-insurance-needs-singapore.html
+how-divorce-changes-your-insurance-needs-singapore.html
+how-retirement-changes-your-insurance-needs-singapore.html
 
 **Hub**
 protection/index.html
@@ -410,6 +413,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0217 | Protection bridge/comparison branch: accident-vs-critical-illness, term-life-vs-disability-income, and second-child protection review bridge; auto-related placement normalized on affected content/calculator pages |
 | v0218 | Protection bridge branch: marriage-stage protection review, property-upgrade protection review, and insurance-vs-investing priority framework |
 | v0219 | Protection bridge branch: self-employment, single-income household, and aging-parent support protection review pages |
+| v0220 | Protection bridge branch: divorce reset, investment-property protection review, and retirement-stage protection review pages |
 
 ---
 

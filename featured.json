@@ -22,14 +22,35 @@
       "date": "2026-03-16"
     },
     {
-      "url": "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html",
-      "title": "How Becoming Self-Employed Changes Your Insurance Needs in Singapore (2026)",
+      "url": "/how-divorce-changes-your-insurance-needs-singapore.html",
+      "title": "How Divorce Changes Your Insurance Needs in Singapore (2026)",
       "cluster": "protection",
       "clusterLabel": "Protection",
       "date": "2026-03-17"
     }
   ],
   "new": [
+    {
+      "url": "/how-divorce-changes-your-insurance-needs-singapore.html",
+      "title": "How Divorce Changes Your Insurance Needs",
+      "cluster": "protection",
+      "clusterLabel": "Protection × Family",
+      "desc": "Review how separation changes beneficiaries, dependency assumptions, and the protection stack you actually still need."
+    },
+    {
+      "url": "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html",
+      "title": "How Buying an Investment Property Changes Your Insurance Needs",
+      "cluster": "protection",
+      "clusterLabel": "Protection × Property",
+      "desc": "See how leverage, rental dependency, and second-property exposure change the protection problem."
+    },
+    {
+      "url": "/how-retirement-changes-your-insurance-needs-singapore.html",
+      "title": "How Retirement Changes Your Insurance Needs",
+      "cluster": "protection",
+      "clusterLabel": "Protection × Retirement",
+      "desc": "Review which protection layers shrink, which stay relevant, and how retirement changes the point of insurance."
+    },
     {
       "url": "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html",
       "title": "How Becoming Self-Employed Changes Your Insurance Needs",

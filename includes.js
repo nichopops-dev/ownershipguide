@@ -801,7 +801,10 @@ decisionPathOverrides: {
         { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", subtopic: "planning" },
         { url: "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html", title: "How Becoming Self-Employed Changes Your Insurance Needs in Singapore (2026): The Protection Reset Most New Founders Delay", subtopic: "planning" },
         { url: "/how-a-single-income-household-changes-your-insurance-needs-singapore.html", title: "How a Single-Income Household Changes Your Insurance Needs in Singapore (2026): The Protection Review Dependency Concentration Demands", subtopic: "planning" },
-        { url: "/how-supporting-aging-parents-changes-your-insurance-needs-singapore.html", title: "How Supporting Aging Parents Changes Your Insurance Needs in Singapore (2026): The Protection Review the Sandwich Generation Cannot Skip", subtopic: "planning" }
+        { url: "/how-supporting-aging-parents-changes-your-insurance-needs-singapore.html", title: "How Supporting Aging Parents Changes Your Insurance Needs in Singapore (2026): The Protection Review the Sandwich Generation Cannot Skip", subtopic: "planning" },
+        { url: "/how-divorce-changes-your-insurance-needs-singapore.html", title: "How Divorce Changes Your Insurance Needs in Singapore (2026): The Protection Reset Most Households Delay Too Long", subtopic: "planning" },
+        { url: "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html", title: "How Buying an Investment Property Changes Your Insurance Needs in Singapore (2026): The Protection Review Many Investors Skip", subtopic: "planning" },
+        { url: "/how-retirement-changes-your-insurance-needs-singapore.html", title: "How Retirement Changes Your Insurance Needs in Singapore (2026): The Protection Reset That Is Not Just About Paying Less", subtopic: "planning" }
       ],
       bridges: []
     }
