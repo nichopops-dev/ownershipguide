@@ -21,7 +21,7 @@
 
     // AdSense Auto Ads
     // Email capture (set to your Google Apps Script web app URL, leave empty to disable)
-    emailCaptureUrl: "",
+    emailCaptureUrl: "https://script.google.com/macros/s/AKfycbxzBzZStFql7xNO9za_xLpeYf6afV5XkfiN_MjMtPkFgvioKdwlu_ObN8k2S0YVgwKa/exec",
 
     enableAdSenseAutoAds: true,
     adSenseClientId: "ca-pub-8718234605112874",
