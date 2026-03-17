@@ -804,7 +804,13 @@ decisionPathOverrides: {
         { url: "/how-supporting-aging-parents-changes-your-insurance-needs-singapore.html", title: "How Supporting Aging Parents Changes Your Insurance Needs in Singapore (2026): The Protection Review the Sandwich Generation Cannot Skip", subtopic: "planning" },
         { url: "/how-divorce-changes-your-insurance-needs-singapore.html", title: "How Divorce Changes Your Insurance Needs in Singapore (2026): The Protection Reset Most Households Delay Too Long", subtopic: "planning" },
         { url: "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html", title: "How Buying an Investment Property Changes Your Insurance Needs in Singapore (2026): The Protection Review Many Investors Skip", subtopic: "planning" },
-        { url: "/how-retirement-changes-your-insurance-needs-singapore.html", title: "How Retirement Changes Your Insurance Needs in Singapore (2026): The Protection Reset That Is Not Just About Paying Less", subtopic: "planning" }
+        { url: "/how-retirement-changes-your-insurance-needs-singapore.html", title: "How Retirement Changes Your Insurance Needs in Singapore (2026): The Protection Reset That Is Not Just About Paying Less", subtopic: "planning" },
+        { url: "/accident-insurance-vs-disability-income-insurance-singapore.html", title: "Accident Insurance vs Disability Income Insurance in Singapore (2026): Event Payout or Income Continuity?", subtopic: "comparison" },
+        { url: "/critical-illness-vs-disability-income-insurance-singapore.html", title: "Critical Illness vs Disability Income Insurance in Singapore (2026): Why Lump-Sum Illness Cover and Income Replacement Are Not the Same Job", subtopic: "comparison" },
+        { url: "/home-protection-scheme-vs-term-life-insurance-singapore.html", title: "Home Protection Scheme vs Term Life Insurance in Singapore (2026): Mortgage Cover Is Not Full Family Protection", subtopic: "comparison" },
+        { url: "/hospital-cash-vs-critical-illness-insurance-singapore.html", title: "Hospital Cash vs Critical Illness Insurance in Singapore (2026): Cheap Add-On or Real Illness Protection?", subtopic: "comparison" },
+        { url: "/how-much-critical-illness-insurance-do-you-need-singapore.html", title: "How Much Critical Illness Insurance Do You Need in Singapore? (2026): Sizing the Lump-Sum Buffer Without Guessing", subtopic: "planning" },
+        { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" }
       ],
       bridges: []
     }

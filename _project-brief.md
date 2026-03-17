@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0220
+> Last updated: March 2026 · Based on repo v0220.1
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0220
+**Current version:** v0220.1
 
 ### Key files
 | File | Purpose |
@@ -414,6 +414,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0218 | Protection bridge branch: marriage-stage protection review, property-upgrade protection review, and insurance-vs-investing priority framework |
 | v0219 | Protection bridge branch: self-employment, single-income household, and aging-parent support protection review pages |
 | v0220 | Protection bridge branch: divorce reset, investment-property protection review, and retirement-stage protection review pages |
+| v0220.1 | Sweep: 6 pages added to search index; 6 duplicate References fixed; 4 pages FAQ added; 15 short pages expanded to 1500w+; featured.json capped at 5 items; 7 inbound links added |
 
 ---
 
