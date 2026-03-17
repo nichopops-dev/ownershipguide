@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0220.2c
+> Last updated: March 2026 · Based on repo v0221
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0220.2c
+**Current version:** v0221
 
 ### Key files
 | File | Purpose |
@@ -319,9 +319,9 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
-### Protection / Insurance (~18 pages) 🟡 Growing and structurally integrated
+### Protection / Insurance (~21 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0219. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, and multi-generational obligations.
+**Current state:** Launched in v0210 and deepened through v0221. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, and multi-generational obligations.
 
 **Medical / health-cover structure**
 hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
@@ -473,3 +473,5 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 *This brief is the single source of truth for all sessions — Claude and ChatGPT alike.*
 *Update the version number and version history table whenever a new version ships.*
+
+| v0221 | Protection bridge expansion: mortgage-free, job-change, and no-dependants transition pages |
