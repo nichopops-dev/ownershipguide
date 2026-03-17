@@ -38,6 +38,34 @@
 </div>
 </section>
 
+<section class="og-dynamic-section" id="og-hub-dynamic-family" style="margin-top:18px">
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('og-hub-dynamic-family');
+  if(!sec) return;
+  var MAX=3;
+  fetch('/featured.json')
+    .then(function(r){return r.json();})
+    .catch(function(){return null;})
+    .then(function(data){
+      if(!data||!data.cluster_recent||!data.cluster_recent['family']) return;
+      var items=data.cluster_recent['family'].slice(0,MAX);
+      if(!items.length) return;
+      var html='<div class="box">';
+      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently added</p>';
+      html+='<ul style="margin:0;padding-left:0;list-style:none">';
+      items.forEach(function(p){
+        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)"><a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+        if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
+        html+='</li>';
+      });
+      html+='</ul></div>';
+      sec.innerHTML=html;
+    });
+})();
+</script>
+
 <section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">Start with the path that matches your stage</h2>
 <p class="section-intro">Use these entry lanes so you do not confuse immediate baby cost, formal care cost, and the broader long-horizon child-cost question.</p>

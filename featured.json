@@ -110,5 +110,75 @@
       "inbound": 12
     }
   ],
-  "generated": "2026-03-17"
+  "generated": "2026-03-17",
+  "cluster_recent": {
+    "transport": [
+      {
+        "url": "/5-year-coe-renewal-worth-it-singapore.html",
+        "title": "5-Year COE Renewal: Is It Worth It?",
+        "desc": "A cost model for renewal vs replacement at the 10-year mark."
+      },
+      {
+        "url": "/coe-bidding-strategy-singapore.html",
+        "title": "COE Bidding Strategy",
+        "desc": "How the bidding mechanism works and how to approach it without overpaying."
+      },
+      {
+        "url": "/family-car-decision-after-baby-singapore.html",
+        "title": "Does Having a Baby Mean You Need a Car?",
+        "desc": "A cost framework for the car decision after a child arrives."
+      }
+    ],
+    "property": [
+      {
+        "url": "/should-i-buy-bigger-home-before-having-kids-singapore.html",
+        "title": "Should I Buy Bigger Before Having Kids?",
+        "desc": "Property sizing, family cost, and the trade-off most households misread."
+      },
+      {
+        "url": "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html",
+        "title": "How a Child Affects Your TDSR",
+        "desc": "What childcare costs and income reduction mean for your home loan."
+      },
+      {
+        "url": "/life-insurance-and-home-loan-singapore.html",
+        "title": "Life Insurance and Your Home Loan",
+        "desc": "What happens to your property if you die \u2014 and how to protect it."
+      }
+    ],
+    "family": [
+      {
+        "url": "/protection-gap-after-having-a-baby-singapore.html",
+        "title": "Protection Gap After Having a Baby",
+        "desc": "How your insurance needs change when a child arrives."
+      },
+      {
+        "url": "/how-a-second-child-changes-your-insurance-needs-singapore.html",
+        "title": "How a Second Child Changes Your Insurance Needs",
+        "desc": "The step-change in protection most families underestimate."
+      },
+      {
+        "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+        "title": "Full Cost of Raising a Child",
+        "desc": "A long-horizon framework from birth through university."
+      }
+    ],
+    "protection": [
+      {
+        "url": "/how-much-life-insurance-do-you-need-singapore.html",
+        "title": "How Much Life Insurance Do You Need?",
+        "desc": "A protection-gap framework for real household obligations."
+      },
+      {
+        "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
+        "title": "How Much CI Cover Do You Need?",
+        "desc": "Sizing CI insurance based on your household obligations."
+      },
+      {
+        "url": "/when-insurance-starts-to-matter-more-than-investing-singapore.html",
+        "title": "When Insurance Matters More Than Investing",
+        "desc": "The household conditions that flip the priority order."
+      }
+    ]
+  }
 }

@@ -49,58 +49,58 @@
 <a class="button" href="/protection/">Protection hub →</a>
 </p>
 </header>
+
 <section class="og-dynamic-section" id="og-homepage-dynamic" style="margin-top:18px">
-<!-- Dynamic content injected by featured.json — falls back gracefully if JS is unavailable -->
+<!-- Dynamic content injected by featured.json — falls back gracefully if JS unavailable -->
 </section>
 <script>
 (function(){
   var sec = document.getElementById('og-homepage-dynamic');
   if (!sec) return;
+  var MAX_NEW = 5;
+  var MAX_RECENT = 4;
+  var clusterColour = {
+    transport:'#1d4ed8',property:'#0f766e',
+    family:'#7c3aed',protection:'#b45309',core:'#374151'
+  };
+  function chip(label,cluster){
+    var col=clusterColour[cluster]||'#374151';
+    return '<span style="display:inline-block;font-size:11px;font-weight:600;color:'+col+';background:'+col+'18;border-radius:999px;padding:2px 8px;margin-right:6px;white-space:nowrap">'+label+'</span>';
+  }
   fetch('/featured.json')
-    .then(function(r){ return r.json(); })
-    .catch(function(){ return null; })
+    .then(function(r){return r.json();})
+    .catch(function(){return null;})
     .then(function(data){
-      if (!data) return;
-      var clusterColour = {
-        transport: '#1d4ed8', property: '#0f766e',
-        family: '#7c3aed', protection: '#b45309', core: '#374151'
-      };
-      function chip(label, cluster){
-        var col = clusterColour[cluster] || '#374151';
-        return '<span style="display:inline-block;font-size:11px;font-weight:600;color:'+col+';background:'+col+'18;border-radius:999px;padding:2px 8px;margin-right:6px">'+label+'</span>';
-      }
-      var html = '';
-
-      // New cross-cluster pages section
-      if (data.new && data.new.length){
-        html += '<div class="box" style="margin-bottom:14px">';
-        html += '<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">New — cross-cluster guides</p>';
-        html += '<ul style="margin:0;padding-left:0;list-style:none">';
-        data.new.forEach(function(p){
-          html += '<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
-          html += chip(p.clusterLabel, p.cluster);
-          html += '<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
-          if (p.desc) html += '<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px;margin-left:0">'+p.desc+'</span>';
-          html += '</li>';
+      if(!data) return;
+      var html='';
+      if(data.new && data.new.length){
+        var items=data.new.slice(0,MAX_NEW);
+        html+='<div class="box" style="margin-bottom:14px">';
+        html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">New guides</p>';
+        html+='<ul style="margin:0;padding-left:0;list-style:none">';
+        items.forEach(function(p){
+          html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
+          html+=chip(p.clusterLabel,p.cluster);
+          html+='<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+          if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
+          html+='</li>';
         });
-        html += '</ul></div>';
+        html+='</ul></div>';
       }
-
-      // Recently updated per cluster
-      if (data.recent && data.recent.length){
-        html += '<div class="box" style="margin-bottom:0">';
-        html += '<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated by cluster</p>';
-        html += '<ul style="margin:0;padding-left:0;list-style:none">';
-        data.recent.forEach(function(p){
-          html += '<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
-          html += chip(p.clusterLabel, p.cluster);
-          html += '<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
-          html += '</li>';
+      if(data.recent && data.recent.length){
+        var recent=data.recent.slice(0,MAX_RECENT);
+        html+='<div class="box">';
+        html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
+        html+='<ul style="margin:0;padding-left:0;list-style:none">';
+        recent.forEach(function(p){
+          html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
+          html+=chip(p.clusterLabel,p.cluster);
+          html+='<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+          html+='</li>';
         });
-        html += '</ul></div>';
+        html+='</ul></div>';
       }
-
-      if (html) sec.innerHTML = html;
+      if(html) sec.innerHTML=html;
     });
 })();
 </script>
