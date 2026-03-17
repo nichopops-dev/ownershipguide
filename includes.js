@@ -21,7 +21,7 @@
 
     // AdSense Auto Ads
     // Email capture (set to your Google Apps Script web app URL, leave empty to disable)
-    emailCaptureUrl: "https://script.google.com/macros/s/AKfycbxzBzZStFql7xNO9za_xLpeYf6afV5XkfiN_MjMtPkFgvioKdwlu_ObN8k2S0YVgwKa/exec",
+    emailCaptureUrl: "https://script.google.com/macros/s/AKfycbymgo2k_2loWUwDzuCbtEDOMEYeGzQC1FRj7zOYVl5GG5Sv4C2f82oH4QEnnHPuu7s/exec",
 
     enableAdSenseAutoAds: true,
     adSenseClientId: "ca-pub-8718234605112874",
@@ -2104,13 +2104,15 @@ const box = document.createElement("section");
       this.textContent = 'Sending...';
       fetch(SETTINGS.emailCaptureUrl, {
         method: 'POST',
-        body: JSON.stringify({ email: email, page: location.pathname, source: 'ownership-guide' })
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ email: email, page: location.pathname, source: 'ownership-guide' }).toString()
       })
       .then(function() {
         document.getElementById('og-email-form').style.display = 'none';
         msg.style.display = 'block';
         msg.style.color = '#059669';
-        msg.textContent = "Done \u2014 you'll hear from us when something meaningful changes.";
+        msg.textContent = "Done — you'll hear from us when something meaningful changes.";
         try { sessionStorage.setItem('og-email-dismissed', '1'); } catch(e) {}
       })
       .catch(function() {
