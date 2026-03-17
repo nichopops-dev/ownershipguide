@@ -798,7 +798,10 @@ decisionPathOverrides: {
         { url: "/how-a-second-child-changes-your-insurance-needs-singapore.html", title: "How a Second Child Changes Your Insurance Needs in Singapore (2026): The Protection Review Families Delay Too Long", subtopic: "planning" },
         { url: "/how-marriage-changes-your-insurance-needs-singapore.html", title: "How Marriage Changes Your Insurance Needs in Singapore (2026): The Protection Review Couples Delay Too Long", subtopic: "planning" },
         { url: "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html", title: "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026): Bigger Mortgage, Bigger Protection Consequences", subtopic: "planning" },
-        { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", subtopic: "planning" }
+        { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", subtopic: "planning" },
+        { url: "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html", title: "How Becoming Self-Employed Changes Your Insurance Needs in Singapore (2026): The Protection Reset Most New Founders Delay", subtopic: "planning" },
+        { url: "/how-a-single-income-household-changes-your-insurance-needs-singapore.html", title: "How a Single-Income Household Changes Your Insurance Needs in Singapore (2026): The Protection Review Dependency Concentration Demands", subtopic: "planning" },
+        { url: "/how-supporting-aging-parents-changes-your-insurance-needs-singapore.html", title: "How Supporting Aging Parents Changes Your Insurance Needs in Singapore (2026): The Protection Review the Sandwich Generation Cannot Skip", subtopic: "planning" }
       ],
       bridges: []
     }

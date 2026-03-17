@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0218
+> Last updated: March 2026 · Based on repo v0219
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0218
+**Current version:** v0219
 
 ### Key files
 | File | Purpose |
@@ -188,7 +188,7 @@ These were established over a long build history and must be followed:
 
 ---
 
-## 7. Current Site Health (as of v0218)
+## 7. Current Site Health (as of v0219)
 
 - ✅ 0 broken internal links
 - ✅ No duplicate Last updated regressions
@@ -199,7 +199,7 @@ These were established over a long build history and must be followed:
 - ✅ GA4 tracking active
 - ✅ Structurally healthy and visually stable
 
-**Current mode:** Content compounding. Protection / Insurance has now expanded further into life-stage and priority bridge pages covering marriage-stage protection review, protection consequences after a property upgrade, and the order-of-operations question of when insurance should matter more than investing. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Protection / Insurance has now expanded further into life-stage and obligation bridge pages covering self-employment, single-income household fragility, and the protection consequences of supporting aging parents. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -316,7 +316,7 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ### Protection / Insurance (~18 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0218. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and several bridge pages linking Protection to Family, Property, and broader investment-priority decisions.
+**Current state:** Launched in v0210 and deepened through v0219. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, and multi-generational obligations.
 
 **Medical / health-cover structure**
 hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
@@ -335,6 +335,9 @@ how-a-second-child-changes-your-insurance-needs-singapore.html
 how-marriage-changes-your-insurance-needs-singapore.html
 how-a-property-upgrade-changes-your-insurance-needs-singapore.html
 when-insurance-starts-to-matter-more-than-investing-singapore.html
+how-becoming-self-employed-changes-your-insurance-needs-singapore.html
+how-a-single-income-household-changes-your-insurance-needs-singapore.html
+how-supporting-aging-parents-changes-your-insurance-needs-singapore.html
 
 **Hub**
 protection/index.html
@@ -406,6 +409,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0216 | Protection comparison branch: accident-vs-disability-income, hospital-cash-vs-CI, and HPS-vs-term-life bridge; featured.json updated |
 | v0217 | Protection bridge/comparison branch: accident-vs-critical-illness, term-life-vs-disability-income, and second-child protection review bridge; auto-related placement normalized on affected content/calculator pages |
 | v0218 | Protection bridge branch: marriage-stage protection review, property-upgrade protection review, and insurance-vs-investing priority framework |
+| v0219 | Protection bridge branch: self-employment, single-income household, and aging-parent support protection review pages |
 
 ---
 
