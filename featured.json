@@ -22,14 +22,35 @@
       "date": "2026-03-16"
     },
     {
-      "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
-      "title": "How Much Critical Illness Insurance Do You Need in Singapore? (2026)",
+      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
+      "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
       "cluster": "protection",
       "clusterLabel": "Protection",
       "date": "2026-03-17"
     }
   ],
   "new": [
+    {
+      "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
+      "title": "Accident Insurance vs Disability Income Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Compare accident-event payouts with income-replacement cover before treating cheap accident protection as continuity insurance."
+    },
+    {
+      "url": "/hospital-cash-vs-critical-illness-insurance-singapore.html",
+      "title": "Hospital Cash vs Critical Illness Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection",
+      "desc": "Separate small hospital-event cash from serious diagnosis-stage lump-sum protection."
+    },
+    {
+      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
+      "title": "Home Protection Scheme vs Term Life Insurance",
+      "cluster": "protection",
+      "clusterLabel": "Protection × Property",
+      "desc": "Mortgage-linked HPS is not the same thing as broader family life cover — compare their roles properly."
+    },
     {
       "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
       "title": "How Much Critical Illness Insurance Do You Need?",
