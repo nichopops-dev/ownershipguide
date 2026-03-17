@@ -795,7 +795,10 @@ decisionPathOverrides: {
         { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" },
         { url: "/accident-insurance-vs-critical-illness-insurance-singapore.html", title: "Accident Insurance vs Critical Illness Insurance in Singapore (2026): Cheap Event Cover vs Flexible Diagnosis-Stage Cash", subtopic: "comparison" },
         { url: "/term-life-vs-disability-income-insurance-singapore.html", title: "Term Life vs Disability Income Insurance in Singapore (2026): Death Cover Is Not Income Continuity", subtopic: "comparison" },
-        { url: "/how-a-second-child-changes-your-insurance-needs-singapore.html", title: "How a Second Child Changes Your Insurance Needs in Singapore (2026): The Protection Review Families Delay Too Long", subtopic: "planning" }
+        { url: "/how-a-second-child-changes-your-insurance-needs-singapore.html", title: "How a Second Child Changes Your Insurance Needs in Singapore (2026): The Protection Review Families Delay Too Long", subtopic: "planning" },
+        { url: "/how-marriage-changes-your-insurance-needs-singapore.html", title: "How Marriage Changes Your Insurance Needs in Singapore (2026): The Protection Review Couples Delay Too Long", subtopic: "planning" },
+        { url: "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html", title: "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026): Bigger Mortgage, Bigger Protection Consequences", subtopic: "planning" },
+        { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", subtopic: "planning" }
       ],
       bridges: []
     }
