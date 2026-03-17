@@ -1,184 +1,627 @@
 {
-  "recent": [
-    {
-      "url": "/how-retirement-changes-your-insurance-needs-singapore.html",
-      "title": "How Retirement Changes Your Insurance Needs",
-      "cluster": "protection",
-      "clusterLabel": "Protection",
-      "date": "2026-03-16"
-    },
-    {
-      "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
-      "title": "How Much Does It Cost to Raise a Child?",
-      "cluster": "family",
-      "clusterLabel": "Family",
-      "date": "2026-03-16"
-    },
-    {
-      "url": "/rent-vs-buy-property-singapore.html",
-      "title": "Rent vs Buy Property in Singapore",
-      "cluster": "property",
-      "clusterLabel": "Property",
-      "date": "2026-03-05"
-    },
-    {
-      "url": "/5-year-coe-renewal-worth-it-singapore.html",
-      "title": "5-Year COE Renewal: Is It Worth It?",
-      "cluster": "transport",
-      "clusterLabel": "Transport",
-      "date": "2026-03-05"
-    }
-  ],
+  "generated": "2026-03-18",
+  "cluster_pages": {
+    "transport": [
+      {
+        "url": "/5-year-vs-10-year-motorcycle-coe-renewal-singapore.html",
+        "title": "5-Year vs 10-Year Motorcycle COE Renewal in Singapore (2026)",
+        "desc": "5-year vs 10-year motorcycle COE renewal in Singapore in 2026: how to choose the right duration afte",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/buy-used-motorcycle-from-dealer-vs-direct-owner-singapore.html",
+        "title": "Buy Used Motorcycle From Dealer vs Direct Owner in Singapore (2026)",
+        "desc": "Buy used motorcycle from dealer vs direct owner in Singapore (2026): compare price, transparency, co",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/consignment-vs-dealer-sale-motorcycle-singapore.html",
+        "title": "Consignment vs Dealer Sale for Motorcycles in Singapore (2026)",
+        "desc": "Consignment vs dealer sale for motorcycles in Singapore in 2026: compare convenience, pricing contro",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/how-much-cash-to-buy-motorcycle-singapore.html",
+        "title": "How Much Cash Do You Need to Buy a Motorcycle in Singapore? (2026",
+        "desc": "How much cash you need to buy a motorcycle in Singapore in 2026: downpayment, transfer and setup cos",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/how-much-salary-to-own-a-motorcycle-singapore.html",
+        "title": "How Much Salary Do You Need to Own a Motorcycle in Singapore? (20",
+        "desc": "How much salary do you need to own a motorcycle in Singapore in 2026? Use a realistic affordability ",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-coe-renew-vs-replace-singapore.html",
+        "title": "Motorcycle COE Renew vs Replace in Singapore (2026)",
+        "desc": "Motorcycle COE renew vs replace in Singapore in 2026: a practical decision framework comparing known",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-coe-renewal-worth-it-singapore.html",
+        "title": "Is Motorcycle COE Renewal Worth It in Singapore? (2026 Decision F",
+        "desc": "Should you renew your motorcycle COE in Singapore in 2026? A practical framework covering condition,",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-depreciation-singapore.html",
+        "title": "Motorcycle Depreciation in Singapore (2026)",
+        "desc": "Motorcycle depreciation in Singapore in 2026: how value loss really works, why cheap monthly running",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-insurance-cost-singapore.html",
+        "title": "Motorcycle Insurance Cost in Singapore (2026)",
+        "desc": "Motorcycle insurance cost in Singapore in 2026: what drives premiums, why the cheapest quote can mis",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-loan-vs-cash-singapore.html",
+        "title": "Motorcycle Loan vs Cash in Singapore (2026)",
+        "desc": "Motorcycle loan vs cash in Singapore in 2026: compare interest cost, liquidity, emergency-buffer str",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-maintenance-cost-singapore.html",
+        "title": "Motorcycle Maintenance Cost in Singapore (2026)",
+        "desc": "Motorcycle maintenance cost in Singapore in 2026: realistic budgeting for servicing, wear items, rep",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/motorcycle-ownership-cost-singapore.html",
+        "title": "Motorcycle Ownership Cost in Singapore (2026)",
+        "desc": "Motorcycle ownership cost in Singapore in 2026: realistic monthly budgeting, hidden running costs, a",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/questions-to-answer-before-you-commit-to-used-motorcycle-deal-singapore.html",
+        "title": "Questions to Answer Before You Commit to a Used-Motorcycle Deal in Singapore (2026)",
+        "desc": "Questions to answer before you commit to a used-motorcycle deal in Singapore (2026): a final decisio",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/sell-motorcycle-with-outstanding-loan-singapore.html",
+        "title": "Sell a Motorcycle With an Outstanding Loan in Singapore (2026)",
+        "desc": "Sell a motorcycle with an outstanding loan in Singapore in 2026: understand redemption, usable equit",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/should-you-repair-motorcycle-before-selling-singapore.html",
+        "title": "Should You Repair a Motorcycle Before Selling in Singapore? (2026)",
+        "desc": "Should you repair a motorcycle before selling in Singapore in 2026? Compare cosmetic fixes, function",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/trade-in-vs-direct-sale-motorcycle-singapore.html",
+        "title": "Trade-In vs Direct Sale for Motorcycles in Singapore (2026)",
+        "desc": "Trade-in vs direct sale for motorcycles in Singapore in 2026: compare convenience, price recovery, n",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/used-motorcycle-inspection-checklist-singapore.html",
+        "title": "Used-Motorcycle Inspection Checklist in Singapore (2026)",
+        "desc": "Used-motorcycle inspection checklist in Singapore (2026): a practical framework for checking conditi",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/used-motorcycle-listing-red-flags-singapore.html",
+        "title": "Used-Motorcycle Listing Red Flags in Singapore (2026)",
+        "desc": "Used-motorcycle listing red flags in Singapore (2026): learn how to filter weak listings before view",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/used-motorcycle-records-checklist-singapore.html",
+        "title": "Used-Motorcycle Records Checklist in Singapore (2026)",
+        "desc": "Used-motorcycle records checklist in Singapore (2026): a practical guide to service history, invoice",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/used-motorcycle-vs-new-motorcycle-singapore.html",
+        "title": "Used vs New Motorcycle in Singapore (2026)",
+        "desc": "Used vs new motorcycle in Singapore in 2026: compare entry price, repair uncertainty, depreciation, ",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/when-to-sell-motorcycle-before-coe-expiry-singapore.html",
+        "title": "When to Sell a Motorcycle Before COE Expiry in Singapore (2026)",
+        "desc": "When to sell a motorcycle before COE expiry in Singapore in 2026: understand timing runway, replacem",
+        "date": "2026-03-15"
+      },
+      {
+        "url": "/low-monthly-payment-traps-when-buying-car-singapore.html",
+        "title": "Low Monthly Payment Traps When Buying a Car in Singapore (2026)",
+        "desc": "Low monthly payment traps when buying a car in Singapore (2026): understand how balloon structures, ",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/mileage-vs-age-when-buying-used-car-singapore.html",
+        "title": "Mileage vs Age When Buying a Used Car in Singapore (2026)",
+        "desc": "Mileage vs age when buying a used car in Singapore (2026): learn how to interpret listing-stage sign",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/questions-to-answer-before-you-commit-to-car-deal-singapore.html",
+        "title": "Questions to Answer Before You Commit to a Car Deal in Singapore (2026)",
+        "desc": "Questions to answer before you commit to a car deal in Singapore (2026): a final decision filter cov",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/used-car-listing-red-flags-singapore.html",
+        "title": "Used-Car Listing Red Flags in Singapore (2026)",
+        "desc": "Used-car listing red flags in Singapore (2026): learn how to filter weak listings before viewing, sp",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/ev-battery-degradation-singapore.html",
+        "title": "EV Battery Degradation in Singapore (2026)",
+        "desc": "EV battery degradation in Singapore (2026): what actually affects battery health, what buyers exagge",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/ev-battery-replacement-cost-singapore.html",
+        "title": "EV Battery Replacement Cost in Singapore (2026)",
+        "desc": "EV battery replacement cost in Singapore (2026): when replacement risk really matters, how warranty ",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/ev-battery-warranty-singapore.html",
+        "title": "EV Battery Warranty in Singapore (2026)",
+        "desc": "EV battery warranty in Singapore (2026): why warranty matters, how it changes used-EV confidence and",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/ev-charging-cost-singapore.html",
+        "title": "EV Charging Cost in Singapore (2026)",
+        "desc": "EV charging cost in Singapore (2026): home, condo, HDB, public AC, and fast DC charging explained. L",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/ev-resale-value-singapore.html",
+        "title": "EV Resale Value in Singapore (2026)",
+        "desc": "EV resale value in Singapore (2026): what really shapes resale confidence, how battery fear fits int",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/home-charging-vs-public-charging-ev-singapore.html",
+        "title": "Home Charging vs Public Charging for EVs in Singapore (2026)",
+        "desc": "Home charging vs public charging for EVs in Singapore (2026): compare cost, convenience, reliability",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/is-an-ev-practical-without-home-charging-singapore.html",
+        "title": "Is an EV Practical Without Home Charging in Singapore? (2026 Deci",
+        "desc": "Is an EV practical without home charging in Singapore (2026)? A realistic decision framework for HDB",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/should-you-buy-a-used-ev-singapore.html",
+        "title": "Should You Buy a Used EV in Singapore? (2026 Decision Framework)",
+        "desc": "Should you buy a used EV in Singapore (2026)? Learn when a used EV is a smart buy, when battery or c",
+        "date": "2026-03-12"
+      },
+      {
+        "url": "/car-sharing-vs-owning-a-car-singapore.html",
+        "title": "Car-Sharing vs Owning a Car in Singapore (2026)",
+        "desc": "Car-sharing vs owning a car in Singapore (2026): a decision framework for low-to-medium usage househ",
+        "date": "2026-03-10"
+      },
+      {
+        "url": "/car-sharing-vs-ride-hailing-singapore.html",
+        "title": "Car-Sharing vs Ride-Hailing in Singapore (2026)",
+        "desc": "Car-sharing vs ride-hailing in Singapore (2026): a framework for occasional-use households choosing ",
+        "date": "2026-03-10"
+      },
+      {
+        "url": "/does-your-household-need-a-second-car-singapore.html",
+        "title": "Does Your Household Need a Second Car in Singapore? (2026 Decisio",
+        "desc": "Does your household need a second car in Singapore (2026)? A decision framework covering coordinatio",
+        "date": "2026-03-10"
+      },
+      {
+        "url": "/second-car-vs-ride-hailing-singapore.html",
+        "title": "Second Car vs Ride-Hailing in Singapore (2026)",
+        "desc": "Second car vs ride-hailing in Singapore (2026): a decision framework for one-car households weighing",
+        "date": "2026-03-10"
+      },
+      {
+        "url": "/weekend-car-rental-vs-owning-a-car-singapore.html",
+        "title": "Weekend Car Rental vs Owning a Car in Singapore (2026)",
+        "desc": "Weekend car rental vs owning a car in Singapore (2026): a framework for occasional-use households co",
+        "date": "2026-03-10"
+      },
+      {
+        "url": "/car-insurance-excess-and-claims-singapore.html",
+        "title": "Car Insurance Excess and Claims in Singapore (2026)",
+        "desc": "Car insurance excess and claims in Singapore explained properly: what excess really means, when maki",
+        "date": "2026-03-09"
+      },
+      {
+        "url": "/no-claim-discount-ncd-singapore.html",
+        "title": "No-Claim Discount (NCD) in Singapore Car Insurance (2026)",
+        "desc": "No-Claim Discount (NCD) in Singapore car insurance explained properly: why claims-free years matter,",
+        "date": "2026-03-09"
+      }
+    ],
+    "property": [
+      {
+        "url": "/cpf-oa-vs-cash-for-home-loan-singapore.html",
+        "title": "CPF OA vs Cash for Home Loan in Singapore (2026)",
+        "desc": "A Singapore 2026 framework for deciding whether to use CPF OA or cash for ongoing home-loan servicin",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/reduce-tenure-vs-lower-monthly-instalment-singapore.html",
+        "title": "Reduce Tenure vs Lower Monthly Instalment in Singapore (2026)",
+        "desc": "A practical Singapore 2026 framework for deciding whether to shorten mortgage tenure or reduce month",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/should-you-make-partial-prepayment-home-loan-singapore.html",
+        "title": "Should You Make a Partial Prepayment on Your Home Loan in Singapo",
+        "desc": "A Singapore 2026 framework for deciding whether partial home-loan prepayment improves your real posi",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/what-to-do-when-home-loan-lock-in-ends-singapore.html",
+        "title": "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)",
+        "desc": "A Singapore 2026 owner guide to what to review when your home-loan lock-in ends: stay, reprice, refi",
+        "date": "2026-03-14"
+      },
+      {
+        "url": "/bto-ballot-and-wait-time-singapore.html",
+        "title": "BTO Ballot and Wait Time in Singapore (2026)",
+        "desc": "BTO ballot and wait time in Singapore for 2026: how uncertainty and delay change the real cost of th",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/deferred-income-assessment-singapore.html",
+        "title": "Deferred Income Assessment in Singapore (2026)",
+        "desc": "Deferred Income Assessment in Singapore for 2026: what it is, who it may help, and why it matters fo",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/hfe-letter-singapore.html",
+        "title": "HFE Letter in Singapore (2026)",
+        "desc": "HFE letter in Singapore for 2026: what it does, why it matters before BTO or resale plans, and how i",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/open-booking-of-flats-singapore.html",
+        "title": "Open Booking of Flats in Singapore (2026)",
+        "desc": "Open Booking of Flats in Singapore for 2026: what it is, who it fits, and when immediate HDB access ",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/sales-of-balance-flats-sbf-singapore.html",
+        "title": "Sales of Balance Flats (SBF) in Singapore (2026)",
+        "desc": "Sales of Balance Flats (SBF) in Singapore for 2026: how the route works, when it beats waiting for B",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/staggered-downpayment-singapore.html",
+        "title": "Staggered Downpayment in Singapore (2026)",
+        "desc": "Staggered Downpayment in Singapore for 2026: what it changes, who it helps, and why upfront cash tim",
+        "date": "2026-03-11"
+      },
+      {
+        "url": "/enhanced-cpf-housing-grant-ehg-singapore.html",
+        "title": "Enhanced CPF Housing Grant (EHG) in Singapore (2026)",
+        "desc": "Enhanced CPF Housing Grant (EHG) in Singapore for 2026: what it is, how it changes affordability, an",
+        "date": "2026-03-01"
+      },
+      {
+        "url": "/family-grant-singapore.html",
+        "title": "Family Grant in Singapore (2026)",
+        "desc": "Family Grant in Singapore for 2026: what it changes in resale HDB decisions, and why households shou",
+        "date": "2026-03-01"
+      },
+      {
+        "url": "/hdb-income-ceiling-singapore.html",
+        "title": "HDB Income Ceiling in Singapore (2026)",
+        "desc": "HDB income ceiling in Singapore for 2026: why it is an eligibility gate, not an affordability test, ",
+        "date": "2026-03-01"
+      },
+      {
+        "url": "/proximity-housing-grant-phg-singapore.html",
+        "title": "Proximity Housing Grant (PHG) in Singapore (2026)",
+        "desc": "Proximity Housing Grant (PHG) in Singapore for 2026: when living near family changes the real housin",
+        "date": "2026-03-01"
+      }
+    ],
+    "family": [
+      {
+        "url": "/cost-of-having-a-baby-singapore.html",
+        "title": "Cost of Having a Baby in Singapore (2026)",
+        "desc": "Cost of having a baby in Singapore in 2026: a practical framework for pregnancy, delivery, newborn s",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/cost-of-having-a-second-child-singapore.html",
+        "title": "Cost of Having a Second Child in Singapore (2026)",
+        "desc": "The cost of having a second child in Singapore in 2026: a practical framework for repeated versus in",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/enrichment-classes-cost-singapore.html",
+        "title": "Enrichment Classes Cost in Singapore (2026)",
+        "desc": "Enrichment classes cost in Singapore in 2026: a practical framework for budgeting music, sports, lan",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+        "title": "How Much Does It Cost to Raise a Child in Singapore? (2026)",
+        "desc": "How much it costs to raise a child in Singapore in 2026: a stage-based planning framework covering b",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-junior-college-cost-singapore.html",
+        "title": "How Much Does Junior College Cost in Singapore? (2026)",
+        "desc": "How much junior college costs in Singapore in 2026: a practical framework for post-secondary family ",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-preschool-cost-singapore.html",
+        "title": "How Much Does Preschool Cost in Singapore? (2026)",
+        "desc": "How much preschool costs in Singapore in 2026: a practical framework for preschool-stage recurring f",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-primary-school-cost-singapore.html",
+        "title": "How Much Does Primary School Cost in Singapore? (2026)",
+        "desc": "How much primary school costs in Singapore in 2026: a practical framework for recurring school-stage",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-secondary-school-cost-singapore.html",
+        "title": "How Much Does Secondary School Cost in Singapore? (2026)",
+        "desc": "How much secondary school costs in Singapore in 2026: a practical framework for the next school-stag",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/how-much-does-university-cost-singapore.html",
+        "title": "How Much Does University Cost in Singapore? (2026)",
+        "desc": "How much university costs in Singapore in 2026: a practical framework for the tertiary stage as a di",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/infantcare-vs-childcare-cost-singapore.html",
+        "title": "Infantcare vs Childcare Cost in Singapore (2026)",
+        "desc": "Infantcare vs childcare cost in Singapore in 2026: a practical comparison of fees, timing, work-retu",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/maid-vs-infantcare-cost-singapore.html",
+        "title": "Maid vs Infantcare Cost in Singapore (2026)",
+        "desc": "Maid vs infantcare cost in Singapore in 2026: a practical framework for comparing helper-based home ",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/polytechnic-vs-junior-college-cost-singapore.html",
+        "title": "Polytechnic vs Junior College Cost in Singapore (2026)",
+        "desc": "Polytechnic vs junior college cost in Singapore in 2026: a practical comparison of how the two post-",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/stay-at-home-parent-vs-infantcare-cost-singapore.html",
+        "title": "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026)",
+        "desc": "Stay-at-home parent vs infantcare cost in Singapore in 2026: a practical economic comparison of dire",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/student-care-vs-after-school-care-cost-singapore.html",
+        "title": "Student Care vs After-School Care Cost in Singapore? (2026)",
+        "desc": "Student care vs after-school care cost in Singapore in 2026: a practical framework for comparing pos",
+        "date": "2026-03-16"
+      },
+      {
+        "url": "/tuition-cost-singapore.html",
+        "title": "Tuition Cost in Singapore (2026)",
+        "desc": "Tuition cost in Singapore in 2026: a practical framework for treating tuition as a standalone family",
+        "date": "2026-03-16"
+      }
+    ],
+    "protection": [
+      {
+        "url": "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html",
+        "title": "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How a property upgrade changes your insurance needs in Singapore (2026): why bigger mortgages, highe",
+        "date": "2026-03-18"
+      },
+      {
+        "url": "/how-marriage-changes-your-insurance-needs-singapore.html",
+        "title": "How Marriage Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How marriage changes your insurance needs in Singapore (2026): a practical framework for reviewing l",
+        "date": "2026-03-18"
+      },
+      {
+        "url": "/when-insurance-starts-to-matter-more-than-investing-singapore.html",
+        "title": "When Insurance Starts to Matter More Than Investing in Singapore (2026)",
+        "desc": "When insurance starts to matter more than investing in Singapore (2026): a framework for deciding wh",
+        "date": "2026-03-18"
+      },
+      {
+        "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
+        "title": "Accident Insurance vs Disability Income Insurance in Singapore (2026)",
+        "desc": "Accident insurance vs disability income insurance in Singapore (2026): compare accident-event payout",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/critical-illness-vs-disability-income-insurance-singapore.html",
+        "title": "Critical Illness vs Disability Income Insurance in Singapore (2026)",
+        "desc": "Critical illness vs disability income insurance in Singapore (2026): compare diagnosis-stage lump-su",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
+        "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
+        "desc": "Home Protection Scheme vs term life insurance in Singapore (2026): compare loan-linked mortgage prot",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/hospital-cash-vs-critical-illness-insurance-singapore.html",
+        "title": "Hospital Cash vs Critical Illness Insurance in Singapore (2026)",
+        "desc": "Hospital cash vs critical illness insurance in Singapore (2026): compare small hospital-event payout",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-a-single-income-household-changes-your-insurance-needs-singapore.html",
+        "title": "How a Single-Income Household Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How a single-income household changes your insurance needs in Singapore (2026): a practical bridge p",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html",
+        "title": "How Becoming Self-Employed Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How becoming self-employed changes your insurance needs in Singapore (2026): a practical bridge page",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html",
+        "title": "How Buying an Investment Property Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How buying an investment property changes your insurance needs in Singapore (2026): a framework for ",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-divorce-changes-your-insurance-needs-singapore.html",
+        "title": "How Divorce Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How divorce changes your insurance needs in Singapore (2026): a practical framework for reviewing li",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
+        "title": "How Much Critical Illness Insurance Do You Need in Singapore? (2026)",
+        "desc": "How much critical illness insurance do you need in Singapore (2026): a practical framework for sizin",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-much-disability-income-insurance-do-you-need-singapore.html",
+        "title": "How Much Disability Income Insurance Do You Need in Singapore? (2026)",
+        "desc": "How much disability income insurance do you need in Singapore (2026): a practical framework for sizi",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-retirement-changes-your-insurance-needs-singapore.html",
+        "title": "How Retirement Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How retirement changes your insurance needs in Singapore (2026): a practical framework for reviewing",
+        "date": "2026-03-17"
+      },
+      {
+        "url": "/how-supporting-aging-parents-changes-your-insurance-needs-singapore.html",
+        "title": "How Supporting Aging Parents Changes Your Insurance Needs in Singapore (2026)",
+        "desc": "How supporting aging parents changes your insurance needs in Singapore (2026): a practical bridge pa",
+        "date": "2026-03-17"
+      }
+    ]
+  },
   "new": [
     {
-      "url": "/how-retirement-changes-your-insurance-needs-singapore.html",
-      "title": "How Retirement Changes Your Insurance Needs",
+      "url": "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html",
+      "title": "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026)",
+      "desc": "How a property upgrade changes your insurance needs in Singapore (2026): why bigger mortgages, highe",
       "cluster": "protection",
-      "clusterLabel": "Protection \u00d7 Planning",
-      "desc": "How the protection stack should shift as income becomes fixed and health risk rises."
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-marriage-changes-your-insurance-needs-singapore.html",
+      "title": "How Marriage Changes Your Insurance Needs in Singapore (2026)",
+      "desc": "How marriage changes your insurance needs in Singapore (2026): a practical framework for reviewing l",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
     },
     {
       "url": "/when-insurance-starts-to-matter-more-than-investing-singapore.html",
-      "title": "When Insurance Matters More Than Investing",
+      "title": "When Insurance Starts to Matter More Than Investing in Singapore (2026)",
+      "desc": "When insurance starts to matter more than investing in Singapore (2026): a framework for deciding wh",
       "cluster": "protection",
-      "clusterLabel": "Protection \u00d7 Finance",
-      "desc": "The household conditions that flip the priority order between building wealth and protecting it."
+      "clusterLabel": "Protection"
     },
     {
-      "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
-      "title": "How Much Critical Illness Cover Do You Need?",
+      "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
+      "title": "Accident Insurance vs Disability Income Insurance in Singapore (2026)",
+      "desc": "Accident insurance vs disability income insurance in Singapore (2026): compare accident-event payout",
       "cluster": "protection",
-      "clusterLabel": "Protection",
-      "desc": "A sizing framework for CI cover based on household obligations, not rules of thumb."
+      "clusterLabel": "Protection"
     },
     {
-      "url": "/life-insurance-and-home-loan-singapore.html",
-      "title": "Life Insurance and Your Home Loan",
+      "url": "/critical-illness-vs-disability-income-insurance-singapore.html",
+      "title": "Critical Illness vs Disability Income Insurance in Singapore (2026)",
+      "desc": "Critical illness vs disability income insurance in Singapore (2026): compare diagnosis-stage lump-su",
       "cluster": "protection",
-      "clusterLabel": "Protection \u00d7 Property",
-      "desc": "What happens to your property if you die \u2014 and how to make sure it doesn't become a burden."
+      "clusterLabel": "Protection"
     },
     {
-      "url": "/family-car-decision-after-baby-singapore.html",
-      "title": "Does Having a Baby Mean You Need a Car?",
-      "cluster": "transport",
-      "clusterLabel": "Transport \u00d7 Family",
-      "desc": "A cost framework for the car decision after a child arrives."
+      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
+      "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
+      "desc": "Home Protection Scheme vs term life insurance in Singapore (2026): compare loan-linked mortgage prot",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/hospital-cash-vs-critical-illness-insurance-singapore.html",
+      "title": "Hospital Cash vs Critical Illness Insurance in Singapore (2026)",
+      "desc": "Hospital cash vs critical illness insurance in Singapore (2026): compare small hospital-event payout",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-a-single-income-household-changes-your-insurance-needs-singapore.html",
+      "title": "How a Single-Income Household Changes Your Insurance Needs in Singapore (2026)",
+      "desc": "How a single-income household changes your insurance needs in Singapore (2026): a practical bridge p",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-becoming-self-employed-changes-your-insurance-needs-singapore.html",
+      "title": "How Becoming Self-Employed Changes Your Insurance Needs in Singapore (2026)",
+      "desc": "How becoming self-employed changes your insurance needs in Singapore (2026): a practical bridge page",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html",
+      "title": "How Buying an Investment Property Changes Your Insurance Needs in Singapore (2026)",
+      "desc": "How buying an investment property changes your insurance needs in Singapore (2026): a framework for ",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
     }
   ],
   "popular": [
     {
       "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
-      "title": "How Much Does It Cost to Raise a Child in Singapore? (2026)",
+      "title": "Full Cost of Raising a Child in Singapore",
       "cluster": "family",
-      "clusterLabel": "Family",
-      "inbound": 24
+      "clusterLabel": "Family"
     },
     {
-      "url": "/does-your-household-need-a-second-car-singapore.html",
-      "title": "Does Your Household Need a Second Car in Singapore? (2026 De",
+      "url": "/car-ownership-cost.html",
+      "title": "5-Year Car Ownership Cost",
       "cluster": "transport",
-      "clusterLabel": "Transport",
-      "inbound": 17
+      "clusterLabel": "Transport"
     },
     {
-      "url": "/cost-of-having-a-baby-singapore.html",
-      "title": "Cost of Having a Baby in Singapore (2026)",
-      "cluster": "family",
-      "clusterLabel": "Family",
-      "inbound": 16
-    },
-    {
-      "url": "/motorcycle-ownership-cost-singapore.html",
-      "title": "Motorcycle Ownership Cost in Singapore (2026)",
-      "cluster": "transport",
-      "clusterLabel": "Transport",
-      "inbound": 15
-    },
-    {
-      "url": "/infantcare-vs-childcare-cost-singapore.html",
-      "title": "Infantcare vs Childcare Cost in Singapore (2026)",
-      "cluster": "family",
-      "clusterLabel": "Family",
-      "inbound": 13
-    },
-    {
-      "url": "/hfe-letter-singapore.html",
-      "title": "HFE Letter in Singapore (2026)",
+      "url": "/property-ownership-cost-singapore.html",
+      "title": "Property Ownership Cost",
       "cluster": "property",
-      "clusterLabel": "Property",
-      "inbound": 12
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/how-much-life-insurance-do-you-need-singapore.html",
+      "title": "How Much Life Insurance Do You Need?",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/rent-vs-buy-property-singapore.html",
+      "title": "Rent vs Buy Property",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/car-vs-ride-hailing-cost.html",
+      "title": "Car vs Ride-Hailing",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
     }
-  ],
-  "generated": "2026-03-17",
-  "cluster_recent": {
-    "transport": [
-      {
-        "url": "/5-year-coe-renewal-worth-it-singapore.html",
-        "title": "5-Year COE Renewal: Is It Worth It?",
-        "desc": "A cost model for renewal vs replacement at the 10-year mark."
-      },
-      {
-        "url": "/coe-bidding-strategy-singapore.html",
-        "title": "COE Bidding Strategy",
-        "desc": "How the bidding mechanism works and how to approach it without overpaying."
-      },
-      {
-        "url": "/family-car-decision-after-baby-singapore.html",
-        "title": "Does Having a Baby Mean You Need a Car?",
-        "desc": "A cost framework for the car decision after a child arrives."
-      }
-    ],
-    "property": [
-      {
-        "url": "/should-i-buy-bigger-home-before-having-kids-singapore.html",
-        "title": "Should I Buy Bigger Before Having Kids?",
-        "desc": "Property sizing, family cost, and the trade-off most households misread."
-      },
-      {
-        "url": "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html",
-        "title": "How a Child Affects Your TDSR",
-        "desc": "What childcare costs and income reduction mean for your home loan."
-      },
-      {
-        "url": "/life-insurance-and-home-loan-singapore.html",
-        "title": "Life Insurance and Your Home Loan",
-        "desc": "What happens to your property if you die \u2014 and how to protect it."
-      }
-    ],
-    "family": [
-      {
-        "url": "/protection-gap-after-having-a-baby-singapore.html",
-        "title": "Protection Gap After Having a Baby",
-        "desc": "How your insurance needs change when a child arrives."
-      },
-      {
-        "url": "/how-a-second-child-changes-your-insurance-needs-singapore.html",
-        "title": "How a Second Child Changes Your Insurance Needs",
-        "desc": "The step-change in protection most families underestimate."
-      },
-      {
-        "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
-        "title": "Full Cost of Raising a Child",
-        "desc": "A long-horizon framework from birth through university."
-      }
-    ],
-    "protection": [
-      {
-        "url": "/how-much-life-insurance-do-you-need-singapore.html",
-        "title": "How Much Life Insurance Do You Need?",
-        "desc": "A protection-gap framework for real household obligations."
-      },
-      {
-        "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
-        "title": "How Much CI Cover Do You Need?",
-        "desc": "Sizing CI insurance based on your household obligations."
-      },
-      {
-        "url": "/when-insurance-starts-to-matter-more-than-investing-singapore.html",
-        "title": "When Insurance Matters More Than Investing",
-        "desc": "The household conditions that flip the priority order."
-      }
-    ]
-  }
+  ]
 }

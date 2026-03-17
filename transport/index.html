@@ -43,27 +43,32 @@
 (function(){
   var sec=document.getElementById('og-hub-dynamic-transport');
   if(!sec) return;
-  var MAX=3;
+  var MAX=5;
   fetch('/featured.json')
     .then(function(r){return r.json();})
     .catch(function(){return null;})
     .then(function(data){
-      if(!data||!data.cluster_recent||!data.cluster_recent['transport']) return;
-      var items=data.cluster_recent['transport'].slice(0,MAX);
+      if(!data||!data.cluster_pages||!data.cluster_pages['transport']) return;
+      // Pages already sorted by date descending in featured.json
+      var items=data.cluster_pages['transport'].slice(0,MAX);
       if(!items.length) return;
       var html='<div class="box">';
-      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently added</p>';
+      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
       html+='<ul style="margin:0;padding-left:0;list-style:none">';
       items.forEach(function(p){
-        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)"><a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
+        html+='<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
         if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
         html+='</li>';
       });
-      html+='</ul></div>';
+      html+='</ul>';
+      html+='</div>';
       sec.innerHTML=html;
     });
 })();
 </script>
+
+
 
 <section class="box" style="margin-top:18px">
 <h2 style="margin-top:0">Start with the path that matches your decision</h2>

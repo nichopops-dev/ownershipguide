@@ -20,6 +20,9 @@
     ga4MeasurementId: "G-RH8YDW5LFP",
 
     // AdSense Auto Ads
+    // Email capture (set to your Google Apps Script web app URL, leave empty to disable)
+    emailCaptureUrl: "",
+
     enableAdSenseAutoAds: true,
     adSenseClientId: "ca-pub-8718234605112874",
 
@@ -2050,12 +2053,88 @@ const box = document.createElement("section");
   // =========================
   // 3) HEADER / FOOTER
   // =========================
+  // EMAIL CAPTURE (no 3rd party)
+  // Reads SETTINGS.emailCaptureUrl — set this to your Google Apps Script web app URL
+  // Pages opted in via: <meta name="og:email-capture" content="true">
+  // =========================
+  function injectEmailCapture() {
+    if (!SETTINGS.emailCaptureUrl) return;
+    
+    // Only inject on pages that opt in OR on calculator pages
+    var meta = getMetaAny('og:email-capture');
+    var isCalc = (location.pathname || '').includes('calculator');
+    if (meta !== 'true' && !isCalc) return;
+    
+    // Don't show if already dismissed (sessionStorage)
+    try { if (sessionStorage.getItem('og-email-dismissed') === '1') return; } catch(e) {}
+    
+    var container = getMainContainer();
+    if (!container) return;
+    
+    var box = document.createElement('div');
+    box.id = 'og-email-capture';
+    box.style.cssText = 'margin:24px 0;padding:16px 18px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;';
+    box.innerHTML = [
+      '<p style="margin:0 0 8px;font-weight:600;font-size:15px">Get notified when rules change</p>',
+      '<p style="margin:0 0 12px;font-size:14px;color:#374151">COE thresholds, property cooling measures, CPF rule updates — we send one email when something material changes. No spam.</p>',
+      '<div id="og-email-form" style="display:flex;gap:8px;flex-wrap:wrap">',
+      '<input type="email" id="og-email-input" placeholder="your@email.com" style="flex:1;min-width:200px;padding:9px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:14px">',
+      '<button type="button" id="og-email-submit" style="padding:9px 16px;background:#111827;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;white-space:nowrap">Notify me</button>',
+      '<button type="button" id="og-email-dismiss" style="padding:9px 12px;background:none;border:none;font-size:13px;color:#6b7280;cursor:pointer">No thanks</button>',
+      '</div>',
+      '<p id="og-email-msg" style="margin:8px 0 0;font-size:13px;display:none"></p>'
+    ].join('');
+    
+    // Insert before auto-related or References
+    var ar = container.querySelector('#auto-related');
+    if (ar) { ar.parentNode.insertBefore(box, ar); }
+    else { container.appendChild(box); }
+    
+    document.getElementById('og-email-submit').addEventListener('click', function() {
+      var email = document.getElementById('og-email-input').value.trim();
+      var msg = document.getElementById('og-email-msg');
+      if (!email || !email.includes('@')) {
+        msg.style.display = 'block';
+        msg.style.color = '#dc2626';
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      this.disabled = true;
+      this.textContent = 'Sending...';
+      fetch(SETTINGS.emailCaptureUrl, {
+        method: 'POST',
+        body: JSON.stringify({ email: email, page: location.pathname, source: 'ownership-guide' })
+      })
+      .then(function() {
+        document.getElementById('og-email-form').style.display = 'none';
+        msg.style.display = 'block';
+        msg.style.color = '#059669';
+        msg.textContent = "Done \u2014 you'll hear from us when something meaningful changes.";
+        try { sessionStorage.setItem('og-email-dismissed', '1'); } catch(e) {}
+      })
+      .catch(function() {
+        msg.style.display = 'block';
+        msg.style.color = '#dc2626';
+        msg.textContent = 'Something went wrong — please try again.';
+        document.getElementById('og-email-submit').disabled = false;
+        document.getElementById('og-email-submit').textContent = 'Notify me';
+      });
+    });
+    
+    document.getElementById('og-email-dismiss').addEventListener('click', function() {
+      box.style.display = 'none';
+      try { sessionStorage.setItem('og-email-dismissed', '1'); } catch(e) {}
+    });
+  }
+
+  // =========================
   if (SETTINGS.enableHeaderFooter) {
     await inject("site-header", ["/header.html", "header.html", "/ownershipguide-main/header.html"]);
     await inject("site-footer", ["/footer.html", "footer.html", "/ownershipguide-main/footer.html"]);
     setActiveNav();
     initHeaderSearch();
     injectBackToHomeLink();
+    injectEmailCapture();
     injectBackToClusterLink();
     ensureCanonicalAndOgUrl();
   }

@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0220.1
+> Last updated: March 2026 · Based on repo v0220.2
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0220.1
+**Current version:** v0220.2
 
 ### Key files
 | File | Purpose |
@@ -49,6 +49,8 @@
 | `index.html` | Homepage |
 | `sitemap.xml` | ~289 URLs |
 | `footer.html` | Shared footer partial |
+| `featured.json` | Dynamic homepage + hub data. Auto-sorted by date from page Last updated fields. Update `new[]` by running the regeneration script. `cluster_pages` is auto-built — regenerate when new pages ship. |
+| `_email-capture-setup.md` | Setup instructions for the no-3rd-party email capture. Read before activating. |
 | `featured.json` | Dynamic homepage data. Regenerate when new pages ship — update `new[]`, `recent[]` by cluster, `popular[]` by inbound links. Not a webpage; do not add to sitemap. |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
@@ -415,6 +417,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0219 | Protection bridge branch: self-employment, single-income household, and aging-parent support protection review pages |
 | v0220 | Protection bridge branch: divorce reset, investment-property protection review, and retirement-stage protection review pages |
 | v0220.1 | Sweep: 6 pages added to search index; 6 duplicate References fixed; 4 pages FAQ added; 15 short pages expanded to 1500w+; featured.json capped at 5 items; 7 inbound links added |
+| v0220.2 | Dynamic homepage/hubs rebuilt (date-sorted, configurable max); email capture added to includes.js (disabled until Google Apps Script URL set); featured.json rebuilt with accurate dates |
 
 ---
 
