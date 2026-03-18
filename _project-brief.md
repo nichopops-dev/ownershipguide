@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0234.2
+> Last updated: March 2026 · Based on repo v0234.1.2
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0234.2
+**Current version:** v0234.1.2
 
 ### Key files
 | File | Purpose |
@@ -574,3 +574,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0233.1 | Sweep: 3 orphans fixed (25 links added); 4 property pages added to SITE search index; 26 low-inbound pages — top 9 boosted; family hub +8 pages, investing hub +7, protection hub +3; generate-sitemap.py added (357 URLs, auto-generated); featured.json regenerated (127 pages, 5 clusters) |
 | v0233.2 | UX + interlinking pass: 8 family pages added to related graph; 11 pillar→new-page links added (car/property/family/protection pillars); generate-featured.py added; featured.json regenerated; hub pages updated (family +8, investing +7, protection +3) |
 | v0234 | UX overhaul: Next Steps calculator routing fixed (family/protection/investing now show hub links instead of wrong car calculator); homepage stale sections removed, Protection + Investing journey rows added to Recommended Journeys; financing hub: dynamic section added + 4 missing pages; sitemap regenerated (357 URLs); featured.json regenerated |
+| v0234.1 | Hotfix: financing hub dynamic section moved inside <main> (was rendering after </html>, causing display below footer); sweep clean |
