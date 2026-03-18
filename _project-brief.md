@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0231
+> Last updated: March 2026 · Based on repo v0232
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0231
+**Current version:** v0232
 
 ### Key files
 | File | Purpose |
@@ -322,9 +322,9 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
-### Protection / Insurance (~23 pages) 🟡 Growing and structurally integrated
+### Protection / Insurance (~27 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0228. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, and multi-generational obligations.
+**Current state:** Launched in v0210 and deepened through v0232. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, multi-generational obligations, mortgage-stage liquidity trade-offs, and single-income housing risk.
 
 **Medical / health-cover structure**
 hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
@@ -344,6 +344,7 @@ how-a-second-child-changes-your-insurance-needs-singapore.html
 how-marriage-changes-your-insurance-needs-singapore.html
 how-a-property-upgrade-changes-your-insurance-needs-singapore.html
 when-insurance-starts-to-matter-more-than-investing-singapore.html
+disability-income-insurance-vs-bigger-cash-buffer-with-mortgage-singapore.html · critical-illness-insurance-vs-bigger-cash-buffer-with-mortgage-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-with-mortgage-singapore.html · term-life-vs-cash-buffer-for-single-income-mortgage-singapore.html
 how-becoming-self-employed-changes-your-insurance-needs-singapore.html
 how-a-single-income-household-changes-your-insurance-needs-singapore.html
 how-supporting-aging-parents-changes-your-insurance-needs-singapore.html
