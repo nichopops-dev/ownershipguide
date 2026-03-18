@@ -294,6 +294,10 @@ decisionPathOverrides: {
         { url: "/rent-vs-buy-property-singapore.html", title: "Rent vs Buy Property in Singapore (2026): 5-Year Cost & Liquidity Framework", cluster: "property", subtopic: "comparison" },
         { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", cluster: "property", subtopic: "comparison" },
         { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
+        { url: "/should-you-build-your-emergency-fund-before-buying-a-car-singapore.html", title: "Should You Build Your Emergency Fund Before Buying a Car in Singapore? (2026): The Buffer Question That Changes the Car Decision", subtopic: "bridge" },
+        { url: "/car-repair-sinking-fund-vs-emergency-fund-singapore.html", title: "Car Repair Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Vehicle Wear from Your Shock Reserve", subtopic: "bridge" },
+        { url: "/bigger-car-down-payment-vs-larger-cash-buffer-singapore.html", title: "Bigger Car Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?", subtopic: "bridge" },
+        { url: "/how-car-ownership-changes-your-cash-buffer-plan-singapore.html", title: "How Car Ownership Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough", subtopic: "bridge" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
         { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026): How Your Insurance Needs Change When a Child Arrives", subtopic: "planning" }
@@ -898,7 +902,11 @@ decisionPathOverrides: {
       ],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
-        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" }
+        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },
+        { url: "/should-you-build-your-emergency-fund-before-buying-a-car-singapore.html", title: "Should You Build Your Emergency Fund Before Buying a Car in Singapore? (2026): The Buffer Question That Changes the Car Decision", cluster: "transport", subtopic: "bridge" },
+        { url: "/car-repair-sinking-fund-vs-emergency-fund-singapore.html", title: "Car Repair Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Vehicle Wear from Your Shock Reserve", cluster: "transport", subtopic: "bridge" },
+        { url: "/bigger-car-down-payment-vs-larger-cash-buffer-singapore.html", title: "Bigger Car Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?", cluster: "transport", subtopic: "bridge" },
+        { url: "/how-car-ownership-changes-your-cash-buffer-plan-singapore.html", title: "How Car Ownership Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough", cluster: "transport", subtopic: "bridge" }
       ]
     }
  };

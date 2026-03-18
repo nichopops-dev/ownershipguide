@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0230
+> Last updated: March 2026 · Based on repo v0231
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0230
+**Current version:** v0231
 
 ### Key files
 | File | Purpose |
@@ -218,10 +218,13 @@ Older pages that predate current standards — fix when touched, not as a dedica
 
 ## 8. Cluster Status
 
-### Transport (~100 pages) ✅ Very strong and broad
+### Transport (~104 pages) ✅ Very strong and broad
+
+**Current state:** Deepened through v0231. Transport now also includes a transport–liquidity bridge layer covering pre-purchase buffer sequencing, repair sinking-fund separation, downpayment-versus-buffer trade-offs, and how car ownership changes emergency-fund design.
+
 
 **Ownership / running cost / affordability**
-car-ownership-cost.html · car-ownership-cost-per-year-singapore.html · monthly-cost-of-owning-a-car-singapore.html · fuel-cost-singapore.html · parking-cost-singapore.html · erp-cost-singapore.html · road-tax-cost-singapore.html · car-maintenance-repair-cost-singapore.html · car-insurance-cost-singapore.html · car-insurance-excess-and-claims-singapore.html · no-claim-discount-ncd-singapore.html · car-affordability-calculator-singapore.html · how-much-salary-to-own-a-car-singapore.html · how-much-cash-to-buy-car-singapore.html
+car-ownership-cost.html · car-ownership-cost-per-year-singapore.html · monthly-cost-of-owning-a-car-singapore.html · fuel-cost-singapore.html · parking-cost-singapore.html · erp-cost-singapore.html · road-tax-cost-singapore.html · car-maintenance-repair-cost-singapore.html · car-insurance-cost-singapore.html · car-insurance-excess-and-claims-singapore.html · no-claim-discount-ncd-singapore.html · car-affordability-calculator-singapore.html · how-much-salary-to-own-a-car-singapore.html · how-much-cash-to-buy-car-singapore.html · should-you-build-your-emergency-fund-before-buying-a-car-singapore.html · car-repair-sinking-fund-vs-emergency-fund-singapore.html · bigger-car-down-payment-vs-larger-cash-buffer-singapore.html · how-car-ownership-changes-your-cash-buffer-plan-singapore.html
 
 **Purchase / financing / structure**
 car-loan-rates-singapore.html · car-loan-vs-cash-singapore.html · balloon-loan-vs-normal-car-loan-singapore.html · car-price-breakdown-singapore.html · omv-arf-car-taxes-singapore.html
