@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0225
+> Last updated: March 2026 · Based on repo v0225.1
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0225
+**Current version:** v0225.1
 
 ### Key files
 | File | Purpose |
@@ -361,7 +361,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ### Investing / Liquidity (growing and structurally integrated) 🟡
 
-**Current state:** Launched in v0222 and deepened through v0225. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets. It now also covers sizing variants for irregular income, households with children, and households carrying a mortgage.
+**Current state:** Launched in v0222 and deepened through v0225. All 12 pages now indexed in SITE. Hub has dynamic section. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets. It now also covers sizing variants for irregular income, households with children, and households carrying a mortgage.
 
 **Current page set**
 - `investing/index.html`
@@ -496,6 +496,55 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ---
 
+---
+
+## 13. Working Preferences & Session Conventions
+
+*These apply to Claude and ChatGPT alike. They were established over many sessions and should not require re-explanation in each new chat.*
+
+### Bundle size & pace
+- Prefer meaningful bundles — typically 3–5 new pages plus any tightly scoped fixes
+- Do not create churn for the sake of activity
+- Do not rewrite good pages unnecessarily
+- Small hotfixes are allowed when warranted; they do not need to be bundled with new content
+
+### Recommendation style
+- Give one clear concrete recommendation, not a menu of equal options
+- Run audit first, then recommend — do not propose next version before seeing source state
+- When suggesting a new cluster, explain why now is the right timing vs continuing the current one
+- Prefer compounding content depth over random breadth unless there is a strong reason to open a new branch
+
+### Audit discipline
+- Always verify against the actual uploaded source before making claims
+- If a finding is uncertain, do not state it confidently — flag it as uncertain
+- Known false positives to avoid flagging:
+  - Pages using `<h3>References (starting points)</h3>` or `Sources & references` — these are valid reference sections
+  - Hub pages (`transport/`, `property/`, `family/`, `protection/`, `investing/` index.html) intentionally excluded from auto-related and some other checks
+  - Do not assume a live-site issue is a source issue without confirming in the uploaded source
+
+### includes.js discipline
+- Never regenerate includes.js from scratch — only make minimal targeted edits
+- After every edit: run `node --check includes.js` before packaging
+- Never drop: family/protection/investing SITE entries, URL scoring in scoreResult(), emailCaptureUrl setting
+- When inserting a new cluster into SITE, always add a comma after the previous cluster's closing `}` before the new cluster key
+
+### Output format (every session)
+- Return changed files only — never the full repo zip
+- Always include: changed files list, what was done, validation summary, commit message
+- If something is not fully compliant, say so plainly rather than claiming it is done
+- If there is a mismatch between what you see in the uploaded zip and what I see locally, call it out explicitly
+
+### Tone
+- Practical, direct, low-drama
+- No fluff, no excessive caveats
+- Treat the owner as someone who understands the site well
+
+### Division of labour
+- **ChatGPT:** content expansion (new pages, cluster deepening)
+- **Claude:** sweeps, structural fixes, schema, search index, featured.json regeneration, enhancements (dynamic features, email capture, UX improvements)
+- Claude does not propose new content pages — that is ChatGPT's job
+
+
 *This brief is the single source of truth for all sessions — Claude and ChatGPT alike.*
 *Update the version number and version history table whenever a new version ships.*
 
@@ -505,3 +554,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0224 | Investing liquidity deepening: account-splitting, instant-access layering, and whether part of the reserve should be invested |
 
 | v0225 | Investing liquidity deepening: irregular-income, children, and mortgage-based emergency-fund sizing variants, plus targeted auto-related placement fixes |
+| v0225.1 | Sweep: investing cluster (12 pages) added to SITE search index; featured.json regenerated with investing cluster; _project-brief.md updated with working preferences section and ChatGPT handoff conventions |

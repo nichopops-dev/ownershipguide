@@ -847,6 +847,25 @@ decisionPathOverrides: {
         { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" }
       ],
       bridges: []
+    },
+
+    investing: {
+      pillar: "/how-much-emergency-fund-do-you-need-singapore.html",
+      pages: [
+        { url: "/emergency-fund-vs-sinking-fund-singapore.html", title: "Emergency Fund vs Sinking Fund in Singapore (2026): Why Mixing Shock Reserves with Planned Spending Creates False Safety", subtopic: "comparison" },
+        { url: "/how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html", title: "How Having a Mortgage Changes Your Emergency Fund Size in Singapore (2026): Why Fixed Debt Obligations Usually Demand a Bigger Cash Buffer", subtopic: "planning" },
+        { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", subtopic: "planning" },
+        { url: "/how-much-emergency-fund-do-you-need-singapore.html", title: "How Much Emergency Fund Do You Need in Singapore? (2026): A Liquidity Buffer Framework for Real Household Fragility", subtopic: "planning" },
+        { url: "/how-much-of-your-emergency-fund-should-stay-instant-access-singapore.html", title: "How Much of Your Emergency Fund Should Stay Instant Access in Singapore? (2026): Designing the First Liquidity Layer Without Overparking Every Dollar", subtopic: "planning" },
+        { url: "/how-to-rebuild-your-emergency-fund-after-using-it-singapore.html", title: "How to Rebuild Your Emergency Fund After Using It in Singapore (2026): A Practical Reset Plan Without Pausing Life Indefinitely", subtopic: "planning" },
+        { url: "/how-to-size-an-emergency-fund-if-your-income-is-irregular-singapore.html", title: "How to Size an Emergency Fund If Your Income Is Irregular in Singapore (2026): A Buffer Framework for Variable Cash Flow Without Guesswork", subtopic: "planning" },
+        { url: "/should-you-invest-part-of-your-emergency-fund-singapore.html", title: "Should You Invest Part of Your Emergency Fund in Singapore? (2026): The Yield Temptation That Often Defeats the Point of the Buffer", subtopic: "decision" },
+        { url: "/should-you-split-your-emergency-fund-across-accounts-singapore.html", title: "Should You Split Your Emergency Fund Across Accounts in Singapore? (2026): A Practical Liquidity Structure for Access, Discipline, and Failure Risk", subtopic: "decision" },
+        { url: "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html", title: "When to Invest vs Build Your Emergency Fund First in Singapore (2026): The Liquidity-First Sequence Many Households Skip", subtopic: "decision" },
+        { url: "/when-to-use-your-emergency-fund-singapore.html", title: "When to Use Your Emergency Fund in Singapore (2026): A Practical Boundary Framework for Real Emergencies", subtopic: "decision" },
+        { url: "/where-to-keep-your-emergency-fund-singapore.html", title: "Where to Keep Your Emergency Fund in Singapore? (2026): Liquidity, Safety, and Why Yield Is Not the Main Job", subtopic: "planning" }
+      ],
+      bridges: []
     }
  };
 
