@@ -2033,17 +2033,35 @@ if (isComparisonPage) return;
     
 const override = (SETTINGS.decisionPathOverrides || {})[pathN] || null;
 
+const _hubByCluster = {
+  family:     { url: "/family/",     label: "Explore the Family hub",      meta: "Baby costs, childcare, education, and long-horizon planning" },
+  protection: { url: "/protection/", label: "Explore the Protection hub",  meta: "Life insurance, CI, disability income, and hospitalisation cover" },
+  investing:  { url: "/investing/",  label: "Explore the Investing hub",   meta: "Emergency fund sizing, storage, and sequencing" },
+};
+const _hasCalc = (cluster === "transport" || cluster === "property");
+const _hubInfo = _hubByCluster[cluster] || null;
+
+const _calcByCluster = {
+  transport:  { primary: { url: "/car-affordability-calculator-singapore.html",      title: "Car affordability stress test" },
+                secondary: { url: "/car-vs-ride-hailing-calculator.html",              title: "Car vs ride-hailing break-even" } },
+  property:   { primary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+                secondary: { url: "/mortgage-interest-cost-singapore.html",           title: "Mortgage interest cost model" } },
+  family:     { primary: { url: "/car-vs-ride-hailing-calculator.html",              title: "Car vs ride-hailing break-even" },
+                secondary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" } },
+  protection: { primary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+                secondary: { url: "/car-affordability-calculator-singapore.html",     title: "Car affordability stress test" } },
+  investing:  { primary: { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" },
+                secondary: { url: "/car-affordability-calculator-singapore.html",     title: "Car affordability stress test" } },
+};
+const _calcDefaults = _calcByCluster[cluster] || _calcByCluster["transport"];
+
 const runPrimary = (override && override.runPrimary)
   ? override.runPrimary
-  : (cluster === "property"
-    ? { url: "/property-affordability-calculator-singapore.html", title: "Property affordability stress test" }
-    : { url: "/car-affordability-calculator-singapore.html", title: "Car affordability stress test" });
+  : _calcDefaults.primary;
 
 const runSecondary = (override && override.runSecondary)
   ? override.runSecondary
-  : (cluster === "property"
-    ? { url: "/mortgage-interest-cost-singapore.html", title: "Mortgage interest cost model" }
-    : { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs ride-hailing break-even" });
+  : _calcDefaults.secondary;
 
 const preset = (typeof FINANCING_LOOP_PRESETS !== "undefined") ? (FINANCING_LOOP_PRESETS[pathN] || null) : null;
 
@@ -2098,13 +2116,15 @@ const box = document.createElement("section");
 
         <div class="og-card og-next-card">
           <div class="og-card-title"><span class="og-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M8 7h8"/><path d="M9 11h1"/><path d="M13 11h1"/><path d="M9 14h1"/><path d="M13 14h1"/><path d="M9 17h1"/><path d="M13 17h1"/></svg></span><span>Run the numbers</span></div>
-          <div class="og-card-meta">Use a calculator (2 min)</div>
+          ${_hasCalc ? `<div class="og-card-meta">Use a calculator (2 min)</div>
           <a class="og-btn og-primary" href="${runPrimary.url}">Open: ${escapeHtml(runPrimary.title)} → <span class="og-pill">Recommended</span></a>
           <div class="og-card-links">
             <a href="${runSecondary.url}">${escapeHtml(runSecondary.title)}</a>
             <span class="muted"> · </span>
             <a href="/calculators/">All calculators</a>
-          </div>
+          </div>` : (_hubInfo ? `<div class="og-card-meta">${_hubInfo.meta}</div>
+          <a class="og-btn og-primary" href="${_hubInfo.url}">${escapeHtml(_hubInfo.label)} → <span class="og-pill">Recommended</span></a>
+          <div class="og-card-links"><a href="/calculators/">Browse all calculators</a></div>` : "")}
         </div>
       </div>
       

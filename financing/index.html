@@ -59,7 +59,8 @@
 <li><a href="/use-cpf-oa-vs-preserve-cash-buffer-for-home-loan-singapore.html">Use CPF OA vs preserve cash buffer for home loan</a></li>
 <li><a href="/disability-income-insurance-vs-bigger-cash-buffer-with-mortgage-singapore.html">Disability income insurance vs bigger cash buffer with mortgage</a></li>
 <li><a href="/term-life-vs-cash-buffer-for-single-income-mortgage-singapore.html">Term life vs cash buffer for single-income mortgage</a></li>
-</ul>
+
+<li><a href="/refinance-now-vs-wait-for-more-rate-clarity-singapore.html">Refinance now vs wait for more rate clarity</a></li></ul>
 </div>
 <hr/>
 <h2 id="property">Property Financing</h2>
@@ -120,3 +121,36 @@
 <script defer src="/includes.js"></script>
 </body>
 </html>
+
+<section class="og-dynamic-section" id="og-hub-dynamic-financing" style="margin-top:18px">
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('og-hub-dynamic-financing');
+  if(!sec) return;
+  var MAX=5;
+  fetch('/featured.json')
+    .then(function(r){return r.json();})
+    .catch(function(){return null;})
+    .then(function(data){
+      if(!data||!data.cluster_pages||!data.cluster_pages['property']) return;
+      var items=data.cluster_pages['property'].filter(function(p){
+        return p.url.indexOf('loan')>-1||p.url.indexOf('mortgage')>-1||
+               p.url.indexOf('tdsr')>-1||p.url.indexOf('cpf')>-1||
+               p.url.indexOf('refinan')>-1||p.url.indexOf('buffer')>-1||
+               p.url.indexOf('prepay')>-1||p.url.indexOf('fixed-rate')>-1;
+      }).slice(0,MAX);
+      if(!items.length) return;
+      var html='<div class="box">';
+      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
+      html+='<ul style="margin:0;padding-left:0;list-style:none">';
+      items.forEach(function(p){
+        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)"><a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+        if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
+        html+='</li>';
+      });
+      html+='</ul></div>';
+      sec.innerHTML=html;
+    });
+})();
+</script>
