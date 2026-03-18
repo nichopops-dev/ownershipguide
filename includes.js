@@ -272,7 +272,10 @@ decisionPathOverrides: {
       pages: [
         { url: "/emergency-fund-vs-sinking-fund-singapore.html", title: "Emergency Fund vs Sinking Fund in Singapore (2026): Why Mixing Shock Reserves with Planned Spending Creates False Safety", cluster: "investing", subtopic: "liquidity" },
         { url: "/when-to-use-your-emergency-fund-singapore.html", title: "When to Use Your Emergency Fund in Singapore (2026): A Practical Boundary Framework for Real Emergencies", cluster: "investing", subtopic: "liquidity" },
-        { url: "/how-to-rebuild-your-emergency-fund-after-using-it-singapore.html", title: "How to Rebuild Your Emergency Fund After Using It in Singapore (2026): A Practical Reset Plan Without Pausing Life Indefinitely", cluster: "investing", subtopic: "liquidity" }
+        { url: "/how-to-rebuild-your-emergency-fund-after-using-it-singapore.html", title: "How to Rebuild Your Emergency Fund After Using It in Singapore (2026): A Practical Reset Plan Without Pausing Life Indefinitely", cluster: "investing", subtopic: "liquidity" },
+        { url: "/should-you-split-your-emergency-fund-across-accounts-singapore.html", title: "Should You Split Your Emergency Fund Across Accounts in Singapore? (2026): A Practical Liquidity Structure for Access, Discipline, and Failure Risk", cluster: "investing", subtopic: "liquidity" },
+        { url: "/how-much-of-your-emergency-fund-should-stay-instant-access-singapore.html", title: "How Much of Your Emergency Fund Should Stay Instant Access in Singapore? (2026): Designing the First Liquidity Layer Without Overparking Every Dollar", cluster: "investing", subtopic: "liquidity" },
+        { url: "/should-you-invest-part-of-your-emergency-fund-singapore.html", title: "Should You Invest Part of Your Emergency Fund in Singapore? (2026): The Yield Temptation That Often Defeats the Point of the Buffer", cluster: "investing", subtopic: "liquidity" }
       ],
       bridges: [
         { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", cluster: "protection", subtopic: "planning" },

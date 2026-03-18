@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0223
+> Last updated: March 2026 · Based on repo v0224
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0223
+**Current version:** v0224
 
 ### Key files
 | File | Purpose |
@@ -361,7 +361,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ### Investing / Liquidity (growing and structurally integrated) 🟡
 
-**Current state:** Launched in v0222 and deepened in v0223. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic.
+**Current state:** Launched in v0222 and deepened through v0224. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets.
 
 **Current page set**
 - `investing/index.html`
@@ -371,6 +371,9 @@ Protection should continue to branch carefully by protection purpose. New pages 
 - `emergency-fund-vs-sinking-fund-singapore.html`
 - `when-to-use-your-emergency-fund-singapore.html`
 - `how-to-rebuild-your-emergency-fund-after-using-it-singapore.html`
+- `should-you-split-your-emergency-fund-across-accounts-singapore.html`
+- `how-much-of-your-emergency-fund-should-stay-instant-access-singapore.html`
+- `should-you-invest-part-of-your-emergency-fund-singapore.html`
 
 **Rules for future Investing pages**
 - Keep this cluster distinct from Financing. Financing is debt/funding structure; Investing starts with liquidity, sequencing, and later capital-allocation logic.
@@ -496,3 +499,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0221 | Protection bridge expansion: mortgage-free, job-change, and no-dependants transition pages |
 | v0222 | Investing cluster launch: hub + emergency-fund sizing, storage, and invest-vs-buffer sequencing pages |
 | v0223 | Investing liquidity deepening: emergency-fund vs sinking fund, when to use the fund, and how to rebuild after using it |
+| v0224 | Investing liquidity deepening: account-splitting, instant-access layering, and whether part of the reserve should be invested |
