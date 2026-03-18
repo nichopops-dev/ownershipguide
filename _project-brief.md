@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0228
+> Last updated: March 2026 · Based on repo v0229
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0228
+**Current version:** v0229
 
 ### Key files
 | File | Purpose |
@@ -258,10 +258,10 @@ repair-bill-vs-replace-car-singapore.html · paid-up-old-car-vs-newer-car-with-l
 
 ---
 
-### Property (~92 pages) ✅ Very strong and broad
+### Property (~96 pages) ✅ Very strong and broad
 
 **Financing / borrowing / entry mechanics**
-tdsr-msr-singapore.html · loan-to-value-ltv-singapore.html · in-principle-approval-home-loan-singapore.html · cash-over-valuation-cov-singapore.html · how-much-cash-to-buy-property-singapore.html · hdb-loan-vs-bank-loan-singapore.html · fixed-vs-floating-home-loan-singapore.html · refinance-vs-reprice-home-loan-singapore.html · cpf-oa-vs-cash-for-home-loan-singapore.html · pay-down-mortgage-vs-invest-singapore.html · mortgage-interest-cost-singapore.html · (+ full mortgage servicing sub-branch)
+tdsr-msr-singapore.html · loan-to-value-ltv-singapore.html · in-principle-approval-home-loan-singapore.html · cash-over-valuation-cov-singapore.html · how-much-cash-to-buy-property-singapore.html · hdb-loan-vs-bank-loan-singapore.html · fixed-vs-floating-home-loan-singapore.html · refinance-vs-reprice-home-loan-singapore.html · cpf-oa-vs-cash-for-home-loan-singapore.html · keep-cash-buffer-vs-partial-home-loan-prepayment-singapore.html · fixed-rate-certainty-vs-larger-cash-buffer-singapore.html · use-cpf-oa-vs-preserve-cash-buffer-for-home-loan-singapore.html · refinance-now-vs-wait-for-more-rate-clarity-singapore.html · pay-down-mortgage-vs-invest-singapore.html · mortgage-interest-cost-singapore.html · (+ full mortgage servicing sub-branch)
 
 **Ownership / holding cost**
 property-ownership-cost-singapore.html · condo-ownership-cost.html · rental-property-ownership-cost.html · property-tax-singapore.html · home-maintenance-cost-singapore.html · condo-maintenance-fees-mcst-sinking-fund-singapore.html
