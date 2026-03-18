@@ -608,6 +608,34 @@
   },
   "new": [
     {
+      "url": "/move-house-for-school-vs-stay-put-singapore.html",
+      "title": "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit",
+      "desc": "Should you move house for school in Singapore? A practical framework for weighing school access against property friction, caregiving support, commute design, and family optionality.",
+      "cluster": "property",
+      "date": "2026-03-18"
+    },
+    {
+      "url": "/bigger-home-vs-education-budget-singapore.html",
+      "title": "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?",
+      "desc": "Bigger home vs education budget in Singapore: a framework for deciding whether spare cashflow should support more housing or more child-cost capacity over the next decade.",
+      "cluster": "family",
+      "date": "2026-03-18"
+    },
+    {
+      "url": "/pay-down-mortgage-vs-save-for-university-singapore.html",
+      "title": "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?",
+      "desc": "Pay down mortgage vs save for university in Singapore: a framework for choosing between lower housing debt and earlier tertiary-cost preparation without pretending both goals are identical.",
+      "cluster": "family",
+      "date": "2026-03-18"
+    },
+    {
+      "url": "/live-near-parents-vs-live-near-school-singapore.html",
+      "title": "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?",
+      "desc": "Live near parents vs live near school in Singapore: a practical framework for deciding whether family support or school proximity should anchor your housing location.",
+      "cluster": "property",
+      "date": "2026-03-18"
+    },
+    {
       "url": "/local-university-vs-overseas-university-cost-singapore.html",
       "title": "Local University vs Overseas University Cost in Singapore (2026)",
       "desc": "Local university vs overseas university cost in Singapore (2026): compare tuition, living costs, travel, liquidity strain, and what families undercount when pricing an overseas degree.",
@@ -648,34 +676,6 @@
       "desc": "Does your household need a second car in Singapore (2026)? A decision framework covering coordinatio",
       "cluster": "transport",
       "clusterLabel": "Transport"
-    },
-    {
-      "url": "/emergency-fund-vs-sinking-fund-singapore.html",
-      "title": "Emergency Fund vs Sinking Fund in Singapore (2026)",
-      "desc": "Emergency fund vs sinking fund in Singapore (2026): a practical framework for separating true shock ",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
-      "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
-      "desc": "Home Protection Scheme vs term life insurance in Singapore (2026): compare loan-linked mortgage prot",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html",
-      "title": "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026)",
-      "desc": "How a property upgrade changes your insurance needs in Singapore (2026): why bigger mortgages, highe",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/how-changing-jobs-changes-your-insurance-needs-singapore.html",
-      "title": "How Changing Jobs Changes Your Insurance Needs in Singapore (2026)",
-      "desc": "How changing jobs changes your insurance needs in Singapore (2026): why employer-linked benefits, wa",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
     }
   ],
   "popular": [

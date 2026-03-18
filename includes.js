@@ -657,6 +657,8 @@ decisionPathOverrides: {
         { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore.html", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
         { url: "/home-maintenance-cost-singapore.html", title: "Home Maintenance Cost in Singapore (2026): Repairs, Replacements, and the Real Upkeep Budget", subtopic: "maintenance" },
         { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) in Singapore (2026): What It Protects, What It Does Not, and Why HDB Owners Confuse It with Home Insurance", subtopic: "protection" },
+        { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", subtopic: "planning" },
+        { url: "/live-near-parents-vs-live-near-school-singapore.html", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", subtopic: "planning" },
         { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" },
         { url: "/progressive-payment-vs-resale-payment-timeline-singapore.html", title: "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different", subtopic: "mechanics" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
@@ -750,7 +752,9 @@ decisionPathOverrides: {
       ],
       bridges: [
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
-        { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" }
+        { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" },
+        { url: "/bigger-home-vs-education-budget-singapore.html", title: "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?", cluster: "family" },
+        { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", cluster: "family" }
       ]
     }
  
@@ -802,14 +806,20 @@ decisionPathOverrides: {
         { url: "/student-care-vs-tuition-cost-singapore.html", title: "Student Care vs Tuition Cost in Singapore (2026): Solve the Supervision Problem or the Academic Problem First", subtopic: "comparison" },
         { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", subtopic: "education" },
         { url: "/polytechnic-vs-university-cost-singapore.html", title: "Polytechnic vs University Cost in Singapore (2026): The Tertiary Route Decision That Should Not Start with Prestige Alone", subtopic: "comparison" },
-        { url: "/local-university-vs-overseas-university-cost-singapore.html", title: "Local University vs Overseas University Cost in Singapore (2026): The Prestige Decision That Should Start with Full Exposure", subtopic: "comparison" }
+        { url: "/local-university-vs-overseas-university-cost-singapore.html", title: "Local University vs Overseas University Cost in Singapore (2026): The Prestige Decision That Should Start with Full Exposure", subtopic: "comparison" },
+        { url: "/bigger-home-vs-education-budget-singapore.html", title: "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?", subtopic: "planning" },
+        { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", subtopic: "planning" }
       ,
         { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
         { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026)", subtopic: "planning" }
       ],
-      bridges: []
+      bridges: [
+        { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
+        { url: "/live-near-parents-vs-live-near-school-singapore.html", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", cluster: "property" },
+        { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", cluster: "property" }
+      ]
     },
     protection: {
       label: "Related Singapore Protection & Insurance Guides",

@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0226
+> Last updated: March 2026 · Based on repo v0227
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0226
+**Current version:** v0227
 
 ### Key files
 | File | Purpose |
@@ -282,7 +282,7 @@ joint-tenancy-vs-tenancy-in-common-singapore.html · property-decoupling-singapo
 executive-condo-ec-eligibility-singapore.html · should-you-buy-an-executive-condo-singapore.html · executive-condo-ec-vs-condo-singapore.html · new-launch-vs-resale-condo-singapore.html
 
 **Unit selection / liveability trade-offs**
-freehold-vs-leasehold-singapore.html · bigger-home-farther-out-vs-smaller-home-better-location-singapore.html · 2-bedroom-vs-3-bedroom-condo-singapore.html · 4-room-vs-5-room-hdb-singapore.html · (+ full unit-selection sub-branch)
+freehold-vs-leasehold-singapore.html · bigger-home-farther-out-vs-smaller-home-better-location-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · 2-bedroom-vs-3-bedroom-condo-singapore.html · 4-room-vs-5-room-hdb-singapore.html · (+ full unit-selection sub-branch)
 
 **Post-purchase / move-in execution**
 move-in-ready-vs-renovate-singapore.html · defects-and-snagging-after-handover-singapore.html · furnish-all-at-once-or-phase-it-singapore.html
@@ -294,7 +294,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~15 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0226. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, and a broader education-cost ladder extending from preschool to university with direct comparison pages for tuition vs enrichment, student care vs tuition, polytechnic vs university, and local vs overseas university.
+**Current state:** Launched in v0205 and deepened through v0227. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, and a new family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -306,7 +306,7 @@ how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
 
 **Cross-cluster bridges**
-should-i-buy-bigger-home-before-having-kids-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html
+should-i-buy-bigger-home-before-having-kids-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · bigger-home-vs-education-budget-singapore.html · pay-down-mortgage-vs-save-for-university-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html
 
 **Hub**
 family/index.html
@@ -556,3 +556,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0225.1 | Sweep: investing cluster (12 pages) added to SITE search index; featured.json regenerated with investing cluster; _project-brief.md updated with working preferences section and ChatGPT handoff conventions |
 | v0225.2 | Hotfix sweep: removed invisible control-character corruption from 9 family/education pages, fixed 5 content-after-References regressions, added missing FAQ blocks/schema to key calculator and routing pages, and updated _project-brief.md; changed-files-only zip returned for GitHub upload |
 | v0226 | Family education comparison deepening: added tuition-vs-enrichment-classes-cost-singapore.html, student-care-vs-tuition-cost-singapore.html, polytechnic-vs-university-cost-singapore.html, and local-university-vs-overseas-university-cost-singapore.html; updated sitemap.xml, includes.js family SITE/related graph, featured.json new[], and _project-brief.md |
+| v0227 | Family × Property bridge expansion: added move-house-for-school-vs-stay-put-singapore.html, bigger-home-vs-education-budget-singapore.html, pay-down-mortgage-vs-save-for-university-singapore.html, and live-near-parents-vs-live-near-school-singapore.html; updated sitemap.xml, includes.js property/family SITE and bridge graph, featured.json new[], and _project-brief.md |
