@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0222
+> Last updated: March 2026 · Based on repo v0223
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0222
+**Current version:** v0223
 
 ### Key files
 | File | Purpose |
@@ -205,7 +205,7 @@ These were established over a long build history and must be followed:
 - ✅ Email capture live on all calculator pages (writes to Google Sheet, no 3rd party)
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
-**Current mode:** Content compounding. Investing / liquidity is now live as a new pillar, launched via an emergency-fund wedge covering sizing, storage, and invest-versus-buffer sequencing. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
@@ -359,15 +359,18 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ---
 
-### Investing / Liquidity (launch bundle) 🟡 New and structurally integrated
+### Investing / Liquidity (growing and structurally integrated) 🟡
 
-**Current state:** Launched in v0222. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a first wedge around liquidity resilience rather than portfolio construction. The initial bundle covers emergency-fund sizing, where to keep emergency cash, and the sequence between buffer-building and investing.
+**Current state:** Launched in v0222 and deepened in v0223. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic.
 
 **Current page set**
 - `investing/index.html`
 - `how-much-emergency-fund-do-you-need-singapore.html`
 - `where-to-keep-your-emergency-fund-singapore.html`
 - `when-to-invest-vs-build-your-emergency-fund-first-singapore.html`
+- `emergency-fund-vs-sinking-fund-singapore.html`
+- `when-to-use-your-emergency-fund-singapore.html`
+- `how-to-rebuild-your-emergency-fund-after-using-it-singapore.html`
 
 **Rules for future Investing pages**
 - Keep this cluster distinct from Financing. Financing is debt/funding structure; Investing starts with liquidity, sequencing, and later capital-allocation logic.
@@ -492,3 +495,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 | v0221 | Protection bridge expansion: mortgage-free, job-change, and no-dependants transition pages |
 | v0222 | Investing cluster launch: hub + emergency-fund sizing, storage, and invest-vs-buffer sequencing pages |
+| v0223 | Investing liquidity deepening: emergency-fund vs sinking fund, when to use the fund, and how to rebuild after using it |

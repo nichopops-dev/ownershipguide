@@ -269,7 +269,11 @@ decisionPathOverrides: {
         { url: "/where-to-keep-your-emergency-fund-singapore.html", title: "Where to Keep Your Emergency Fund in Singapore? (2026): Liquidity, Safety, and Why Yield Is Not the Main Job", subtopic: "liquidity" },
         { url: "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html", title: "When to Invest vs Build Your Emergency Fund First in Singapore (2026): The Liquidity-First Sequence Many Households Skip", subtopic: "liquidity" }
       ],
-      pages: [],
+      pages: [
+        { url: "/emergency-fund-vs-sinking-fund-singapore.html", title: "Emergency Fund vs Sinking Fund in Singapore (2026): Why Mixing Shock Reserves with Planned Spending Creates False Safety", cluster: "investing", subtopic: "liquidity" },
+        { url: "/when-to-use-your-emergency-fund-singapore.html", title: "When to Use Your Emergency Fund in Singapore (2026): A Practical Boundary Framework for Real Emergencies", cluster: "investing", subtopic: "liquidity" },
+        { url: "/how-to-rebuild-your-emergency-fund-after-using-it-singapore.html", title: "How to Rebuild Your Emergency Fund After Using It in Singapore (2026): A Practical Reset Plan Without Pausing Life Indefinitely", cluster: "investing", subtopic: "liquidity" }
+      ],
       bridges: [
         { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", cluster: "protection", subtopic: "planning" },
         { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay Down Mortgage vs Invest in Singapore (2026): Framework + Worked Example", cluster: "property", subtopic: "financing" },

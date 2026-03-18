@@ -516,6 +516,27 @@
   },
   "new": [
     {
+      "url": "/emergency-fund-vs-sinking-fund-singapore.html",
+      "title": "Emergency Fund vs Sinking Fund in Singapore",
+      "cluster": "investing",
+      "desc": "Separate true shock reserves from planned future expense buckets.",
+      "date": "2026-03-18"
+    },
+    {
+      "url": "/when-to-use-your-emergency-fund-singapore.html",
+      "title": "When to Use Your Emergency Fund in Singapore",
+      "cluster": "investing",
+      "desc": "Set practical drawdown rules for real emergencies and gray-area costs.",
+      "date": "2026-03-18"
+    },
+    {
+      "url": "/how-to-rebuild-your-emergency-fund-after-using-it-singapore.html",
+      "title": "How to Rebuild Your Emergency Fund After Using It in Singapore",
+      "cluster": "investing",
+      "desc": "Restore shock liquidity after a drawdown without freezing the rest of life.",
+      "date": "2026-03-18"
+    },
+    {
       "url": "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html",
       "title": "When to Invest vs Build Your Emergency Fund First in Singapore (2026)",
       "desc": "A liquidity-first sequencing framework for deciding when buffer-building should outrank risk assets because fragile households cannot afford forced timing mistakes.",
@@ -558,27 +579,6 @@
       "url": "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html",
       "title": "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026)",
       "desc": "How a property upgrade changes your insurance needs in Singapore (2026): why bigger mortgages, highe",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/how-marriage-changes-your-insurance-needs-singapore.html",
-      "title": "How Marriage Changes Your Insurance Needs in Singapore (2026)",
-      "desc": "How marriage changes your insurance needs in Singapore (2026): a practical framework for reviewing l",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/when-insurance-starts-to-matter-more-than-investing-singapore.html",
-      "title": "When Insurance Starts to Matter More Than Investing in Singapore (2026)",
-      "desc": "When insurance starts to matter more than investing in Singapore (2026): a framework for deciding wh",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
-      "title": "Accident Insurance vs Disability Income Insurance in Singapore (2026)",
-      "desc": "Accident insurance vs disability income insurance in Singapore (2026): compare accident-event payout",
       "cluster": "protection",
       "clusterLabel": "Protection"
     }
