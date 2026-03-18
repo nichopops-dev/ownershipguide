@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0227
+> Last updated: March 2026 · Based on repo v0228
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0227
+**Current version:** v0228
 
 ### Key files
 | File | Purpose |
@@ -319,9 +319,9 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ---
 
-### Protection / Insurance (~21 pages) 🟡 Growing and structurally integrated
+### Protection / Insurance (~23 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0221. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, and multi-generational obligations.
+**Current state:** Launched in v0210 and deepened through v0228. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, and multi-generational obligations.
 
 **Medical / health-cover structure**
 hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
@@ -346,6 +346,8 @@ how-a-single-income-household-changes-your-insurance-needs-singapore.html
 how-supporting-aging-parents-changes-your-insurance-needs-singapore.html
 how-divorce-changes-your-insurance-needs-singapore.html
 how-retirement-changes-your-insurance-needs-singapore.html
+emergency-fund-vs-term-life-insurance-first-singapore.html
+emergency-fund-vs-hospitalisation-rider-first-singapore.html
 
 **Hub**
 protection/index.html
@@ -360,7 +362,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ### Investing / Liquidity (growing and structurally integrated) 🟡
 
-**Current state:** Launched in v0222 and deepened through v0225. All 12 pages now indexed in SITE. Hub has dynamic section. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets. It now also covers sizing variants for irregular income, households with children, and households carrying a mortgage.
+**Current state:** Launched in v0222 and deepened through v0228. All 15 pages now indexed in SITE. Hub has dynamic section. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets. It now also covers sizing variants for irregular income, households with children, and households carrying a mortgage.
 
 **Current page set**
 - `investing/index.html`
@@ -376,6 +378,8 @@ Protection should continue to branch carefully by protection purpose. New pages 
 - `how-to-size-an-emergency-fund-if-your-income-is-irregular-singapore.html`
 - `how-having-children-changes-your-emergency-fund-size-singapore.html`
 - `how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html`
+- `pay-down-debt-vs-build-emergency-fund-singapore.html`
+- `save-more-vs-buy-more-insurance-singapore.html`
 
 **Rules for future Investing pages**
 - Keep this cluster distinct from Financing. Financing is debt/funding structure; Investing starts with liquidity, sequencing, and later capital-allocation logic.
@@ -557,3 +561,5 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0225.2 | Hotfix sweep: removed invisible control-character corruption from 9 family/education pages, fixed 5 content-after-References regressions, added missing FAQ blocks/schema to key calculator and routing pages, and updated _project-brief.md; changed-files-only zip returned for GitHub upload |
 | v0226 | Family education comparison deepening: added tuition-vs-enrichment-classes-cost-singapore.html, student-care-vs-tuition-cost-singapore.html, polytechnic-vs-university-cost-singapore.html, and local-university-vs-overseas-university-cost-singapore.html; updated sitemap.xml, includes.js family SITE/related graph, featured.json new[], and _project-brief.md |
 | v0227 | Family × Property bridge expansion: added move-house-for-school-vs-stay-put-singapore.html, bigger-home-vs-education-budget-singapore.html, pay-down-mortgage-vs-save-for-university-singapore.html, and live-near-parents-vs-live-near-school-singapore.html; updated sitemap.xml, includes.js property/family SITE and bridge graph, featured.json new[], and _project-brief.md |
+
+| v0228 | Protection × Investing bridge expansion: added emergency-fund-vs-term-life-insurance-first-singapore.html, emergency-fund-vs-hospitalisation-rider-first-singapore.html, pay-down-debt-vs-build-emergency-fund-singapore.html, and save-more-vs-buy-more-insurance-singapore.html; updated includes.js SITE/bridge graph, sitemap.xml, featured.json new[], _project-brief.md, and validated auto-related/reference placement fixes on selected legacy property pages |

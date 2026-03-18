@@ -861,9 +861,14 @@ decisionPathOverrides: {
         { url: "/home-protection-scheme-vs-term-life-insurance-singapore.html", title: "Home Protection Scheme vs Term Life Insurance in Singapore (2026): Mortgage Cover Is Not Full Family Protection", subtopic: "comparison" },
         { url: "/hospital-cash-vs-critical-illness-insurance-singapore.html", title: "Hospital Cash vs Critical Illness Insurance in Singapore (2026): Cheap Add-On or Real Illness Protection?", subtopic: "comparison" },
         { url: "/how-much-critical-illness-insurance-do-you-need-singapore.html", title: "How Much Critical Illness Insurance Do You Need in Singapore? (2026): Sizing the Lump-Sum Buffer Without Guessing", subtopic: "planning" },
-        { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" }
+        { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" },
+        { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", subtopic: "bridge" },
+        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", subtopic: "bridge" }
       ],
-      bridges: []
+      bridges: [
+        { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
+        { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" }
+      ]
     },
 
     investing: {
@@ -880,9 +885,14 @@ decisionPathOverrides: {
         { url: "/should-you-split-your-emergency-fund-across-accounts-singapore.html", title: "Should You Split Your Emergency Fund Across Accounts in Singapore? (2026): A Practical Liquidity Structure for Access, Discipline, and Failure Risk", subtopic: "decision" },
         { url: "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html", title: "When to Invest vs Build Your Emergency Fund First in Singapore (2026): The Liquidity-First Sequence Many Households Skip", subtopic: "decision" },
         { url: "/when-to-use-your-emergency-fund-singapore.html", title: "When to Use Your Emergency Fund in Singapore (2026): A Practical Boundary Framework for Real Emergencies", subtopic: "decision" },
-        { url: "/where-to-keep-your-emergency-fund-singapore.html", title: "Where to Keep Your Emergency Fund in Singapore? (2026): Liquidity, Safety, and Why Yield Is Not the Main Job", subtopic: "planning" }
+        { url: "/where-to-keep-your-emergency-fund-singapore.html", title: "Where to Keep Your Emergency Fund in Singapore? (2026): Liquidity, Safety, and Why Yield Is Not the Main Job", subtopic: "planning" },
+        { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", subtopic: "bridge" },
+        { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", subtopic: "bridge" }
       ],
-      bridges: []
+      bridges: [
+        { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
+        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" }
+      ]
     }
  };
 
