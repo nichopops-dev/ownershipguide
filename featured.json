@@ -516,6 +516,24 @@
   },
   "new": [
     {
+      "url": "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html",
+      "title": "When to Invest vs Build Your Emergency Fund First in Singapore (2026)",
+      "desc": "A liquidity-first sequencing framework for deciding when buffer-building should outrank risk assets because fragile households cannot afford forced timing mistakes.",
+      "cluster": "investing"
+    },
+    {
+      "url": "/where-to-keep-your-emergency-fund-singapore.html",
+      "title": "Where to Keep Your Emergency Fund in Singapore? (2026)",
+      "desc": "A practical guide to storing emergency money with the right balance of liquidity, safety, and usability instead of chasing yield for the wrong job.",
+      "cluster": "investing"
+    },
+    {
+      "url": "/how-much-emergency-fund-do-you-need-singapore.html",
+      "title": "How Much Emergency Fund Do You Need in Singapore? (2026)",
+      "desc": "A Singapore-focused framework for sizing emergency cash buffers around fixed costs, income fragility, debt, and family obligations.",
+      "cluster": "investing"
+    },
+    {
       "url": "/how-paying-off-your-home-loan-changes-your-insurance-needs-singapore.html",
       "title": "How Paying Off Your Home Loan Changes Your Insurance Needs in Singapore (2026)",
       "desc": "How paying off your home loan changes your insurance needs in Singapore (2026): what to review once ",
@@ -561,27 +579,6 @@
       "url": "/accident-insurance-vs-disability-income-insurance-singapore.html",
       "title": "Accident Insurance vs Disability Income Insurance in Singapore (2026)",
       "desc": "Accident insurance vs disability income insurance in Singapore (2026): compare accident-event payout",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/critical-illness-vs-disability-income-insurance-singapore.html",
-      "title": "Critical Illness vs Disability Income Insurance in Singapore (2026)",
-      "desc": "Critical illness vs disability income insurance in Singapore (2026): compare diagnosis-stage lump-su",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/home-protection-scheme-vs-term-life-insurance-singapore.html",
-      "title": "Home Protection Scheme vs Term Life Insurance in Singapore (2026)",
-      "desc": "Home Protection Scheme vs term life insurance in Singapore (2026): compare loan-linked mortgage prot",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/hospital-cash-vs-critical-illness-insurance-singapore.html",
-      "title": "Hospital Cash vs Critical Illness Insurance in Singapore (2026)",
-      "desc": "Hospital cash vs critical illness insurance in Singapore (2026): compare small hospital-event payout",
       "cluster": "protection",
       "clusterLabel": "Protection"
     }

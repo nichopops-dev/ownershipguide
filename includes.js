@@ -39,7 +39,8 @@
       "/transport/",
       "/property/",
       "/family/",
-      "/protection/"
+      "/protection/",
+      "/investing/"
     ],
 
     // Announcement banner (optional)
@@ -256,7 +257,24 @@ decisionPathOverrides: {
 
     property: { href: "/property/", text: "← Back to Property" },
       family: { href: "/family/", text: "← Back to Family" },
-      protection: { href: "/protection/", text: "← Back to Protection" }
+      protection: { href: "/protection/", text: "← Back to Protection" },
+      investing: { href: "/investing/", text: "← Back to Investing" }
+    },
+
+    investing: {
+      label: "Related Singapore Investing & Liquidity Guides",
+      pillars: [
+        { url: "/investing/", title: "Investing & Liquidity Hub in Singapore (2026)", subtopic: "hub" },
+        { url: "/how-much-emergency-fund-do-you-need-singapore.html", title: "How Much Emergency Fund Do You Need in Singapore? (2026): A Liquidity Buffer Framework for Real Household Fragility", subtopic: "liquidity" },
+        { url: "/where-to-keep-your-emergency-fund-singapore.html", title: "Where to Keep Your Emergency Fund in Singapore? (2026): Liquidity, Safety, and Why Yield Is Not the Main Job", subtopic: "liquidity" },
+        { url: "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html", title: "When to Invest vs Build Your Emergency Fund First in Singapore (2026): The Liquidity-First Sequence Many Households Skip", subtopic: "liquidity" }
+      ],
+      pages: [],
+      bridges: [
+        { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", cluster: "protection", subtopic: "planning" },
+        { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay Down Mortgage vs Invest in Singapore (2026): Framework + Worked Example", cluster: "property", subtopic: "financing" },
+        { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" }
+      ]
     },
 
     comparisons: {
@@ -996,6 +1014,7 @@ decisionPathOverrides: {
       { url: "/property/", title: "Property Hub", cluster: "property", subtopic: "start" },
       { url: "/family/", title: "Family Hub", cluster: "family", subtopic: "start" },
       { url: "/protection/", title: "Protection Hub", cluster: "protection", subtopic: "start" },
+      { url: "/investing/", title: "Investing Hub", cluster: "investing", subtopic: "start" },
       { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" },
       { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
     );
