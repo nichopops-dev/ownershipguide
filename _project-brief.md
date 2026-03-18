@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0229
+> Last updated: March 2026 · Based on repo v0230
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0229
+**Current version:** v0230
 
 ### Key files
 | File | Purpose |
@@ -292,9 +292,9 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ---
 
-### Family/Children (~15 pages) 🟡 Growing and now structurally integrated
+### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0227. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, and a new family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving.
+**Current state:** Launched in v0205 and deepened through v0230. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, plus a new family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, and university saving versus parental retirement strength.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -306,7 +306,7 @@ how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
 
 **Cross-cluster bridges**
-should-i-buy-bigger-home-before-having-kids-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · bigger-home-vs-education-budget-singapore.html · pay-down-mortgage-vs-save-for-university-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html
+should-i-buy-bigger-home-before-having-kids-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · bigger-home-vs-education-budget-singapore.html · pay-down-mortgage-vs-save-for-university-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html · should-you-build-your-emergency-fund-before-having-a-baby-singapore.html · how-a-second-child-changes-your-cash-buffer-plan-singapore.html · school-fee-sinking-fund-vs-emergency-fund-singapore.html · save-for-university-vs-strengthen-your-own-retirement-first-singapore.html
 
 **Hub**
 family/index.html

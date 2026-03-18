@@ -812,12 +812,15 @@ decisionPathOverrides: {
         { url: "/polytechnic-vs-university-cost-singapore.html", title: "Polytechnic vs University Cost in Singapore (2026): The Tertiary Route Decision That Should Not Start with Prestige Alone", subtopic: "comparison" },
         { url: "/local-university-vs-overseas-university-cost-singapore.html", title: "Local University vs Overseas University Cost in Singapore (2026): The Prestige Decision That Should Start with Full Exposure", subtopic: "comparison" },
         { url: "/bigger-home-vs-education-budget-singapore.html", title: "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?", subtopic: "planning" },
-        { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", subtopic: "planning" }
-      ,
+        { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", subtopic: "planning" },
         { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
-        { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026)", subtopic: "planning" }
+        { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026)", subtopic: "planning" },
+        { url: "/should-you-build-your-emergency-fund-before-having-a-baby-singapore.html", title: "Should You Build Your Emergency Fund Before Having a Baby in Singapore? (2026): The Reserve Question Most Couples Leave Too Late", subtopic: "planning" },
+        { url: "/how-a-second-child-changes-your-cash-buffer-plan-singapore.html", title: "How a Second Child Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough", subtopic: "planning" },
+        { url: "/school-fee-sinking-fund-vs-emergency-fund-singapore.html", title: "School-Fee Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Education Bills from Your Shock Reserve", subtopic: "comparison" },
+        { url: "/save-for-university-vs-strengthen-your-own-retirement-first-singapore.html", title: "Save for University vs Strengthen Your Own Retirement First in Singapore (2026): Which Long-Horizon Family Obligation Deserves Priority?", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
