@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0232
+> Last updated: March 2026 · Based on repo v0233
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0232
+**Current version:** v0233
 
 ### Key files
 | File | Purpose |
@@ -206,6 +206,9 @@ These were established over a long build history and must be followed:
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+
+### Version history
+- **v0233** — interlinking consolidation release. Added manual hub links across cluster and financing hubs, strengthened contextual in-body links from older framework pages into recent bridge pages, and improved surfacing for recent liquidity / sequencing content without expanding the sitemap.
 
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
