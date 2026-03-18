@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0225.1
+> Last updated: March 2026 · Based on repo v0225.2
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0225.1
+**Current version:** v0225.2
 
 ### Key files
 | File | Purpose |
@@ -555,3 +555,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 | v0225 | Investing liquidity deepening: irregular-income, children, and mortgage-based emergency-fund sizing variants, plus targeted auto-related placement fixes |
 | v0225.1 | Sweep: investing cluster (12 pages) added to SITE search index; featured.json regenerated with investing cluster; _project-brief.md updated with working preferences section and ChatGPT handoff conventions |
+| v0225.2 | Hotfix sweep: removed invisible control-character corruption from 9 family/education pages, fixed 5 content-after-References regressions, added missing FAQ blocks/schema to key calculator and routing pages, and updated _project-brief.md; changed-files-only zip returned for GitHub upload |
