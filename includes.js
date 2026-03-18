@@ -774,7 +774,10 @@ decisionPathOverrides: {
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest: The Hidden Cost in Singapore Property", subtopic: "cpf" },
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Property Taxes That Change Your Decision", subtopic: "tax" }
       ],
-      bridges: []
+      bridges: [
+        { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", cluster: "investing", subtopic: "liquidity" },
+        { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", cluster: "property", subtopic: "planning" }
+      ]
     },
     family: {
       label: "Related Singapore Family Cost Guides",
@@ -793,9 +796,13 @@ decisionPathOverrides: {
         { url: "/how-much-does-secondary-school-cost-singapore.html", title: "How Much Does Secondary School Cost in Singapore? (2026): The Next Budget Phase Families Often Misread", subtopic: "school" },
         { url: "/tuition-cost-singapore.html", title: "Tuition Cost in Singapore (2026): The School-Stage Spend That Quietly Becomes Structural", subtopic: "education" },
         { url: "/enrichment-classes-cost-singapore.html", title: "Enrichment Classes Cost in Singapore (2026): The Fragmented Family Spend That Adds Up Fast", subtopic: "education" },
+        { url: "/tuition-vs-enrichment-classes-cost-singapore.html", title: "Tuition vs Enrichment Classes Cost in Singapore (2026): The Academic Spend and Development Spend Families Should Stop Mixing", subtopic: "comparison" },
         { url: "/how-much-does-junior-college-cost-singapore.html", title: "How Much Does Junior College Cost in Singapore? (2026): The Post-Secondary Stage Families Still Need to Budget For", subtopic: "school" },
         { url: "/polytechnic-vs-junior-college-cost-singapore.html", title: "Polytechnic vs Junior College Cost in Singapore (2026): The Post-Secondary Branch Point Families Often Oversimplify", subtopic: "comparison" },
-        { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", subtopic: "education" }
+        { url: "/student-care-vs-tuition-cost-singapore.html", title: "Student Care vs Tuition Cost in Singapore (2026): Solve the Supervision Problem or the Academic Problem First", subtopic: "comparison" },
+        { url: "/how-much-does-university-cost-singapore.html", title: "How Much Does University Cost in Singapore? (2026): The Long-Horizon Family Bill Many Plans Leave Too Vague", subtopic: "education" },
+        { url: "/polytechnic-vs-university-cost-singapore.html", title: "Polytechnic vs University Cost in Singapore (2026): The Tertiary Route Decision That Should Not Start with Prestige Alone", subtopic: "comparison" },
+        { url: "/local-university-vs-overseas-university-cost-singapore.html", title: "Local University vs Overseas University Cost in Singapore (2026): The Prestige Decision That Should Start with Full Exposure", subtopic: "comparison" }
       ,
         { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", subtopic: "planning" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },

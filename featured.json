@@ -608,6 +608,34 @@
   },
   "new": [
     {
+      "url": "/local-university-vs-overseas-university-cost-singapore.html",
+      "title": "Local University vs Overseas University Cost in Singapore (2026)",
+      "desc": "Local university vs overseas university cost in Singapore (2026): compare tuition, living costs, travel, liquidity strain, and what families undercount when pricing an overseas degree.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/polytechnic-vs-university-cost-singapore.html",
+      "title": "Polytechnic vs University Cost in Singapore (2026)",
+      "desc": "Polytechnic vs university cost in Singapore (2026): compare duration, tuition, financing, delayed income, and when the more expensive route is actually justified.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/student-care-vs-tuition-cost-singapore.html",
+      "title": "Student Care vs Tuition Cost in Singapore (2026)",
+      "desc": "Student care vs tuition cost in Singapore (2026): compare supervision spend with academic-support spend and avoid paying for two different problems by default.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/tuition-vs-enrichment-classes-cost-singapore.html",
+      "title": "Tuition vs Enrichment Classes Cost in Singapore (2026)",
+      "desc": "Tuition vs enrichment classes cost in Singapore (2026): separate academic-support spend from development spend before both become structural child-cost layers.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/car-sharing-vs-ride-hailing-singapore.html",
       "title": "Car-Sharing vs Ride-Hailing in Singapore (2026)",
       "desc": "Car-sharing vs ride-hailing in Singapore (2026): a framework for occasional-use households choosing ",
@@ -646,34 +674,6 @@
       "url": "/how-changing-jobs-changes-your-insurance-needs-singapore.html",
       "title": "How Changing Jobs Changes Your Insurance Needs in Singapore (2026)",
       "desc": "How changing jobs changes your insurance needs in Singapore (2026): why employer-linked benefits, wa",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html",
-      "title": "How Having a Mortgage Changes Your Emergency Fund Size in Singapore (2026)",
-      "desc": "How having a mortgage changes your emergency fund size in Singapore (2026): a practical guide to how",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/how-having-children-changes-your-emergency-fund-size-singapore.html",
-      "title": "How Having Children Changes Your Emergency Fund Size in Singapore (2026)",
-      "desc": "How having children changes your emergency fund size in Singapore (2026): a practical guide to how d",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/how-having-no-dependants-changes-your-insurance-needs-singapore.html",
-      "title": "How Having No Dependants Changes Your Insurance Needs in Singapore (2026)",
-      "desc": "How having no dependants changes your insurance needs in Singapore (2026): why life cover, disabilit",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/how-marriage-changes-your-insurance-needs-singapore.html",
-      "title": "How Marriage Changes Your Insurance Needs in Singapore (2026)",
-      "desc": "How marriage changes your insurance needs in Singapore (2026): a practical framework for reviewing l",
       "cluster": "protection",
       "clusterLabel": "Protection"
     }

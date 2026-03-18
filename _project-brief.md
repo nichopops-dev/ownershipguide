@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0225.2
+> Last updated: March 2026 · Based on repo v0226
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0225.2
+**Current version:** v0226
 
 ### Key files
 | File | Purpose |
@@ -215,7 +215,6 @@ Older pages that predate current standards — fix when touched, not as a dedica
 - `property-ownership-cost-singapore.html`
 - `used-car-vs-new-car-singapore.html`
 
----
 
 ## 8. Cluster Status
 
@@ -295,13 +294,13 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~15 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0209. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, and a clearer education-cost ladder extending from preschool to university.
+**Current state:** Launched in v0205 and deepened through v0226. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, and a broader education-cost ladder extending from preschool to university with direct comparison pages for tuition vs enrichment, student care vs tuition, polytechnic vs university, and local vs overseas university.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
 
 **School-stage / supervision / education-spend branch**
-how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school-care-cost-singapore.html · how-much-does-secondary-school-cost-singapore.html · tuition-cost-singapore.html · enrichment-classes-cost-singapore.html · how-much-does-junior-college-cost-singapore.html · polytechnic-vs-junior-college-cost-singapore.html · how-much-does-university-cost-singapore.html
+how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school-care-cost-singapore.html · student-care-vs-tuition-cost-singapore.html · how-much-does-secondary-school-cost-singapore.html · tuition-cost-singapore.html · enrichment-classes-cost-singapore.html · tuition-vs-enrichment-classes-cost-singapore.html · how-much-does-junior-college-cost-singapore.html · polytechnic-vs-junior-college-cost-singapore.html · polytechnic-vs-university-cost-singapore.html · how-much-does-university-cost-singapore.html · local-university-vs-overseas-university-cost-singapore.html
 
 **Household scaling / anchor pages**
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
@@ -556,3 +555,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0225 | Investing liquidity deepening: irregular-income, children, and mortgage-based emergency-fund sizing variants, plus targeted auto-related placement fixes |
 | v0225.1 | Sweep: investing cluster (12 pages) added to SITE search index; featured.json regenerated with investing cluster; _project-brief.md updated with working preferences section and ChatGPT handoff conventions |
 | v0225.2 | Hotfix sweep: removed invisible control-character corruption from 9 family/education pages, fixed 5 content-after-References regressions, added missing FAQ blocks/schema to key calculator and routing pages, and updated _project-brief.md; changed-files-only zip returned for GitHub upload |
+| v0226 | Family education comparison deepening: added tuition-vs-enrichment-classes-cost-singapore.html, student-care-vs-tuition-cost-singapore.html, polytechnic-vs-university-cost-singapore.html, and local-university-vs-overseas-university-cost-singapore.html; updated sitemap.xml, includes.js family SITE/related graph, featured.json new[], and _project-brief.md |
