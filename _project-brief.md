@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0224
+> Last updated: March 2026 · Based on repo v0225
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0224
+**Current version:** v0225
 
 ### Key files
 | File | Purpose |
@@ -361,7 +361,7 @@ Protection should continue to branch carefully by protection purpose. New pages 
 
 ### Investing / Liquidity (growing and structurally integrated) 🟡
 
-**Current state:** Launched in v0222 and deepened through v0224. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets.
+**Current state:** Launched in v0222 and deepened through v0225. Cluster now has a live hub, Topics-dropdown/header/footer/start-here integration, an `investing` SITE entry in `includes.js`, homepage support, and a liquidity-first wedge covering emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, rebuild logic, account splitting, instant-access layering, and the boundary between reserve cash and risk assets. It now also covers sizing variants for irregular income, households with children, and households carrying a mortgage.
 
 **Current page set**
 - `investing/index.html`
@@ -374,6 +374,9 @@ Protection should continue to branch carefully by protection purpose. New pages 
 - `should-you-split-your-emergency-fund-across-accounts-singapore.html`
 - `how-much-of-your-emergency-fund-should-stay-instant-access-singapore.html`
 - `should-you-invest-part-of-your-emergency-fund-singapore.html`
+- `how-to-size-an-emergency-fund-if-your-income-is-irregular-singapore.html`
+- `how-having-children-changes-your-emergency-fund-size-singapore.html`
+- `how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html`
 
 **Rules for future Investing pages**
 - Keep this cluster distinct from Financing. Financing is debt/funding structure; Investing starts with liquidity, sequencing, and later capital-allocation logic.
@@ -500,3 +503,5 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0222 | Investing cluster launch: hub + emergency-fund sizing, storage, and invest-vs-buffer sequencing pages |
 | v0223 | Investing liquidity deepening: emergency-fund vs sinking fund, when to use the fund, and how to rebuild after using it |
 | v0224 | Investing liquidity deepening: account-splitting, instant-access layering, and whether part of the reserve should be invested |
+
+| v0225 | Investing liquidity deepening: irregular-income, children, and mortgage-based emergency-fund sizing variants, plus targeted auto-related placement fixes |
