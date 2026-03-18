@@ -800,7 +800,11 @@ decisionPathOverrides: {
       ],
       bridges: [
         { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", cluster: "investing", subtopic: "liquidity" },
-        { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", cluster: "property", subtopic: "planning" }
+        { url: "/should-i-buy-bigger-home-before-having-kids-singapore.html", title: "Should I Buy a Bigger Home Before Having Kids in Singapore? (2026)", cluster: "property", subtopic: "planning" },
+        { url: "/fixed-rate-certainty-vs-larger-cash-buffer-singapore.html", title: "Fixed-Rate Certainty vs Larger Cash Buffer in Singapore (2026): Which Protection Layer Matters More When Rates Feel Unclear?", subtopic: "financing" },
+        { url: "/keep-cash-buffer-vs-partial-home-loan-prepayment-singapore.html", title: "Keep Cash Buffer vs Partial Home Loan Prepayment in Singapore (2026): Which Move Actually Makes the Household Safer?", subtopic: "financing" },
+        { url: "/refinance-now-vs-wait-for-more-rate-clarity-singapore.html", title: "Refinance Now vs Wait for More Rate Clarity in Singapore (2026): When Acting Early Beats Watching Another Rate Cycle", subtopic: "financing" },
+        { url: "/use-cpf-oa-vs-preserve-cash-buffer-for-home-loan-singapore.html", title: "Use CPF OA vs Preserve Cash Buffer for Home Loan in Singapore (2026): Which Funding Route Better Protects the Household?", subtopic: "financing" }
       ]
     },
     family: {

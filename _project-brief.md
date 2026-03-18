@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0233
+> Last updated: March 2026 · Based on repo v0233.1
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0233
+**Current version:** v0233.1
 
 ### Key files
 | File | Purpose |
@@ -51,6 +51,7 @@
 | `footer.html` | Shared footer partial |
 | `featured.json` | Dynamic homepage + hub data. Stores `cluster_pages` (all pages per cluster sorted by Last updated date), `new[]` (10 most recent across all clusters), `popular[]` (manually curated). Regenerate when new pages ship — Claude does this each session. Not a webpage; do not add to sitemap. |
 | `_email-capture-setup.md` | One-time setup instructions for Google Sheets email capture. Keep locally — do not upload to GitHub. |
+| `generate-sitemap.py` | Sitemap regeneration script. Claude runs `python3 generate-sitemap.py` from repo root each session — outputs accurate sitemap.xml from actual files. Never add to sitemap itself. |
 | `_project-brief.md` | Master project brief. Permanent repo fixture. Do not rename, move, delete, deploy, or add to sitemap. Update only what changed at the end of each shipped version. |
 
 ### Directory structure
@@ -570,3 +571,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0227 | Family × Property bridge expansion: added move-house-for-school-vs-stay-put-singapore.html, bigger-home-vs-education-budget-singapore.html, pay-down-mortgage-vs-save-for-university-singapore.html, and live-near-parents-vs-live-near-school-singapore.html; updated sitemap.xml, includes.js property/family SITE and bridge graph, featured.json new[], and _project-brief.md |
 
 | v0228 | Protection × Investing bridge expansion: added emergency-fund-vs-term-life-insurance-first-singapore.html, emergency-fund-vs-hospitalisation-rider-first-singapore.html, pay-down-debt-vs-build-emergency-fund-singapore.html, and save-more-vs-buy-more-insurance-singapore.html; updated includes.js SITE/bridge graph, sitemap.xml, featured.json new[], _project-brief.md, and validated auto-related/reference placement fixes on selected legacy property pages |
+| v0233.1 | Sweep: 3 orphans fixed (25 links added); 4 property pages added to SITE search index; 26 low-inbound pages — top 9 boosted; family hub +8 pages, investing hub +7, protection hub +3; generate-sitemap.py added (357 URLs, auto-generated); featured.json regenerated (127 pages, 5 clusters) |
