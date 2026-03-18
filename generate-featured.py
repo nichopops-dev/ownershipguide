@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""
+generate-featured.py — Ownership Guide
+Run from repo root: python3 generate-featured.py
+Regenerates featured.json from actual page Last updated dates.
+Claude runs this each session before packaging the output zip.
+"""
+
+import os, re, json
+from datetime import datetime
+
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+OUTPUT = os.path.join(REPO_ROOT, 'featured.json')
+
+CLUSTERS = ['transport', 'property', 'family', 'protection', 'investing']
+CLUSTER_LABEL = {
+    'transport': 'Transport', 'property': 'Property',
+    'family': 'Family', 'protection': 'Protection', 'investing': 'Investing'
+}
+SKIP = {'404.html','about.html','contact.html','terms.html','privacy-policy.html',
+        'editorial-policy.html','advertising-disclosure.html','corrections.html',
+        'footer.html','header.html','index.html'}
+
+# Manually curated popular pages — update rarely, only if cluster balance shifts
+POPULAR = [
+    {'url': '/how-much-does-it-cost-to-raise-a-child-singapore.html', 
+     'title': 'Full Cost of Raising a Child in Singapore', 'cluster': 'family', 'clusterLabel': 'Family'},
+    {'url': '/car-ownership-cost.html', 
+     'title': '5-Year Car Ownership Cost', 'cluster': 'transport', 'clusterLabel': 'Transport'},
+    {'url': '/property-ownership-cost-singapore.html', 
+     'title': 'Property Ownership Cost', 'cluster': 'property', 'clusterLabel': 'Property'},
+    {'url': '/how-much-life-insurance-do-you-need-singapore.html', 
+     'title': 'How Much Life Insurance Do You Need?', 'cluster': 'protection', 'clusterLabel': 'Protection'},
+    {'url': '/how-much-emergency-fund-do-you-need-singapore.html', 
+     'title': 'How Much Emergency Fund Do You Need?', 'cluster': 'investing', 'clusterLabel': 'Investing'},
+    {'url': '/rent-vs-buy-property-singapore.html', 
+     'title': 'Rent vs Buy Property', 'cluster': 'property', 'clusterLabel': 'Property'},
+]
+
+def get_page_data(filepath):
+    try:
+        content = open(filepath, encoding='utf-8').read()
+    except:
+        return None
+    cluster_m = re.search(r'og:cluster[^>]+content="([^"]+)"', content)
+    title_m = re.search(r'<title>([^<]+)</title>', content)
+    date_m = re.search(r'<strong>Last updated:</strong>\s*(\d{1,2}\s+\w+\s+\d{4})', content)
+    desc_m = re.search(r'<meta[^>]+name="description"[^>]+content="([^"]+)"', content)
+    if not cluster_m or not title_m:
+        return None
+    cluster = cluster_m.group(1).strip()
+    if cluster not in CLUSTERS:
+        return None
+    title = title_m.group(1).split('|')[0].strip()
+    short_title = title.split(':')[0].strip() if ':' in title else title[:65]
+    desc = desc_m.group(1)[:100] if desc_m else ''
+    date_str = date_m.group(1).strip() if date_m else '1 Mar 2026'
+    try:
+        d = datetime.strptime(date_str, '%d %b %Y')
+        date_iso = d.strftime('%Y-%m-%d')
+    except:
+        date_iso = '2026-03-01'
+    fn = os.path.basename(filepath)
+    return {'url': f'/{fn}', 'title': short_title, 'desc': desc,
+            'cluster': cluster, 'date': date_iso}
+
+# Collect all pages
+pages = []
+for fn in sorted(os.listdir(REPO_ROOT)):
+    if not fn.endswith('.html') or fn in SKIP:
+        continue
+    if 'calculator' in fn:
+        continue
+    data = get_page_data(os.path.join(REPO_ROOT, fn))
+    if data:
+        pages.append(data)
+
+# Build cluster_pages (sorted newest first)
+cluster_pages = {}
+for cluster in CLUSTERS:
+    cp = sorted([p for p in pages if p['cluster'] == cluster],
+                key=lambda x: x['date'], reverse=True)
+    cluster_pages[cluster] = [
+        {'url': p['url'], 'title': p['title'], 'desc': p['desc'], 'date': p['date']}
+        for p in cp
+    ]
+
+# Build new[] (10 most recent across all clusters)
+all_sorted = sorted(pages, key=lambda x: x['date'], reverse=True)
+new_list = [
+    {'url': p['url'], 'title': p['title'], 'desc': p['desc'],
+     'cluster': p['cluster'], 'clusterLabel': CLUSTER_LABEL[p['cluster']]}
+    for p in all_sorted[:10]
+]
+
+output = {
+    'generated': datetime.now().strftime('%Y-%m-%d'),
+    'cluster_pages': cluster_pages,
+    'new': new_list,
+    'popular': POPULAR,
+}
+
+with open(OUTPUT, 'w') as f:
+    json.dump(output, f, indent=2)
+
+total = sum(len(v) for v in cluster_pages.values())
+print(f'featured.json written: {total} pages across {len(CLUSTERS)} clusters')
+for cl in CLUSTERS:
+    cp = cluster_pages[cl]
+    newest = cp[0]['date'] if cp else 'none'
+    print(f'  {cl}: {len(cp)} pages, newest: {newest}')

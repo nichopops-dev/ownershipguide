@@ -872,16 +872,16 @@
       "clusterLabel": "Protection"
     },
     {
+      "url": "/how-much-emergency-fund-do-you-need-singapore.html",
+      "title": "How Much Emergency Fund Do You Need?",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/rent-vs-buy-property-singapore.html",
       "title": "Rent vs Buy Property",
       "cluster": "property",
       "clusterLabel": "Property"
-    },
-    {
-      "url": "/car-vs-ride-hailing-cost.html",
-      "title": "Car vs Ride-Hailing",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
     }
   ]
 }
