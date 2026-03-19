@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0245
+> Last updated: March 2026 · Based on repo v0246
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0245
+**Current version:** v0246
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, and caregiving delivery. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0246** — Aging parents × family coordination / burden-sharing release. Added four sibling-coordination and burden-sharing pages (split support equally vs by income, give cash vs take on caregiving time, help siblings now vs preserve your own cash buffer, and how supporting aging parents changes your family burden-sharing decision order), strengthened contextual links across Family and Investing, and extended the aging-parents branch into sibling contribution design, reserve-protection boundaries, and family coordination sequence.
+
 - **v0245** — Aging parents × work/career trade-off release. Added four elder-support work and income sequencing pages (reduce work hours vs pay for caregiving support, quit your job vs outsource more care, keep a flexible job vs higher pay, and how supporting aging parents changes your work and income decision order), strengthened contextual links across Family and Investing, and extended the aging-parents branch into career flexibility, earnings durability, and work-capacity trade-offs.
 
 - **v0244** — Aging parents × medical-financing bridge release. Added four elder medical-funding and long-term-care sequencing pages (use parents' MediSave vs pay cash for eldercare costs, CareShield Life supplement vs bigger cash buffer, hospital cash plan vs bigger cash buffer, and how supporting aging parents changes your medical-financing decision order), strengthened contextual links across Family and Protection, and extended the aging-parents branch beyond caregiving delivery into medical-cost funding sequence and long-term-care financing trade-offs.
