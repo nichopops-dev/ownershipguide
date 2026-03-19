@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0236
+> Last updated: March 2026 · Based on repo v0237
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0236
+**Current version:** v0237
 
 ### Key files
 | File | Purpose |
@@ -212,6 +212,8 @@ These were established over a long build history and must be followed:
 - **v0233** — interlinking consolidation release. Added manual hub links across cluster and financing hubs, strengthened contextual in-body links from older framework pages into recent bridge pages, and improved surfacing for recent liquidity / sequencing content without expanding the sitemap.
 
 - **v0236** — Motorcycle × liquidity bridge release. Added four motorcycle reserve-design / sequencing pages (build emergency fund first, repair sinking fund vs emergency fund, bigger down payment vs larger buffer, and how motorcycle ownership changes cash-buffer design), strengthened manual hub and contextual interlinking into the motorcycle branch, and applied two selective validated placement/order fixes where methodology sections were sitting between auto-related and References.
+
+- **v0237** — Motorcycle × protection bridge release. Added four motorcycle-specific protection sequencing pages (accident insurance vs bigger cash buffer, disability income insurance vs bigger cash buffer, hospitalisation rider vs bigger cash buffer, and how motorcycle ownership changes insurance priority order), strengthened contextual links from core motorcycle and protection pages into the new bridge layer, updated hub surfacing in Transport and Protection, and normalised two selective order/placement cases where the page clearly benefited from a stricter template order.
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
 - `car-ownership-cost.html`
@@ -223,9 +225,9 @@ Older pages that predate current standards — fix when touched, not as a dedica
 
 ## 8. Cluster Status
 
-### Transport (~104 pages) ✅ Very strong and broad
+### Transport (~108 pages) ✅ Very strong and broad
 
-**Current state:** Deepened through v0236. Transport now includes both a car–liquidity bridge layer and a motorcycle–liquidity bridge layer covering pre-purchase buffer sequencing, repair sinking-fund separation, downpayment-versus-buffer trade-offs, and how ownership changes emergency-fund design.
+**Current state:** Deepened through v0237. Transport now includes both a motorcycle–liquidity bridge layer and a motorcycle–protection bridge layer, extending the branch from purchase and upkeep into reserve design, insurance sequencing, medical-friction decisions, and income-protection order.
 
 
 **Ownership / running cost / affordability**
@@ -247,7 +249,7 @@ ev-vs-petrol-cost-singapore.html · ev-charging-cost-singapore.html · home-char
 hybrid-vs-petrol-singapore.html · hybrid-vs-ev-singapore.html · should-you-buy-a-hybrid-car-singapore.html · self-charging-hybrid-vs-plug-in-hybrid-singapore.html
 
 **Motorcycle branch**
-motorcycle-ownership-cost-singapore.html · motorcycle-insurance-cost-singapore.html · motorcycle-maintenance-cost-singapore.html · motorcycle-vs-car-cost-singapore.html · motorcycle-depreciation-singapore.html · should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html · motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html · bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html · how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html · (+ full used/exit/COE sub-branch)
+motorcycle-ownership-cost-singapore.html · motorcycle-insurance-cost-singapore.html · motorcycle-maintenance-cost-singapore.html · motorcycle-vs-car-cost-singapore.html · motorcycle-depreciation-singapore.html · should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html · motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html · bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html · how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html · accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html · disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html · how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html · (+ full used/exit/COE sub-branch)
 
 **Used-car diligence / transaction discipline**
 used-car-inspection-checklist-singapore.html · used-car-records-checklist-singapore.html · used-car-dealer-warranty-singapore.html · buy-used-car-from-dealer-vs-direct-owner-singapore.html · mileage-vs-age-when-buying-used-car-singapore.html · used-car-listing-red-flags-singapore.html · questions-to-answer-before-you-commit-to-car-deal-singapore.html · low-monthly-payment-traps-when-buying-car-singapore.html

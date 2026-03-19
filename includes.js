@@ -302,6 +302,10 @@ decisionPathOverrides: {
         { url: "/motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html", title: "Motorcycle Repair Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Bike Wear From Your Shock Reserve", subtopic: "bridge" },
         { url: "/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html", title: "Bigger Motorcycle Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?", subtopic: "bridge" },
         { url: "/how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html", title: "How Motorcycle Ownership Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough", subtopic: "bridge" },
+        { url: "/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Accident Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Should Move First?", subtopic: "bridge" },
+        { url: "/disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Disability Income Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Fragility Matters More?", subtopic: "bridge" },
+        { url: "/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Hospitalisation Rider vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Reduces More Friction?", subtopic: "bridge" },
+        { url: "/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html", title: "How Motorcycle Ownership Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?", subtopic: "bridge" },
         { url: "/family-car-decision-after-baby-singapore.html", title: "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?", subtopic: "planning" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", subtopic: "planning" },
         { url: "/protection-gap-after-having-a-baby-singapore.html", title: "Protection Gap After Having a Baby in Singapore (2026): How Your Insurance Needs Change When a Child Arrives", subtopic: "planning" }
@@ -526,6 +530,10 @@ decisionPathOverrides: {
         { url: "/motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html", title: "Motorcycle Repair Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Bike Wear From Your Shock Reserve", cluster: "transport", subtopic: "bridge" },
         { url: "/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html", title: "Bigger Motorcycle Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?", cluster: "transport", subtopic: "bridge" },
         { url: "/how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html", title: "How Motorcycle Ownership Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough", cluster: "transport", subtopic: "bridge" },
+        { url: "/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Accident Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Should Move First?", cluster: "transport", subtopic: "bridge" },
+        { url: "/disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Disability Income Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Fragility Matters More?", cluster: "transport", subtopic: "bridge" },
+        { url: "/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Hospitalisation Rider vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Reduces More Friction?", cluster: "transport", subtopic: "bridge" },
+        { url: "/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html", title: "How Motorcycle Ownership Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?", cluster: "transport", subtopic: "bridge" },
         { url: "/motorcycle-depreciation-singapore.html", title: "Motorcycle Depreciation in Singapore (2026): The Quiet Cost That Makes Cheap Bikes Look Cheaper Than They Are", cluster: "transport", subtopic: "ownership-core" },
         { url: "/sell-motorcycle-with-outstanding-loan-singapore.html", title: "Sell a Motorcycle With an Outstanding Loan in Singapore (2026): What Actually Changes About Your Exit, Equity, and Next Move?", cluster: "transport", subtopic: "financing" },
         { url: "/when-to-sell-motorcycle-before-coe-expiry-singapore.html", title: "When to Sell a Motorcycle Before COE Expiry in Singapore (2026): Why Waiting Too Long Shrinks Your Options", cluster: "transport", subtopic: "timing" },
@@ -902,7 +910,11 @@ decisionPathOverrides: {
       ],
       bridges: [
         { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
-        { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" }
+        { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" },
+        { url: "/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Accident Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Should Move First?", cluster: "transport", subtopic: "bridge" },
+        { url: "/disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Disability Income Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Fragility Matters More?", cluster: "transport", subtopic: "bridge" },
+        { url: "/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html", title: "Hospitalisation Rider vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Reduces More Friction?", cluster: "transport", subtopic: "bridge" },
+        { url: "/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html", title: "How Motorcycle Ownership Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?", cluster: "transport", subtopic: "bridge" }
       ]
     },
 
