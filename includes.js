@@ -469,6 +469,10 @@ decisionPathOverrides: {
         { url: "/coe-renewal-worth-it-singapore.html", title: "Should You Renew COE in Singapore? (2026 Decision Framework + Break-Even)", subtopic: "coe" },
         { url: "/10-year-coe-renewal-worth-it-singapore.html", title: "Is 10-Year COE Renewal Worth It in Singapore? (2026 Financial Breakdown)", subtopic: "coe" },
         { url: "/5-year-coe-renewal-worth-it-singapore.html", title: "5-Year COE Renewal: Is It Worth It in Singapore? (2026 Decision Framework)", subtopic: "coe" },
+        { url: "/keep-a-car-vs-use-ride-hailing-when-supporting-aging-parents-singapore.html", title: "Keep a Car vs Use Ride-Hailing When Supporting Aging Parents in Singapore (2026): Which Setup Handles Care Friction Without Weakening the Household?", cluster: "transport", subtopic: "bridge" },
+        { url: "/second-car-vs-ride-hailing-when-supporting-aging-parents-singapore.html", title: "Second Car vs Ride-Hailing When Supporting Aging Parents in Singapore (2026): When Does Overflow Care Friction Justify Another Vehicle?", cluster: "transport", subtopic: "bridge" },
+        { url: "/family-car-upgrade-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html", title: "Family Car Upgrade vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which Move Actually Makes the Household Safer?", cluster: "transport", subtopic: "bridge" },
+        { url: "/how-supporting-aging-parents-changes-your-transport-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Transport Decision Order in Singapore (2026): What Should Move Up the Queue Once Elder Support Becomes Real?", cluster: "transport", subtopic: "bridge" },
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
       ],
       pages: [
