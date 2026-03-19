@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0241
+> Last updated: March 2026 · Based on repo v0242
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0241
+**Current version:** v0242
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0242** — Aging parents × investing/retirement bridge release. Added four sandwich-generation capital-allocation pages (help aging parents now vs strengthen your own retirement first, top up parents' CPF vs preserve your own cash buffer, monthly support for aging parents vs build a bigger emergency fund, and how supporting aging parents changes your investing priority order), strengthened contextual links across Family and Investing, and extended the aging-parents branch beyond protection, housing, and transport into retirement and investing sequence.
+
 - **v0241** — Aging parents × transport bridge release. Added four elder-support transport sequencing pages (keep a car vs ride-hailing, second car vs ride-hailing, family car upgrade vs bigger cash buffer, and how supporting aging parents changes your transport decision order), strengthened contextual links across Family and Transport, and extended the aging-parents branch beyond protection, liquidity, and housing into mobility and caregiving logistics.
 
 - **v0240** — Aging parents × property/financing bridge release. Added four housing and mortgage sequencing pages for sandwich-generation households (move closer vs keep housing cost lower, help parents with housing costs vs strengthen your own cash buffer, use CPF OA vs preserve cash when supporting aging parents, and how supporting aging parents changes your housing decision order), strengthened contextual links from Family and Property/Financing pages into the new bridge layer, and extended the aging-parents branch beyond protection/liquidity into housing and financing trade-offs.
@@ -312,7 +314,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0239. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents bridge layer covering elder-support protection sequencing and reserve redesign.
+**Current state:** Launched in v0205 and deepened through v0242. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents bridge layer covering elder-support protection sequencing, reserve redesign, housing order, transport order, and investing/retirement priority.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -324,7 +326,7 @@ how-much-does-primary-school-cost-singapore.html · student-care-vs-after-school
 how-much-does-it-cost-to-raise-a-child-singapore.html · cost-of-having-a-second-child-singapore.html
 
 **Cross-cluster bridges**
-should-i-buy-bigger-home-before-having-kids-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · bigger-home-vs-education-budget-singapore.html · pay-down-mortgage-vs-save-for-university-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html · should-you-build-your-emergency-fund-before-having-a-baby-singapore.html · how-a-second-child-changes-your-cash-buffer-plan-singapore.html · school-fee-sinking-fund-vs-emergency-fund-singapore.html · save-for-university-vs-strengthen-your-own-retirement-first-singapore.html · term-life-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · disability-income-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html
+should-i-buy-bigger-home-before-having-kids-singapore.html · move-house-for-school-vs-stay-put-singapore.html · live-near-parents-vs-live-near-school-singapore.html · bigger-home-vs-education-budget-singapore.html · pay-down-mortgage-vs-save-for-university-singapore.html · family-car-decision-after-baby-singapore.html · how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html · protection-gap-after-having-a-baby-singapore.html · should-you-build-your-emergency-fund-before-having-a-baby-singapore.html · how-a-second-child-changes-your-cash-buffer-plan-singapore.html · school-fee-sinking-fund-vs-emergency-fund-singapore.html · save-for-university-vs-strengthen-your-own-retirement-first-singapore.html · term-life-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · disability-income-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html · help-aging-parents-now-vs-strengthen-your-own-retirement-first-singapore.html · top-up-parents-cpf-vs-preserve-your-own-cash-buffer-singapore.html · monthly-support-for-aging-parents-vs-build-bigger-emergency-fund-singapore.html · how-supporting-aging-parents-changes-your-investing-priority-order-singapore.html
 
 **Hub**
 family/index.html
@@ -339,7 +341,7 @@ Family should now be treated as a full lifecycle cost cluster. New pages should 
 
 ### Protection / Insurance (~27 pages) 🟡 Growing and structurally integrated
 
-**Current state:** Launched in v0210 and deepened through v0239. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, multi-generational obligations, mortgage-stage liquidity trade-offs, single-income housing risk, first-child sequencing, motorcycle-specific protection sequencing, and aging-parent support sequencing.
+**Current state:** Launched in v0210 and deepened through v0242. Cluster now has a live hub, native header/footer/start-here integration, Protection search/related-graph support in `includes.js`, a clear internal ladder from medical-cover structure to life-insurance sizing, critical-illness sizing, disability-income sizing, accident-cover, hospital-cash add-on judgment, and a growing bridge layer linking Protection to Family, Property, employment status, debt stage, dependency level, multi-generational obligations, mortgage-stage liquidity trade-offs, single-income housing risk, first-child sequencing, motorcycle-specific protection sequencing, and aging-parent support sequencing.
 
 **Medical / health-cover structure**
 hospitalisation-insurance-vs-rider-cost-singapore.html · critical-illness-insurance-cost-singapore.html · hospital-cash-insurance-worth-it-singapore.html · critical-illness-vs-hospitalisation-insurance-singapore.html · hospitalisation-insurance-vs-accident-insurance-singapore.html · hospital-cash-vs-critical-illness-insurance-singapore.html · accident-insurance-vs-critical-illness-insurance-singapore.html
@@ -363,7 +365,7 @@ disability-income-insurance-vs-bigger-cash-buffer-with-mortgage-singapore.html �
 how-becoming-self-employed-changes-your-insurance-needs-singapore.html
 how-a-single-income-household-changes-your-insurance-needs-singapore.html
 how-supporting-aging-parents-changes-your-insurance-needs-singapore.html
-term-life-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · disability-income-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html
+term-life-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · disability-income-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · hospitalisation-rider-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html · help-aging-parents-now-vs-strengthen-your-own-retirement-first-singapore.html · top-up-parents-cpf-vs-preserve-your-own-cash-buffer-singapore.html · monthly-support-for-aging-parents-vs-build-bigger-emergency-fund-singapore.html · how-supporting-aging-parents-changes-your-investing-priority-order-singapore.html
 how-divorce-changes-your-insurance-needs-singapore.html
 how-retirement-changes-your-insurance-needs-singapore.html
 emergency-fund-vs-term-life-insurance-first-singapore.html
