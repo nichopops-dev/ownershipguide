@@ -889,6 +889,10 @@ decisionPathOverrides: {
         { url: "/top-up-parents-cpf-vs-preserve-your-own-cash-buffer-singapore.html", title: "Top Up Parents' CPF vs Preserve Your Own Cash Buffer in Singapore (2026): Which Move Actually Makes the Family Safer?", subtopic: "bridge" },
         { url: "/monthly-support-for-aging-parents-vs-build-bigger-emergency-fund-singapore.html", title: "Monthly Support for Aging Parents vs Build a Bigger Emergency Fund in Singapore (2026): Which Layer Should a Sandwich-Generation Household Strengthen First?", subtopic: "bridge" },
         { url: "/how-supporting-aging-parents-changes-your-investing-priority-order-singapore.html", title: "How Supporting Aging Parents Changes Your Investing Priority Order in Singapore (2026): What Should Move Up the Queue Once Elder Support Becomes Real?", subtopic: "planning" },
+        { url: "/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html", title: "Hire a Helper vs Use Home-Care Services for Aging Parents in Singapore (2026): Which Caregiving Route Actually Fits the Household Better?", subtopic: "comparison" },
+        { url: "/adult-day-care-vs-keeping-a-parent-at-home-singapore.html", title: "Adult Day Care vs Keeping a Parent at Home in Singapore (2026): Which Caregiving Model Actually Reduces More Household Strain?", subtopic: "comparison" },
+        { url: "/caregiving-costs-now-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html", title: "Caregiving Costs Now vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which Layer Should the Household Strengthen First?", subtopic: "bridge" },
+        { url: "/how-supporting-aging-parents-changes-your-caregiving-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Caregiving Decision Order in Singapore (2026): What Should Move Up the Queue Once Elder Care Becomes Real?", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },

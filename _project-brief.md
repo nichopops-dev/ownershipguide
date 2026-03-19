@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0242
+> Last updated: March 2026 · Based on repo v0243
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0242
+**Current version:** v0243
 
 ### Key files
 | File | Purpose |
@@ -206,9 +206,11 @@ These were established over a long build history and must be followed:
 - ✅ Email capture live on all calculator pages (writes to Google Sheet, no 3rd party)
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
-**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, and caregiving delivery. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0243** — Aging parents × caregiving-costs bridge release. Added four eldercare delivery and cost-sequencing pages (hire a helper vs use home-care services, adult day care vs keeping a parent at home, caregiving costs now vs bigger cash buffer, and how supporting aging parents changes your caregiving decision order), strengthened contextual links across Family and Investing, and extended the aging-parents branch beyond liquidity, protection, housing, transport, and retirement into care-delivery decisions and operating-cost trade-offs.
+
 - **v0242** — Aging parents × investing/retirement bridge release. Added four sandwich-generation capital-allocation pages (help aging parents now vs strengthen your own retirement first, top up parents' CPF vs preserve your own cash buffer, monthly support for aging parents vs build a bigger emergency fund, and how supporting aging parents changes your investing priority order), strengthened contextual links across Family and Investing, and extended the aging-parents branch beyond protection, housing, and transport into retirement and investing sequence.
 
 - **v0241** — Aging parents × transport bridge release. Added four elder-support transport sequencing pages (keep a car vs ride-hailing, second car vs ride-hailing, family car upgrade vs bigger cash buffer, and how supporting aging parents changes your transport decision order), strengthened contextual links across Family and Transport, and extended the aging-parents branch beyond protection, liquidity, and housing into mobility and caregiving logistics.
