@@ -776,6 +776,34 @@
   },
   "new": [
     {
+      "url": "/how-having-children-changes-your-insurance-priority-order-singapore.html",
+      "title": "How Having Children Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?",
+      "desc": "How having children changes your insurance priority order in Singapore: decide which protection reviews should move up once dependants and household obligations increase.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/hospitalisation-rider-vs-bigger-cash-buffer-after-first-child-singapore.html",
+      "title": "Hospitalisation Rider vs Bigger Cash Buffer After First Child in Singapore (2026): Which Layer Reduces More Friction?",
+      "desc": "Hospitalisation rider vs bigger cash buffer after first child in Singapore: decide whether the next dollar should reduce medical-bill friction or strengthen broader household liquidity.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/disability-income-insurance-vs-bigger-cash-buffer-after-first-child-singapore.html",
+      "title": "Disability Income Insurance vs Bigger Cash Buffer After First Child in Singapore (2026): Which Fragility Matters More?",
+      "desc": "Disability income insurance vs bigger cash buffer after first child in Singapore: choose between stronger earnings protection and stronger liquid resilience once a dependent arrives.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/term-life-insurance-vs-bigger-cash-buffer-after-first-child-singapore.html",
+      "title": "Term Life Insurance vs Bigger Cash Buffer After First Child in Singapore (2026): Which Gap Deserves the Next Dollar?",
+      "desc": "Term life insurance vs bigger cash buffer after first child in Singapore: decide whether the next dollar should protect long-term dependency risk or strengthen day-to-day household resilience.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html",
       "title": "How Motorcycle Ownership Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?",
       "desc": "How motorcycle ownership changes your insurance priority order in Singapore: decide which protection reviews should move up once riding becomes part of daily life.",
@@ -814,34 +842,6 @@
       "url": "/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html",
       "title": "Bigger Motorcycle Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?",
       "desc": "Bigger motorcycle down payment vs larger cash buffer in Singapore: decide whether the next dollar should reduce bike financing or stay liquid to protect post-purchase resilience.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html",
-      "title": "Motorcycle Repair Sinking Fund vs Emergency Fund in Singapore (2026): Stop Funding Predictable Bike Wear From Your Shock Reserve",
-      "desc": "Motorcycle repair sinking fund vs emergency fund in Singapore: separate predictable bike wear from true shocks so ownership stops draining the main reserve.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html",
-      "title": "Should You Build Your Emergency Fund Before Buying a Motorcycle in Singapore? (2026): The Buffer Question Riders Skip",
-      "desc": "Should you build your emergency fund before buying a motorcycle in Singapore? Decide whether liquidity should come before downpayment, instalment savings, and riding convenience.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/bigger-car-down-payment-vs-larger-cash-buffer-singapore.html",
-      "title": "Bigger Car Down Payment vs Larger Cash Buffer in Singapore (2026)",
-      "desc": "Bigger car down payment vs larger cash buffer in Singapore: decide whether the next dollar should lo",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/car-repair-sinking-fund-vs-emergency-fund-singapore.html",
-      "title": "Car Repair Sinking Fund vs Emergency Fund in Singapore (2026)",
-      "desc": "Car repair sinking fund vs emergency fund in Singapore: decide how to separate predictable vehicle w",
       "cluster": "transport",
       "clusterLabel": "Transport"
     }
