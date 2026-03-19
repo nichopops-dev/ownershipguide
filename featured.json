@@ -776,6 +776,34 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough",
+      "desc": "How supporting aging parents changes your cash-buffer plan in Singapore: redesign your reserve once elder support, caregiving friction, and multi-generation obligations widen the household shock profile.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/hospitalisation-rider-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
+      "title": "Hospitalisation Rider vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which Layer Reduces More Friction?",
+      "desc": "Hospitalisation rider vs bigger cash buffer when supporting aging parents in Singapore: decide whether the next dollar should reduce medical-bill friction or strengthen broader elder-support liquidity.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/disability-income-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
+      "title": "Disability Income Insurance vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which Fragility Matters More?",
+      "desc": "Disability income insurance vs bigger cash buffer when supporting aging parents in Singapore: choose between stronger earnings protection and stronger liquid resilience when elder support depends on your stability.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/term-life-insurance-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
+      "title": "Term Life Insurance vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which Gap Deserves the Next Dollar?",
+      "desc": "Term life insurance vs bigger cash buffer when supporting aging parents in Singapore: decide whether the next dollar should protect long-term family dependency risk or strengthen immediate elder-support resilience.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-having-children-changes-your-insurance-priority-order-singapore.html",
       "title": "How Having Children Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?",
       "desc": "How having children changes your insurance priority order in Singapore: decide which protection reviews should move up once dependants and household obligations increase.",
@@ -814,34 +842,6 @@
       "url": "/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html",
       "title": "Hospitalisation Rider vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Reduces More Friction?",
       "desc": "Hospitalisation rider vs bigger cash buffer for motorcycle riders in Singapore: decide whether the next dollar should reduce medical-bill friction or strengthen broader recovery liquidity.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html",
-      "title": "Disability Income Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Fragility Matters More?",
-      "desc": "Disability income insurance vs bigger cash buffer for motorcycle riders in Singapore: choose between earnings protection and stronger liquid resilience.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html",
-      "title": "Accident Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Should Move First?",
-      "desc": "Accident insurance vs bigger cash buffer for motorcycle riders in Singapore: decide whether event-specific cover or broader liquidity deserves the next dollar.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html",
-      "title": "How Motorcycle Ownership Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough",
-      "desc": "How motorcycle ownership changes your cash-buffer plan in Singapore: redesign your reserve once the bike adds upkeep, fixed monthly burn, and mobility dependence.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html",
-      "title": "Bigger Motorcycle Down Payment vs Larger Cash Buffer in Singapore (2026): Which One Actually Makes Ownership Safer?",
-      "desc": "Bigger motorcycle down payment vs larger cash buffer in Singapore: decide whether the next dollar should reduce bike financing or stay liquid to protect post-purchase resilience.",
       "cluster": "transport",
       "clusterLabel": "Transport"
     }
