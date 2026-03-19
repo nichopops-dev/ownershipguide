@@ -1176,6 +1176,17 @@ decisionPathOverrides: {
     if (score > 0) {
       if (item?.subtopic === "calculator") score += 6;
       if (item?.subtopic === "ownership") score += 3;
+      // Boost pillar pages so they surface above mechanics pages for the same cluster
+      const PILLARS = [
+        "/car-ownership-cost.html", "/property-ownership-cost-singapore.html",
+        "/car-vs-ride-hailing-cost.html", "/rent-vs-buy-property-singapore.html",
+        "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+        "/how-much-life-insurance-do-you-need-singapore.html",
+        "/how-much-emergency-fund-do-you-need-singapore.html",
+        "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+        "/cost-of-having-a-baby-singapore.html"
+      ];
+      if (PILLARS.includes(item?.url)) score += 15;
     }
     return score;
   }
@@ -1250,7 +1261,7 @@ decisionPathOverrides: {
       current = matches;
       const head = `<div class="sr-head">Top matches for “${escapeHtml(q)}”${matches.length ? ` <span class="sr-count">(${matches.length})</span>` : ""}</div>`;
       if (!matches.length) {
-        resultsEl.innerHTML = head + `<div class="sr-empty"><div class="sr-title">No results</div><div class="sr-meta">Try fewer words, or search “car”, “property”, “calculator”.</div></div>`;
+        resultsEl.innerHTML = head + `<div class="sr-empty"><div class="sr-title">No results for \"${escapeHtml(q)}\"</div><div class="sr-meta">Try a broader term, or start from one of these:</div><div class="sr-suggestions" style="margin-top:8px;display:flex;flex-direction:column;gap:4px"><a href="/car-ownership-cost.html" style="font-size:13px">Car ownership cost →</a><a href="/property-ownership-cost-singapore.html" style="font-size:13px">Property ownership cost →</a><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html" style="font-size:13px">Cost of raising a child →</a><a href="/how-much-life-insurance-do-you-need-singapore.html" style="font-size:13px">Life insurance sizing →</a><a href="/how-much-emergency-fund-do-you-need-singapore.html" style="font-size:13px">Emergency fund sizing →</a></div></div>`;
         open();
         setActive(-1);
         return;

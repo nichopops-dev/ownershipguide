@@ -16,6 +16,40 @@
 <p>Financing decisions in Singapore are not just about whether a monthly instalment looks manageable. They are about how much leverage you are taking, how much liquidity you are locking up, how fragile your cash flow becomes if rates or income move, and what you give up when you commit capital to one path instead of another.</p>
 <p>This hub is the shortest route to the financing parts of OwnershipGuide. Use it when you want to decide between borrowing routes, stress-test affordability, or understand the real mechanics behind car loans and home loans before you commit.</p>
 <hr/>
+
+
+<section class="og-dynamic-section" id="og-hub-dynamic-financing" style="margin-top:18px">
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('og-hub-dynamic-financing');
+  if(!sec) return;
+  var MAX=5;
+  fetch('/featured.json')
+    .then(function(r){return r.json();})
+    .catch(function(){return null;})
+    .then(function(data){
+      if(!data||!data.cluster_pages||!data.cluster_pages['property']) return;
+      var items=data.cluster_pages['property'].filter(function(p){
+        return p.url.indexOf('loan')>-1||p.url.indexOf('mortgage')>-1||
+               p.url.indexOf('tdsr')>-1||p.url.indexOf('cpf')>-1||
+               p.url.indexOf('refinan')>-1||p.url.indexOf('buffer')>-1||
+               p.url.indexOf('prepay')>-1||p.url.indexOf('fixed-rate')>-1;
+      }).slice(0,MAX);
+      if(!items.length) return;
+      var html='<div class="box">';
+      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
+      html+='<ul style="margin:0;padding-left:0;list-style:none">';
+      items.forEach(function(p){
+        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)"><a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+        if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
+        html+='</li>';
+      });
+      html+='</ul></div>';
+      sec.innerHTML=html;
+    });
+})();
+</script>
 <h2>Start Here</h2>
 <div class="box">
 <p class="muted"><strong>Recommended path:</strong> choose your domain first, run the relevant calculator, then read the comparison guide that matches your actual decision.</p>
@@ -116,38 +150,6 @@
 <li><a href="/contact.html">Contact</a></li>
 </ul>
 
-<section class="og-dynamic-section" id="og-hub-dynamic-financing" style="margin-top:18px">
-</section>
-<script>
-(function(){
-  var sec=document.getElementById('og-hub-dynamic-financing');
-  if(!sec) return;
-  var MAX=5;
-  fetch('/featured.json')
-    .then(function(r){return r.json();})
-    .catch(function(){return null;})
-    .then(function(data){
-      if(!data||!data.cluster_pages||!data.cluster_pages['property']) return;
-      var items=data.cluster_pages['property'].filter(function(p){
-        return p.url.indexOf('loan')>-1||p.url.indexOf('mortgage')>-1||
-               p.url.indexOf('tdsr')>-1||p.url.indexOf('cpf')>-1||
-               p.url.indexOf('refinan')>-1||p.url.indexOf('buffer')>-1||
-               p.url.indexOf('prepay')>-1||p.url.indexOf('fixed-rate')>-1;
-      }).slice(0,MAX);
-      if(!items.length) return;
-      var html='<div class="box">';
-      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
-      html+='<ul style="margin:0;padding-left:0;list-style:none">';
-      items.forEach(function(p){
-        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)"><a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
-        if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
-        html+='</li>';
-      });
-      html+='</ul></div>';
-      sec.innerHTML=html;
-    });
-})();
-</script>
 <p class="muted"><strong>Last updated:</strong> 19 Mar 2026</p>
 </main>
 <div id="site-footer"></div>
