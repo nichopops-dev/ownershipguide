@@ -776,6 +776,30 @@
   },
   "new": [
     {
+      "url": "/move-closer-to-aging-parents-vs-keep-housing-cost-lower-singapore.html",
+      "title": "Move Closer to Aging Parents vs Keep Housing Cost Lower in Singapore (2026)",
+      "cluster": "family",
+      "date": "2026-03-19"
+    },
+    {
+      "url": "/help-parents-with-housing-costs-vs-strengthen-your-own-cash-buffer-singapore.html",
+      "title": "Help Parents With Housing Costs vs Strengthen Your Own Cash Buffer in Singapore (2026)",
+      "cluster": "family",
+      "date": "2026-03-19"
+    },
+    {
+      "url": "/use-cpf-oa-vs-preserve-cash-when-supporting-aging-parents-singapore.html",
+      "title": "Use CPF OA vs Preserve Cash When Supporting Aging Parents in Singapore (2026)",
+      "cluster": "family",
+      "date": "2026-03-19"
+    },
+    {
+      "url": "/how-supporting-aging-parents-changes-your-housing-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Housing Decision Order in Singapore (2026)",
+      "cluster": "family",
+      "date": "2026-03-19"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Cash-Buffer Plan in Singapore (2026): Why the Old Emergency-Fund Target Often Stops Being Enough",
       "desc": "How supporting aging parents changes your cash-buffer plan in Singapore: redesign your reserve once elder support, caregiving friction, and multi-generation obligations widen the household shock profile.",
@@ -816,34 +840,6 @@
       "desc": "Hospitalisation rider vs bigger cash buffer after first child in Singapore: decide whether the next dollar should reduce medical-bill friction or strengthen broader household liquidity.",
       "cluster": "family",
       "clusterLabel": "Family"
-    },
-    {
-      "url": "/disability-income-insurance-vs-bigger-cash-buffer-after-first-child-singapore.html",
-      "title": "Disability Income Insurance vs Bigger Cash Buffer After First Child in Singapore (2026): Which Fragility Matters More?",
-      "desc": "Disability income insurance vs bigger cash buffer after first child in Singapore: choose between stronger earnings protection and stronger liquid resilience once a dependent arrives.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/term-life-insurance-vs-bigger-cash-buffer-after-first-child-singapore.html",
-      "title": "Term Life Insurance vs Bigger Cash Buffer After First Child in Singapore (2026): Which Gap Deserves the Next Dollar?",
-      "desc": "Term life insurance vs bigger cash buffer after first child in Singapore: decide whether the next dollar should protect long-term dependency risk or strengthen day-to-day household resilience.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html",
-      "title": "How Motorcycle Ownership Changes Your Insurance Priority Order in Singapore (2026): What Actually Moves Up the Queue?",
-      "desc": "How motorcycle ownership changes your insurance priority order in Singapore: decide which protection reviews should move up once riding becomes part of daily life.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html",
-      "title": "Hospitalisation Rider vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026): Which Layer Reduces More Friction?",
-      "desc": "Hospitalisation rider vs bigger cash buffer for motorcycle riders in Singapore: decide whether the next dollar should reduce medical-bill friction or strengthen broader recovery liquidity.",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
     }
   ],
   "popular": [

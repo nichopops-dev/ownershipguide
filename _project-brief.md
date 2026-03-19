@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0239
+> Last updated: March 2026 · Based on repo v0240
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0239
+**Current version:** v0240
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0240** — Aging parents × property/financing bridge release. Added four housing and mortgage sequencing pages for sandwich-generation households (move closer vs keep housing cost lower, help parents with housing costs vs strengthen your own cash buffer, use CPF OA vs preserve cash when supporting aging parents, and how supporting aging parents changes your housing decision order), strengthened contextual links from Family and Property/Financing pages into the new bridge layer, and extended the aging-parents branch beyond protection/liquidity into housing and financing trade-offs.
+
 - **v0239** — Aging parents × protection/liquidity bridge release. Added four sandwich-generation sequencing pages (term life vs bigger cash buffer, disability income vs bigger cash buffer, hospitalisation rider vs bigger cash buffer, and how supporting aging parents changes cash-buffer design), strengthened manual hub/contextual links across Family, Protection, and Investing, and extended the family-protection bridge layer beyond children into elder-support obligations.
 
 - **v0238** — Family × protection bridge release. Added four first-child protection sequencing pages (term life vs bigger cash buffer, disability income vs bigger cash buffer, hospitalisation rider vs bigger cash buffer, and how having children changes insurance priority order), strengthened manual hub and contextual interlinking between Family and Protection, and extended the first-child decision layer beyond cost and reserve design into protection ordering.
