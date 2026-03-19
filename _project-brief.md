@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0235.2
+> Last updated: March 2026 · Based on repo v0236
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0235.2
+**Current version:** v0236
 
 ### Key files
 | File | Purpose |
@@ -211,6 +211,7 @@ These were established over a long build history and must be followed:
 ### Version history
 - **v0233** — interlinking consolidation release. Added manual hub links across cluster and financing hubs, strengthened contextual in-body links from older framework pages into recent bridge pages, and improved surfacing for recent liquidity / sequencing content without expanding the sitemap.
 
+- **v0236** — Motorcycle × liquidity bridge release. Added four motorcycle reserve-design / sequencing pages (build emergency fund first, repair sinking fund vs emergency fund, bigger down payment vs larger buffer, and how motorcycle ownership changes cash-buffer design), strengthened manual hub and contextual interlinking into the motorcycle branch, and applied two selective validated placement/order fixes where methodology sections were sitting between auto-related and References.
 ### Known background standards debt (opportunistic cleanup only, not standalone priority)
 Older pages that predate current standards — fix when touched, not as a dedicated pass:
 - `car-ownership-cost.html`
@@ -224,7 +225,7 @@ Older pages that predate current standards — fix when touched, not as a dedica
 
 ### Transport (~104 pages) ✅ Very strong and broad
 
-**Current state:** Deepened through v0231. Transport now also includes a transport–liquidity bridge layer covering pre-purchase buffer sequencing, repair sinking-fund separation, downpayment-versus-buffer trade-offs, and how car ownership changes emergency-fund design.
+**Current state:** Deepened through v0236. Transport now includes both a car–liquidity bridge layer and a motorcycle–liquidity bridge layer covering pre-purchase buffer sequencing, repair sinking-fund separation, downpayment-versus-buffer trade-offs, and how ownership changes emergency-fund design.
 
 
 **Ownership / running cost / affordability**
@@ -246,7 +247,7 @@ ev-vs-petrol-cost-singapore.html · ev-charging-cost-singapore.html · home-char
 hybrid-vs-petrol-singapore.html · hybrid-vs-ev-singapore.html · should-you-buy-a-hybrid-car-singapore.html · self-charging-hybrid-vs-plug-in-hybrid-singapore.html
 
 **Motorcycle branch**
-motorcycle-ownership-cost-singapore.html · motorcycle-insurance-cost-singapore.html · motorcycle-maintenance-cost-singapore.html · motorcycle-vs-car-cost-singapore.html · motorcycle-depreciation-singapore.html · (+ full used/exit/COE sub-branch)
+motorcycle-ownership-cost-singapore.html · motorcycle-insurance-cost-singapore.html · motorcycle-maintenance-cost-singapore.html · motorcycle-vs-car-cost-singapore.html · motorcycle-depreciation-singapore.html · should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html · motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html · bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html · how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html · (+ full used/exit/COE sub-branch)
 
 **Used-car diligence / transaction discipline**
 used-car-inspection-checklist-singapore.html · used-car-records-checklist-singapore.html · used-car-dealer-warranty-singapore.html · buy-used-car-from-dealer-vs-direct-owner-singapore.html · mileage-vs-age-when-buying-used-car-singapore.html · used-car-listing-red-flags-singapore.html · questions-to-answer-before-you-commit-to-car-deal-singapore.html · low-monthly-payment-traps-when-buying-car-singapore.html
