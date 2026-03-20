@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0249
+> Last updated: March 2026 · Based on repo v0250
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0249
+**Current version:** v0250
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, and caregiving delivery. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0250** — Aging parents × estate-readiness release. Added four family estate-readiness pages (make a will for aging parents, CPF nomination for aging parents, estate-document readiness for aging parents, and how supporting aging parents changes your estate-readiness decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into after-death instruction clarity, CPF-specific distribution readiness, survivor retrieval discipline, and sequencing before bereavement forces the issue.
+
 - **v0249** — Aging parents × living-arrangement release. Added four family living-arrangement pages (aging in place vs moving in together, home modifications vs relocating, home care vs nursing home, and how supporting aging parents changes your living-arrangement decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into home-base selection, housing-fit testing, care-setting escalation, and sequencing before crisis.
 
 - **v0248** — Aging parents × legal readiness release. Added four family legal-readiness pages (lasting power of attorney for aging parents, advance care planning for aging parents, who should manage eldercare decisions in the family, and how supporting aging parents changes your legal-readiness decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into authority, spokesperson, and coordinator-readiness planning before crisis.
@@ -326,7 +328,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0249. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, and legal readiness, and living-arrangement sequencing.
+**Current state:** Launched in v0205 and deepened through v0249. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, and legal readiness, living-arrangement sequencing, and estate-readiness sequencing.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -348,6 +350,8 @@ Family is now an active cluster, not a future concept. New family pages should b
 
 **Current expansion rule**
 Family should now be treated as a full lifecycle cost cluster. New pages should preserve stage-specific roles rather than collapsing multiple education phases into one master article.
+
+**New in v0250 (aging parents × estate readiness):** make-a-will-for-aging-parents-singapore.html · cpf-nomination-for-aging-parents-singapore.html · estate-document-readiness-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html
 
 **New in v0249 (aging parents × living arrangement):** aging-in-place-vs-moving-in-with-aging-parents-singapore.html · home-modifications-vs-relocating-for-aging-parents-singapore.html · home-care-vs-nursing-home-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html
 

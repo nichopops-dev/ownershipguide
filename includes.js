@@ -921,6 +921,10 @@ decisionPathOverrides: {
         { url: "/home-modifications-vs-relocating-for-aging-parents-singapore.html", title: "Home Modifications vs Relocating for Aging Parents in Singapore (2026): Which Housing Fix Actually Solves the Real Problem?", subtopic: "bridge" },
         { url: "/home-care-vs-nursing-home-for-aging-parents-singapore.html", title: "Home Care vs Nursing Home for Aging Parents in Singapore (2026): Which Care Setting Actually Fits the Next Stage?", subtopic: "bridge" },
         { url: "/how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Living-Arrangement Decision Order in Singapore (2026): What Should Move Up the Queue Before Crisis Forces the Home Question?", subtopic: "planning" },
+        { url: "/make-a-will-for-aging-parents-singapore.html", title: "Make a Will for Aging Parents in Singapore (2026): Why Families Should Not Leave Distribution Logic to Crisis or Intestacy", subtopic: "planning" },
+        { url: "/cpf-nomination-for-aging-parents-singapore.html", title: "CPF Nomination for Aging Parents in Singapore (2026): Why Families Should Not Assume CPF Savings Follow the Same Route as the Rest of the Estate", subtopic: "planning" },
+        { url: "/estate-document-readiness-for-aging-parents-singapore.html", title: "Estate-Document Readiness for Aging Parents in Singapore (2026): The Simple Organising Work That Prevents Scrambling After Death", subtopic: "planning" },
+        { url: "/how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Estate-Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before Bereavement Turns Gaps Into Stress", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
@@ -1043,6 +1047,10 @@ decisionPathOverrides: {
         ,{ url: "/home-modifications-vs-relocating-for-aging-parents-singapore.html", title: "Home Modifications vs Relocating for Aging Parents in Singapore (2026): Which Housing Fix Actually Solves the Real Problem?", cluster: "family", subtopic: "bridge" }
         ,{ url: "/home-care-vs-nursing-home-for-aging-parents-singapore.html", title: "Home Care vs Nursing Home for Aging Parents in Singapore (2026): Which Care Setting Actually Fits the Next Stage?", cluster: "family", subtopic: "bridge" }
         ,{ url: "/how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Living-Arrangement Decision Order in Singapore (2026): What Should Move Up the Queue Before Crisis Forces the Home Question?", cluster: "family", subtopic: "planning" }
+        ,{ url: "/make-a-will-for-aging-parents-singapore.html", title: "Make a Will for Aging Parents in Singapore (2026): Why Families Should Not Leave Distribution Logic to Crisis or Intestacy", cluster: "family", subtopic: "planning" }
+        ,{ url: "/cpf-nomination-for-aging-parents-singapore.html", title: "CPF Nomination for Aging Parents in Singapore (2026): Why Families Should Not Assume CPF Savings Follow the Same Route as the Rest of the Estate", cluster: "family", subtopic: "planning" }
+        ,{ url: "/estate-document-readiness-for-aging-parents-singapore.html", title: "Estate-Document Readiness for Aging Parents in Singapore (2026): The Simple Organising Work That Prevents Scrambling After Death", cluster: "family", subtopic: "planning" }
+        ,{ url: "/how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Estate-Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before Bereavement Turns Gaps Into Stress", cluster: "family", subtopic: "planning" }
       ]
     }
  };
