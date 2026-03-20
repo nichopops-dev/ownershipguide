@@ -1040,28 +1040,68 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-cognitive-decline-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Cognitive-Decline Decision Order in Singapore (2026): What Should Move Up the Queue Once Memory and Judgment Start Shifting?",
+      "desc": "How supporting aging parents changes your cognitive-decline decision order in Singapore: sequence assessment, legal readiness, safety, supervision, and care setting once cognition starts reshaping risk.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/memory-care-vs-general-eldercare-setting-for-aging-parents-singapore.html",
+      "title": "Memory Care vs General Eldercare Setting for Aging Parents in Singapore (2026): When Does Cognitive Decline Need a More Dementia-Specific Environment?",
+      "desc": "Memory care vs general eldercare setting for aging parents in Singapore: decide when dementia-related supervision, behaviour, and cueing needs require a more specialised environment.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/supervision-at-home-vs-independent-living-for-aging-parents-with-cognitive-decline-singapore.html",
+      "title": "Supervision at Home vs Independent Living for Aging Parents With Cognitive Decline in Singapore (2026): When Does the Independence Label Stop Matching Reality?",
+      "desc": "Supervision at home vs independent living for aging parents with cognitive decline in Singapore: decide when risk, recoverability, and hidden supervision mean support should move up.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/early-memory-decline-vs-waiting-for-clearer-dementia-signs-singapore.html",
+      "title": "Early Memory Decline vs Waiting for Clearer Dementia Signs in Singapore (2026): When Should Families Move Before Delay Removes Better Options?",
+      "desc": "Early memory decline vs waiting for clearer dementia signs in Singapore: decide when repeated warning signals justify earlier assessment, safety review, and legal readiness.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-post-hospital-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Post-Hospital Decision Order in Singapore (2026): What Should Move Up the Queue Once an Acute Episode Ends?",
       "desc": "How supporting aging parents changes your post-hospital decision order in Singapore: sequence discharge, rehab, caregive",
-      "date": "2026-03-21"
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/respite-care-vs-running-on-family-burnout-when-supporting-aging-parents-singapore.html",
       "title": "Respite Care vs Running on Family Burnout When Supporting Aging Parents in Singapore (2026): Which Choice Actually Protects the Care System?",
       "desc": "Respite care vs running on family burnout when supporting aging parents in Singapore: decide when planned relief is stro",
-      "date": "2026-03-21"
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/rehab-vs-home-recovery-support-for-aging-parents-singapore.html",
       "title": "Rehab vs Home Recovery Support for Aging Parents in Singapore (2026): Which Next Step Actually Fits the Parent After Hospital?",
       "desc": "Rehab vs home recovery support for aging parents in Singapore: decide whether the next stage needs structured rehabilita",
-      "date": "2026-03-21"
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/hospital-discharge-planning-for-aging-parents-singapore.html",
       "title": "Hospital Discharge Planning for Aging Parents in Singapore (2026): What Families Should Set Up Before the Parent Comes Home",
       "desc": "Hospital discharge planning for aging parents in Singapore: decide whether the home, caregiver, follow-up, and support s",
-      "date": "2026-03-21"
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html",
@@ -1074,34 +1114,6 @@
       "url": "/estate-document-readiness-for-aging-parents-singapore.html",
       "title": "Estate-Document Readiness for Aging Parents in Singapore (2026)",
       "desc": "Estate-document readiness for aging parents in Singapore: a practical framework for deciding which reco",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/cpf-nomination-for-aging-parents-singapore.html",
-      "title": "CPF Nomination for Aging Parents in Singapore (2026)",
-      "desc": "CPF nomination for aging parents in Singapore: a practical framework for understanding why CPF savings ",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/make-a-will-for-aging-parents-singapore.html",
-      "title": "Make a Will for Aging Parents in Singapore (2026)",
-      "desc": "Make a will for aging parents in Singapore: a practical framework for deciding when estate instructions",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Living-Arrangement Decision Order in Singapore (2026)",
-      "desc": "How supporting aging parents changes your living-arrangement decision order in Singapore: a practical f",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/home-care-vs-nursing-home-for-aging-parents-singapore.html",
-      "title": "Home Care vs Nursing Home for Aging Parents in Singapore (2026)",
-      "desc": "Home care vs nursing home for aging parents in Singapore: a practical framework for deciding when commu",
       "cluster": "family",
       "clusterLabel": "Family"
     }

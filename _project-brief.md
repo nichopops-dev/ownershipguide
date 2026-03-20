@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0251
+> Last updated: March 2026 · Based on repo v0252
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0251
+**Current version:** v0252
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, and post-hospital transition. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0252** — Aging parents × cognitive decline / dementia release. Added four family cognitive-decline pages (early memory decline vs waiting for clearer dementia signs, supervision at home vs independent living with cognitive decline, memory care vs general eldercare setting, and how supporting aging parents changes your cognitive-decline decision order), strengthened contextual links across the aging-parents branch, fixed the homepage `featured.json` cluster-label bug for recently updated pages, and corrected the v0251 respite-care word-count shortfall.
+
 - **v0251** — Aging parents × post-hospital transition release. Added four family post-hospital pages (hospital discharge planning, rehab vs home recovery support, respite care vs running on family burnout, and how supporting aging parents changes your post-hospital decision order), strengthened contextual links across the aging-parents branch, and expanded the family cluster into discharge readiness, recovery sequencing, caregiver durability, and acute-to-stable transition design.
 
 - **v0250** — Aging parents × estate-readiness release. Added four family estate-readiness pages (make a will for aging parents, CPF nomination for aging parents, estate-document readiness for aging parents, and how supporting aging parents changes your estate-readiness decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into after-death instruction clarity, CPF-specific distribution readiness, survivor retrieval discipline, and sequencing before bereavement forces the issue.
