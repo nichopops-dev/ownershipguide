@@ -925,6 +925,10 @@ decisionPathOverrides: {
         { url: "/cpf-nomination-for-aging-parents-singapore.html", title: "CPF Nomination for Aging Parents in Singapore (2026): Why Families Should Not Assume CPF Savings Follow the Same Route as the Rest of the Estate", subtopic: "planning" },
         { url: "/estate-document-readiness-for-aging-parents-singapore.html", title: "Estate-Document Readiness for Aging Parents in Singapore (2026): The Simple Organising Work That Prevents Scrambling After Death", subtopic: "planning" },
         { url: "/how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Estate-Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before Bereavement Turns Gaps Into Stress", subtopic: "planning" },
+        { url: "/hospital-discharge-planning-for-aging-parents-singapore.html", title: "Hospital Discharge Planning for Aging Parents in Singapore (2026): What Families Should Set Up Before the Parent Comes Home", subtopic: "planning" },
+        { url: "/rehab-vs-home-recovery-support-for-aging-parents-singapore.html", title: "Rehab vs Home Recovery Support for Aging Parents in Singapore (2026): Which Next Step Actually Fits the Parent After Hospital?", subtopic: "comparison" },
+        { url: "/respite-care-vs-running-on-family-burnout-when-supporting-aging-parents-singapore.html", title: "Respite Care vs Running on Family Burnout When Supporting Aging Parents in Singapore (2026): Which Choice Actually Protects the Care System?", subtopic: "bridge" },
+        { url: "/how-supporting-aging-parents-changes-your-post-hospital-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Post-Hospital Decision Order in Singapore (2026): What Should Move Up the Queue Once an Acute Episode Ends?", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },

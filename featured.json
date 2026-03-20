@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-20",
+  "generated": "2026-03-21",
   "cluster_pages": {
     "transport": [
       {
@@ -1040,6 +1040,30 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-post-hospital-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Post-Hospital Decision Order in Singapore (2026): What Should Move Up the Queue Once an Acute Episode Ends?",
+      "desc": "How supporting aging parents changes your post-hospital decision order in Singapore: sequence discharge, rehab, caregive",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/respite-care-vs-running-on-family-burnout-when-supporting-aging-parents-singapore.html",
+      "title": "Respite Care vs Running on Family Burnout When Supporting Aging Parents in Singapore (2026): Which Choice Actually Protects the Care System?",
+      "desc": "Respite care vs running on family burnout when supporting aging parents in Singapore: decide when planned relief is stro",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/rehab-vs-home-recovery-support-for-aging-parents-singapore.html",
+      "title": "Rehab vs Home Recovery Support for Aging Parents in Singapore (2026): Which Next Step Actually Fits the Parent After Hospital?",
+      "desc": "Rehab vs home recovery support for aging parents in Singapore: decide whether the next stage needs structured rehabilita",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/hospital-discharge-planning-for-aging-parents-singapore.html",
+      "title": "Hospital Discharge Planning for Aging Parents in Singapore (2026): What Families Should Set Up Before the Parent Comes Home",
+      "desc": "Hospital discharge planning for aging parents in Singapore: decide whether the home, caregiver, follow-up, and support s",
+      "date": "2026-03-21"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-estate-readiness-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Estate-Readiness Decision Order in Singapore (2026)",
       "desc": "How supporting aging parents changes your estate-readiness decision order in Singapore: a practical fra",
@@ -1078,34 +1102,6 @@
       "url": "/home-care-vs-nursing-home-for-aging-parents-singapore.html",
       "title": "Home Care vs Nursing Home for Aging Parents in Singapore (2026)",
       "desc": "Home care vs nursing home for aging parents in Singapore: a practical framework for deciding when commu",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/home-modifications-vs-relocating-for-aging-parents-singapore.html",
-      "title": "Home Modifications vs Relocating for Aging Parents in Singapore (2026)",
-      "desc": "Home modifications vs relocating for aging parents in Singapore: a practical framework for deciding whe",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/aging-in-place-vs-moving-in-with-aging-parents-singapore.html",
-      "title": "Aging in Place vs Moving In Together With Aging Parents in Singapore (2026)",
-      "desc": "Aging in place vs moving in together with aging parents in Singapore: a practical framework for choosin",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Legal Readiness Decision Order in Singapore (2026)",
-      "desc": "How supporting aging parents changes your legal-readiness decision order in Singapore: a practical fram",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/who-should-manage-eldercare-decisions-in-the-family-singapore.html",
-      "title": "Who Should Manage Eldercare Decisions in the Family in Singapore (2026)",
-      "desc": "Who should manage eldercare decisions in the family in Singapore: a practical framework for choosing t",
       "cluster": "family",
       "clusterLabel": "Family"
     }
