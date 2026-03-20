@@ -93,11 +93,20 @@ new_list = [
     for p in all_sorted[:10]
 ]
 
+# Preserve pinned if it exists in current featured.json
+existing_pinned = {}
+if os.path.exists(OUTPUT):
+    try:
+        existing = json.load(open(OUTPUT))
+        existing_pinned = existing.get('pinned', {})
+    except: pass
+
 output = {
     'generated': datetime.now().strftime('%Y-%m-%d'),
     'cluster_pages': cluster_pages,
     'new': new_list,
     'popular': POPULAR,
+    'pinned': existing_pinned,
 }
 
 with open(OUTPUT, 'w') as f:

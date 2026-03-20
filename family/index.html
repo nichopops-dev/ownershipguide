@@ -55,10 +55,14 @@
     .then(function(data){
       if(!data||!data.cluster_pages||!data.cluster_pages['family']) return;
       // Pages already sorted by date descending in featured.json
-      var items=data.cluster_pages['family'].slice(0,MAX);
+      var pinned=(data.pinned&&data.pinned['family'])||[];
+      var recent=data.cluster_pages['family'].filter(function(p){
+        return !pinned.some(function(pin){return pin.url===p.url;});
+      }).slice(0,Math.max(0,MAX-pinned.length));
+      var items=pinned.concat(recent);
       if(!items.length) return;
       var html='<div class="box">';
-      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Recently updated</p>';
+      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Where to start + recent</p>';
       html+='<ul style="margin:0;padding-left:0;list-style:none">';
       items.forEach(function(p){
         html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
