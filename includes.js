@@ -1296,6 +1296,26 @@ decisionPathOverrides: {
     return c.charAt(0).toUpperCase() + c.slice(1);
   }
 
+
+  function initNavDropdownHover() {
+    // Belt-and-suspenders hover support for the Topics dropdown.
+    // CSS already handles :hover but adding JS mouseenter/mouseleave ensures
+    // the menu stays open smoothly across the gap and works consistently.
+    const navDrop = document.querySelector('.nav-dropdown');
+    if (!navDrop) return;
+    let closeTimer = null;
+
+    navDrop.addEventListener('mouseenter', function() {
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      navDrop.classList.add('hover-open');
+    });
+    navDrop.addEventListener('mouseleave', function() {
+      // Small delay so cursor can move to a menu item without it closing
+      closeTimer = setTimeout(function() {
+        navDrop.classList.remove('hover-open');
+      }, 80);
+    });
+  }
   function initHeaderSearch() {
     const input = document.getElementById("og-site-search");
     const resultsEl = document.getElementById("og-site-search-results");
@@ -2388,6 +2408,7 @@ const box = document.createElement("section");
     await inject("site-footer", ["/footer.html", "footer.html", "/ownershipguide-main/footer.html"]);
     setActiveNav();
     initHeaderSearch();
+    initNavDropdownHover();
     injectBackToHomeLink();
     injectEmailCapture();
     injectBackToClusterLink();

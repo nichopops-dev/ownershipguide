@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0246
+> Last updated: March 2026 · Based on repo v0247
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0246
+**Current version:** v0247
 
 ### Key files
 | File | Purpose |
@@ -599,3 +599,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0234.1 | Hotfix: financing hub dynamic section moved inside <main> (was rendering after </html>, causing display below footer); sweep clean |
 | v0235 | UX + SEO pass: Article schema added to 29 high-traffic pages (51 total); search: pillar boost + no-results suggestions; financing hub dynamic section fixed (before References, inside main); comparisons hub: Family/Protection/Investing sections added (22 new comparison links); start-here: Protection + Investing cards updated, "If your situation changed recently" life-stage section added |
 | v0235 | UX + SEO bundle: financing hub dynamic section placement fixed; Article schema added to 29 high-traffic pages (51 total); search pillar boost + no-results updated to all 5 clusters; comparisons hub: 9 missing pages added (4 family, 5 motorcycle); start-here: life-stage cross-cluster entry section added; sitemap + featured.json regenerated |
+| v0247 | Sweep + UX fixes: 2 invalid schema fixed; 1 orphan fixed (4 links); comparisons hub +2 aging-parent entries; 10 inbound links added to 6 low-traffic pages; Topics nav hover fixed (CSS gap removed, JS hover-open class added — was requiring click to keep dropdown open); sitemap regenerated (401 URLs); featured.json regenerated (171 pages, 5 clusters) |
