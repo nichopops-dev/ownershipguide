@@ -913,6 +913,10 @@ decisionPathOverrides: {
         { url: "/give-cash-vs-take-on-caregiving-time-for-aging-parents-singapore.html", title: "Give Cash vs Take On Caregiving Time for Aging Parents in Singapore (2026): Which Form of Support Actually Reduces More Family Strain?", subtopic: "bridge" },
         { url: "/help-siblings-now-vs-preserve-your-own-cash-buffer-when-supporting-parents-singapore.html", title: "Help Siblings Now vs Preserve Your Own Cash Buffer When Supporting Parents in Singapore (2026): When Does Family Bridging Become Household Fragility?", subtopic: "bridge" },
         { url: "/how-supporting-aging-parents-changes-your-family-burden-sharing-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Family Burden-Sharing Decision Order in Singapore (2026): What Should Siblings Decide First Once Care Obligations Become Real?", subtopic: "planning" },
+        { url: "/lasting-power-of-attorney-for-aging-parents-singapore.html", title: "Lasting Power of Attorney for Aging Parents in Singapore (2026): Why Care Plans Break Without Legal Authority", subtopic: "planning" },
+        { url: "/advance-care-planning-for-aging-parents-singapore.html", title: "Advance Care Planning for Aging Parents in Singapore (2026): Why Medical Clarity Matters Before Crisis", subtopic: "planning" },
+        { url: "/who-should-manage-eldercare-decisions-in-the-family-singapore.html", title: "Who Should Manage Eldercare Decisions in the Family in Singapore (2026): How to Choose the Real Coordinator Before Stress Forces It", subtopic: "decision" },
+        { url: "/how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Legal Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before a Crisis Forces It?", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
@@ -1027,6 +1031,10 @@ decisionPathOverrides: {
         ,{ url: "/give-cash-vs-take-on-caregiving-time-for-aging-parents-singapore.html", title: "Give Cash vs Take On Caregiving Time for Aging Parents in Singapore (2026): Which Form of Support Actually Reduces More Family Strain?", cluster: "family", subtopic: "bridge" }
         ,{ url: "/help-siblings-now-vs-preserve-your-own-cash-buffer-when-supporting-parents-singapore.html", title: "Help Siblings Now vs Preserve Your Own Cash Buffer When Supporting Parents in Singapore (2026): When Does Family Bridging Become Household Fragility?", cluster: "family", subtopic: "bridge" }
         ,{ url: "/how-supporting-aging-parents-changes-your-family-burden-sharing-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Family Burden-Sharing Decision Order in Singapore (2026): What Should Siblings Decide First Once Care Obligations Become Real?", cluster: "family", subtopic: "planning" }
+        ,{ url: "/lasting-power-of-attorney-for-aging-parents-singapore.html", title: "Lasting Power of Attorney for Aging Parents in Singapore (2026): Why Care Plans Break Without Legal Authority", cluster: "family", subtopic: "planning" }
+        ,{ url: "/advance-care-planning-for-aging-parents-singapore.html", title: "Advance Care Planning for Aging Parents in Singapore (2026): Why Medical Clarity Matters Before Crisis", cluster: "family", subtopic: "planning" }
+        ,{ url: "/who-should-manage-eldercare-decisions-in-the-family-singapore.html", title: "Who Should Manage Eldercare Decisions in the Family in Singapore (2026): How to Choose the Real Coordinator Before Stress Forces It", cluster: "family", subtopic: "decision" }
+        ,{ url: "/how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Legal Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before a Crisis Forces It?", cluster: "family", subtopic: "planning" }
       ]
     }
  };

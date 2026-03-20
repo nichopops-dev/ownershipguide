@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0247
+> Last updated: March 2026 · Based on repo v0248
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0247
+**Current version:** v0248
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, and caregiving delivery. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0248** — Aging parents × legal readiness release. Added four family legal-readiness pages (lasting power of attorney for aging parents, advance care planning for aging parents, who should manage eldercare decisions in the family, and how supporting aging parents changes your legal-readiness decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into authority, spokesperson, and coordinator-readiness planning before crisis.
+
 - **v0246** — Aging parents × family coordination / burden-sharing release. Added four sibling-coordination and burden-sharing pages (split support equally vs by income, give cash vs take on caregiving time, help siblings now vs preserve your own cash buffer, and how supporting aging parents changes your family burden-sharing decision order), strengthened contextual links across Family and Investing, and extended the aging-parents branch into sibling contribution design, reserve-protection boundaries, and family coordination sequence.
 
 - **v0245** — Aging parents × work/career trade-off release. Added four elder-support work and income sequencing pages (reduce work hours vs pay for caregiving support, quit your job vs outsource more care, keep a flexible job vs higher pay, and how supporting aging parents changes your work and income decision order), strengthened contextual links across Family and Investing, and extended the aging-parents branch into career flexibility, earnings durability, and work-capacity trade-offs.
@@ -322,7 +324,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0245. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents bridge layer covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, and work/career trade-offs.
+**Current state:** Launched in v0205 and deepened through v0248. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, and legal readiness.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -344,6 +346,8 @@ Family is now an active cluster, not a future concept. New family pages should b
 
 **Current expansion rule**
 Family should now be treated as a full lifecycle cost cluster. New pages should preserve stage-specific roles rather than collapsing multiple education phases into one master article.
+
+**New in v0248 (aging parents × legal readiness):** lasting-power-of-attorney-for-aging-parents-singapore.html · advance-care-planning-for-aging-parents-singapore.html · who-should-manage-eldercare-decisions-in-the-family-singapore.html · how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html
 
 ---
 
