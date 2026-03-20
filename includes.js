@@ -917,6 +917,10 @@ decisionPathOverrides: {
         { url: "/advance-care-planning-for-aging-parents-singapore.html", title: "Advance Care Planning for Aging Parents in Singapore (2026): Why Medical Clarity Matters Before Crisis", subtopic: "planning" },
         { url: "/who-should-manage-eldercare-decisions-in-the-family-singapore.html", title: "Who Should Manage Eldercare Decisions in the Family in Singapore (2026): How to Choose the Real Coordinator Before Stress Forces It", subtopic: "decision" },
         { url: "/how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Legal Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before a Crisis Forces It?", subtopic: "planning" },
+        { url: "/aging-in-place-vs-moving-in-with-aging-parents-singapore.html", title: "Aging in Place vs Moving In Together With Aging Parents in Singapore (2026): Which Living Arrangement Actually Reduces More Friction?", subtopic: "bridge" },
+        { url: "/home-modifications-vs-relocating-for-aging-parents-singapore.html", title: "Home Modifications vs Relocating for Aging Parents in Singapore (2026): Which Housing Fix Actually Solves the Real Problem?", subtopic: "bridge" },
+        { url: "/home-care-vs-nursing-home-for-aging-parents-singapore.html", title: "Home Care vs Nursing Home for Aging Parents in Singapore (2026): Which Care Setting Actually Fits the Next Stage?", subtopic: "bridge" },
+        { url: "/how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Living-Arrangement Decision Order in Singapore (2026): What Should Move Up the Queue Before Crisis Forces the Home Question?", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
@@ -1035,6 +1039,10 @@ decisionPathOverrides: {
         ,{ url: "/advance-care-planning-for-aging-parents-singapore.html", title: "Advance Care Planning for Aging Parents in Singapore (2026): Why Medical Clarity Matters Before Crisis", cluster: "family", subtopic: "planning" }
         ,{ url: "/who-should-manage-eldercare-decisions-in-the-family-singapore.html", title: "Who Should Manage Eldercare Decisions in the Family in Singapore (2026): How to Choose the Real Coordinator Before Stress Forces It", cluster: "family", subtopic: "decision" }
         ,{ url: "/how-supporting-aging-parents-changes-your-legal-readiness-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Legal Readiness Decision Order in Singapore (2026): What Should Move Up the Queue Before a Crisis Forces It?", cluster: "family", subtopic: "planning" }
+        ,{ url: "/aging-in-place-vs-moving-in-with-aging-parents-singapore.html", title: "Aging in Place vs Moving In Together With Aging Parents in Singapore (2026): Which Living Arrangement Actually Reduces More Friction?", cluster: "family", subtopic: "bridge" }
+        ,{ url: "/home-modifications-vs-relocating-for-aging-parents-singapore.html", title: "Home Modifications vs Relocating for Aging Parents in Singapore (2026): Which Housing Fix Actually Solves the Real Problem?", cluster: "family", subtopic: "bridge" }
+        ,{ url: "/home-care-vs-nursing-home-for-aging-parents-singapore.html", title: "Home Care vs Nursing Home for Aging Parents in Singapore (2026): Which Care Setting Actually Fits the Next Stage?", cluster: "family", subtopic: "bridge" }
+        ,{ url: "/how-supporting-aging-parents-changes-your-living-arrangement-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Living-Arrangement Decision Order in Singapore (2026): What Should Move Up the Queue Before Crisis Forces the Home Question?", cluster: "family", subtopic: "planning" }
       ]
     }
  };
