@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0255
+> Last updated: March 2026 · Based on repo v0256
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0255
+**Current version:** v0256
 
 ### Key files
 | File | Purpose |
@@ -209,6 +209,8 @@ These were established over a long build history and must be followed:
 **Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, and end-of-life / palliative transition. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0256** — Aging parents × nutrition / eating-support release. Added four family nutrition-support pages (early appetite decline vs waiting for visible weight loss, meal prep at home vs meal delivery, regular meals vs texture-modified meals for swallowing difficulty, and how supporting aging parents changes your nutrition-support decision order), strengthened contextual links across the aging-parents branch, and updated the mobility transport pages where they were touched during the release.
+
 - **v0255** — Aging parents × mobility decline / accessibility release. Added four family mobility pages (early fall risk vs waiting for a major fall, walker-friendly home vs wheelchair-ready home, medical escort and transport vs ad-hoc family driving, and how supporting aging parents changes your mobility-decline decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into fall-risk response, accessibility standard-setting, clinic-trip logistics, and mobility-stage sequencing before crisis.
 
 - **v0254** — Aging parents × end-of-life / palliative-transition release. Added four family end-of-life pages (palliative care vs continuing aggressive treatment, home hospice vs institutional end-of-life care, practical end-of-life planning, and how supporting aging parents changes your end-of-life decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into comfort-focused care sequencing, setting fit, caregiver durability, and practical final-stage readiness.
@@ -338,7 +340,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0255. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, legal readiness, living-arrangement sequencing, estate-readiness sequencing, post-hospital transition sequencing, cognitive-decline sequencing, financial-safety sequencing, end-of-life / palliative-transition sequencing, and mobility-decline / accessibility sequencing.
+**Current state:** Launched in v0205 and deepened through v0256. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, legal readiness, living-arrangement sequencing, estate-readiness sequencing, post-hospital transition sequencing, cognitive-decline sequencing, financial-safety sequencing, end-of-life / palliative-transition sequencing, and mobility-decline / accessibility sequencing, and nutrition / eating-support sequencing.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -360,6 +362,10 @@ Family is now an active cluster, not a future concept. New family pages should b
 
 **Current expansion rule**
 Family should now be treated as a full lifecycle cost cluster. New pages should preserve stage-specific roles rather than collapsing multiple education phases into one master article.
+
+**New in v0256 (aging parents × nutrition / eating support):** early-appetite-decline-vs-waiting-for-visible-weight-loss-with-aging-parents-singapore.html · meal-prep-at-home-vs-meal-delivery-for-aging-parents-singapore.html · regular-meals-vs-texture-modified-meals-for-aging-parents-with-swallowing-difficulty-singapore.html · how-supporting-aging-parents-changes-your-nutrition-support-decision-order-singapore.html
+
+**New in v0255 (aging parents × mobility decline / accessibility):** early-fall-risk-vs-waiting-for-a-major-fall-with-aging-parents-singapore.html · walker-friendly-home-vs-wheelchair-ready-home-for-aging-parents-singapore.html · medical-escort-and-transport-vs-ad-hoc-family-driving-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-mobility-decline-decision-order-singapore.html
 
 **New in v0254 (aging parents × end-of-life / palliative transition):** palliative-care-vs-continuing-aggressive-treatment-for-aging-parents-singapore.html · home-hospice-vs-institutional-end-of-life-care-for-aging-parents-singapore.html · practical-end-of-life-planning-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-end-of-life-decision-order-singapore.html
 

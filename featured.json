@@ -1040,6 +1040,38 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-nutrition-support-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Nutrition-Support Decision Order in Singapore (2026): What Should Move Up the Queue Once Meal Reliability, Swallowing Fit, and Energy Start Breaking Down?",
+      "desc": "How supporting aging parents changes your nutrition-support decision order in Singapore: sequence appetite review, meal access, texture fit, supervision, and escalation before under-eating becomes a larger care failure.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/regular-meals-vs-texture-modified-meals-for-aging-parents-with-swallowing-difficulty-singapore.html",
+      "title": "Regular Meals vs Texture-Modified Meals for Aging Parents With Swallowing Difficulty in Singapore (2026): When Does Normal Food Stop Being the Safer or More Realistic Choice?",
+      "desc": "Regular meals vs texture-modified meals for aging parents with swallowing difficulty in Singapore: decide when preserving “normal” food is increasing risk, effort, or under-eating.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/meal-prep-at-home-vs-meal-delivery-for-aging-parents-singapore.html",
+      "title": "Meal Prep at Home vs Meal Delivery for Aging Parents in Singapore (2026): Which Support Model Actually Keeps Intake Stable When Cooking Energy, Time, or Supervision Is Breaking Down?",
+      "desc": "Meal prep at home vs meal delivery for aging parents in Singapore: decide which nutrition-support model better protects intake when shopping, cooking, and meal timing are no longer reliable.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/early-appetite-decline-vs-waiting-for-visible-weight-loss-with-aging-parents-singapore.html",
+      "title": "Early Appetite Decline vs Waiting for Visible Weight Loss With Aging Parents in Singapore (2026): When Should Families Move Before “Eating Less” Starts Breaking Energy, Medication Tolerance, and Recovery?",
+      "desc": "Early appetite decline vs waiting for visible weight loss with aging parents in Singapore: decide when reduced intake should move meal structure, review, and caregiver intervention higher in the family queue.",
+      "date": "2026-03-21",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-mobility-decline-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Mobility-Decline Decision Order in Singapore (2026): What Should Move Up the Queue Once Stability, Transfers, and Accessibility Start Breaking the Old Setup?",
       "desc": "How supporting aging parents changes your mobility-decline decision order in Singapore: sequence fall-risk response, home fit, transport support, caregiver durability, and housing realism before a major mobility event compresses every decision.",
@@ -1084,38 +1116,6 @@
       "title": "Practical End-of-Life Planning for Aging Parents in Singapore (2026): What Families Should Organise Before the Final Stage Becomes a Rushed Operations Problem",
       "desc": "Practical end-of-life planning for aging parents in Singapore: organise care goals, contacts, documents, likely care setting, and family roles before the final stage becomes rushed.",
       "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/home-hospice-vs-institutional-end-of-life-care-for-aging-parents-singapore.html",
-      "title": "Home Hospice vs Institutional End-of-Life Care for Aging Parents in Singapore (2026): Which Setting Actually Protects Comfort, Dignity, and Family Stability?",
-      "desc": "Home hospice vs institutional end-of-life care for aging parents in Singapore: decide which setting better protects comfort, symptom control, and family stability.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/palliative-care-vs-continuing-aggressive-treatment-for-aging-parents-singapore.html",
-      "title": "Palliative Care vs Continuing Aggressive Treatment for Aging Parents in Singapore (2026): When Does the Goal Shift From Extending Every Possible Day to Protecting Comfort and Decision Quality?",
-      "desc": "Palliative care vs continuing aggressive treatment for aging parents in Singapore: decide when the real goal has shifted from more intervention to comfort and clearer care alignment.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-financial-safety-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Financial-Safety Decision Order in Singapore (2026): What Should Move Up the Queue Once Scam Risk and Money Errors Start Appearing?",
-      "desc": "How supporting aging parents changes your financial-safety decision order in Singapore: sequence detection, banking support, coordinator clarity, and legal readiness once money risk starts showing.",
-      "date": "2026-03-20",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/sharing-banking-passwords-or-otps-vs-safer-payment-support-for-aging-parents-singapore.html",
-      "title": "Sharing Banking Passwords or OTPs vs Safer Payment Support for Aging Parents in Singapore (2026): Which Convenience Shortcut Creates Bigger Risk?",
-      "desc": "Sharing banking passwords or OTPs vs safer payment support for aging parents in Singapore: decide when convenience shortcuts create more scam and accountability risk than they solve.",
-      "date": "2026-03-20",
       "cluster": "family",
       "clusterLabel": "Family"
     }
