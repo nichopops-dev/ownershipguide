@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0253
+> Last updated: March 2026 · Based on repo v0254
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0253
+**Current version:** v0254
 
 ### Key files
 | File | Purpose |
@@ -206,9 +206,11 @@ These were established over a long build history and must be followed:
 - ✅ Email capture live on all calculator pages (writes to Google Sheet, no 3rd party)
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
-**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, and financial safety. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, and end-of-life / palliative transition. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0254** — Aging parents × end-of-life / palliative-transition release. Added four family end-of-life pages (palliative care vs continuing aggressive treatment, home hospice vs institutional end-of-life care, practical end-of-life planning, and how supporting aging parents changes your end-of-life decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into comfort-focused care sequencing, setting fit, caregiver durability, and practical final-stage readiness.
+
 - **v0253** — Aging parents × financial safety / scam-risk release. Added four family financial-safety pages (early scam warning signs vs waiting for a bigger financial loss, help with banking vs keep full financial independence, sharing banking passwords or OTPs vs safer payment support, and how supporting aging parents changes your financial-safety decision order), strengthened contextual links across the aging-parents branch, and fixed the missing comparison-hub entry for rehab vs home recovery support.
 
 - **v0252** — Aging parents × cognitive decline / dementia release. Added four family cognitive-decline pages (early memory decline vs waiting for clearer dementia signs, supervision at home vs independent living with cognitive decline, memory care vs general eldercare setting, and how supporting aging parents changes your cognitive-decline decision order), strengthened contextual links across the aging-parents branch, fixed the homepage `featured.json` cluster-label bug for recently updated pages, and corrected the v0251 respite-care word-count shortfall.
@@ -334,7 +336,7 @@ should-you-downsize-your-home-singapore.html · release-cash-by-moving-to-smalle
 
 ### Family/Children (~23 pages) 🟡 Growing and now structurally integrated
 
-**Current state:** Launched in v0205 and deepened through v0251. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, and legal readiness, living-arrangement sequencing, estate-readiness sequencing, and post-hospital transition sequencing.
+**Current state:** Launched in v0205 and deepened through v0254. Cluster now has a live hub, native header/footer/start-here integration, Family search/related-graph support in `includes.js`, cross-links into selected property and transport pages, a broader education-cost ladder extending from preschool to university, a family–property bridge layer covering school-driven moves, location trade-offs, housing stretch versus education capacity, and mortgage reduction versus university saving, a family–liquidity bridge layer covering pre-baby reserve sequencing, second-child buffer redesign, school-fee sinking-fund separation, university saving versus parental retirement strength, and an aging-parents branch covering elder-support protection sequencing, reserve redesign, housing order, transport order, investing/retirement priority, caregiving delivery, medical-financing sequence, work/career trade-offs, sibling coordination, legal readiness, living-arrangement sequencing, estate-readiness sequencing, post-hospital transition sequencing, cognitive-decline sequencing, financial-safety sequencing, and end-of-life / palliative-transition sequencing.
 
 **Early-years / arrival / care branch**
 cost-of-having-a-baby-singapore.html · infantcare-vs-childcare-cost-singapore.html · maid-vs-infantcare-cost-singapore.html · stay-at-home-parent-vs-infantcare-cost-singapore.html · how-much-does-preschool-cost-singapore.html
@@ -356,6 +358,12 @@ Family is now an active cluster, not a future concept. New family pages should b
 
 **Current expansion rule**
 Family should now be treated as a full lifecycle cost cluster. New pages should preserve stage-specific roles rather than collapsing multiple education phases into one master article.
+
+**New in v0254 (aging parents × end-of-life / palliative transition):** palliative-care-vs-continuing-aggressive-treatment-for-aging-parents-singapore.html · home-hospice-vs-institutional-end-of-life-care-for-aging-parents-singapore.html · practical-end-of-life-planning-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-end-of-life-decision-order-singapore.html
+
+**New in v0253 (aging parents × financial safety):** early-scam-warning-signs-vs-waiting-for-a-bigger-financial-loss-with-aging-parents-singapore.html · help-with-banking-vs-keep-full-financial-independence-for-aging-parents-singapore.html · sharing-banking-passwords-or-otps-vs-safer-payment-support-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-financial-safety-decision-order-singapore.html
+
+**New in v0252 (aging parents × cognitive decline):** early-memory-decline-vs-waiting-for-clearer-dementia-signs-singapore.html · supervision-at-home-vs-independent-living-for-aging-parents-with-cognitive-decline-singapore.html · memory-care-vs-general-eldercare-setting-for-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-cognitive-decline-decision-order-singapore.html
 
 **New in v0251 (aging parents × post-hospital transition):** hospital-discharge-planning-for-aging-parents-singapore.html · rehab-vs-home-recovery-support-for-aging-parents-singapore.html · respite-care-vs-running-on-family-burnout-when-supporting-aging-parents-singapore.html · how-supporting-aging-parents-changes-your-post-hospital-decision-order-singapore.html
 
