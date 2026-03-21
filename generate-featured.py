@@ -94,11 +94,58 @@ new_list = [
 ]
 
 # Preserve pinned if it exists in current featured.json
-existing_pinned = {}
+# pinned must be a dict keyed by cluster - guard against ChatGPT corrupting it to a list
+PINNED_DEFAULT = {
+    'transport': [
+        {'url': '/car-ownership-cost.html', 'title': 'Cost of Owning a Car in Singapore',
+         'desc': 'The 5-year cost model: depreciation, COE, insurance, running costs, and financing.'},
+        {'url': '/car-vs-ride-hailing-cost.html', 'title': 'Car vs Ride-Hailing in Singapore',
+         'desc': 'When ownership beats ride-hailing and when it does not.'},
+        {'url': '/motorcycle-ownership-cost-singapore.html', 'title': 'Motorcycle Ownership Cost in Singapore',
+         'desc': 'Full cost model for motorcycle ownership including COE, insurance, and maintenance.'},
+    ],
+    'property': [
+        {'url': '/property-ownership-cost-singapore.html', 'title': 'Property Ownership Cost in Singapore',
+         'desc': 'The 5-year total exposure model: loan, duties, maintenance, and exit friction.'},
+        {'url': '/rent-vs-buy-property-singapore.html', 'title': 'Rent vs Buy Property in Singapore',
+         'desc': 'Framework for deciding when ownership beats renting.'},
+    ],
+    'family': [
+        {'url': '/how-much-does-it-cost-to-raise-a-child-singapore.html',
+         'title': 'How Much Does It Cost to Raise a Child in Singapore?',
+         'desc': 'Long-horizon planning framework from birth through university.'},
+        {'url': '/cost-of-having-a-baby-singapore.html', 'title': 'Cost of Having a Baby in Singapore',
+         'desc': 'Pregnancy, delivery, and first-year cost framework.'},
+        {'url': '/how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html',
+         'title': 'How Supporting Aging Parents Changes Your Cash Buffer Plan',
+         'desc': 'Reserve design when eldercare obligations change household fragility.'},
+    ],
+    'protection': [
+        {'url': '/how-much-life-insurance-do-you-need-singapore.html',
+         'title': 'How Much Life Insurance Do You Need?',
+         'desc': 'A protection-gap framework for real household obligations.'},
+        {'url': '/how-much-critical-illness-insurance-do-you-need-singapore.html',
+         'title': 'How Much Critical Illness Cover Do You Need?',
+         'desc': 'Sizing CI insurance based on your household obligations.'},
+    ],
+    'investing': [
+        {'url': '/how-much-emergency-fund-do-you-need-singapore.html',
+         'title': 'How Much Emergency Fund Do You Need?',
+         'desc': 'A liquidity buffer framework for real household fragility.'},
+        {'url': '/when-to-invest-vs-build-your-emergency-fund-first-singapore.html',
+         'title': 'When to Invest vs Build Your Emergency Fund First',
+         'desc': 'The sequencing decision between investing and liquidity.'},
+    ],
+}
+existing_pinned = PINNED_DEFAULT
 if os.path.exists(OUTPUT):
     try:
         existing = json.load(open(OUTPUT))
-        existing_pinned = existing.get('pinned', {})
+        loaded_pinned = existing.get('pinned', {})
+        # Validate: pinned must be a dict, not a list
+        if isinstance(loaded_pinned, dict) and loaded_pinned:
+            existing_pinned = loaded_pinned
+        # If it's a list (corrupted), fall back to default
     except: pass
 
 output = {
