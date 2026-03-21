@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-21",
+  "generated": "2026-03-22",
   "cluster_pages": {
     "transport": [
       {
@@ -1328,6 +1328,27 @@
   },
   "new": [
     {
+      "url": "/continence-support-burden-calculator-singapore.html",
+      "title": "Continence Support Burden Calculator Singapore (2026): Compare Ad-Hoc Cleanup and Rushing Against a More Structured Support System Before the Household Starts Organising Life Around Near-Misses",
+      "desc": "Compare the monthly burden of ad-hoc continence support against a more structured support system after supplies, cleanup time, laundry, bathroom setup, and night disruption are counted honestly.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/nutrition-support-burden-calculator-singapore.html",
+      "title": "Nutrition Support Burden Calculator Singapore (2026): Compare Ad-Hoc Family Meal Support Against a More Structured Nutrition Route Before Under-Eating Becomes the Household Default",
+      "desc": "Compare the monthly burden of ad-hoc family meal support against a more structured nutrition route after prep time, delivery cost, texture adjustments, wastage, and caregiver hours are counted honestly.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/medication-management-burden-calculator-singapore.html",
+      "title": "Medication Management Burden Calculator Singapore (2026): Compare Ad-Hoc Family Medication Handling Against a More Structured Support Model Before Confusion Turns Into Daily Friction",
+      "desc": "Compare the monthly burden of ad-hoc family medication handling against a more structured support model after refill trips, supervision time, review cost, and missed-dose spillover are counted honestly.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/overnight-supervision-burden-calculator-singapore.html",
       "title": "Overnight Supervision Burden Calculator Singapore (2026): Compare Ad-Hoc Night Checking Against a More Structured Overnight-Coverage Model Before One Bad Month Reshapes the Household",
       "desc": "Compare the monthly burden of ad-hoc night checking against a more structured overnight-coverage route after sleep loss, setup cost, spillover, and respite support are counted honestly.",
@@ -1373,27 +1394,6 @@
       "url": "/aging-in-place-vs-moving-in-with-aging-parents-singapore.html",
       "title": "Aging in Place vs Moving In Together With Aging Parents in Singapore (2026)",
       "desc": "Aging in place vs moving in together with aging parents in Singapore: a practical framework for choo",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/bathroom-setup-and-commode-vs-keeping-a-standard-bathroom-for-aging-parents-singapore.html",
-      "title": "Bathroom Setup and Commode vs Keeping a Standard Bathroom for Aging Parents in Singapore (2026)",
-      "desc": "Bathroom setup and commode vs keeping a standard bathroom for aging parents in Singapore: decide whe",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/better-lighting-and-communication-adjustments-vs-keeping-old-home-routines-for-aging-parents-with-sensory-decline-singapore.html",
-      "title": "Better Lighting and Communication Adjustments vs Keeping Old Home Routines for Aging Parents With Sensory Decline in Singapore (2026)",
-      "desc": "Better lighting and communication adjustments vs keeping old home routines for aging parents with se",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/cpf-nomination-for-aging-parents-singapore.html",
-      "title": "CPF Nomination for Aging Parents in Singapore (2026)",
-      "desc": "CPF nomination for aging parents in Singapore: why families should review this separate instruction ",
       "cluster": "family",
       "clusterLabel": "Family"
     }

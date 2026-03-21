@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Nutrition Support Burden Calculator Singapore (2026): Compare Ad-Hoc Family Meal Support Against a More Structured Nutrition Route Before Under-Eating Becomes the Household Default</title>
+<meta name="description" content="Compare the monthly burden of ad-hoc family meal support against a more structured nutrition route for aging parents in Singapore after prep time, meal delivery, wastage, texture adjustments, and caregiver hours are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/nutrition-support-burden-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this nutrition-support burden calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares an ad-hoc family-managed meal route against a more structured nutrition route after groceries, prep time, delivery cost, texture-adjustment effort, wastage, and supervision hours are entered honestly."}},{"@type":"Question","name":"Does the calculator assume meal delivery or texture support is always better?","acceptedAnswer":{"@type":"Answer","text":"No. A family-run route can stay cheaper when the parent still eats reliably and prep effort is light. Structured support becomes more attractive when appetite, chewing, swallowing, or cooking effort start turning meals into a repeated household task."}},{"@type":"Question","name":"Should I count caregiver time even if meals are cooked as part of normal family life?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator is trying to show support burden. If one household member is repeatedly shopping, preparing, adjusting, and checking meals for one parent, that is still a real monthly load even when no invoice is issued."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is counting grocery receipts but leaving prep time, food wastage, and meal supervision at zero. That usually makes the informal route look cleaner than it really is."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Nutrition Support Burden Calculator</p>
+<h1>Nutrition Support Burden Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">Compare the monthly burden of ad-hoc family meal support against a more structured nutrition route for aging parents in Singapore after prep time, meal delivery, wastage, texture adjustments, and caregiver hours are counted honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you have not framed the issue yet, start with <a href="/early-appetite-decline-vs-waiting-for-visible-weight-loss-with-aging-parents-singapore.html">early appetite decline vs waiting for visible weight loss</a>.</li>
+<li>If you have not framed the issue yet, start with <a href="/meal-prep-at-home-vs-meal-delivery-for-aging-parents-singapore.html">meal prep at home vs meal delivery</a>.</li>
+<li>If you have not framed the issue yet, start with <a href="/regular-meals-vs-texture-modified-meals-for-aging-parents-with-swallowing-difficulty-singapore.html">regular meals vs texture-modified meals</a>.</li>
+<li>If you have not framed the issue yet, start with <a href="/how-supporting-aging-parents-changes-your-nutrition-support-decision-order-singapore.html">how supporting aging parents changes your nutrition-support decision order</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    {inp_html(cfg['inputs_a'])}
+    <div class="divider"></div>
+    <h3>Route B — more structured support model</h3>
+    {inp_html(cfg['inputs_b'])}
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box"><div class="small muted">Route A: ad-hoc family-managed route</div><div class="kpi" id="routeA">S$0</div></div>
+    <div class="kpi-box" style="margin-top:10px"><div class="small muted">Route B: more structured route</div><div class="kpi" id="routeB">S$0</div></div>
+    <div class="kpi-box" style="margin-top:10px"><div class="small muted">Current gap</div><div class="kpi" id="delta">S$0</div></div>
+    <div class="kpi-box" style="margin-top:10px"><div class="small muted">Share of monthly household income</div><div class="kpi" id="share">0.0% vs 0.0%</div></div>
+    <div class="kpi-box" style="margin-top:10px"><div class="small muted">Estimated room after fixed commitments</div><div class="kpi" id="room">S$0 vs S$0</div></div>
+    <div class="kpi-box" style="margin-top:10px"><div class="small muted">Break-even threshold for the structured route</div><div class="kpi" id="breakEven">S$0</div></div>
+    <div class="note" style="margin-top:12px" id="resultNote">Use the output to test system durability, not just obvious invoices.</div>
+  </div>
+</div>
+
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>The wrong question is usually, “How much does the meal cost?”</p><p>The real question is how much nutrition support is already costing the household once shopping, prep time, prompting, texture adjustments, wastage, and low-intake spillover are counted honestly. Families often think meals are still a small issue because groceries do not look dramatic on paper. What they miss is the operating labour: one person buying the right items, cooking softer versions, checking whether the parent actually eats, making replacements when food is rejected, and quietly rebuilding meals around fatigue or swallowing difficulty.</p><p>This calculator is designed to surface that hidden burden. It compares an ad-hoc family-managed meal route against a more structured support route that may include meal delivery, texture support, or a more consistent nutrition system. The point is not to prove delivery is always superior. The point is to show when the household has already crossed from ordinary meal help into recurring care work.</p>
+<h2>Why this burden is usually mispriced</h2>
+<p>Nutrition burden is mispriced because families anchor on grocery receipts instead of labour and reliability. The parent may still technically “have food,” but that says nothing about whether the food is being prepared, accepted, tolerated with medication, or consumed consistently enough to protect strength and recovery. One failed dinner does not look expensive. Thirty smaller failures in a month do.</p><p>The hidden costs show up everywhere else first. The caregiver loses time. Food gets thrown away. Medication lands on too little food. A parent becomes more tired, less willing to travel, or more resistant to eating because meals are arriving at the wrong time or in the wrong form. Those costs rarely look like food cost, but they are still part of the nutrition system.</p>
+<h2>What belongs in the structured route</h2>
+<p>A structured route does not mean eliminating family care. In many households it simply means moving from improvisation to consistency. Meals may still be family-led on weekends while weekday delivery covers the heavier routine. Texture-modified meals or easier top-up options may handle the gap between what the parent can manage and what the household can cook calmly. The real choice is not family love versus outsourcing. It is unstable repetition versus a route the household can sustain without resentment or nutritional drift.</p><p>This matters because nutrition support interacts with nearly every other part of the aging-parents branch. Poor intake changes medication tolerance. It changes energy for appointments. It changes continence planning, night waking, and recovery after illness. That is why a cleaner meal system often pays off outside the kitchen too.</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the family-managed route still comes out cheaper, check whether that is because prep hours, supervision, or wastage have been entered too lightly. A meal route can remain numerically cheaper and still be the wrong route if it depends on one person repeatedly doing invisible labour that the household has not truly agreed to carry long term.</p><p>If the structured route comes out cheaper, it usually means the family has already been subsidising nutrition support with unpaid labour and failed-meal friction. That is not a sign of weakness. It is a sign that the issue has become operational enough that a more organised route now makes more sense than repeated improvisation.</p><p>The break-even output is useful when the household is still resisting delivery or structured meal help on the assumption that it must obviously cost more. It shows the maximum monthly structured meal cost the household could bear before the informal route regains the edge. If real options sit below that line, the family may already be overpaying by pretending home management is free.</p>
+<h2>Scenario examples</h2>
+<div class="box"><ul>
+<li><strong>Scenario 1</strong> — mild appetite drift, strong family routine, little wastage. The family-managed route may still be right. The lesson is not to outsource reflexively, but to keep watching the burden honestly.</li><li><strong>Scenario 2</strong> — one adult is repeatedly shopping, prepping, and cooking separate meals because the parent rejects ordinary food. This is where structured support often starts winning once time is priced properly.</li><li><strong>Scenario 3</strong> — the parent needs easier textures, but the household is still pretending this is only a preference issue. In that case, the hidden cost often sits in repeated meal failure and cleanup, not just in ingredient spend.</li>
+</ul></div>
+<h2>What the calculator cannot decide for you</h2>
+<p>This calculator cannot diagnose swallowing difficulty, decide whether specific nutrition supplements are appropriate, or tell you what diet is clinically correct. Those are care questions. The tool is narrower. It shows what the current meal system is doing to the household when time, waste, and support labour are counted honestly.</p><p>That is still valuable because many households are not asking a medical question first. They are asking whether the current meal route is “still fine.” The calculator helps answer that before under-eating becomes the default.</p>
+<h2>Why food burden often gets hidden inside ordinary family life</h2>
+<p>Meal support is often hidden because families tell themselves that cooking is already happening anyway. But support cooking for one parent is usually not the same as ordinary household cooking. It may require separate shopping, separate textures, more frequent reheating, more prompting, and more fallback planning when appetite collapses at the last minute. Those differences matter because they convert a shared household activity into a repeated support task.</p>
+<p>This is also why food support becomes emotionally loaded. The caregiver can feel guilty for wanting a simpler route, while the parent may feel guilty for becoming the reason everyone else has to keep adjusting meals. A structured system does not remove those emotions, but it can stop the household from reliving the same strain every day. Once the support route is designed properly, meals can become calmer and less argumentative.</p>
+<h2>Use the result to judge consistency, not only cost</h2>
+<p>Consistency is often the main thing the household is paying for. A structured route can still be worth it even when the headline cost is higher if it sharply reduces skipped meals, repeat cooking, or last-minute rescue behaviour. In older adults, the difference between a reliable meal system and an unreliable one often shows up in energy, medication tolerance, appointment recovery, and irritability before it shows up clearly on a weighing scale.</p>
+<p>That is why the calculator should be read as a consistency tool. It is asking whether the current route can keep working week after week, not whether the family can survive one more month of improvisation.</p>
+<h2>Where families usually under-enter the problem</h2>
+<p>The most common understatement is meal failure. Families often enter grocery cost and maybe a small amount of prep time, but they leave rejected meals, duplicate cooking, supplement top-ups, and post-meal cleanup at unrealistically low levels. That distorts the comparison because the visible receipt is only one part of the burden. The real burden is the labour required to keep intake acceptable.</p>
+<p>If the household has already started describing the parent as “fussy,” “hard to feed,” or “too tired to eat properly,” it should pause and ask whether those labels are really evidence that the route needs redesign. The calculator is useful precisely because it forces the family to move from vague frustration into a more measurable support model.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li>Counting groceries but leaving prep labour at zero.</li><li>Ignoring food wastage because the household sees it as part of ordinary cooking.</li><li>Leaving supervision time out even though one adult is repeatedly prompting the parent to eat.</li><li>Assuming delivery removes all family work. It often removes some work, not all work.</li><li>Treating low intake as a preference issue instead of a system-design problem.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this nutrition-support burden calculator compare?</h3>
+<p>It compares an ad-hoc family-managed meal route against a more structured nutrition route after groceries, prep time, delivery cost, texture-adjustment effort, wastage, and supervision hours are entered honestly.</p>
+<h3>Does the calculator assume meal delivery or texture support is always better?</h3>
+<p>No. A family-run route can stay cheaper when the parent still eats reliably and prep effort is light. Structured support becomes more attractive when appetite, chewing, swallowing, or cooking effort start turning meals into a repeated household task.</p>
+<h3>Should I count caregiver time even if meals are cooked as part of normal family life?</h3>
+<p>Yes. The calculator is trying to show support burden. If one household member is repeatedly shopping, preparing, adjusting, and checking meals for one parent, that is still a real monthly load even when no invoice is issued.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is counting grocery receipts but leaving prep time, food wastage, and meal supervision at zero. That usually makes the informal route look cleaner than it really is.</p>
+
+
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/meal-prep-at-home-vs-meal-delivery-for-aging-parents-singapore.html">Meal prep at home vs meal delivery</a></li><li><a href="/regular-meals-vs-texture-modified-meals-for-aging-parents-with-swallowing-difficulty-singapore.html">Regular meals vs texture-modified meals</a></li><li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost calculator</a></li><li><a href="/continence-support-burden-calculator-singapore.html">Continence support burden calculator</a></li>
+</ul>
+</section>
+
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.hpb.gov.sg/newsroom/article/eating-for-healthy-ageing" rel="nofollow noopener" target="_blank">Health Promotion Board: Eating for Healthy Ageing</a></li><li><a href="https://www.hpb.gov.sg/docs/default-source/pdf/nns-2022-report.pdf" rel="nofollow noopener" target="_blank">Health Promotion Board: National Nutrition Survey 2022</a></li><li><a href="https://www.aic.sg/care-services/meals-on-wheels" rel="nofollow noopener" target="_blank">Agency for Integrated Care: Meals on Wheels</a></li><li><a href="https://www.aic.sg/caregiving/general-caregiving-resources/" rel="nofollow noopener" target="_blank">Agency for Integrated Care: General Caregiving Resources</a></li><li><a href="https://hpp.moh.gov.sg/allied-health-professionals/eatsafe-sg/" rel="nofollow noopener" target="_blank">Ministry of Health Health Professionals Portal: EatSafe SG</a></li><li><a href="https://hpp.moh.gov.sg/allied-health-professionals/eatsafe-sg/resources/" rel="nofollow noopener" target="_blank">Ministry of Health Health Professionals Portal: EatSafe SG resources</a></li>
+</ul>
+<p class="small muted">Last updated: 22 Mar 2026 · This is a planning calculator, not medical advice or financial advice. Always verify care options, subsidies, and suitability for the actual parent and household.</p>
+</main>
+<div id="site-footer"></div>
+<script>
+function val(id){ var n=parseFloat(document.getElementById(id).value); return isNaN(n)?0:n; }
+function fmt(n){ return new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0}).format(n||0); }
+function setText(id,v){ document.getElementById(id).textContent=v; }
+
+function calculate(){
+  var income=val('householdIncome');
+  var fixed=val('existingCommitments');
+  var grocery=val('groceryCost');
+  var prepHours=val('prepHours');
+  var hourly=val('hourlyValue');
+  var wastage=val('wastageCost');
+  var supervision=val('supervisionHours');
+  var friction=val('frictionCost');
+  var familyOffset=val('familyOffset');
+  var routeA = Math.max(0, grocery + ((prepHours + supervision) * 4.33 * hourly) + wastage + friction - familyOffset);
+
+  var mealDelivery=val('mealDeliveryCost');
+  var familyPrepHours=val('familyPrepHours');
+  var textureTopUp=val('textureTopUp');
+  var structuredSupervision=val('structuredSupervision');
+  var structuredWastage=val('structuredWastage');
+  var structuredCoordHours=val('structuredCoordHours');
+  var structuredOffset=val('structuredOffset');
+  var routeB = Math.max(0, mealDelivery + textureTopUp + ((familyPrepHours + structuredSupervision + structuredCoordHours) * 4.33 * hourly) + structuredWastage - structuredOffset);
+
+  var delta = routeA - routeB;
+  var shareA = income>0 ? routeA/income*100 : 0;
+  var shareB = income>0 ? routeB/income*100 : 0;
+  var roomA = income - fixed - routeA;
+  var roomB = income - fixed - routeB;
+  var breakEven = Math.max(0, routeA - (((familyPrepHours + structuredSupervision + structuredCoordHours) * 4.33 * hourly) + textureTopUp + structuredWastage - structuredOffset));
+  setText('routeA', fmt(routeA));
+  setText('routeB', fmt(routeB));
+  setText('delta', (delta>=0? fmt(Math.abs(delta))+' less on structured route' : fmt(Math.abs(delta))+' less on family route'));
+  setText('share', shareA.toFixed(1)+'% vs '+shareB.toFixed(1)+'%');
+  setText('room', fmt(roomA)+' vs '+fmt(roomB));
+  setText('breakEven', fmt(breakEven)+' / month');
+  var note='Use the output to test whether the household is still carrying meals as a light routine or already as a recurring care system.';
+  if(routeA > routeB && roomA < roomB){ note='The household is probably underpricing prep labour and failed-meal friction. Structured nutrition support may already be the cheaper operating model.'; }
+  else if(wastage == 0 && friction == 0){ note='Your informal route may be understated. Appetite decline and texture mismatch rarely produce zero wastage or spillover once the routine starts straining.'; }
+  setText('resultNote', note);
+}
+
+document.querySelectorAll('input').forEach(function(el){ el.addEventListener('input', calculate); });
+calculate();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>
