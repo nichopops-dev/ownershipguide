@@ -8,7 +8,7 @@
     .catch(function(){return null;})
     .then(function(data){
       if(!data||!data.cluster_pages||!data.cluster_pages['investing']) return;
-      var pinned=(data.pinned||[]).filter(function(pin){return pin.cluster==='investing';});
+      var pinned=(data.pinned&&data.pinned['investing'])||[];
       var recent=data.cluster_pages['investing'].filter(function(p){
         return !pinned.some(function(pin){return pin.url===p.url;});
       }).slice(0,Math.max(0,MAX-pinned.length));

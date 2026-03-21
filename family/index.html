@@ -74,7 +74,7 @@
     .then(function(data){
       if(!data||!data.cluster_pages||!data.cluster_pages['family']) return;
       // Pages already sorted by date descending in featured.json
-      var pinned=(data.pinned||[]).filter(function(pin){return pin.cluster==='family';});
+      var pinned=(data.pinned&&data.pinned['family'])||[];
       var recent=data.cluster_pages['family'].filter(function(p){
         return !pinned.some(function(pin){return pin.url===p.url;});
       }).slice(0,Math.max(0,MAX-pinned.length));
