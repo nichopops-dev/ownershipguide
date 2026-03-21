@@ -55,10 +55,101 @@ input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; borde
 <div class="calc-grid">
   <div class="calc-card">
     <h3 style="margin-top:0">Inputs</h3>
-    {inp_html(cfg['inputs_a'])}
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home household cashflow, not gross salary.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4600"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other sticky monthly bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — ad-hoc family-managed medication route</h3>
+    <div class="calc-row">
+      <div>
+        <label for="refillTrips">Refill or pickup trips per month</label>
+        <input id="refillTrips" type="number" min="0" step="1" value="3"/>
+      </div>
+      <div>
+        <label for="tripCost">Average transport cost per refill trip (SGD)</label>
+        <input id="tripCost" type="number" min="0" step="1" value="22"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="supervisionHours">Family supervision hours per week</label>
+        <input id="supervisionHours" type="number" min="0" step="0.5" value="4"/>
+      </div>
+      <div>
+        <label for="hourlyValue">Estimated value of one caregiver hour (SGD)</label>
+        <input id="hourlyValue" type="number" min="0" step="1" value="22"/>
+        <p class="small muted" style="margin:6px 0 0">Use a real wage proxy or a conservative value for repeatedly disrupted work or household time.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="coordinationHours">Monthly medication admin / coordination hours</label>
+        <input id="coordinationHours" type="number" min="0" step="0.5" value="2"/>
+      </div>
+      <div>
+        <label for="missedDoseCost">Monthly missed-dose or confusion spillover cost (SGD)</label>
+        <input id="missedDoseCost" type="number" min="0" step="5" value="80"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="familyOffset">Monthly offsets for family-managed route (SGD)</label>
+        <input id="familyOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
     <div class="divider"></div>
     <h3>Route B — more structured support model</h3>
-    {inp_html(cfg['inputs_b'])}
+    <div class="calc-row">
+      <div>
+        <label for="structuredSupport">Monthly pillbox / pharmacy / medication-support cost (SGD)</label>
+        <input id="structuredSupport" type="number" min="0" step="5" value="120"/>
+      </div>
+      <div>
+        <label for="reviewCost">Monthly medication review / delivery / setup cost (SGD)</label>
+        <input id="reviewCost" type="number" min="0" step="5" value="35"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredRefillTrips">Supported refill or delivery trips per month</label>
+        <input id="structuredRefillTrips" type="number" min="0" step="1" value="1"/>
+      </div>
+      <div>
+        <label for="structuredTripCost">Transport cost per supported trip (SGD)</label>
+        <input id="structuredTripCost" type="number" min="0" step="1" value="18"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredHours">Family medication supervision hours per week on structured route</label>
+        <input id="structuredHours" type="number" min="0" step="0.5" value="1.5"/>
+      </div>
+      <div>
+        <label for="structuredCoordHours">Monthly admin / coordination hours on structured route</label>
+        <input id="structuredCoordHours" type="number" min="0" step="0.5" value="1"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredSpillover">Monthly missed-dose / correction spillover cost on structured route (SGD)</label>
+        <input id="structuredSpillover" type="number" min="0" step="5" value="20"/>
+      </div>
+      <div>
+        <label for="structuredOffset">Monthly offsets for structured route (SGD)</label>
+        <input id="structuredOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
   </div>
   <div class="calc-card">
     <h3 style="margin-top:0">Results</h3>
@@ -131,7 +222,6 @@ function setText(id,v){ document.getElementById(id).textContent=v; }
 function calculate(){
   var income=val('householdIncome');
   var fixed=val('existingCommitments');
-  var medItems=val('medItems');
   var refillTrips=val('refillTrips');
   var tripCost=val('tripCost');
   var supervisionHours=val('supervisionHours');

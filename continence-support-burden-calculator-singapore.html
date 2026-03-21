@@ -55,10 +55,96 @@ input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; borde
 <div class="calc-grid">
   <div class="calc-card">
     <h3 style="margin-top:0">Inputs</h3>
-    {inp_html(cfg['inputs_a'])}
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home household cashflow when the real issue is ongoing monthly survivability.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4600"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other sticky household bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — ad-hoc family-managed continence route</h3>
+    <div class="calc-row">
+      <div>
+        <label for="suppliesCost">Monthly pads, liners, wipes, and disposable supply cost (SGD)</label>
+        <input id="suppliesCost" type="number" min="0" step="10" value="180"/>
+      </div>
+      <div>
+        <label for="cleanupHours">Cleanup and changing hours per week</label>
+        <input id="cleanupHours" type="number" min="0" step="0.5" value="4"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="hourlyValue">Estimated value of one caregiver hour (SGD)</label>
+        <input id="hourlyValue" type="number" min="0" step="1" value="22"/>
+      </div>
+      <div>
+        <label for="laundryCost">Monthly laundry, bedding, and cleaning-product cost (SGD)</label>
+        <input id="laundryCost" type="number" min="0" step="5" value="55"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="nightDisruption">Monthly night-disruption or sleep-loss cost (SGD)</label>
+        <input id="nightDisruption" type="number" min="0" step="5" value="90"/>
+      </div>
+      <div>
+        <label for="nearMissCost">Monthly near-miss, emergency-cleanup, or overflow cost (SGD)</label>
+        <input id="nearMissCost" type="number" min="0" step="5" value="70"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="familyOffset">Monthly offsets for family-managed route (SGD)</label>
+        <input id="familyOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
     <div class="divider"></div>
     <h3>Route B — more structured support model</h3>
-    {inp_html(cfg['inputs_b'])}
+    <div class="calc-row">
+      <div>
+        <label for="structuredSupplyCost">Monthly structured continence-supply cost (SGD)</label>
+        <input id="structuredSupplyCost" type="number" min="0" step="10" value="240"/>
+      </div>
+      <div>
+        <label for="setupCost">One-time commode, bathroom setup, or support-equipment cost (SGD)</label>
+        <input id="setupCost" type="number" min="0" step="10" value="480"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="spreadMonths">Months to spread one-time setup cost across</label>
+        <input id="spreadMonths" type="number" min="1" step="1" value="12"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredHours">Family cleanup / handling hours per week on structured route</label>
+        <input id="structuredHours" type="number" min="0" step="0.5" value="2"/>
+      </div>
+      <div>
+        <label for="structuredLaundry">Monthly laundry and cleaning cost on structured route (SGD)</label>
+        <input id="structuredLaundry" type="number" min="0" step="5" value="35"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredNight">Monthly night-disruption cost on structured route (SGD)</label>
+        <input id="structuredNight" type="number" min="0" step="5" value="35"/>
+      </div>
+      <div>
+        <label for="structuredOffset">Monthly offsets for structured route (SGD)</label>
+        <input id="structuredOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
   </div>
   <div class="calc-card">
     <h3 style="margin-top:0">Results</h3>

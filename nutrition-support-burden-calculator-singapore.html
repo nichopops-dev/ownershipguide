@@ -55,10 +55,96 @@ input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; borde
 <div class="calc-grid">
   <div class="calc-card">
     <h3 style="margin-top:0">Inputs</h3>
-    {inp_html(cfg['inputs_a'])}
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home household cashflow if the real concern is whether the routine is sustainable every month.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4600"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other structurally sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — ad-hoc family-managed meal route</h3>
+    <div class="calc-row">
+      <div>
+        <label for="groceryCost">Monthly grocery / ingredient cost (SGD)</label>
+        <input id="groceryCost" type="number" min="0" step="10" value="420"/>
+      </div>
+      <div>
+        <label for="prepHours">Family meal-prep hours per week</label>
+        <input id="prepHours" type="number" min="0" step="0.5" value="5"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="supervisionHours">Supervision / feeding support hours per week</label>
+        <input id="supervisionHours" type="number" min="0" step="0.5" value="3"/>
+      </div>
+      <div>
+        <label for="hourlyValue">Estimated value of one caregiver hour (SGD)</label>
+        <input id="hourlyValue" type="number" min="0" step="1" value="22"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="wastageCost">Monthly food wastage / failed-meal cost (SGD)</label>
+        <input id="wastageCost" type="number" min="0" step="5" value="60"/>
+      </div>
+      <div>
+        <label for="frictionCost">Monthly under-eating, top-up, or last-minute workaround cost (SGD)</label>
+        <input id="frictionCost" type="number" min="0" step="5" value="70"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="familyOffset">Monthly offsets for family-managed route (SGD)</label>
+        <input id="familyOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
     <div class="divider"></div>
     <h3>Route B — more structured support model</h3>
-    {inp_html(cfg['inputs_b'])}
+    <div class="calc-row">
+      <div>
+        <label for="mealDeliveryCost">Monthly delivered-meal or meal-service cost (SGD)</label>
+        <input id="mealDeliveryCost" type="number" min="0" step="10" value="650"/>
+      </div>
+      <div>
+        <label for="textureTopUp">Monthly texture-modified or nutrition top-up cost (SGD)</label>
+        <input id="textureTopUp" type="number" min="0" step="5" value="80"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="familyPrepHours">Residual family prep hours per week on structured route</label>
+        <input id="familyPrepHours" type="number" min="0" step="0.5" value="1.5"/>
+      </div>
+      <div>
+        <label for="structuredSupervision">Residual supervision / feeding hours per week on structured route</label>
+        <input id="structuredSupervision" type="number" min="0" step="0.5" value="1.5"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredCoordHours">Monthly admin / ordering coordination hours</label>
+        <input id="structuredCoordHours" type="number" min="0" step="0.5" value="1"/>
+      </div>
+      <div>
+        <label for="structuredWastage">Monthly wastage / rejected-meal cost on structured route (SGD)</label>
+        <input id="structuredWastage" type="number" min="0" step="5" value="25"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredOffset">Monthly offsets for structured route (SGD)</label>
+        <input id="structuredOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
   </div>
   <div class="calc-card">
     <h3 style="margin-top:0">Results</h3>
