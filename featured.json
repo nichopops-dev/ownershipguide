@@ -1328,6 +1328,13 @@
   },
   "new": [
     {
+      "url": "/aging-parents-caregiving-cost-calculator-singapore.html",
+      "title": "Aging Parents Caregiving Cost Calculator Singapore (2026): Estimate the Monthly Support Load Before It Starts Running the Household",
+      "desc": "Estimate the monthly elder-support load across cash support, paid care, transport, meals, supplies, and setup costs.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/advance-care-planning-for-aging-parents-singapore.html",
       "title": "Advance Care Planning for Aging Parents in Singapore (2026)",
       "desc": "Advance care planning for aging parents in Singapore: a practical framework for discussing values, h",
@@ -1387,13 +1394,6 @@
       "url": "/early-hearing-or-vision-decline-vs-waiting-for-a-major-incident-with-aging-parents-singapore.html",
       "title": "Early Hearing or Vision Decline vs Waiting for a Major Incident With Aging Parents in Singapore (2026)",
       "desc": "Early hearing or vision decline vs waiting for a major incident with aging parents in Singapore: dec",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-medication-confusion-vs-waiting-for-a-serious-missed-dose-with-aging-parents-singapore.html",
-      "title": "Early Medication Confusion vs Waiting for a Serious Missed Dose With Aging Parents in Singapore (2026)",
-      "desc": "Early medication confusion vs waiting for a serious missed dose with aging parents in Singapore: dec",
       "cluster": "family",
       "clusterLabel": "Family"
     }
