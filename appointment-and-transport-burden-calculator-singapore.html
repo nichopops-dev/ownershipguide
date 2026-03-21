@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Appointment and Transport Burden Calculator Singapore (2026): Compare Ad-Hoc Family Follow-Up Against a More Structured Support Model Before It Starts Running the Household</title>
+<meta name="description" content="Compare the monthly burden of ad-hoc family-managed medical appointments against a more structured support model for aging parents in Singapore after transport, escort time, coordination drag, and missed-follow-up friction are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/appointment-and-transport-burden-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this appointment and transport burden calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares a family-managed appointment route against a more structured support model after transport fares, escort time, coordination hours, missed-follow-up friction, and any offsets are entered."}},{"@type":"Question","name":"Does the calculator assume structured support is always better?","acceptedAnswer":{"@type":"Answer","text":"No. The tool is input-driven. A family-managed route can stay cheaper and cleaner when appointments are still light. Structured support becomes more attractive when repetition, escort needs, and work disruption start accumulating."}},{"@type":"Question","name":"Should I enter hourly value for caregiver time even if no cash changes hands?","acceptedAnswer":{"@type":"Answer","text":"Yes. The calculator is trying to show household burden, not just direct invoices. Lost work flexibility and repeated escort time still matter even if they are absorbed informally."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is entering direct transport fare but leaving coordination drag, time-off-work cost, and repeated missed-appointment spillover at zero. That usually understates the true burden of an ad-hoc route."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Appointment and Transport Burden Calculator</p>
+<h1>Appointment and Transport Burden Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This calculator is for households supporting aging parents whose month is slowly being eaten by clinic trips, escort time, rescheduling, and coordination drag. It compares a family-managed route against a more structured support model so the household can see whether the real burden is still small or whether medical follow-up has already become a design problem.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you have not framed the appointment problem yet, start with <a href="/early-missed-appointments-vs-waiting-for-a-serious-follow-up-lapse-with-aging-parents-singapore.html">early missed appointments vs waiting for a serious follow-up lapse</a>.</li>
+<li>If the deeper issue is fragmented scheduling, read <a href="/one-fragmented-specialist-schedule-vs-consolidated-appointment-planning-for-aging-parents-singapore.html">one fragmented specialist schedule vs consolidated appointment planning</a>.</li>
+<li>If the real failure is handover and records visibility, read <a href="/ad-hoc-family-coordination-vs-shared-appointment-and-records-system-for-aging-parents-singapore.html">ad-hoc family coordination vs shared appointment and records system</a>.</li>
+<li>If transport and escort burden are already distorting the decision, pair this with <a href="/medical-escort-and-transport-vs-ad-hoc-family-driving-for-aging-parents-singapore.html">medical escort and transport vs ad-hoc family driving</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home cashflow if the goal is monthly survivability rather than theoretical affordability.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4600"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other structurally sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — ad-hoc family-managed appointments</h3>
+    <div class="calc-row">
+      <div>
+        <label for="appointmentsPerMonth">Medical appointments per month</label>
+        <input id="appointmentsPerMonth" type="number" min="0" step="1" value="6"/>
+      </div>
+      <div>
+        <label for="familyTripCost">Average direct transport cost per appointment (SGD)</label>
+        <input id="familyTripCost" type="number" min="0" step="1" value="28"/>
+        <p class="small muted" style="margin:6px 0 0">Use taxi, ride-hailing, fuel, or mixed average cost for the route the family is actually running now.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="parkingTolls">Parking, ERP, or waiting-related trip cost per appointment (SGD)</label>
+        <input id="parkingTolls" type="number" min="0" step="1" value="8"/>
+      </div>
+      <div>
+        <label for="familyEscortHours">Family escort hours used per appointment</label>
+        <input id="familyEscortHours" type="number" min="0" step="0.5" value="3.5"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="hourlyValue">Estimated value of one caregiver hour (SGD)</label>
+        <input id="hourlyValue" type="number" min="0" step="1" value="22"/>
+        <p class="small muted" style="margin:6px 0 0">Use a real hourly wage, or a conservative value for disrupted work or household time.</p>
+      </div>
+      <div>
+        <label for="coordinationHours">Monthly admin / coordination hours for family route</label>
+        <input id="coordinationHours" type="number" min="0" step="0.5" value="4"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="missedFriction">Monthly missed-appointment, rebooking, or spillover cost (SGD)</label>
+        <input id="missedFriction" type="number" min="0" step="5" value="80"/>
+      </div>
+      <div>
+        <label for="familyOffset">Monthly offsets for family route (SGD)</label>
+        <input id="familyOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — more structured support model</h3>
+    <div class="calc-row">
+      <div>
+        <label for="structuredTripCost">Structured medical escort / transport cost per supported appointment (SGD)</label>
+        <input id="structuredTripCost" type="number" min="0" step="1" value="65"/>
+        <p class="small muted" style="margin:6px 0 0">Use the net rate you expect the household to carry after means-tested support or sibling sharing.</p>
+      </div>
+      <div>
+        <label for="familyKeyVisits">Family-attended key appointments per month</label>
+        <input id="familyKeyVisits" type="number" min="0" step="1" value="2"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="keyEscortHours">Family escort hours for each key appointment</label>
+        <input id="keyEscortHours" type="number" min="0" step="0.5" value="3"/>
+      </div>
+      <div>
+        <label for="structuredCoordHours">Monthly admin / records-system hours for structured route</label>
+        <input id="structuredCoordHours" type="number" min="0" step="0.5" value="1.5"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredTopUp">Monthly top-up transport / buffer / overflow cost (SGD)</label>
+        <input id="structuredTopUp" type="number" min="0" step="5" value="60"/>
+      </div>
+      <div>
+        <label for="structuredFriction">Monthly reschedule / missed-follow-up spillover cost on structured route (SGD)</label>
+        <input id="structuredFriction" type="number" min="0" step="5" value="20"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredOffset">Monthly offsets for structured route (SGD)</label>
+        <input id="structuredOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="muted">Family-managed monthly burden</div>
+      <div class="kpi" id="familyMonthly">$0</div>
+      <div class="small muted">Direct transport + escort time + coordination drag + missed-follow-up friction</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="muted">Structured-route monthly burden</div>
+      <div class="kpi" id="structuredMonthly">$0</div>
+      <div class="small muted">Medical escort / transport + key family attendance + reduced coordination burden</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="muted">Monthly difference</div>
+      <div class="kpi" id="monthlyGap">$0</div>
+      <div class="small" id="gapLabel">—</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="muted">Cheaper route burden as % of income</div>
+      <div class="kpi" id="pressureRatio">0%</div>
+      <div class="small muted">Useful for testing whether the “cheaper” route is still heavy relative to household cashflow.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="muted">Break-even structured cost per appointment</div>
+      <div class="kpi" id="breakevenCost">$0</div>
+      <div class="small muted">Approximate cost per supported trip at which both routes become equal on current assumptions.</div>
+    </div>
+    <div class="note" style="margin-top:12px" id="resultNote">Use the output to test system durability, not just invoice size.</div>
+  </div>
+</div>
+
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>The wrong question is usually, “How much is the ride?”</p>
+<p>The real question is how much follow-up is costing the household once transport, escort time, coordination drag, and avoidable rescheduling are counted honestly. Families often price appointment burden incorrectly because they look only at direct fare. They ignore the two hours waiting, the half day of broken work, the repeated messages needed to line up one parent, one child, one clinic, and one transport arrangement, and the quiet spillover when an appointment slips and the next step has to be rebooked.</p>
+<p>This calculator is built to force those hidden costs into the model. That matters because outpatient care is usually not a one-time event. It is a chain. One scan leads to one review. One review changes medication. One missed visit delays the next step. Once an aging parent has several specialties, transport limits, or fatigue after travel, the household is no longer dealing with isolated appointments. It is carrying an operating system. The question becomes whether the current operating system is still cheap enough and stable enough to justify staying informal.</p>
+<p>The comparison in this calculator is therefore not about proving that structured support is always superior. It is about showing when the household has crossed from “occasional family help” into “repeated care logistics that now need design.” A family-managed route can remain the right answer when appointments are still light, transport is easy, and one caregiver can absorb the load without real damage. A structured route becomes more rational once frequency, escort needs, or work disruption compound. The tool helps the family see where that line is under its own assumptions, rather than arguing from instinct or guilt.</p>
+
+<h2>Why appointment drag is often mispriced</h2>
+<p>Appointment drag is mispriced because it rarely arrives as one big bill. It shows up as small leaks. A daughter leaves work early twice in one week. A son spends a Saturday sorting records because nobody knows which doctor changed the medication. A clinic review gets rebooked because the blood test was done on the wrong date. A taxi fare looks minor, but the total morning still swallows transport, waiting, recovery, and follow-up calls. Each piece seems too small to count. Together they become the care system.</p>
+<p>That is why households often tell themselves the current route is “still manageable” even when the month is already being shaped around appointments. The ad-hoc route can feel cheaper because much of the cost is absorbed as inconvenience rather than recognised as burden. The calculator is designed to reverse that invisibility. It asks you to price the time and friction that would otherwise be treated as free. Once those hours and spillovers are visible, the household can judge more honestly whether it is still carrying a light load or just refusing to invoice itself.</p>
+
+<h2>What belongs in the structured route</h2>
+<p>The structured route does not have to mean outsourcing everything. In some households it means using medical escort and transport for routine or tiring trips while family still attends the most important reviews. In others it means using a stronger records and calendar system so only key visits still require heavy family coordination. The point is not to eliminate family involvement. The point is to stop using ad-hoc labour for every single step when the pattern has already become repetitive.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the family-managed route still comes out cheaper, do not conclude automatically that the household should stay informal. Look at the pressure ratio and the assumptions producing the result. A route can be cheaper and still brittle if it depends on one adult repeatedly sacrificing work flexibility or if the missed-appointment friction has been entered unrealistically low. The cheaper result is only persuasive if the route is also durable.</p>
+<p>If the structured route comes out cheaper, that does not automatically mean the household has delayed too long. It may simply mean that appointment intensity has reached the point where a system beats improvisation. That is often the moment when families realise they have been subsidising medical follow-up with unpaid labour. The better question then becomes which parts of the route should be structured first: transport, records, specialist sequencing, or only the most exhausting trips.</p>
+<p>The break-even number is useful when the household still thinks structured support is obviously too expensive. It shows how high the structured transport cost per appointment could rise before the two models equalise. If the household’s actual supported rate still sits below that threshold, then ad-hoc family management is probably more expensive than it feels. If the actual supported rate is well above break-even, the household may still prefer to keep things informal for now, but it should do so knowingly rather than by pretending the hidden burden is zero.</p>
+
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — frequent specialist follow-up but one stable caregiver.</strong> The family-managed route may still be cheaper if one child has flexible work, clinic locations are predictable, and rescheduling is rare. In that case the calculator may confirm that the household is still within the range where structure can remain light. The lesson is not that formal support is unnecessary forever. It is that the current load still fits the household’s real carrying capacity.</p>
+<p><strong>Scenario 2 — multiple visits, rising transport load, and repeated leave blocks.</strong> This is the common point where the structured route starts looking better. Once the family prices escort hours and coordination time honestly, what previously looked like “just taxis and a few appointments” turns into a meaningful monthly burden. A medical escort or more structured records-and-transport system can then stop looking like extra cost and start looking like cost conversion: less hidden time loss, more visible stability.</p>
+
+<h2>What the calculator cannot decide for you</h2>
+<p>This tool cannot decide whether the parent prefers familiar accompaniment, whether a specific family member should still attend major reviews, or whether the family is emotionally ready to formalise part of the care route. It also cannot tell you whether the parent’s health trajectory will intensify suddenly. Those are judgment questions.</p>
+<p>But the calculator can stop the household from making the wrong argument. The wrong argument is usually, “We are still handling it ourselves, so it must still be cheap enough.” The more useful argument is, “What is the monthly burden of our current route after transport, time, coordination, and spillover are actually counted?” Once that answer is visible, the next decision is usually cleaner.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Pricing only fare.</strong> If escort time and coordination drag are left out, the family-managed route usually looks artificially cheap.</li>
+<li><strong>Entering zero missed-follow-up friction.</strong> Rebooking, admin confusion, and spillover are rarely truly zero once outpatient care becomes repetitive.</li>
+<li><strong>Treating the structured route as fully outsourced.</strong> Many families will still attend some key reviews. Keep those hours in the model.</li>
+<li><strong>Using today’s light month as the permanent baseline.</strong> Recurrent follow-up often intensifies after discharge, medication changes, or multi-specialist involvement.</li>
+<li><strong>Letting guilt override durability.</strong> A family-managed route can feel morally better even when it is already eroding work, sleep, and reliability.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this appointment and transport burden calculator compare?</h3>
+<p>It compares a family-managed appointment route against a more structured support model after transport fares, escort time, coordination hours, missed-follow-up friction, and any offsets are entered.</p>
+<h3>Does the calculator assume structured support is always better?</h3>
+<p>No. A family-managed route can stay cheaper and cleaner when appointment load is still light. Structured support becomes more attractive when repetition, escort needs, and work disruption start accumulating.</p>
+<h3>Should I enter hourly value for caregiver time even if no cash changes hands?</h3>
+<p>Yes. The tool is trying to show household burden, not just direct invoices. Lost work flexibility and repeated escort time still matter even if they are absorbed informally.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is entering direct transport fare but leaving coordination drag, time-off-work cost, and repeated missed-appointment spillover at zero. That usually understates the true burden of an ad-hoc route.</p>
+
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/medical-escort-and-transport-vs-ad-hoc-family-driving-for-aging-parents-singapore.html">Medical escort and transport vs ad-hoc family driving</a></li>
+<li><a href="/early-missed-appointments-vs-waiting-for-a-serious-follow-up-lapse-with-aging-parents-singapore.html">Early missed appointments vs waiting for a serious follow-up lapse</a></li>
+<li><a href="/one-fragmented-specialist-schedule-vs-consolidated-appointment-planning-for-aging-parents-singapore.html">One fragmented specialist schedule vs consolidated appointment planning</a></li>
+<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost calculator</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://aic.sg/Care-Services/Medical-Escort-and-Transport" rel="nofollow noopener" target="_blank">Agency for Integrated Care: Medical Escort and Transport</a></li>
+<li><a href="https://support.healthhub.sg/hc/en-us/sections/15753960629273-About-Appointments" rel="nofollow noopener" target="_blank">HealthHub Support: About Appointments</a></li>
+<li><a href="https://support.healthhub.sg/hc/en-us/articles/53033970573593-Where-can-I-view-my-past-appointments-in-HealthHub" rel="nofollow noopener" target="_blank">HealthHub Support: Where can I view my past appointments in HealthHub?</a></li>
+<li><a href="https://support.healthhub.sg/hc/en-us/articles/17756065112601-Am-I-able-to-decide-who-has-access-to-my-records-and-results" rel="nofollow noopener" target="_blank">HealthHub Support: Caregiver access to health records and results</a></li>
+<li><a href="https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/subsidies-for-specialist-outpatient-care-at-public-healthcare-institutions/" rel="nofollow noopener" target="_blank">Ministry of Health: Subsidies for Specialist Outpatient Care at Public Healthcare Institutions</a></li>
+</ul>
+<p><strong>Last updated:</strong> 21 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  const read = () => {
+    const income = num('householdIncome');
+    const fixed = num('existingCommitments');
+    const appts = num('appointmentsPerMonth');
+    const familyTripCost = num('familyTripCost');
+    const parkingTolls = num('parkingTolls');
+    const familyEscortHours = num('familyEscortHours');
+    const hourlyValue = num('hourlyValue');
+    const coordinationHours = num('coordinationHours');
+    const missedFriction = num('missedFriction');
+    const familyOffset = num('familyOffset');
+
+    const structuredTripCost = num('structuredTripCost');
+    const familyKeyVisits = num('familyKeyVisits');
+    const keyEscortHours = num('keyEscortHours');
+    const structuredCoordHours = num('structuredCoordHours');
+    const structuredTopUp = num('structuredTopUp');
+    const structuredFriction = num('structuredFriction');
+    const structuredOffset = num('structuredOffset');
+
+    const familyMonthly = Math.max(0,
+      appts * (familyTripCost + parkingTolls) +
+      (appts * familyEscortHours * hourlyValue) +
+      (coordinationHours * hourlyValue) +
+      missedFriction - familyOffset
+    );
+
+    const structuredMonthly = Math.max(0,
+      (appts * structuredTripCost) +
+      (familyKeyVisits * keyEscortHours * hourlyValue) +
+      (structuredCoordHours * hourlyValue) +
+      structuredTopUp + structuredFriction - structuredOffset
+    );
+
+    const gap = familyMonthly - structuredMonthly;
+    const monthlyBurden = Math.min(familyMonthly, structuredMonthly);
+    const pressureRatio = income > 0 ? (monthlyBurden / income) * 100 : 0;
+    const structuredFixedOther = (familyKeyVisits * keyEscortHours * hourlyValue) + (structuredCoordHours * hourlyValue) + structuredTopUp + structuredFriction - structuredOffset;
+    const breakevenCost = appts > 0 ? Math.max(0, (familyMonthly - structuredFixedOther) / appts) : 0;
+
+    return { income, fixed, familyMonthly, structuredMonthly, gap, pressureRatio, breakevenCost };
+  };
+
+  const render = () => {
+    const r = read();
+    $('familyMonthly').textContent = money(r.familyMonthly);
+    $('structuredMonthly').textContent = money(r.structuredMonthly);
+    const absGap = Math.abs(r.gap);
+    $('monthlyGap').textContent = money(absGap);
+    $('gapLabel').textContent = absGap < 1 ? 'Both routes are essentially equal on the current assumptions.' : (r.gap < 0 ? 'The family-managed route is cheaper on current assumptions.' : 'The structured route is cheaper on current assumptions.');
+    $('pressureRatio').textContent = `${r.pressureRatio.toFixed(1)}%`;
+    $('breakevenCost').textContent = money(r.breakevenCost);
+    let note = 'Use the lower monthly number as a starting point, not the conclusion.';
+    if (r.familyMonthly + r.fixed > r.income && r.structuredMonthly + r.fixed > r.income) {
+      note = 'Both routes appear to run beyond the current household structure. The next question may be reserve design, sibling sharing, fewer low-value trips, or a more deliberate follow-up model.';
+    } else if (r.gap < 0) {
+      note = 'The family-managed route is cheaper on current assumptions. Now test whether the same people can keep carrying escort time and admin load without work or reliability damage.';
+    } else if (r.gap > 0) {
+      note = 'The structured route is cheaper on current assumptions. That usually means the household has already been subsidising follow-up with unpaid labour and rescheduling drag.';
+    }
+    $('resultNote').textContent = note;
+  };
+
+  document.querySelectorAll('input').forEach((el) => el.addEventListener('input', render));
+  render();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

@@ -1328,6 +1328,13 @@
   },
   "new": [
     {
+      "url": "/appointment-and-transport-burden-calculator-singapore.html",
+      "title": "Appointment and Transport Burden Calculator Singapore (2026): Compare Ad-Hoc Family Follow-Up Against a More Structured Support Model Before It Starts Running the Household",
+      "desc": "Compare the monthly burden of ad-hoc family-managed appointments against a more structured support model after transport, escort time, coordination drag, and missed-follow-up friction are counted.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html",
       "title": "Adult Day Care vs Keep-at-Home Cost Calculator Singapore (2026): Compare Structured Daytime Care Against the Hidden Household Cost of Keeping Everything at Home",
       "desc": "Compare adult day care against keeping an aging parent at home after sessions, transport, lost work flexibility, respite, and hidden support strain are counted.",
@@ -1387,13 +1394,6 @@
       "url": "/early-appetite-decline-vs-waiting-for-visible-weight-loss-with-aging-parents-singapore.html",
       "title": "Early Appetite Decline vs Waiting for Visible Weight Loss With Aging Parents in Singapore (2026)",
       "desc": "Early appetite decline vs waiting for visible weight loss with aging parents in Singapore: decide wh",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-continence-decline-vs-waiting-for-a-major-accident-with-aging-parents-singapore.html",
-      "title": "Early Continence Decline vs Waiting for a Major Accident With Aging Parents in Singapore (2026)",
-      "desc": "Early continence decline vs waiting for a major accident with aging parents in Singapore: decide whe",
       "cluster": "family",
       "clusterLabel": "Family"
     }
