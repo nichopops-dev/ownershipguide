@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0256
+> Last updated: March 2026 · Based on repo v0257
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0256
+**Current version:** v0257
 
 ### Key files
 | File | Purpose |
@@ -206,9 +206,11 @@ These were established over a long build history and must be followed:
 - ✅ Email capture live on all calculator pages (writes to Google Sheet, no 3rd party)
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
-**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, and end-of-life / palliative transition. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, end-of-life / palliative transition, mobility / accessibility, nutrition support, and medication management. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0257** — Aging parents × medication management / polypharmacy release. Added four family medication-management pages (early medication confusion vs waiting for a serious missed dose, pillbox and reminder system vs family medication supervision, polypharmacy review vs just adding more meds, and how supporting aging parents changes your medication-management decision order), strengthened contextual links across the aging-parents branch, and corrected the visible-body word-count shortfalls on the four v0256 nutrition pages.
+
 - **v0256** — Aging parents × nutrition / eating-support release. Added four family nutrition-support pages (early appetite decline vs waiting for visible weight loss, meal prep at home vs meal delivery, regular meals vs texture-modified meals for swallowing difficulty, and how supporting aging parents changes your nutrition-support decision order), strengthened contextual links across the aging-parents branch, and updated the mobility transport pages where they were touched during the release.
 
 - **v0255** — Aging parents × mobility decline / accessibility release. Added four family mobility pages (early fall risk vs waiting for a major fall, walker-friendly home vs wheelchair-ready home, medical escort and transport vs ad-hoc family driving, and how supporting aging parents changes your mobility-decline decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into fall-risk response, accessibility standard-setting, clinic-trip logistics, and mobility-stage sequencing before crisis.
