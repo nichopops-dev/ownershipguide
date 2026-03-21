@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0259
+> Last updated: March 2026 · Based on repo v0260
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0259
+**Current version:** v0260
 
 ### Key files
 | File | Purpose |
@@ -206,9 +206,11 @@ These were established over a long build history and must be followed:
 - ✅ Email capture live on all calculator pages (writes to Google Sheet, no 3rd party)
 - ✅ Dynamic homepage and hub pages pulling from featured.json (date-sorted, capped)
 
-**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, end-of-life / palliative transition, mobility / accessibility, nutrition support, and medication management. The aging-parents branch now also extends into sensory decline, hearing and vision support, environment-first communication / cue design for task reliability, and continence / toileting support across early detection, bathroom-fit design, cleanup systems, and sequencing of continence support before household strain turns into crisis. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
+**Current mode:** Content compounding. Investing / liquidity is now live as a growing pillar, deepened beyond its launch wedge to cover emergency-fund sizing, storage, sequencing, reserve design, drawdown rules, and rebuild logic. The aging-parents branch now extends across liquidity, protection, housing, transport, retirement, caregiving delivery, legal readiness, estate readiness, living arrangement, post-hospital transition, cognitive decline, financial safety, end-of-life / palliative transition, mobility / accessibility, nutrition support, and medication management. The aging-parents branch now also extends into sensory decline, hearing and vision support, environment-first communication / cue design for task reliability, continence / toileting support across early detection, bathroom-fit design, cleanup systems, and sequencing of continence support before household strain turns into crisis, plus overnight supervision and sleep-disruption planning across night waking, room design, coverage structure, and sequence-of-action before one bad night forces a rushed redesign. Protection / Insurance remains mature and bridge-heavy. The dynamic homepage remains powered by `featured.json`. Still not in cleanup mode and not in aesthetics mode.
 
 ### Version history
+- **v0260** — Aging parents × overnight supervision / sleep-disruption release. Added four family overnight-care pages (early night waking or wandering vs waiting for a serious overnight incident, bed alarm and room setup vs ad-hoc night checking, one exhausted caregiver vs shared overnight coverage, and how supporting aging parents changes your overnight supervision decision order), strengthened contextual links across the aging-parents branch, and extended the family cluster into night-risk planning, room-first overnight safety design, caregiver sleep protection, and earlier escalation before one overnight scare reshapes the whole household.
+
 - **v0259** — Aging parents × continence / toileting-support release. Added four family continence-support pages (early continence decline vs waiting for a major accident, bathroom setup and commode vs keeping a standard bathroom, pads and cleanup system vs pretending the issue is still occasional, and how supporting aging parents changes your continence-support decision order), strengthened contextual links across the aging-parents branch, and corrected the visible-body word-count shortfalls on five carryover sensory, nutrition, and medication pages.
 
 - **v0258** — Aging parents × sensory decline / hearing-and-vision release. Added four family sensory-support pages (early hearing or vision decline vs waiting for a major incident, hearing aids or vision support vs managing without it, better lighting and communication adjustments vs keeping old home routines, and how supporting aging parents changes your sensory-decline decision order), strengthened contextual links across the aging-parents branch, fixed the carryover comparison-hub omission for regular meals vs texture-modified meals, and corrected the visible-body word-count shortfalls on the two v0255 mobility pages.
