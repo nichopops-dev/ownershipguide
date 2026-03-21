@@ -1328,6 +1328,13 @@
   },
   "new": [
     {
+      "url": "/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html",
+      "title": "Adult Day Care vs Keep-at-Home Cost Calculator Singapore (2026): Compare Structured Daytime Care Against the Hidden Household Cost of Keeping Everything at Home",
+      "desc": "Compare adult day care against keeping an aging parent at home after sessions, transport, lost work flexibility, respite, and hidden support strain are counted.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/helper-vs-home-care-cost-calculator-singapore.html",
       "title": "Helper vs Home-Care Cost Calculator Singapore (2026): Compare the Live-In Route Against Formal Service Hours Before the Household Commits",
       "desc": "Compare the monthly burden of a helper route against home-care services after levy, insurance, service hours, transport gaps, and offsets.",
@@ -1387,13 +1394,6 @@
       "url": "/early-continence-decline-vs-waiting-for-a-major-accident-with-aging-parents-singapore.html",
       "title": "Early Continence Decline vs Waiting for a Major Accident With Aging Parents in Singapore (2026)",
       "desc": "Early continence decline vs waiting for a major accident with aging parents in Singapore: decide whe",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-fall-risk-vs-waiting-for-a-major-fall-with-aging-parents-singapore.html",
-      "title": "Early Fall Risk vs Waiting for a Major Fall With Aging Parents in Singapore (2026)",
-      "desc": "Early fall risk vs waiting for a major fall with aging parents in Singapore: decide when repeated in",
       "cluster": "family",
       "clusterLabel": "Family"
     }

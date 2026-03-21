@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Adult Day Care vs Keep-at-Home Cost Calculator Singapore (2026): Compare Structured Daytime Care Against the Hidden Household Cost of Keeping Everything at Home</title>
+<meta name="description" content="Compare the monthly household burden of adult day care versus keeping an aging parent at home in Singapore, including session cost, transport, lost work flexibility, respite, meal support, and backup strain."/>
+<link rel="canonical" href="https://ownershipguide.com/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this adult day care vs keep-at-home calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares the estimated monthly household burden of an adult day care route against a keep-at-home route after the user enters session frequency, transport cost, offsets, lost work flexibility, top-up care, meals, respite, and other support costs."}},{"@type":"Question","name":"Does the calculator assume adult day care is always more expensive?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator is input-driven. Adult day care creates a visible service bill, but keeping a parent at home can still become more expensive once lost work flexibility, unpaid supervision, transport, respite, and ad hoc top-up costs are counted honestly."}},{"@type":"Question","name":"Can I enter subsidised or grant-adjusted numbers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter the net household burden after subsidies, Home Caregiving Grant use, sibling cost sharing, employer flexibility, or other offsets. The tool is designed to show what the household still needs to carry."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is comparing only the adult day care invoice against zero. The more useful comparison is the real monthly burden of keeping a parent at home after lost work flexibility, unpaid supervision, backup support, and transport friction are counted."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Adult Day Care vs Keep-at-Home Cost Calculator</p>
+<h1>Adult Day Care vs Keep-at-Home Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a decision calculator, not a provider quote engine. Use it when the household is choosing between structured daytime care and keeping an aging parent at home during the day, and wants to compare the true monthly burden after transport, lost work flexibility, backup support, meal support, and hidden household strain are counted honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you have not framed the choice yet, start with <a href="/adult-day-care-vs-keeping-a-parent-at-home-singapore.html">adult day care vs keeping a parent at home</a>.</li>
+<li>If the real issue is the full monthly elder-support load, use the <a href="/aging-parents-caregiving-cost-calculator-singapore.html">aging parents caregiving cost calculator</a>.</li>
+<li>If the next branch is not day care but a helper or formal home-care route, use the <a href="/helper-vs-home-care-cost-calculator-singapore.html">helper vs home-care cost calculator</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home monthly cashflow if the goal is survivability, not theoretical affordability.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4500"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other structurally sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — adult day care</h3>
+    <div class="calc-row">
+      <div>
+        <label for="dayCareSessions">Adult day care sessions per week</label>
+        <input id="dayCareSessions" type="number" min="0" step="0.5" value="5"/>
+      </div>
+      <div>
+        <label for="dayCareSessionCost">Net cost per session after subsidy (SGD)</label>
+        <input id="dayCareSessionCost" type="number" min="0" step="1" value="45"/>
+        <p class="small muted" style="margin:6px 0 0">AIC notes day care starts from $55 per session before subsidy, with transport charged separately. Enter your expected net household rate.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="dayCareTransport">Monthly transport / escort cost for day care route (SGD)</label>
+        <input id="dayCareTransport" type="number" min="0" step="25" value="320"/>
+      </div>
+      <div>
+        <label for="dayCareMeals">Extra meals, diapers, activity add-ons, and small top-ups per month (SGD)</label>
+        <input id="dayCareMeals" type="number" min="0" step="25" value="120"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="dayCareOverflow">After-hours / weekend overflow support and backup per month (SGD)</label>
+        <input id="dayCareOverflow" type="number" min="0" step="25" value="180"/>
+      </div>
+      <div>
+        <label for="dayCareOffset">Offsets for day care route (HCG / sibling sharing / other support) (SGD)</label>
+        <input id="dayCareOffset" type="number" min="0" step="25" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — keep parent at home</h3>
+    <div class="calc-row">
+      <div>
+        <label for="lostWork">Monthly value of lost work flexibility or reduced hours (SGD)</label>
+        <input id="lostWork" type="number" min="0" step="50" value="600"/>
+      </div>
+      <div>
+        <label for="homeTopUp">Part-time helper / sitter / ad-hoc care top-up per month (SGD)</label>
+        <input id="homeTopUp" type="number" min="0" step="25" value="280"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="homeMeals">Meals, incontinence supplies, activity materials, and household support (SGD)</label>
+        <input id="homeMeals" type="number" min="0" step="25" value="220"/>
+      </div>
+      <div>
+        <label for="homeTransport">Extra transport / escort / clinic-trip burden created by keep-at-home route (SGD)</label>
+        <input id="homeTransport" type="number" min="0" step="25" value="180"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="homeRespite">Respite, backup, or burnout-relief spending per month (SGD)</label>
+        <input id="homeRespite" type="number" min="0" step="25" value="250"/>
+      </div>
+      <div>
+        <label for="homeOffset">Offsets for keep-at-home route (HCG / family sharing / other support) (SGD)</label>
+        <input id="homeOffset" type="number" min="0" step="25" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="muted">Adult day care route net monthly burden</div>
+      <div class="kpi" id="dayCareMonthly">$0</div>
+      <div class="small muted" id="dayCareBreakdown">Includes session cost, transport, top-ups, and overflow support after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Keep-at-home route net monthly burden</div>
+      <div class="kpi" id="homeMonthly">$0</div>
+      <div class="small muted" id="homeBreakdown">Includes lost work flexibility, top-up care, supplies, transport, and respite after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Monthly difference</div>
+      <div class="kpi" id="difference">$0</div>
+      <div class="small muted" id="differenceLabel">Waiting for inputs.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Cash left after route + fixed commitments</div>
+      <div class="kpi" id="cashLeft">$0</div>
+      <div class="small muted" id="cashLeftLabel">Use this to see whether the route preserves any real buffer.</div>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Breakeven check</strong>
+      <p id="breakevenText" style="margin:8px 0 0;">Breakeven read will appear here.</p>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Decision note</strong>
+      <p id="decisionNote" style="margin:8px 0 0;">Use this calculator to compare the full monthly system burden, not just the visible invoice.</p>
+    </div>
+  </div>
+</div>
+
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>Most families compare adult day care to “keeping a parent at home” as if one route has a bill and the other does not. That framing usually produces bad decisions. Adult day care has a visible invoice. Keeping a parent at home often hides the bill inside lost work flexibility, interrupted sleep, ad hoc top-up care, transport juggling, repeated meal support, and the quiet expectation that one family member will simply absorb the overflow. This calculator is built to force those hidden costs onto the page.</p>
+<p>The day-care route should not be read as just the centre fee. Once the household starts using day care, transport and escort patterns usually change. Even where transport is provided or separately chargeable, there is still setup friction around timing, after-hours support, and what happens on days the parent is tired, unwell, or unwilling to go. On the other hand, the keep-at-home route should not be read as free simply because the elder remains in the home. “No external invoice” often just means the household is financing the gap with adult-child labour and schedule erosion instead of cash.</p>
+<p>That is why the calculator asks for both visible and hidden inputs. Lost work flexibility is not perfectly measurable, but it is still real. If a son or daughter keeps leaving work early, turning down projects, or choosing a lower-flexibility income path because nobody wants to price the true care burden, the route is not cheap. It is just poorly accounted for. The purpose of the tool is to make the accounting honest enough that the route choice becomes clearer.</p>
+<p>Use this calculator alongside the broader aging-parent pages, not in isolation. If you already know the household may need <a href="/helper-vs-home-care-cost-calculator-singapore.html">a helper or home-care services</a>, or if the bigger issue is the full monthly support load rather than the daytime route, move between the tools. The calculator is most useful when it narrows a real decision, not when it is asked to replace judgment about safety, dignity, transport feasibility, or caregiver durability.</p>
+
+<h2>Why adult day care can look expensive even when it lowers total strain</h2>
+<p>Adult day care concentrates cost into a visible bill. That can feel jarring because families can point to a line item immediately. But concentrated cost is not always higher cost. Sometimes it is just more honest cost. When a parent spends structured time in a day-care setting, the household may gain back working hours, reliability, or calmer daytime routines. Even if the centre fee is meaningful, the family may still reduce hidden spending on ad hoc coverage, urgent ride-hailing, repeated leave days, and burnout-triggered overspending later.</p>
+<p>There is also a systems effect. A predictable daytime arrangement can improve the rest of the household plan. Meals become more schedulable. Clinic visits become easier to place around a known structure. The adult child who was previously stuck in constant daytime supervision may stop carrying the whole day inside every other decision. The calculator cannot measure emotional relief perfectly, but it can reveal whether the visible cost is still lower than the diffuse burden the household has been pretending is manageable.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If adult day care comes out cheaper, do not conclude immediately that the centre route is automatically better. Check whether the parent will realistically tolerate the setting, whether transport works, and whether after-hours support is still manageable. A financially neat day-care model can still fail if every morning becomes a battle or if the transport burden lands on the same exhausted person every day. What the result does tell you is that the household should stop assuming “keep them at home” is the cheaper default.</p>
+<p>If keeping the parent at home comes out cheaper, do not treat that as proof that day care is unnecessary. Look at what assumptions made the home route cheaper. Did you underprice lost work flexibility because no one wants to admit that work is being damaged? Did you leave respite at zero because the family has not paid for it yet, even though someone is visibly burning out? Did you exclude transport because the adult child keeps swallowing the hassle instead of booking support? A low home-route number built on denial is not a real result.</p>
+<p>The cash-left number matters more than the route difference on close calls. A route that is only slightly cheaper but leaves almost no buffer may still be the weaker system if one extra clinic burst, illness week, or backup-care gap will push the household into reactive spending. In those cases the family should usually pair this tool with the <a href="/aging-parents-caregiving-cost-calculator-singapore.html">aging parents caregiving cost calculator</a> so the day-care decision sits inside the broader monthly support picture, not outside it.</p>
+<p>The breakeven note is useful when the family is still treating the keep-at-home route as “mostly free.” It shows how much hidden at-home burden the household can carry before day care is no longer the more expensive route. Once that threshold is visible, it becomes easier to see whether the home arrangement is actually stable or just subsidised by one caregiver’s time and fatigue.</p>
+
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — the household has a full-time working daughter and a parent who mainly needs daytime structure.</strong> Day care may look expensive on a per-session basis. But once lost work flexibility, ride-hailing to patch daytime gaps, and periodic respite are counted honestly, the day-care route can come out cleaner and even cheaper. The more relevant question becomes whether transport and acceptance are workable, not whether the service bill exists.</p>
+<p><strong>Scenario 3 — the family keeps the parent at home because it feels kinder, but hidden support keeps creeping up.</strong> A few extra ride-hailing trips become weekly. One sibling starts paying for more top-up care. Another keeps taking urgent leave. Someone pays for meal delivery because cooking has become harder. The home route still feels “free” because nobody has named the budget. This calculator is built for exactly that drift. It turns the drift into a monthly number before the family normalises an unsustainable setup.</p>
+
+<h2>What this calculator cannot decide for you</h2>
+<p>This tool cannot tell you whether the parent will accept adult day care. It cannot tell you whether the household has the emotional stamina to continue a home arrangement that is already fraying. It cannot tell you whether the centre fit is right, whether peers and activities will help, or whether transport timing will become the real breaking point. Those are judgment questions, and they still matter.</p>
+<p>But the calculator can stop the household from making the wrong argument. The wrong argument is usually: “keeping a parent at home has no visible invoice, so it must be the cheaper baseline.” The more honest argument is: “what is the total household burden of each route after visible bills, hidden labour, and system fragility are counted?” Once the family answers that question properly, the next judgment call becomes much cleaner.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Using list prices instead of net household burden.</strong> Enter the amount you expect to carry after subsidies, grants, or sibling sharing.</li>
+<li><strong>Pricing day care but not pricing work disruption.</strong> Lost flexibility is one of the biggest hidden costs in the keep-at-home route.</li>
+<li><strong>Leaving respite at zero because it has not been paid for yet.</strong> A household still needs backup even if the current plan is to rely on goodwill.</li>
+<li><strong>Ignoring transport.</strong> Day care, clinic trips, and ad hoc pickup patterns often decide whether the route is truly durable.</li>
+<li><strong>Treating the lower number as the full answer.</strong> The lower-cost route can still be the weaker route if it depends on one person absorbing all the strain.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this adult day care vs keep-at-home calculator compare?</h3>
+<p>It compares the estimated monthly household burden of an adult day care route against a keep-at-home route after the user enters session frequency, transport cost, offsets, lost work flexibility, top-up care, meals, respite, and other support costs.</p>
+<h3>Does the calculator assume adult day care is always more expensive?</h3>
+<p>No. Adult day care creates a visible service bill, but keeping a parent at home can still become more expensive once lost work flexibility, unpaid supervision, transport, respite, and ad hoc top-up costs are counted honestly.</p>
+<h3>Can I enter subsidised or grant-adjusted numbers?</h3>
+<p>Yes. Enter the net household burden after subsidies, Home Caregiving Grant support, sibling cost sharing, or other offsets. The aim is to show what the household still needs to carry.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is comparing the adult day care invoice against zero. The more useful comparison is the full keep-at-home burden after hidden time loss, extra support, and backup costs are counted honestly.</p>
+
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/adult-day-care-vs-keeping-a-parent-at-home-singapore.html">Adult day care vs keeping a parent at home</a></li>
+<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost calculator</a></li>
+<li><a href="/helper-vs-home-care-cost-calculator-singapore.html">Helper vs home-care cost calculator</a></li>
+<li><a href="/one-exhausted-caregiver-vs-shared-overnight-coverage-for-aging-parents-singapore.html">One exhausted caregiver vs shared overnight coverage</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.aic.sg/care-services/day-care" rel="nofollow noopener" target="_blank">Agency for Integrated Care (AIC): Day Care</a></li>
+<li><a href="https://www.aic.sg/Financial-Assistance/Home-Caregiving-Grant" rel="nofollow noopener" target="_blank">AIC: Home Caregiving Grant</a></li>
+<li><a href="https://www.healthhub.sg/well-being-and-lifestyle/caregiving" rel="nofollow noopener" target="_blank">HealthHub: Caregiving in Singapore</a></li>
+<li><a href="https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/subsidy-framework-for-non-residential-long-term-care-services/" rel="nofollow noopener" target="_blank">Ministry of Health (MOH): Subsidy framework for non-residential long-term care services</a></li>
+<li><a href="https://www.healthhub.sg/support-and-tools/costs-and-financing/financial-schemes-caregivers-seniors" rel="nofollow noopener" target="_blank">HealthHub: Financial schemes for caregivers and seniors</a></li>
+</ul>
+<p><strong>Last updated:</strong> 21 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  const read = () => {
+    const income = num('householdIncome');
+    const fixed = num('existingCommitments');
+
+    const daySessions = num('dayCareSessions');
+    const dayCost = num('dayCareSessionCost');
+    const dayTransport = num('dayCareTransport');
+    const dayMeals = num('dayCareMeals');
+    const dayOverflow = num('dayCareOverflow');
+    const dayOffset = num('dayCareOffset');
+
+    const lostWork = num('lostWork');
+    const homeTopUp = num('homeTopUp');
+    const homeMeals = num('homeMeals');
+    const homeTransport = num('homeTransport');
+    const homeRespite = num('homeRespite');
+    const homeOffset = num('homeOffset');
+
+    const dayMonthly = Math.max(0, (daySessions * 4.33 * dayCost) + dayTransport + dayMeals + dayOverflow - dayOffset);
+    const homeMonthly = Math.max(0, lostWork + homeTopUp + homeMeals + homeTransport + homeRespite - homeOffset);
+    const diff = dayMonthly - homeMonthly;
+    const freeCashBase = Math.max(0, income - fixed);
+    const cheaper = diff < 0 ? 'day care' : (diff > 0 ? 'keep-at-home' : 'neither');
+    const cheaperAbs = Math.abs(diff);
+    const cashLeft = Math.max(0, income - fixed - Math.min(dayMonthly, homeMonthly));
+
+    $('dayCareMonthly').textContent = money(dayMonthly);
+    $('homeMonthly').textContent = money(homeMonthly);
+    $('difference').textContent = money(cheaperAbs);
+    $('differenceLabel').textContent = cheaper === 'neither'
+      ? 'Both routes currently land at the same monthly burden.'
+      : `${cheaper === 'day care' ? 'Adult day care' : 'Keep-at-home'} is lower by about ${money(cheaperAbs)} per month.`;
+    $('cashLeft').textContent = money(cashLeft);
+    $('cashLeftLabel').textContent = freeCashBase > 0
+      ? `Before adding care, the household has about ${money(freeCashBase)} of pre-care free cash each month.`
+      : 'Fixed commitments already consume the entire stated monthly income.';
+    $('dayCareBreakdown').textContent = `Sessions, transport, top-ups, and overflow support after offsets = ${money(dayMonthly)} a month.`;
+    $('homeBreakdown').textContent = `Lost flexibility, top-up care, supplies, transport, and respite after offsets = ${money(homeMonthly)} a month.`;
+    const breakeven = Math.max(0, dayMonthly);
+    $('breakevenText').textContent = `If the keep-at-home route is currently assumed to be “free”, it only needs to reach about ${money(breakeven)} per month before adult day care is no longer the more expensive route.`;
+
+    let note = '';
+    if (dayMonthly < homeMonthly && cashLeft < 1000) {
+      note = 'Adult day care is cheaper on these inputs, but the household still ends with a thin buffer. The next problem is route survivability, not just route choice.';
+    } else if (dayMonthly < homeMonthly) {
+      note = 'Adult day care is cheaper on these inputs. Check whether transport, parent acceptance, and after-hours coverage are operationally workable.';
+    } else if (homeMonthly < dayMonthly && cheaperAbs < 200) {
+      note = 'The home route is only slightly cheaper. This is usually where hidden labour and burnout risk matter more than the small monthly difference.';
+    } else if (homeMonthly < dayMonthly) {
+      note = 'Keeping the parent at home is cheaper on these inputs. Make sure the number includes real work disruption, backup coverage, and transport friction instead of leaving them invisible.';
+    } else {
+      note = 'Both routes cost about the same on these inputs. The better choice will usually depend on safety, tolerance, and caregiver durability.';
+    }
+    $('decisionNote').textContent = note;
+  };
+  document.querySelectorAll('input').forEach((el) => el.addEventListener('input', read));
+  read();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>
