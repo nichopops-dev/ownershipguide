@@ -50,7 +50,7 @@
     .then(function(data){
       if(!data||!data.cluster_pages||!data.cluster_pages['property']) return;
       // Pages already sorted by date descending in featured.json
-      var pinned=(data.pinned&&data.pinned['property'])||[];
+      var pinned=(data.pinned||[]).filter(function(pin){return pin.cluster==='property';});
       var recent=data.cluster_pages['property'].filter(function(p){
         return !pinned.some(function(pin){return pin.url===p.url;});
       }).slice(0,Math.max(0,MAX-pinned.length));
@@ -486,7 +486,7 @@
 <li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">Monetary Authority of Singapore (MAS)</a></li>
 <li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">Central Provident Fund Board (CPF)</a></li>
 </ul>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 19 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 21 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
 </section>
 </main>
 <div id="site-footer"></div>

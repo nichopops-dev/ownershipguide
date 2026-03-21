@@ -1040,6 +1040,38 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order",
+      "desc": "Appointment coordination sequence once follow-up load starts running the household.",
+      "cluster": "family",
+      "clusterLabel": "Family",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/ad-hoc-family-coordination-vs-shared-appointment-and-records-system-for-aging-parents-singapore.html",
+      "title": "Ad-Hoc Family Coordination vs Shared Appointment and Records System for Aging Parents",
+      "desc": "When informal chats stop being reliable enough for follow-up and handover.",
+      "cluster": "family",
+      "clusterLabel": "Family",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/one-fragmented-specialist-schedule-vs-consolidated-appointment-planning-for-aging-parents-singapore.html",
+      "title": "One Fragmented Specialist Schedule vs Consolidated Appointment Planning for Aging Parents",
+      "desc": "When scattered clinic dates start breaking transport, work, and caregiver bandwidth.",
+      "cluster": "family",
+      "clusterLabel": "Family",
+      "date": "2026-03-21"
+    },
+    {
+      "url": "/early-missed-appointments-vs-waiting-for-a-serious-follow-up-lapse-with-aging-parents-singapore.html",
+      "title": "Early Missed Appointments vs Waiting for a Serious Follow-Up Lapse With Aging Parents",
+      "desc": "Move before one skipped review turns into preventable deterioration.",
+      "cluster": "family",
+      "clusterLabel": "Family",
+      "date": "2026-03-21"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-overnight-supervision-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Overnight Supervision Decision Order in Singapore (2026): What Should Move Up the Queue Once Night Waking, Wandering, and Household Sleep Start Breaking the Old Setup?",
       "desc": "How supporting aging parents changes your overnight supervision decision order in Singapore: sequence pattern checks, safer room setup, response roles, respite, and escalation before one bad night forces a rushed redesign.",
@@ -1086,38 +1118,6 @@
       "date": "2026-03-21",
       "cluster": "family",
       "clusterLabel": "Family"
-    },
-    {
-      "url": "/bathroom-setup-and-commode-vs-keeping-a-standard-bathroom-for-aging-parents-singapore.html",
-      "title": "Bathroom Setup and Commode vs Keeping a Standard Bathroom for Aging Parents in Singapore (2026): When Does the Toilet Route Need Redesign Before Urgency, Transfers, and Night Waking Break the Old Setup?",
-      "desc": "Bathroom setup and commode vs keeping a standard bathroom for aging parents in Singapore: decide when transfer difficulty, urgency, and night toileting require a new layout instead of relying on the old bathroom.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-continence-decline-vs-waiting-for-a-major-accident-with-aging-parents-singapore.html",
-      "title": "Early Continence Decline vs Waiting for a Major Accident With Aging Parents in Singapore (2026): When Should Families Move Before ‘Occasional Leaks’ Turn Into Falls, Skin Problems, or an Overnight Care Crisis?",
-      "desc": "Early continence decline vs waiting for a major accident with aging parents in Singapore: decide when toileting problems, urgency, and cleanup strain should trigger earlier continence support instead of delayed reaction.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-sensory-decline-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Sensory-Decline Decision Order in Singapore (2026): What Should Move Up the Queue Once Hearing, Vision, and Everyday Cues Start Breaking the Old Setup?",
-      "desc": "How supporting aging parents changes your sensory-decline decision order in Singapore: sequence screening, task protection, environmental adjustment, aids, supervision, and escalation before hearing or vision loss distorts bigger family decisions.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/better-lighting-and-communication-adjustments-vs-keeping-old-home-routines-for-aging-parents-with-sensory-decline-singapore.html",
-      "title": "Better Lighting and Communication Adjustments vs Keeping Old Home Routines for Aging Parents With Sensory Decline in Singapore (2026): When Does the Environment Need to Change, Not Just the Parent?",
-      "desc": "Better lighting and communication adjustments vs keeping old home routines for aging parents with sensory decline in Singapore: decide when home cues, contrast, and speaking habits need redesign before safety and clarity keep slipping.",
-      "date": "2026-03-21",
-      "cluster": "family",
-      "clusterLabel": "Family"
     }
   ],
   "popular": [
@@ -1158,76 +1158,90 @@
       "clusterLabel": "Property"
     }
   ],
-  "pinned": {
-    "transport": [
-      {
-        "url": "/car-ownership-cost.html",
-        "title": "Cost of Owning a Car in Singapore",
-        "desc": "The 5-year cost model: depreciation, COE, insurance, running costs, and financing."
-      },
-      {
-        "url": "/car-vs-ride-hailing-cost.html",
-        "title": "Car vs Ride-Hailing in Singapore",
-        "desc": "When ownership beats ride-hailing and when it does not."
-      },
-      {
-        "url": "/motorcycle-ownership-cost-singapore.html",
-        "title": "Motorcycle Ownership Cost in Singapore",
-        "desc": "Full cost model for motorcycle ownership including COE, insurance, and maintenance."
-      }
-    ],
-    "property": [
-      {
-        "url": "/property-ownership-cost-singapore.html",
-        "title": "Property Ownership Cost in Singapore",
-        "desc": "The 5-year total exposure model: loan, duties, maintenance, and exit friction."
-      },
-      {
-        "url": "/rent-vs-buy-property-singapore.html",
-        "title": "Rent vs Buy Property in Singapore",
-        "desc": "Framework for deciding when ownership beats renting."
-      }
-    ],
-    "family": [
-      {
-        "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
-        "title": "How Much Does It Cost to Raise a Child in Singapore?",
-        "desc": "Long-horizon planning framework from birth through university."
-      },
-      {
-        "url": "/cost-of-having-a-baby-singapore.html",
-        "title": "Cost of Having a Baby in Singapore",
-        "desc": "Pregnancy, delivery, and first-year cost framework."
-      },
-      {
-        "url": "/how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html",
-        "title": "How Supporting Aging Parents Changes Your Cash Buffer Plan",
-        "desc": "Reserve design when eldercare obligations change household fragility."
-      }
-    ],
-    "protection": [
-      {
-        "url": "/how-much-life-insurance-do-you-need-singapore.html",
-        "title": "How Much Life Insurance Do You Need?",
-        "desc": "A protection-gap framework for real household obligations."
-      },
-      {
-        "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
-        "title": "How Much Critical Illness Cover Do You Need?",
-        "desc": "Sizing CI insurance based on your household obligations."
-      }
-    ],
-    "investing": [
-      {
-        "url": "/how-much-emergency-fund-do-you-need-singapore.html",
-        "title": "How Much Emergency Fund Do You Need?",
-        "desc": "A liquidity buffer framework for real household fragility."
-      },
-      {
-        "url": "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html",
-        "title": "When to Invest vs Build Your Emergency Fund First",
-        "desc": "The sequencing decision between investing and liquidity."
-      }
-    ]
-  }
+  "pinned": [
+    {
+      "url": "/car-ownership-cost.html",
+      "title": "Cost of Owning a Car in Singapore",
+      "desc": "The 5-year cost model: depreciation, COE, insurance, running costs, and financing.",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
+    },
+    {
+      "url": "/car-vs-ride-hailing-cost.html",
+      "title": "Car vs Ride-Hailing in Singapore",
+      "desc": "When ownership beats ride-hailing and when it does not.",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
+    },
+    {
+      "url": "/motorcycle-ownership-cost-singapore.html",
+      "title": "Motorcycle Ownership Cost in Singapore",
+      "desc": "Full cost model for motorcycle ownership including COE, insurance, and maintenance.",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
+    },
+    {
+      "url": "/property-ownership-cost-singapore.html",
+      "title": "Property Ownership Cost in Singapore",
+      "desc": "The 5-year total exposure model: loan, duties, maintenance, and exit friction.",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/rent-vs-buy-property-singapore.html",
+      "title": "Rent vs Buy Property in Singapore",
+      "desc": "Framework for deciding when ownership beats renting.",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/how-much-does-it-cost-to-raise-a-child-singapore.html",
+      "title": "How Much Does It Cost to Raise a Child in Singapore?",
+      "desc": "Long-horizon planning framework from birth through university.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/cost-of-having-a-baby-singapore.html",
+      "title": "Cost of Having a Baby in Singapore",
+      "desc": "Pregnancy, delivery, and first-year cost framework.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/how-supporting-aging-parents-changes-your-cash-buffer-plan-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Cash Buffer Plan",
+      "desc": "Reserve design when eldercare obligations change household fragility.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/how-much-life-insurance-do-you-need-singapore.html",
+      "title": "How Much Life Insurance Do You Need?",
+      "desc": "A protection-gap framework for real household obligations.",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-much-critical-illness-insurance-do-you-need-singapore.html",
+      "title": "How Much Critical Illness Cover Do You Need?",
+      "desc": "Sizing CI insurance based on your household obligations.",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/how-much-emergency-fund-do-you-need-singapore.html",
+      "title": "How Much Emergency Fund Do You Need?",
+      "desc": "A liquidity buffer framework for real household fragility.",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html",
+      "title": "When to Invest vs Build Your Emergency Fund First",
+      "desc": "The sequencing decision between investing and liquidity.",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    }
+  ]
 }

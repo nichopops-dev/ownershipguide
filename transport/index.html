@@ -52,7 +52,7 @@
     .then(function(data){
       if(!data||!data.cluster_pages||!data.cluster_pages['transport']) return;
       // Pages already sorted by date descending in featured.json
-      var pinned=(data.pinned&&data.pinned['transport'])||[];
+      var pinned=(data.pinned||[]).filter(function(pin){return pin.cluster==='transport';});
       var recent=data.cluster_pages['transport'].filter(function(p){
         return !pinned.some(function(pin){return pin.url===p.url;});
       }).slice(0,Math.max(0,MAX-pinned.length));
@@ -512,7 +512,7 @@
 <li><a href="https://onemotoring.lta.gov.sg/" rel="nofollow noopener" target="_blank">OneMotoring</a></li>
 <li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">Inland Revenue Authority of Singapore (IRAS)</a></li>
 </ul>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 19 Mar 2026· <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 21 Mar 2026· <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
 </section>
 </main>
 <div id="site-footer"></div>
