@@ -1328,6 +1328,13 @@
   },
   "new": [
     {
+      "url": "/overnight-supervision-burden-calculator-singapore.html",
+      "title": "Overnight Supervision Burden Calculator Singapore (2026): Compare Ad-Hoc Night Checking Against a More Structured Overnight-Coverage Model Before One Bad Month Reshapes the Household",
+      "desc": "Compare the monthly burden of ad-hoc night checking against a more structured overnight-coverage route after sleep loss, setup cost, spillover, and respite support are counted honestly.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/appointment-and-transport-burden-calculator-singapore.html",
       "title": "Appointment and Transport Burden Calculator Singapore (2026): Compare Ad-Hoc Family Follow-Up Against a More Structured Support Model Before It Starts Running the Household",
       "desc": "Compare the monthly burden of ad-hoc family-managed appointments against a more structured support model after transport, escort time, coordination drag, and missed-follow-up friction are counted.",
@@ -1387,13 +1394,6 @@
       "url": "/cpf-nomination-for-aging-parents-singapore.html",
       "title": "CPF Nomination for Aging Parents in Singapore (2026)",
       "desc": "CPF nomination for aging parents in Singapore: why families should review this separate instruction ",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-appetite-decline-vs-waiting-for-visible-weight-loss-with-aging-parents-singapore.html",
-      "title": "Early Appetite Decline vs Waiting for Visible Weight Loss With Aging Parents in Singapore (2026)",
-      "desc": "Early appetite decline vs waiting for visible weight loss with aging parents in Singapore: decide wh",
       "cluster": "family",
       "clusterLabel": "Family"
     }

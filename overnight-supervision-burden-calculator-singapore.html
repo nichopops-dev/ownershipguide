@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Overnight Supervision Burden Calculator Singapore (2026): Compare Ad-Hoc Night Checking Against a More Structured Overnight-Coverage Model Before One Bad Month Reshapes the Household</title>
+<meta name="description" content="Compare the monthly burden of ad-hoc family-managed night checking against a more structured overnight-coverage model for aging parents in Singapore after sleep loss, setup cost, respite, and spillover strain are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/overnight-supervision-burden-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this overnight supervision burden calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares an ad-hoc family night-checking route against a more structured overnight-coverage route after sleep disruption, unpaid caregiver time, setup cost, respite support, and spillover strain are entered."}},{"@type":"Question","name":"Does a structured route always mean paid overnight help every night?","acceptedAnswer":{"@type":"Answer","text":"No. A structured route can be a mix of room setup, bed-exit alerts, shared family rotation, planned respite nights, and only limited paid support. The point is to replace guesswork with a repeatable coverage design."}},{"@type":"Question","name":"Why should the household price lost sleep if no cash changes hands?","acceptedAnswer":{"@type":"Answer","text":"Because overnight strain still consumes real household capacity. Fatigue can reduce work reliability, patience, supervision quality, and next-day decision-making even if no invoice is issued."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is entering only direct paid support cost while treating repeated wake-ups, next-day productivity loss, and crisis spillover as zero. That usually makes the ad-hoc route look cheaper than it really is."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Overnight Supervision Burden Calculator</p>
+<h1>Overnight Supervision Burden Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This calculator is for households supporting aging parents whose nights are no longer quiet. It compares an ad-hoc night-checking route against a more structured overnight-coverage model so the household can see whether it is still carrying a manageable night burden or whether sleep loss has already become a design problem.</p>
+
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you have not framed the overnight problem yet, start with <a href="/early-night-waking-or-wandering-vs-waiting-for-a-serious-overnight-incident-with-aging-parents-singapore.html">early night waking or wandering vs waiting for a serious overnight incident</a>.</li>
+<li>If the real question is room design and alerting, read <a href="/bed-alarm-and-room-setup-vs-ad-hoc-night-checking-for-aging-parents-singapore.html">bed alarm and room setup vs ad-hoc night checking</a>.</li>
+<li>If the deeper failure is caregiver depletion, read <a href="/one-exhausted-caregiver-vs-shared-overnight-coverage-for-aging-parents-singapore.html">one exhausted caregiver vs shared overnight coverage</a>.</li>
+<li>If you need the wider planning frame, pair this with <a href="/aging-parents-caregiving-cost-calculator-singapore.html">aging parents caregiving cost calculator</a> and <a href="/helper-vs-home-care-cost-calculator-singapore.html">helper vs home-care cost calculator</a>.</li>
+</ul>
+</div>
+
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home cashflow if the goal is monthly survivability rather than theoretical affordability.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4600"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — ad-hoc night checking</h3>
+    <div class="calc-row">
+      <div>
+        <label for="incidentNights">Nights per month with meaningful checking / response</label>
+        <input id="incidentNights" type="number" min="0" step="1" value="18"/>
+      </div>
+      <div>
+        <label for="checksPerNight">Average checks or interventions per affected night</label>
+        <input id="checksPerNight" type="number" min="0" step="1" value="3"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="minutesPerCheck">Average minutes lost per check or response</label>
+        <input id="minutesPerCheck" type="number" min="0" step="5" value="18"/>
+      </div>
+      <div>
+        <label for="hourlyValue">Estimated value of one caregiver hour (SGD)</label>
+        <input id="hourlyValue" type="number" min="0" step="1" value="22"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="nextDayLoss">Next-day productivity / recovery loss on each affected night (SGD)</label>
+        <input id="nextDayLoss" type="number" min="0" step="5" value="24"/>
+        <p class="small muted" style="margin:6px 0 0">Use a conservative number if sleep loss reduces work reliability, flexibility, or household functioning the next day.</p>
+      </div>
+      <div>
+        <label for="adHocSupplies">Monthly ad-hoc overnight supplies / taxi / incidental cost (SGD)</label>
+        <input id="adHocSupplies" type="number" min="0" step="5" value="40"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="adHocSpillover">Monthly spillover cost from one bad night (SGD)</label>
+        <input id="adHocSpillover" type="number" min="0" step="10" value="120"/>
+        <p class="small muted" style="margin:6px 0 0">Use this for occasional emergency transport, urgent replacement care, late clinic rescheduling, or cleanup overflow after a difficult night.</p>
+      </div>
+      <div>
+        <label for="adHocOffset">Monthly offsets on ad-hoc route (SGD)</label>
+        <input id="adHocOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — structured overnight coverage</h3>
+    <div class="calc-row">
+      <div>
+        <label for="setupSpread">Monthly spread of room-setup / alert / safety design cost (SGD)</label>
+        <input id="setupSpread" type="number" min="0" step="5" value="45"/>
+      </div>
+      <div>
+        <label for="sharedCoverageCost">Monthly cost of shared family coverage, respite, or paid overnight top-up (SGD)</label>
+        <input id="sharedCoverageCost" type="number" min="0" step="10" value="320"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredIncidentNights">Nights per month family still expects to intervene</label>
+        <input id="structuredIncidentNights" type="number" min="0" step="1" value="8"/>
+      </div>
+      <div>
+        <label for="structuredChecks">Average checks or interventions on those nights</label>
+        <input id="structuredChecks" type="number" min="0" step="1" value="2"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredMinutes">Average minutes lost per structured-route intervention</label>
+        <input id="structuredMinutes" type="number" min="0" step="5" value="12"/>
+      </div>
+      <div>
+        <label for="structuredNextDayLoss">Next-day loss on each affected structured-route night (SGD)</label>
+        <input id="structuredNextDayLoss" type="number" min="0" step="5" value="10"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="structuredSpillover">Monthly spillover / failure cost on structured route (SGD)</label>
+        <input id="structuredSpillover" type="number" min="0" step="10" value="35"/>
+      </div>
+      <div>
+        <label for="structuredOffset">Monthly offsets on structured route (SGD)</label>
+        <input id="structuredOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="small muted">Monthly burden — ad-hoc night checking</div>
+      <div class="kpi" id="routeA">$0</div>
+      <div class="small muted" id="routeAText">0% of remaining monthly capacity</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="small muted">Monthly burden — structured overnight route</div>
+      <div class="kpi" id="routeB">$0</div>
+      <div class="small muted" id="routeBText">0% of remaining monthly capacity</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="small muted">Difference</div>
+      <div class="kpi" id="delta">$0</div>
+      <div class="small muted" id="deltaText">Waiting</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px">
+      <div class="small muted">Break-even monthly structured-support cost</div>
+      <div class="kpi" id="breakeven">$0</div>
+      <div class="small muted">Rough ceiling for setup + shared coverage before both routes cost about the same</div>
+    </div>
+    <div class="note" id="verdict" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>The real question is rarely whether the parent still wakes at night. The real question is whether the household is still running a light, absorbable night pattern, or whether overnight instability has already become a structural burden that is being disguised as love, habit, or temporary inconvenience.</p>
+<p>This calculator forces the family to price the pieces that usually stay invisible. That includes repeated wake-ups, slow return-to-sleep time, next-day fog, one bad-night spillover, and the hidden cost of a route that depends on one adult remaining semi-awake for much of the month. Most families count direct paid support carefully and then treat sleep loss as free. The tool exists to reverse that mistake.</p>
+<p>It also helps households compare the ad-hoc route against a more deliberate overnight design. That design does not have to mean paying for a full overnight shift. It can mean simpler changes: a safer room layout, shorter toilet route, bed-exit alert, agreed family rotation, pre-planned respite nights, or a small paid top-up when the family can no longer absorb the worst nights alone. The point is not to maximize outsourcing. It is to replace improvisation with a route the household can sustain.</p>
+
+<h2>Why night burden is often mispriced</h2>
+<p>Night burden is mispriced because it arrives as sleep fragmentation, not as a single invoice. A daughter wakes three times, but tells herself each episode was “only a few minutes.” A son works the next day, but he is slower, more irritable, and less patient because he never returned to deep sleep. The family still thinks costs are low because nothing large was charged to a card. In reality, the route is already consuming attention, resilience, and decision quality.</p>
+<p>That hidden cost matters because night instability tends to contaminate everything else. A tired caregiver is worse at medication supervision, transport planning, communication, and patience. A household that is underslept usually becomes more reactive everywhere. That is why overnight structure often deserves attention earlier than families expect. It is not just another care task. It affects the system that carries every other task.</p>
+
+<h2>What belongs in a structured overnight route</h2>
+<p>A structured route can be small or large. In one home, it may simply mean improving lighting, keeping a commode closer, reducing clutter, using a bed alarm, and assigning clear responsibility for first response. In another, it may mean a helper takes some nights, siblings rotate weekends, or the household budgets for intermittent respite after clusters of difficult nights. The point is not to copy another family’s arrangement. The point is to stop relying on guesswork once the old pattern is already draining too much sleep.</p>
+<p>That is why this calculator asks for setup spread and shared-coverage cost separately. A room redesign that reduces nightly interventions is fundamentally different from paying for coverage, but both can reduce burden. When the household can see those components clearly, it can decide whether the problem is mostly environment, mostly manpower, or both.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the ad-hoc route still comes out cheaper, do not conclude automatically that the household should stay informal. Look at how the result was produced. If next-day loss is entered unrealistically low, or if spillover is treated as zero because the household wants to believe bad nights are rare, the result will flatter the ad-hoc route. The cheaper outcome only matters if the route is also durable and safe.</p>
+<p>If the structured route comes out cheaper, that does not automatically mean the household has failed. It may simply mean the night pattern has matured into a real care-system problem. That is often the moment when families realise they have been financing overnight care with invisible fatigue. Structure can then stop looking like “extra cost” and start looking like the conversion of hidden cost into a more stable arrangement.</p>
+<p>The break-even figure is useful when the family believes any overnight support is obviously too expensive. It shows how high the combined setup and structured-support bill could rise before it merely equals the hidden burden of staying ad-hoc. If the household’s realistic structured route sits below that line, then the informal route is probably more expensive than it feels. If the structured route sits above it, the family may still choose to stay informal for now, but it should do so knowingly and with a defined escalation trigger.</p>
+
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — intermittent waking, one resilient caregiver, low spillover.</strong> The ad-hoc route may still be acceptable when night incidents are genuinely limited, next-day impairment is modest, and the environment is already relatively safe. In that case the calculator may confirm that the household is still within a manageable range. The lesson is not that no change is ever needed. It is that the old route still fits present reality.</p>
+<p><strong>Scenario 2 — repeated toilet rushes, confusion, or wandering risk.</strong> This is where structure usually starts to win. Once the household prices lost sleep honestly and adds the occasional bad-night spillover, ad-hoc checking often stops looking cheap. A small monthly setup spread plus some planned coverage can become the more sustainable option even before a major incident happens.</p>
+<p><strong>Scenario 3 — one adult silently absorbing every bad night.</strong> This is the most dangerous pattern because the household often underestimates its cost. Everyone else sees the system as “working” because one person keeps paying the hidden bill in fatigue. The calculator helps make that bill visible. Once the family sees it, shared coverage or respite stops looking indulgent and starts looking like system maintenance.</p>
+
+<h2>What the calculator cannot decide for you</h2>
+<p>This tool cannot decide whether the parent will accept a new room arrangement, whether family dynamics will support a fair overnight rotation, or whether a helper or respite route is emotionally acceptable right now. It also cannot predict whether the parent’s night pattern will intensify suddenly after illness, medication change, or delirium. Those are judgment questions.</p>
+<p>But the calculator can stop the household from making the wrong argument. The wrong argument is usually, “We are still handling the nights ourselves, so the cost must still be low.” The more useful argument is, “What is the monthly burden of our current night route after time loss, fatigue, spillover, and basic structure are actually counted?” Once that answer is visible, the next decision is usually cleaner.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Treating sleep loss as free.</strong> If next-day loss is left at zero, the ad-hoc route will usually look too cheap.</li>
+<li><strong>Pricing only paid support.</strong> Families often compare a formal invoice against an informal route that still consumes dozens of hidden hours.</li>
+<li><strong>Assuming structure means full outsourcing.</strong> Many households will still keep key nights or emergency response in-family. Model that route honestly.</li>
+<li><strong>Ignoring one bad-night spillover.</strong> Emergency transport, rushed cleanup, clinic disruption, or a caregiver crash day rarely happens every night, but it still belongs in the monthly burden.</li>
+<li><strong>Letting guilt override design.</strong> Night arrangements should be judged by safety and sustainability, not by whether invisible sacrifice feels virtuous.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this overnight supervision burden calculator compare?</h3>
+<p>It compares an ad-hoc family night-checking route against a more structured overnight-coverage route after sleep disruption, unpaid caregiver time, setup cost, respite support, and spillover strain are entered.</p>
+<h3>Does a structured route always mean paid overnight help every night?</h3>
+<p>No. A structured route can be a mix of room setup, bed-exit alerts, shared family rotation, planned respite nights, and only limited paid support. The point is to replace guesswork with a repeatable coverage design.</p>
+<h3>Why should the household price lost sleep if no cash changes hands?</h3>
+<p>Because overnight strain still consumes real household capacity. Fatigue can reduce work reliability, patience, supervision quality, and next-day decision-making even if no invoice is issued.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is entering only direct paid support cost while treating repeated wake-ups, next-day productivity loss, and crisis spillover as zero. That usually makes the ad-hoc route look cheaper than it really is.</p>
+
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/early-night-waking-or-wandering-vs-waiting-for-a-serious-overnight-incident-with-aging-parents-singapore.html">Early night waking or wandering vs waiting for a serious overnight incident</a></li>
+<li><a href="/bed-alarm-and-room-setup-vs-ad-hoc-night-checking-for-aging-parents-singapore.html">Bed alarm and room setup vs ad-hoc night checking</a></li>
+<li><a href="/one-exhausted-caregiver-vs-shared-overnight-coverage-for-aging-parents-singapore.html">One exhausted caregiver vs shared overnight coverage</a></li>
+<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost calculator</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://aic.sg/Caregiving-Support/Making-Your-Home-Safe" rel="nofollow noopener" target="_blank">Agency for Integrated Care: Making Your Home Safe</a></li>
+<li><a href="https://www.healthhub.sg/well-being-and-lifestyle/caregiving/managing-wandering-behaviour-in-dementia" rel="nofollow noopener" target="_blank">HealthHub: Managing Wandering Behaviour in Dementia</a></li>
+<li><a href="https://www.aic.sg/care-services/nursing-home-respite-care/" rel="nofollow noopener" target="_blank">Agency for Integrated Care: Nursing Home Respite Care</a></li>
+<li><a href="https://www.aic.sg/care-services/home-personal-care" rel="nofollow noopener" target="_blank">Agency for Integrated Care: Home Personal Care</a></li>
+<li><a href="https://www.moh.gov.sg/ageing-well/caregiving/" rel="nofollow noopener" target="_blank">Ministry of Health: Caregiving</a></li>
+</ul>
+<p><strong>Last updated:</strong> 22 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+
+  function compute() {
+    const income = num('householdIncome');
+    const commitments = num('existingCommitments');
+    const remaining = Math.max(0, income - commitments);
+
+    const incidentNights = num('incidentNights');
+    const checksPerNight = num('checksPerNight');
+    const minutesPerCheck = num('minutesPerCheck');
+    const hourlyValue = num('hourlyValue');
+    const nextDayLoss = num('nextDayLoss');
+    const adHocSupplies = num('adHocSupplies');
+    const adHocSpillover = num('adHocSpillover');
+    const adHocOffset = num('adHocOffset');
+
+    const structuredIncidentNights = num('structuredIncidentNights');
+    const structuredChecks = num('structuredChecks');
+    const structuredMinutes = num('structuredMinutes');
+    const structuredNextDayLoss = num('structuredNextDayLoss');
+    const setupSpread = num('setupSpread');
+    const sharedCoverageCost = num('sharedCoverageCost');
+    const structuredSpillover = num('structuredSpillover');
+    const structuredOffset = num('structuredOffset');
+
+    const adHocTimeCost = incidentNights * checksPerNight * (minutesPerCheck / 60) * hourlyValue;
+    const adHocFatigueCost = incidentNights * nextDayLoss;
+    const routeA = Math.max(0, adHocTimeCost + adHocFatigueCost + adHocSupplies + adHocSpillover - adHocOffset);
+
+    const structuredTimeCost = structuredIncidentNights * structuredChecks * (structuredMinutes / 60) * hourlyValue;
+    const structuredFatigueCost = structuredIncidentNights * structuredNextDayLoss;
+    const routeB = Math.max(0, setupSpread + sharedCoverageCost + structuredTimeCost + structuredFatigueCost + structuredSpillover - structuredOffset);
+
+    const delta = Math.abs(routeA - routeB);
+    const cheaper = routeA < routeB ? 'Ad-hoc night checking' : (routeB < routeA ? 'Structured overnight route' : 'Both routes');
+    const cheaperDelta = routeA < routeB ? routeB - routeA : routeA - routeB;
+
+    const adHocPercent = remaining > 0 ? (routeA / remaining) * 100 : 0;
+    const structuredPercent = remaining > 0 ? (routeB / remaining) * 100 : 0;
+
+    const breakeven = Math.max(0, routeA - (structuredTimeCost + structuredFatigueCost + structuredSpillover - structuredOffset));
+
+    $('routeA').textContent = money(routeA);
+    $('routeAText').textContent = remaining > 0 ? `${adHocPercent.toFixed(1)}% of remaining monthly capacity` : 'No remaining monthly capacity entered';
+    $('routeB').textContent = money(routeB);
+    $('routeBText').textContent = remaining > 0 ? `${structuredPercent.toFixed(1)}% of remaining monthly capacity` : 'No remaining monthly capacity entered';
+    $('delta').textContent = money(delta);
+    $('deltaText').textContent = delta === 0 ? 'Both routes are about equal' : `${cheaper} is cheaper by about ${money(cheaperDelta)} per month`;
+    $('breakeven').textContent = money(breakeven);
+
+    let verdict = '';
+    if (routeA + 1 < routeB) {
+      verdict = `<strong>Reading:</strong> On these assumptions, the ad-hoc route is still cheaper. That only supports staying informal if the night pattern is also durable. Check whether you have understated fatigue, spillover, or the cost of one caregiver sleeping lightly for most of the month.`;
+    } else if (routeB + 1 < routeA) {
+      verdict = `<strong>Reading:</strong> On these assumptions, a more structured overnight route is already cheaper. That usually means the household is paying more than it realises in hidden fatigue and unreliable sleep. The next question is which part of structure should move first: room setup, shared coverage, respite, or limited paid support.`;
+    } else {
+      verdict = `<strong>Reading:</strong> The routes are close. That usually means judgment matters more than arithmetic alone. Use safety, caregiver sustainability, and the likelihood of one bad night triggering a bigger crisis to decide which side of the line you prefer.`;
+    }
+    if (remaining > 0 && Math.max(routeA, routeB) / remaining > 0.35) {
+      verdict += ` <br/><br/><strong>Pressure flag:</strong> The heavier route is consuming more than roughly one-third of remaining monthly capacity. That is usually a sign the household needs either stronger structure, more external support, or a more realistic reallocation of who carries the night burden.`;
+    }
+    $('verdict').innerHTML = verdict;
+  }
+
+  document.querySelectorAll('input').forEach(el => el.addEventListener('input', compute));
+  compute();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>
