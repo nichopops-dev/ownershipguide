@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Helper vs Home-Care Cost Calculator Singapore (2026): Compare the Live-In Route Against Formal Service Hours Before the Household Commits</title>
+<meta name="description" content="Compare the monthly household cost of a live-in helper versus home-care services in Singapore, including levy, insurance, agency spread, hourly service load, transport gaps, and reserve pressure."/>
+<link rel="canonical" href="https://ownershipguide.com/helper-vs-home-care-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this helper vs home-care calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares the estimated monthly household burden of a live-in helper route against a home-care-services route after the user enters salary, levy, insurance, setup spread, hourly service load, transport gaps, and any offsets or grants."}},{"@type":"Question","name":"Does the calculator assume the helper route is always cheaper?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator is input-driven. A helper can look cheaper on sticker price but still leave large supervision, housing, and employer-management burden. Home-care services can also look precise but become expensive if many service hours and transport gaps have to be layered in."}},{"@type":"Question","name":"Can this calculator be used after subsidies or grants?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter the net household cost after any Home Caregiving Grant, levy concession, sibling cost-sharing, or other support. The tool is designed for planning the household burden that remains."}},{"@type":"Question","name":"What is the most common mistake when comparing helper and home-care services?","acceptedAnswer":{"@type":"Answer","text":"Most families compare only the headline monthly bill. The more useful comparison is total household burden after levy, insurance, agency costs, transport gaps, night coverage, backup care, and leftover unpaid coordination work are counted."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Helper vs Home-Care Cost Calculator</p>
+<h1>Helper vs Home-Care Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a decision calculator, not a provider quote engine. Use it when the household is comparing a live-in helper route against formal home-care services and wants to know which model leaves the lower monthly burden after levy, insurance, setup spread, service hours, transport gaps, and remaining coordination cost are counted honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you have not framed the decision properly yet, start with <a href="/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html">hire a helper vs use home-care services for aging parents</a>.</li>
+<li>If you still need the broader household budget first, use the <a href="/aging-parents-caregiving-cost-calculator-singapore.html">aging parents caregiving cost calculator</a>.</li>
+<li>If transport and escort burden keep distorting the care model, read <a href="/medical-escort-and-transport-vs-ad-hoc-family-driving-for-aging-parents-singapore.html">medical escort and transport vs ad-hoc family driving</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="householdIncome">Household net monthly income (SGD)</label>
+        <input id="householdIncome" type="number" min="0" step="100" value="9000"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home cashflow if the goal is monthly survivability rather than theoretical affordability.</p>
+      </div>
+      <div>
+        <label for="existingCommitments">Existing monthly fixed commitments (SGD)</label>
+        <input id="existingCommitments" type="number" min="0" step="100" value="4500"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, child costs, debt, insurance, and other structurally sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — live-in helper</h3>
+    <div class="calc-row">
+      <div>
+        <label for="helperSalary">Helper monthly salary (SGD)</label>
+        <input id="helperSalary" type="number" min="0" step="50" value="750"/>
+      </div>
+      <div>
+        <label for="helperLevy">Helper monthly levy (SGD)</label>
+        <input id="helperLevy" type="number" min="0" step="10" value="300"/>
+        <p class="small muted" style="margin:6px 0 0">Use your actual levy. MOM states the standard MDW levy is $300 per month, while eligible households may qualify for concessionary rates. Enter your net rate.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperFood">Food, utilities, supplies, and household running cost for helper (SGD)</label>
+        <input id="helperFood" type="number" min="0" step="25" value="220"/>
+      </div>
+      <div>
+        <label for="helperInsuranceAnnual">Insurance, medical exam, admin, and renewal costs per year (SGD)</label>
+        <input id="helperInsuranceAnnual" type="number" min="0" step="50" value="850"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperSetup">Agency / placement / onboarding cost to spread (SGD)</label>
+        <input id="helperSetup" type="number" min="0" step="100" value="2400"/>
+      </div>
+      <div>
+        <label for="setupMonths">Spread helper setup over how many months?</label>
+        <input id="setupMonths" type="number" min="1" step="1" value="12"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperBackup">Monthly backup / respite / replacement buffer for helper route (SGD)</label>
+        <input id="helperBackup" type="number" min="0" step="25" value="150"/>
+      </div>
+      <div>
+        <label for="helperOffset">Monthly offsets for helper route (HCG / sibling sharing / subsidy) (SGD)</label>
+        <input id="helperOffset" type="number" min="0" step="25" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — home-care services</h3>
+    <div class="calc-row">
+      <div>
+        <label for="homeCareHours">Home-care personal-care hours per week</label>
+        <input id="homeCareHours" type="number" min="0" step="0.5" value="6"/>
+      </div>
+      <div>
+        <label for="homeCareRate">Net hourly home-care rate after subsidies (SGD)</label>
+        <input id="homeCareRate" type="number" min="0" step="1" value="35"/>
+        <p class="small muted" style="margin:6px 0 0">AIC lists Home Personal Care starting from $25 an hour before subsidies. Use your expected net household rate, not the brochure starting point.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="nursingTherapy">Extra nursing / therapy / escort support per month (SGD)</label>
+        <input id="nursingTherapy" type="number" min="0" step="25" value="250"/>
+      </div>
+      <div>
+        <label for="servicesTransport">Transport / ride-hailing / escort gap created by service visits (SGD)</label>
+        <input id="servicesTransport" type="number" min="0" step="25" value="180"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="servicesBackup">Monthly respite / ad-hoc top-up / overflow support for service route (SGD)</label>
+        <input id="servicesBackup" type="number" min="0" step="25" value="180"/>
+      </div>
+      <div>
+        <label for="servicesOffset">Monthly offsets for service route (HCG / subsidy / cost sharing) (SGD)</label>
+        <input id="servicesOffset" type="number" min="0" step="25" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="muted">Helper route net monthly burden</div>
+      <div class="kpi" id="helperMonthly">$0</div>
+      <div class="small muted" id="helperBreakdown">Includes salary, levy, running cost, annualised admin, setup spread, and backup buffer.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Home-care route net monthly burden</div>
+      <div class="kpi" id="servicesMonthly">$0</div>
+      <div class="small muted" id="servicesBreakdown">Includes weekly service load, add-on support, transport gaps, and overflow buffer.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Monthly difference</div>
+      <div class="kpi" id="monthlyGap">$0</div>
+      <div class="small muted" id="gapLabel">The calculator will show which route is cheaper on net monthly cash outflow.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Breakeven home-care hours per week</div>
+      <div class="kpi" id="breakevenHours">0.0h</div>
+      <div class="small muted">This shows roughly how many weekly service hours would cost the same as the helper route after your other assumptions are included.</div>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Reading the output properly</strong>
+      <p id="resultNote" style="margin:8px 0 0">The cheaper route on paper is not automatically the safer route. Use the output to see where the household will feel monthly strain first, then compare that with employer burden, housing fit, supervision needs, and night coverage.</p>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Pressure ratio</strong>
+      <p style="margin:8px 0 0">Care burden as a share of household net income: <strong id="pressureRatio">0%</strong></p>
+      <p class="small muted" style="margin:6px 0 0">This ratio is not a rule. It is a stress signal. A route can still fail at a lower ratio if one adult is quietly absorbing too much unpaid time.</p>
+    </div>
+  </div>
+</div>
+
+<h2 id="measure">What this calculator is really measuring</h2>
+<p>Families often compare helper and home-care routes as if both are just monthly invoices. That is usually the wrong model. The real question is not which column is numerically smaller in isolation. The real question is which route produces the lower total household burden once the hidden pieces are counted. For a helper, those hidden pieces usually include levy, insurance, onboarding spread, food and utility cost, and the need to carry backup when the arrangement breaks or the helper is new, tired, or mismatched. For formal services, the hidden pieces usually include service-hour expansion, transport to and from appointments, the tasks that still fall back on the family between visits, and the cost of patching gaps when the official package is too narrow.</p>
+<p>That is why this calculator uses two routes that each include direct cost plus leftover operational cost. A live-in helper is not only a salary. It is an employment system. Formal home-care is not only an hourly bill. It is a precision system that may still need transport, supervision, and overflow support around the edges. When the household compares only headline price, the cheaper option can still become the more expensive route in practice because it leaves behind more unpaid labour, more fragmented scheduling, or more reserve shocks.</p>
+<p>The tool is therefore designed for household planning, not for proving one route is universally superior. Use net cost after grants, sibling sharing, or existing subsidies. Use realistic overflow buffers. If the family already knows that night coverage, toileting, transport, or wandering risk is substantial, those realities should be reflected in the inputs instead of being left outside the model and then rediscovered painfully after the decision is already made.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the helper route comes out cheaper, the next question is whether the household can actually support a helper arrangement well. A cheaper helper route still fails if the household has no sleeping-space plan, no real supervision structure, or no adult with enough bandwidth to manage onboarding, misalignment, rest-day coverage, and deterioration in the elder’s needs. The real gain from a helper is flexibility. That flexibility only becomes valuable if the household has enough clarity to convert presence into stable coverage.</p>
+<p>If the service route comes out cheaper, the next question is whether the household is underestimating how broad the elder-support job has become. Formal services usually work best when the support need is bounded and predictable. They often work less well when the parent needs many small interventions scattered through the week: prompting, meal preparation, companionship, transfer support, ad-hoc monitoring, escorting, and response to fluctuating fatigue or confusion. In those cases, a neat formal package can still leave the adult child doing the unbilled remainder.</p>
+<p>Read the monthly difference together with pages like <a href="/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html">hire a helper vs use home-care services</a>, <a href="/adult-day-care-vs-keeping-a-parent-at-home-singapore.html">adult day care vs keeping a parent at home</a>, and <a href="/one-exhausted-caregiver-vs-shared-overnight-coverage-for-aging-parents-singapore.html">one exhausted caregiver vs shared overnight coverage</a>. The calculator is strongest when it is used as a decision filter. It is weaker when it is used as an excuse to ignore the non-price friction that will keep landing on the family after the route is chosen.</p>
+<p>The breakeven-hours output is especially useful when the family is deciding whether the service model is still a part-time support problem or whether it has silently become an almost-daily labour problem. If service hours keep rising while transport, escorting, and overflow support also keep rising, the route may already be drifting toward helper economics without giving the household helper-style flexibility. That is usually the point where the family should stop asking only what is cheaper and start asking which system is more durable for the next six to twelve months.</p>
+
+<h2>What the calculator cannot decide for you</h2>
+<p>This tool cannot tell you whether the parent will accept a live-in helper. It cannot tell you whether a small flat can realistically accommodate another adult without destabilising privacy and sleep. It cannot tell you whether the family has the emotional stamina to manage an employment relationship while also managing decline, siblings, appointments, and work. It cannot tell you whether the formal-care route is actually wide enough if the parent starts needing more transfers, more monitoring, or more overnight response.</p>
+<p>Those are judgment questions. But good judgment improves when the monthly numbers are honest. That is the role of the calculator. It forces the family to place salary, levy, setup spread, overflow support, and transport burden on one page. Once those numbers are visible, it becomes easier to see whether the household is truly choosing between two workable models or simply choosing the story that feels less uncomfortable today.</p>
+
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — the helper route looks cheaper but the family has no housing margin.</strong> The calculator may still show a lower monthly helper burden. But if the parent is moving into the adult child’s already-full home and no one has thought through privacy, supervision, or rest-day coverage, the cheaper route may be structurally weaker. In that case the household is not choosing between two price points. It is choosing between one route that is financially cheaper and another that may be operationally cleaner.</p>
+<p><strong>Scenario 2 — the formal-service route looks only slightly more expensive.</strong> That often happens when the parent still has meaningful independence and mostly needs bathing support, medication help, or a bounded block of personal care each week. If the price difference is small, families should be careful not to choose the helper route reflexively just because it feels like broader coverage. Precision can be worth paying for if broad coverage would mostly become idle time plus management burden.</p>
+<p><strong>Scenario 3 — home-care hours keep rising and the difference narrows quickly.</strong> That is often the signal that the family is still describing the problem as “part-time support” when it is actually becoming an all-day systems problem. The calculator helps surface that drift early, before the household keeps layering more paid hours onto a route that no longer fits the actual pattern of need.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Entering brochure-level costs instead of net household costs.</strong> The calculator is designed for net burden after grants, subsidies, sibling sharing, or levy concession, not list-price optimism.</li>
+<li><strong>Ignoring setup spread on the helper route.</strong> If placement, insurance, and onboarding cost are treated as “one-off” and mentally forgotten, the first-year comparison becomes misleading.</li>
+<li><strong>Ignoring transport and overflow cost on the service route.</strong> Service-hour cost alone is often not the full household bill.</li>
+<li><strong>Treating the cheaper route as automatically better.</strong> The lower monthly number can still produce the more fragile care system if the route leaves too much unpaid coordination behind.</li>
+<li><strong>Using current needs only.</strong> If the parent’s condition is drifting, the next six months matter more than the last two.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this helper vs home-care calculator compare?</h3>
+<p>It compares the estimated monthly household burden of a live-in helper route against a home-care-services route after the user enters salary, levy, insurance, setup spread, hourly service load, transport gaps, and any offsets or grants.</p>
+<h3>Does the calculator assume the helper route is always cheaper?</h3>
+<p>No. A helper can look cheaper on sticker price but still leave large supervision, housing, and employer-management burden. Home-care services can look precise but become expensive if many service hours and transport gaps have to be layered in. The tool is input-driven.</p>
+<h3>Can this calculator be used after subsidies or grants?</h3>
+<p>Yes. Enter the net household cost after any Home Caregiving Grant, levy concession, sibling cost-sharing, or other support. The goal is to model the burden that remains on the household.</p>
+<h3>What is the most common mistake when comparing helper and home-care services?</h3>
+<p>Most families compare only the headline monthly bill. The more useful comparison is total household burden after levy, insurance, agency costs, transport gaps, night coverage, backup care, and leftover unpaid coordination work are counted.</p>
+
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html">Hire a helper vs use home-care services</a></li>
+<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost calculator</a></li>
+<li><a href="/adult-day-care-vs-keeping-a-parent-at-home-singapore.html">Adult day care vs keeping a parent at home</a></li>
+<li><a href="/medical-escort-and-transport-vs-ad-hoc-family-driving-for-aging-parents-singapore.html">Medical escort and transport vs ad-hoc family driving</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.aic.sg/care-services/home-personal-care" rel="nofollow noopener" target="_blank">Agency for Integrated Care (AIC): Home Personal Care</a></li>
+<li><a href="https://www.aic.sg/Financial-Assistance/Home-Caregiving-Grant" rel="nofollow noopener" target="_blank">AIC: Home Caregiving Grant</a></li>
+<li><a href="https://www.aic.sg/Caregiving-Support/Knowing-Available-Care-Options" rel="nofollow noopener" target="_blank">AIC: Knowing available care options</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker/foreign-domestic-worker-levy" rel="nofollow noopener" target="_blank">Ministry of Manpower (MOM): Migrant domestic worker levy</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker/foreign-domestic-worker-levy/levy-concession" rel="nofollow noopener" target="_blank">MOM: Levy concession for a migrant domestic worker</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker" rel="nofollow noopener" target="_blank">MOM: Work Permit for migrant domestic worker</a></li>
+</ul>
+<p><strong>Last updated:</strong> 21 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  const read = () => {
+    const income = num('householdIncome');
+    const fixed = num('existingCommitments');
+    const helperSalary = num('helperSalary');
+    const helperLevy = num('helperLevy');
+    const helperFood = num('helperFood');
+    const helperInsuranceAnnual = num('helperInsuranceAnnual');
+    const helperSetup = num('helperSetup');
+    const setupMonths = Math.max(1, parseFloat($('setupMonths').value) || 1);
+    const helperBackup = num('helperBackup');
+    const helperOffset = num('helperOffset');
+
+    const homeCareHours = num('homeCareHours');
+    const homeCareRate = num('homeCareRate');
+    const nursingTherapy = num('nursingTherapy');
+    const servicesTransport = num('servicesTransport');
+    const servicesBackup = num('servicesBackup');
+    const servicesOffset = num('servicesOffset');
+
+    const helperMonthly = Math.max(0, helperSalary + helperLevy + helperFood + (helperInsuranceAnnual / 12) + (helperSetup / setupMonths) + helperBackup - helperOffset);
+    const servicesMonthly = Math.max(0, ((homeCareHours * 52) / 12) * homeCareRate + nursingTherapy + servicesTransport + servicesBackup - servicesOffset);
+    const gap = helperMonthly - servicesMonthly;
+    const monthlyBurden = Math.min(helperMonthly, servicesMonthly);
+    const pressureRatio = income > 0 ? (monthlyBurden / income) * 100 : 0;
+    const homeCareBaseOther = nursingTherapy + servicesTransport + servicesBackup - servicesOffset;
+    const helperBase = helperMonthly;
+    const breakevenHours = homeCareRate > 0 ? Math.max(0, ((helperBase - homeCareBaseOther) * 12) / (52 * homeCareRate)) : 0;
+
+    return { income, fixed, helperMonthly, servicesMonthly, gap, pressureRatio, breakevenHours };
+  };
+
+  const render = () => {
+    const r = read();
+    $('helperMonthly').textContent = money(r.helperMonthly);
+    $('servicesMonthly').textContent = money(r.servicesMonthly);
+    const absGap = Math.abs(r.gap);
+    $('monthlyGap').textContent = money(absGap);
+    $('gapLabel').textContent = absGap < 1 ? 'Both routes are essentially equal on the current cash assumptions.' : (r.gap < 0 ? 'The helper route is cheaper on current monthly assumptions.' : 'The home-care route is cheaper on current monthly assumptions.');
+    $('breakevenHours').textContent = `${r.breakevenHours.toFixed(1)}h`;
+    $('pressureRatio').textContent = `${r.pressureRatio.toFixed(1)}%`;
+    let note = 'Use the lower monthly number as a starting point, not the conclusion.';
+    if (r.helperMonthly + r.fixed > r.income && r.servicesMonthly + r.fixed > r.income) {
+      note = 'Both routes appear to run beyond the current monthly household structure. The real decision may be reserve design, sibling sharing, or narrowing the care model before committing.';
+    } else if (r.gap < 0) {
+      note = 'The helper route is cheaper on current cash assumptions. Now test whether the household can realistically absorb employer burden, housing friction, and backup coverage.';
+    } else if (r.gap > 0) {
+      note = 'The home-care route is cheaper on current cash assumptions. Now test whether the service package still covers the real daily task list rather than only the formal tasks.';
+    }
+    $('resultNote').textContent = note;
+  };
+
+  document.querySelectorAll('input').forEach((el) => el.addEventListener('input', render));
+  render();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

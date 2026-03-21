@@ -1328,6 +1328,13 @@
   },
   "new": [
     {
+      "url": "/helper-vs-home-care-cost-calculator-singapore.html",
+      "title": "Helper vs Home-Care Cost Calculator Singapore (2026): Compare the Live-In Route Against Formal Service Hours Before the Household Commits",
+      "desc": "Compare the monthly burden of a helper route against home-care services after levy, insurance, service hours, transport gaps, and offsets.",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/aging-parents-caregiving-cost-calculator-singapore.html",
       "title": "Aging Parents Caregiving Cost Calculator Singapore (2026): Estimate the Monthly Support Load Before It Starts Running the Household",
       "desc": "Estimate the monthly elder-support load across cash support, paid care, transport, meals, supplies, and setup costs.",
@@ -1387,13 +1394,6 @@
       "url": "/early-fall-risk-vs-waiting-for-a-major-fall-with-aging-parents-singapore.html",
       "title": "Early Fall Risk vs Waiting for a Major Fall With Aging Parents in Singapore (2026)",
       "desc": "Early fall risk vs waiting for a major fall with aging parents in Singapore: decide when repeated in",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/early-hearing-or-vision-decline-vs-waiting-for-a-major-incident-with-aging-parents-singapore.html",
-      "title": "Early Hearing or Vision Decline vs Waiting for a Major Incident With Aging Parents in Singapore (2026)",
-      "desc": "Early hearing or vision decline vs waiting for a major incident with aging parents in Singapore: dec",
       "cluster": "family",
       "clusterLabel": "Family"
     }
