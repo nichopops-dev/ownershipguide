@@ -3,231 +3,336 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Calculators (Singapore, 2026) | Ownership Guide</title>
-<meta content="Ownership Guide calculators for Singapore: transport and property affordability, monthly ownership cost, mortgage amortization, rent vs buy, sell-buy transitions, and break-even decisions." name="description"/>
-<link href="https://ownershipguide.com/calculators/" rel="canonical"/>
-<meta content="tools" name="og:cluster"/>
-<meta content="calculators" name="og:subtopic"/>
+<title>Ownership Guide | Real Cost of Ownership in Singapore</title>
+<meta content="Ownership Guide models the real cost of major decisions in Singapore — transport, property, family cost, protection decisions, investing liquidity, and capital allocation choices. Structured frameworks, monthly reality checks, and break-even tools." name="description"/>
+<link href="https://ownershipguide.com/" rel="canonical"/>
+<meta content="core" name="og:cluster"/>
+<meta content="home" name="og:subtopic"/>
+<meta content="ca-pub-8718234605112874" name="google-adsense-account"/>
 <link href="/styles.css" rel="stylesheet"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Ownership Guide",
+  "url":"https://ownershipguide.com/",
+  "description":"Structured ownership cost models for Singapore — transport, property, and capital allocation decisions."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Ownership Guide",
+  "url":"https://ownershipguide.com/",
+  "logo":"https://ownershipguide.com/favicon-512x512.png"
+}
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Where should I start if I am new?","acceptedAnswer":{"@type":"Answer","text":"Use Start Here if you want a guided path, or jump straight to Decision Comparisons if you already know the choice you are making."}},{"@type":"Question","name":"Should I read calculators first?","acceptedAnswer":{"@type":"Answer","text":"Usually no. Read one framework first, then use the calculator to stress-test your own numbers."}},{"@type":"Question","name":"What is the site strongest on right now?","acceptedAnswer":{"@type":"Answer","text":"The deepest clusters today are transport and property. The family cluster covers baby cost, care cost, school stages, and long-horizon child-cost planning. The protection cluster covers life insurance, critical illness, hospitalisation, and disability income. A new investing cluster starts with emergency-fund sizing, storage, and liquidity-first sequencing."}},{"@type":"Question","name":"How should I interpret results?","acceptedAnswer":{"@type":"Answer","text":"Treat them as planning ranges. For final transactions, confirm details with your bank, lawyer, agent, insurer, or official sources."}}]}</script>
 </head>
-<body>
+<body class="home">
 <div id="site-header"></div>
 <main class="container">
-<p><a class="og-chip" href="/start-here/">Back to Start Here</a></p>
-<section class="hub-hero">
-<p class="eyebrow">Calculators</p>
-<h1>Calculators (Singapore, 2026)</h1>
-<p class="lead">Use calculators to stress-test a decision, not to replace the model.</p>
-<p>These tools are most useful after you choose the right framework. Start with the path below, then run the calculator that matches the actual decision you are making.</p>
-<p class="btn-row"><a class="button" href="/comparisons/">Need a comparison first? →</a><a class="button" href="/transport/">Transport hub →</a><a class="button" href="/property/">Property hub →</a></p>
+<header class="home-hero">
+<p class="eyebrow">Singapore • 2026</p>
+<h1>Ownership Guide</h1>
+<p class="lead">Make high-cost decisions with clarity.</p>
+<p>Use this site when the decision is expensive, long-lived, and easy to mis-model: a car, a home, a refinance, a baby-related household decision, a protection gap, or a sell-then-buy transition. We focus on total exposure, liquidity strain, and the frictions that break plans after the headline number looks affordable.</p>
+<p class="btn-row" style="margin-top:14px;">
+<a class="button" href="/start-here/">Start here (10 min) →</a>
+<a class="button" href="/comparisons/">Decision comparisons →</a>
+<a class="button" href="/calculators/">Run the numbers →</a>
+<a class="button" href="/family/">Family cost hub →</a>
+<a class="button" href="/protection/">Protection hub →</a>
+<a class="button" href="/investing/">Investing hub →</a>
+</p>
+</header>
+
+
+<section class="og-dynamic-section" id="og-homepage-dynamic" style="margin-top:18px">
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('og-homepage-dynamic');
+  if(!sec) return;
+  var MAX_NEW=5;
+  var clusterColour={transport:'#1d4ed8',property:'#0f766e',family:'#7c3aed',protection:'#b45309',investing:'#0ea5a4',core:'#374151'};
+  var clusterLabel={transport:'Transport',property:'Property',family:'Family',protection:'Protection',investing:'Investing'};
+  function chip(cluster){
+    var col=clusterColour[cluster]||'#374151';
+    var lbl=clusterLabel[cluster]||cluster;
+    return '<span style="display:inline-block;font-size:11px;font-weight:600;color:'+col+';background:'+col+'18;border-radius:999px;padding:2px 8px;margin-right:6px;white-space:nowrap">'+lbl+'</span>';
+  }
+  fetch('/featured.json')
+    .then(function(r){return r.json();})
+    .catch(function(){return null;})
+    .then(function(data){
+      if(!data) return;
+      var html='';
+      // New guides: most recent pages across all clusters
+      if(data.new && data.new.length){
+        var items=data.new.slice(0,MAX_NEW);
+        html+='<div class="box" style="margin-bottom:14px">';
+        html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">New guides</p>';
+        html+='<ul style="margin:0;padding-left:0;list-style:none">';
+        items.forEach(function(p){
+          html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
+          html+=chip(p.cluster);
+          html+='<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
+          if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
+          html+='</li>';
+        });
+        html+='</ul></div>';
+      }
+      if(html) sec.innerHTML=html;
+    });
+})();
+</script>
+
+
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Choose the path that matches your decision</h2>
+<p class="section-intro">Most visitors only need one framework, one calculator, and one or two mechanics pages. Start with the path below instead of browsing randomly.</p>
+<div class="card-grid">
+<section class="card">
+<h3 style="margin-top:0">I need a fast answer</h3>
+<p>Use one comparison guide, then one calculator, then one mechanics page. That is usually enough to avoid the biggest mistakes.</p>
+<ul>
+<li><a href="/start-here/">10-minute guided path</a></li>
+<li><a href="/comparisons/">Decision Comparisons</a></li>
+<li><a href="/calculators/">Top calculators</a></li>
+</ul>
+</section>
+<section class="card">
+<h3 style="margin-top:0">I am deciding about a car</h3>
+<p>Start with the full ownership model before you optimise instalments or shopping criteria.</p>
+<ul>
+<li><a href="/car-ownership-cost.html">5-year car ownership cost</a></li>
+<li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a></li>
+<li><a href="/car-vs-ride-hailing-cost.html">Car vs ride-hailing framework</a></li>
+</ul>
+</section>
+<section class="card">
+<h3 style="margin-top:0">I am deciding about property</h3>
+<p>Start with total exposure, then check borrowing limits, upfront cash, and the sell-buy transition path if relevant.</p>
+<ul>
+<li><a href="/property-ownership-cost-singapore.html">5-year property exposure</a></li>
+<li><a href="/property-affordability-calculator-singapore.html">Property affordability stress test</a></li>
+<li><a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a></li>
+</ul>
+</section>
+<section class="card">
+<h3 style="margin-top:0">I am planning for family costs</h3>
+<p>Use this route when the real question is not only what a baby costs, but how child-related spending changes housing, care, and transport decisions over time.</p>
+<ul>
+<li><a href="/cost-of-having-a-baby-singapore.html">Cost of having a baby</a></li>
+<li><a href="/infantcare-vs-childcare-cost-singapore.html">Infantcare vs childcare</a></li>
+<li><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">Cost to raise a child</a></li>
+</ul>
+</section>
+<section class="card">
+<h3 style="margin-top:0">I need to size protection properly</h3>
+<p>Use this when the real question is not only what cover exists, but whether your household has enough medical and life protection around its actual obligations.</p>
+<ul>
+<li><a href="/how-much-life-insurance-do-you-need-singapore.html">Life insurance sizing</a></li>
+<li><a href="/term-life-vs-whole-life-cost-singapore.html">Term vs whole life</a></li>
+<li><a href="/hospitalisation-insurance-vs-rider-cost-singapore.html">Hospitalisation vs rider</a></li>
+</ul>
+</section>
+<section class="card">
+<h3 style="margin-top:0">I need stronger cash resilience before taking more risk</h3>
+<p>Use this route when the real question is how much liquidity the household needs before investing more aggressively or taking on more leverage.</p>
+<ul>
+<li><a href="/how-much-emergency-fund-do-you-need-singapore.html">Emergency fund sizing</a></li>
+<li><a href="/where-to-keep-your-emergency-fund-singapore.html">Where to keep your emergency fund</a></li>
+<li><a href="/when-to-invest-vs-build-your-emergency-fund-first-singapore.html">Invest vs build buffer first</a></li>
+</ul>
+</section>
+</div>
 </section>
 
 <section class="hub-strip">
 <div>
-<div class="hub-stat-title">Best transport tools</div>
-<div class="hub-stat-value">Affordability, real monthly cost, and car-vs-ride-hailing break-even.</div>
+<div class="hub-stat-title">Fastest entry</div>
+<div class="hub-stat-value"><a href="/start-here/">Start Here</a> gives you the shortest clean route through the site.</div>
 </div>
 <div>
-<div class="hub-stat-title">Best property tools</div>
-<div class="hub-stat-value">Affordability, upfront cash, sell proceeds, and sell-then-buy pipeline.</div>
+<div class="hub-stat-title">Best for comparisons</div>
+<div class="hub-stat-value"><a href="/comparisons/">Decision Comparisons</a> if you already know the exact choice you are making.</div>
 </div>
 <div>
-<div class="hub-stat-title">Use carefully</div>
-<div class="hub-stat-value">A calculator can be numerically correct and still support the wrong decision path.</div>
+<div class="hub-stat-title">Best for numbers</div>
+<div class="hub-stat-value"><a href="/calculators/">Calculators</a> once you know which model you should stress-test.</div>
 </div>
 </section>
 
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Start with the decision you are trying to answer</h2>
-<p class="section-intro">Pick the question first. This usually gets you to the right calculator faster than browsing an undifferentiated list.</p>
+<h2 style="margin-top:0">Recommended journeys</h2>
+<div class="split-grid">
+<div class="route-list">
+<h3>Transport</h3>
+<p>Use this route when the real question is whether convenience is worth the depreciation, financing, and monthly cash strain.</p>
+<ol>
+<li><a href="/car-ownership-cost.html">5-year car ownership cost</a></li>
+<li><a href="/car-affordability-calculator-singapore.html">Car affordability</a></li>
+<li><a href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing break-even</a></li>
+</ol>
+<p><a class="button" href="/transport/">Open Transport hub →</a></p>
+</div>
+<div class="route-list">
+<h3>Property</h3>
+<p>Use this route when the real question is whether the purchase is resilient after borrowing, cash lock-up, and move-friction are included.</p>
+<ol>
+<li><a href="/property-ownership-cost-singapore.html">Property exposure</a></li>
+<li><a href="/property-affordability-calculator-singapore.html">Property affordability</a></li>
+<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash needed</a></li>
+</ol>
+<p><a class="button" href="/property/">Open Property hub →</a></p>
+</div>
+<div class="route-list">
+<h3>Family</h3>
+<p>Use this route when the live question is how a baby, formal care, and longer-run child costs change the rest of your household plan.</p>
+<ol>
+<li><a href="/cost-of-having-a-baby-singapore.html">Cost of having a baby</a></li>
+<li><a href="/infantcare-vs-childcare-cost-singapore.html">Infantcare vs childcare cost</a></li>
+<li><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">How much it costs to raise a child</a></li>
+</ol>
+<p><a class="button" href="/family/">Open Family hub →</a></p>
+</div>
+<div class="route-list">
+<h3>Protection</h3>
+<p>Use this route when the real question is not what cover exists, but whether your household has enough protection around its actual financial obligations.</p>
+<ol>
+<li><a href="/how-much-life-insurance-do-you-need-singapore.html">Life insurance sizing</a></li>
+<li><a href="/term-life-vs-whole-life-cost-singapore.html">Term vs whole life</a></li>
+<li><a href="/hospitalisation-insurance-vs-rider-cost-singapore.html">Hospitalisation vs rider</a></li>
+</ol>
+<p><a class="button" href="/protection/">Open Protection hub →</a></p>
+</div>
+<div class="route-list">
+<h3>Investing</h3>
+<p>Use this route when the real question is how much liquidity your household needs before investing more aggressively or taking on more leverage.</p>
+<ol>
+<li><a href="/how-much-emergency-fund-do-you-need-singapore.html">Emergency fund sizing</a></li>
+<li><a href="/where-to-keep-your-emergency-fund-singapore.html">Where to keep your emergency fund</a></li>
+<li><a href="/when-to-invest-vs-build-your-emergency-fund-first-singapore.html">Invest vs build buffer first</a></li>
+</ol>
+<p><a class="button" href="/investing/">Open Investing hub →</a></p>
+</div>
+</div>
+</section>
+
 <div class="card-grid">
 <section class="card">
-<h3 style="margin-top:0">I am deciding about a car</h3>
+<h2 style="margin-top:0">Transport</h2>
+<p class="muted">A car is a depreciation and liquidity decision driven by COE, financing, and usage intensity.</p>
 <ul>
+<li><a href="/car-ownership-cost.html">Cost of Owning a Car in Singapore</a></li>
+<li><a href="/car-vs-ride-hailing-cost.html">Car vs Ride-Hailing</a></li>
+<li><a href="/public-transport-cost-singapore.html">Public Transport Cost baseline</a></li>
+</ul>
+<div class="micro-links">
+<div><span class="label">Quick tools:</span> <a href="/car-affordability-calculator-singapore.html">Affordability</a> · <a href="/car-vs-ride-hailing-calculator.html">Break-even</a></div>
+<div class="spacer"></div>
+<div><span class="label">Drill-down costs:</span> <a href="/fuel-cost-singapore.html">Fuel</a> · <a href="/parking-cost-singapore.html">Parking</a> · <a href="/erp-cost-singapore.html">ERP</a> · <a href="/ev-vs-petrol-cost-singapore.html">EV vs petrol</a></div>
+</div>
+<p><a class="button" href="/transport/">Explore Transport hub →</a></p>
+</section>
+
+<section class="card">
+<h2 style="margin-top:0">Property</h2>
+<p class="muted">Property is a leveraged capital allocation decision shaped by borrowing rules, cash lock-up, and sale execution friction.</p>
+<ul>
+<li><a href="/property-ownership-cost-singapore.html">Property Ownership Cost</a></li>
+<li><a href="/rent-vs-buy-property-singapore.html">Rent vs Buy</a></li>
+<li><a href="/property-upgrade-planner-singapore.html">Property Upgrade Planner</a></li>
+</ul>
+<div class="micro-links">
+<div><span class="label">Run the numbers:</span> <a href="/property-affordability-calculator-singapore.html">Affordability</a> · <a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash</a></div>
+<div class="spacer"></div>
+<div><span class="label">Transition tools:</span> <a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next</a> · <a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade</a></div>
+</div>
+<p><a class="button" href="/property/">Explore Property hub →</a></p>
+</section>
+
+<section class="card">
+<h2 style="margin-top:0">Calculators</h2>
+<p class="muted">Use calculators after you choose the right model. They are stress-testing tools, not substitutes for the model.</p>
+<ul>
+<li><a href="/property-affordability-calculator-singapore.html">Property affordability</a></li>
 <li><a href="/car-affordability-calculator-singapore.html">Car affordability</a></li>
-<li><a href="/car-ownership-cost-calculator-singapore.html">True monthly car cost</a></li>
 <li><a href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing</a></li>
 </ul>
+<p><a class="button" href="/calculators/">See all calculators →</a></p>
+</section>
+</div>
+
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">How to use this site well</h2>
+<ul>
+<li><strong>Start with one decision.</strong> Do not mix “Should I buy?” with “How do I optimise the loan?” before you know the decision makes sense at all.</li>
+<li><strong>Read one pillar page first.</strong> For transport, that is usually <a href="/car-ownership-cost.html">car ownership cost</a>. For property, it is usually <a href="/property-ownership-cost-singapore.html">property ownership cost</a>.</li>
+<li><strong>Then run a calculator.</strong> Use conservative inputs, then re-run with a stress case.</li>
+<li><strong>Only then read the mechanics pages.</strong> That is where cash traps, timeline drag, refinancing friction, and transition risk usually appear.</li>
+</ul>
+</section>
+
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">How we build this page</h2>
+<p><strong>Ownership Guide</strong> is a Singapore-first decision library. We separate <strong>decision guides</strong>, <strong>calculators</strong>, and <strong>mechanics pages</strong> so visitors can move from “What should I do?” to “What do the numbers say?” without losing context.</p>
+<ul>
+<li><strong>Not a news site:</strong> we maintain evergreen decision models and refresh them when rules, fees, or assumptions change.</li>
+<li><strong>Not instalment-only:</strong> we try to surface depreciation, opportunity cost, duties, holding costs, and exit friction.</li>
+<li><strong>Transparent:</strong> key pages explain what is included, what is not, and where official sources matter.</li>
+</ul>
+</section>
+
+
+<section class="card">
+<h3 style="margin-top:0">Formal care cost</h3>
+<p><a href="/infantcare-vs-childcare-cost-singapore.html">Infantcare vs childcare cost</a></p>
 </section>
 <section class="card">
-<h3 style="margin-top:0">I am deciding about buying property</h3>
-<ul>
-<li><a href="/property-affordability-calculator-singapore.html">Property affordability</a></li>
-<li><a href="/tdsr-msr-calculator-singapore.html">TDSR / MSR</a></li>
-<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash needed</a></li>
-</ul>
-</section>
-<section class="card">
-<h3 style="margin-top:0">I am moving from one property to another</h3>
-<ul>
-<li><a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a></li>
-<li><a href="/sell-property-proceeds-calculator-singapore.html">Sell property proceeds</a></li>
-<li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade property</a></li>
-</ul>
-</section>
-<section class="card">
-<h3 style="margin-top:0">I am budgeting support for aging parents</h3>
-<ul>
-<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost</a></li>
-<li><a href="/helper-vs-home-care-cost-calculator-singapore.html">Helper vs home-care cost</a></li>
-<li><a href="/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html">Adult day care vs keep-at-home cost</a></li>
-<li><a href="/appointment-and-transport-burden-calculator-singapore.html">Appointment and transport burden</a></li>
-<li><a href="/overnight-supervision-burden-calculator-singapore.html">Overnight supervision burden</a></li>
-<li><a href="/medication-management-burden-calculator-singapore.html">Medication-management burden</a></li>
-<li><a href="/nutrition-support-burden-calculator-singapore.html">Nutrition-support burden</a></li>
-<li><a href="/continence-support-burden-calculator-singapore.html">Continence-support burden</a></li>
-</ul>
+<h3 style="margin-top:0">Long-horizon planning</h3>
+<p><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">How much it costs to raise a child</a></p>
 </section>
 </div>
+<p><a class="button" href="/family/">Explore Family hub →</a></p>
 </section>
 
-<section class="split-grid">
-<div class="route-list">
-<h3>Fast calculator routes</h3>
-<ol>
-<li><strong>I want to know if owning a car makes sense.</strong> Use <a href="/car-vs-ride-hailing-calculator.html">car vs ride-hailing</a>, then <a href="/car-affordability-calculator-singapore.html">car affordability</a>.</li>
-<li><strong>I want to know if I can buy safely.</strong> Use <a href="/property-affordability-calculator-singapore.html">property affordability</a>, then <a href="/tdsr-msr-calculator-singapore.html">TDSR / MSR</a>, then <a href="/how-much-cash-to-buy-property-calculator-singapore.html">cash needed</a>.</li>
-<li><strong>I am selling one property and moving to another.</strong> Use <a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a>, then use <a href="/sell-property-proceeds-calculator-singapore.html">sell proceeds</a> and <a href="/upgrade-downgrade-property-calculator-singapore.html">upgrade / downgrade</a>.</li>
-<li><strong>I need a financing answer.</strong> Use <a href="/mortgage-amortization-calculator-singapore.html">mortgage amortization</a>, <a href="/refinance-savings-calculator-singapore.html">refinance savings</a>, or <a href="/pay-down-mortgage-vs-invest-calculator-singapore.html">pay down mortgage vs invest</a>.</li>
-<li><strong>I need to price ongoing support for aging parents.</strong> Use <a href="/aging-parents-caregiving-cost-calculator-singapore.html">aging parents caregiving cost</a> before choosing which support model the household can actually carry. Then use <a href="/helper-vs-home-care-cost-calculator-singapore.html">helper vs home-care cost</a> if the real decision is which paid-care route to run, <a href="/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html">adult day care vs keep-at-home cost</a> if the real choice is daytime structure versus keeping the parent at home, <a href="/appointment-and-transport-burden-calculator-singapore.html">appointment and transport burden</a> if repeated follow-up is now draining time, transport, and coordination capacity, and <a href="/overnight-supervision-burden-calculator-singapore.html">overnight supervision burden</a> if repeated waking, wandering risk, or light sleeping is quietly draining the household after dark. Then use <a href="/medication-management-burden-calculator-singapore.html">medication-management burden</a>, <a href="/nutrition-support-burden-calculator-singapore.html">nutrition-support burden</a>, and <a href="/continence-support-burden-calculator-singapore.html">continence-support burden</a> when the real problem is no longer one big care decision, but the recurring daily load.</li>
-</ol>
+
+<section class="card"><h3 style="margin-top:0">Store it properly</h3><p><a href="/where-to-keep-your-emergency-fund-singapore.html">Where to keep your emergency fund</a></p></section>
+<section class="card"><h3 style="margin-top:0">Sequence it properly</h3><p><a href="/when-to-invest-vs-build-your-emergency-fund-first-singapore.html">When to invest vs build your emergency fund first</a></p></section>
 </div>
-<div class="route-list route-list--structured">
-<h3>Top calculators</h3>
-<p>Use these if you want the shortest path to the tools that answer the highest-value questions first.</p>
-<div class="route-buckets">
-<section class="route-bucket">
-<h4>Transport picks</h4>
-<ul>
-<li><a href="/car-affordability-calculator-singapore.html">Car affordability</a></li>
-<li><a href="/car-ownership-cost-calculator-singapore.html">Car ownership cost</a></li>
-<li><a href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing</a></li>
-</ul>
-</section>
-<section class="route-bucket">
-<h4>Property picks</h4>
-<ul>
-<li><a href="/property-affordability-calculator-singapore.html">Property affordability</a></li>
-<li><a href="/tdsr-msr-calculator-singapore.html">TDSR / MSR</a></li>
-<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">Upfront cash needed</a></li>
-</ul>
-</section>
-<section class="route-bucket">
-<h4>Move / financing picks</h4>
-<ul>
-<li><a href="/sell-property-proceeds-calculator-singapore.html">Sell property proceeds</a></li>
-<li><a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a></li>
-<li><a href="/mortgage-amortization-calculator-singapore.html">Mortgage amortization</a></li>
-</ul>
-</section>
-<section class="route-bucket">
-<h4>Family pick</h4>
-<ul>
-<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost</a></li>
-<li><a href="/helper-vs-home-care-cost-calculator-singapore.html">Helper vs home-care cost</a></li>
-<li><a href="/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html">Adult day care vs keep-at-home cost</a></li>
-<li><a href="/overnight-supervision-burden-calculator-singapore.html">Overnight supervision burden</a></li>
-</ul>
-</section>
-</div>
-<p><a class="button" href="#featured-calculators">Jump to featured calculator cards →</a></p>
-</div>
+<p><a class="button" href="/investing/">Explore Investing hub →</a></p>
 </section>
 
 <section class="box" style="margin-top:18px">
-<h2 id="featured-calculators" style="margin-top:0">Featured calculator cards</h2>
-<div class="og-card-grid three">
-<a class="og-card" href="/car-affordability-calculator-singapore.html"><div class="og-card-title">Car Affordability Calculator</div><div class="og-card-meta">Transport · calculator · stress-tested monthly comfort</div></a>
-<a class="og-card" href="/car-ownership-cost-calculator-singapore.html"><div class="og-card-title">Car Ownership Cost Calculator</div><div class="og-card-meta">Transport · calculator · true monthly cost</div></a>
-<a class="og-card" href="/car-vs-ride-hailing-calculator.html"><div class="og-card-title">Car vs Ride-Hailing Calculator</div><div class="og-card-meta">Transport · calculator · break-even decision</div></a>
-<a class="og-card" href="/property-affordability-calculator-singapore.html"><div class="og-card-title">Property Affordability Stress Test</div><div class="og-card-meta">Property · calculator · borrowing + instalment fragility</div></a>
-<a class="og-card" href="/how-much-cash-to-buy-property-calculator-singapore.html"><div class="og-card-title">Upfront Cash Needed to Buy Property</div><div class="og-card-meta">Property · calculator · cash + CPF planning</div></a>
-<a class="og-card" href="/property-sell-buy-pipeline-calculator-singapore.html"><div class="og-card-title">Sell → Buy Next Pipeline</div><div class="og-card-meta">Property · calculator · move-sequencing and cash bridge</div></a>
-<a class="og-card" href="/mortgage-amortization-calculator-singapore.html"><div class="og-card-title">Mortgage Amortization</div><div class="og-card-meta">Property · calculator · repayment + total interest</div></a>
-<a class="og-card" href="/sell-property-proceeds-calculator-singapore.html"><div class="og-card-title">Sell Property Proceeds Calculator</div><div class="og-card-meta">Property · calculator · what you actually get back</div></a>
-<a class="og-card" href="/coe-renew-vs-replace-calculator-singapore.html"><div class="og-card-title">COE Renew vs Replace Calculator</div><div class="og-card-meta">Transport · calculator · compare total cost over 5–10 years</div></a>
-<a class="og-card" href="/aging-parents-caregiving-cost-calculator-singapore.html"><div class="og-card-title">Aging Parents Caregiving Cost Calculator</div><div class="og-card-meta">Family · calculator · monthly support load</div></a>
-<a class="og-card" href="/helper-vs-home-care-cost-calculator-singapore.html"><div class="og-card-title">Helper vs Home-Care Cost Calculator</div><div class="og-card-meta">Family · calculator · route comparison</div></a>
-<a class="og-card" href="/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html"><div class="og-card-title">Adult Day Care vs Keep-at-Home Cost Calculator</div><div class="og-card-meta">Family · calculator · daytime-care route comparison</div></a>
-<a class="og-card" href="/appointment-and-transport-burden-calculator-singapore.html"><div class="og-card-title">Appointment and Transport Burden Calculator</div><div class="og-card-meta">Family · calculator · follow-up and escort load</div></a>
-<a class="og-card" href="/overnight-supervision-burden-calculator-singapore.html"><div class="og-card-title">Overnight Supervision Burden Calculator</div><div class="og-card-meta">Family · calculator · night-care load and sleep disruption</div></a>
-</div>
+<h2 style="margin-top:0">FAQ</h2>
+<h3>Where should I start if I am new?</h3>
+<p>Use <a href="/start-here/">Start Here</a> if you want a guided path, or jump straight to <a href="/comparisons/">Decision Comparisons</a> if you already know the choice you are making.</p>
+<h3>Should I read calculators first?</h3>
+<p>Usually no. Read one framework first, then use the calculator to stress-test your own numbers.</p>
+<h3>What is the site strongest on right now?</h3>
+<p>The deepest clusters are <a href="/transport/">transport</a> and <a href="/property/">property</a>. <a href="/family/">Family</a> covers baby costs through university. <a href="/protection/">Protection</a> covers insurance sizing across all life stages. <a href="/investing/">Investing</a> covers the liquidity and emergency-fund layer.</p>
+<h3>How should I interpret results?</h3>
+<p>Treat them as planning ranges. For final transactions, confirm details with your bank, lawyer, agent, insurer, or official sources.</p>
 </section>
 
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Browse all calculators by cluster</h2>
-<div class="split-grid">
-<div>
-<h3 style="margin-top:0">Transport</h3>
-<ul class="link-columns">
-<li><a href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing break-even</a></li>
-<li><a href="/car-affordability-calculator-singapore.html">Car affordability</a></li>
-<li><a href="/car-ownership-cost-calculator-singapore.html">Car ownership cost</a></li>
-<li><a href="/car-loan-calculator-singapore.html">Car loan</a></li>
-<li><a href="/car-leasing-vs-buying-calculator-singapore.html">Car leasing vs buying</a></li>
-<li><a href="/used-car-vs-new-car-calculator-singapore.html">Used vs new car</a></li>
-<li><a href="/coe-loan-calculator-singapore.html">COE loan</a></li>
-<li><a href="/ev-vs-petrol-calculator-singapore.html">EV vs petrol</a></li>
-<li><a href="/coe-renew-vs-replace-calculator-singapore.html">COE renew vs replace</a></li>
-</ul>
-</div>
-<div>
-<h3 style="margin-top:0">Property</h3>
-<ul class="link-columns">
-<li><a href="/property-sell-buy-pipeline-calculator-singapore.html">Sell → Buy Next pipeline</a></li>
-<li><a href="/upgrade-downgrade-property-calculator-singapore.html">Upgrade / downgrade property</a></li>
-<li><a href="/property-upgrade-ladder-calculator-singapore.html">Property upgrade ladder</a></li>
-<li><a href="/cpf-accrued-interest-calculator-singapore.html">CPF accrued interest</a></li>
-<li><a href="/property-affordability-calculator-singapore.html">Property affordability</a></li>
-<li><a href="/rent-vs-buy-calculator-singapore.html">Rent vs buy</a></li>
-<li><a href="/how-much-cash-to-buy-property-calculator-singapore.html">How much cash to buy property</a></li>
-<li><a href="/sell-property-proceeds-calculator-singapore.html">Sell property proceeds</a></li>
-<li><a href="/rent-out-vs-sell-calculator-singapore.html">Rent out vs sell</a></li>
-<li><a href="/mortgage-amortization-calculator-singapore.html">Mortgage amortization</a></li>
-<li><a href="/pay-down-mortgage-vs-invest-calculator-singapore.html">Pay down mortgage vs invest</a></li>
-<li><a href="/hdb-loan-vs-bank-loan-calculator-singapore.html">HDB loan vs bank loan</a></li>
-<li><a href="/tdsr-msr-calculator-singapore.html">TDSR / MSR</a></li>
-<li><a href="/bsd-absd-calculator-singapore.html">BSD &amp; ABSD</a></li>
-</ul>
-</div>
-<div>
-<h3 style="margin-top:0">Family</h3>
-<ul class="link-columns">
-<li><a href="/aging-parents-caregiving-cost-calculator-singapore.html">Aging parents caregiving cost</a></li>
-<li><a href="/helper-vs-home-care-cost-calculator-singapore.html">Helper vs home-care cost</a></li>
-<li><a href="/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html">Adult day care vs keep-at-home cost</a></li>
-<li><a href="/appointment-and-transport-burden-calculator-singapore.html">Appointment and transport burden</a></li>
-<li><a href="/overnight-supervision-burden-calculator-singapore.html">Overnight supervision burden</a></li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">How to use these calculators without fooling yourself</h2>
-<ol>
-<li><strong>Choose the right comparison first.</strong> If you are still deciding the category of move, use <a href="/comparisons/">Decision Comparisons</a>.</li>
-<li><strong>Use conservative inputs.</strong> Higher rates, slower income growth, weaker resale outcomes, and buffers for repairs usually produce more useful decisions.</li>
-<li><strong>Stress-test fragility.</strong> A decision that only works in the best case is usually not a good decision.</li>
-<li><strong>Read the mechanics page if the result is close.</strong> Close calls are often decided by taxes, duties, timing, lock-ins, or transition friction.</li>
-</ol>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology, assumptions, and limitations</h2>
-<p>These calculators are planning tools, not financial advice. They use the inputs you provide and apply common Singapore cost components so you can pressure-test affordability and compare scenarios quickly.</p>
-<h3>What is included</h3>
+<div id="auto-related"></div>
+<h2 style="margin-top:0">References</h2>
 <ul>
-<li>Core ownership costs such as financing, depreciation or COE where relevant, insurance, running costs, and common property duties or fees where relevant.</li>
-<li>Stress-testing logic where available so visitors can see how fragile a decision becomes under worse conditions.</li>
+<li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">Land Transport Authority (LTA)</a></li>
+<li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">Inland Revenue Authority of Singapore (IRAS)</a></li>
+<li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">Housing &amp; Development Board (HDB)</a></li>
+<li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">Monetary Authority of Singapore (MAS)</a></li>
+<li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">Central Provident Fund Board (CPF)</a></li>
 </ul>
-<h3>What is not included</h3>
-<ul>
-<li>Every personal edge case, employer benefit, promotion, or tax nuance.</li>
-<li>Exact resale, valuation, or transaction outcomes, which depend on market conditions and asset specifics.</li>
-</ul>
-<p>Use results as ranges, then cross-check with the related guides and official sources.</p>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 22 Mar 2026</p>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 19 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
 </section>
 </main>
 <div id="site-footer"></div>
