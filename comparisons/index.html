@@ -97,6 +97,29 @@
 <a aria-disabled="true" class="btn" href="#" id="ogCompareWizardGo">Go</a>
 </div>
 <p class="og-wizard-foot"><span class="pill">Tip</span> If you are not sure where to start, use <a href="/car-affordability-calculator-singapore.html">car affordability</a> or <a href="/property-affordability-calculator-singapore.html">property affordability</a> after reading the framework page.</p>
+<script>
+(function(){
+  var sel = document.getElementById('ogCompareWizard');
+  var btn = document.getElementById('ogCompareWizardGo');
+  if(!sel || !btn) return;
+  function updateBtn(){
+    var v = sel.value;
+    if(v){
+      btn.setAttribute('href', v);
+      btn.removeAttribute('aria-disabled');
+    } else {
+      btn.setAttribute('href', '#');
+      btn.setAttribute('aria-disabled','true');
+    }
+  }
+  sel.addEventListener('change', updateBtn);
+  btn.addEventListener('click', function(e){
+    var v = sel.value;
+    if(!v){ e.preventDefault(); return; }
+    window.location.href = v;
+  });
+})();
+</script>
 </section>
 
 <script>
@@ -125,6 +148,16 @@
 </script>
 
 <hr/>
+<section class="box" style="margin-top:18px">
+<p style="margin:0 0 8px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Or browse by cluster</p>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<a href="#transport-comparisons" style="display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none">Transport</a>
+<a href="#property-comparisons" style="display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none">Property</a>
+<a href="#family-comparisons" style="display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none">Family</a>
+<a href="#protection-comparisons" style="display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none">Protection</a>
+<a href="#investing-comparisons" style="display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--border);font-size:13px;color:var(--muted);text-decoration:none">Investing</a>
+</div>
+</section>
 <h2>Transport comparisons</h2>
 <p class="muted">Use transport comparisons when the real question is not “Can I buy a car?” but “What form of mobility is rational for my usage pattern, risk tolerance, and cashflow?”</p>
 <div class="og-card-grid">
@@ -220,7 +253,7 @@
 </div>
 
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Family cost comparisons</h2>
+<h2 id="family-comparisons" style="margin-top:0">Family cost comparisons</h2>
 <p class="section-intro">Care structure, education route, and housing trade-offs across the family lifecycle.</p>
 <h3 style="margin-top:14px">Childcare and early years</h3>
 <ul>
@@ -280,7 +313,7 @@
 </ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Protection comparisons</h2>
+<h2 id="protection-comparisons" style="margin-top:0">Protection comparisons</h2>
 <p class="section-intro">Coverage structure, product trade-offs, and sequencing decisions across life and health insurance.</p>
 <ul>
 <li><a href="/term-life-vs-whole-life-cost-singapore.html">Term Life vs Whole Life Cost</a></li>
@@ -301,7 +334,7 @@
 </ul>
 </section>
 <section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Investing & liquidity comparisons</h2>
+<h2 id="investing-comparisons" style="margin-top:0">Investing & liquidity comparisons</h2>
 <p class="section-intro">Cash buffer sequencing, reserve vs insurance trade-offs, and when to invest vs protect.</p>
 <ul>
 <li><a href="/when-to-invest-vs-build-your-emergency-fund-first-singapore.html">Invest vs Build Emergency Fund First</a></li>
