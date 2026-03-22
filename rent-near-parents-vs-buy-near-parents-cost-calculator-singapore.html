@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rent Near Parents vs Buy Near Parents Cost Calculator Singapore (2026): Compare Flexibility Against Ownership Commitment Before Proximity Becomes an Expensive Shortcut</title>
+<meta name="description" content="Compare the monthly burden of renting near aging parents against buying near them in Singapore after rent, mortgage, buyer-cost spread, cash lock-in, transport relief, and location flexibility are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/rent-near-parents-vs-buy-near-parents-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does this rent-near-parents vs buy-near-parents calculator compare?", "acceptedAnswer": {"@type": "Answer", "text": "It compares the estimated monthly burden of renting near aging parents against buying near them after rent, mortgage, maintenance, upfront buyer cost spread, transport relief, and flexibility costs are entered honestly."}}, {"@type": "Question", "name": "Why does the calculator include an opportunity cost on buying?", "acceptedAnswer": {"@type": "Answer", "text": "Because cash committed to down payment, duties, legal fees, and renovation stops being available for buffer-building or other goals. That tied-up capital has a real household cost even if no invoice arrives each month."}}, {"@type": "Question", "name": "Does a cheaper buy result mean buying is definitely better?", "acceptedAnswer": {"@type": "Answer", "text": "No. It means ownership near parents currently looks lighter on the assumptions entered. You still need to decide whether the family can tolerate the lock-in and whether location needs may change."}}, {"@type": "Question", "name": "What is the most common mistake when using this calculator?", "acceptedAnswer": {"@type": "Answer", "text": "The most common mistake is comparing rent against mortgage only, while ignoring duties, maintenance, down-payment opportunity cost, and the value of flexibility if the care map changes."}}]}</script>
+
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+.calc-row label { display:block; font-weight:600; margin-bottom:6px; }
+.calc-row input, .calc-row select { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:10px; font:inherit; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.kpi { font-size:2rem; font-weight:800; line-height:1.1; }
+.note { background:#f8fafc; border-left:4px solid #94a3b8; padding:12px 14px; border-radius:8px; }
+.divider { height:1px; background:#e5e7eb; margin:14px 0; }
+.small { font-size:0.95rem; }
+</style>
+
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Rent Near Parents vs Buy Near Parents Cost Calculator (Singapore, 2026)</p>
+<h1>Rent Near Parents vs Buy Near Parents Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator for families who already know proximity to aging parents matters but have not decided whether that proximity should be rented or owned. It compares the recurring burden of renting near parents against buying near them after rent, mortgage, buyer-cost spread, transport relief, and flexibility costs are entered honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the framework first, start with <a href="/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html">rent near aging parents vs buy near aging parents</a>.</li>
+<li>If you are still deciding where proximity should sit in the broader sequence, read <a href="/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html">how supporting aging parents changes your location decision order</a>.</li>
+<li>If the household is torn between parents’ doorstep convenience and medical-route access, pair this with <a href="/live-near-aging-parents-vs-live-near-medical-services-singapore.html">live near aging parents vs live near medical services</a>.</li>
+<li>If one bigger shared home is also on the table, compare with <a href="/shared-home-vs-two-households-cost-calculator-singapore.html">shared home vs two households cost calculator</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+<div class="calc-row">
+<div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="10800"/></div>
+<div><label for="fixed">Existing monthly fixed commitments (SGD)</label><input id="fixed" type="number" min="0" step="100" value="5100"/></div>
+</div>
+<div class="divider"></div>
+<h3>Route A — rent near parents</h3>
+<div class="calc-row">
+<div><label for="rentMonthly">Monthly rent near parents (SGD)</label><input id="rentMonthly" type="number" min="0" step="10" value="3200"/></div>
+<div><label for="rentUpfront">One-off agent, deposit friction, and move setup cost (SGD)</label><input id="rentUpfront" type="number" min="0" step="100" value="9000"/></div>
+<div><label for="spread">Months to spread one-off cost over</label><input id="spread" type="number" min="1" step="1" value="36"/></div>
+<div><label for="rentTransportSave">Monthly transport / time-cost relief from being near parents (SGD)</label><input id="rentTransportSave" type="number" min="0" step="10" value="260"/></div>
+<div><label for="rentFlexCost">Monthly instability or renewal-risk allowance (SGD)</label><input id="rentFlexCost" type="number" min="0" step="10" value="120"/></div>
+<div><label for="rentOffset">Monthly offset on rent route (SGD)</label><input id="rentOffset" type="number" min="0" step="10" value="0"/></div>
+</div>
+<div class="divider"></div>
+<h3>Route B — buy near parents</h3>
+<div class="calc-row">
+<div><label for="buyMonthly">Monthly mortgage, maintenance, and tax burden (SGD)</label><input id="buyMonthly" type="number" min="0" step="10" value="3600"/></div>
+<div><label for="buyUpfront">Down payment, BSD/ABSD, legal, renovation, and move setup cost (SGD)</label><input id="buyUpfront" type="number" min="0" step="1000" value="165000"/></div>
+<div><label for="holdMonths">Months to spread upfront buyer cost over</label><input id="holdMonths" type="number" min="1" step="1" value="84"/></div>
+<div><label for="oppRate">Annual opportunity-cost rate on tied-up cash (%)</label><input id="oppRate" type="number" min="0" step="0.1" value="3.0"/></div>
+<div><label for="buyTransportSave">Monthly transport / response-time relief from owning nearby (SGD)</label><input id="buyTransportSave" type="number" min="0" step="10" value="280"/></div>
+<div><label for="lockInCost">Monthly location lock-in allowance (SGD)</label><input id="lockInCost" type="number" min="0" step="10" value="140"/></div>
+<div><label for="buyOffset">Monthly offset on buy route (SGD)</label><input id="buyOffset" type="number" min="0" step="10" value="0"/></div>
+</div>
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+<div class="kpi-box"><div class="muted">Rent-near-parents monthly burden</div><div class="kpi" id="routeA">S$0</div><div class="small muted">Rent + setup spread + instability allowance, net of proximity savings</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Buy-near-parents monthly burden</div><div class="kpi" id="routeB">S$0</div><div class="small muted">Mortgage/maintenance + buyer-cost spread + tied-up cash cost, net of proximity savings</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Monthly difference</div><div class="kpi" id="gap">S$0</div><div class="small" id="gapLabel">—</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Cheaper route burden as % of income</div><div class="kpi" id="ratio">0%</div><div class="small muted">Use this to test whether the lighter route is still too heavy for your overall cashflow.</div></div>
+<div class="note" style="margin-top:12px" id="note">Use the result to compare flexibility against ownership commitment, not just rent against mortgage.</div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+
+<p>The wrong question is usually, “Should I rent near my parents or buy near them?”</p>
+<p>The real question is whether proximity should be carried through a flexible housing move or through a long-term ownership commitment. Renting near parents can reduce escort time, improve response speed, and preserve optionality if the care map changes. Buying near parents can do the same while potentially anchoring the household in a more stable home base. But ownership also commits capital, adds stamp duties and maintenance exposure, and makes it harder to pivot if the parent’s care route changes again.</p>
+<p>This calculator is designed to bring those hidden differences into one monthly view. Route A measures the rent route after rent, moving friction, renewal-risk allowance, and transport relief are counted. Route B measures the buy route after mortgage and maintenance, upfront buyer-cost spread, tied-up cash opportunity cost, and location lock-in are counted. The comparison is not trying to predict future property appreciation. It is trying to price the household burden of how you choose to buy proximity.</p>
+<p>That matters in Singapore because proximity decisions around aging parents often feel emotionally urgent. A family starts travelling across the island too often, one clinic route becomes exhausting, or one parent’s condition makes response time more important than before. The temptation is to collapse the whole decision into one shortcut: “buy nearby.” But buying is not just paying instalments. It is committing down payment, duties, renovation, and flexibility. Renting is not just “wasting money.” It can be a deliberate option premium that protects the household from making the wrong long-term location commitment while care needs are still moving.</p>
+<p>Use this calculator when the family has already decided that proximity matters and now needs to choose the structure of that proximity. If the bigger question is still whether you should live near parents at all, use the article and decision-order framework first.</p>
+<p>The output is most useful when the household is comparing realistic holding periods rather than imagined forever homes. A rent route can look expensive if you spread setup cost over too short a period. A buy route can look deceptively neat if you ignore the capital that has been tied up and the value of being able to move again quickly.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+
+<p>If Route A is cheaper, that means renting near parents currently looks lighter on the assumptions entered. That often happens when the family needs location flexibility, when the parent’s care needs may still change, or when buying nearby would absorb too much cash that is better preserved for care and household resilience. A rent result should not be dismissed as temporary waste. Sometimes flexibility is exactly what the household is paying for.</p>
+<p>If Route B is cheaper, that means buying near parents currently looks lighter after buyer cost, lock-in allowance, and opportunity cost have been counted. That can happen when the family already knows the location works, when the expected holding period is long enough, and when ownership would replace a high rent line with a more stable cost structure. But a cheaper buy result is only reliable if the household has been honest about the cash tied up and the risk that proximity needs may shift again.</p>
+<p>The burden ratio matters because proximity decisions do not happen in isolation. A route can be “cheaper” and still squeeze emergency-fund strength, childcare, transport, or insurance upkeep. That is a sign the household may be solving the distance problem by creating a new cashflow problem.</p>
+<p>Run at least two scenarios. First, test the current caregiving reality. Second, test a scenario where clinic visits or support intensity rise, or where the parent might need a different service corridor. If buying only looks clearly better when you assume a stable seven-year hold in the same district, then the household should be careful about treating it as the obvious answer now.</p>
+<p>Look at reversibility as well. Renting can be slightly more expensive and still be the more intelligent bridge if it lets the family learn which geography actually reduces the most friction before committing capital.</p>
+
+<p>One more reason this calculator matters is that proximity decisions often get bundled with identity decisions. Buying nearby can feel like the more committed or responsible option. Renting nearby can feel temporary or less serious. But in household planning, seriousness is not measured by permanence. It is measured by whether the route keeps the family solvent, flexible, and capable of responding well as needs evolve. Sometimes a temporary structure is exactly what creates the information needed to make a better permanent choice later.</p>
+<p>It is also worth checking which route exposes the family to the bigger sequencing error. Buying near parents too early can lock the household into a district or property type before the real care map is clear. Renting too long can drain cash that might have been used for a more durable move once the family has enough confidence. The calculator does not choose that sequence for you. It simply makes the monthly consequences visible so the household can decide whether it is paying for flexibility, stability, or an illusion of either.</p>
+<h2 id="mistakes">Common mistakes</h2>
+
+<ul>
+<li><strong>Comparing rent against mortgage only.</strong> Buyer cost, duties, renovation, maintenance, and cash lock-in all matter.</li>
+<li><strong>Ignoring the value of flexibility.</strong> Renting is not automatically inferior if the household is still learning the right location and support pattern.</li>
+<li><strong>Using too optimistic a holding period.</strong> Spreading big buyer cost over an unrealistically long hold makes buying look cleaner than it is.</li>
+<li><strong>Underpricing proximity savings.</strong> If being nearer parents genuinely reduces repeated taxi trips, escort hours, and emergency stress, that relief belongs in the model too.</li>
+<li><strong>Treating grants or offsets as guaranteed.</strong> Use only support or cost-sharing that is already real or highly likely.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this rent-near-parents vs buy-near-parents calculator compare?</h3>
+<p>It compares the estimated monthly burden of renting near aging parents against buying near them after rent, mortgage, maintenance, upfront buyer cost spread, transport relief, and flexibility costs are entered honestly.</p>
+<h3>Why does the calculator include an opportunity cost on buying?</h3>
+<p>Because cash committed to down payment, duties, legal fees, and renovation stops being available for buffer-building or other goals. That tied-up capital has a real household cost even if no invoice arrives each month.</p>
+<h3>Does a cheaper buy result mean buying is definitely better?</h3>
+<p>No. It means ownership near parents currently looks lighter on the assumptions entered. You still need to decide whether the family can tolerate the lock-in and whether location needs may change.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is comparing rent against mortgage only, while ignoring duties, maintenance, down-payment opportunity cost, and the value of flexibility if the care map changes.</p>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul><li><a href="https://www.hdb.gov.sg/residential/buying-a-flat/financing-a-flat-purchase/housing-grants/proximity-housing-grant-for-resale-flats">HDB — Proximity Housing Grant</a></li><li><a href="https://www.cpf.gov.sg/member/home-ownership/using-your-cpf-to-buy-a-home">CPF Board — Using CPF for Housing</a></li><li><a href="https://www.iras.gov.sg/taxes/stamp-duty-for-property/buying-or-acquiring-property">IRAS — Stamp Duty for Buying Property</a></li><li><a href="https://www.hdb.gov.sg/residential/buying-a-flat/buying-procedure-for-resale-flats">HDB — Buying Procedures for Resale Flats</a></li></ul>
+<p class="muted"><strong>Last updated:</strong> 22 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const money=n=>new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0}).format(Number.isFinite(n)?n:0);
+  const num=id=>Math.max(0,parseFloat($(id).value)||0);
+  function calc(){
+    const income=num('income');
+    const rent=Math.max(0, num('rentMonthly') + num('rentUpfront')/Math.max(1,num('spread')) + num('rentFlexCost') - num('rentTransportSave') - num('rentOffset'));
+    const opp = (num('buyUpfront') * (num('oppRate')/100)) / 12;
+    const buy=Math.max(0, num('buyMonthly') + num('buyUpfront')/Math.max(1,num('holdMonths')) + opp + num('lockInCost') - num('buyTransportSave') - num('buyOffset'));
+    const gap=Math.abs(rent-buy), cheaper=Math.min(rent,buy);
+    $('routeA').textContent=money(rent); $('routeB').textContent=money(buy); $('gap').textContent=money(gap);
+    $('gapLabel').textContent=rent<buy ? 'Renting near parents is lighter on current assumptions.' : buy<rent ? 'Buying near parents is lighter on current assumptions.' : 'Both routes are effectively tied on current assumptions.';
+    $('ratio').textContent=((income>0? cheaper/income:0)*100).toFixed(1)+'%';
+    $('note').textContent = rent<buy ? 'Renting currently looks cheaper, which often means flexibility is worth more than ownership commitment at this stage.' : buy<rent ? 'Buying currently looks cheaper, but only trust that result if the holding period and cash lock-in assumptions are realistic.' : 'The numbers are close. Re-run with different holding periods and proximity-savings assumptions.';
+  }
+  document.querySelectorAll('input').forEach(el=>el.addEventListener('input',calc)); calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

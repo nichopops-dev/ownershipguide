@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shared Home vs Two Households Cost Calculator Singapore (2026): Compare One Larger Shared Home Against Two Nearby Smaller Households Before Space Efficiency Hides Exit Fragility</title>
+<meta name="description" content="Compare the monthly burden of one larger shared home against keeping two nearby smaller households in Singapore after setup cost, housing delta, support duplication, travel drag, and coordination time are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/shared-home-vs-two-households-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does this shared-home vs two-households calculator compare?", "acceptedAnswer": {"@type": "Answer", "text": "It compares the estimated monthly burden of running one larger shared home against maintaining two nearby smaller households after housing cost, renovation spread, household support, transport drag, and family coordination time are entered honestly."}}, {"@type": "Question", "name": "Does the calculator tell me whether co-residence is always better?", "acceptedAnswer": {"@type": "Answer", "text": "No. It shows which route looks lighter on the assumptions entered. One shared home can be cheaper on paper and still fail if privacy loss, household conflict, or exit rigidity have been understated."}}, {"@type": "Question", "name": "Why does the calculator ask for family coordination hours?", "acceptedAnswer": {"@type": "Answer", "text": "Because duplicate errands, handovers, repeated check-ins, and decision friction often become a real recurring cost even when no invoice is attached."}}, {"@type": "Question", "name": "What is the most common mistake when using this calculator?", "acceptedAnswer": {"@type": "Answer", "text": "The most common mistake is pricing the larger shared home only by mortgage or rent difference while ignoring conversion works, privacy protection costs, and the value of reversibility if the arrangement fails."}}]}</script>
+
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+.calc-row label { display:block; font-weight:600; margin-bottom:6px; }
+.calc-row input, .calc-row select { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:10px; font:inherit; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.kpi { font-size:2rem; font-weight:800; line-height:1.1; }
+.note { background:#f8fafc; border-left:4px solid #94a3b8; padding:12px 14px; border-radius:8px; }
+.divider { height:1px; background:#e5e7eb; margin:14px 0; }
+.small { font-size:0.95rem; }
+</style>
+
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Shared Home vs Two Households Cost Calculator (Singapore, 2026)</p>
+<h1>Shared Home vs Two Households Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator for households deciding whether aging-parent support should be carried inside one larger shared home or across two nearby smaller households. It compares the recurring burden of each route after setup cost, support duplication, transport drag, and household-friction costs are entered honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the underlying framework first, start with <a href="/buy-a-larger-shared-home-vs-keep-two-smaller-households-singapore.html">buy a larger shared home vs keep two smaller households</a>.</li>
+<li>If the household is still deciding whether one roof is even a sensible support structure, read <a href="/move-aging-parents-into-your-home-vs-maintain-two-nearby-households-singapore.html">move aging parents into your home vs maintain two nearby households</a>.</li>
+<li>If you need the sequencing framework behind this choice, use <a href="/how-supporting-aging-parents-changes-your-co-residence-decision-order-singapore.html">how supporting aging parents changes your co-residence decision order</a>.</li>
+<li>If geography is the bigger issue, pair this with <a href="/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html">rent near aging parents vs buy near aging parents</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+<div class="calc-row">
+<div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="10500"/><p class="small muted" style="margin:6px 0 0">Use take-home cashflow for the decision-making household.</p></div>
+<div><label for="fixed">Existing monthly fixed commitments (SGD)</label><input id="fixed" type="number" min="0" step="100" value="5200"/><p class="small muted" style="margin:6px 0 0">Use mortgage or rent, insurance, debt, school costs, and other sticky bills already in place.</p></div>
+</div>
+<div class="divider"></div>
+<h3>Route A — one larger shared home</h3>
+<div class="calc-row">
+<div><label for="sharedSetup">One-off moving, renovation, and room-conversion cost (SGD)</label><input id="sharedSetup" type="number" min="0" step="100" value="42000"/><p class="small muted" style="margin:6px 0 0">Use the real cost of making co-residence workable, not just moving fees.</p></div>
+<div><label for="spread">Months to spread one-off cost over</label><input id="spread" type="number" min="1" step="1" value="60"/><p class="small muted" style="margin:6px 0 0">Five years is often a reasonable planning window.</p></div>
+<div><label for="sharedHousing">Monthly housing delta for larger shared home (SGD)</label><input id="sharedHousing" type="number" min="0" step="10" value="900"/><p class="small muted" style="margin:6px 0 0">Use the extra monthly cost versus the current housing baseline.</p></div>
+<div><label for="sharedSupport">Extra monthly household-support spend in shared home (SGD)</label><input id="sharedSupport" type="number" min="0" step="10" value="280"/><p class="small muted" style="margin:6px 0 0">Food, utilities, supplies, helper top-up, or structured care top-up tied to co-residence.</p></div>
+<div><label for="sharedHours">Monthly family hours still needed in the shared-home route</label><input id="sharedHours" type="number" min="0" step="0.5" value="18"/><p class="small muted" style="margin:6px 0 0">Include direct support, supervision, and household coordination that still remains.</p></div>
+<div><label for="hourValue">Estimated value of one family hour (SGD)</label><input id="hourValue" type="number" min="0" step="1" value="22"/><p class="small muted" style="margin:6px 0 0">Use a conservative value for work disruption and household time.</p></div>
+<div><label for="privacyCost">Monthly privacy / conflict mitigation cost (SGD)</label><input id="privacyCost" type="number" min="0" step="10" value="180"/><p class="small muted" style="margin:6px 0 0">Use extra cleaning help, respite, outside meals, counselling, or other recurring costs that keep one-roof living stable.</p></div>
+<div><label for="offsetA">Monthly offset on Route A (SGD)</label><input id="offsetA" type="number" min="0" step="10" value="0"/><p class="small muted" style="margin:6px 0 0">Enter only real sibling contributions or reliable support.</p></div>
+</div>
+<div class="divider"></div>
+<h3>Route B — keep two nearby smaller households</h3>
+<div class="calc-row">
+<div><label for="twoHousing">Combined monthly housing delta for two-household setup (SGD)</label><input id="twoHousing" type="number" min="0" step="10" value="550"/><p class="small muted" style="margin:6px 0 0">Use the extra combined monthly housing cost after both households are counted.</p></div>
+<div><label for="twoSupport">Monthly formal support or duplication cost (SGD)</label><input id="twoSupport" type="number" min="0" step="10" value="420"/><p class="small muted" style="margin:6px 0 0">Use duplicate groceries, helper hours, transport support, or backup services needed because care happens across two units.</p></div>
+<div><label for="visitTrips">Extra monthly inter-household trips</label><input id="visitTrips" type="number" min="0" step="1" value="18"/><p class="small muted" style="margin:6px 0 0">Use check-ins, escort trips, and repeated logistics runs between homes.</p></div>
+<div><label for="tripCost">Average cost per trip (SGD)</label><input id="tripCost" type="number" min="0" step="1" value="14"/><p class="small muted" style="margin:6px 0 0">Use taxi, ride-hailing, fuel, ERP, and parking if relevant.</p></div>
+<div><label for="twoHours">Monthly family coordination hours in two-household route</label><input id="twoHours" type="number" min="0" step="0.5" value="26"/><p class="small muted" style="margin:6px 0 0">Include handovers, repeated errands, and duplicated planning between households.</p></div>
+<div><label for="offsetB">Monthly offset on Route B (SGD)</label><input id="offsetB" type="number" min="0" step="10" value="0"/><p class="small muted" style="margin:6px 0 0">Use only stable offsets or sibling cost-sharing that is already working.</p></div>
+</div>
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+<div class="kpi-box"><div class="muted">Shared-home monthly burden</div><div class="kpi" id="routeA">S$0</div><div class="small muted">Housing delta + setup spread + direct support + residual household friction</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Two-household monthly burden</div><div class="kpi" id="routeB">S$0</div><div class="small muted">Combined housing delta + duplicate support + travel + coordination drag</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Monthly difference</div><div class="kpi" id="gap">S$0</div><div class="small" id="gapLabel">—</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Cheaper route burden as % of income</div><div class="kpi" id="ratio">0%</div><div class="small muted">Useful for spotting when the cheaper route is still too heavy for the household.</div></div>
+<div class="note" style="margin-top:12px" id="note">Use the result to compare operating systems, not just mortgage or rent lines.</div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+
+<p>The wrong question is usually, “Can one bigger shared home save money?”</p>
+<p>The real question is whether one roof genuinely lowers the monthly burden after the household has priced what co-residence really costs to keep stable. A larger shared home can reduce travel time and improve response speed. It can also create room-conversion cost, privacy-protection spending, household conflict, and a more concentrated exit problem if the arrangement stops working. Two nearby households can preserve routine and marriage stability. They can also create duplicated errands, repeated transport, and a constant handover tax that never shows up clearly in the headline housing bill.</p>
+<p>This calculator is trying to make those hidden operating costs visible. Route A is not just a bigger mortgage or rent number. It is the cost of changing the home, carrying a larger footprint, and sustaining a shared-household system. Route B is not just “keep everyone where they are.” It is the cost of maintaining two operating systems that still need to work together every week.</p>
+<p>That distinction matters in Singapore because many families drift into co-residence after a health scare or a property opportunity without ever pricing the monthly consequences honestly. One household may feel more efficient in theory while still becoming a daily strain because the rooms do not fit, the marriage needs more buffer, or there is no clean way to step back if care intensity changes. The two-household route can look more expensive on a property spreadsheet while actually protecting sleep, routine, and reversibility in a way that keeps the support system intact.</p>
+<p>Use this calculator when the household is genuinely comparing structure against structure. It is most useful once the family already knows the parent needs ongoing support, but has not yet decided whether that support is best carried under one roof or across two nearby homes.</p>
+<p>The goal is not to produce a perfect answer. The goal is to stop the family from pretending that “shared home” means one type of cost and “two households” means another, when both are really full household systems with different kinds of drag.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+
+<p>If Route A comes out cheaper, that does not mean co-residence is automatically better. It means the larger shared-home route currently looks lighter on the assumptions entered. The next question is whether the assumptions are stable. If privacy cost, respite needs, or conflict-mitigation spending have been entered too low, the shared-home route can look cleaner than it feels in real life. That is especially true when spouses, children, and aging parents are all asking the same floor plan to do too many jobs at once.</p>
+<p>If Route B comes out cheaper, that does not automatically mean separate households are objectively better either. It means the travel, duplicated support, and coordination burden still costs less than forcing everyone into one larger unit. That can happen when the parent still has enough independence to make nearby living workable, or when the family’s real bottleneck is privacy and routine disruption rather than physical distance.</p>
+<p>The burden ratio matters more than many households expect. A route can be the cheaper one and still be too heavy relative to income. When that happens, the real answer may not be “choose A or B.” It may be “phase the change, involve siblings properly, or reduce other commitments first.”</p>
+<p>Run at least two scenarios. First, model the current support load. Second, model the next stage if appointments, mobility assistance, or supervision become more frequent. If the result flips quickly between those two scenarios, the decision is more fragile than it looks. That fragility is exactly what the calculator is trying to reveal.</p>
+<p>Also compare the result against the household’s tolerance for reversibility. If one route is only slightly cheaper but much harder to unwind, the nominal savings may not justify the structural lock-in.</p>
+
+<h2 id="mistakes">Common mistakes</h2>
+
+<ul>
+<li><strong>Pricing only mortgage or rent.</strong> Families often compare the larger shared home against two separate homes using only headline housing cost, leaving out transport drag, setup works, and privacy protection.</li>
+<li><strong>Treating conflict as intangible.</strong> Co-residence does not need to be emotionally dramatic before it becomes financially relevant. More outside meals, more cleaning help, and more need for respite are all real recurring costs.</li>
+<li><strong>Underpricing travel and handover time in the two-household route.</strong> Keeping households separate often looks clean until someone measures the accumulated errands and coordination hours honestly.</li>
+<li><strong>Ignoring the parent’s next stage.</strong> A route that works at light support intensity may fail once transfers, night checks, or medication oversight become more frequent.</li>
+<li><strong>Counting speculative offsets.</strong> Sibling support that is promised but not operational should not be entered as if it is already dependable.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this shared-home vs two-households calculator compare?</h3>
+<p>It compares the estimated monthly burden of running one larger shared home against maintaining two nearby smaller households after housing cost, renovation spread, household support, transport drag, and family coordination time are entered honestly.</p>
+<h3>Does the calculator tell me whether co-residence is always better?</h3>
+<p>No. It shows which route looks lighter on the assumptions entered. One shared home can be cheaper on paper and still fail if privacy loss, household conflict, or exit rigidity have been understated.</p>
+<h3>Why does the calculator ask for family coordination hours?</h3>
+<p>Because duplicate errands, handovers, repeated check-ins, and decision friction often become a real recurring cost even when no invoice is attached.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is pricing the larger shared home only by mortgage or rent difference while ignoring conversion works, privacy protection costs, and the value of reversibility if the arrangement fails.</p>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul><li><a href="https://www.hdb.gov.sg/residential/buying-a-flat/buying-procedure-for-resale-flats">HDB — Buying Procedures for Resale Flats</a></li><li><a href="https://www.hdb.gov.sg/residential/selling-a-flat">HDB — Selling a Flat</a></li><li><a href="https://www.aic.sg/caregiving-support/making-your-home-safe">AIC — Making Your Home Safe</a></li><li><a href="https://www.cpf.gov.sg/member/home-ownership/using-your-cpf-to-buy-a-home">CPF Board — Using CPF for Housing</a></li></ul>
+<p class="muted"><strong>Last updated:</strong> 22 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const money=n=>new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0}).format(Number.isFinite(n)?n:0);
+  const num=id=>Math.max(0,parseFloat($(id).value)||0);
+  function calc(){
+    const income=num('income');
+    const shared=(num('sharedSetup')/Math.max(1,num('spread'))) + num('sharedHousing') + num('sharedSupport') + (num('sharedHours')*num('hourValue')) + num('privacyCost') - num('offsetA');
+    const separate=num('twoHousing') + num('twoSupport') + (num('visitTrips')*num('tripCost')) + (num('twoHours')*num('hourValue')) - num('offsetB');
+    const routeA=Math.max(0,shared), routeB=Math.max(0,separate), gap=Math.abs(routeA-routeB), cheaper=Math.min(routeA,routeB);
+    $('routeA').textContent=money(routeA); $('routeB').textContent=money(routeB); $('gap').textContent=money(gap);
+    $('gapLabel').textContent=routeA<routeB ? 'Shared-home route is lighter on current assumptions.' : routeB<routeA ? 'Two-household route is lighter on current assumptions.' : 'Both routes are effectively tied on current assumptions.';
+    $('ratio').textContent=((income>0? cheaper/income:0)*100).toFixed(1)+'%';
+    let note='Both routes need stress-testing against the next stage of care.';
+    if(routeA + 200 < routeB) note='One larger shared home currently looks cheaper, but only keep trusting that result if privacy and conflict costs were not understated.';
+    else if(routeB + 200 < routeA) note='Two nearby households currently look cheaper, which often means the family is underestimating the drag of forced co-residence.';
+    $('note').textContent=note;
+  }
+  document.querySelectorAll('input').forEach(el=>el.addEventListener('input',calc)); calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

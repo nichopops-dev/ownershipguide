@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Move Parents In vs Maintain Nearby Households Cost Calculator Singapore (2026): Compare One-Roof Convenience Against Nearby Separate Living Before Response Speed Hides Household Strain</title>
+<meta name="description" content="Compare the monthly burden of moving aging parents into your home against maintaining nearby separate households in Singapore after setup cost, supervision time, travel, coordination drag, and routine-protection spending are counted honestly."/>
+<link rel="canonical" href="https://ownershipguide.com/move-parents-in-vs-maintain-nearby-households-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does this move-parents-in vs nearby-households calculator compare?", "acceptedAnswer": {"@type": "Answer", "text": "It compares the monthly burden of moving aging parents into your home against maintaining separate nearby households after setup cost, travel, supervision time, household support, and coordination drag are counted."}}, {"@type": "Question", "name": "Why is there an input for lost routine or privacy support cost?", "acceptedAnswer": {"@type": "Answer", "text": "Because households often need recurring spending to protect rest, relationship stability, or childcare routine once co-residence begins. That cost is real even if it does not look like a medical bill."}}, {"@type": "Question", "name": "Does a cheaper one-roof result mean I should definitely move parents in?", "acceptedAnswer": {"@type": "Answer", "text": "No. It means the one-roof route currently looks lighter on the assumptions entered. You still need to decide whether the arrangement is resilient, reversible, and acceptable for everyone living there."}}, {"@type": "Question", "name": "What is the most common mistake when using this calculator?", "acceptedAnswer": {"@type": "Answer", "text": "The most common mistake is underpricing the household friction of co-residence while overpricing only visible transport cost in the separate-household route."}}]}</script>
+
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.04fr 0.96fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+.calc-row label { display:block; font-weight:600; margin-bottom:6px; }
+.calc-row input, .calc-row select { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:10px; font:inherit; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.kpi { font-size:2rem; font-weight:800; line-height:1.1; }
+.note { background:#f8fafc; border-left:4px solid #94a3b8; padding:12px 14px; border-radius:8px; }
+.divider { height:1px; background:#e5e7eb; margin:14px 0; }
+.small { font-size:0.95rem; }
+</style>
+
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Move Parents In vs Maintain Nearby Households Cost Calculator (Singapore, 2026)</p>
+<h1>Move Parents In vs Maintain Nearby Households Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator for families deciding whether aging parents should move into the main household or continue living nearby in a separate unit. It compares the recurring burden of one-roof convenience against nearby separate living after setup cost, supervision time, routine-protection spending, transport, and coordination drag are entered honestly.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the comparison framework first, start with <a href="/move-aging-parents-into-your-home-vs-maintain-two-nearby-households-singapore.html">move aging parents into your home vs maintain two nearby households</a>.</li>
+<li>If the bigger question is whether one larger shared home is justified at all, read <a href="/buy-a-larger-shared-home-vs-keep-two-smaller-households-singapore.html">buy a larger shared home vs keep two smaller households</a>.</li>
+<li>If you need the sequencing framework behind this choice, use <a href="/how-supporting-aging-parents-changes-your-co-residence-decision-order-singapore.html">how supporting aging parents changes your co-residence decision order</a>.</li>
+<li>If the parent can remain nearby but clinic access is the real constraint, pair this with <a href="/live-near-aging-parents-vs-live-near-medical-services-singapore.html">live near aging parents vs live near medical services</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+<div class="calc-row">
+<div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="9800"/></div>
+<div><label for="fixed">Existing monthly fixed commitments (SGD)</label><input id="fixed" type="number" min="0" step="100" value="4800"/></div>
+</div>
+<div class="divider"></div>
+<h3>Route A — parents move into your home</h3>
+<div class="calc-row">
+<div><label for="roomSetup">One-off room conversion and home setup cost (SGD)</label><input id="roomSetup" type="number" min="0" step="100" value="22000"/></div>
+<div><label for="spread">Months to spread one-off cost over</label><input id="spread" type="number" min="1" step="1" value="60"/></div>
+<div><label for="monthlyTopup">Monthly extra food, utilities, supplies, and support (SGD)</label><input id="monthlyTopup" type="number" min="0" step="10" value="420"/></div>
+<div><label for="supervisionHours">Monthly family supervision / support hours after move-in</label><input id="supervisionHours" type="number" min="0" step="0.5" value="24"/></div>
+<div><label for="hourValue">Estimated value of one family hour (SGD)</label><input id="hourValue" type="number" min="0" step="1" value="22"/></div>
+<div><label for="routineCost">Monthly routine-protection or privacy-preservation cost (SGD)</label><input id="routineCost" type="number" min="0" step="10" value="220"/></div>
+<div><label for="careOffsetA">Monthly offset on Route A (SGD)</label><input id="careOffsetA" type="number" min="0" step="10" value="0"/></div>
+<div><label for="medicalTripsA">Monthly medical or service trips still needed (SGD)</label><input id="medicalTripsA" type="number" min="0" step="10" value="120"/></div>
+</div>
+<div class="divider"></div>
+<h3>Route B — maintain nearby separate households</h3>
+<div class="calc-row">
+<div><label for="housingTopupB">Monthly support top-up for parents’ separate household (SGD)</label><input id="housingTopupB" type="number" min="0" step="10" value="380"/></div>
+<div><label for="visitTrips">Extra monthly visits or check-ins</label><input id="visitTrips" type="number" min="0" step="1" value="22"/></div>
+<div><label for="tripCost">Average cost per visit or logistics trip (SGD)</label><input id="tripCost" type="number" min="0" step="1" value="14"/></div>
+<div><label for="coordHours">Monthly coordination and escort hours for separate households</label><input id="coordHours" type="number" min="0" step="0.5" value="30"/></div>
+<div><label for="backupSupport">Monthly backup support or paid cover (SGD)</label><input id="backupSupport" type="number" min="0" step="10" value="180"/></div>
+<div><label for="careOffsetB">Monthly offset on Route B (SGD)</label><input id="careOffsetB" type="number" min="0" step="10" value="0"/></div>
+</div>
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+<div class="kpi-box"><div class="muted">Move-parents-in monthly burden</div><div class="kpi" id="routeA">S$0</div><div class="small muted">Setup spread + recurring household support + supervision + routine-protection cost</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Nearby-households monthly burden</div><div class="kpi" id="routeB">S$0</div><div class="small muted">Support top-up + travel + coordination + backup coverage</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Monthly difference</div><div class="kpi" id="gap">S$0</div><div class="small" id="gapLabel">—</div></div>
+<div class="kpi-box" style="margin-top:12px"><div class="muted">Cheaper route burden as % of income</div><div class="kpi" id="ratio">0%</div><div class="small muted">Useful for checking whether the cheaper route is still heavy for the main household.</div></div>
+<div class="note" style="margin-top:12px" id="note">Use the output to test whether response speed is worth what co-residence costs the household system.</div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+
+<p>The wrong question is usually, “Would it be easier if parents just moved in?”</p>
+<p>The real question is whether moving parents into your home lowers the total monthly burden once the household has priced what that arrangement demands to stay stable. One-roof living can improve response speed. It can reduce travel and make supervision easier. It can also increase household load in ways that do not show up in a medical invoice: disrupted routines, more direct supervision hours, less privacy, and more need for outside support just to preserve peace.</p>
+<p>The nearby-households route is often misread in the opposite way. It looks inefficient because two doors are being maintained. But keeping parents nearby can protect marriage, children’s routine, and the parent’s own dignity while still allowing fast response when needed. The monthly cost is not only financial. It is also the time spent escorting, checking in, coordinating services, and carrying duplicated errands across two homes.</p>
+<p>This calculator is designed to compare those two operating systems honestly. Route A measures the burden of move-in after setup works, ongoing household support, supervision time, and routine-protection cost are counted. Route B measures the burden of maintaining nearby households after support top-ups, repeated travel, coordination hours, and backup cover are counted.</p>
+<p>That framing matters in Singapore because many families drift into one-roof living for understandable reasons: urgency, guilt, a health scare, or the belief that shared housing must be more efficient. Sometimes it is. Sometimes it only looks efficient because the household has not priced the silent wear on space, sleep, childcare routine, and relationship stability. This calculator forces those hidden lines into the same monthly view.</p>
+<p>Use it when the decision is specifically about whether one roof is now the better caregiving structure. If the family is still deciding broader housing form, use the comparison and decision-order pages first, then come back to this calculator for the operational test.</p>
+
+<h2 id="interpret">How to interpret the result properly</h2>
+
+<p>If Route A is cheaper, that means one-roof living currently looks lighter on the assumptions entered. It does not prove it is the better family choice. The first follow-up question is whether the routine-protection and supervision inputs were realistic. Many families understate those because the cost feels awkward to quantify. But if the household needs more outside meals, more cleaning help, more respite, or more boundaries just to keep co-residence workable, those are not optional extras. They are operating costs.</p>
+<p>If Route B is cheaper, it means nearby separate households are still carrying the caregiving job more cleanly than moving everyone into one unit. That often happens when the parent can still manage with support, when the main household has children or tight space, or when one-roof living would create a more fragile daily rhythm than the family first expected.</p>
+<p>The burden ratio is especially useful here. A route can be “cheaper” and still too heavy relative to income. When that happens, the problem is not just the structure. It is the household’s total capacity. The right next move may be formal support, sibling cost-sharing, or a change in housing timing rather than forcing one imperfect living arrangement to do too much.</p>
+<p>Run a next-stage scenario as well. Increase supervision hours, backup support, or trips modestly and see what breaks first. If the move-in route only looks good in the current-light-support scenario, then the household should be careful about assuming one roof will still work once care intensity rises.</p>
+<p>Look for asymmetry too. One route may be slightly more expensive but much easier to reverse. That matters in caregiving decisions because many families are not choosing a permanent structure, even when they feel pressure to act quickly.</p>
+
+<p>Another useful way to read the result is to ask what kind of friction each route concentrates. Move-in arrangements concentrate friction inside the main household. That means the cost is paid through attention, sleep, and shared space. Nearby-household arrangements spread the friction across distance and repeated logistics. That means the cost is paid through travel, coordination, and duplicated planning. A route can be numerically cheaper and still be the worse fit if it concentrates strain in the part of family life that is already most fragile.</p>
+<p>Look carefully at which route needs the most heroics to stay workable. If the move-in route assumes that one person will absorb most of the emotional regulation and supervision work, the spreadsheet may still look fine while the arrangement is operationally thin. If the nearby-households route assumes endless driving and daily flexibility that the household does not really have, then the “independence” of separate homes may be overstated too. The calculator is most useful when those hidden heroics are priced explicitly rather than admired silently.</p>
+<h2 id="mistakes">Common mistakes</h2>
+
+<ul>
+<li><strong>Assuming zero privacy cost in co-residence.</strong> Even harmonious families usually need more structure, more cleaning, more time outside the flat, or more paid help once all generations are under one roof.</li>
+<li><strong>Pricing separate households only by taxi cost.</strong> The real burden is usually the coordination and escort time, not only the transport receipt.</li>
+<li><strong>Ignoring children and spouse routine.</strong> A one-roof arrangement that complicates school logistics, rest, or work focus is not free simply because the family does not like naming it as a cost.</li>
+<li><strong>Forgetting the parent’s point of view.</strong> Nearby households can preserve autonomy and dignity in ways that improve compliance and reduce friction.</li>
+<li><strong>Using optimistic offsets.</strong> Shared caregiving only reduces household burden if the help is reliable, not merely promised.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>What does this move-parents-in vs nearby-households calculator compare?</h3>
+<p>It compares the monthly burden of moving aging parents into your home against maintaining separate nearby households after setup cost, travel, supervision time, household support, and coordination drag are counted.</p>
+<h3>Why is there an input for lost routine or privacy support cost?</h3>
+<p>Because households often need recurring spending to protect rest, relationship stability, or childcare routine once co-residence begins. That cost is real even if it does not look like a medical bill.</p>
+<h3>Does a cheaper one-roof result mean I should definitely move parents in?</h3>
+<p>No. It means the one-roof route currently looks lighter on the assumptions entered. You still need to decide whether the arrangement is resilient, reversible, and acceptable for everyone living there.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is underpricing the household friction of co-residence while overpricing only visible transport cost in the separate-household route.</p>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul><li><a href="https://www.aic.sg/caregiving-support/">AIC — Caregiving Support</a></li><li><a href="https://www.aic.sg/caregiving-support/making-your-home-safe">AIC — Making Your Home Safe</a></li><li><a href="https://www.hdb.gov.sg/residential/living-in-an-hdb-flat/for-our-seniors/ease">HDB — Enhancement for Active Seniors (EASE)</a></li><li><a href="https://www.moh.gov.sg/healthcare-schemes-subsidies/long-term-care">MOH — Long-Term Care Support</a></li></ul>
+<p class="muted"><strong>Last updated:</strong> 22 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const money=n=>new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0}).format(Number.isFinite(n)?n:0);
+  const num=id=>Math.max(0,parseFloat($(id).value)||0);
+  function calc(){
+    const income=num('income');
+    const routeA=Math.max(0,(num('roomSetup')/Math.max(1,num('spread'))) + num('monthlyTopup') + (num('supervisionHours')*num('hourValue')) + num('routineCost') + num('medicalTripsA') - num('careOffsetA'));
+    const routeB=Math.max(0,num('housingTopupB') + (num('visitTrips')*num('tripCost')) + (num('coordHours')*num('hourValue')) + num('backupSupport') - num('careOffsetB'));
+    const gap=Math.abs(routeA-routeB), cheaper=Math.min(routeA,routeB);
+    $('routeA').textContent=money(routeA); $('routeB').textContent=money(routeB); $('gap').textContent=money(gap);
+    $('gapLabel').textContent=routeA<routeB ? 'Moving parents into your home is lighter on current assumptions.' : routeB<routeA ? 'Maintaining nearby households is lighter on current assumptions.' : 'Both routes are effectively tied on current assumptions.';
+    $('ratio').textContent=((income>0? cheaper/income:0)*100).toFixed(1)+'%';
+    $('note').textContent = routeA<routeB ? 'One-roof living currently looks cheaper, but check carefully whether privacy and routine cost were understated.' : routeB<routeA ? 'Nearby households currently look cheaper, which often means response speed was not enough to outweigh daily household friction.' : 'The numbers are close. Re-run with a higher-support scenario before treating either route as safe.';
+  }
+  document.querySelectorAll('input').forEach(el=>el.addEventListener('input',calc)); calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>
