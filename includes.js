@@ -1113,7 +1113,8 @@ decisionPathOverrides: {
         { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" },
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", subtopic: "bridge" }
-      ],
+      ,
+        { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" }],
       bridges: [
         { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
         { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" },
@@ -1153,7 +1154,10 @@ decisionPathOverrides: {
         { url: "/cpf-oa-investment-singapore.html", title: "CPF OA Investment in Singapore (2026)", cluster: "investing", subtopic: "investing" },
         { url: "/srs-account-singapore.html", title: "SRS Account in Singapore (2026)", cluster: "investing", subtopic: "investing" },
         { url: "/regular-savings-plan-vs-lump-sum-singapore.html", title: "Regular Savings Plan vs Lump Sum Investing in Singapore (2026)", cluster: "investing", subtopic: "investing" },
-        { url: "/how-much-to-invest-each-month-singapore.html", title: "How Much to Invest Each Month in Singapore (2026)", cluster: "investing", subtopic: "investing" }],
+        { url: "/how-much-to-invest-each-month-singapore.html", title: "How Much to Invest Each Month in Singapore (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/cpf-sa-top-up-singapore.html", title: "CPF SA Top-Up in Singapore (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/singapore-savings-bonds-singapore.html", title: "Singapore Savings Bonds (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/index-fund-investing-singapore.html", title: "Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "investing" }],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },

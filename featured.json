@@ -1916,34 +1916,6 @@
   },
   "new": [
     {
-      "url": "/cpf-sa-top-up-singapore.html",
-      "title": "CPF SA Top-Up in Singapore (2026)",
-      "desc": "Does the 4% and tax relief justify the near-permanent lock-in.",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/singapore-savings-bonds-singapore.html",
-      "title": "Singapore Savings Bonds (2026)",
-      "desc": "When SSBs work as a cash-adjacent medium-term reserve layer.",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/index-fund-investing-singapore.html",
-      "title": "Index Fund Investing in Singapore (2026)",
-      "desc": "The case for low-cost diversified funds over stock-picking.",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/life-insurance-calculator-singapore.html",
-      "title": "Life Insurance Calculator Singapore (2026)",
-      "desc": "How much cover your household actually needs \u2014 a needs-based estimate.",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
       "url": "/cpf-oa-investment-singapore.html",
       "title": "CPF OA Investment in Singapore (2026)",
       "desc": "",
@@ -1951,9 +1923,37 @@
       "clusterLabel": "Investing"
     },
     {
-      "url": "/use-housing-equity-vs-preserve-cashflow-when-supporting-aging-parents-singapore.html",
-      "title": "Use Housing Equity vs Preserve Cashflow When Supporting Aging Parents in Singapore (2026)",
-      "desc": "Use housing equity vs preserve cashflow when supporting aging parents in Singapore: compare asset-ba",
+      "url": "/cpf-sa-top-up-singapore.html",
+      "title": "CPF SA Top-Up in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/how-much-to-invest-each-month-singapore.html",
+      "title": "How Much to Invest Each Month in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/index-fund-investing-singapore.html",
+      "title": "Index Fund Investing in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/downsize-your-home-to-support-aging-parents-vs-stay-put-singapore.html",
+      "title": "Downsize Your Home to Support Aging Parents vs Stay Put in Singapore (2026)",
+      "desc": "Downsize your home to support aging parents vs stay put in Singapore: compare released equity, reloc",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/how-supporting-aging-parents-changes-your-home-access-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Home-Access Decision Order in Singapore (2026)",
+      "desc": "How supporting aging parents changes your home-access decision order in Singapore: a framework for s",
       "cluster": "family",
       "clusterLabel": "Family"
     },
@@ -1972,18 +1972,18 @@
       "clusterLabel": "Property"
     },
     {
-      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
-      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
-      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
-    {
       "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
       "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026)",
       "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
       "cluster": "family",
       "clusterLabel": "Family"
+    },
+    {
+      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
+      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
+      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
+      "cluster": "property",
+      "clusterLabel": "Property"
     }
   ],
   "popular": [

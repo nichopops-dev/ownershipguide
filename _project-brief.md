@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0283
+> Last updated: March 2026 · Based on repo v0283.2
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0283
+**Current version:** v0283.2
 
 ### Key files
 
@@ -228,6 +228,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0282-hotfix | includes.js rebuilt from v0280 base; protection.pillars verified identical |
 | v0282.2 | Emergency restore: 64 empty property pages restored from v0280 backup with og:cluster tags; 3 orphans fixed; brief restored; sitemap 487 URLs; featured.json 314 pages |
 | v0283 | 4 build items: (1) Property hub jump nav — anchor IDs + pill nav for all 15 branch sections; (2) Investing cluster 3 new pages — CPF SA top-up, Singapore Savings Bonds, index fund investing; (3) Protection — life insurance sizing calculator with full needs-based JS calc; (4) Brief updated with v0282 incident history; 11 remaining empty files from v0282 restored; sitemap 491 URLs; featured.json 317 pages (investing 21) |
+| v0283.2 | Sweep fixes: 4 v0283 new pages added to SITE search index (cpf-sa-top-up, singapore-savings-bonds, index-fund-investing, life-insurance-calculator); 9 comparison-tagged pages added to comparisons hub (6 property: valuation-vs-asking-price, progressive-payment, lower-asking-price, lease-renewal, gross-vs-net-rental-yield, joint-tenancy-vs-tenancy-in-common; 3 family: stay-at-home-vs-infantcare, supervision-vs-independent-living, better-lighting-vs-old-routines); generators run |
 
 ---
 
