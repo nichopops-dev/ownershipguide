@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0278
+> Last updated: March 2026 · Based on repo v0278.1
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0278
+**Current version:** v0278.1
 
 ### Key files
 | File | Purpose |
@@ -678,3 +678,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0262 | Sweep + SEO + featured.json repair: featured.json pinned[] corrupted from dict to flat list by ChatGPT — restored correct cluster-keyed dict structure; cluster_pages regenerated (219 pages, family now 105); generate-featured.py hardened with PINNED_DEFAULT guard to survive future corruption; 1 bad Article schema fixed (unescaped quotes in headline); 8 orphan pages fixed (23 contextual links added — all aging-parent appointment/overnight supervision pages); Article schema added to 25 new pages (268 total); sitemap regenerated (457 URLs) |
 | v0263 | Internal linking density audit: 80 contextual links added across all 5 clusters; 58 pages at ≤3 inbound reduced to 46; family cluster most impacted (32 weak pages addressed); protection (11), transport (10), investing (4), property (1) also fixed; all anchor pages use contextually relevant sub-topic hubs not just generic pillars; sitemap regenerated (457 URLs); featured.json regenerated (219 pages, pinned dict preserved) |
 | v0278 | Enhancement session: (A) Hub user flow — family hub reordered so "Start with the path" is first (was position 19/29), jump navigation added for 22 aging-parents sub-topics, transport hub reordered with Start first; (B) Cross-sub-topic linking — 16 links added between aging-parents decision-order pages across logically related sub-topics; (C) Article schema dateModified — 73 pages patched; (D) start-here updated — 1 aging-parents path replaced with 3 (finances, caregiving, legal/estate); (E) Search scoring — aging-parents hub pages boosted +12 in scoreResult; sitemap 483 URLs; featured.json 231 pages |
+| v0278.1 | Hotfixes: (1) featured.json new[] was showing date-bumped old pages not genuinely new ones — fixed by adding page_registry (first_seen dates) to featured.json; generate-featured.py updated to sort new[] by first_seen not last_updated, preventing future date-bump pollution; (2) Family hub "Also in family: X when supporting aging parents" headings renamed to "Aging-parent support: X" — cleaner and non-repetitive |

@@ -85,12 +85,34 @@ for cluster in CLUSTERS:
         for p in cp
     ]
 
-# Build new[] (10 most recent across all clusters)
-all_sorted = sorted(pages, key=lambda x: x['date'], reverse=True)
+# Build new[] using page_registry (first_seen dates) to avoid date-bump pollution
+# Load existing registry — tracks when each page was first added to the site
+existing_registry = {}
+if os.path.exists(OUTPUT):
+    try:
+        existing_data = json.load(open(OUTPUT))
+        existing_registry = existing_data.get('page_registry', {})
+    except: pass
+
+# Update registry: add new pages with today as first_seen date
+today_iso = datetime.now().strftime('%Y-%m-%d')
+page_fns = [p['url'].lstrip('/') for p in pages]
+for fn in page_fns:
+    if fn not in existing_registry:
+        existing_registry[fn] = {'first_seen': today_iso}
+
+# Sort by first_seen (not last_updated) — preserves genuine newness across sessions
+pages_with_first_seen = []
+for p in pages:
+    fn = p['url'].lstrip('/')
+    first_seen = existing_registry.get(fn, {}).get('first_seen', '2026-01-01')
+    pages_with_first_seen.append({**p, 'first_seen': first_seen})
+
+registry_sorted = sorted(pages_with_first_seen, key=lambda x: x['first_seen'], reverse=True)
 new_list = [
     {'url': p['url'], 'title': p['title'], 'desc': p['desc'],
      'cluster': p['cluster'], 'clusterLabel': CLUSTER_LABEL[p['cluster']]}
-    for p in all_sorted[:10]
+    for p in registry_sorted[:10]
 ]
 
 # Preserve pinned if it exists in current featured.json
@@ -154,6 +176,7 @@ output = {
     'new': new_list,
     'popular': POPULAR,
     'pinned': existing_pinned,
+    'page_registry': existing_registry,
 }
 
 with open(OUTPUT, 'w') as f:
