@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0280
+> Last updated: March 2026 · Based on repo v0281
 
 ---
 
@@ -32,7 +32,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0280
+**Current version:** v0281
 
 ### Key files
 
@@ -41,7 +41,7 @@
 | `includes.js` | ⚠️ Central nervous system — ALL shared behaviour. Never regenerate from scratch. See Section 3. |
 | `styles.css` | Global stylesheet |
 | `index.html` | Homepage |
-| `sitemap.xml` | 483 URLs — regenerate with `python3 generate-sitemap.py` each session |
+| `sitemap.xml | 487 URLs — regenerate with `python3 generate-sitemap.py` each session — regenerate with `python3 generate-sitemap.py` each session |
 | `featured.json` | Hub + homepage dynamic data. Structure: `cluster_pages` (all pages per cluster sorted by date), `new[]` (10 most recent — sorted by `first_seen` from `page_registry`, NOT last_updated), `popular[]` (manual), `pinned` (dict keyed by cluster — NEVER flatten to list), `page_registry` (tracks first_seen per page). Regenerate with `python3 generate-featured.py` each session. Do not add to sitemap. |
 | `generate-sitemap.py` | Regenerates sitemap.xml from actual files. Run from repo root. |
 | `generate-featured.py` | Regenerates featured.json. Preserves `pinned` dict and `page_registry`. Run from repo root. |
@@ -177,7 +177,7 @@ python3 generate-featured.py     # from repo root
 - ✅ 0 broken internal links
 - ✅ 0 orphan pages
 - ✅ 0 invalid schema
-- ✅ 483 sitemap URLs
+- ✅ 487 sitemap URLs
 - ✅ 456 pages in search index
 - ✅ Article schema on ~268 pages (all eligible content pages covered)
 - ✅ AdSense Auto Ads live
@@ -231,7 +231,7 @@ Full coverage: hospitalisation/medical structure, life insurance, critical illne
 
 **Hub:** `protection/index.html` — "Start with the path" at position 1
 
-### Investing/Liquidity (14 content pages) 🟡 Growing
+### Investing/Liquidity (18 content pages) 🟡 Growing
 
 Coverage: emergency fund sizing, storage, sequencing (invest vs build), vs sinking fund, when to use, how to rebuild, account splitting, instant-access layering, irregular income variant, children variant, mortgage variant, pay down debt vs build, save more vs buy more insurance.
 
@@ -278,13 +278,14 @@ Structured in comparisons hub with 5 cluster sections. Family section has 4 sub-
 | v0278.1 | featured.json new[] fix: page_registry added, sorts by first_seen not last_updated; family hub headings renamed to "Aging-parent support: X" |
 | v0279 | Comparisons hub: duplicate/rogue sections removed, Family restructured into 4 sub-groups; Protection hub reordered; Homepage Family journey updated |
 | v0280 | UX consistency: family hub 22 boxes → compact 2-column grid; property + investing hubs reordered; calculator descriptions (31); "I am supporting aging parents" card on homepage; all 5 hubs have Start at position 1 |
+| v0281 | Investing cluster deepened (4 new pages): CPF OA investment, SRS account, regular savings plan vs lump sum, how much to invest each month; Investing hub 4th Start card added; inbound links added to all 4 pages; UX enhancements: new[] diversity cap (max 4 per cluster) added to generate-featured.py; start-here Family card expanded with sub-paths (children/care + aging parents); comparisons hub cluster jump nav added with anchor ids; sitemap 487 URLs; featured.json 235 pages (investing now 18) |
 
 ---
 
 ## 10. SEO Status (as of v0280)
 
 - ✅ Canonical tags on all pages (via includes.js)
-- ✅ Sitemap at /sitemap.xml (483 URLs)
+- ✅ Sitemap at /sitemap.xml | 487 URLs — regenerate with `python3 generate-sitemap.py` each session)
 - ✅ FAQPage schema on all FAQ-bearing pages
 - ✅ Article schema on ~268 pages (all eligible content pages)
 - ✅ `dateModified` in Article schema kept current (patched v0278)

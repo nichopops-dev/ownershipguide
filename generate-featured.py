@@ -109,10 +109,22 @@ for p in pages:
     pages_with_first_seen.append({**p, 'first_seen': first_seen})
 
 registry_sorted = sorted(pages_with_first_seen, key=lambda x: x['first_seen'], reverse=True)
+# Apply diversity cap: max 4 per cluster in new[]
+diverse_new = []
+cluster_counts_new = {}
+for p in registry_sorted:
+    cl = p['cluster']
+    if cluster_counts_new.get(cl, 0) >= 4:
+        continue
+    cluster_counts_new[cl] = cluster_counts_new.get(cl, 0) + 1
+    diverse_new.append(p)
+    if len(diverse_new) >= 10:
+        break
+
 new_list = [
     {'url': p['url'], 'title': p['title'], 'desc': p['desc'],
      'cluster': p['cluster'], 'clusterLabel': CLUSTER_LABEL[p['cluster']]}
-    for p in registry_sorted[:10]
+    for p in diverse_new
 ]
 
 # Preserve pinned if it exists in current featured.json

@@ -1313,6 +1313,30 @@
     ],
     "investing": [
       {
+        "url": "/cpf-oa-investment-singapore.html",
+        "title": "CPF OA Investment in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-23"
+      },
+      {
+        "url": "/how-much-to-invest-each-month-singapore.html",
+        "title": "How Much to Invest Each Month in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-23"
+      },
+      {
+        "url": "/regular-savings-plan-vs-lump-sum-singapore.html",
+        "title": "Regular Savings Plan vs Lump Sum Investing in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-23"
+      },
+      {
+        "url": "/srs-account-singapore.html",
+        "title": "SRS Account in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-23"
+      },
+      {
         "url": "/how-having-children-changes-your-emergency-fund-size-singapore.html",
         "title": "How Having Children Changes Your Emergency Fund Size in Singapore (2026)",
         "desc": "How having children changes your emergency fund size in Singapore (2026): a practical guide to how d",
@@ -1400,6 +1424,34 @@
   },
   "new": [
     {
+      "url": "/cpf-oa-investment-singapore.html",
+      "title": "CPF OA Investment in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/how-much-to-invest-each-month-singapore.html",
+      "title": "How Much to Invest Each Month in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/regular-savings-plan-vs-lump-sum-singapore.html",
+      "title": "Regular Savings Plan vs Lump Sum Investing in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/srs-account-singapore.html",
+      "title": "SRS Account in Singapore (2026)",
+      "desc": "",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/downsize-your-home-to-support-aging-parents-vs-stay-put-singapore.html",
       "title": "Downsize Your Home to Support Aging Parents vs Stay Put in Singapore (2026)",
       "desc": "Downsize your home to support aging parents vs stay put in Singapore: compare released equity, reloc",
@@ -1428,46 +1480,18 @@
       "clusterLabel": "Family"
     },
     {
-      "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
-      "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026)",
-      "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
-      "cluster": "family",
-      "clusterLabel": "Family"
+      "url": "/5-year-vs-10-year-motorcycle-coe-renewal-singapore.html",
+      "title": "5-Year vs 10-Year Motorcycle COE Renewal in Singapore (2026)",
+      "desc": "5-year vs 10-year motorcycle COE renewal in Singapore in 2026: how to choose the right duration afte",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
     },
     {
-      "url": "/live-near-aging-parents-vs-live-near-medical-services-singapore.html",
-      "title": "Live Near Aging Parents vs Live Near Medical Services in Singapore (2026)",
-      "desc": "Live near aging parents vs live near medical services in Singapore: compare everyday response time a",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/move-aging-parents-into-your-home-vs-maintain-two-nearby-households-singapore.html",
-      "title": "Move Aging Parents Into Your Home vs Maintain Two Nearby Households in Singapore (2026)",
-      "desc": "Move aging parents into your home vs maintain two nearby households in Singapore: compare daily resp",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
-      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
-      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/single-storey-home-vs-multi-level-home-for-aging-parents-singapore.html",
-      "title": "Single-Storey Home vs Multi-Level Home for Aging Parents in Singapore (2026)",
-      "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/use-housing-equity-vs-preserve-cashflow-when-supporting-aging-parents-singapore.html",
-      "title": "Use Housing Equity vs Preserve Cashflow When Supporting Aging Parents in Singapore (2026)",
-      "desc": "Use housing equity vs preserve cashflow when supporting aging parents in Singapore: compare asset-ba",
-      "cluster": "family",
-      "clusterLabel": "Family"
+      "url": "/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html",
+      "title": "Accident Insurance vs Bigger Cash Buffer for Motorcycle Riders in Singapore (2026)",
+      "desc": "Accident insurance vs a bigger cash buffer for motorcycle riders in Singapore: decide whether the ne",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
     }
   ],
   "popular": [
@@ -3011,6 +3035,18 @@
     },
     "property-ownership-cost-singapore.html": {
       "first_seen": "2026-03-19"
+    },
+    "cpf-oa-investment-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "srs-account-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "regular-savings-plan-vs-lump-sum-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "how-much-to-invest-each-month-singapore.html": {
+      "first_seen": "2026-03-23"
     }
   }
 }
