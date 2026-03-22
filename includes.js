@@ -1393,6 +1393,8 @@ decisionPathOverrides: {
         "/cost-of-having-a-baby-singapore.html"
       ];
       if (PILLARS.includes(item?.url)) score += 15;
+      // Boost aging-parents sub-topic hub pages so broad searches surface decision-order pages
+      if (item?.url && item.url.includes("how-supporting-aging-parents-changes-your-")) score += 12;
     }
     return score;
   }
