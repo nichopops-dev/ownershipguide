@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Paste this at the start of every Claude or ChatGPT session to restore full context instantly.
-> Last updated: March 2026 · Based on repo v0279
+> Last updated: March 2026 · Based on repo v0280
 
 ---
 
@@ -39,7 +39,7 @@
 > ⚠️ **Known recurring issue — includes.js search index:** ChatGPT periodically rewrites `includes.js` entirely and removes the family/protection SITE cluster entries and the URL scoring improvement. Claude re-applies these each session. The Step 3 prompt now includes an explicit guard against this.
 > ⚠️ **Related-links rule:** calculator pages should carry the `auto-related` div so `includes.js` can inject onward navigation. Hub pages are intentionally excluded from this rule.
 **Hosting:** GitHub Pages (or equivalent static host)
-**Current version:** v0279
+**Current version:** v0280
 
 ### Key files
 | File | Purpose |
@@ -680,3 +680,4 @@ Protection should continue to branch carefully by protection purpose. New pages 
 | v0278 | Enhancement session: (A) Hub user flow — family hub reordered so "Start with the path" is first (was position 19/29), jump navigation added for 22 aging-parents sub-topics, transport hub reordered with Start first; (B) Cross-sub-topic linking — 16 links added between aging-parents decision-order pages across logically related sub-topics; (C) Article schema dateModified — 73 pages patched; (D) start-here updated — 1 aging-parents path replaced with 3 (finances, caregiving, legal/estate); (E) Search scoring — aging-parents hub pages boosted +12 in scoreResult; sitemap 483 URLs; featured.json 231 pages |
 | v0278.1 | Hotfixes: (1) featured.json new[] was showing date-bumped old pages not genuinely new ones — fixed by adding page_registry (first_seen dates) to featured.json; generate-featured.py updated to sort new[] by first_seen not last_updated, preventing future date-bump pollution; (2) Family hub "Also in family: X when supporting aging parents" headings renamed to "Aging-parent support: X" — cleaner and non-repetitive |
 | v0279 | UX fixes: Comparisons hub repaired — dummy "Family comparisons" section removed, 3 rogue "Also in comparisons" sections merged into Family cost comparisons, Family cost comparisons restructured into 4 sub-groups (childcare, education, aging-parent care, aging-parent housing); Protection hub reordered — "Start with the path" moved to position 1; Homepage Family journey updated to include aging-parents entry point |
+| v0280 | UX consistency pass: (1) Family hub 22 sub-topic boxes → single compact 2-column grid (29 h2s → 8, page height ~halved); (2) All 5 cluster hubs now have "Start with the path" at position 1 — property and investing fixed this session; (3) Calculator hub: descriptions added to all 31 calculators in browse section; (4) Homepage "Choose the path" section: "I am supporting aging parents" card added as 7th path; (5) Comparisons hub: Transport section moved to top |
