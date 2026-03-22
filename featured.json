@@ -1328,22 +1328,52 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026): What Should Move Up the Queue Once Distance Starts Reshaping Care, Clinic Travel, and Family Capacity?",
+      "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequencing proximity, medical-route access, housing flexibility, and liquidity before distance quietly becomes the family bottleneck.",
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/live-near-aging-parents-vs-live-near-medical-services-singapore.html",
+      "title": "Live Near Aging Parents vs Live Near Medical Services in Singapore (2026): Which Location Logic Reduces More Friction Once Follow-Ups, Urgent Visits, and Escort Burden Become Recurring?",
+      "desc": "Live near aging parents vs live near medical services in Singapore: compare everyday response time against clinic and hospital access once recurring follow-ups, escorts, and unplanned care start driving location decisions.",
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
+      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026): Which Proximity Move Preserves More Flexibility Once Care Needs Start Escalating?",
+      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in, caregiving response speed, and what families misread when proximity becomes part of the care system.",
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-supporting-aging-parents-changes-your-home-access-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Home-Access Decision Order in Singapore (2026): What Should Move Up the Queue Once Stairs, Floor Layout, and Escort Friction Become Real?",
       "desc": "How supporting aging parents changes your home-access decision order in Singapore: a framework for se",
-      "date": "2026-03-22"
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/single-storey-home-vs-multi-level-home-for-aging-parents-singapore.html",
       "title": "Single-Storey Home vs Multi-Level Home for Aging Parents in Singapore (2026): Which Layout Stays Usable Once Fatigue, Toileting Urgency, and Night Risk Become Real?",
       "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
-      "date": "2026-03-22"
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
       "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026): Which Living Setup Fails Less Once Clinic Trips, Fall Risk, and Family Support Become Real?",
       "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
-      "date": "2026-03-22"
+      "date": "2026-03-22",
+      "cluster": "family",
+      "clusterLabel": "Family"
     },
     {
       "url": "/hearing-vision-home-adjustment-cost-calculator-singapore.html",
@@ -1370,27 +1400,6 @@
       "url": "/continence-support-burden-calculator-singapore.html",
       "title": "Continence Support Burden Calculator Singapore (2026): Compare Ad-Hoc Cleanup and Rushing Against a More Structured Support System Before the Household Starts Organising Life Around Near-Misses",
       "desc": "Compare the monthly burden of ad-hoc continence support against a more structured support system after supplies, cleanup time, laundry, bathroom setup, and night disruption are counted honestly.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/nutrition-support-burden-calculator-singapore.html",
-      "title": "Nutrition Support Burden Calculator Singapore (2026): Compare Ad-Hoc Family Meal Support Against a More Structured Nutrition Route Before Under-Eating Becomes the Household Default",
-      "desc": "Compare the monthly burden of ad-hoc family meal support against a more structured nutrition route after prep time, delivery cost, texture adjustments, wastage, and caregiver hours are counted honestly.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/medication-management-burden-calculator-singapore.html",
-      "title": "Medication Management Burden Calculator Singapore (2026): Compare Ad-Hoc Family Medication Handling Against a More Structured Support Model Before Confusion Turns Into Daily Friction",
-      "desc": "Compare the monthly burden of ad-hoc family medication handling against a more structured support model after refill trips, supervision time, review cost, and missed-dose spillover are counted honestly.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/overnight-supervision-burden-calculator-singapore.html",
-      "title": "Overnight Supervision Burden Calculator Singapore (2026): Compare Ad-Hoc Night Checking Against a More Structured Overnight-Coverage Model Before One Bad Month Reshapes the Household",
-      "desc": "Compare the monthly burden of ad-hoc night checking against a more structured overnight-coverage route after sleep loss, setup cost, spillover, and respite support are counted honestly.",
       "cluster": "family",
       "clusterLabel": "Family"
     }
