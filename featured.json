@@ -359,9 +359,21 @@
         "date": "2026-03-22"
       },
       {
+        "url": "/coe-renewal-worth-it-singapore.html",
+        "title": "Should You Renew COE in Singapore? (2026 Decision Framework + Bre",
+        "desc": "",
+        "date": "2026-03-22"
+      },
+      {
         "url": "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html",
         "title": "How Having a Child Affects Your TDSR and Borrowing Capacity in Si",
         "desc": "Having a child changes your household income, expenses, and borrowing capacity in Singapore. A frame",
+        "date": "2026-03-22"
+      },
+      {
+        "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
+        "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026)",
+        "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequ",
         "date": "2026-03-22"
       },
       {
@@ -404,6 +416,12 @@
         "url": "/questions-to-answer-before-making-property-offer-singapore.html",
         "title": "Questions to Answer Before Making a Property Offer in Singapore (2026)",
         "desc": "Questions to answer before making a property offer in Singapore (2026): a pre-commitment filter cove",
+        "date": "2026-03-22"
+      },
+      {
+        "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
+        "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
+        "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
         "date": "2026-03-22"
       },
       {
@@ -893,6 +911,12 @@
         "date": "2026-03-06"
       },
       {
+        "url": "/buy-a-larger-shared-home-vs-keep-two-smaller-households-singapore.html",
+        "title": "Buy a Larger Shared Home vs Keep Two Smaller Households in Singapore (2026)",
+        "desc": "Buy a larger shared home vs keep two smaller households in Singapore: compare space efficiency, resa",
+        "date": "2026-03-01"
+      },
+      {
         "url": "/enhanced-cpf-housing-grant-ehg-singapore.html",
         "title": "Enhanced CPF Housing Grant (EHG) in Singapore (2026)",
         "desc": "Enhanced CPF Housing Grant (EHG) in Singapore for 2026: what it is, how it changes affordability, an",
@@ -908,6 +932,12 @@
         "url": "/hdb-income-ceiling-singapore.html",
         "title": "HDB Income Ceiling in Singapore (2026)",
         "desc": "HDB income ceiling in Singapore for 2026: why it is an eligibility gate, not an affordability test, ",
+        "date": "2026-03-01"
+      },
+      {
+        "url": "/how-supporting-aging-parents-changes-your-co-residence-decision-order-singapore.html",
+        "title": "How Supporting Aging Parents Changes Your Co-Residence Decision Order in Singapore (2026)",
+        "desc": "How supporting aging parents changes your co-residence decision order in Singapore: a framework for ",
         "date": "2026-03-01"
       },
       {
@@ -1021,12 +1051,6 @@
         "date": "2026-03-22"
       },
       {
-        "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
-        "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026)",
-        "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequ",
-        "date": "2026-03-22"
-      },
-      {
         "url": "/how-supporting-aging-parents-changes-your-mobility-decline-decision-order-singapore.html",
         "title": "How Supporting Aging Parents Changes Your Mobility-Decline Decision Order in Singapore (2026)",
         "desc": "How supporting aging parents changes your mobility-decline decision order in Singapore: sequence fal",
@@ -1084,12 +1108,6 @@
         "url": "/polytechnic-vs-university-cost-singapore.html",
         "title": "Polytechnic vs University Cost in Singapore (2026)",
         "desc": "Polytechnic vs university cost in Singapore in 2026: a practical framework for comparing duration, t",
-        "date": "2026-03-22"
-      },
-      {
-        "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
-        "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
-        "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
         "date": "2026-03-22"
       },
       {
@@ -1603,21 +1621,9 @@
         "date": "2026-03-16"
       },
       {
-        "url": "/buy-a-larger-shared-home-vs-keep-two-smaller-households-singapore.html",
-        "title": "Buy a Larger Shared Home vs Keep Two Smaller Households in Singapore (2026)",
-        "desc": "Buy a larger shared home vs keep two smaller households in Singapore: compare space efficiency, resa",
-        "date": "2026-03-01"
-      },
-      {
         "url": "/help-parents-with-housing-costs-vs-strengthen-your-own-cash-buffer-singapore.html",
         "title": "Help Parents With Housing Costs vs Strengthen Your Own Cash Buffer in Singapore (2026)",
         "desc": "Help parents with housing costs vs strengthen your own cash buffer in Singapore: decide whether the ",
-        "date": "2026-03-01"
-      },
-      {
-        "url": "/how-supporting-aging-parents-changes-your-co-residence-decision-order-singapore.html",
-        "title": "How Supporting Aging Parents Changes Your Co-Residence Decision Order in Singapore (2026)",
-        "desc": "How supporting aging parents changes your co-residence decision order in Singapore: a framework for ",
         "date": "2026-03-01"
       },
       {
@@ -1944,20 +1950,20 @@
       "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
       "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026)",
       "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequ",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/2-bedroom-vs-3-bedroom-condo-singapore.html",
-      "title": "2-Bedroom vs 3-Bedroom Condo in Singapore (2026)",
-      "desc": "2-bedroom vs 3-bedroom condo in Singapore (2026): how to think about family fit, work-from-home need",
       "cluster": "property",
       "clusterLabel": "Property"
     },
     {
-      "url": "/4-room-vs-5-room-hdb-singapore.html",
-      "title": "4-Room vs 5-Room HDB in Singapore (2026)",
-      "desc": "4-room vs 5-room HDB in Singapore (2026): how to think about family size, storage, multigenerational",
+      "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
+      "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026)",
+      "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
+      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
+      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
       "cluster": "property",
       "clusterLabel": "Property"
     }
