@@ -1328,6 +1328,24 @@
   },
   "new": [
     {
+      "url": "/how-supporting-aging-parents-changes-your-home-access-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Home-Access Decision Order in Singapore (2026): What Should Move Up the Queue Once Stairs, Floor Layout, and Escort Friction Become Real?",
+      "desc": "How supporting aging parents changes your home-access decision order in Singapore: a framework for se",
+      "date": "2026-03-22"
+    },
+    {
+      "url": "/single-storey-home-vs-multi-level-home-for-aging-parents-singapore.html",
+      "title": "Single-Storey Home vs Multi-Level Home for Aging Parents in Singapore (2026): Which Layout Stays Usable Once Fatigue, Toileting Urgency, and Night Risk Become Real?",
+      "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
+      "date": "2026-03-22"
+    },
+    {
+      "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
+      "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026): Which Living Setup Fails Less Once Clinic Trips, Fall Risk, and Family Support Become Real?",
+      "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
+      "date": "2026-03-22"
+    },
+    {
       "url": "/hearing-vision-home-adjustment-cost-calculator-singapore.html",
       "title": "Hearing and Vision Home-Adjustment Cost Calculator Singapore (2026): Compare Ad-Hoc Prompting Against a More Structured Sensory-Support Setup Before Confusion Becomes the Household Default",
       "desc": "Compare the monthly burden of ad-hoc hearing and vision support against a more structured home-adjustment route for aging parents in Singapore after device spread, prompting time, transport detours, and replacement cost are counted honestly.",
@@ -1373,27 +1391,6 @@
       "url": "/overnight-supervision-burden-calculator-singapore.html",
       "title": "Overnight Supervision Burden Calculator Singapore (2026): Compare Ad-Hoc Night Checking Against a More Structured Overnight-Coverage Model Before One Bad Month Reshapes the Household",
       "desc": "Compare the monthly burden of ad-hoc night checking against a more structured overnight-coverage route after sleep loss, setup cost, spillover, and respite support are counted honestly.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/appointment-and-transport-burden-calculator-singapore.html",
-      "title": "Appointment and Transport Burden Calculator Singapore (2026): Compare Ad-Hoc Family Follow-Up Against a More Structured Support Model Before It Starts Running the Household",
-      "desc": "Compare the monthly burden of ad-hoc family-managed appointments against a more structured support model after transport, escort time, coordination drag, and missed-follow-up friction are counted.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/adult-day-care-vs-keep-at-home-cost-calculator-singapore.html",
-      "title": "Adult Day Care vs Keep-at-Home Cost Calculator Singapore (2026): Compare Structured Daytime Care Against the Hidden Household Cost of Keeping Everything at Home",
-      "desc": "Compare adult day care against keeping an aging parent at home after sessions, transport, lost work flexibility, respite, and hidden support strain are counted.",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/helper-vs-home-care-cost-calculator-singapore.html",
-      "title": "Helper vs Home-Care Cost Calculator Singapore (2026): Compare the Live-In Route Against Formal Service Hours Before the Household Commits",
-      "desc": "Compare the monthly burden of a helper route against home-care services after levy, insurance, service hours, transport gaps, and offsets.",
       "cluster": "family",
       "clusterLabel": "Family"
     }
