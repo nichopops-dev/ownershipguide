@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0282.2
+> Last updated: March 2026 · Based on repo v0283
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0282.2
+**Current version:** v0283
 
 ### Key files
 
@@ -179,7 +179,7 @@ python3 generate-featured.py   # from repo root
 - ✅ 0 orphan pages
 - ✅ 0 empty files
 - ✅ 0 invalid schema
-- ✅ 487 sitemap URLs
+- ✅ 491 sitemap URLs
 - ✅ Article schema on ~268 pages
 - ✅ AdSense Auto Ads live | GA4 active | Email capture live
 - ✅ featured.json: `pinned` dict, `page_registry` present, diversity cap in generator
@@ -204,8 +204,8 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
-### Investing/Liquidity (18 content pages) 🟡 Growing
-Two layers: liquidity foundation (14 pages: emergency fund sizing, storage, sequencing, variants) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest).
+### Investing/Liquidity (21 content pages) 🟡 Growing
+Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles (3 pages: CPF SA top-up, SSBs, index fund investing).
 
 ### Calculators (38 pages) ✅ | Comparisons (52 pages) ✅
 
@@ -227,6 +227,7 @@ Two layers: liquidity foundation (14 pages: emergency fund sizing, storage, sequ
 | v0282 | INCIDENT — see Section 15 for full post-mortem |
 | v0282-hotfix | includes.js rebuilt from v0280 base; protection.pillars verified identical |
 | v0282.2 | Emergency restore: 64 empty property pages restored from v0280 backup with og:cluster tags; 3 orphans fixed; brief restored; sitemap 487 URLs; featured.json 314 pages |
+| v0283 | 4 build items: (1) Property hub jump nav — anchor IDs + pill nav for all 15 branch sections; (2) Investing cluster 3 new pages — CPF SA top-up, Singapore Savings Bonds, index fund investing; (3) Protection — life insurance sizing calculator with full needs-based JS calc; (4) Brief updated with v0282 incident history; 11 remaining empty files from v0282 restored; sitemap 491 URLs; featured.json 317 pages (investing 21) |
 
 ---
 
@@ -235,6 +236,7 @@ Two layers: liquidity foundation (14 pages: emergency fund sizing, storage, sequ
 - ✅ Canonical tags, sitemap (487 URLs), FAQPage schema, Article schema (~268 pages)
 - ✅ `dateModified` current, `og:cluster` + `og:subtopic` on all content pages
 - ✅ Aging-parent hub pages +12 search boost in scoreResult()
+- ✅ Life insurance sizing calculator added (protection cluster)
 - ⚠️ HowTo schema: 0 pages (opportunistic)
 - ⚠️ Some `property=` vs `name=` inconsistency on og meta tags
 

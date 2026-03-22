@@ -279,7 +279,10 @@ decisionPathOverrides: {
         { url: "/how-to-size-an-emergency-fund-if-your-income-is-irregular-singapore.html", title: "How to Size an Emergency Fund If Your Income Is Irregular in Singapore (2026): A Buffer Framework for Variable Cash Flow Without Guesswork", cluster: "investing", subtopic: "liquidity" },
         { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", cluster: "investing", subtopic: "liquidity" },
         { url: "/how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html", title: "How Having a Mortgage Changes Your Emergency Fund Size in Singapore (2026): Why Fixed Debt Obligations Usually Demand a Bigger Cash Buffer", cluster: "investing", subtopic: "liquidity" }
-      ],
+      ,
+        { url: "/cpf-sa-top-up-singapore.html", title: "CPF SA Top-Up in Singapore (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/singapore-savings-bonds-singapore.html", title: "Singapore Savings Bonds (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/index-fund-investing-singapore.html", title: "Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "investing" }],
       bridges: [
         { url: "/when-insurance-starts-to-matter-more-than-investing-singapore.html", title: "When Insurance Starts to Matter More Than Investing in Singapore (2026): The Order of Operations Risk-Aware Households Should Respect", cluster: "protection", subtopic: "planning" },
         { url: "/pay-down-mortgage-vs-invest-singapore.html", title: "Pay Down Mortgage vs Invest in Singapore (2026): Framework + Worked Example", cluster: "property", subtopic: "financing" },
@@ -420,7 +423,8 @@ decisionPathOverrides: {
         { url: "/critical-illness-insurance-vs-bigger-cash-buffer-with-mortgage-singapore.html", title: "Critical Illness Insurance vs Bigger Cash Buffer With a Mortgage in Singapore (2026): Which Layer Actually Buys More Breathing Room?", cluster: "protection", subtopic: "bridge" },
         { url: "/hospitalisation-rider-vs-bigger-cash-buffer-with-mortgage-singapore.html", title: "Hospitalisation Rider vs Bigger Cash Buffer With a Mortgage in Singapore (2026): Which Layer Actually Reduces More Fragility?", cluster: "protection", subtopic: "bridge" },
         { url: "/term-life-vs-cash-buffer-for-single-income-mortgage-singapore.html", title: "Term Life vs Cash Buffer for a Single-Income Mortgage in Singapore (2026): Which Missing Layer Is More Dangerous Right Now?", cluster: "protection", subtopic: "bridge" },
-      ],
+      ,
+        { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" }],
       bridges: [
         { url: "/how-much-does-it-cost-to-raise-a-child-singapore.html", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", cluster: "family", subtopic: "core" },
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", cluster: "family", subtopic: "planning" },
