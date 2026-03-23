@@ -1163,7 +1163,10 @@ decisionPathOverrides: {
         { url: "/cash-management-account-vs-singapore-savings-bonds-singapore.html", title: "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/srs-vs-cpf-sa-top-up-singapore.html", title: "SRS vs CPF SA Top-Up in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html", title: "CPF SA Top-Up vs Pay Down Mortgage in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
-        { url: "/srs-vs-pay-down-mortgage-singapore.html", title: "SRS vs Pay Down Mortgage in Singapore (2026)", cluster: "investing", subtopic: "comparison" }],
+        { url: "/srs-vs-pay-down-mortgage-singapore.html", title: "SRS vs Pay Down Mortgage in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/srs-vs-cpf-oa-investment-singapore.html", title: "SRS vs CPF OA Investment in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html", title: "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/surplus-cash-allocation-calculator-singapore.html", title: "Surplus Cash Allocation Calculator Singapore (2026)", cluster: "investing", subtopic: "calculator" }],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },

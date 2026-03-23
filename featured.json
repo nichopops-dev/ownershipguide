@@ -1787,27 +1787,45 @@
     ],
     "investing": [
       {
+        "url": "/cpf-oa-investment-singapore.html",
+        "title": "CPF OA Investment in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-26"
+      },
+      {
+        "url": "/cpf-sa-top-up-singapore.html",
+        "title": "CPF SA Top-Up in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-26"
+      },
+      {
+        "url": "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html",
+        "title": "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)",
+        "desc": "CPF SA top-up vs CPF OA investment in Singapore (2026): compare guaranteed 4%, tax relief, hard lock",
+        "date": "2026-03-26"
+      },
+      {
+        "url": "/srs-account-singapore.html",
+        "title": "SRS Account in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-26"
+      },
+      {
+        "url": "/srs-vs-cpf-oa-investment-singapore.html",
+        "title": "SRS vs CPF OA Investment in Singapore (2026)",
+        "desc": "SRS vs CPF OA investment in Singapore (2026): compare tax relief, lock-in, property constraints, liq",
+        "date": "2026-03-26"
+      },
+      {
         "url": "/cash-management-account-vs-singapore-savings-bonds-singapore.html",
         "title": "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)",
         "desc": "Cash management account vs Singapore Savings Bonds in Singapore (2026): compare principal certainty,",
         "date": "2026-03-25"
       },
       {
-        "url": "/cpf-sa-top-up-singapore.html",
-        "title": "CPF SA Top-Up in Singapore (2026)",
-        "desc": "",
-        "date": "2026-03-25"
-      },
-      {
         "url": "/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html",
         "title": "CPF SA Top-Up vs Pay Down Mortgage in Singapore (2026)",
         "desc": "CPF SA top-up vs pay down mortgage in Singapore (2026): compare guaranteed CPF return, tax relief, m",
-        "date": "2026-03-25"
-      },
-      {
-        "url": "/srs-account-singapore.html",
-        "title": "SRS Account in Singapore (2026)",
-        "desc": "",
         "date": "2026-03-25"
       },
       {
@@ -1833,12 +1851,6 @@
         "title": "T-Bills vs Singapore Savings Bonds in Singapore (2026)",
         "desc": "T-bills vs Singapore Savings Bonds in Singapore (2026): decide based on access timing, reinvestment ",
         "date": "2026-03-24"
-      },
-      {
-        "url": "/cpf-oa-investment-singapore.html",
-        "title": "CPF OA Investment in Singapore (2026)",
-        "desc": "",
-        "date": "2026-03-23"
       },
       {
         "url": "/how-much-to-invest-each-month-singapore.html",
@@ -1952,6 +1964,20 @@
   },
   "new": [
     {
+      "url": "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html",
+      "title": "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)",
+      "desc": "CPF SA top-up vs CPF OA investment in Singapore (2026): compare guaranteed 4%, tax relief, hard lock",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/srs-vs-cpf-oa-investment-singapore.html",
+      "title": "SRS vs CPF OA Investment in Singapore (2026)",
+      "desc": "SRS vs CPF OA investment in Singapore (2026): compare tax relief, lock-in, property constraints, liq",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html",
       "title": "CPF SA Top-Up vs Pay Down Mortgage in Singapore (2026)",
       "desc": "CPF SA top-up vs pay down mortgage in Singapore (2026): compare guaranteed CPF return, tax relief, m",
@@ -1962,20 +1988,6 @@
       "url": "/srs-vs-cpf-sa-top-up-singapore.html",
       "title": "SRS vs CPF SA Top-Up in Singapore (2026)",
       "desc": "SRS vs CPF SA top-up in Singapore (2026): compare tax relief, liquidity lock-in, investment flexibil",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/srs-vs-pay-down-mortgage-singapore.html",
-      "title": "SRS vs Pay Down Mortgage in Singapore (2026)",
-      "desc": "SRS vs pay down mortgage in Singapore (2026): compare tax relief, investment upside, liquidity loss,",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cash-management-account-vs-singapore-savings-bonds-singapore.html",
-      "title": "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)",
-      "desc": "Cash management account vs Singapore Savings Bonds in Singapore (2026): compare principal certainty,",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -3605,6 +3617,12 @@
     },
     "srs-vs-pay-down-mortgage-singapore.html": {
       "first_seen": "2026-03-25"
+    },
+    "srs-vs-cpf-oa-investment-singapore.html": {
+      "first_seen": "2026-03-26"
+    },
+    "cpf-sa-top-up-vs-cpf-oa-investment-singapore.html": {
+      "first_seen": "2026-03-26"
     }
   }
 }

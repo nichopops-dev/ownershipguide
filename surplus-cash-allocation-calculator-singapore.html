@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Surplus Cash Allocation Calculator Singapore (2026): SRS, CPF SA, CPF OA Investing, Mortgage Prepayment, or Cash Investing?</title>
+<meta name="description" content="Surplus cash allocation calculator for Singapore (2026): compare SRS, CPF SA top-up, CPF OA investing, mortgage prepayment, and regular cash investing using liquidity horizon, tax rate, mortgage cost, and CPF constraints."/>
+<link rel="canonical" href="https://ownershipguide.com/surplus-cash-allocation-calculator-singapore.html"/>
+<meta name="og:cluster" content="investing"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is this calculator actually deciding?","acceptedAnswer":{"@type":"Answer","text":"It does not promise a mathematically perfect answer. It helps you rank the next dollar across five common uses: SRS, CPF SA top-up, CPF OA investing, mortgage prepayment, and regular cash investing."}},{"@type":"Question","name":"Why is tax rate an input?","acceptedAnswer":{"@type":"Answer","text":"Because the tax advantage of SRS only matters if your marginal tax rate is meaningful. At low tax rates, the lock-in can dominate the relief. At higher tax rates, the relief becomes a real part of the return."}},{"@type":"Question","name":"Why is liquidity horizon an input?","acceptedAnswer":{"@type":"Answer","text":"Because options with hard lock-in or market volatility become weaker if you may need the money soon. A household that could need flexibility in three years should not read retirement vehicles the same way as a household with a fifteen-year horizon."}},{"@type":"Question","name":"Can the calculator replace reading the comparison pages?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator is a triage tool. Use it to narrow the shortlist, then read the linked comparison pages to pressure-test the winner against your actual constraints."}}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p><a class="og-chip" href="/investing/">Back to Investing</a></p>
+<h1>Surplus Cash Allocation Calculator Singapore (2026)</h1>
+<p class="lead">The next dollar does not always belong in the same place. Sometimes it should buy tax relief. Sometimes it should reduce mortgage drag. Sometimes it should stay liquid enough for a property move or a messy year. This calculator is for households that already have a basic emergency fund and now need a cleaner rule for surplus cash.</p>
+<div class="box" style="margin:18px 0">
+<p style="margin-top:0"><strong>What this tool does</strong></p>
+<ul>
+<li>Ranks five common destinations for surplus cash: <strong>SRS</strong>, <strong>CPF SA top-up</strong>, <strong>CPF OA investing</strong>, <strong>mortgage prepayment</strong>, and <strong>regular cash investing</strong>.</li>
+<li>Uses the frictions that usually change the answer: <strong>marginal tax rate</strong>, <strong>years until you may need liquidity</strong>, <strong>mortgage rate</strong>, and <strong>whether CPF OA is realistically tied to property use</strong>.</li>
+<li>Gives you a planning answer, not a promise. Use it to shortlist the next read, not to pretend life can be reduced to one precise score.</li>
+</ul>
+</div>
+<h2>Inputs</h2>
+<div class="og-card">
+<div class="og-form-grid">
+<label>Monthly surplus cash (SGD)
+<input id="monthlySurplus" type="number" min="0" step="50" value="1500" inputmode="decimal"/>
+</label>
+<label>Marginal tax rate (%)
+<input id="taxRate" type="number" min="0" max="30" step="0.5" value="11.5" inputmode="decimal"/>
+</label>
+<label>Mortgage rate (% p.a.)
+<input id="mortgageRate" type="number" min="0" max="10" step="0.05" value="3.0" inputmode="decimal"/>
+</label>
+<label>Expected long-run investing return (% p.a.)
+<input id="investReturn" type="number" min="0" max="12" step="0.1" value="5.0" inputmode="decimal"/>
+</label>
+<label>Years before you may need flexibility
+<input id="liquidityYears" type="number" min="1" max="30" step="1" value="8" inputmode="decimal"/>
+</label>
+<label>How many months of emergency fund do you already hold?
+<input id="bufferMonths" type="number" min="0" max="24" step="0.5" value="6" inputmode="decimal"/>
+</label>
+<label>Will CPF OA likely be needed for property within 5 years?
+<select id="oaPropertyNeed">
+<option value="yes" selected>Yes</option>
+<option value="no">No</option>
+</select>
+</label>
+<label>Do you strongly value certainty over market volatility?
+<select id="certaintyBias">
+<option value="medium" selected>Moderate</option>
+<option value="high">High</option>
+<option value="low">Low</option>
+</select>
+</label>
+<div style="display:flex;align-items:flex-end;gap:10px">
+<button class="btn" type="button" id="runCalc">Calculate</button>
+<button class="btn btn-secondary" type="button" id="resetCalc">Reset</button>
+</div>
+</div>
+</div>
+<h2>Results</h2>
+<div class="og-kpi-grid">
+<div class="kpi"><div class="kpi-label">Top priority</div><div class="kpi-value" id="topChoice">—</div><div class="kpi-sub" id="topReason">—</div></div>
+<div class="kpi"><div class="kpi-label">Second priority</div><div class="kpi-value" id="secondChoice">—</div><div class="kpi-sub" id="secondReason">—</div></div>
+<div class="kpi"><div class="kpi-label">Monthly surplus modelled</div><div class="kpi-value" id="modelSurplus">—</div><div class="kpi-sub">Planning amount only</div></div>
+<div class="kpi"><div class="kpi-label">Primary constraint</div><div class="kpi-value" id="primaryConstraint">—</div><div class="kpi-sub">What is dominating the answer</div></div>
+</div>
+<div class="box" style="margin-top:18px">
+<h3 style="margin-top:0">Ranking</h3>
+<ol id="rankingList" style="margin-bottom:0"></ol>
+</div>
+<div class="box" style="margin-top:18px">
+<h3 style="margin-top:0">How to read the result</h3>
+<p id="interpretation">Run the calculator to see which constraint is dominating the decision.</p>
+</div>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">What the tool is actually scoring</h2>
+<p>This model is deliberately simple. It is not trying to forecast the exact future value of every route. It is trying to answer a more useful first question: <strong>what should the next dollar do for this household right now?</strong> For most households, that answer changes with four things.</p>
+<p>The first is <strong>tax rate</strong>. SRS is only interesting because it gives you present-year tax relief. If you are in a low tax band, the relief is not large enough to excuse a hard lock-in. If you are in a higher band, SRS can move from marginal to meaningfully attractive very quickly.</p>
+<p>The second is <strong>liquidity horizon</strong>. If you may need flexibility in three to five years for a property move, career reset, or family change, long lock-in vehicles deserve a much higher hurdle. A tool that ignores this gives neat but bad answers.</p>
+<p>The third is <strong>mortgage drag</strong>. Prepaying a mortgage is not glamorous, but the rate you avoid is a real and mostly certain return. The higher the mortgage cost, the more that certainty deserves respect.</p>
+<p>The fourth is <strong>CPF use-case reality</strong>. CPF OA investing is not just about whether equities can beat 2.5%. It is about whether the OA balance is truly surplus to property needs. If it is not, the upside is capped by timing risk.</p>
+</section>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">When each route usually rises to the top</h2>
+<p><strong>SRS</strong> rises when tax relief is meaningful, retirement lock-in is acceptable, and you still have enough liquidity outside the structure. This is strongest for households with mid-to-high marginal tax rates and no near-term need for that cash.</p>
+<p><strong>CPF SA top-up</strong> rises when the household wants a conservative, retirement-dedicated move and is comfortable with an even harder lock-in than SRS. It is weaker when flexibility matters or when the household has not yet solved more immediate fragility.</p>
+<p><strong>CPF OA investing</strong> rises only when the OA balance is genuinely surplus to property plans and the time horizon is long. It is not a default answer for every CPF holder, because the property interaction can make the balance less investable than it looks.</p>
+<p><strong>Mortgage prepayment</strong> rises when the loan rate is high, the household values certainty, and future liquidity needs are not so immediate that cash optionality matters more than debt reduction.</p>
+<p><strong>Regular cash investing</strong> rises when the household already has enough buffer, wants flexibility, and is not getting enough tax or guaranteed-rate advantage elsewhere to justify locking money up.</p>
+</section>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Scenario library</h2>
+<ul>
+<li><strong>Higher-income employee, no move planned:</strong> tax rate at 15% or more, buffer already built, no need for cash soon. SRS often jumps near the top because the tax relief is real and the liquidity sacrifice is manageable.</li>
+<li><strong>Owner planning an upgrade in four years:</strong> strong chance CPF OA will be needed for property and surplus cash may be required for transaction friction. OA investing usually drops. Cash investing or mortgage prepayment often become cleaner.</li>
+<li><strong>Household that hates volatility:</strong> even if investing has higher expected return, the psychological and practical cost of drawdowns matters. Mortgage prepayment or CPF SA top-up can rationally outrank cash investing.</li>
+<li><strong>Household with only three months of buffer:</strong> even if SRS looks efficient on tax, the next dollar may still belong in flexible investing or retained liquidity until the reserve layer is more stable.</li>
+</ul>
+</section>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Use the result as a sequencing tool, not an ego tool</h2>
+<p>The most common mistake after a calculator output is to treat the top-ranked option as a command. That is the wrong use. The better use is to ask: <strong>why</strong> did this option rank first? If the answer is tax relief, then you should read the relevant SRS or CPF comparison page and pressure-test whether the lock-in is still acceptable. If the answer is mortgage rate, then you should ask whether the certainty you are buying is more valuable than keeping the option value of cash.</p>
+<p>A household with surplus cash usually does not have a single forever answer. The answer changes as mortgage rates move, assessable income changes, property plans firm up, and children or caregiving obligations change liquidity needs. That is why this calculator should be re-run whenever those conditions move materially.</p>
+<p>Use this in three steps. First, run your base case. Second, run a more conservative case with a lower expected investment return and shorter liquidity horizon. Third, read the linked page for the winner and ask whether the practical restrictions still look acceptable. If the same route stays near the top across all three passes, that is usually a stronger signal than one neat run under optimistic assumptions.</p>
+</section>
+<section class="box" style="margin-top:18px">
+<h2 style="margin-top:0">Where to pressure-test the shortlist</h2>
+<ul>
+<li><a href="/srs-vs-cpf-oa-investment-singapore.html">SRS vs CPF OA investment</a></li>
+<li><a href="/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html">CPF SA top-up vs CPF OA investment</a></li>
+<li><a href="/srs-vs-cpf-sa-top-up-singapore.html">SRS vs CPF SA top-up</a></li>
+<li><a href="/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html">CPF SA top-up vs pay down mortgage</a></li>
+<li><a href="/srs-vs-pay-down-mortgage-singapore.html">SRS vs pay down mortgage</a></li>
+<li><a href="/cpf-oa-investment-singapore.html">CPF OA investment</a></li>
+</ul>
+</section>
+<h2>FAQ</h2>
+<h3>What is this calculator actually deciding?</h3>
+<p>It does not promise a mathematically perfect answer. It helps you rank the next dollar across five common uses: SRS, CPF SA top-up, CPF OA investing, mortgage prepayment, and regular cash investing.</p>
+<h3>Why is tax rate an input?</h3>
+<p>Because the tax advantage of SRS only matters if your marginal tax rate is meaningful. At low tax rates, the lock-in can dominate the relief. At higher tax rates, the relief becomes a real part of the return.</p>
+<h3>Why is liquidity horizon an input?</h3>
+<p>Because options with hard lock-in or market volatility become weaker if you may need the money soon. A household that could need flexibility in three years should not read retirement vehicles the same way as a household with a fifteen-year horizon.</p>
+<h3>Can the calculator replace reading the comparison pages?</h3>
+<p>No. The calculator is a triage tool. Use it to narrow the shortlist, then read the linked comparison pages to pressure-test the winner against your actual constraints.</p>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.cpf.gov.sg/" rel="nofollow noopener" target="_blank">Central Provident Fund Board (CPF)</a></li>
+<li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">Inland Revenue Authority of Singapore (IRAS)</a></li>
+<li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">Monetary Authority of Singapore (MAS)</a></li>
+<li><a href="https://www.moneysense.gov.sg/" rel="nofollow noopener" target="_blank">MoneySense</a></li>
+</ul>
+<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 26 Mar 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script src="/includes.js"></script>
+<script>
+(function(){
+  function fmtMoney(n){ return 'S$' + Math.round(n).toLocaleString(); }
+  function run(){
+    var surplus = +document.getElementById('monthlySurplus').value || 0;
+    var tax = +document.getElementById('taxRate').value || 0;
+    var mortgage = +document.getElementById('mortgageRate').value || 0;
+    var invest = +document.getElementById('investReturn').value || 0;
+    var years = +document.getElementById('liquidityYears').value || 0;
+    var buffer = +document.getElementById('bufferMonths').value || 0;
+    var oaNeed = document.getElementById('oaPropertyNeed').value;
+    var certainty = document.getElementById('certaintyBias').value;
+    var options = [
+      {key:'srs', label:'SRS', score:50, why:[]},
+      {key:'sa', label:'CPF SA top-up', score:48, why:[]},
+      {key:'oa', label:'CPF OA investing', score:46, why:[]},
+      {key:'mortgage', label:'Mortgage prepayment', score:47, why:[]},
+      {key:'cash', label:'Regular cash investing', score:45, why:[]}
+    ];
+    var map = {}; options.forEach(function(o){ map[o.key]=o; });
+    if (buffer < 6) { map.cash.score += 12; map.cash.why.push('buffer still looks only partly built'); map.srs.score -= 8; map.sa.score -= 9; map.oa.score -= 4; }
+    else if (buffer >= 9) { map.cash.score -= 3; map.srs.score += 3; map.sa.score += 4; }
+    if (tax >= 15) { map.srs.score += 16; map.srs.why.push('tax relief is meaningful at this marginal rate'); }
+    else if (tax >= 7) { map.srs.score += 8; map.srs.why.push('tax relief is noticeable but not dominant'); }
+    else { map.srs.score -= 8; map.srs.why.push('tax relief is too small to excuse lock-in on its own'); }
+    if (years <= 5) { map.srs.score -= 14; map.sa.score -= 16; map.oa.score -= 10; map.cash.score += 10; map.mortgage.score += 6; }
+    else if (years >= 12) { map.srs.score += 8; map.sa.score += 9; map.oa.score += 7; }
+    if (mortgage >= 3.5) { map.mortgage.score += 14; map.mortgage.why.push('mortgage drag is high enough to treat prepayment like a meaningful return'); }
+    else if (mortgage >= 2.8) { map.mortgage.score += 8; }
+    else { map.mortgage.score -= 2; }
+    if (oaNeed === 'yes') { map.oa.score -= 15; map.oa.why.push('CPF OA likely still has a property job to do'); map.cash.score += 3; }
+    else { map.oa.score += 9; map.oa.why.push('CPF OA looks more genuinely surplus'); }
+    if (invest >= 6) { map.cash.score += 5; map.oa.score += 4; }
+    else if (invest <= 4) { map.mortgage.score += 4; map.sa.score += 4; }
+    if (certainty === 'high') { map.mortgage.score += 8; map.sa.score += 6; map.cash.score -= 2; map.oa.score -= 6; }
+    if (certainty === 'low') { map.cash.score += 4; map.oa.score += 4; }
+    options.forEach(function(o){ if(!o.why.length){ o.why.push('no special advantage is dominating'); }});
+    options.sort(function(a,b){ return b.score-a.score; });
+    document.getElementById('topChoice').textContent = options[0].label;
+    document.getElementById('topReason').textContent = options[0].why[0];
+    document.getElementById('secondChoice').textContent = options[1].label;
+    document.getElementById('secondReason').textContent = options[1].why[0];
+    document.getElementById('modelSurplus').textContent = fmtMoney(surplus);
+    var constraint = 'liquidity horizon';
+    if (tax >= 15) constraint = 'tax relief';
+    if (oaNeed === 'yes') constraint = 'property-linked CPF constraints';
+    if (mortgage >= 3.5) constraint = 'mortgage drag';
+    if (buffer < 6) constraint = 'buffer weakness';
+    document.getElementById('primaryConstraint').textContent = constraint;
+    var ol = document.getElementById('rankingList'); ol.innerHTML='';
+    options.forEach(function(o){ var li=document.createElement('li'); li.innerHTML='<strong>'+o.label+'</strong> — score '+Math.round(o.score)+' · '+o.why[0]+'.'; ol.appendChild(li); });
+    document.getElementById('interpretation').innerHTML = 'Your current result says the next dollar should most likely go to <strong>'+options[0].label+'</strong>, with <strong>'+options[1].label+'</strong> as the second-best route. Treat that as a shortlist. If your liquidity horizon shortens or your tax rate falls, the ranking can change quickly.';
+  }
+  document.getElementById('runCalc').addEventListener('click', run);
+  document.getElementById('resetCalc').addEventListener('click', function(){
+    document.getElementById('monthlySurplus').value=1500;
+    document.getElementById('taxRate').value=11.5;
+    document.getElementById('mortgageRate').value=3.0;
+    document.getElementById('investReturn').value=5.0;
+    document.getElementById('liquidityYears').value=8;
+    document.getElementById('bufferMonths').value=6;
+    document.getElementById('oaPropertyNeed').value='yes';
+    document.getElementById('certaintyBias').value='medium';
+    run();
+  });
+  run();
+})();
+</script>
+</body>
+</html>
