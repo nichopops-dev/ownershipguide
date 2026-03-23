@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0283.2
+> Last updated: March 2026 · Based on repo v0284
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0283.2
+**Current version:** v0284
 
 ### Key files
 
@@ -40,7 +40,7 @@
 | `includes.js` | ⚠️ Central nervous system — ALL shared behaviour. Never regenerate from scratch. See Section 3. |
 | `styles.css` | Global stylesheet |
 | `index.html` | Homepage |
-| `sitemap.xml` | 487 URLs — regenerate with `python3 generate-sitemap.py` each session |
+| `sitemap.xml` | 494 URLs — regenerate with `python3 generate-sitemap.py` each session |
 | `featured.json` | Hub + homepage dynamic data. Keys: `cluster_pages`, `new[]` (sorted by `first_seen` from `page_registry`, NOT last_updated), `popular[]`, `pinned` (dict keyed by cluster — NEVER flatten to list), `page_registry`. Regenerate with `python3 generate-featured.py` each session. |
 | `generate-sitemap.py` | Regenerates sitemap.xml. Run from repo root. |
 | `generate-featured.py` | Regenerates featured.json. Preserves `pinned` dict, `page_registry`, diversity cap. Run from repo root. |
@@ -204,10 +204,10 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
-### Investing/Liquidity (21 content pages) 🟡 Growing
-Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles (3 pages: CPF SA top-up, SSBs, index fund investing).
+### Investing/Liquidity (24 content pages) 🟡 Growing
+Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking comparisons (6 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs).
 
-### Calculators (38 pages) ✅ | Comparisons (52 pages) ✅
+### Calculators (38 pages) ✅ | Comparisons (55 pages) ✅
 
 ---
 
@@ -229,6 +229,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0282.2 | Emergency restore: 64 empty property pages restored from v0280 backup with og:cluster tags; 3 orphans fixed; brief restored; sitemap 487 URLs; featured.json 314 pages |
 | v0283 | 4 build items: (1) Property hub jump nav — anchor IDs + pill nav for all 15 branch sections; (2) Investing cluster 3 new pages — CPF SA top-up, Singapore Savings Bonds, index fund investing; (3) Protection — life insurance sizing calculator with full needs-based JS calc; (4) Brief updated with v0282 incident history; 11 remaining empty files from v0282 restored; sitemap 491 URLs; featured.json 317 pages (investing 21) |
 | v0283.2 | Sweep fixes: 4 v0283 new pages added to SITE search index (cpf-sa-top-up, singapore-savings-bonds, index-fund-investing, life-insurance-calculator); 9 comparison-tagged pages added to comparisons hub (6 property: valuation-vs-asking-price, progressive-payment, lower-asking-price, lease-renewal, gross-vs-net-rental-yield, joint-tenancy-vs-tenancy-in-common; 3 family: stay-at-home-vs-infantcare, supervision-vs-independent-living, better-lighting-vs-old-routines); generators run |
+| v0284 | Investing cluster deepening bundle: added 3 conservative parking comparison pages (t-bills-vs-singapore-savings-bonds, singapore-savings-bonds-vs-fixed-deposit, cash-management-account-vs-singapore-savings-bonds); fixed 4 broken links in comparisons hub; added manual hub links and SITE index entries; generators run |
 
 ---
 

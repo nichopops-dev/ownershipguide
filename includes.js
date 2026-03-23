@@ -1157,7 +1157,10 @@ decisionPathOverrides: {
         { url: "/how-much-to-invest-each-month-singapore.html", title: "How Much to Invest Each Month in Singapore (2026)", cluster: "investing", subtopic: "investing" },
         { url: "/cpf-sa-top-up-singapore.html", title: "CPF SA Top-Up in Singapore (2026)", cluster: "investing", subtopic: "investing" },
         { url: "/singapore-savings-bonds-singapore.html", title: "Singapore Savings Bonds (2026)", cluster: "investing", subtopic: "investing" },
-        { url: "/index-fund-investing-singapore.html", title: "Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "investing" }],
+        { url: "/index-fund-investing-singapore.html", title: "Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "investing" },
+        { url: "/t-bills-vs-singapore-savings-bonds-singapore.html", title: "T-Bills vs Singapore Savings Bonds in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/singapore-savings-bonds-vs-fixed-deposit-singapore.html", title: "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cash-management-account-vs-singapore-savings-bonds-singapore.html", title: "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)", cluster: "investing", subtopic: "comparison" }],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },

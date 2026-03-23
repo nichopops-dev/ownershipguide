@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-22",
+  "generated": "2026-03-23",
   "cluster_pages": {
     "transport": [
       {
@@ -1787,6 +1787,12 @@
     ],
     "investing": [
       {
+        "url": "/cash-management-account-vs-singapore-savings-bonds-singapore.html",
+        "title": "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)",
+        "desc": "Cash management account vs Singapore Savings Bonds in Singapore (2026): compare principal certainty,",
+        "date": "2026-03-23"
+      },
+      {
         "url": "/cpf-oa-investment-singapore.html",
         "title": "CPF OA Investment in Singapore (2026)",
         "desc": "",
@@ -1823,9 +1829,27 @@
         "date": "2026-03-23"
       },
       {
+        "url": "/singapore-savings-bonds-vs-fixed-deposit-singapore.html",
+        "title": "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)",
+        "desc": "Singapore Savings Bonds vs fixed deposit in Singapore (2026): compare flexibility, deposit insurance",
+        "date": "2026-03-23"
+      },
+      {
         "url": "/srs-account-singapore.html",
         "title": "SRS Account in Singapore (2026)",
         "desc": "",
+        "date": "2026-03-23"
+      },
+      {
+        "url": "/t-bills-vs-singapore-savings-bonds-singapore.html",
+        "title": "T-Bills vs Singapore Savings Bonds in Singapore (2026)",
+        "desc": "T-bills vs Singapore Savings Bonds in Singapore (2026): decide based on access timing, reinvestment ",
+        "date": "2026-03-23"
+      },
+      {
+        "url": "/where-to-keep-your-emergency-fund-singapore.html",
+        "title": "Where to Keep Your Emergency Fund in Singapore? (2026)",
+        "desc": "Where to keep your emergency fund in Singapore (2026): a practical framework for choosing between sa",
         "date": "2026-03-23"
       },
       {
@@ -1905,16 +1929,17 @@
         "title": "When to Use Your Emergency Fund in Singapore (2026)",
         "desc": "When to use your emergency fund in Singapore (2026): a practical framework for deciding what counts ",
         "date": "2026-03-18"
-      },
-      {
-        "url": "/where-to-keep-your-emergency-fund-singapore.html",
-        "title": "Where to Keep Your Emergency Fund in Singapore? (2026)",
-        "desc": "Where to keep your emergency fund in Singapore (2026): a practical framework for choosing between sa",
-        "date": "2026-03-18"
       }
     ]
   },
   "new": [
+    {
+      "url": "/cash-management-account-vs-singapore-savings-bonds-singapore.html",
+      "title": "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)",
+      "desc": "Cash management account vs Singapore Savings Bonds in Singapore (2026): compare principal certainty,",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
     {
       "url": "/cpf-oa-investment-singapore.html",
       "title": "CPF OA Investment in Singapore (2026)",
@@ -1932,13 +1957,6 @@
     {
       "url": "/how-much-to-invest-each-month-singapore.html",
       "title": "How Much to Invest Each Month in Singapore (2026)",
-      "desc": "",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/index-fund-investing-singapore.html",
-      "title": "Index Fund Investing in Singapore (2026)",
       "desc": "",
       "cluster": "investing",
       "clusterLabel": "Investing"
@@ -3550,6 +3568,15 @@
       "first_seen": "2026-03-23"
     },
     "life-insurance-calculator-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "cash-management-account-vs-singapore-savings-bonds-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "singapore-savings-bonds-vs-fixed-deposit-singapore.html": {
+      "first_seen": "2026-03-23"
+    },
+    "t-bills-vs-singapore-savings-bonds-singapore.html": {
       "first_seen": "2026-03-23"
     }
   }
