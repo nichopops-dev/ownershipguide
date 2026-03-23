@@ -404,7 +404,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/cash-buffer-vs-cpf-sa-top-up-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -560,7 +560,13 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/cpf-oa-investment-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/cpf-oa-investment-vs-index-fund-investing-singapore.html</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -572,13 +578,19 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/cpf-sa-top-up-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ownershipguide.com/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html</loc>
     <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/cpf-sa-top-up-vs-index-fund-investing-singapore.html</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1610,7 +1622,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/index-fund-investing-singapore.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2618,7 +2630,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/srs-account-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2631,6 +2643,12 @@
   <url>
     <loc>https://ownershipguide.com/srs-vs-cpf-sa-top-up-singapore.html</loc>
     <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/srs-vs-index-fund-investing-singapore.html</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0287
+**Current version:** v0288
 
 ### Key files
 
@@ -204,8 +204,8 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
-### Investing/Liquidity (33 content pages) 🟡 Growing
-Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment) + allocation tool (1 page: surplus cash allocation calculator).
+### Investing/Liquidity (36 content pages) 🟡 Growing
+Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tool (1 page: surplus cash allocation calculator).
 
 ### Calculators (39 pages) ✅ | Comparisons (57 pages) ✅
 
@@ -218,6 +218,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
+| v0288 | Fix cash-buffer vs CPF SA top-up depth shortfall; add wrapper-vs-taxable investing bridge bundle (SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) |
 | v0287 | Investing bridge bundle: added cash buffer vs SRS, cash buffer vs CPF SA top-up, and cash buffer vs CPF OA investment; refreshed investing hub, comparisons hub, inbound links, SITE index, featured data, sitemap, and brief. |
 | v0286 | Fixed a live property hub duplication block appended below the footer; added the surplus cash allocation calculator plus SRS vs CPF OA investment and CPF SA top-up vs CPF OA investment; refreshed investing hub, calculators hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
 | v0285 | Investing bundle: fixed the word-count shortfall on cash management account vs SSBs; added SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, and SRS vs pay down mortgage; refreshed investing hub, comparisons hub, SITE index, featured data, and sitemap. |
