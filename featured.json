@@ -1790,7 +1790,19 @@
         "url": "/cash-management-account-vs-singapore-savings-bonds-singapore.html",
         "title": "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)",
         "desc": "Cash management account vs Singapore Savings Bonds in Singapore (2026): compare principal certainty,",
-        "date": "2026-03-23"
+        "date": "2026-03-24"
+      },
+      {
+        "url": "/singapore-savings-bonds-vs-fixed-deposit-singapore.html",
+        "title": "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)",
+        "desc": "Singapore Savings Bonds vs fixed deposit in Singapore (2026): compare flexibility, deposit insurance",
+        "date": "2026-03-24"
+      },
+      {
+        "url": "/t-bills-vs-singapore-savings-bonds-singapore.html",
+        "title": "T-Bills vs Singapore Savings Bonds in Singapore (2026)",
+        "desc": "T-bills vs Singapore Savings Bonds in Singapore (2026): decide based on access timing, reinvestment ",
+        "date": "2026-03-24"
       },
       {
         "url": "/cpf-oa-investment-singapore.html",
@@ -1829,21 +1841,9 @@
         "date": "2026-03-23"
       },
       {
-        "url": "/singapore-savings-bonds-vs-fixed-deposit-singapore.html",
-        "title": "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)",
-        "desc": "Singapore Savings Bonds vs fixed deposit in Singapore (2026): compare flexibility, deposit insurance",
-        "date": "2026-03-23"
-      },
-      {
         "url": "/srs-account-singapore.html",
         "title": "SRS Account in Singapore (2026)",
         "desc": "",
-        "date": "2026-03-23"
-      },
-      {
-        "url": "/t-bills-vs-singapore-savings-bonds-singapore.html",
-        "title": "T-Bills vs Singapore Savings Bonds in Singapore (2026)",
-        "desc": "T-bills vs Singapore Savings Bonds in Singapore (2026): decide based on access timing, reinvestment ",
         "date": "2026-03-23"
       },
       {
@@ -1941,22 +1941,22 @@
       "clusterLabel": "Investing"
     },
     {
+      "url": "/singapore-savings-bonds-vs-fixed-deposit-singapore.html",
+      "title": "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)",
+      "desc": "Singapore Savings Bonds vs fixed deposit in Singapore (2026): compare flexibility, deposit insurance",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/t-bills-vs-singapore-savings-bonds-singapore.html",
+      "title": "T-Bills vs Singapore Savings Bonds in Singapore (2026)",
+      "desc": "T-bills vs Singapore Savings Bonds in Singapore (2026): decide based on access timing, reinvestment ",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/cpf-oa-investment-singapore.html",
       "title": "CPF OA Investment in Singapore (2026)",
-      "desc": "",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cpf-sa-top-up-singapore.html",
-      "title": "CPF SA Top-Up in Singapore (2026)",
-      "desc": "",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/how-much-to-invest-each-month-singapore.html",
-      "title": "How Much to Invest Each Month in Singapore (2026)",
       "desc": "",
       "cluster": "investing",
       "clusterLabel": "Investing"
@@ -3571,13 +3571,13 @@
       "first_seen": "2026-03-23"
     },
     "cash-management-account-vs-singapore-savings-bonds-singapore.html": {
-      "first_seen": "2026-03-23"
+      "first_seen": "2026-03-24"
     },
     "singapore-savings-bonds-vs-fixed-deposit-singapore.html": {
-      "first_seen": "2026-03-23"
+      "first_seen": "2026-03-24"
     },
     "t-bills-vs-singapore-savings-bonds-singapore.html": {
-      "first_seen": "2026-03-23"
+      "first_seen": "2026-03-24"
     }
   }
 }
