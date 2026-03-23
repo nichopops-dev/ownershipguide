@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0284
+> Last updated: March 2026 · Based on repo v0284.1
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0284
+**Current version:** v0284.1
 
 ### Key files
 
@@ -230,6 +230,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0283 | 4 build items: (1) Property hub jump nav — anchor IDs + pill nav for all 15 branch sections; (2) Investing cluster 3 new pages — CPF SA top-up, Singapore Savings Bonds, index fund investing; (3) Protection — life insurance sizing calculator with full needs-based JS calc; (4) Brief updated with v0282 incident history; 11 remaining empty files from v0282 restored; sitemap 491 URLs; featured.json 317 pages (investing 21) |
 | v0283.2 | Sweep fixes: 4 v0283 new pages added to SITE search index (cpf-sa-top-up, singapore-savings-bonds, index-fund-investing, life-insurance-calculator); 9 comparison-tagged pages added to comparisons hub (6 property: valuation-vs-asking-price, progressive-payment, lower-asking-price, lease-renewal, gross-vs-net-rental-yield, joint-tenancy-vs-tenancy-in-common; 3 family: stay-at-home-vs-infantcare, supervision-vs-independent-living, better-lighting-vs-old-routines); generators run |
 | v0284 | Investing cluster deepening bundle: added 3 conservative parking comparison pages (t-bills-vs-singapore-savings-bonds, singapore-savings-bonds-vs-fixed-deposit, cash-management-account-vs-singapore-savings-bonds); fixed 4 broken links in comparisons hub; added manual hub links and SITE index entries; generators run |
+| v0284.1 | Fix: 3 new investing pages (cash-management-account-vs-ssb, ssb-vs-fixed-deposit, t-bills-vs-ssb) were invisible in homepage new[] and investing hub — root cause: page_registry first_seen dates matched existing v0283 pages so diversity cap excluded them; fixed by setting first_seen and Last Updated to 2026-03-24 (one day ahead); featured.json regenerated |
 
 ---
 
