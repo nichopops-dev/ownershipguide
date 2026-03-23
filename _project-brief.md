@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0284.1
+> Last updated: March 2026 · Based on repo v0285
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0284.1
+**Current version:** v0285
 
 ### Key files
 
@@ -204,8 +204,8 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
-### Investing/Liquidity (24 content pages) 🟡 Growing
-Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking comparisons (6 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs).
+### Investing/Liquidity (27 content pages) 🟡 Growing
+Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking comparisons (9 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage).
 
 ### Calculators (38 pages) ✅ | Comparisons (55 pages) ✅
 
@@ -218,6 +218,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
+| v0285 | Investing bundle: fixed the word-count shortfall on cash management account vs SSBs; added SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, and SRS vs pay down mortgage; refreshed investing hub, comparisons hub, SITE index, featured data, and sitemap. |
 | v0278 | Hub user flow: Start at position 1 on all hubs; jump nav; cross-sub-topic links; schema drift patch; search boost |
 | v0278.1 | featured.json new[] fix: page_registry + first_seen sorting; family hub headings renamed |
 | v0279 | Comparisons hub repair; Protection hub reordered; Homepage Family journey updated |
