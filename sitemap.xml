@@ -553,6 +553,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ownershipguide.com/cpf-life-vs-dividend-portfolio-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/cpf-life-vs-ssb-ladder-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ownershipguide.com/cpf-nomination-for-aging-parents-singapore.html</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -1622,7 +1634,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/index-fund-investing-singapore.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2630,7 +2642,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/srs-account-singapore.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2648,13 +2660,19 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/srs-vs-index-fund-investing-singapore.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ownershipguide.com/srs-vs-pay-down-mortgage-singapore.html</loc>
     <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/srs-withdrawal-order-vs-tax-smoothing-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1787,6 +1787,42 @@
     ],
     "investing": [
       {
+        "url": "/cpf-life-vs-dividend-portfolio-singapore.html",
+        "title": "CPF LIFE vs Dividend Portfolio in Singapore (2026)",
+        "desc": "CPF LIFE vs dividend portfolio in Singapore (2026): compare lifetime guaranteed income, sequence ris",
+        "date": "2026-03-29"
+      },
+      {
+        "url": "/cpf-life-vs-ssb-ladder-singapore.html",
+        "title": "CPF LIFE vs SSB Ladder in Singapore (2026)",
+        "desc": "CPF LIFE vs SSB ladder in Singapore (2026): compare guaranteed lifetime payouts, liquidity, rollover",
+        "date": "2026-03-29"
+      },
+      {
+        "url": "/index-fund-investing-singapore.html",
+        "title": "Index Fund Investing in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-29"
+      },
+      {
+        "url": "/srs-account-singapore.html",
+        "title": "SRS Account in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-29"
+      },
+      {
+        "url": "/srs-vs-index-fund-investing-singapore.html",
+        "title": "SRS vs Index Fund Investing in Singapore (2026)",
+        "desc": "SRS vs index fund investing in Singapore (2026): compare tax relief, withdrawal friction, long-term ",
+        "date": "2026-03-29"
+      },
+      {
+        "url": "/srs-withdrawal-order-vs-tax-smoothing-singapore.html",
+        "title": "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)",
+        "desc": "SRS withdrawal order vs tax smoothing in Singapore (2026): compare larger early withdrawals against ",
+        "date": "2026-03-29"
+      },
+      {
         "url": "/cash-buffer-vs-cpf-sa-top-up-singapore.html",
         "title": "Cash Buffer vs CPF SA Top-Up in Singapore (2026)",
         "desc": "Cash buffer vs CPF SA top-up in Singapore (2026): compare liquidity, guaranteed return, retirement l",
@@ -1814,24 +1850,6 @@
         "url": "/cpf-sa-top-up-vs-index-fund-investing-singapore.html",
         "title": "CPF SA Top-Up vs Index Fund Investing in Singapore (2026)",
         "desc": "CPF SA top-up vs index fund investing in Singapore (2026): compare tax relief, guaranteed CPF SA cre",
-        "date": "2026-03-28"
-      },
-      {
-        "url": "/index-fund-investing-singapore.html",
-        "title": "Index Fund Investing in Singapore (2026)",
-        "desc": "",
-        "date": "2026-03-28"
-      },
-      {
-        "url": "/srs-account-singapore.html",
-        "title": "SRS Account in Singapore (2026)",
-        "desc": "",
-        "date": "2026-03-28"
-      },
-      {
-        "url": "/srs-vs-index-fund-investing-singapore.html",
-        "title": "SRS vs Index Fund Investing in Singapore (2026)",
-        "desc": "SRS vs index fund investing in Singapore (2026): compare tax relief, withdrawal friction, long-term ",
         "date": "2026-03-28"
       },
       {
@@ -3677,6 +3695,15 @@
     },
     "cpf-sa-top-up-vs-index-fund-investing-singapore.html": {
       "first_seen": "2026-03-28"
+    },
+    "cpf-life-vs-dividend-portfolio-singapore.html": {
+      "first_seen": "2026-03-29"
+    },
+    "cpf-life-vs-ssb-ladder-singapore.html": {
+      "first_seen": "2026-03-29"
+    },
+    "srs-withdrawal-order-vs-tax-smoothing-singapore.html": {
+      "first_seen": "2026-03-29"
     }
   }
 }
