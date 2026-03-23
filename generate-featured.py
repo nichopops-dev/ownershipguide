@@ -69,8 +69,6 @@ pages = []
 for fn in sorted(os.listdir(REPO_ROOT)):
     if not fn.endswith('.html') or fn in SKIP:
         continue
-    if 'calculator' in fn:
-        continue
     data = get_page_data(os.path.join(REPO_ROOT, fn))
     if data:
         pages.append(data)
