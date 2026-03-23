@@ -7,7 +7,7 @@ Claude runs this each session before packaging the output zip.
 """
 
 import os, re, json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 OUTPUT = os.path.join(REPO_ROOT, 'featured.json')
@@ -94,12 +94,33 @@ if os.path.exists(OUTPUT):
         existing_registry = existing_data.get('page_registry', {})
     except: pass
 
-# Update registry: add new pages with today as first_seen date
-today_iso = datetime.now().strftime('%Y-%m-%d')
+# Update registry: add new pages with a first_seen date that is strictly newer
+# than existing pages already present in the same cluster.
+today_dt = datetime.now()
+today_iso = today_dt.strftime('%Y-%m-%d')
 page_fns = [p['url'].lstrip('/') for p in pages]
+cluster_lookup = {p['url'].lstrip('/'): p['cluster'] for p in pages}
+cluster_max = {}
+for fn_existing, meta in existing_registry.items():
+    cl = cluster_lookup.get(fn_existing)
+    if not cl:
+        continue
+    fs = meta.get('first_seen')
+    try:
+        d = datetime.strptime(fs, '%Y-%m-%d')
+    except Exception:
+        continue
+    if cl not in cluster_max or d > cluster_max[cl]:
+        cluster_max[cl] = d
 for fn in page_fns:
     if fn not in existing_registry:
-        existing_registry[fn] = {'first_seen': today_iso}
+        cl = cluster_lookup.get(fn)
+        candidate = today_dt
+        max_dt = cluster_max.get(cl)
+        if max_dt and candidate <= max_dt:
+            candidate = max_dt + timedelta(days=1)
+        existing_registry[fn] = {'first_seen': candidate.strftime('%Y-%m-%d')}
+        cluster_max[cl] = candidate
 
 # Sort by first_seen (not last_updated) — preserves genuine newness across sessions
 pages_with_first_seen = []
@@ -108,7 +129,7 @@ for p in pages:
     first_seen = existing_registry.get(fn, {}).get('first_seen', '2026-01-01')
     pages_with_first_seen.append({**p, 'first_seen': first_seen})
 
-registry_sorted = sorted(pages_with_first_seen, key=lambda x: x['first_seen'], reverse=True)
+registry_sorted = sorted(pages_with_first_seen, key=lambda x: (x['first_seen'], x['date'], x['title']), reverse=True)
 # Apply diversity cap: max 4 per cluster in new[]
 diverse_new = []
 cluster_counts_new = {}

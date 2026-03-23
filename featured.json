@@ -1790,23 +1790,35 @@
         "url": "/cpf-life-vs-dividend-portfolio-singapore.html",
         "title": "CPF LIFE vs Dividend Portfolio in Singapore (2026)",
         "desc": "CPF LIFE vs dividend portfolio in Singapore (2026): compare lifetime guaranteed income, sequence ris",
-        "date": "2026-03-29"
+        "date": "2026-03-30"
       },
       {
         "url": "/cpf-life-vs-ssb-ladder-singapore.html",
         "title": "CPF LIFE vs SSB Ladder in Singapore (2026)",
         "desc": "CPF LIFE vs SSB ladder in Singapore (2026): compare guaranteed lifetime payouts, liquidity, rollover",
-        "date": "2026-03-29"
+        "date": "2026-03-30"
       },
       {
         "url": "/index-fund-investing-singapore.html",
         "title": "Index Fund Investing in Singapore (2026)",
         "desc": "",
-        "date": "2026-03-29"
+        "date": "2026-03-30"
       },
       {
         "url": "/srs-account-singapore.html",
         "title": "SRS Account in Singapore (2026)",
+        "desc": "",
+        "date": "2026-03-30"
+      },
+      {
+        "url": "/srs-withdrawal-order-vs-tax-smoothing-singapore.html",
+        "title": "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)",
+        "desc": "SRS withdrawal order vs tax smoothing in Singapore (2026): compare larger early withdrawals against ",
+        "date": "2026-03-30"
+      },
+      {
+        "url": "/cpf-sa-top-up-singapore.html",
+        "title": "CPF SA Top-Up in Singapore (2026)",
         "desc": "",
         "date": "2026-03-29"
       },
@@ -1814,12 +1826,6 @@
         "url": "/srs-vs-index-fund-investing-singapore.html",
         "title": "SRS vs Index Fund Investing in Singapore (2026)",
         "desc": "SRS vs index fund investing in Singapore (2026): compare tax relief, withdrawal friction, long-term ",
-        "date": "2026-03-29"
-      },
-      {
-        "url": "/srs-withdrawal-order-vs-tax-smoothing-singapore.html",
-        "title": "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)",
-        "desc": "SRS withdrawal order vs tax smoothing in Singapore (2026): compare larger early withdrawals against ",
         "date": "2026-03-29"
       },
       {
@@ -1838,12 +1844,6 @@
         "url": "/cpf-oa-investment-vs-index-fund-investing-singapore.html",
         "title": "CPF OA Investment vs Index Fund Investing in Singapore (2026)",
         "desc": "CPF OA investment vs index fund investing in Singapore (2026): compare guaranteed OA interest, prope",
-        "date": "2026-03-28"
-      },
-      {
-        "url": "/cpf-sa-top-up-singapore.html",
-        "title": "CPF SA Top-Up in Singapore (2026)",
-        "desc": "",
         "date": "2026-03-28"
       },
       {
@@ -2018,16 +2018,23 @@
   },
   "new": [
     {
-      "url": "/cpf-oa-investment-vs-index-fund-investing-singapore.html",
-      "title": "CPF OA Investment vs Index Fund Investing in Singapore (2026)",
-      "desc": "CPF OA investment vs index fund investing in Singapore (2026): compare guaranteed OA interest, prope",
+      "url": "/srs-withdrawal-order-vs-tax-smoothing-singapore.html",
+      "title": "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)",
+      "desc": "SRS withdrawal order vs tax smoothing in Singapore (2026): compare larger early withdrawals against ",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
     {
-      "url": "/cpf-sa-top-up-vs-index-fund-investing-singapore.html",
-      "title": "CPF SA Top-Up vs Index Fund Investing in Singapore (2026)",
-      "desc": "CPF SA top-up vs index fund investing in Singapore (2026): compare tax relief, guaranteed CPF SA cre",
+      "url": "/cpf-life-vs-ssb-ladder-singapore.html",
+      "title": "CPF LIFE vs SSB Ladder in Singapore (2026)",
+      "desc": "CPF LIFE vs SSB ladder in Singapore (2026): compare guaranteed lifetime payouts, liquidity, rollover",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/cpf-life-vs-dividend-portfolio-singapore.html",
+      "title": "CPF LIFE vs Dividend Portfolio in Singapore (2026)",
+      "desc": "CPF LIFE vs dividend portfolio in Singapore (2026): compare lifetime guaranteed income, sequence ris",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -2039,44 +2046,16 @@
       "clusterLabel": "Investing"
     },
     {
-      "url": "/cash-buffer-vs-cpf-oa-investment-singapore.html",
-      "title": "Cash Buffer vs CPF OA Investment in Singapore (2026)",
-      "desc": "Cash buffer vs CPF OA investment in Singapore (2026): compare liquidity, property constraints, time ",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/downsize-your-home-to-support-aging-parents-vs-stay-put-singapore.html",
-      "title": "Downsize Your Home to Support Aging Parents vs Stay Put in Singapore (2026)",
-      "desc": "Downsize your home to support aging parents vs stay put in Singapore: compare released equity, reloc",
+      "url": "/use-housing-equity-vs-preserve-cashflow-when-supporting-aging-parents-singapore.html",
+      "title": "Use Housing Equity vs Preserve Cashflow When Supporting Aging Parents in Singapore (2026)",
+      "desc": "Use housing equity vs preserve cashflow when supporting aging parents in Singapore: compare asset-ba",
       "cluster": "family",
       "clusterLabel": "Family"
     },
     {
-      "url": "/how-supporting-aging-parents-changes-your-home-access-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Home-Access Decision Order in Singapore (2026)",
-      "desc": "How supporting aging parents changes your home-access decision order in Singapore: a framework for s",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-housing-liquidity-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Housing-Liquidity Decision Order in Singapore (2026)",
-      "desc": "How supporting aging parents changes your housing-liquidity decision order in Singapore: a framework",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
-      "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026)",
-      "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequ",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
-    {
-      "url": "/lift-access-home-vs-walk-up-flat-for-aging-parents-singapore.html",
-      "title": "Lift-Access Home vs Walk-Up Flat for Aging Parents in Singapore (2026)",
-      "desc": "Lift-access home vs walk-up flat for aging parents in Singapore: compare access reliability, caregiv",
+      "url": "/single-storey-home-vs-multi-level-home-for-aging-parents-singapore.html",
+      "title": "Single-Storey Home vs Multi-Level Home for Aging Parents in Singapore (2026)",
+      "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
       "cluster": "family",
       "clusterLabel": "Family"
     },
@@ -2084,6 +2063,27 @@
       "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
       "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
       "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/move-aging-parents-into-your-home-vs-maintain-two-nearby-households-singapore.html",
+      "title": "Move Aging Parents Into Your Home vs Maintain Two Nearby Households in Singapore (2026)",
+      "desc": "Move aging parents into your home vs maintain two nearby households in Singapore: compare daily resp",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/live-near-aging-parents-vs-live-near-medical-services-singapore.html",
+      "title": "Live Near Aging Parents vs Live Near Medical Services in Singapore (2026)",
+      "desc": "Live near aging parents vs live near medical services in Singapore: compare everyday response time a",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/how-supporting-aging-parents-changes-your-location-decision-order-singapore.html",
+      "title": "How Supporting Aging Parents Changes Your Location Decision Order in Singapore (2026)",
+      "desc": "How supporting aging parents changes your location decision order in Singapore: a framework for sequ",
       "cluster": "property",
       "clusterLabel": "Property"
     }

@@ -1172,7 +1172,11 @@ decisionPathOverrides: {
         { url: "/cash-buffer-vs-cpf-oa-investment-singapore.html", title: "Cash Buffer vs CPF OA Investment in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/srs-vs-index-fund-investing-singapore.html", title: "SRS vs Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/cpf-oa-investment-vs-index-fund-investing-singapore.html", title: "CPF OA Investment vs Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
-        { url: "/cpf-sa-top-up-vs-index-fund-investing-singapore.html", title: "CPF SA Top-Up vs Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "comparison" }],
+        { url: "/cpf-sa-top-up-vs-index-fund-investing-singapore.html", title: "CPF SA Top-Up vs Index Fund Investing in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cpf-life-vs-dividend-portfolio-singapore.html", title: "CPF LIFE vs Dividend Portfolio in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cpf-life-vs-ssb-ladder-singapore.html", title: "CPF LIFE vs SSB Ladder in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/srs-withdrawal-order-vs-tax-smoothing-singapore.html", title: "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/retirement-income-layering-calculator-singapore.html", title: "Retirement Income Layering Calculator Singapore (2026)", cluster: "investing", subtopic: "calculator" }],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },

@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0286
+> Last updated: March 2026 · Based on repo v0290
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0288
+**Current version:** v0290
 
 ### Key files
 
@@ -204,8 +204,8 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
-### Investing/Liquidity (36 content pages) 🟡 Growing
-Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tool (1 page: surplus cash allocation calculator).
+### Investing/Liquidity (40 content pages) 🟡 Growing
+Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (3 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing).
 
 ### Calculators (39 pages) ✅ | Comparisons (57 pages) ✅
 
@@ -218,6 +218,8 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
+| v0290 | Repair v0289 retirement-income integration: expand 3 retirement-income comparison pages above threshold, wire them into investing hub, comparisons hub, SITE index, and featured data; add retirement income layering calculator; patch generate-featured.py first_seen logic; regenerate sitemap and featured data. |
+| v0289 | Add retirement-income transition bundle (CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing). |
 | v0288 | Fix cash-buffer vs CPF SA top-up depth shortfall; add wrapper-vs-taxable investing bridge bundle (SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) |
 | v0287 | Investing bridge bundle: added cash buffer vs SRS, cash buffer vs CPF SA top-up, and cash buffer vs CPF OA investment; refreshed investing hub, comparisons hub, inbound links, SITE index, featured data, sitemap, and brief. |
 | v0286 | Fixed a live property hub duplication block appended below the footer; added the surplus cash allocation calculator plus SRS vs CPF OA investment and CPF SA top-up vs CPF OA investment; refreshed investing hub, calculators hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
