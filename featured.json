@@ -1787,27 +1787,57 @@
     ],
     "investing": [
       {
+        "url": "/cash-buffer-vs-cpf-oa-investment-singapore.html",
+        "title": "Cash Buffer vs CPF OA Investment in Singapore (2026)",
+        "desc": "Cash buffer vs CPF OA investment in Singapore (2026): compare liquidity, property constraints, time ",
+        "date": "2026-03-27"
+      },
+      {
+        "url": "/cash-buffer-vs-cpf-sa-top-up-singapore.html",
+        "title": "Cash Buffer vs CPF SA Top-Up in Singapore (2026)",
+        "desc": "Cash buffer vs CPF SA top-up in Singapore (2026): compare liquidity, guaranteed return, retirement l",
+        "date": "2026-03-27"
+      },
+      {
+        "url": "/cash-buffer-vs-srs-singapore.html",
+        "title": "Cash Buffer vs SRS in Singapore (2026)",
+        "desc": "Cash buffer vs SRS in Singapore (2026): compare liquidity, tax relief, job security, household fragi",
+        "date": "2026-03-27"
+      },
+      {
         "url": "/cpf-oa-investment-singapore.html",
         "title": "CPF OA Investment in Singapore (2026)",
         "desc": "",
-        "date": "2026-03-26"
+        "date": "2026-03-27"
       },
       {
         "url": "/cpf-sa-top-up-singapore.html",
         "title": "CPF SA Top-Up in Singapore (2026)",
         "desc": "",
-        "date": "2026-03-26"
+        "date": "2026-03-27"
       },
       {
-        "url": "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html",
-        "title": "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)",
-        "desc": "CPF SA top-up vs CPF OA investment in Singapore (2026): compare guaranteed 4%, tax relief, hard lock",
-        "date": "2026-03-26"
+        "url": "/how-much-emergency-fund-do-you-need-singapore.html",
+        "title": "How Much Emergency Fund Do You Need in Singapore? (2026)",
+        "desc": "How much emergency fund do you need in Singapore (2026): a practical framework for sizing cash buffe",
+        "date": "2026-03-27"
       },
       {
         "url": "/srs-account-singapore.html",
         "title": "SRS Account in Singapore (2026)",
         "desc": "",
+        "date": "2026-03-27"
+      },
+      {
+        "url": "/where-to-keep-your-emergency-fund-singapore.html",
+        "title": "Where to Keep Your Emergency Fund in Singapore? (2026)",
+        "desc": "Where to keep your emergency fund in Singapore (2026): a practical framework for choosing between sa",
+        "date": "2026-03-27"
+      },
+      {
+        "url": "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html",
+        "title": "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)",
+        "desc": "CPF SA top-up vs CPF OA investment in Singapore (2026): compare guaranteed 4%, tax relief, hard lock",
         "date": "2026-03-26"
       },
       {
@@ -1877,21 +1907,9 @@
         "date": "2026-03-23"
       },
       {
-        "url": "/where-to-keep-your-emergency-fund-singapore.html",
-        "title": "Where to Keep Your Emergency Fund in Singapore? (2026)",
-        "desc": "Where to keep your emergency fund in Singapore (2026): a practical framework for choosing between sa",
-        "date": "2026-03-23"
-      },
-      {
         "url": "/how-having-children-changes-your-emergency-fund-size-singapore.html",
         "title": "How Having Children Changes Your Emergency Fund Size in Singapore (2026)",
         "desc": "How having children changes your emergency fund size in Singapore (2026): a practical guide to how d",
-        "date": "2026-03-19"
-      },
-      {
-        "url": "/how-much-emergency-fund-do-you-need-singapore.html",
-        "title": "How Much Emergency Fund Do You Need in Singapore? (2026)",
-        "desc": "How much emergency fund do you need in Singapore (2026): a practical framework for sizing cash buffe",
         "date": "2026-03-19"
       },
       {
@@ -1964,30 +1982,30 @@
   },
   "new": [
     {
+      "url": "/cash-buffer-vs-cpf-oa-investment-singapore.html",
+      "title": "Cash Buffer vs CPF OA Investment in Singapore (2026)",
+      "desc": "Cash buffer vs CPF OA investment in Singapore (2026): compare liquidity, property constraints, time ",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/cash-buffer-vs-cpf-sa-top-up-singapore.html",
+      "title": "Cash Buffer vs CPF SA Top-Up in Singapore (2026)",
+      "desc": "Cash buffer vs CPF SA top-up in Singapore (2026): compare liquidity, guaranteed return, retirement l",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/cash-buffer-vs-srs-singapore.html",
+      "title": "Cash Buffer vs SRS in Singapore (2026)",
+      "desc": "Cash buffer vs SRS in Singapore (2026): compare liquidity, tax relief, job security, household fragi",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/cpf-sa-top-up-vs-cpf-oa-investment-singapore.html",
       "title": "CPF SA Top-Up vs CPF OA Investment in Singapore (2026)",
       "desc": "CPF SA top-up vs CPF OA investment in Singapore (2026): compare guaranteed 4%, tax relief, hard lock",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/srs-vs-cpf-oa-investment-singapore.html",
-      "title": "SRS vs CPF OA Investment in Singapore (2026)",
-      "desc": "SRS vs CPF OA investment in Singapore (2026): compare tax relief, lock-in, property constraints, liq",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html",
-      "title": "CPF SA Top-Up vs Pay Down Mortgage in Singapore (2026)",
-      "desc": "CPF SA top-up vs pay down mortgage in Singapore (2026): compare guaranteed CPF return, tax relief, m",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/srs-vs-cpf-sa-top-up-singapore.html",
-      "title": "SRS vs CPF SA Top-Up in Singapore (2026)",
-      "desc": "SRS vs CPF SA top-up in Singapore (2026): compare tax relief, liquidity lock-in, investment flexibil",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -3623,6 +3641,15 @@
     },
     "cpf-sa-top-up-vs-cpf-oa-investment-singapore.html": {
       "first_seen": "2026-03-26"
+    },
+    "cash-buffer-vs-cpf-oa-investment-singapore.html": {
+      "first_seen": "2026-03-27"
+    },
+    "cash-buffer-vs-cpf-sa-top-up-singapore.html": {
+      "first_seen": "2026-03-27"
+    },
+    "cash-buffer-vs-srs-singapore.html": {
+      "first_seen": "2026-03-27"
     }
   }
 }
