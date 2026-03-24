@@ -365,12 +365,6 @@
         "date": "2026-04-01"
       },
       {
-        "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
-        "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
-        "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
-        "date": "2026-04-01"
-      },
-      {
         "url": "/pay-down-mortgage-vs-invest-singapore.html",
         "title": "Pay Down Mortgage vs Invest in Singapore (2026)",
         "desc": "",
@@ -1043,6 +1037,12 @@
         "date": "2026-03-01"
       },
       {
+        "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
+        "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
+        "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
+        "date": "2026-03-01"
+      },
+      {
         "url": "/what-happens-to-property-when-an-owner-dies-singapore.html",
         "title": "What Happens to Property When an Owner Dies in Singapore (2026)",
         "desc": "What happens to property when an owner dies in Singapore for 2026: how joint tenancy, tenancy in com",
@@ -1657,12 +1657,6 @@
         "date": "2026-03-20"
       },
       {
-        "url": "/careshield-life-supplement-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
-        "title": "CareShield Life Supplement vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026)",
-        "desc": "CareShield Life supplement vs bigger cash buffer when supporting aging parents in Singapore: decide ",
-        "date": "2026-03-19"
-      },
-      {
         "url": "/disability-income-insurance-vs-bigger-cash-buffer-after-first-child-singapore.html",
         "title": "Disability Income Insurance vs Bigger Cash Buffer After First Child in Singapore (2026)",
         "desc": "Disability income insurance vs bigger cash buffer after first child in Singapore: choose between str",
@@ -1777,6 +1771,12 @@
         "date": "2026-03-16"
       },
       {
+        "url": "/careshield-life-supplement-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
+        "title": "CareShield Life Supplement vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026)",
+        "desc": "CareShield Life supplement vs bigger cash buffer when supporting aging parents in Singapore: decide ",
+        "date": "2026-03-01"
+      },
+      {
         "url": "/continence-support-burden-calculator-singapore.html",
         "title": "Continence Support Burden Calculator Singapore (2026)",
         "desc": "Compare the monthly burden of ad-hoc continence support against a more structured support system for",
@@ -1814,6 +1814,24 @@
       }
     ],
     "protection": [
+      {
+        "url": "/self-fund-long-term-care-vs-insure-for-it-singapore.html",
+        "title": "Self-Fund Long-Term Care vs Insure for It in Singapore? (2026)",
+        "desc": "Self-fund long-term care vs insure for it in Singapore (2026). Use a practical framework to decide w",
+        "date": "2026-04-02"
+      },
+      {
+        "url": "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html",
+        "title": "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore? (2026)",
+        "desc": "Set aside a care fund vs keep investing for retirement in Singapore (2026). Use a practical framewor",
+        "date": "2026-04-02"
+      },
+      {
+        "url": "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html",
+        "title": "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore? (2026)",
+        "desc": "Use housing equity vs buy more long-term-care cover in Singapore (2026). A practical framework for d",
+        "date": "2026-04-02"
+      },
       {
         "url": "/life-insurance-calculator-singapore.html",
         "title": "Life Insurance Calculator Singapore (2026)",
@@ -1962,16 +1980,10 @@
         "url": "/how-retirement-changes-your-insurance-needs-singapore.html",
         "title": "How Retirement Changes Your Insurance Needs in Singapore (2026)",
         "desc": "How retirement changes your insurance needs in Singapore (2026): a practical framework for reviewing",
-        "date": "2026-03-17"
+        "date": "2026-03-01"
       }
     ],
     "investing": [
-      {
-        "url": "/retirement-income-layering-calculator-singapore.html",
-        "title": "Retirement Income Layering Calculator Singapore (2026)",
-        "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
-        "date": "2026-04-01"
-      },
       {
         "url": "/cpf-life-standard-vs-escalating-plan-singapore.html",
         "title": "CPF LIFE Standard vs Escalating Plan in Singapore (2026)",
@@ -2223,17 +2235,16 @@
         "title": "When to Use Your Emergency Fund in Singapore (2026)",
         "desc": "When to use your emergency fund in Singapore (2026): a practical framework for deciding what counts ",
         "date": "2026-03-18"
+      },
+      {
+        "url": "/retirement-income-layering-calculator-singapore.html",
+        "title": "Retirement Income Layering Calculator Singapore (2026)",
+        "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
+        "date": "2026-03-01"
       }
     ]
   },
   "new": [
-    {
-      "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
-      "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
-      "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
     {
       "url": "/sell-home-and-rent-in-retirement-vs-stay-put-singapore.html",
       "title": "Sell Your Home and Rent in Retirement vs Stay Put in Singapore? (2026)",
@@ -2249,11 +2260,11 @@
       "clusterLabel": "Property"
     },
     {
-      "url": "/retirement-income-layering-calculator-singapore.html",
-      "title": "Retirement Income Layering Calculator Singapore (2026)",
-      "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
+      "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
+      "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
+      "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
+      "cluster": "property",
+      "clusterLabel": "Property"
     },
     {
       "url": "/sell-units-vs-live-off-dividends-in-retirement-singapore.html",
@@ -2277,25 +2288,32 @@
       "clusterLabel": "Investing"
     },
     {
-      "url": "/life-insurance-calculator-singapore.html",
-      "title": "Life Insurance Calculator Singapore (2026)",
-      "desc": "",
+      "url": "/retirement-income-layering-calculator-singapore.html",
+      "title": "Retirement Income Layering Calculator Singapore (2026)",
+      "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html",
+      "title": "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore? (2026)",
+      "desc": "Use housing equity vs buy more long-term-care cover in Singapore (2026). A practical framework for d",
       "cluster": "protection",
       "clusterLabel": "Protection"
     },
     {
-      "url": "/use-housing-equity-vs-preserve-cashflow-when-supporting-aging-parents-singapore.html",
-      "title": "Use Housing Equity vs Preserve Cashflow When Supporting Aging Parents in Singapore (2026)",
-      "desc": "Use housing equity vs preserve cashflow when supporting aging parents in Singapore: compare asset-ba",
-      "cluster": "family",
-      "clusterLabel": "Family"
+      "url": "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html",
+      "title": "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore? (2026)",
+      "desc": "Set aside a care fund vs keep investing for retirement in Singapore (2026). Use a practical framewor",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
     },
     {
-      "url": "/single-storey-home-vs-multi-level-home-for-aging-parents-singapore.html",
-      "title": "Single-Storey Home vs Multi-Level Home for Aging Parents in Singapore (2026)",
-      "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
-      "cluster": "family",
-      "clusterLabel": "Family"
+      "url": "/self-fund-long-term-care-vs-insure-for-it-singapore.html",
+      "title": "Self-Fund Long-Term Care vs Insure for It in Singapore? (2026)",
+      "desc": "Self-fund long-term care vs insure for it in Singapore (2026). Use a practical framework to decide w",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
     }
   ],
   "popular": [
@@ -3938,6 +3956,24 @@
     },
     "use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html": {
       "first_seen": "2026-04-01"
+    },
+    "self-fund-long-term-care-vs-insure-for-it-singapore": {
+      "first_seen": "2026-04-02"
+    },
+    "use-housing-equity-vs-buy-more-long-term-care-cover-singapore": {
+      "first_seen": "2026-04-02"
+    },
+    "set-aside-care-fund-vs-keep-investing-for-retirement-singapore": {
+      "first_seen": "2026-04-02"
+    },
+    "self-fund-long-term-care-vs-insure-for-it-singapore.html": {
+      "first_seen": "2026-03-24"
+    },
+    "set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html": {
+      "first_seen": "2026-03-25"
+    },
+    "use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html": {
+      "first_seen": "2026-03-26"
     }
   }
 }

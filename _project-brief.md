@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: March 2026 · Based on repo v0292
+> Last updated: April 2026 · Based on repo v0293
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0292
+**Current version:** v0293
 
 ### Key files
 
@@ -371,3 +371,5 @@ If a script will touch more than 5 files:
 1. Run in dry-run mode first (print what WOULD change, do not write)
 2. Spot-check 3 sample files manually before proceeding
 3. Write to staging area first, verify, then copy to repo
+
+| v0293 | Protection retirement-care funding bridge bundle: self-fund vs insure, housing equity vs more cover, and care fund vs keep investing |
