@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: April 2026 · Based on repo v0295
+> Last updated: April 2026 · Based on repo v0296
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0295
+**Current version:** v0296
 
 ### Key files
 
@@ -199,7 +199,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
 
 ### Family (130 content pages) ✅ Largest cluster
-Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, and reserve design. 14 calculators.
+Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, reserve design, and caregiver-capacity modelling. 15 calculators.
 
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
@@ -375,3 +375,5 @@ If a script will touch more than 5 files:
 3. Write to staging area first, verify, then copy to repo
 
 | v0293 | Protection retirement-care funding bridge bundle: self-fund vs insure, housing equity vs more cover, and care fund vs keep investing |
+
+| v0296 | Added care-execution calculator, repaired comparisons hub wiring for v0295 pages, refreshed family/calculator/search wiring. |

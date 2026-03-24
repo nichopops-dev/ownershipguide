@@ -1051,21 +1051,33 @@
     ],
     "family": [
       {
-        "url": "/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html",
-        "title": "Hire a Helper vs Use Home-Care Services for Aging Parents in Singapore (2026)",
-        "desc": "Hire a helper vs use home-care services for aging parents in Singapore: a practical framework for co",
-        "date": "2026-04-04"
+        "url": "/caregiver-capacity-vs-home-help-calculator-singapore.html",
+        "title": "Caregiver Capacity vs Home Help Calculator Singapore (2026)",
+        "desc": "Caregiver capacity vs home help calculator Singapore (2026): estimate when unpaid family care become",
+        "date": "2026-04-05"
       },
       {
         "url": "/hire-home-care-vs-family-caregiver-time-singapore.html",
         "title": "Hire Home Care vs Use Family Caregiver Time in Singapore (2026)",
         "desc": "Hire home care vs use family caregiver time in Singapore (2026): decide when paid support is the saf",
-        "date": "2026-04-04"
+        "date": "2026-04-05"
       },
       {
         "url": "/protect-caregiver-income-vs-build-bigger-care-fund-singapore.html",
         "title": "Protect Caregiver Income vs Build a Bigger Care Fund in Singapore (2026)",
         "desc": "Protect caregiver income vs build a bigger care fund in Singapore (2026): decide when income protect",
+        "date": "2026-04-05"
+      },
+      {
+        "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
+        "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
+        "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
+        "date": "2026-04-05"
+      },
+      {
+        "url": "/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html",
+        "title": "Hire a Helper vs Use Home-Care Services for Aging Parents in Singapore (2026)",
+        "desc": "Hire a helper vs use home-care services for aging parents in Singapore: a practical framework for co",
         "date": "2026-04-04"
       },
       {
@@ -1078,12 +1090,6 @@
         "url": "/reduce-work-hours-vs-pay-for-caregiving-support-when-supporting-aging-parents-singapore.html",
         "title": "Reduce Work Hours vs Pay for Caregiving Support When Supporting Aging Parents in Singapore (2026)",
         "desc": "Reduce work hours vs pay for caregiving support when supporting aging parents in Singapore: decide w",
-        "date": "2026-04-04"
-      },
-      {
-        "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
-        "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
-        "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
         "date": "2026-04-04"
       },
       {
@@ -2270,6 +2276,13 @@
   },
   "new": [
     {
+      "url": "/caregiver-capacity-vs-home-help-calculator-singapore.html",
+      "title": "Caregiver Capacity vs Home Help Calculator Singapore (2026)",
+      "desc": "Caregiver capacity vs home help calculator Singapore (2026): estimate when unpaid family care become",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
       "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
       "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
@@ -2329,13 +2342,6 @@
       "url": "/how-much-cash-bucket-before-cpf-life-singapore.html",
       "title": "How Much Cash Bucket Before CPF LIFE in Singapore (2026)",
       "desc": "How much cash bucket before CPF LIFE in Singapore (2026): a planning framework for sizing transition",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cpf-life-standard-vs-escalating-plan-singapore.html",
-      "title": "CPF LIFE Standard vs Escalating Plan in Singapore (2026)",
-      "desc": "CPF LIFE Standard vs Escalating Plan in Singapore (2026): compare starting payout, inflation pressur",
       "cluster": "investing",
       "clusterLabel": "Investing"
     }
@@ -4022,6 +4028,12 @@
     },
     "protect-caregiver-income-vs-build-bigger-care-fund-singapore": {
       "first_seen": "2026-04-04"
+    },
+    "/caregiver-capacity-vs-home-help-calculator-singapore.html": {
+      "first_seen": "2026-04-05"
+    },
+    "caregiver-capacity-vs-home-help-calculator-singapore.html": {
+      "first_seen": "2026-04-05"
     }
   }
 }
