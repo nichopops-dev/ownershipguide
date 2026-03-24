@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: April 2026 · Based on repo v0293
+> Last updated: April 2026 · Based on repo v0294
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0293
+**Current version:** v0294
 
 ### Key files
 
@@ -218,6 +218,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
+| v0294 | Repair protection SITE indexing for v0293 pages; add long-term-care funding calculator; update protection/calculators hubs and featured pipeline |
 | v0292 | Add retirement housing-equity bridge bundle (sell home and rent in retirement vs stay put, right-size home vs keep home and draw from portfolio, use housing equity vs preserve home asset in retirement); refresh property hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
 | v0291 | Fix featured-data omission for retirement income layering calculator; add retirement implementation bundle (CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement, how much cash bucket before CPF LIFE); refresh investing hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
 | v0290 | Repair v0289 retirement-income integration: expand 3 retirement-income comparison pages above threshold, wire them into investing hub, comparisons hub, SITE index, and featured data; add retirement income layering calculator; patch generate-featured.py first_seen logic; regenerate sitemap and featured data. |

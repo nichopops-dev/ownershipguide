@@ -1115,9 +1115,12 @@ decisionPathOverrides: {
         { url: "/how-much-critical-illness-insurance-do-you-need-singapore.html", title: "How Much Critical Illness Insurance Do You Need in Singapore? (2026): Sizing the Lump-Sum Buffer Without Guessing", subtopic: "planning" },
         { url: "/how-much-disability-income-insurance-do-you-need-singapore.html", title: "How Much Disability Income Insurance Do You Need in Singapore? (2026): Sizing Income Replacement Without Pretending Recovery Is Binary", subtopic: "planning" },
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", subtopic: "bridge" },
-        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", subtopic: "bridge" }
-      ,
-        { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" }],
+        { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", subtopic: "bridge" },
+        { url: "/self-fund-long-term-care-vs-insure-for-it-singapore.html", title: "Self-Fund Long-Term Care vs Insure for It in Singapore (2026): When a Care Reserve Beats More Premium and When It Does Not", subtopic: "comparison" },
+        { url: "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html", title: "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore (2026): Which Layer Actually Closes the Later-Life Care Gap?", subtopic: "comparison" },
+        { url: "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html", title: "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore (2026): Which Trade-Off Better Protects Later-Life Flexibility?", subtopic: "comparison" },
+        { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" },
+        { url: "/long-term-care-funding-calculator-singapore.html", title: "Long-Term Care Funding Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" }],
       bridges: [
         { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
         { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" },
