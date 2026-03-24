@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-23",
+  "generated": "2026-03-24",
   "cluster_pages": {
     "transport": [
       {
@@ -341,6 +341,36 @@
     ],
     "property": [
       {
+        "url": "/downsizing-to-hdb-or-condo-later-life-singapore.html",
+        "title": "Downsizing to HDB or Condo Later in Life in Singapore? (2026)",
+        "desc": "Downsizing to HDB or condo later in life in Singapore (2026): compare maintenance, convenience, fees",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/right-size-home-vs-keep-home-and-draw-from-portfolio-retirement-singapore.html",
+        "title": "Right-Size Your Home vs Keep It and Draw From Your Portfolio in Retirement? (2026)",
+        "desc": "Right-size your home vs keep it and draw from your portfolio in retirement in Singapore (2026). A fr",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/sell-home-and-rent-in-retirement-vs-stay-put-singapore.html",
+        "title": "Sell Your Home and Rent in Retirement vs Stay Put in Singapore? (2026)",
+        "desc": "Sell and rent in retirement vs stay put in Singapore (2026). A practical framework for comparing hou",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/stay-in-current-home-or-right-size-property-singapore.html",
+        "title": "Stay in Your Current Home or Right-Size in Singapore? (2026)",
+        "desc": "Stay in your current home or right-size in Singapore (2026)? A practical framework for comparing mov",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
+        "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
+        "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
+        "date": "2026-04-01"
+      },
+      {
         "url": "/pay-down-mortgage-vs-invest-singapore.html",
         "title": "Pay Down Mortgage vs Invest in Singapore (2026)",
         "desc": "",
@@ -491,12 +521,6 @@
         "date": "2026-03-18"
       },
       {
-        "url": "/downsizing-to-hdb-or-condo-later-life-singapore.html",
-        "title": "Downsizing to HDB or Condo Later in Life in Singapore? (2026)",
-        "desc": "Downsizing to HDB or condo later in life in Singapore (2026): compare maintenance, convenience, fees",
-        "date": "2026-03-18"
-      },
-      {
         "url": "/fixed-rate-certainty-vs-larger-cash-buffer-singapore.html",
         "title": "Fixed-Rate Certainty vs Larger Cash Buffer in Singapore (2026)",
         "desc": "Fixed-rate certainty vs larger cash buffer in Singapore: decide whether the next move should buy rat",
@@ -566,12 +590,6 @@
         "url": "/should-you-downsize-your-home-singapore.html",
         "title": "Should You Downsize Your Home in Singapore? (2026)",
         "desc": "Should you downsize your home in Singapore (2026)? A practical framework for deciding when a larger ",
-        "date": "2026-03-15"
-      },
-      {
-        "url": "/stay-in-current-home-or-right-size-property-singapore.html",
-        "title": "Stay in Your Current Home or Right-Size in Singapore? (2026)",
-        "desc": "Stay in your current home or right-size in Singapore (2026)? A practical framework for comparing mov",
         "date": "2026-03-15"
       },
       {
@@ -1949,6 +1967,12 @@
     ],
     "investing": [
       {
+        "url": "/retirement-income-layering-calculator-singapore.html",
+        "title": "Retirement Income Layering Calculator Singapore (2026)",
+        "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
+        "date": "2026-04-01"
+      },
+      {
         "url": "/cpf-life-standard-vs-escalating-plan-singapore.html",
         "title": "CPF LIFE Standard vs Escalating Plan in Singapore (2026)",
         "desc": "CPF LIFE Standard vs Escalating Plan in Singapore (2026): compare starting payout, inflation pressur",
@@ -1970,12 +1994,6 @@
         "url": "/how-much-cash-bucket-before-cpf-life-singapore.html",
         "title": "How Much Cash Bucket Before CPF LIFE in Singapore (2026)",
         "desc": "How much cash bucket before CPF LIFE in Singapore (2026): a planning framework for sizing transition",
-        "date": "2026-03-31"
-      },
-      {
-        "url": "/retirement-income-layering-calculator-singapore.html",
-        "title": "Retirement Income Layering Calculator Singapore (2026)",
-        "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
         "date": "2026-03-31"
       },
       {
@@ -2210,16 +2228,37 @@
   },
   "new": [
     {
-      "url": "/sell-units-vs-live-off-dividends-in-retirement-singapore.html",
-      "title": "Sell Units vs Live Off Dividends in Retirement in Singapore (2026)",
-      "desc": "Sell units vs live off dividends in retirement in Singapore (2026): compare total-return withdrawals",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
+      "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
+      "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
+      "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/sell-home-and-rent-in-retirement-vs-stay-put-singapore.html",
+      "title": "Sell Your Home and Rent in Retirement vs Stay Put in Singapore? (2026)",
+      "desc": "Sell and rent in retirement vs stay put in Singapore (2026). A practical framework for comparing hou",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/right-size-home-vs-keep-home-and-draw-from-portfolio-retirement-singapore.html",
+      "title": "Right-Size Your Home vs Keep It and Draw From Your Portfolio in Retirement? (2026)",
+      "desc": "Right-size your home vs keep it and draw from your portfolio in retirement in Singapore (2026). A fr",
+      "cluster": "property",
+      "clusterLabel": "Property"
     },
     {
       "url": "/retirement-income-layering-calculator-singapore.html",
       "title": "Retirement Income Layering Calculator Singapore (2026)",
       "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/sell-units-vs-live-off-dividends-in-retirement-singapore.html",
+      "title": "Sell Units vs Live Off Dividends in Retirement in Singapore (2026)",
+      "desc": "Sell units vs live off dividends in retirement in Singapore (2026): compare total-return withdrawals",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -2257,27 +2296,6 @@
       "desc": "Single-storey home vs multi-level home for aging parents in Singapore: compare layout friction, nigh",
       "cluster": "family",
       "clusterLabel": "Family"
-    },
-    {
-      "url": "/shared-home-vs-two-households-cost-calculator-singapore.html",
-      "title": "Shared Home vs Two Households Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly burden of one larger shared home against keeping two nearby smaller households i",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/rent-near-parents-vs-buy-near-parents-cost-calculator-singapore.html",
-      "title": "Rent Near Parents vs Buy Near Parents Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly burden of renting near aging parents against buying near them in Singapore after",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/rent-near-aging-parents-vs-buy-near-aging-parents-singapore.html",
-      "title": "Rent Near Aging Parents vs Buy Near Aging Parents in Singapore (2026)",
-      "desc": "Rent near aging parents vs buy near aging parents in Singapore: compare flexibility, capital lock-in",
-      "cluster": "property",
-      "clusterLabel": "Property"
     }
   ],
   "popular": [
@@ -3911,6 +3929,15 @@
     },
     "surplus-cash-allocation-calculator-singapore.html": {
       "first_seen": "2026-03-26"
+    },
+    "sell-home-and-rent-in-retirement-vs-stay-put-singapore.html": {
+      "first_seen": "2026-04-01"
+    },
+    "right-size-home-vs-keep-home-and-draw-from-portfolio-retirement-singapore.html": {
+      "first_seen": "2026-04-01"
+    },
+    "use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html": {
+      "first_seen": "2026-04-01"
     }
   }
 }
