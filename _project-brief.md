@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: April 2026 · Based on repo v0296
+> Last updated: 25 Mar 2026 · Based on repo v0297
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0296
+**Current version:** v0297
 
 ### Key files
 
@@ -172,7 +172,7 @@ python3 generate-featured.py   # from repo root
 
 ---
 
-## 7. Current Site Health (as of v0282.2)
+## 7. Current Site Health (as of v0297)
 
 - ✅ 492 HTML files | ~430 content pages
 - ✅ 0 broken internal links
@@ -193,6 +193,7 @@ python3 generate-featured.py   # from repo root
 
 ### Transport (56 content pages) ✅ Very strong
 Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, alternatives, EV, hybrid, motorcycle (all branches), used-car diligence, maintenance, post-incident, car-type, aging-car, aging-parents bridges.
+**v0297 repair note:** discoverability bundle reinforced five existing transport decision pages — `balloon-loan-vs-normal-car-loan-singapore.html`, `car-loan-vs-cash-singapore.html`, `buy-used-car-from-dealer-vs-direct-owner-singapore.html`, `trade-in-vs-direct-sale-car-singapore.html`, and `consignment-vs-dealer-sale-car-singapore.html` — via stronger hub surfacing and manual inbound links from adjacent transport execution pages.
 
 ### Property (118 content pages) ✅ Very strong
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
@@ -215,6 +216,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0297 | Discoverability repair bundle for 5 existing transport decision pages: strengthen manual surfacing in transport and comparisons hubs; add explicit inbound links from adjacent quote, financing, and exit-execution pages; refresh touched-page Last updated dates; run generators and validation sweep. |
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
