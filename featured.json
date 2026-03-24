@@ -1051,6 +1051,42 @@
     ],
     "family": [
       {
+        "url": "/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html",
+        "title": "Hire a Helper vs Use Home-Care Services for Aging Parents in Singapore (2026)",
+        "desc": "Hire a helper vs use home-care services for aging parents in Singapore: a practical framework for co",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/hire-home-care-vs-family-caregiver-time-singapore.html",
+        "title": "Hire Home Care vs Use Family Caregiver Time in Singapore (2026)",
+        "desc": "Hire home care vs use family caregiver time in Singapore (2026): decide when paid support is the saf",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/protect-caregiver-income-vs-build-bigger-care-fund-singapore.html",
+        "title": "Protect Caregiver Income vs Build a Bigger Care Fund in Singapore (2026)",
+        "desc": "Protect caregiver income vs build a bigger care fund in Singapore (2026): decide when income protect",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/quit-your-job-vs-outsource-more-care-for-aging-parents-singapore.html",
+        "title": "Quit Your Job vs Outsource More Care for Aging Parents in Singapore (2026)",
+        "desc": "Quit your job vs outsource more care for aging parents in Singapore: decide when leaving work really",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/reduce-work-hours-vs-pay-for-caregiving-support-when-supporting-aging-parents-singapore.html",
+        "title": "Reduce Work Hours vs Pay for Caregiving Support When Supporting Aging Parents in Singapore (2026)",
+        "desc": "Reduce work hours vs pay for caregiving support when supporting aging parents in Singapore: decide w",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
+        "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
+        "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
+        "date": "2026-04-04"
+      },
+      {
         "url": "/aging-in-place-vs-moving-in-with-aging-parents-singapore.html",
         "title": "Aging in Place vs Moving In Together With Aging Parents in Singapore (2026)",
         "desc": "Aging in place vs moving in together with aging parents in Singapore: a practical framework for choo",
@@ -1381,12 +1417,6 @@
         "date": "2026-03-21"
       },
       {
-        "url": "/hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html",
-        "title": "Hire a Helper vs Use Home-Care Services for Aging Parents in Singapore (2026)",
-        "desc": "Hire a helper vs use home-care services for aging parents in Singapore: a practical framework for co",
-        "date": "2026-03-21"
-      },
-      {
         "url": "/home-care-vs-nursing-home-for-aging-parents-singapore.html",
         "title": "Home Care vs Nursing Home for Aging Parents in Singapore (2026)",
         "desc": "Home care vs nursing home for aging parents in Singapore: a practical framework for deciding when co",
@@ -1633,18 +1663,6 @@
         "date": "2026-03-20"
       },
       {
-        "url": "/quit-your-job-vs-outsource-more-care-for-aging-parents-singapore.html",
-        "title": "Quit Your Job vs Outsource More Care for Aging Parents in Singapore (2026)",
-        "desc": "Quit your job vs outsource more care for aging parents in Singapore: decide when leaving work really",
-        "date": "2026-03-20"
-      },
-      {
-        "url": "/reduce-work-hours-vs-pay-for-caregiving-support-when-supporting-aging-parents-singapore.html",
-        "title": "Reduce Work Hours vs Pay for Caregiving Support When Supporting Aging Parents in Singapore (2026)",
-        "desc": "Reduce work hours vs pay for caregiving support when supporting aging parents in Singapore: decide w",
-        "date": "2026-03-20"
-      },
-      {
         "url": "/sharing-banking-passwords-or-otps-vs-safer-payment-support-for-aging-parents-singapore.html",
         "title": "Sharing Banking Passwords or OTPs vs Safer Payment Support for Aging Parents in Singapore (2026)",
         "desc": "Sharing banking passwords or OTPs vs safer payment support for aging parents in Singapore: decide wh",
@@ -1818,7 +1836,7 @@
         "url": "/long-term-care-funding-calculator-singapore.html",
         "title": "Long-Term Care Funding Calculator Singapore (2026)",
         "desc": "",
-        "date": "2026-04-03"
+        "date": "2026-04-04"
       },
       {
         "url": "/self-fund-long-term-care-vs-insure-for-it-singapore.html",
@@ -2252,6 +2270,27 @@
   },
   "new": [
     {
+      "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
+      "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
+      "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/protect-caregiver-income-vs-build-bigger-care-fund-singapore.html",
+      "title": "Protect Caregiver Income vs Build a Bigger Care Fund in Singapore (2026)",
+      "desc": "Protect caregiver income vs build a bigger care fund in Singapore (2026): decide when income protect",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/hire-home-care-vs-family-caregiver-time-singapore.html",
+      "title": "Hire Home Care vs Use Family Caregiver Time in Singapore (2026)",
+      "desc": "Hire home care vs use family caregiver time in Singapore (2026): decide when paid support is the saf",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/long-term-care-funding-calculator-singapore.html",
       "title": "Long-Term Care Funding Calculator Singapore (2026)",
       "desc": "",
@@ -2299,27 +2338,6 @@
       "desc": "CPF LIFE Standard vs Escalating Plan in Singapore (2026): compare starting payout, inflation pressur",
       "cluster": "investing",
       "clusterLabel": "Investing"
-    },
-    {
-      "url": "/retirement-income-layering-calculator-singapore.html",
-      "title": "Retirement Income Layering Calculator Singapore (2026)",
-      "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html",
-      "title": "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore? (2026)",
-      "desc": "Use housing equity vs buy more long-term-care cover in Singapore (2026). A practical framework for d",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html",
-      "title": "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore? (2026)",
-      "desc": "Set aside a care fund vs keep investing for retirement in Singapore (2026). Use a practical framewor",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
     }
   ],
   "popular": [
@@ -3986,6 +4004,24 @@
     },
     "long-term-care-funding-calculator-singapore.html": {
       "first_seen": "2026-04-03"
+    },
+    "hire-home-care-vs-family-caregiver-time-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "protect-caregiver-income-vs-build-bigger-care-fund-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "hire-home-care-vs-family-caregiver-time-singapore": {
+      "first_seen": "2026-04-04"
+    },
+    "use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore": {
+      "first_seen": "2026-04-04"
+    },
+    "protect-caregiver-income-vs-build-bigger-care-fund-singapore": {
+      "first_seen": "2026-04-04"
     }
   }
 }

@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: April 2026 · Based on repo v0294
+> Last updated: April 2026 · Based on repo v0295
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0294
+**Current version:** v0295
 
 ### Key files
 
@@ -198,8 +198,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
 
-### Family (131 content pages) ✅ Largest cluster
-Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate). 14 calculators.
+### Family (130 content pages) ✅ Largest cluster
+Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, and reserve design. 14 calculators.
 
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
@@ -219,6 +219,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
 | v0264–v0277 | Family aging-parents calculators (14); housing/location/co-residence/liquidity branches |
 | v0294 | Repair protection SITE indexing for v0293 pages; add long-term-care funding calculator; update protection/calculators hubs and featured pipeline |
+| v0295 | Add care-execution bridge bundle across family and protection: home care vs family caregiver time, insurance payouts vs out-of-pocket home-help funding, and caregiver-income protection vs bigger care fund. |
 | v0292 | Add retirement housing-equity bridge bundle (sell home and rent in retirement vs stay put, right-size home vs keep home and draw from portfolio, use housing equity vs preserve home asset in retirement); refresh property hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
 | v0291 | Fix featured-data omission for retirement income layering calculator; add retirement implementation bundle (CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement, how much cash bucket before CPF LIFE); refresh investing hub, comparisons hub, SITE index, featured data, sitemap, and brief. |
 | v0290 | Repair v0289 retirement-income integration: expand 3 retirement-income comparison pages above threshold, wire them into investing hub, comparisons hub, SITE index, and featured data; add retirement income layering calculator; patch generate-featured.py first_seen logic; regenerate sitemap and featured data. |
