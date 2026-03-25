@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 25 Mar 2026 · Based on repo v0300
+> Last updated: 25 Mar 2026 · Based on repo v0301
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0300
+**Current version:** v0301
 
 ### Key files
 
@@ -207,6 +207,8 @@ Full coverage: hospitalisation, life insurance, CI, disability income, accident,
 
 ### Investing/Liquidity (43 content pages) 🟡 Growing
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
+**v0301 note:** investing hardening bundle deepened five existing investing pages — `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` — and added contextual inbound links from adjacent cash-buffer, investing-allocation, CPF wrapper, and mortgage trade-off pages.
+
 
 ### Calculators (39 pages) ✅ | Comparisons (60 pages) ✅
 **v0298 note:** hardened six existing calculators for depth and discoverability; added `life-insurance-calculator-singapore.html` to `calculators/index.html`.
@@ -219,6 +221,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0301 | Investing hardening bundle on existing pages only: expand `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` above threshold; add contextual inbound links from `cash-buffer-vs-srs-singapore.html`, `cash-buffer-vs-cpf-sa-top-up-singapore.html`, `cash-buffer-vs-cpf-oa-investment-singapore.html`, `cpf-oa-investment-vs-index-fund-investing-singapore.html`, `srs-vs-index-fund-investing-singapore.html`, `cpf-sa-top-up-vs-pay-down-mortgage-singapore.html`, and `how-much-to-invest-each-month-singapore.html`; run generators and validation sweep. |
 | v0300 | Property hardening bundle on existing pages only: expand `upgrade-downgrade-property-calculator-singapore.html`, `property-sell-buy-pipeline-calculator-singapore.html`, `how-much-cash-to-buy-property-calculator-singapore.html`, `property-upgrade-ladder-calculator-singapore.html`, and `sell-property-proceeds-calculator-singapore.html` above threshold; add contextual inbound links from `property-upgrade-planner-singapore.html`, `bridging-loan-singapore.html`, `how-much-cash-to-buy-property-singapore.html`, `sell-property-cost-singapore.html`, and `property-affordability-calculator-singapore.html`; run generators and validation sweep. |
 | v0299 | Transport hardening bundle on existing pages only: expand `10-year-coe-renewal-worth-it-singapore.html`, `car-depreciation-singapore.html`, `car-insurance-excess-and-claims-singapore.html`, `coe-loan-calculator-singapore.html`, and `coe-renew-vs-replace-calculator-singapore.html` above threshold; add contextual inbound links from `car-loan-rates-singapore.html`, `car-insurance-cost-singapore.html`, `car-ownership-cost.html`, and `should-i-buy-car-now-or-wait-singapore.html`; run generators and validation sweep. |
 | v0298 | Calculator hardening bundle: expand `life-insurance-calculator-singapore.html`, `property-affordability-calculator-singapore.html`, `rent-vs-buy-calculator-singapore.html`, `refinance-savings-calculator-singapore.html`, `car-ownership-cost-calculator-singapore.html`, and `tdsr-msr-calculator-singapore.html` above threshold; add `life-insurance-calculator-singapore.html` to `calculators/index.html`; add contextual inbound links from adjacent framework pages; run generators and validation sweep. |
