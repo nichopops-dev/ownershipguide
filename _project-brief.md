@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 25 Mar 2026 · Based on repo v0297
+> Last updated: 25 Mar 2026 · Based on repo v0298
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0297
+**Current version:** v0298
 
 ### Key files
 
@@ -172,7 +172,7 @@ python3 generate-featured.py   # from repo root
 
 ---
 
-## 7. Current Site Health (as of v0297)
+## 7. Current Site Health (as of v0298)
 
 - ✅ 492 HTML files | ~430 content pages
 - ✅ 0 broken internal links
@@ -209,6 +209,7 @@ Full coverage: hospitalisation, life insurance, CI, disability income, accident,
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
 
 ### Calculators (39 pages) ✅ | Comparisons (60 pages) ✅
+**v0298 note:** hardened six existing calculators for depth and discoverability; added `life-insurance-calculator-singapore.html` to `calculators/index.html`.
 
 ---
 
@@ -216,6 +217,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0298 | Calculator hardening bundle: expand `life-insurance-calculator-singapore.html`, `property-affordability-calculator-singapore.html`, `rent-vs-buy-calculator-singapore.html`, `refinance-savings-calculator-singapore.html`, `car-ownership-cost-calculator-singapore.html`, and `tdsr-msr-calculator-singapore.html` above threshold; add `life-insurance-calculator-singapore.html` to `calculators/index.html`; add contextual inbound links from adjacent framework pages; run generators and validation sweep. |
 | v0297 | Discoverability repair bundle for 5 existing transport decision pages: strengthen manual surfacing in transport and comparisons hubs; add explicit inbound links from adjacent quote, financing, and exit-execution pages; refresh touched-page Last updated dates; run generators and validation sweep. |
 | v0175–v0237 | Transport and Property branches; Family/Protection/Investing cluster launches |
 | v0238–v0263 | Family aging-parents branch (all 24 sub-topics); internal linking; schema |
