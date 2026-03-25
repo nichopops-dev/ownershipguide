@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 25 Mar 2026 · Based on repo v0299
+> Last updated: 25 Mar 2026 · Based on repo v0300
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0299
+**Current version:** v0300
 
 ### Key files
 
@@ -172,7 +172,7 @@ python3 generate-featured.py   # from repo root
 
 ---
 
-## 7. Current Site Health (as of v0299)
+## 7. Current Site Health (as of v0300)
 
 - ✅ 492 HTML files | ~430 content pages
 - ✅ 0 broken internal links
@@ -211,6 +211,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 ### Calculators (39 pages) ✅ | Comparisons (60 pages) ✅
 **v0298 note:** hardened six existing calculators for depth and discoverability; added `life-insurance-calculator-singapore.html` to `calculators/index.html`.
 **v0299 note:** transport hardening bundle deepened five existing transport pages — `10-year-coe-renewal-worth-it-singapore.html`, `car-depreciation-singapore.html`, `car-insurance-excess-and-claims-singapore.html`, `coe-loan-calculator-singapore.html`, and `coe-renew-vs-replace-calculator-singapore.html` — and added contextual inbound links from adjacent transport financing, insurance, and ownership-framework pages.
+**v0300 note:** property hardening bundle deepened five existing property calculators — `upgrade-downgrade-property-calculator-singapore.html`, `property-sell-buy-pipeline-calculator-singapore.html`, `how-much-cash-to-buy-property-calculator-singapore.html`, `property-upgrade-ladder-calculator-singapore.html`, and `sell-property-proceeds-calculator-singapore.html` — and added contextual inbound links from adjacent property planning, financing, cash-readiness, selling-cost, and affordability pages.
 
 ---
 
@@ -218,6 +219,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0300 | Property hardening bundle on existing pages only: expand `upgrade-downgrade-property-calculator-singapore.html`, `property-sell-buy-pipeline-calculator-singapore.html`, `how-much-cash-to-buy-property-calculator-singapore.html`, `property-upgrade-ladder-calculator-singapore.html`, and `sell-property-proceeds-calculator-singapore.html` above threshold; add contextual inbound links from `property-upgrade-planner-singapore.html`, `bridging-loan-singapore.html`, `how-much-cash-to-buy-property-singapore.html`, `sell-property-cost-singapore.html`, and `property-affordability-calculator-singapore.html`; run generators and validation sweep. |
 | v0299 | Transport hardening bundle on existing pages only: expand `10-year-coe-renewal-worth-it-singapore.html`, `car-depreciation-singapore.html`, `car-insurance-excess-and-claims-singapore.html`, `coe-loan-calculator-singapore.html`, and `coe-renew-vs-replace-calculator-singapore.html` above threshold; add contextual inbound links from `car-loan-rates-singapore.html`, `car-insurance-cost-singapore.html`, `car-ownership-cost.html`, and `should-i-buy-car-now-or-wait-singapore.html`; run generators and validation sweep. |
 | v0298 | Calculator hardening bundle: expand `life-insurance-calculator-singapore.html`, `property-affordability-calculator-singapore.html`, `rent-vs-buy-calculator-singapore.html`, `refinance-savings-calculator-singapore.html`, `car-ownership-cost-calculator-singapore.html`, and `tdsr-msr-calculator-singapore.html` above threshold; add `life-insurance-calculator-singapore.html` to `calculators/index.html`; add contextual inbound links from adjacent framework pages; run generators and validation sweep. |
 | v0297 | Discoverability repair bundle for 5 existing transport decision pages: strengthen manual surfacing in transport and comparisons hubs; add explicit inbound links from adjacent quote, financing, and exit-execution pages; refresh touched-page Last updated dates; run generators and validation sweep. |
