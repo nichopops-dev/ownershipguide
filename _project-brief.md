@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 25 Mar 2026 · Based on repo v0302
+> Last updated: 26 Mar 2026 · Based on repo v0303
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0302
+**Current version:** v0303
 
 ### Key files
 
@@ -172,7 +172,7 @@ python3 generate-featured.py   # from repo root
 
 ---
 
-## 7. Current Site Health (as of v0300)
+## 7. Current Site Health (as of v0303)
 
 - ✅ 492 HTML files | ~430 content pages
 - ✅ 0 broken internal links
@@ -194,6 +194,8 @@ python3 generate-featured.py   # from repo root
 ### Transport (56 content pages) ✅ Very strong
 Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, alternatives, EV, hybrid, motorcycle (all branches), used-car diligence, maintenance, post-incident, car-type, aging-car, aging-parents bridges.
 **v0297 repair note:** discoverability bundle reinforced five existing transport decision pages — `balloon-loan-vs-normal-car-loan-singapore.html`, `car-loan-vs-cash-singapore.html`, `buy-used-car-from-dealer-vs-direct-owner-singapore.html`, `trade-in-vs-direct-sale-car-singapore.html`, and `consignment-vs-dealer-sale-car-singapore.html` — via stronger hub surfacing and manual inbound links from adjacent transport execution pages.
+
+**v0303 note:** transport calculator/mechanics hardening bundle deepened five existing pages — `car-vs-ride-hailing-cost.html`, `coe-cost-singapore.html`, `car-maintenance-repair-cost-singapore.html`, `own-car-vs-public-transport-singapore.html`, and `erp-cost-singapore.html` — and added contextual inbound links from adjacent ownership-cost, timing, car-selection, financing, car-sharing, and depreciation pages.
 
 ### Property (118 content pages) ✅ Very strong
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
@@ -223,6 +225,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0303 | Transport calculator/mechanics hardening bundle on existing pages only: expand `car-vs-ride-hailing-cost.html`, `coe-cost-singapore.html`, `car-maintenance-repair-cost-singapore.html`, `own-car-vs-public-transport-singapore.html`, and `erp-cost-singapore.html`; add contextual inbound links from `car-ownership-cost-calculator-singapore.html`, `should-i-buy-car-now-or-wait-singapore.html`, `best-car-to-buy-singapore.html`, `car-loan-rates-singapore.html`, `car-sharing-vs-owning-a-car-singapore.html`, and `car-depreciation-singapore.html`; run generators and validation sweep. |
 | v0302 | Property mechanics hardening bundle on existing pages only: expand `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` above threshold; add contextual inbound links from `pay-down-mortgage-vs-invest-singapore.html`, `refinance-vs-reprice-home-loan-singapore.html`, `property-affordability-calculator-singapore.html`, `tdsr-msr-calculator-singapore.html`, `bigger-home-vs-education-budget-singapore.html`, `property-ownership-cost-singapore.html`, `bsd-absd-calculator-singapore.html`, and `how-much-cash-to-buy-property-singapore.html`; run generators and validation sweep. |
 | v0301 | Investing hardening bundle on existing pages only: expand `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` above threshold; add contextual inbound links from `cash-buffer-vs-srs-singapore.html`, `cash-buffer-vs-cpf-sa-top-up-singapore.html`, `cash-buffer-vs-cpf-oa-investment-singapore.html`, `cpf-oa-investment-vs-index-fund-investing-singapore.html`, `srs-vs-index-fund-investing-singapore.html`, `cpf-sa-top-up-vs-pay-down-mortgage-singapore.html`, and `how-much-to-invest-each-month-singapore.html`; run generators and validation sweep. |
 | v0300 | Property hardening bundle on existing pages only: expand `upgrade-downgrade-property-calculator-singapore.html`, `property-sell-buy-pipeline-calculator-singapore.html`, `how-much-cash-to-buy-property-calculator-singapore.html`, `property-upgrade-ladder-calculator-singapore.html`, and `sell-property-proceeds-calculator-singapore.html` above threshold; add contextual inbound links from `property-upgrade-planner-singapore.html`, `bridging-loan-singapore.html`, `how-much-cash-to-buy-property-singapore.html`, `sell-property-cost-singapore.html`, and `property-affordability-calculator-singapore.html`; run generators and validation sweep. |
