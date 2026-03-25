@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 26 Mar 2026 · Based on repo v0303
+> Last updated: 26 Mar 2026 · Based on repo v0304
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0303
+**Current version:** v0304
 
 ### Key files
 
@@ -201,6 +201,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
 
+**v0304 note:** property borrowing-and-transaction hardening bundle deepened five existing pages — `reduce-tenure-vs-lower-monthly-instalment-singapore.html`, `what-to-do-when-home-loan-lock-in-ends-singapore.html`, `hdb-income-ceiling-singapore.html`, `family-grant-singapore.html`, and `proximity-housing-grant-phg-singapore.html` — and added contextual inbound links from adjacent refinancing, HDB loan, grant, family-ownership, and lock-in penalty pages.
+
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
 
 ### Family (130 content pages) ✅ Largest cluster
@@ -225,6 +227,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0304 | Property borrowing-and-transaction hardening bundle on existing pages only: expand `reduce-tenure-vs-lower-monthly-instalment-singapore.html`, `what-to-do-when-home-loan-lock-in-ends-singapore.html`, `hdb-income-ceiling-singapore.html`, `family-grant-singapore.html`, and `proximity-housing-grant-phg-singapore.html`; add contextual inbound links from `refinance-vs-reprice-home-loan-singapore.html`, `hdb-loan-vs-bank-loan-singapore.html`, `hdb-loan-vs-bank-loan-calculator-singapore.html`, `enhanced-cpf-housing-grant-ehg-singapore.html`, `buying-property-with-parents-or-family-singapore.html`, `hdb-vs-condo-singapore.html`, and `home-loan-lock-in-prepayment-penalty-singapore.html`; run generators and validation sweep. |
 | v0303 | Transport calculator/mechanics hardening bundle on existing pages only: expand `car-vs-ride-hailing-cost.html`, `coe-cost-singapore.html`, `car-maintenance-repair-cost-singapore.html`, `own-car-vs-public-transport-singapore.html`, and `erp-cost-singapore.html`; add contextual inbound links from `car-ownership-cost-calculator-singapore.html`, `should-i-buy-car-now-or-wait-singapore.html`, `best-car-to-buy-singapore.html`, `car-loan-rates-singapore.html`, `car-sharing-vs-owning-a-car-singapore.html`, and `car-depreciation-singapore.html`; run generators and validation sweep. |
 | v0302 | Property mechanics hardening bundle on existing pages only: expand `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` above threshold; add contextual inbound links from `pay-down-mortgage-vs-invest-singapore.html`, `refinance-vs-reprice-home-loan-singapore.html`, `property-affordability-calculator-singapore.html`, `tdsr-msr-calculator-singapore.html`, `bigger-home-vs-education-budget-singapore.html`, `property-ownership-cost-singapore.html`, `bsd-absd-calculator-singapore.html`, and `how-much-cash-to-buy-property-singapore.html`; run generators and validation sweep. |
 | v0301 | Investing hardening bundle on existing pages only: expand `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` above threshold; add contextual inbound links from `cash-buffer-vs-srs-singapore.html`, `cash-buffer-vs-cpf-sa-top-up-singapore.html`, `cash-buffer-vs-cpf-oa-investment-singapore.html`, `cpf-oa-investment-vs-index-fund-investing-singapore.html`, `srs-vs-index-fund-investing-singapore.html`, `cpf-sa-top-up-vs-pay-down-mortgage-singapore.html`, and `how-much-to-invest-each-month-singapore.html`; run generators and validation sweep. |
