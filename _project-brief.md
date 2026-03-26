@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 26 Mar 2026 · Based on repo v0306
+> Last updated: 26 Mar 2026 · Based on repo v0307
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0306
+**Current version:** v0307
 
 ### Key files
 
@@ -206,6 +206,8 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **v0304 note:** property borrowing-and-transaction hardening bundle deepened five existing pages — `reduce-tenure-vs-lower-monthly-instalment-singapore.html`, `what-to-do-when-home-loan-lock-in-ends-singapore.html`, `hdb-income-ceiling-singapore.html`, `family-grant-singapore.html`, and `proximity-housing-grant-phg-singapore.html` — and added contextual inbound links from adjacent refinancing, HDB loan, grant, family-ownership, and lock-in penalty pages.
 
 **v0306 note:** property execution-and-mortgage cleanup bundle deepened five existing pages — `mortgage-amortization-calculator-singapore.html`, `cpf-oa-vs-cash-for-home-loan-singapore.html`, `what-documents-to-prepare-before-selling-property-singapore.html`, `sell-property-cost-singapore.html`, and `cash-over-valuation-cov-singapore.html` — and added contextual inbound links from adjacent valuation, cash-needed, listing-readiness, sale-proceeds, pipeline, mortgage-interest, and ownership-cost pages.
+
+**v0307 note:** property equity-and-yield cleanup bundle deepened five existing pages — `cpf-accrued-interest-calculator-singapore.html`, `cpf-accrued-interest-singapore.html`, `rent-out-vs-sell-calculator-singapore.html`, `gross-vs-net-rental-yield-singapore.html`, and `should-i-buy-property-now-or-wait-singapore.html` — and added contextual inbound links from adjacent sale-proceeds, sale-cost, hold-vs-sell, ownership-cost, affordability, and rent-vs-buy pages.
 
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
 
