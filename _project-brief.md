@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 26 Mar 2026 · Based on repo v0307
+> Last updated: 26 Mar 2026 · Based on repo v0308
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0307
+**Current version:** v0308
 
 ### Key files
 
@@ -198,6 +198,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0303 note:** transport calculator/mechanics hardening bundle deepened five existing pages — `car-vs-ride-hailing-cost.html`, `coe-cost-singapore.html`, `car-maintenance-repair-cost-singapore.html`, `own-car-vs-public-transport-singapore.html`, and `erp-cost-singapore.html` — and added contextual inbound links from adjacent ownership-cost, timing, car-selection, financing, car-sharing, and depreciation pages.
 
 **v0305 note:** transport cost-and-insurance hardening bundle deepened five existing pages — `buying-car-financial-mistake-singapore.html`, `car-leasing-vs-buying-calculator-singapore.html`, `used-car-vs-new-car-calculator-singapore.html`, `named-driver-vs-any-authorised-driver-car-insurance-singapore.html`, and `high-excess-vs-low-excess-car-insurance-singapore.html` — and added contextual inbound links from adjacent ownership-cost, vehicle-selection, used-car route, and insurance-structure pages.
+
+**v0308 note:** transport straggler cleanup bundle deepened five existing pages — `ev-vs-petrol-calculator-singapore.html`, `car-vs-ride-hailing-calculator.html`, `no-claim-discount-ncd-singapore.html`, `parking-cost-singapore.html`, and `coe-bidding-strategy-singapore.html` — and added contextual inbound links from adjacent car-selection, ownership-cost, insurance-cost, insurance-claims, parking-budget, timing, and mode-choice pages.
 
 ### Property (118 content pages) ✅ Very strong
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.

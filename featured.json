@@ -3,18 +3,6 @@
   "cluster_pages": {
     "transport": [
       {
-        "url": "/car-insurance-excess-and-claims-singapore.html",
-        "title": "Car Insurance Excess and Claims in Singapore (2026)",
-        "desc": "Car insurance excess and claims in Singapore explained properly: what excess really means, when maki",
-        "date": "2026-03-26"
-      },
-      {
-        "url": "/car-sharing-vs-owning-a-car-singapore.html",
-        "title": "Car-Sharing vs Owning a Car in Singapore (2026)",
-        "desc": "Car-sharing vs owning a car in Singapore (2026): a decision framework for low-to-medium usage househ",
-        "date": "2026-03-26"
-      },
-      {
         "url": "/bigger-car-down-payment-vs-larger-cash-buffer-singapore.html",
         "title": "Bigger Car Down Payment vs Larger Cash Buffer in Singapore (2026)",
         "desc": "Bigger car down payment vs larger cash buffer in Singapore: decide whether the next dollar should lo",
@@ -333,10 +321,22 @@
         "date": "2026-03-14"
       },
       {
+        "url": "/car-insurance-excess-and-claims-singapore.html",
+        "title": "Car Insurance Excess and Claims in Singapore (2026)",
+        "desc": "Car insurance excess and claims in Singapore explained properly: what excess really means, when maki",
+        "date": "2026-03-01"
+      },
+      {
+        "url": "/car-sharing-vs-owning-a-car-singapore.html",
+        "title": "Car-Sharing vs Owning a Car in Singapore (2026)",
+        "desc": "Car-sharing vs owning a car in Singapore (2026): a decision framework for low-to-medium usage househ",
+        "date": "2026-03-01"
+      },
+      {
         "url": "/no-claim-discount-ncd-singapore.html",
         "title": "No-Claim Discount (NCD) in Singapore Car Insurance (2026)",
         "desc": "No-Claim Discount (NCD) in Singapore car insurance explained properly: why claims-free years matter,",
-        "date": "2026-03-09"
+        "date": "2026-03-01"
       }
     ],
     "property": [
