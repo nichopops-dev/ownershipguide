@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 27 Mar 2026 · Based on repo v0309
+> Last updated: 27 Mar 2026 · Based on repo v0310
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0309
+**Current version:** v0310
 
 ### Key files
 
@@ -222,12 +222,16 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 
 **v0309 bridge note:** added `second-car-or-helper-when-supporting-aging-parents-singapore.html`, a family-led cross-cluster bridge for households deciding whether the real elder-support bottleneck is movement or in-home help.
 
+**v0310 note:** hardened `second-car-or-helper-when-supporting-aging-parents-singapore.html` above threshold and added follow-through inbound links from adjacent aging-parent transport and care-delivery pages.
+
 ### Protection/Insurance (24 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
 ### Investing/Liquidity (44 content pages) 🟡 Growing
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
 **v0309 bridge note:** added `buy-investment-property-or-increase-index-fund-investing-singapore.html`, an investing-led cross-cluster bridge comparing property concentration against broader index-fund exposure.
+
+**v0310 note:** hardened `buy-investment-property-or-increase-index-fund-investing-singapore.html` above threshold and added follow-through inbound links from adjacent investing, property-timing, and property-risk pages.
 
 **v0301 note:** investing hardening bundle deepened five existing investing pages — `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` — and added contextual inbound links from adjacent cash-buffer, investing-allocation, CPF wrapper, and mortgage trade-off pages.
 
@@ -243,6 +247,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0310 | Bridge-page hardening and discoverability follow-through bundle: expand `buy-investment-property-or-increase-index-fund-investing-singapore.html` and `second-car-or-helper-when-supporting-aging-parents-singapore.html` above threshold; add explicit inbound links from adjacent investing/property-timing/property-risk and aging-parent transport/care-delivery pages; refresh brief and run validation sweep. |
 | v0309 | Cross-cluster bridge-page bundle: add `buy-a-car-or-upgrade-home-first-singapore.html`, `pay-down-home-loan-or-build-child-education-fund-singapore.html`, `buy-investment-property-or-increase-index-fund-investing-singapore.html`, and `second-car-or-helper-when-supporting-aging-parents-singapore.html`; wire them into transport/property/family/investing hubs, comparisons hub, SITE index, featured data, sitemap, and brief; add explicit inbound links from adjacent existing pages; run generators and validation sweep. |
 | v0304 | Property borrowing-and-transaction hardening bundle on existing pages only: expand `reduce-tenure-vs-lower-monthly-instalment-singapore.html`, `what-to-do-when-home-loan-lock-in-ends-singapore.html`, `hdb-income-ceiling-singapore.html`, `family-grant-singapore.html`, and `proximity-housing-grant-phg-singapore.html`; add contextual inbound links from `refinance-vs-reprice-home-loan-singapore.html`, `hdb-loan-vs-bank-loan-singapore.html`, `hdb-loan-vs-bank-loan-calculator-singapore.html`, `enhanced-cpf-housing-grant-ehg-singapore.html`, `buying-property-with-parents-or-family-singapore.html`, `hdb-vs-condo-singapore.html`, and `home-loan-lock-in-prepayment-penalty-singapore.html`; run generators and validation sweep. |
 | v0303 | Transport calculator/mechanics hardening bundle on existing pages only: expand `car-vs-ride-hailing-cost.html`, `coe-cost-singapore.html`, `car-maintenance-repair-cost-singapore.html`, `own-car-vs-public-transport-singapore.html`, and `erp-cost-singapore.html`; add contextual inbound links from `car-ownership-cost-calculator-singapore.html`, `should-i-buy-car-now-or-wait-singapore.html`, `best-car-to-buy-singapore.html`, `car-loan-rates-singapore.html`, `car-sharing-vs-owning-a-car-singapore.html`, and `car-depreciation-singapore.html`; run generators and validation sweep. |
