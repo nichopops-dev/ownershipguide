@@ -293,6 +293,10 @@ decisionPathOverrides: {
     comparisons: {
       label: "Decision Comparisons (Singapore)",
       pillars: [
+        { url: "/buy-a-car-or-upgrade-home-first-singapore.html", title: "Buy a Car or Upgrade Home First in Singapore (2026): Which Big-Ticket Move Should Go First?", cluster: "transport", subtopic: "comparison" },
+        { url: "/pay-down-home-loan-or-build-child-education-fund-singapore.html", title: "Pay Down Home Loan or Build a Child Education Fund First in Singapore (2026): Which Long-Horizon Goal Should Get the Next Dollar?", cluster: "property", subtopic: "comparison" },
+        { url: "/second-car-or-helper-when-supporting-aging-parents-singapore.html", title: "Second Car or a Helper When Supporting Aging Parents in Singapore (2026): Which Cost Actually Reduces Family Strain?", cluster: "family", subtopic: "comparison" },
+        { url: "/buy-investment-property-or-increase-index-fund-investing-singapore.html", title: "Buy an Investment Property or Increase Index-Fund Investing in Singapore (2026): Which Route Builds Wealth With Less Fragility?", cluster: "investing", subtopic: "comparison" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", cluster: "transport", subtopic: "comparison" },
         { url: "/rent-vs-buy-property-singapore.html", title: "Rent vs Buy Property in Singapore (2026): 5-Year Cost & Liquidity Framework", cluster: "property", subtopic: "comparison" },
         { url: "/bto-vs-resale-cost.html", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", cluster: "property", subtopic: "comparison" },
@@ -480,6 +484,7 @@ decisionPathOverrides: {
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
       ],
       pages: [
+        { url: "/buy-a-car-or-upgrade-home-first-singapore.html", title: "Buy a Car or Upgrade Home First in Singapore (2026): Which Big-Ticket Move Should Go First?", subtopic: "bridge" },
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
         { url: "/coe-bidding-strategy-singapore.html", title: "COE Bidding Strategy in Singapore (2026): Timing, Tactics, and Total Exposure", subtopic: "ownership-core" },
         { url: "/car-depreciation-singapore.html", title: "Car Depreciation in Singapore (2026): The Real Monthly Cost You Can’t Ignore", subtopic: "ownership-core" },
@@ -759,6 +764,7 @@ decisionPathOverrides: {
         { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
       ],
       pages: [
+        { url: "/pay-down-home-loan-or-build-child-education-fund-singapore.html", title: "Pay Down Home Loan or Build a Child Education Fund First in Singapore (2026): Which Long-Horizon Goal Should Get the Next Dollar?", subtopic: "bridge" },
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", subtopic: "ownership" },
         { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
         { url: "/rental-property-ownership-cost.html", title: "The Real Cost of Owning a Rental Property in Singapore (2026)", subtopic: "rental" },
@@ -930,6 +936,7 @@ decisionPathOverrides: {
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
       ],
       pages: [
+        { url: "/second-car-or-helper-when-supporting-aging-parents-singapore.html", title: "Second Car or a Helper When Supporting Aging Parents in Singapore (2026): Which Cost Actually Reduces Family Strain?", subtopic: "bridge" },
         { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
         { url: "/maid-vs-infantcare-cost-singapore.html", title: "Maid vs Infantcare Cost in Singapore (2026): Which Early-Years Care Route Actually Costs Less?", subtopic: "comparison" },
         { url: "/stay-at-home-parent-vs-infantcare-cost-singapore.html", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", subtopic: "comparison" },
@@ -1149,6 +1156,7 @@ decisionPathOverrides: {
     investing: {
       pillar: "/how-much-emergency-fund-do-you-need-singapore.html",
       pages: [
+        { url: "/buy-investment-property-or-increase-index-fund-investing-singapore.html", title: "Buy an Investment Property or Increase Index-Fund Investing in Singapore (2026): Which Route Builds Wealth With Less Fragility?", subtopic: "bridge" },
         { url: "/emergency-fund-vs-sinking-fund-singapore.html", title: "Emergency Fund vs Sinking Fund in Singapore (2026): Why Mixing Shock Reserves with Planned Spending Creates False Safety", subtopic: "comparison" },
         { url: "/how-having-a-mortgage-changes-your-emergency-fund-size-singapore.html", title: "How Having a Mortgage Changes Your Emergency Fund Size in Singapore (2026): Why Fixed Debt Obligations Usually Demand a Bigger Cash Buffer", subtopic: "planning" },
         { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", subtopic: "planning" },
