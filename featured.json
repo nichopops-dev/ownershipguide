@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26",
+  "generated": "2026-03-27",
   "cluster_pages": {
     "transport": [
       {
@@ -2324,6 +2324,20 @@
   },
   "new": [
     {
+      "url": "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html",
+      "title": "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026)",
+      "desc": "Move closer to school or keep your home and own a car in Singapore: a practical framework for decidi",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/buy-bigger-home-or-fund-helper-first-singapore.html",
+      "title": "Buy a Bigger Home or Fund a Helper First in Singapore (2026)",
+      "desc": "Buy a bigger home or fund a helper first in Singapore: a practical framework for deciding whether ho",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/second-car-or-helper-when-supporting-aging-parents-singapore.html",
       "title": "Second Car or a Helper When Supporting Aging Parents in Singapore (2026)",
       "desc": "Second car or a helper when supporting aging parents in Singapore: a practical framework for decidin",
@@ -2338,18 +2352,11 @@
       "clusterLabel": "Family"
     },
     {
-      "url": "/use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html",
-      "title": "Use Care-Insurance Payouts vs Pay Out of Pocket for Home Help in Singapore (2026)",
-      "desc": "Use care-insurance payouts vs pay out of pocket for home help in Singapore (2026): decide when insur",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/protect-caregiver-income-vs-build-bigger-care-fund-singapore.html",
-      "title": "Protect Caregiver Income vs Build a Bigger Care Fund in Singapore (2026)",
-      "desc": "Protect caregiver income vs build a bigger care fund in Singapore (2026): decide when income protect",
-      "cluster": "family",
-      "clusterLabel": "Family"
+      "url": "/increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html",
+      "title": "Increase Term Life Insurance or Pay Down Home Loan First in Singapore (2026)",
+      "desc": "Increase term life insurance or pay down home loan first in Singapore: a practical framework for dec",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
     },
     {
       "url": "/long-term-care-funding-calculator-singapore.html",
@@ -2357,6 +2364,13 @@
       "desc": "",
       "cluster": "protection",
       "clusterLabel": "Protection"
+    },
+    {
+      "url": "/pay-down-home-loan-or-help-aging-parents-now-singapore.html",
+      "title": "Pay Down Home Loan or Help Aging Parents Now in Singapore (2026)",
+      "desc": "Pay down home loan or help aging parents now in Singapore: a practical framework for deciding whethe",
+      "cluster": "property",
+      "clusterLabel": "Property"
     },
     {
       "url": "/pay-down-home-loan-or-build-child-education-fund-singapore.html",
@@ -2376,20 +2390,6 @@
       "url": "/right-size-home-vs-keep-home-and-draw-from-portfolio-retirement-singapore.html",
       "title": "Right-Size Your Home vs Keep It and Draw From Your Portfolio in Retirement? (2026)",
       "desc": "Right-size your home vs keep it and draw from your portfolio in retirement in Singapore (2026). A fr",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
-    {
-      "url": "/buy-investment-property-or-increase-index-fund-investing-singapore.html",
-      "title": "Buy an Investment Property or Increase Index-Fund Investing in Singapore (2026)",
-      "desc": "Buy an investment property or increase index-fund investing in Singapore: a practical framework for ",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/use-housing-equity-vs-preserve-home-asset-in-retirement-singapore.html",
-      "title": "Use Housing Equity vs Preserve the Home Asset in Retirement in Singapore? (2026)",
-      "desc": "Use housing equity vs preserve the home asset in retirement in Singapore (2026). A practical framewo",
       "cluster": "property",
       "clusterLabel": "Property"
     }
@@ -4096,16 +4096,16 @@
       "first_seen": "2026-04-01"
     },
     "buy-bigger-home-or-fund-helper-first-singapore.html": {
-      "first_seen": "2026-03-28"
+      "first_seen": "2026-04-07"
     },
     "increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html": {
-      "first_seen": "2026-03-28"
+      "first_seen": "2026-04-04"
     },
     "move-closer-to-school-or-keep-home-and-own-a-car-singapore.html": {
-      "first_seen": "2026-03-28"
+      "first_seen": "2026-04-07"
     },
     "pay-down-home-loan-or-help-aging-parents-now-singapore.html": {
-      "first_seen": "2026-03-28"
+      "first_seen": "2026-04-03"
     }
   }
 }
