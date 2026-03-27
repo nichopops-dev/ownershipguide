@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 27 Mar 2026 · Based on repo v0312
+> Last updated: 27 Mar 2026 · Based on repo v0313
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0312
+**Current version:** v0313
 
 ### Key files
 
@@ -432,3 +432,6 @@ If a script will touch more than 5 files:
 | v0293 | Protection retirement-care funding bridge bundle: self-fund vs insure, housing equity vs more cover, and care fund vs keep investing |
 
 | v0296 | Added care-execution calculator, repaired comparisons hub wiring for v0295 pages, refreshed family/calculator/search wiring. |
+
+
+**v0313 bridge note:** added `move-closer-to-aging-parents-or-keep-home-and-own-a-second-car-singapore.html`, `pay-down-home-loan-or-keep-bigger-cash-buffer-before-second-child-singapore.html`, `increase-term-life-insurance-or-build-child-education-fund-first-singapore.html`, and `help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html` as the third cross-cluster bridge-page bundle.
