@@ -1167,6 +1167,7 @@ decisionPathOverrides: {
     investing: {
       pillar: "/how-much-emergency-fund-do-you-need-singapore.html",
       pages: [
+        { url: "/buy-bigger-home-or-increase-index-fund-investing-first-singapore.html", title: "Buy a Bigger Home or Increase Index-Fund Investing First in Singapore (2026): Which Use of Capital Builds More Flexibility?", cluster: "property", subtopic: "bridge" },
         { url: "/buy-investment-property-or-increase-index-fund-investing-singapore.html", title: "Buy an Investment Property or Increase Index-Fund Investing in Singapore (2026): Which Route Builds Wealth With Less Fragility?", subtopic: "bridge" },
         { url: "/help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html", title: "Help Parents With Housing Costs or Build Your Own Investment Portfolio First in Singapore (2026): Which Use of the Next Dollar Is More Sustainable?", subtopic: "bridge" },
         { url: "/emergency-fund-vs-sinking-fund-singapore.html", title: "Emergency Fund vs Sinking Fund in Singapore (2026): Why Mixing Shock Reserves with Planned Spending Creates False Safety", subtopic: "comparison" },

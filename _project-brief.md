@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 27 Mar 2026 · Based on repo v0314
+> Last updated: 28 Mar 2026 · Based on repo v0315
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0314
+**Current version:** v0315
 
 ### Key files
 
@@ -204,6 +204,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0308 note:** transport straggler cleanup bundle deepened five existing pages — `ev-vs-petrol-calculator-singapore.html`, `car-vs-ride-hailing-calculator.html`, `no-claim-discount-ncd-singapore.html`, `parking-cost-singapore.html`, and `coe-bidding-strategy-singapore.html` — and added contextual inbound links from adjacent car-selection, ownership-cost, insurance-cost, insurance-claims, parking-budget, timing, and mode-choice pages.
 
 **v0311 bridge note:** added `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, a transport-adjacent family bridge for households comparing location change against vehicle ownership as the cleaner school-logistics fix.
+
+**v0315 bridge note:** added `buy-family-car-or-increase-term-life-insurance-first-singapore.html`, a transport-led bridge for households deciding whether the more dangerous missing layer is daily mobility relief or family income protection.
 **v0312 metadata note:** refreshed `featured.json` `page_registry` dates for `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html` and `buy-bigger-home-or-fund-helper-first-singapore.html` so family hub recent surfaces and `new[]` ordering treat the v0311 bridge pages as genuinely newest family additions.
 
 ### Property (119 content pages) ✅ Very strong
@@ -219,6 +221,8 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **v0307 note:** property equity-and-yield cleanup bundle deepened five existing pages — `cpf-accrued-interest-calculator-singapore.html`, `cpf-accrued-interest-singapore.html`, `rent-out-vs-sell-calculator-singapore.html`, `gross-vs-net-rental-yield-singapore.html`, and `should-i-buy-property-now-or-wait-singapore.html` — and added contextual inbound links from adjacent sale-proceeds, sale-cost, hold-vs-sell, ownership-cost, affordability, and rent-vs-buy pages.
 
 **v0311 bridge note:** added `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, a property-led cross-cluster bridge for households deciding between mortgage improvement and immediate elder-support funding.
+
+**v0315 bridge note:** added `buy-bigger-home-or-increase-index-fund-investing-first-singapore.html`, a property-led cross-cluster bridge for households comparing owner-occupier housing upgrades against continued diversified investing.
 **v0312 metadata note:** refreshed `featured.json` `page_registry` date for `pay-down-home-loan-or-help-aging-parents-now-singapore.html` so property recent surfaces and `new[]` ordering treat it as the newest property addition from the v0311 bridge wave.
 
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
@@ -232,17 +236,23 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 
 **v0311 bridge note:** added `buy-bigger-home-or-fund-helper-first-singapore.html`, a family-led cross-cluster bridge for households deciding whether the next upgrade should be more space or more household support capacity.
 
+**v0315 bridge note:** added `move-near-grandparents-or-pay-for-infantcare-first-singapore.html`, a family-led cross-cluster bridge for households comparing housing/location change against formal early-years care spending.
+
 ### Protection/Insurance (25 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
 
 **v0311 bridge note:** added `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`, a protection-led cross-cluster bridge for mortgage households deciding whether the bigger immediate gap is family cover or debt reduction.
 **v0312 metadata note:** refreshed `featured.json` `page_registry` date for `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html` so protection recent surfaces and `new[]` ordering treat it as the newest protection addition from the v0311 bridge wave.
 
+**v0315 bridge note:** added `increase-disability-income-insurance-or-fund-helper-first-singapore.html`, a protection-led cross-cluster bridge for households deciding whether the deeper missing layer is income-continuity cover or paid household support capacity.
+
 ### Investing/Liquidity (44 content pages) 🟡 Growing
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
 **v0309 bridge note:** added `buy-investment-property-or-increase-index-fund-investing-singapore.html`, an investing-led cross-cluster bridge comparing property concentration against broader index-fund exposure.
 
 **v0310 note:** hardened `buy-investment-property-or-increase-index-fund-investing-singapore.html` above threshold and added follow-through inbound links from adjacent investing, property-timing, and property-risk pages.
+
+**v0315 bridge note:** added `buy-bigger-home-or-increase-index-fund-investing-first-singapore.html`, an investing-adjacent bridge for households deciding whether the next capital move should stay diversified or be concentrated into a larger own-stay home.
 
 **v0301 note:** investing hardening bundle deepened five existing investing pages — `surplus-cash-allocation-calculator-singapore.html`, `cpf-sa-top-up-vs-cpf-oa-investment-singapore.html`, `srs-vs-cpf-oa-investment-singapore.html`, `cpf-sa-top-up-vs-index-fund-investing-singapore.html`, and `srs-vs-pay-down-mortgage-singapore.html` — and added contextual inbound links from adjacent cash-buffer, investing-allocation, CPF wrapper, and mortgage trade-off pages.
 
@@ -435,3 +445,5 @@ If a script will touch more than 5 files:
 
 
 **v0313 bridge note:** added `move-closer-to-aging-parents-or-keep-home-and-own-a-second-car-singapore.html`, `pay-down-home-loan-or-keep-bigger-cash-buffer-before-second-child-singapore.html`, `increase-term-life-insurance-or-build-child-education-fund-first-singapore.html`, and `help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html` as the third cross-cluster bridge-page bundle.
+
+| v0315 | Fourth cross-cluster bridge-page bundle: added move-near-grandparents vs infantcare, family car vs term life, bigger home vs index-fund investing, and disability-income insurance vs helper first; updated hubs, comparisons, includes.js, featured metadata, sitemap, and project brief. |
