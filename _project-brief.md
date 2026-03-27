@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 27 Mar 2026 · Based on repo v0310
+> Last updated: 27 Mar 2026 · Based on repo v0311
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0310
+**Current version:** v0311
 
 ### Key files
 
@@ -203,6 +203,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 
 **v0308 note:** transport straggler cleanup bundle deepened five existing pages — `ev-vs-petrol-calculator-singapore.html`, `car-vs-ride-hailing-calculator.html`, `no-claim-discount-ncd-singapore.html`, `parking-cost-singapore.html`, and `coe-bidding-strategy-singapore.html` — and added contextual inbound links from adjacent car-selection, ownership-cost, insurance-cost, insurance-claims, parking-budget, timing, and mode-choice pages.
 
+**v0311 bridge note:** added `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, a transport-adjacent family bridge for households comparing location change against vehicle ownership as the cleaner school-logistics fix.
+
 ### Property (119 content pages) ✅ Very strong
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
@@ -215,17 +217,23 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 
 **v0307 note:** property equity-and-yield cleanup bundle deepened five existing pages — `cpf-accrued-interest-calculator-singapore.html`, `cpf-accrued-interest-singapore.html`, `rent-out-vs-sell-calculator-singapore.html`, `gross-vs-net-rental-yield-singapore.html`, and `should-i-buy-property-now-or-wait-singapore.html` — and added contextual inbound links from adjacent sale-proceeds, sale-cost, hold-vs-sell, ownership-cost, affordability, and rent-vs-buy pages.
 
+**v0311 bridge note:** added `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, a property-led cross-cluster bridge for households deciding between mortgage improvement and immediate elder-support funding.
+
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
 
-### Family (132 content pages) ✅ Largest cluster
+### Family (134 content pages) ✅ Largest cluster
 Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, reserve design, caregiver-capacity modelling, and transport-versus-home-support trade-offs. 15 calculators.
 
 **v0309 bridge note:** added `second-car-or-helper-when-supporting-aging-parents-singapore.html`, a family-led cross-cluster bridge for households deciding whether the real elder-support bottleneck is movement or in-home help.
 
 **v0310 note:** hardened `second-car-or-helper-when-supporting-aging-parents-singapore.html` above threshold and added follow-through inbound links from adjacent aging-parent transport and care-delivery pages.
 
-### Protection/Insurance (24 content pages) ✅ Mature
+**v0311 bridge note:** added `buy-bigger-home-or-fund-helper-first-singapore.html`, a family-led cross-cluster bridge for households deciding whether the next upgrade should be more space or more household support capacity.
+
+### Protection/Insurance (25 content pages) ✅ Mature
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.
+
+**v0311 bridge note:** added `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`, a protection-led cross-cluster bridge for mortgage households deciding whether the bigger immediate gap is family cover or debt reduction.
 
 ### Investing/Liquidity (44 content pages) 🟡 Growing
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
@@ -247,6 +255,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0311 | Second cross-cluster bridge-page bundle: add `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`, `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, and `buy-bigger-home-or-fund-helper-first-singapore.html`; wire them into family/property/protection/transport/comparisons hubs, SITE index, featured data, sitemap, and brief; add explicit inbound links from adjacent existing pages; run generators and validation sweep. |
 | v0310 | Bridge-page hardening and discoverability follow-through bundle: expand `buy-investment-property-or-increase-index-fund-investing-singapore.html` and `second-car-or-helper-when-supporting-aging-parents-singapore.html` above threshold; add explicit inbound links from adjacent investing/property-timing/property-risk and aging-parent transport/care-delivery pages; refresh brief and run validation sweep. |
 | v0309 | Cross-cluster bridge-page bundle: add `buy-a-car-or-upgrade-home-first-singapore.html`, `pay-down-home-loan-or-build-child-education-fund-singapore.html`, `buy-investment-property-or-increase-index-fund-investing-singapore.html`, and `second-car-or-helper-when-supporting-aging-parents-singapore.html`; wire them into transport/property/family/investing hubs, comparisons hub, SITE index, featured data, sitemap, and brief; add explicit inbound links from adjacent existing pages; run generators and validation sweep. |
 | v0304 | Property borrowing-and-transaction hardening bundle on existing pages only: expand `reduce-tenure-vs-lower-monthly-instalment-singapore.html`, `what-to-do-when-home-loan-lock-in-ends-singapore.html`, `hdb-income-ceiling-singapore.html`, `family-grant-singapore.html`, and `proximity-housing-grant-phg-singapore.html`; add contextual inbound links from `refinance-vs-reprice-home-loan-singapore.html`, `hdb-loan-vs-bank-loan-singapore.html`, `hdb-loan-vs-bank-loan-calculator-singapore.html`, `enhanced-cpf-housing-grant-ehg-singapore.html`, `buying-property-with-parents-or-family-singapore.html`, `hdb-vs-condo-singapore.html`, and `home-loan-lock-in-prepayment-penalty-singapore.html`; run generators and validation sweep. |
