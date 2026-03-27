@@ -9,6 +9,12 @@
         "date": "2026-03-28"
       },
       {
+        "url": "/buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html",
+        "title": "Buy a Family Car or Keep a Bigger Cash Buffer Before a Second Child in Singapore (2026)",
+        "desc": "Buy a family car or keep a bigger cash buffer before a second child in Singapore: a framework for de",
+        "date": "2026-03-28"
+      },
+      {
         "url": "/buy-a-car-or-upgrade-home-first-singapore.html",
         "title": "Buy a Car or Upgrade Home First in Singapore (2026)",
         "desc": "Buy a car or upgrade home first in Singapore: a practical framework for deciding which large fixed-c",
@@ -375,6 +381,12 @@
         "title": "Stay in Your Current Home or Right-Size in Singapore? (2026)",
         "desc": "Stay in your current home or right-size in Singapore (2026)? A practical framework for comparing mov",
         "date": "2026-04-01"
+      },
+      {
+        "url": "/buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html",
+        "title": "Buy a Bigger Home or Help Parents With Housing Costs First in Singapore (2026)",
+        "desc": "Buy a bigger home or help parents with housing costs first in Singapore: a framework for deciding wh",
+        "date": "2026-03-28"
       },
       {
         "url": "/buy-bigger-home-or-increase-index-fund-investing-first-singapore.html",
@@ -1138,6 +1150,12 @@
         "url": "/how-having-children-changes-your-insurance-priority-order-singapore.html",
         "title": "How Having Children Changes Your Insurance Priority Order in Singapore (2026)",
         "desc": "How having children changes your insurance priority order in Singapore: decide which protection revi",
+        "date": "2026-03-28"
+      },
+      {
+        "url": "/move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html",
+        "title": "Move Closer to Aging Parents or Pay for Adult Day Care First in Singapore (2026)",
+        "desc": "Move closer to aging parents or pay for adult day care first in Singapore: a framework for deciding ",
         "date": "2026-03-28"
       },
       {
@@ -1941,6 +1959,12 @@
         "date": "2026-03-28"
       },
       {
+        "url": "/increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html",
+        "title": "Increase Hospitalisation Rider or Pay Down Home Loan First When Supporting Aging Parents in Singapore (2026)",
+        "desc": "Increase hospitalisation rider or pay down home loan first when supporting aging parents in Singapor",
+        "date": "2026-03-28"
+      },
+      {
         "url": "/how-buying-an-investment-property-changes-your-insurance-needs-singapore.html",
         "title": "How Buying an Investment Property Changes Your Insurance Needs in Singapore (2026)",
         "desc": "How buying an investment property changes your insurance needs in Singapore (2026): a framework for ",
@@ -2372,6 +2396,13 @@
   },
   "new": [
     {
+      "url": "/move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html",
+      "title": "Move Closer to Aging Parents or Pay for Adult Day Care First in Singapore (2026)",
+      "desc": "Move closer to aging parents or pay for adult day care first in Singapore: a framework for deciding ",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/move-near-grandparents-or-pay-for-infantcare-first-singapore.html",
       "title": "Move Near Grandparents or Pay for Infantcare First in Singapore (2026)",
       "desc": "Move near grandparents or pay for infantcare first in Singapore: a framework for comparing location-",
@@ -2386,16 +2417,16 @@
       "clusterLabel": "Family"
     },
     {
+      "url": "/increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html",
+      "title": "Increase Hospitalisation Rider or Pay Down Home Loan First When Supporting Aging Parents in Singapore (2026)",
+      "desc": "Increase hospitalisation rider or pay down home loan first when supporting aging parents in Singapor",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
       "url": "/buy-bigger-home-or-fund-helper-first-singapore.html",
       "title": "Buy a Bigger Home or Fund a Helper First in Singapore (2026)",
       "desc": "Buy a bigger home or fund a helper first in Singapore: a practical framework for deciding whether ho",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html",
-      "title": "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026)",
-      "desc": "Move closer to school or keep your home and own a car in Singapore: a practical framework for decidi",
       "cluster": "family",
       "clusterLabel": "Family"
     },
@@ -2405,6 +2436,13 @@
       "desc": "Increase disability income insurance or fund a helper first in Singapore: a framework for comparing ",
       "cluster": "protection",
       "clusterLabel": "Protection"
+    },
+    {
+      "url": "/buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html",
+      "title": "Buy a Bigger Home or Help Parents With Housing Costs First in Singapore (2026)",
+      "desc": "Buy a bigger home or help parents with housing costs first in Singapore: a framework for deciding wh",
+      "cluster": "property",
+      "clusterLabel": "Property"
     },
     {
       "url": "/buy-bigger-home-or-increase-index-fund-investing-first-singapore.html",
@@ -2426,20 +2464,6 @@
       "desc": "Pay down home loan or keep a bigger cash buffer before a second child in Singapore: a framework for ",
       "cluster": "property",
       "clusterLabel": "Property"
-    },
-    {
-      "url": "/increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html",
-      "title": "Increase Term Life Insurance or Pay Down Home Loan First in Singapore (2026)",
-      "desc": "Increase term life insurance or pay down home loan first in Singapore: a practical framework for dec",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/long-term-care-funding-calculator-singapore.html",
-      "title": "Long-Term Care Funding Calculator Singapore (2026)",
-      "desc": "",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
     }
   ],
   "popular": [
@@ -4190,6 +4214,18 @@
     },
     "move-near-grandparents-or-pay-for-infantcare-first-singapore.html": {
       "first_seen": "2026-04-09"
+    },
+    "buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html": {
+      "first_seen": "2026-04-06"
+    },
+    "buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html": {
+      "first_seen": "2026-03-27"
+    },
+    "increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html": {
+      "first_seen": "2026-04-07"
+    },
+    "move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html": {
+      "first_seen": "2026-04-10"
     }
   }
 }
