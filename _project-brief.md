@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 27 Mar 2026 · Based on repo v0313
+> Last updated: 27 Mar 2026 · Based on repo v0314
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0313
+**Current version:** v0314
 
 ### Key files
 
@@ -172,7 +172,7 @@ python3 generate-featured.py   # from repo root
 
 ---
 
-## 7. Current Site Health (as of v0303)
+## 7. Current Site Health (as of v0314)
 
 - ✅ 492 HTML files | ~430 content pages
 - ✅ 0 broken internal links
