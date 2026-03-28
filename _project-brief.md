@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 28 Mar 2026 · Based on repo v0315
+> Last updated: 28 Mar 2026 · Based on repo v0317
 
 ---
 
@@ -31,7 +31,7 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0315
+**Current version:** v0317
 
 ### Key files
 
@@ -268,6 +268,7 @@ Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pag
 
 | Version | Work |
 |---------|------|
+| v0317 | Bridge indexing and freshness cleanup bundle: add `move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html`, `buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html`, `increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html`, and `buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html` into the `includes.js` SITE search index under the correct clusters; refresh `featured.json` `page_registry.first_seen` for `buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html` so it is the newest transport addition; regenerate featured data; update brief and validation sweep. |
 | v0312 | Bridge discoverability metadata cleanup bundle: refresh `featured.json` `page_registry.first_seen` dates for `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, `buy-bigger-home-or-fund-helper-first-singapore.html`, `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`, and `pay-down-home-loan-or-help-aging-parents-now-singapore.html` so they sort as genuinely newest within their clusters; regenerate `featured.json`; update brief and validation sweep. |
 | v0311 | Second cross-cluster bridge-page bundle: add `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`, `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, and `buy-bigger-home-or-fund-helper-first-singapore.html`; wire them into family/property/protection/transport/comparisons hubs, SITE index, featured data, sitemap, and brief; add explicit inbound links from adjacent existing pages; run generators and validation sweep. |
 | v0310 | Bridge-page hardening and discoverability follow-through bundle: expand `buy-investment-property-or-increase-index-fund-investing-singapore.html` and `second-car-or-helper-when-supporting-aging-parents-singapore.html` above threshold; add explicit inbound links from adjacent investing/property-timing/property-risk and aging-parent transport/care-delivery pages; refresh brief and run validation sweep. |

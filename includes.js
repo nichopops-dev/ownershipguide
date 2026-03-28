@@ -466,6 +466,7 @@ decisionPathOverrides: {
         { url: "/named-driver-vs-any-authorised-driver-car-insurance-singapore.html", title: "Named Driver vs Any Authorised Driver Car Insurance in Singapore (2026): Are You Saving Money or Making the Car Less Usable?", subtopic: "insurance" },
         { url: "/when-cheap-car-insurance-becomes-false-savings-singapore.html", title: "When Cheap Car Insurance Becomes False Savings in Singapore (2026): The Premium Is Lower, but Is the Policy Actually Right?", subtopic: "insurance" },
         { url: "/car-vs-ride-hailing-cost.html", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
+        { url: "/buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html", title: "Buy a Family Car or Keep a Bigger Cash Buffer Before a Second Child in Singapore (2026): Which Choice Creates More Stability?", subtopic: "bridge" },
         { url: "/car-affordability-calculator-singapore.html", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-ownership-cost-calculator-singapore.html", title: "Car Ownership Cost Calculator (Singapore, 2026): True All-In Monthly Cost (5-Year TCO)", subtopic: "calculator" },
         
@@ -651,6 +652,7 @@ decisionPathOverrides: {
         { url: "/bsd-absd-calculator-singapore.html", title: "BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty", subtopic: "calculator" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "How Much Cash to Buy Property Calculator (Singapore, 2026): Upfront Cash + CPF", subtopic: "calculator" },
         { url: "/sell-property-proceeds-calculator-singapore.html", title: "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality", subtopic: "calculator" },
+        { url: "/buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html", title: "Buy a Bigger Home or Help Parents With Housing Costs First in Singapore (2026): Which Commitment Should Go First?", subtopic: "bridge" },
         { url: "/property-valuation-vs-asking-price-singapore.html", title: "Property Valuation vs Asking Price in Singapore (2026): Why Sellers Misread What Their Home Can Actually Fetch", subtopic: "exit" },
         { url: "/selling-property-timeline-singapore.html", title: "Selling Property Timeline in Singapore (2026): How Long It Really Takes and Why Timing Assumptions Break Plans", subtopic: "exit" },
         { url: "/property-seller-agent-commission-singapore.html", title: "Property Seller Agent Commission in Singapore (2026): When Lower Fees Improve Your Outcome and When They Cost You More Than They Save", subtopic: "exit" },
@@ -946,6 +948,7 @@ decisionPathOverrides: {
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
       ],
       pages: [
+        { url: "/move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html", title: "Move Closer to Aging Parents or Pay for Adult Day Care First in Singapore (2026): Which Support Route Reduces Family Strain More Sustainably?", subtopic: "bridge" },
         { url: "/second-car-or-helper-when-supporting-aging-parents-singapore.html", title: "Second Car or a Helper When Supporting Aging Parents in Singapore (2026): Which Cost Actually Reduces Family Strain?", subtopic: "bridge" },
         { url: "/move-closer-to-aging-parents-or-keep-home-and-own-a-second-car-singapore.html", title: "Move Closer to Aging Parents or Keep Your Home and Own a Second Car in Singapore (2026): Which Fix Actually Reduces Family Strain?", subtopic: "bridge" },
         { url: "/infantcare-vs-childcare-cost-singapore.html", title: "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most", subtopic: "comparison" },
@@ -1107,6 +1110,7 @@ decisionPathOverrides: {
       ],
       pages: [
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", subtopic: "planning" },
+        { url: "/increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html", title: "Increase a Hospitalisation Rider or Pay Down Home Loan First When Supporting Aging Parents in Singapore (2026): Which Layer Protects Household Stability Better?", subtopic: "bridge" },
         { url: "/term-life-vs-critical-illness-insurance-singapore.html", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", subtopic: "comparison" },
         { url: "/disability-income-insurance-cost-singapore.html", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", subtopic: "planning" },
         { url: "/home-protection-scheme-hps-singapore.html", title: "Home Protection Scheme (HPS) Singapore (2026): The Compulsory HDB Mortgage Insurance Most Buyers Underread", subtopic: "planning" },
