@@ -494,6 +494,7 @@ decisionPathOverrides: {
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
       ],
       pages: [
+        { url: "/buy-family-car-or-top-up-cpf-sa-first-singapore.html", title: "Buy a Family Car or Top Up CPF SA First in Singapore (2026): Which Priority Improves Household Resilience More?", subtopic: "bridge" },
         { url: "/buy-a-car-or-upgrade-home-first-singapore.html", title: "Buy a Car or Upgrade Home First in Singapore (2026): Which Big-Ticket Move Should Go First?", subtopic: "bridge" },
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", subtopic: "ownership" },
         { url: "/coe-bidding-strategy-singapore.html", title: "COE Bidding Strategy in Singapore (2026): Timing, Tactics, and Total Exposure", subtopic: "ownership-core" },
@@ -776,6 +777,7 @@ decisionPathOverrides: {
         { url: "/home-insurance-vs-fire-insurance-singapore.html", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
       ],
       pages: [
+        { url: "/increase-critical-illness-insurance-or-build-down-payment-fund-first-singapore.html", title: "Increase Critical Illness Insurance or Build a Down Payment Fund First in Singapore (2026): Which Gap Is More Dangerous To Leave Open?", cluster: "property", subtopic: "bridge" },
         { url: "/pay-down-home-loan-or-build-child-education-fund-singapore.html", title: "Pay Down Home Loan or Build a Child Education Fund First in Singapore (2026): Which Long-Horizon Goal Should Get the Next Dollar?", subtopic: "bridge" },
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", subtopic: "ownership" },
         { url: "/condo-ownership-cost.html", title: "The Real Cost of Owning a Condo in Singapore (2026)", subtopic: "condo" },
@@ -948,6 +950,7 @@ decisionPathOverrides: {
         { url: "/cost-of-having-a-second-child-singapore.html", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
       ],
       pages: [
+        { url: "/move-near-grandparents-or-buy-bigger-home-first-singapore.html", title: "Move Near Grandparents or Buy a Bigger Home First in Singapore (2026): Which Choice Solves Family Friction With Less Financial Drag?", subtopic: "bridge" },
         { url: "/move-closer-to-aging-parents-or-pay-for-adult-day-care-first-singapore.html", title: "Move Closer to Aging Parents or Pay for Adult Day Care First in Singapore (2026): Which Support Route Reduces Family Strain More Sustainably?", subtopic: "bridge" },
         { url: "/second-car-or-helper-when-supporting-aging-parents-singapore.html", title: "Second Car or a Helper When Supporting Aging Parents in Singapore (2026): Which Cost Actually Reduces Family Strain?", subtopic: "bridge" },
         { url: "/move-closer-to-aging-parents-or-keep-home-and-own-a-second-car-singapore.html", title: "Move Closer to Aging Parents or Keep Your Home and Own a Second Car in Singapore (2026): Which Fix Actually Reduces Family Strain?", subtopic: "bridge" },
@@ -1171,6 +1174,7 @@ decisionPathOverrides: {
     investing: {
       pillar: "/how-much-emergency-fund-do-you-need-singapore.html",
       pages: [
+        { url: "/increase-index-fund-investing-or-pay-for-after-school-care-first-singapore.html", title: "Increase Index-Fund Investing or Pay for After-School Care First in Singapore (2026): Which Use of Cash Solves the More Time-Sensitive Constraint?", cluster: "investing", subtopic: "bridge" },
         { url: "/buy-bigger-home-or-increase-index-fund-investing-first-singapore.html", title: "Buy a Bigger Home or Increase Index-Fund Investing First in Singapore (2026): Which Use of Capital Builds More Flexibility?", cluster: "property", subtopic: "bridge" },
         { url: "/buy-investment-property-or-increase-index-fund-investing-singapore.html", title: "Buy an Investment Property or Increase Index-Fund Investing in Singapore (2026): Which Route Builds Wealth With Less Fragility?", subtopic: "bridge" },
         { url: "/help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html", title: "Help Parents With Housing Costs or Build Your Own Investment Portfolio First in Singapore (2026): Which Use of the Next Dollar Is More Sustainable?", subtopic: "bridge" },
