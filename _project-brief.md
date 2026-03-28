@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 29 Mar 2026 · Based on repo v0321
+> Last updated: 29 Mar 2026 · Based on repo v0322
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0322
-**Recent update:** v0322 hardened three v0321 bridge pages above the content floor and added follow-through discovery links from adjacent transport, family, property, protection, and investing pages.
+**Current version:** v0323
+**Recent update:** v0323 added four new investing comparison pages covering T-bills versus fixed deposits, cash management accounts versus T-bills, CPF LIFE Basic versus Standard, and CPF LIFE Basic versus Escalating, plus new hub surfacing and manual inbound links.
 
 ### Key files
 
@@ -256,7 +256,9 @@ Full coverage: hospitalisation, life insurance, CI, disability income, accident,
 
 **v0315 bridge note:** added `increase-disability-income-insurance-or-fund-helper-first-singapore.html`, a protection-led cross-cluster bridge for households deciding whether the deeper missing layer is income-continuity cover or paid household support capacity.
 
-### Investing/Liquidity (44 content pages) 🟡 Growing
+### Investing/Liquidity (48 content pages) 🟡 Growing
+
+**v0323 depth note:** added `t-bills-vs-fixed-deposit-singapore.html`, `cash-management-account-vs-t-bills-singapore.html`, `cpf-life-basic-vs-standard-plan-singapore.html`, and `cpf-life-basic-vs-escalating-plan-singapore.html` to deepen the conservative-cash and CPF LIFE choice matrix inside the investing cluster.
 
 **v0321 bridge note:** added `increase-index-fund-investing-or-pay-for-infantcare-first-singapore.html`, an investing-led bridge for households comparing long-term compounding against immediate infantcare capacity.
 **v0320 bridge note:** added `top-up-cpf-sa-or-pay-for-after-school-care-first-singapore.html`, an investing-led bridge for households comparing protected compounding against current after-school supervision spending.

@@ -1215,6 +1215,8 @@ decisionPathOverrides: {
         { url: "/t-bills-vs-singapore-savings-bonds-singapore.html", title: "T-Bills vs Singapore Savings Bonds in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/singapore-savings-bonds-vs-fixed-deposit-singapore.html", title: "Singapore Savings Bonds vs Fixed Deposit in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/cash-management-account-vs-singapore-savings-bonds-singapore.html", title: "Cash Management Account vs Singapore Savings Bonds in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cash-management-account-vs-t-bills-singapore.html", title: "Cash Management Account vs T-Bills in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/t-bills-vs-fixed-deposit-singapore.html", title: "T-Bills vs Fixed Deposit in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/srs-vs-cpf-sa-top-up-singapore.html", title: "SRS vs CPF SA Top-Up in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/cpf-sa-top-up-vs-pay-down-mortgage-singapore.html", title: "CPF SA Top-Up vs Pay Down Mortgage in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/srs-vs-pay-down-mortgage-singapore.html", title: "SRS vs Pay Down Mortgage in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
@@ -1232,6 +1234,8 @@ decisionPathOverrides: {
         { url: "/srs-withdrawal-order-vs-tax-smoothing-singapore.html", title: "SRS Withdrawal Order vs Tax Smoothing in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/retirement-income-layering-calculator-singapore.html", title: "Retirement Income Layering Calculator Singapore (2026)", cluster: "investing", subtopic: "calculator" },
         { url: "/cpf-life-standard-vs-escalating-plan-singapore.html", title: "CPF LIFE Standard vs Escalating Plan in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cpf-life-basic-vs-standard-plan-singapore.html", title: "CPF LIFE Basic vs Standard Plan in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
+        { url: "/cpf-life-basic-vs-escalating-plan-singapore.html", title: "CPF LIFE Basic vs Escalating Plan in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/sell-units-vs-live-off-dividends-in-retirement-singapore.html", title: "Sell Units vs Live Off Dividends in Retirement in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/how-much-cash-bucket-before-cpf-life-singapore.html", title: "How Much Cash Bucket Before CPF LIFE in Singapore (2026)", cluster: "investing", subtopic: "planning" }],
       bridges: [

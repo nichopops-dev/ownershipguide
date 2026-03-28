@@ -488,7 +488,13 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/cash-management-account-vs-singapore-savings-bonds-singapore.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/cash-management-account-vs-t-bills-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -625,20 +631,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ownershipguide.com/cpf-life-basic-vs-escalating-plan-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ownershipguide.com/cpf-life-basic-vs-standard-plan-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ownershipguide.com/cpf-life-standard-vs-escalating-plan-singapore.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ownershipguide.com/cpf-life-vs-dividend-portfolio-singapore.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ownershipguide.com/cpf-life-vs-ssb-ladder-singapore.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1454,7 +1472,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/how-much-life-insurance-do-you-need-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1586,7 +1604,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/how-supporting-aging-parents-changes-your-investing-priority-order-singapore.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2876,7 +2894,7 @@
   </url>
   <url>
     <loc>https://ownershipguide.com/singapore-savings-bonds-vs-fixed-deposit-singapore.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2995,8 +3013,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ownershipguide.com/t-bills-vs-fixed-deposit-singapore.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ownershipguide.com/t-bills-vs-singapore-savings-bonds-singapore.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
