@@ -639,10 +639,13 @@ decisionPathOverrides: {
         { url: "/coe-renewal-worth-it-singapore.html", title: "Should You Renew COE in Singapore? (2026 Decision Framework + Break-Even)", subtopic: "coe" },
         { url: "/10-year-coe-renewal-worth-it-singapore.html", title: "Is 10-Year COE Renewal Worth It in Singapore? (2026 Financial Breakdown)", subtopic: "coe" },
         { url: "/5-year-coe-renewal-worth-it-singapore.html", title: "5-Year COE Renewal: Is It Worth It in Singapore? (2026 Decision Framework)", subtopic: "coe" },
-        { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" }
+        { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" },
+        { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" },
+      
       ],
       bridges: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", cluster: "property" }
+      
       ]
     },
 
@@ -905,12 +908,14 @@ decisionPathOverrides: {
         { url: "/use-cpf-oa-vs-preserve-cash-buffer-for-home-loan-singapore.html", title: "Use CPF OA vs Preserve Cash Buffer for Home Loan in Singapore (2026): Which Fund", cluster: "property", subtopic: "financing" },
         { url: "/what-documents-to-prepare-before-selling-property-singapore.html", title: "What Documents to Prepare Before Selling Property in Singapore (2026): Seller Pr", cluster: "property", subtopic: "planning" },
         { url: "/what-happens-to-property-when-an-owner-dies-singapore.html", title: "What Happens to Property When an Owner Dies in Singapore (2026): Title Structure", cluster: "property", subtopic: "planning" },
-        { url: "/what-to-do-when-home-loan-lock-in-ends-singapore.html", title: "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)", cluster: "property", subtopic: "financing" }],
+        { url: "/what-to-do-when-home-loan-lock-in-ends-singapore.html", title: "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)", cluster: "property", subtopic: "financing" },
+        { url: "/build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html", title: "Build a Down Payment Fund or Help Parents With Housing Costs First in Singapore (2026): Which Housing Duty Should Go First?", subtopic: "bridge" }],
       bridges: [
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" },
         { url: "/bigger-home-vs-education-budget-singapore.html", title: "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?", cluster: "family" },
         { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", cluster: "family" }
+      
       ]
     }
  
@@ -1099,11 +1104,14 @@ decisionPathOverrides: {
         { url: "/one-fragmented-specialist-schedule-vs-consolidated-appointment-planning-for-aging-parents-singapore.html", title: "One Fragmented Specialist Schedule vs Consolidated Appointment Planning for Aging Parents in Singapore (2026): When Does ‘Just Book Whatever Is Available’ Start Breaking the Household?", subtopic: "comparison" },
         { url: "/ad-hoc-family-coordination-vs-shared-appointment-and-records-system-for-aging-parents-singapore.html", title: "Ad-Hoc Family Coordination vs Shared Appointment and Records System for Aging Parents in Singapore (2026): When Does Helpful Informality Stop Being Reliable Enough?", subtopic: "comparison" },
         { url: "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order in Singapore (2026): What Should Move Up the Queue Once Follow-Up Load Starts Running the Household?", subtopic: "planning" },
+        { url: "/move-near-school-or-pay-for-student-care-first-singapore.html", title: "Move Near School or Pay for Student Care First in Singapore (2026): Which Family Fix Reduces More Daily Strain?", subtopic: "bridge" },
+      
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
         { url: "/live-near-parents-vs-live-near-school-singapore.html", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", cluster: "property" },
         { url: "/how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html", title: "How Having a Child Affects Your TDSR and Borrowing Capacity in Singapore (2026)", cluster: "property" }
+      
       ]
     },
     protection: {
@@ -1276,7 +1284,10 @@ decisionPathOverrides: {
         ,{ url: "/palliative-care-vs-continuing-aggressive-treatment-for-aging-parents-singapore.html", title: "Palliative Care vs Continuing Aggressive Treatment for Aging Parents in Singapore (2026): When Does the Goal Shift From Extending Every Possible Day to Protecting Comfort and Decision Quality?", cluster: "family", subtopic: "comparison" }
         ,{ url: "/home-hospice-vs-institutional-end-of-life-care-for-aging-parents-singapore.html", title: "Home Hospice vs Institutional End-of-Life Care for Aging Parents in Singapore (2026): Which Setting Actually Protects Comfort, Dignity, and Family Stability?", cluster: "family", subtopic: "comparison" }
         ,{ url: "/practical-end-of-life-planning-for-aging-parents-singapore.html", title: "Practical End-of-Life Planning for Aging Parents in Singapore (2026): What Families Should Organise Before the Final Stage Becomes a Rushed Operations Problem", cluster: "family", subtopic: "planning" }
-        ,{ url: "/how-supporting-aging-parents-changes-your-end-of-life-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your End-of-Life Decision Order in Singapore (2026): What Should Move Up the Queue Once Care Is Shifting From Recovery to Comfort?", cluster: "family", subtopic: "planning" }
+        ,{ url: "/how-supporting-aging-parents-changes-your-end-of-life-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your End-of-Life Decision Order in Singapore (2026): What Should Move Up the Queue Once Care Is Shifting From Recovery to Comfort?", cluster: "family", subtopic: "planning" },
+        { url: "/increase-index-fund-investing-or-pay-for-infantcare-first-singapore.html", title: "Increase Index-Fund Investing or Pay for Infantcare First in Singapore (2026): Which Move Should the Next Dollar Solve?", subtopic: "bridge" },
+      
+      
       ]
     }
  };

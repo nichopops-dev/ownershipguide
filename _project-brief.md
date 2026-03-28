@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0320
-**Recent update:** v0320 added four new cross-cluster bridge pages spanning school proximity vs bigger home, family car vs down payment, hospitalisation rider vs child-education funding, and CPF SA top-up vs after-school care.
+**Current version:** v0321
+**Recent update:** v0321 added four new cross-cluster bridge pages spanning school proximity vs student care, family car vs hospitalisation-rider upgrade, down payment fund vs parents’ housing support, and index-fund investing vs infantcare.
 
 ### Key files
 
@@ -194,6 +194,7 @@ python3 generate-featured.py   # from repo root
 
 ### Transport (57 content pages) ✅ Very strong
 
+**v0321 bridge note:** added `buy-family-car-or-increase-hospitalisation-rider-first-singapore.html`, a transport-led bridge for households deciding whether the next weak layer is family mobility or medical-cost protection.
 **v0320 bridge note:** added `buy-family-car-or-build-down-payment-fund-first-singapore.html`, a transport-led bridge for households deciding whether family mobility relief should come before first-home capital formation.
 Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, alternatives, EV, hybrid, motorcycle (all branches), used-car diligence, maintenance, post-incident, car-type, aging-car, aging-parents bridges.
 **v0297 repair note:** discoverability bundle reinforced five existing transport decision pages — `balloon-loan-vs-normal-car-loan-singapore.html`, `car-loan-vs-cash-singapore.html`, `buy-used-car-from-dealer-vs-direct-owner-singapore.html`, `trade-in-vs-direct-sale-car-singapore.html`, and `consignment-vs-dealer-sale-car-singapore.html` — via stronger hub surfacing and manual inbound links from adjacent transport execution pages.
@@ -225,6 +226,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 
 **v0311 bridge note:** added `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, a property-led cross-cluster bridge for households deciding between mortgage improvement and immediate elder-support funding.
 
+**v0321 bridge note:** added `build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html`, a property-led bridge for households weighing their own housing-entry capital against immediate support for parents’ housing strain.
 **v0315 bridge note:** added `buy-bigger-home-or-increase-index-fund-investing-first-singapore.html`, a property-led cross-cluster bridge for households comparing owner-occupier housing upgrades against continued diversified investing.
 **v0312 metadata note:** refreshed `featured.json` `page_registry` date for `pay-down-home-loan-or-help-aging-parents-now-singapore.html` so property recent surfaces and `new[]` ordering treat it as the newest property addition from the v0311 bridge wave.
 
@@ -232,6 +234,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 
 ### Family (134 content pages) ✅ Largest cluster
 
+**v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
 **v0320 bridge note:** added `move-near-school-or-keep-bigger-home-first-singapore.html`, a family-led bridge for households choosing between school-location convenience and more home space.
 Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, reserve design, caregiver-capacity modelling, and transport-versus-home-support trade-offs. 15 calculators.
 
@@ -255,6 +258,7 @@ Full coverage: hospitalisation, life insurance, CI, disability income, accident,
 
 ### Investing/Liquidity (44 content pages) 🟡 Growing
 
+**v0321 bridge note:** added `increase-index-fund-investing-or-pay-for-infantcare-first-singapore.html`, an investing-led bridge for households comparing long-term compounding against immediate infantcare capacity.
 **v0320 bridge note:** added `top-up-cpf-sa-or-pay-for-after-school-care-first-singapore.html`, an investing-led bridge for households comparing protected compounding against current after-school supervision spending.
 Three layers: liquidity foundation (14 pages) + voluntary investing entry (4 pages: CPF OA, SRS, RSP vs lump sum, how much to invest) + investing vehicles / conservative parking / tax-wrapper comparisons (14 pages: CPF SA top-up, SSBs, index fund investing, t-bills vs SSBs, SSBs vs fixed deposit, cash management account vs SSBs, SRS vs CPF SA top-up, CPF SA top-up vs pay down mortgage, SRS vs pay down mortgage, SRS vs CPF OA investment, CPF SA top-up vs CPF OA investment, cash buffer vs SRS, cash buffer vs CPF SA top-up, cash buffer vs CPF OA investment, SRS vs index fund investing, CPF OA investment vs index fund investing, CPF SA top-up vs index fund investing) + allocation tools (2 pages: surplus cash allocation calculator, retirement income layering calculator) + retirement-income comparisons (5 pages: CPF LIFE vs dividend portfolio, CPF LIFE vs SSB ladder, SRS withdrawal order vs tax smoothing, CPF LIFE Standard vs Escalating Plan, sell units vs live off dividends in retirement) + retirement implementation planning (1 page: how much cash bucket before CPF LIFE).
 **v0309 bridge note:** added `buy-investment-property-or-increase-index-fund-investing-singapore.html`, an investing-led cross-cluster bridge comparing property concentration against broader index-fund exposure.
