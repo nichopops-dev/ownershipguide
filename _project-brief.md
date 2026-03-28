@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 28 Mar 2026 · Based on repo v0320
+> Last updated: 29 Mar 2026 · Based on repo v0321
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0321
-**Recent update:** v0321 added four new cross-cluster bridge pages spanning school proximity vs student care, family car vs hospitalisation-rider upgrade, down payment fund vs parents’ housing support, and index-fund investing vs infantcare.
+**Current version:** v0322
+**Recent update:** v0322 hardened three v0321 bridge pages above the content floor and added follow-through discovery links from adjacent transport, family, property, protection, and investing pages.
 
 ### Key files
 
