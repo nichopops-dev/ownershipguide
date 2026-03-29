@@ -1122,6 +1122,10 @@ decisionPathOverrides: {
         { url: "/critical-illness-insurance-cost-singapore.html", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", subtopic: "planning" }
       ],
       pages: [
+        { url: "/accident-insurance-vs-term-life-insurance-singapore.html", title: "Accident Insurance vs Term Life Insurance in Singapore (2026): Cheap Event Cover vs Family Income Protection", subtopic: "comparison" },
+        { url: "/term-life-insurance-vs-hospitalisation-rider-singapore.html", title: "Term Life Insurance vs Hospitalisation Rider in Singapore (2026): Dependency Protection vs Reducing Medical-Cost Friction", subtopic: "comparison" },
+        { url: "/disability-income-insurance-vs-hospitalisation-rider-singapore.html", title: "Disability Income Insurance vs Hospitalisation Rider in Singapore (2026): Income Continuity vs Medical-Cost Friction", subtopic: "comparison" },
+        { url: "/hospital-cash-vs-hospitalisation-rider-singapore.html", title: "Hospital Cash vs Hospitalisation Rider in Singapore (2026): Daily Cash Allowance vs Reducing Medical Bill Friction", subtopic: "comparison" },
         { url: "/increase-hospitalisation-rider-or-build-child-education-fund-first-singapore.html", title: "Increase a Hospitalisation Rider or Build a Child-Education Fund First in Singapore (2026): Which Gap Is More Dangerous to Leave Open?", subtopic: "bridge" },
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore.html", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", subtopic: "planning" },
         { url: "/increase-hospitalisation-rider-or-pay-down-home-loan-first-with-aging-parents-singapore.html", title: "Increase a Hospitalisation Rider or Pay Down Home Loan First When Supporting Aging Parents in Singapore (2026): Which Layer Protects Household Stability Better?", subtopic: "bridge" },

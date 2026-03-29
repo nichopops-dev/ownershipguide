@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-28",
+  "generated": "2026-03-29",
   "cluster_pages": {
     "transport": [
       {
@@ -1995,6 +1995,30 @@
         "date": "2026-04-03"
       },
       {
+        "url": "/accident-insurance-vs-term-life-insurance-singapore.html",
+        "title": "Accident Insurance vs Term Life Insurance in Singapore (2026)",
+        "desc": "Accident insurance vs term life insurance in Singapore (2026): compare narrow accident-event payouts",
+        "date": "2026-03-30"
+      },
+      {
+        "url": "/disability-income-insurance-vs-hospitalisation-rider-singapore.html",
+        "title": "Disability Income Insurance vs Hospitalisation Rider in Singapore (2026)",
+        "desc": "Disability income insurance vs hospitalisation rider in Singapore (2026): compare income-continuity ",
+        "date": "2026-03-30"
+      },
+      {
+        "url": "/hospital-cash-vs-hospitalisation-rider-singapore.html",
+        "title": "Hospital Cash vs Hospitalisation Rider in Singapore (2026)",
+        "desc": "Hospital cash vs hospitalisation rider in Singapore (2026): compare fixed daily cash benefits with r",
+        "date": "2026-03-30"
+      },
+      {
+        "url": "/term-life-insurance-vs-hospitalisation-rider-singapore.html",
+        "title": "Term Life Insurance vs Hospitalisation Rider in Singapore (2026)",
+        "desc": "Term life insurance vs hospitalisation rider in Singapore (2026): compare death-related dependency p",
+        "date": "2026-03-30"
+      },
+      {
         "url": "/increase-hospitalisation-rider-or-build-child-education-fund-first-singapore.html",
         "title": "Increase a Hospitalisation Rider or Build a Child-Education Fund First in Singapore (2026)",
         "desc": "Increase a hospitalisation rider or build a child-education fund first in Singapore: a framework for",
@@ -2520,6 +2544,34 @@
       "clusterLabel": "Family"
     },
     {
+      "url": "/term-life-insurance-vs-hospitalisation-rider-singapore.html",
+      "title": "Term Life Insurance vs Hospitalisation Rider in Singapore (2026)",
+      "desc": "Term life insurance vs hospitalisation rider in Singapore (2026): compare death-related dependency p",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/hospital-cash-vs-hospitalisation-rider-singapore.html",
+      "title": "Hospital Cash vs Hospitalisation Rider in Singapore (2026)",
+      "desc": "Hospital cash vs hospitalisation rider in Singapore (2026): compare fixed daily cash benefits with r",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/disability-income-insurance-vs-hospitalisation-rider-singapore.html",
+      "title": "Disability Income Insurance vs Hospitalisation Rider in Singapore (2026)",
+      "desc": "Disability income insurance vs hospitalisation rider in Singapore (2026): compare income-continuity ",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/accident-insurance-vs-term-life-insurance-singapore.html",
+      "title": "Accident Insurance vs Term Life Insurance in Singapore (2026)",
+      "desc": "Accident insurance vs term life insurance in Singapore (2026): compare narrow accident-event payouts",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
       "url": "/build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html",
       "title": "Build a Down Payment Fund or Help Parents With Housing Costs First in Singapore (2026)",
       "desc": "Build a down payment fund or help parents with housing costs first in Singapore: a framework for com",
@@ -2527,37 +2579,9 @@
       "clusterLabel": "Property"
     },
     {
-      "url": "/increase-hospitalisation-rider-or-build-child-education-fund-first-singapore.html",
-      "title": "Increase a Hospitalisation Rider or Build a Child-Education Fund First in Singapore (2026)",
-      "desc": "Increase a hospitalisation rider or build a child-education fund first in Singapore: a framework for",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
       "url": "/t-bills-vs-fixed-deposit-singapore.html",
       "title": "T-Bills vs Fixed Deposit in Singapore (2026)",
       "desc": "T-bills vs fixed deposit in Singapore (2026): compare lock-up discipline, reinvestment friction, yie",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cash-management-account-vs-t-bills-singapore.html",
-      "title": "Cash Management Account vs T-Bills in Singapore (2026)",
-      "desc": "Cash management account vs T-bills in Singapore (2026): compare liquidity, principal structure, matu",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cpf-life-basic-vs-standard-plan-singapore.html",
-      "title": "CPF LIFE Basic vs Standard Plan in Singapore (2026)",
-      "desc": "CPF LIFE Basic vs Standard in Singapore (2026): compare starting payouts, residual balance shape, lo",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/cpf-life-basic-vs-escalating-plan-singapore.html",
-      "title": "CPF LIFE Basic vs Escalating Plan in Singapore (2026)",
-      "desc": "CPF LIFE Basic vs Escalating in Singapore (2026): compare lower-starting-but-rising payouts against ",
       "cluster": "investing",
       "clusterLabel": "Investing"
     }
@@ -4370,6 +4394,18 @@
     },
     "t-bills-vs-fixed-deposit-singapore.html": {
       "first_seen": "2026-04-07"
+    },
+    "accident-insurance-vs-term-life-insurance-singapore.html": {
+      "first_seen": "2026-04-09"
+    },
+    "term-life-insurance-vs-hospitalisation-rider-singapore.html": {
+      "first_seen": "2026-04-09"
+    },
+    "disability-income-insurance-vs-hospitalisation-rider-singapore.html": {
+      "first_seen": "2026-04-09"
+    },
+    "hospital-cash-vs-hospitalisation-rider-singapore.html": {
+      "first_seen": "2026-04-09"
     }
   }
 }

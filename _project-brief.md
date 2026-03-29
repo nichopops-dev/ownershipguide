@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 29 Mar 2026 · Based on repo v0322
+> Last updated: 30 Mar 2026 · Based on repo v0324
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0323
-**Recent update:** v0323 added four new investing comparison pages covering T-bills versus fixed deposits, cash management accounts versus T-bills, CPF LIFE Basic versus Standard, and CPF LIFE Basic versus Escalating, plus new hub surfacing and manual inbound links.
+**Current version:** v0324
+**Recent update:** v0324 added four new protection comparison pages covering accident insurance versus term life, term life versus hospitalisation rider, disability income insurance versus hospitalisation rider, and hospital cash versus hospitalisation rider, plus new hub surfacing and manual inbound links.
 
 ### Key files
 
@@ -211,6 +211,9 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 
 **v0315 bridge note:** added `buy-family-car-or-increase-term-life-insurance-first-singapore.html`, a transport-led bridge for households deciding whether the more dangerous missing layer is daily mobility relief or family income protection.
 **v0312 metadata note:** refreshed `featured.json` `page_registry` dates for `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html` and `buy-bigger-home-or-fund-helper-first-singapore.html` so family hub recent surfaces and `new[]` ordering treat the v0311 bridge pages as genuinely newest family additions.
+
+
+**v0324 note:** protection deepening bundle added four new comparison pages — `accident-insurance-vs-term-life-insurance-singapore.html`, `term-life-insurance-vs-hospitalisation-rider-singapore.html`, `disability-income-insurance-vs-hospitalisation-rider-singapore.html`, and `hospital-cash-vs-hospitalisation-rider-singapore.html` — and strengthened hub surfacing plus manual inbound links from adjacent protection pages.
 
 ### Property (119 content pages) ✅ Very strong
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
