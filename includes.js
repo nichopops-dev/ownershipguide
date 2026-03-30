@@ -640,8 +640,7 @@ decisionPathOverrides: {
         { url: "/10-year-coe-renewal-worth-it-singapore.html", title: "Is 10-Year COE Renewal Worth It in Singapore? (2026 Financial Breakdown)", subtopic: "coe" },
         { url: "/5-year-coe-renewal-worth-it-singapore.html", title: "5-Year COE Renewal: Is It Worth It in Singapore? (2026 Decision Framework)", subtopic: "coe" },
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" },
-        { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" },
-      
+        { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" }
       ],
       bridges: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", cluster: "property" }
@@ -1106,7 +1105,11 @@ decisionPathOverrides: {
         { url: "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order in Singapore (2026): What Should Move Up the Queue Once Follow-Up Load Starts Running the Household?", subtopic: "planning" },
         { url: "/move-near-school-or-pay-for-student-care-first-singapore.html", title: "Move Near School or Pay for Student Care First in Singapore (2026): Which Family Fix Reduces More Daily Strain?", subtopic: "bridge" },
       
-      ],
+      
+        { url: "/preschool-vs-stay-at-home-parent-singapore.html", title: "Preschool vs Stay-at-Home Parent in Singapore (2026): Which Family Operating Model Actually Holds Up?", subtopic: "comparison" },
+        { url: "/student-care-vs-reduce-work-hours-singapore.html", title: "Student Care vs Reduce Work Hours in Singapore (2026): Which Post-School Model Is Actually Stronger?", subtopic: "comparison" },
+        { url: "/enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html", title: "Enrichment Classes vs Bigger Cash Buffer After First Child in Singapore (2026): Which Should Families Strengthen First?", subtopic: "comparison" },
+        { url: "/have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html", title: "Have a Second Child Now or Build a Bigger Cash Buffer First in Singapore (2026): Which Sequencing Is Safer?", subtopic: "comparison" },],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
         { url: "/live-near-parents-vs-live-near-school-singapore.html", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", cluster: "property" },
