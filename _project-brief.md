@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 30 Mar 2026 · Based on repo v0325
+> Last updated: 30 Mar 2026 · Based on repo v0326
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0325
-**Recent update:** v0325 added four new family comparison pages covering preschool versus a stay-at-home parent, student care versus reduced work hours, enrichment classes versus a bigger cash buffer after the first child, and whether to have a second child now or build a bigger cash buffer first, plus new hub surfacing and manual inbound links.
+**Current version:** v0326
+**Recent update:** v0326 hardened the four new family comparison pages above threshold, added them to the comparisons hub, and tightened family-cluster discovery around childcare, student-care, enrichment, and second-child timing trade-offs.
 
 ### Key files
 
@@ -240,6 +240,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
 
 **v0325 note:** family deepening bundle added four new comparison pages — `preschool-vs-stay-at-home-parent-singapore.html`, `student-care-vs-reduce-work-hours-singapore.html`, `enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html`, and `have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html` — and strengthened hub surfacing plus manual inbound links from adjacent child-cost, student-care, enrichment, and second-child planning pages.
+**v0326 note:** family hardening bundle deepened `preschool-vs-stay-at-home-parent-singapore.html`, `student-care-vs-reduce-work-hours-singapore.html`, `enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html`, and `have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html`, and added all four pages to `comparisons/index.html` for proper comparison-hub discovery.
 **v0320 bridge note:** added `move-near-school-or-keep-bigger-home-first-singapore.html`, a family-led bridge for households choosing between school-location convenience and more home space.
 Full branch coverage: early-years/childcare, school-stage/education, household scaling, aging-parents branch (24 sub-topics: financial, protection/medical, housing, caregiving, health/condition support, legal/estate) plus care-execution bridge pages linking caregiving delivery, home-help funding, caregiver-income protection, reserve design, caregiver-capacity modelling, and transport-versus-home-support trade-offs. 15 calculators.
 
