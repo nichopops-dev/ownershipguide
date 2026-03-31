@@ -230,6 +230,7 @@ decisionPathOverrides: {
         { url: "/critical-illness-vs-disability-income-insurance-singapore.html", title: "Critical Illness vs Disability Income Insurance in Singapore (2026): Why Lump-Sum Illness Cover and Income Replacement Are Not the Same Job", subtopic: "comparison" },
         { url: "/life-insurance-and-home-loan-singapore.html", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" },
         { url: "/increase-term-life-insurance-or-build-child-education-fund-first-singapore.html", title: "Increase Term Life Insurance or Build a Child Education Fund First in Singapore (2026): Which Gap Is More Dangerous Right Now?", subtopic: "bridge" },
+        { url: "/increase-critical-illness-insurance-or-top-up-parents-cpf-first-singapore.html", title: "Increase Critical-Illness Insurance or Top Up Parents’ CPF First in Singapore (2026): Which Family Duty Should Move First?", subtopic: "bridge" },
         { url: "/accident-insurance-vs-disability-income-insurance-singapore.html", title: "Accident Insurance vs Disability Income Insurance in Singapore (2026): Event Payout or Income Continuity?", subtopic: "comparison" },
         { url: "/hospital-cash-vs-critical-illness-insurance-singapore.html", title: "Hospital Cash vs Critical Illness Insurance in Singapore (2026): Cheap Add-On or Real Illness Protection?", subtopic: "comparison" },
         { url: "/home-protection-scheme-vs-term-life-insurance-singapore.html", title: "Home Protection Scheme vs Term Life Insurance in Singapore (2026): Mortgage Cover Is Not Full Family Protection", subtopic: "comparison" }
@@ -908,7 +909,8 @@ decisionPathOverrides: {
         { url: "/what-documents-to-prepare-before-selling-property-singapore.html", title: "What Documents to Prepare Before Selling Property in Singapore (2026): Seller Pr", cluster: "property", subtopic: "planning" },
         { url: "/what-happens-to-property-when-an-owner-dies-singapore.html", title: "What Happens to Property When an Owner Dies in Singapore (2026): Title Structure", cluster: "property", subtopic: "planning" },
         { url: "/what-to-do-when-home-loan-lock-in-ends-singapore.html", title: "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)", cluster: "property", subtopic: "financing" },
-        { url: "/build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html", title: "Build a Down Payment Fund or Help Parents With Housing Costs First in Singapore (2026): Which Housing Duty Should Go First?", subtopic: "bridge" }],
+        { url: "/build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html", title: "Build a Down Payment Fund or Help Parents With Housing Costs First in Singapore (2026): Which Housing Duty Should Go First?", subtopic: "bridge" },
+        { url: "/build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html", title: "Build a Down Payment Fund or Pay Down High-Interest Debt First in Singapore (2026): Which Move Actually Strengthens the Path to Homeownership?", subtopic: "bridge" }],
       bridges: [
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" },
@@ -1109,6 +1111,7 @@ decisionPathOverrides: {
         { url: "/ad-hoc-family-coordination-vs-shared-appointment-and-records-system-for-aging-parents-singapore.html", title: "Ad-Hoc Family Coordination vs Shared Appointment and Records System for Aging Parents in Singapore (2026): When Does Helpful Informality Stop Being Reliable Enough?", subtopic: "comparison" },
         { url: "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order in Singapore (2026): What Should Move Up the Queue Once Follow-Up Load Starts Running the Household?", subtopic: "planning" },
         { url: "/move-near-school-or-pay-for-student-care-first-singapore.html", title: "Move Near School or Pay for Student Care First in Singapore (2026): Which Family Fix Reduces More Daily Strain?", subtopic: "bridge" },
+        { url: "/move-near-grandparents-or-pay-for-student-care-first-singapore.html", title: "Move Near Grandparents or Pay for Student Care First in Singapore (2026): Which Fix Actually Creates More Daily Stability?", subtopic: "bridge" },
       
       
         { url: "/preschool-vs-stay-at-home-parent-singapore.html", title: "Preschool vs Stay-at-Home Parent in Singapore (2026): Which Family Operating Model Actually Holds Up?", subtopic: "comparison" },

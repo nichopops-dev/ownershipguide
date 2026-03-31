@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 30 Mar 2026 · Based on repo v0328
+> Last updated: 01 Apr 2026 · Based on repo v0329
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0328
-**Recent update:** v0328 fixed financing-cluster discoverability by adding the four new financing comparison pages to the SITE search index, restoring `featured.json` freshness metadata, and updating the project brief version references.
+**Current version:** v0329
+**Recent update:** v0329 added a ninth cross-cluster bridge bundle covering grandparent proximity versus student care, family car versus helper, critical-illness cover versus parents’ CPF support, and down-payment building versus high-interest debt cleanup.
 
 ### Key files
 
@@ -193,6 +193,8 @@ python3 generate-featured.py   # from repo root
 ## 8. Cluster Status
 
 ### Transport (57 content pages) ✅ Very strong
+**v0329 bridge note:** added `buy-family-car-or-fund-helper-first-singapore.html`, a transport-led bridge for households deciding whether the next operational upgrade should be mobility control or extra household labour.
+
 
 **v0321 bridge note:** added `buy-family-car-or-increase-hospitalisation-rider-first-singapore.html`, a transport-led bridge for households deciding whether the next weak layer is family mobility or medical-cost protection.
 **v0320 bridge note:** added `buy-family-car-or-build-down-payment-fund-first-singapore.html`, a transport-led bridge for households deciding whether family mobility relief should come before first-home capital formation.
@@ -216,6 +218,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0324 note:** protection deepening bundle added four new comparison pages — `accident-insurance-vs-term-life-insurance-singapore.html`, `term-life-insurance-vs-hospitalisation-rider-singapore.html`, `disability-income-insurance-vs-hospitalisation-rider-singapore.html`, and `hospital-cash-vs-hospitalisation-rider-singapore.html` — and strengthened hub surfacing plus manual inbound links from adjacent protection pages.
 
 ### Property (119 content pages) ✅ Very strong
+**v0329 bridge note:** added `build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html`, a property-led bridge for households deciding whether housing-entry capital or debt cleanup should move first.
+
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
 
