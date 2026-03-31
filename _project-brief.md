@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 30 Mar 2026 · Based on repo v0326
+> Last updated: 30 Mar 2026 · Based on repo v0328
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0326
-**Recent update:** v0326 hardened the four new family comparison pages above threshold, added them to the comparisons hub, and tightened family-cluster discovery around childcare, student-care, enrichment, and second-child timing trade-offs.
+**Current version:** v0328
+**Recent update:** v0328 fixed financing-cluster discoverability by adding the four new financing comparison pages to the SITE search index, restoring `featured.json` freshness metadata, and updating the project brief version references.
 
 ### Key files
 
@@ -470,3 +470,6 @@ If a script will touch more than 5 files:
 **v0313 bridge note:** added `move-closer-to-aging-parents-or-keep-home-and-own-a-second-car-singapore.html`, `pay-down-home-loan-or-keep-bigger-cash-buffer-before-second-child-singapore.html`, `increase-term-life-insurance-or-build-child-education-fund-first-singapore.html`, and `help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html` as the third cross-cluster bridge-page bundle.
 
 | v0315 | Fourth cross-cluster bridge-page bundle: added move-near-grandparents vs infantcare, family car vs term life, bigger home vs index-fund investing, and disability-income insurance vs helper first; updated hubs, comparisons, includes.js, featured metadata, sitemap, and project brief. |
+
+
+| v0328 | Financing indexing and freshness cleanup: added the four new financing comparison pages to `includes.js` SITE indexing, restored `featured.json -> page_registry` freshness entries, and updated `_project-brief.md` version metadata. |

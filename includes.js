@@ -916,9 +916,8 @@ decisionPathOverrides: {
         { url: "/pay-down-mortgage-vs-save-for-university-singapore.html", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", cluster: "family" }
       
       ]
-    }
- 
-    ,
+    },
+
     financing: {
       label: "Related Singapore Financing & Leverage",
       pillars: [
@@ -937,6 +936,12 @@ decisionPathOverrides: {
         { url: "/upgrade-downgrade-property-calculator-singapore.html", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next", subtopic: "calculator" },
         { url: "/cpf-accrued-interest-singapore.html", title: "CPF Accrued Interest: The Hidden Cost in Singapore Property", subtopic: "cpf" },
         { url: "/bsd-absd-singapore.html", title: "BSD & ABSD in Singapore (2026): Property Taxes That Change Your Decision", subtopic: "tax" }
+      ],
+      pages: [
+        { url: "/balance-transfer-vs-personal-loan-singapore.html", title: "Balance Transfer vs Personal Loan in Singapore (2026): Which Debt Tool Actually Lowers Cost Without Creating a Worse Trap?", subtopic: "comparison" },
+        { url: "/debt-consolidation-plan-vs-balance-transfer-singapore.html", title: "Debt Consolidation Plan vs Balance Transfer in Singapore (2026): Which Reset Actually Helps You Exit Debt More Safely?", subtopic: "comparison" },
+        { url: "/personal-loan-vs-line-of-credit-singapore.html", title: "Personal Loan vs Line of Credit in Singapore (2026): Which Borrowing Structure Causes Less Long-Term Damage?", subtopic: "comparison" },
+        { url: "/cash-advance-vs-personal-loan-singapore.html", title: "Cash Advance vs Personal Loan in Singapore (2026): Which Expensive Short-Term Fix Does Less Harm?", subtopic: "comparison" }
       ],
       bridges: [
         { url: "/how-having-children-changes-your-emergency-fund-size-singapore.html", title: "How Having Children Changes Your Emergency Fund Size in Singapore (2026): Why Household Burn Rate and Dependency Risk Push the Buffer Higher", cluster: "investing", subtopic: "liquidity" },
