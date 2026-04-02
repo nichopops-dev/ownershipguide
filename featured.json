@@ -2583,10 +2583,50 @@
         "title": "Retirement Income Layering Calculator Singapore (2026)",
         "desc": "Retirement income layering calculator for Singapore (2026): rank CPF LIFE, SRS withdrawals, Singapor",
         "date": "2026-03-01"
+      },
+      {
+        "url": "/how-to-start-investing-singapore.html",
+        "title": "How to Start Investing in Singapore (2026): A Sequencing Framework for the First Real Allocation",
+        "last_updated": "2026-04-03"
+      },
+      {
+        "url": "/etf-vs-unit-trust-singapore.html",
+        "title": "ETF vs Unit Trust in Singapore (2026): Which Fund Structure Fits the Way Your Household Actually Invests?",
+        "last_updated": "2026-04-03"
+      },
+      {
+        "url": "/robo-advisor-vs-diy-index-fund-singapore.html",
+        "title": "Robo-Advisor vs DIY Index Fund in Singapore (2026): Which Implementation Route Fits Your Household's Real Behaviour?",
+        "last_updated": "2026-04-03"
+      },
+      {
+        "url": "/dividend-investing-vs-index-fund-investing-singapore.html",
+        "title": "Dividend Investing vs Index Fund Investing in Singapore (2026): Which Strategy Actually Fits Your Household's Real Objective?",
+        "last_updated": "2026-04-03"
       }
     ]
   },
   "new": [
+    {
+      "url": "/how-to-start-investing-singapore.html",
+      "title": "How to Start Investing in Singapore (2026): A Sequencing Framework for the First Real Allocation",
+      "last_updated": "2026-04-03"
+    },
+    {
+      "url": "/etf-vs-unit-trust-singapore.html",
+      "title": "ETF vs Unit Trust in Singapore (2026): Which Fund Structure Fits the Way Your Household Actually Invests?",
+      "last_updated": "2026-04-03"
+    },
+    {
+      "url": "/robo-advisor-vs-diy-index-fund-singapore.html",
+      "title": "Robo-Advisor vs DIY Index Fund in Singapore (2026): Which Implementation Route Fits Your Household's Real Behaviour?",
+      "last_updated": "2026-04-03"
+    },
+    {
+      "url": "/dividend-investing-vs-index-fund-investing-singapore.html",
+      "title": "Dividend Investing vs Index Fund Investing in Singapore (2026): Which Strategy Actually Fits Your Household's Real Objective?",
+      "last_updated": "2026-04-03"
+    },
     {
       "url": "/move-near-parents-or-pay-for-helper-first-singapore.html",
       "title": "Move Near Parents or Pay for a Helper First in Singapore (2026)",
@@ -2626,34 +2666,6 @@
       "url": "/increase-critical-illness-insurance-or-top-up-parents-cpf-first-singapore.html",
       "title": "Increase Critical-Illness Insurance or Top Up Parents\u2019 CPF First in Singapore (2026)",
       "desc": "Increase critical-illness insurance or top up parents\u2019 CPF first in Singapore: a framework for decid",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/buy-family-car-or-fund-helper-first-singapore.html",
-      "title": "Buy a Family Car or Fund a Helper First in Singapore (2026)",
-      "desc": "Buy a family car or fund a helper first in Singapore: a framework for deciding whether the next hous",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html",
-      "title": "Build a Down Payment Fund or Pay Down High-Interest Debt First in Singapore (2026)",
-      "desc": "Build a down payment fund or pay down high-interest debt first in Singapore: a framework for decidin",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
-    {
-      "url": "/move-near-school-or-pay-for-student-care-first-singapore.html",
-      "title": "Move Near School or Pay for Student Care First in Singapore (2026)",
-      "desc": "Move near school or pay for student care first in Singapore: a framework for comparing location chan",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/term-life-insurance-vs-hospitalisation-rider-singapore.html",
-      "title": "Term Life Insurance vs Hospitalisation Rider in Singapore (2026)",
-      "desc": "Term life insurance vs hospitalisation rider in Singapore (2026): compare death-related dependency p",
       "cluster": "protection",
       "clusterLabel": "Protection"
     }
@@ -4526,6 +4538,26 @@
     },
     "upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html": {
       "first_seen": "2026-04-18"
+    },
+    "how-to-start-investing-singapore.html": {
+      "first_seen": "2026-04-20",
+      "cluster": "investing",
+      "subtopic": "planning"
+    },
+    "etf-vs-unit-trust-singapore.html": {
+      "first_seen": "2026-04-20",
+      "cluster": "investing",
+      "subtopic": "comparison"
+    },
+    "robo-advisor-vs-diy-index-fund-singapore.html": {
+      "first_seen": "2026-04-20",
+      "cluster": "investing",
+      "subtopic": "comparison"
+    },
+    "dividend-investing-vs-index-fund-investing-singapore.html": {
+      "first_seen": "2026-04-20",
+      "cluster": "investing",
+      "subtopic": "comparison"
     }
   }
 }

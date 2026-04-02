@@ -1260,7 +1260,11 @@ decisionPathOverrides: {
         { url: "/cpf-life-basic-vs-standard-plan-singapore.html", title: "CPF LIFE Basic vs Standard Plan in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/cpf-life-basic-vs-escalating-plan-singapore.html", title: "CPF LIFE Basic vs Escalating Plan in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
         { url: "/sell-units-vs-live-off-dividends-in-retirement-singapore.html", title: "Sell Units vs Live Off Dividends in Retirement in Singapore (2026)", cluster: "investing", subtopic: "comparison" },
-        { url: "/how-much-cash-bucket-before-cpf-life-singapore.html", title: "How Much Cash Bucket Before CPF LIFE in Singapore (2026)", cluster: "investing", subtopic: "planning" }],
+        { url: "/how-much-cash-bucket-before-cpf-life-singapore.html", title: "How Much Cash Bucket Before CPF LIFE in Singapore (2026)", cluster: "investing", subtopic: "planning" },
+        { url: "/how-to-start-investing-singapore.html", title: "How to Start Investing in Singapore (2026): A Sequencing Framework for the First Real Allocation", cluster: "investing", subtopic: "planning" },
+        { url: "/etf-vs-unit-trust-singapore.html", title: "ETF vs Unit Trust in Singapore (2026): Which Fund Structure Fits the Way Your Household Actually Invests?", cluster: "investing", subtopic: "comparison" },
+        { url: "/robo-advisor-vs-diy-index-fund-singapore.html", title: "Robo-Advisor vs DIY Index Fund in Singapore (2026): Which Implementation Route Fits Your Household's Real Behaviour?", cluster: "investing", subtopic: "comparison" },
+        { url: "/dividend-investing-vs-index-fund-investing-singapore.html", title: "Dividend Investing vs Index Fund Investing in Singapore (2026): Which Strategy Actually Fits Your Household's Real Objective?", cluster: "investing", subtopic: "comparison" }],
       bridges: [
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore.html", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", cluster: "protection", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore.html", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", cluster: "protection", subtopic: "bridge" },
