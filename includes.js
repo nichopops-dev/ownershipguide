@@ -641,7 +641,10 @@ decisionPathOverrides: {
         { url: "/10-year-coe-renewal-worth-it-singapore.html", title: "Is 10-Year COE Renewal Worth It in Singapore? (2026 Financial Breakdown)", subtopic: "coe" },
         { url: "/5-year-coe-renewal-worth-it-singapore.html", title: "5-Year COE Renewal: Is It Worth It in Singapore? (2026 Decision Framework)", subtopic: "coe" },
         { url: "/coe-cost-singapore.html", title: "COE Cost in Singapore (2026)", subtopic: "coe" },
-        { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" }
+        { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" },
+        { url: "/buy-family-car-or-fund-helper-first-singapore.html", title: "Buy a Family Car or Fund a Helper First in Singapore (2026): Which Choice Removes More Daily Family Strain?", subtopic: "bridge" },
+        { url: "/buy-family-car-or-increase-term-life-insurance-first-singapore.html", title: "Buy a Family Car or Increase Term Life Insurance First in Singapore (2026): Which Gap Is More Dangerous Right Now?", subtopic: "bridge" },
+        { url: "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html", title: "Buy a Family Car or Move Closer to Work and School First in Singapore (2026): Which Choice Actually Reduces More Daily Friction?", subtopic: "bridge" }
       ],
       bridges: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", cluster: "property" }
@@ -1113,6 +1116,7 @@ decisionPathOverrides: {
         { url: "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order in Singapore (2026): What Should Move Up the Queue Once Follow-Up Load Starts Running the Household?", subtopic: "planning" },
         { url: "/move-near-school-or-pay-for-student-care-first-singapore.html", title: "Move Near School or Pay for Student Care First in Singapore (2026): Which Family Fix Reduces More Daily Strain?", subtopic: "bridge" },
         { url: "/move-near-grandparents-or-pay-for-student-care-first-singapore.html", title: "Move Near Grandparents or Pay for Student Care First in Singapore (2026): Which Fix Actually Creates More Daily Stability?", subtopic: "bridge" },
+        { url: "/move-near-grandparents-or-pay-for-infantcare-first-singapore.html", title: "Move Near Grandparents or Pay for Infantcare First in Singapore (2026): Which Fix Actually Makes Early-Years Logistics More Sustainable?", subtopic: "bridge" },
         { url: "/move-near-parents-or-pay-for-helper-first-singapore.html", title: "Move Near Parents or Pay for a Helper First in Singapore (2026): Which Support Choice Removes More Daily Strain?", subtopic: "bridge" },
         { url: "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html", title: "Fund Child Enrichment or Support Parents’ Medical Costs First in Singapore (2026): Which Spend Actually Deserves Priority?", subtopic: "bridge" },
       
@@ -1181,7 +1185,8 @@ decisionPathOverrides: {
         { url: "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html", title: "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore (2026): Which Layer Actually Closes the Later-Life Care Gap?", subtopic: "comparison" },
         { url: "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html", title: "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore (2026): Which Trade-Off Better Protects Later-Life Flexibility?", subtopic: "comparison" },
         { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" },
-        { url: "/long-term-care-funding-calculator-singapore.html", title: "Long-Term Care Funding Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" }],
+        { url: "/long-term-care-funding-calculator-singapore.html", title: "Long-Term Care Funding Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" },
+        { url: "/increase-disability-income-insurance-or-fund-helper-first-singapore.html", title: "Increase Disability Income Insurance or Fund a Helper First in Singapore (2026): Which Layer Better Protects the Household?", subtopic: "bridge" }],
       bridges: [
         { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
         { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" },
