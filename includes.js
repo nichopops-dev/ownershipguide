@@ -658,6 +658,7 @@ decisionPathOverrides: {
         { url: "/how-much-cash-to-buy-property-calculator-singapore.html", title: "How Much Cash to Buy Property Calculator (Singapore, 2026): Upfront Cash + CPF", subtopic: "calculator" },
         { url: "/sell-property-proceeds-calculator-singapore.html", title: "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality", subtopic: "calculator" },
         { url: "/buy-bigger-home-or-help-parents-with-housing-costs-first-singapore.html", title: "Buy a Bigger Home or Help Parents With Housing Costs First in Singapore (2026): Which Commitment Should Go First?", subtopic: "bridge" },
+        { url: "/upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html", title: "Upgrade Home Now or Keep More Flexibility for Aging Parents in Singapore (2026): Which Choice Keeps the Household Safer?", subtopic: "bridge" },
         { url: "/property-valuation-vs-asking-price-singapore.html", title: "Property Valuation vs Asking Price in Singapore (2026): Why Sellers Misread What Their Home Can Actually Fetch", subtopic: "exit" },
         { url: "/selling-property-timeline-singapore.html", title: "Selling Property Timeline in Singapore (2026): How Long It Really Takes and Why Timing Assumptions Break Plans", subtopic: "exit" },
         { url: "/property-seller-agent-commission-singapore.html", title: "Property Seller Agent Commission in Singapore (2026): When Lower Fees Improve Your Outcome and When They Cost You More Than They Save", subtopic: "exit" },
@@ -1112,6 +1113,8 @@ decisionPathOverrides: {
         { url: "/how-supporting-aging-parents-changes-your-appointment-coordination-decision-order-singapore.html", title: "How Supporting Aging Parents Changes Your Appointment-Coordination Decision Order in Singapore (2026): What Should Move Up the Queue Once Follow-Up Load Starts Running the Household?", subtopic: "planning" },
         { url: "/move-near-school-or-pay-for-student-care-first-singapore.html", title: "Move Near School or Pay for Student Care First in Singapore (2026): Which Family Fix Reduces More Daily Strain?", subtopic: "bridge" },
         { url: "/move-near-grandparents-or-pay-for-student-care-first-singapore.html", title: "Move Near Grandparents or Pay for Student Care First in Singapore (2026): Which Fix Actually Creates More Daily Stability?", subtopic: "bridge" },
+        { url: "/move-near-parents-or-pay-for-helper-first-singapore.html", title: "Move Near Parents or Pay for a Helper First in Singapore (2026): Which Support Choice Removes More Daily Strain?", subtopic: "bridge" },
+        { url: "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html", title: "Fund Child Enrichment or Support Parents’ Medical Costs First in Singapore (2026): Which Spend Actually Deserves Priority?", subtopic: "bridge" },
       
       
         { url: "/preschool-vs-stay-at-home-parent-singapore.html", title: "Preschool vs Stay-at-Home Parent in Singapore (2026): Which Family Operating Model Actually Holds Up?", subtopic: "comparison" },

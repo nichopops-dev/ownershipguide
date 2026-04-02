@@ -1,11 +1,17 @@
 {
-  "generated": "2026-03-31",
+  "generated": "2026-04-01",
   "cluster_pages": {
     "transport": [
       {
         "url": "/buy-family-car-or-fund-helper-first-singapore.html",
         "title": "Buy a Family Car or Fund a Helper First in Singapore (2026)",
         "desc": "Buy a family car or fund a helper first in Singapore: a framework for deciding whether the next hous",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html",
+        "title": "Buy a Family Car or Move Closer to Work and School First in Singapore (2026)",
+        "desc": "Buy a family car or move closer to work and school first in Singapore: a framework for deciding whet",
         "date": "2026-04-01"
       },
       {
@@ -416,6 +422,12 @@
         "url": "/stay-in-current-home-or-right-size-property-singapore.html",
         "title": "Stay in Your Current Home or Right-Size in Singapore? (2026)",
         "desc": "Stay in your current home or right-size in Singapore (2026)? A practical framework for comparing mov",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html",
+        "title": "Upgrade Home Now or Keep More Flexibility for Aging Parents in Singapore (2026)",
+        "desc": "Upgrade home now or keep more flexibility for aging parents in Singapore: a framework for deciding w",
         "date": "2026-04-01"
       },
       {
@@ -1183,6 +1195,12 @@
         "date": "2026-04-01"
       },
       {
+        "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
+        "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+        "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
+        "date": "2026-04-01"
+      },
+      {
         "url": "/move-near-grandparents-or-pay-for-infantcare-first-singapore.html",
         "title": "Move Near Grandparents or Pay for Infantcare First in Singapore (2026)",
         "desc": "Move near grandparents or pay for infantcare first in Singapore: a framework for comparing location-",
@@ -1192,6 +1210,12 @@
         "url": "/move-near-grandparents-or-pay-for-student-care-first-singapore.html",
         "title": "Move Near Grandparents or Pay for Student Care First in Singapore (2026)",
         "desc": "Move near grandparents or pay for student care first in Singapore: a framework for comparing locatio",
+        "date": "2026-04-01"
+      },
+      {
+        "url": "/move-near-parents-or-pay-for-helper-first-singapore.html",
+        "title": "Move Near Parents or Pay for a Helper First in Singapore (2026)",
+        "desc": "Move near parents or pay for a helper first in Singapore: a framework for deciding whether distance ",
         "date": "2026-04-01"
       },
       {
@@ -2564,6 +2588,34 @@
   },
   "new": [
     {
+      "url": "/move-near-parents-or-pay-for-helper-first-singapore.html",
+      "title": "Move Near Parents or Pay for a Helper First in Singapore (2026)",
+      "desc": "Move near parents or pay for a helper first in Singapore: a framework for deciding whether distance ",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html",
+      "title": "Upgrade Home Now or Keep More Flexibility for Aging Parents in Singapore (2026)",
+      "desc": "Upgrade home now or keep more flexibility for aging parents in Singapore: a framework for deciding w",
+      "cluster": "property",
+      "clusterLabel": "Property"
+    },
+    {
+      "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
+      "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+      "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html",
+      "title": "Buy a Family Car or Move Closer to Work and School First in Singapore (2026)",
+      "desc": "Buy a family car or move closer to work and school first in Singapore: a framework for deciding whet",
+      "cluster": "transport",
+      "clusterLabel": "Transport"
+    },
+    {
       "url": "/move-near-grandparents-or-pay-for-student-care-first-singapore.html",
       "title": "Move Near Grandparents or Pay for Student Care First in Singapore (2026)",
       "desc": "Move near grandparents or pay for student care first in Singapore: a framework for comparing locatio",
@@ -2599,37 +2651,9 @@
       "clusterLabel": "Family"
     },
     {
-      "url": "/move-near-school-or-keep-bigger-home-first-singapore.html",
-      "title": "Move Near School or Keep a Bigger Home First in Singapore (2026)",
-      "desc": "Move near school or keep a bigger home first in Singapore: a framework for comparing school-location",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/move-near-grandparents-or-buy-bigger-home-first-singapore.html",
-      "title": "Move Near Grandparents or Buy a Bigger Home First in Singapore (2026)",
-      "desc": "Move near grandparents or buy a bigger home first in Singapore: a framework for deciding whether pro",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
       "url": "/term-life-insurance-vs-hospitalisation-rider-singapore.html",
       "title": "Term Life Insurance vs Hospitalisation Rider in Singapore (2026)",
       "desc": "Term life insurance vs hospitalisation rider in Singapore (2026): compare death-related dependency p",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/hospital-cash-vs-hospitalisation-rider-singapore.html",
-      "title": "Hospital Cash vs Hospitalisation Rider in Singapore (2026)",
-      "desc": "Hospital cash vs hospitalisation rider in Singapore (2026): compare fixed daily cash benefits with r",
-      "cluster": "protection",
-      "clusterLabel": "Protection"
-    },
-    {
-      "url": "/disability-income-insurance-vs-hospitalisation-rider-singapore.html",
-      "title": "Disability Income Insurance vs Hospitalisation Rider in Singapore (2026)",
-      "desc": "Disability income insurance vs hospitalisation rider in Singapore (2026): compare income-continuity ",
       "cluster": "protection",
       "clusterLabel": "Protection"
     }
@@ -4490,6 +4514,18 @@
     },
     "build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html": {
       "first_seen": "2026-04-17"
+    },
+    "buy-family-car-or-move-closer-to-work-and-school-first-singapore.html": {
+      "first_seen": "2026-04-18"
+    },
+    "fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html": {
+      "first_seen": "2026-04-18"
+    },
+    "move-near-parents-or-pay-for-helper-first-singapore.html": {
+      "first_seen": "2026-04-19"
+    },
+    "upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html": {
+      "first_seen": "2026-04-18"
     }
   }
 }

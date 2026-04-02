@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 01 Apr 2026 · Based on repo v0329
+> Last updated: 01 Apr 2026 · Based on repo v0330
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0329
-**Recent update:** v0329 added a ninth cross-cluster bridge bundle covering grandparent proximity versus student care, family car versus helper, critical-illness cover versus parents’ CPF support, and down-payment building versus high-interest debt cleanup.
+**Current version:** v0330
+**Recent update:** v0330 fixed the missing SITE index entry for buy-family-car-or-fund-helper-first and added a new cross-cluster bridge bundle covering parent proximity versus helper support, upgrading the home versus preserving elder-support flexibility, child enrichment versus parents’ medical support, and family car versus moving closer to work and school.
 
 ### Key files
 
@@ -195,6 +195,8 @@ python3 generate-featured.py   # from repo root
 ### Transport (57 content pages) ✅ Very strong
 **v0329 bridge note:** added `buy-family-car-or-fund-helper-first-singapore.html`, a transport-led bridge for households deciding whether the next operational upgrade should be mobility control or extra household labour.
 
+**v0330 bridge note:** added `buy-family-car-or-move-closer-to-work-and-school-first-singapore.html`, a transport-led bridge for households deciding whether the cleaner fix is mobility control or a better home base.
+
 
 **v0321 bridge note:** added `buy-family-car-or-increase-hospitalisation-rider-first-singapore.html`, a transport-led bridge for households deciding whether the next weak layer is family mobility or medical-cost protection.
 **v0320 bridge note:** added `buy-family-car-or-build-down-payment-fund-first-singapore.html`, a transport-led bridge for households deciding whether family mobility relief should come before first-home capital formation.
@@ -220,6 +222,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 ### Property (119 content pages) ✅ Very strong
 **v0329 bridge note:** added `build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html`, a property-led bridge for households deciding whether housing-entry capital or debt cleanup should move first.
 
+**v0330 bridge note:** added `upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html`, a property-led bridge for households deciding whether visible housing improvement should wait behind optionality for elder-support demands.
+
 Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/execution, rental/landlord, HDB rules/grants/process, ownership structure, EC/route selection, unit selection/liveability, post-purchase/move-in, right-sizing/later-life, aging-parents bridges, and retirement housing-equity bridge pages.
 **Note:** 90 pages were backfilled with `og:cluster="property"` in v0282. These pages existed before the tagging system.
 
@@ -240,6 +244,14 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
 
 ### Family (134 content pages) ✅ Largest cluster
+
+**v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
+
+## 8. Cluster Status
+
+### Family (134 content pages) ✅ Largest cluster
+
+**v0330 bridge note:** added `move-near-parents-or-pay-for-helper-first-singapore.html` and `fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html`, extending the family cluster into parent-support location decisions and intergenerational spend sequencing.
 
 **v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
 
