@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 04 Apr 2026 · Based on repo v0335
+> Last updated: 04 Apr 2026 · Based on repo v0336
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0335
-**Recent update:** v0335 added an investing-led cross-cluster bridge bundle: two SSB-vs-protection pages and two index-investing-vs-family-obligation pages, plus manual hub surfacing, inbound links, SITE index updates, featured data, and sitemap regeneration.
+**Current version:** v0336
+**Recent update:** v0336 hardened `featured.json` recency surfaces by removing slash/bare `page_registry` duplicates, restoring canonical bare-key entries for the four v0335 investing pages, and regenerating `featured.json` + `sitemap.xml` so `new[]` and hub recent sections surface the intended newest pages cleanly.
 
 ### Version history
+- **v0336** — hardened `featured.json` recency surfaces by removing slash/bare `page_registry` duplicates, canonicalising the four v0335 investing-page entries to bare keys with clean first_seen dates, and regenerating `featured.json` + `sitemap.xml`.
 - **v0335** — added four investing-led bridge pages linking SSB reserve-building to protection priorities and index-fund compounding to family-obligation trade-offs; refreshed investing/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0334** — expanded 12 remaining legacy pages above the 1,500-word floor and refreshed touched pages to the current date without adding new URLs.
 - **v0333** — repaired 8 missing `SITE` search-index entries, expanded 9 thin pages above the floor, normalised `featured.json` `page_registry`, and regenerated `sitemap.xml` + `featured.json`.
@@ -294,6 +295,8 @@ Full coverage: hospitalisation, life insurance, CI, disability income, accident,
 **v0312 metadata note:** refreshed `featured.json` `page_registry` date for `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html` so protection recent surfaces and `new[]` ordering treat it as the newest protection addition from the v0311 bridge wave.
 
 **v0315 bridge note:** added `increase-disability-income-insurance-or-fund-helper-first-singapore.html`, a protection-led cross-cluster bridge for households deciding whether the deeper missing layer is income-continuity cover or paid household support capacity.
+
+**v0336 metadata note:** normalised `featured.json` `page_registry` for the four v0335 investing bridge pages so `new[]` and hub recency sections rely on canonical bare-key entries with clean first_seen ordering.
 
 ### Investing/Liquidity (52 content pages) 🟡 Growing
 

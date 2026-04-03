@@ -2657,18 +2657,18 @@
       "clusterLabel": "Investing"
     },
     {
+      "url": "/build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html",
+      "title": "Build a Singapore Savings Bond Ladder or Increase Hospitalisation Rider First in Singapore (2026)",
+      "desc": "Build a Singapore Savings Bond ladder or increase a hospitalisation rider first in Singapore: a fram",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/long-term-care-funding-calculator-singapore.html",
       "title": "Long-Term Care Funding Calculator Singapore (2026)",
       "desc": "",
       "cluster": "protection",
       "clusterLabel": "Protection"
-    },
-    {
-      "url": "/increase-index-fund-investing-or-pay-for-after-school-care-first-singapore.html",
-      "title": "Increase Index-Fund Investing or Pay for After-School Care First in Singapore (2026)",
-      "desc": "Increase index-fund investing or pay for after-school care first in Singapore: a framework for compa",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
     },
     {
       "url": "/pay-down-home-loan-or-help-aging-parents-now-singapore.html",
@@ -4572,29 +4572,17 @@
     "whole-life-vs-critical-illness-insurance-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html": {
-      "first_seen": "2026-04-04"
-    },
-    "/build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html": {
-      "first_seen": "2026-04-04"
-    },
-    "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html": {
-      "first_seen": "2026-04-04"
-    },
-    "/increase-index-fund-investing-or-build-child-education-fund-first-singapore.html": {
-      "first_seen": "2026-04-04"
-    },
     "build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html": {
-      "first_seen": "2026-04-03"
+      "first_seen": "2026-04-04"
     },
     "build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html": {
       "first_seen": "2026-04-04"
     },
     "increase-index-fund-investing-or-build-child-education-fund-first-singapore.html": {
-      "first_seen": "2026-04-05"
+      "first_seen": "2026-04-04"
     },
     "increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html": {
-      "first_seen": "2026-04-06"
+      "first_seen": "2026-04-04"
     }
   }
 }
