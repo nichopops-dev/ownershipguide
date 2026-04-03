@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 01 Apr 2026 · Based on repo v0330
+> Last updated: 03 Apr 2026 · Based on repo v0333
 
 ---
 
@@ -31,8 +31,12 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0330
-**Recent update:** v0330 fixed the missing SITE index entry for buy-family-car-or-fund-helper-first and added a new cross-cluster bridge bundle covering parent proximity versus helper support, upgrading the home versus preserving elder-support flexibility, child enrichment versus parents’ medical support, and family car versus moving closer to work and school.
+**Current version:** v0333
+**Recent update:** v0333 repaired missing SITE index coverage for eight live pages, hardened nine near-threshold content pages above the 1,500-word floor, and normalised `featured.json` `page_registry` duplicates plus future-date drift before regenerating dynamic outputs.
+
+### Version history
+- **v0333** — repaired 8 missing `SITE` search-index entries, expanded 9 thin pages above the floor, normalised `featured.json` `page_registry`, and regenerated `sitemap.xml` + `featured.json`.
+- **v0330** — fixed the missing SITE index entry for `buy-family-car-or-fund-helper-first` and added the parent-proximity/helper, home-upgrade/elder-flexibility, child-enrichment/parents-medical-support, and family-car/location bridge bundle.
 
 ### Key files
 
@@ -193,6 +197,7 @@ python3 generate-featured.py   # from repo root
 ## 8. Cluster Status
 
 ### Transport (57 content pages) ✅ Very strong
+**v0333 repair note:** restored SITE search-index coverage for `balloon-loan-vs-normal-car-loan-singapore.html` and `car-loan-vs-cash-singapore.html`, and deepened five near-threshold transport pages — `when-cheap-car-insurance-becomes-false-savings-singapore.html`, `car-leasing-vs-buying-singapore.html`, `car-loan-calculator-singapore.html`, `how-much-salary-to-own-a-car-singapore.html`, and `when-to-upgrade-car-with-outstanding-loan-singapore.html`.
 **v0329 bridge note:** added `buy-family-car-or-fund-helper-first-singapore.html`, a transport-led bridge for households deciding whether the next operational upgrade should be mobility control or extra household labour.
 
 **v0330 bridge note:** added `buy-family-car-or-move-closer-to-work-and-school-first-singapore.html`, a transport-led bridge for households deciding whether the cleaner fix is mobility control or a better home base.
@@ -220,6 +225,7 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0324 note:** protection deepening bundle added four new comparison pages — `accident-insurance-vs-term-life-insurance-singapore.html`, `term-life-insurance-vs-hospitalisation-rider-singapore.html`, `disability-income-insurance-vs-hospitalisation-rider-singapore.html`, and `hospital-cash-vs-hospitalisation-rider-singapore.html` — and strengthened hub surfacing plus manual inbound links from adjacent protection pages.
 
 ### Property (119 content pages) ✅ Very strong
+**v0333 repair note:** restored SITE search-index coverage for `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, refreshed `cpf-accrued-interest-calculator-singapore.html` above the content floor, and normalised property-related `page_registry` drift without touching hub dynamic logic.
 **v0329 bridge note:** added `build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html`, a property-led bridge for households deciding whether housing-entry capital or debt cleanup should move first.
 
 **v0330 bridge note:** added `upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html`, a property-led bridge for households deciding whether visible housing improvement should wait behind optionality for elder-support demands.
@@ -244,6 +250,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 **v0302 note:** property mechanics hardening bundle deepened five existing pages — `pay-down-mortgage-vs-invest-calculator-singapore.html`, `how-having-a-child-affects-tdsr-borrowing-capacity-singapore.html`, `mortgage-interest-cost-singapore.html`, `tdsr-msr-singapore.html`, and `bsd-absd-singapore.html` — and added contextual inbound links from adjacent affordability, refinancing, ownership-cost, family-budget, and stamp-duty calculator pages.
 
 ### Family (134 content pages) ✅ Largest cluster
+**v0333 repair note:** restored SITE search-index coverage for `buy-bigger-home-or-fund-helper-first-singapore.html` and `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, and expanded `enrichment-classes-cost-singapore.html` plus `school-fee-sinking-fund-vs-emergency-fund-singapore.html` above the content floor.
 
 **v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
 
@@ -269,6 +276,7 @@ Full branch coverage: early-years/childcare, school-stage/education, household s
 **v0315 bridge note:** added `move-near-grandparents-or-pay-for-infantcare-first-singapore.html`, a family-led cross-cluster bridge for households comparing housing/location change against formal early-years care spending.
 
 ### Protection/Insurance (25 content pages) ✅ Mature
+**v0333 repair note:** restored SITE search-index coverage for `increase-critical-illness-insurance-or-top-up-parents-cpf-first-singapore.html`, `increase-term-life-insurance-or-build-child-education-fund-first-singapore.html`, and `increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html`.
 
 **v0320 bridge note:** added `increase-hospitalisation-rider-or-build-child-education-fund-first-singapore.html`, a protection-led bridge for families comparing medical-cost protection against longer-horizon education funding.
 Full coverage: hospitalisation, life insurance, CI, disability income, accident, hospital cash, bridge pages for all major life events.

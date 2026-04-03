@@ -644,7 +644,9 @@ decisionPathOverrides: {
         { url: "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html", title: "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026): Which Problem Is More Dangerous to Leave Underbuilt?", subtopic: "bridge" },
         { url: "/buy-family-car-or-fund-helper-first-singapore.html", title: "Buy a Family Car or Fund a Helper First in Singapore (2026): Which Choice Removes More Daily Family Strain?", subtopic: "bridge" },
         { url: "/buy-family-car-or-increase-term-life-insurance-first-singapore.html", title: "Buy a Family Car or Increase Term Life Insurance First in Singapore (2026): Which Gap Is More Dangerous Right Now?", subtopic: "bridge" },
-        { url: "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html", title: "Buy a Family Car or Move Closer to Work and School First in Singapore (2026): Which Choice Actually Reduces More Daily Friction?", subtopic: "bridge" }
+        { url: "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html", title: "Buy a Family Car or Move Closer to Work and School First in Singapore (2026): Which Choice Actually Reduces More Daily Friction?", subtopic: "bridge" },
+        { url: "/balloon-loan-vs-normal-car-loan-singapore.html", title: "Balloon Loan vs Normal Car Loan in Singapore (2026): Decision Framework + Worked Example", subtopic: "car-loan" },
+        { url: "/car-loan-vs-cash-singapore.html", title: "Car Loan vs Pay Cash in Singapore (2026): Decision Rules + Worked Example", subtopic: "comparison" }
       ],
       bridges: [
         { url: "/property-ownership-cost-singapore.html", title: "Property Ownership Cost in Singapore (2026): 5-Year Total Exposure Model", cluster: "property" }
@@ -914,7 +916,9 @@ decisionPathOverrides: {
         { url: "/what-happens-to-property-when-an-owner-dies-singapore.html", title: "What Happens to Property When an Owner Dies in Singapore (2026): Title Structure", cluster: "property", subtopic: "planning" },
         { url: "/what-to-do-when-home-loan-lock-in-ends-singapore.html", title: "What to Do When Your Home Loan Lock-In Ends in Singapore (2026)", cluster: "property", subtopic: "financing" },
         { url: "/build-down-payment-fund-or-help-parents-with-housing-costs-first-singapore.html", title: "Build a Down Payment Fund or Help Parents With Housing Costs First in Singapore (2026): Which Housing Duty Should Go First?", subtopic: "bridge" },
-        { url: "/build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html", title: "Build a Down Payment Fund or Pay Down High-Interest Debt First in Singapore (2026): Which Move Actually Strengthens the Path to Homeownership?", subtopic: "bridge" }],
+        { url: "/build-down-payment-fund-or-pay-down-high-interest-debt-first-singapore.html", title: "Build a Down Payment Fund or Pay Down High-Interest Debt First in Singapore (2026): Which Move Actually Strengthens the Path to Homeownership?", subtopic: "bridge" },
+        { url: "/pay-down-home-loan-or-help-aging-parents-now-singapore.html", title: "Pay Down Home Loan or Help Aging Parents Now in Singapore (2026): Which Obligation Should Get the Next Dollar First?", subtopic: "comparison" }
+      ],
       bridges: [
         { url: "/car-vs-ride-hailing-calculator.html", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
         { url: "/car-ownership-cost.html", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" },
@@ -1124,7 +1128,10 @@ decisionPathOverrides: {
         { url: "/preschool-vs-stay-at-home-parent-singapore.html", title: "Preschool vs Stay-at-Home Parent in Singapore (2026): Which Family Operating Model Actually Holds Up?", subtopic: "comparison" },
         { url: "/student-care-vs-reduce-work-hours-singapore.html", title: "Student Care vs Reduce Work Hours in Singapore (2026): Which Post-School Model Is Actually Stronger?", subtopic: "comparison" },
         { url: "/enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html", title: "Enrichment Classes vs Bigger Cash Buffer After First Child in Singapore (2026): Which Should Families Strengthen First?", subtopic: "comparison" },
-        { url: "/have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html", title: "Have a Second Child Now or Build a Bigger Cash Buffer First in Singapore (2026): Which Sequencing Is Safer?", subtopic: "comparison" },],
+        { url: "/have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html", title: "Have a Second Child Now or Build a Bigger Cash Buffer First in Singapore (2026): Which Sequencing Is Safer?", subtopic: "comparison" },
+        { url: "/buy-bigger-home-or-fund-helper-first-singapore.html", title: "Buy a Bigger Home or Fund a Helper First in Singapore (2026): Which Upgrade Actually Reduces More Family Strain?", subtopic: "comparison" },
+        { url: "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html", title: "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026): Which Trade-Off Actually Makes Family Logistics Lighter?", subtopic: "comparison" }
+      ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },
         { url: "/live-near-parents-vs-live-near-school-singapore.html", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", cluster: "property" },
@@ -1186,7 +1193,11 @@ decisionPathOverrides: {
         { url: "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html", title: "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore (2026): Which Trade-Off Better Protects Later-Life Flexibility?", subtopic: "comparison" },
         { url: "/life-insurance-calculator-singapore.html", title: "Life Insurance Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" },
         { url: "/long-term-care-funding-calculator-singapore.html", title: "Long-Term Care Funding Calculator Singapore (2026)", cluster: "protection", subtopic: "calculator" },
-        { url: "/increase-disability-income-insurance-or-fund-helper-first-singapore.html", title: "Increase Disability Income Insurance or Fund a Helper First in Singapore (2026): Which Layer Better Protects the Household?", subtopic: "bridge" }],
+        { url: "/increase-disability-income-insurance-or-fund-helper-first-singapore.html", title: "Increase Disability Income Insurance or Fund a Helper First in Singapore (2026): Which Layer Better Protects the Household?", subtopic: "bridge" },
+        { url: "/increase-critical-illness-insurance-or-top-up-parents-cpf-first-singapore.html", title: "Increase Critical-Illness Insurance or Top Up Parents’ CPF First in Singapore (2026): Which Family Duty Should Move First?", subtopic: "comparison" },
+        { url: "/increase-term-life-insurance-or-build-child-education-fund-first-singapore.html", title: "Increase Term Life Insurance or Build a Child Education Fund First in Singapore (2026): Which Gap Is More Dangerous Right Now?", subtopic: "comparison" },
+        { url: "/increase-term-life-insurance-or-pay-down-home-loan-first-singapore.html", title: "Increase Term Life Insurance or Pay Down Home Loan First in Singapore (2026): Which Missing Layer Is More Dangerous Right Now?", subtopic: "comparison" }
+      ],
       bridges: [
         { url: "/save-more-vs-buy-more-insurance-singapore.html", title: "Save More vs Buy More Insurance in Singapore (2026): When Extra Liquidity Beats Extra Coverage and When It Does Not", cluster: "investing", subtopic: "bridge" },
         { url: "/pay-down-debt-vs-build-emergency-fund-singapore.html", title: "Pay Down Debt vs Build Emergency Fund in Singapore (2026): Which Fragility Should You Reduce First?", cluster: "investing", subtopic: "bridge" },
