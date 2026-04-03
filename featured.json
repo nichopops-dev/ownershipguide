@@ -1177,6 +1177,12 @@
         "date": "2026-04-05"
       },
       {
+        "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
+        "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+        "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
+        "date": "2026-04-04"
+      },
+      {
         "url": "/how-much-does-preschool-cost-singapore.html",
         "title": "How Much Does Preschool Cost in Singapore? (2026)",
         "desc": "How much preschool costs in Singapore in 2026: a practical framework for preschool-stage recurring f",
@@ -1222,12 +1228,6 @@
         "url": "/enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html",
         "title": "Enrichment Classes vs Bigger Cash Buffer After First Child in Singapore (2026)",
         "desc": "Enrichment classes vs a bigger cash buffer after the first child in Singapore in 2026: a practical c",
-        "date": "2026-04-01"
-      },
-      {
-        "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
-        "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
-        "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
         "date": "2026-04-01"
       },
       {
@@ -2037,6 +2037,18 @@
     ],
     "protection": [
       {
+        "url": "/emergency-fund-vs-hospitalisation-rider-first-singapore.html",
+        "title": "Emergency Fund vs Hospitalisation Rider First in Singapore (2026)",
+        "desc": "Emergency fund vs hospitalisation rider first in Singapore: a framework for deciding whether tighter",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/emergency-fund-vs-term-life-insurance-first-singapore.html",
+        "title": "Emergency Fund vs Term Life Insurance First in Singapore (2026)",
+        "desc": "Emergency fund vs term life insurance first in Singapore: a practical framework for deciding whether",
+        "date": "2026-04-04"
+      },
+      {
         "url": "/long-term-care-funding-calculator-singapore.html",
         "title": "Long-Term Care Funding Calculator Singapore (2026)",
         "desc": "",
@@ -2181,18 +2193,6 @@
         "date": "2026-03-19"
       },
       {
-        "url": "/emergency-fund-vs-hospitalisation-rider-first-singapore.html",
-        "title": "Emergency Fund vs Hospitalisation Rider First in Singapore (2026)",
-        "desc": "Emergency fund vs hospitalisation rider first in Singapore: a framework for deciding whether tighter",
-        "date": "2026-03-18"
-      },
-      {
-        "url": "/emergency-fund-vs-term-life-insurance-first-singapore.html",
-        "title": "Emergency Fund vs Term Life Insurance First in Singapore (2026)",
-        "desc": "Emergency fund vs term life insurance first in Singapore: a practical framework for deciding whether",
-        "date": "2026-03-18"
-      },
-      {
         "url": "/how-a-property-upgrade-changes-your-insurance-needs-singapore.html",
         "title": "How a Property Upgrade Changes Your Insurance Needs in Singapore (2026)",
         "desc": "How a property upgrade changes your insurance needs in Singapore (2026): why bigger mortgages, highe",
@@ -2272,6 +2272,60 @@
       }
     ],
     "investing": [
+      {
+        "url": "/build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html",
+        "title": "Build a Singapore Savings Bond Ladder or Increase Hospitalisation Rider First in Singapore (2026)",
+        "desc": "Build a Singapore Savings Bond ladder or increase a hospitalisation rider first in Singapore: a fram",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html",
+        "title": "Build a Singapore Savings Bond Ladder or Increase Term Life Insurance First in Singapore (2026)",
+        "desc": "Build a Singapore Savings Bond ladder or increase term life insurance first in Singapore: a framewor",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html",
+        "title": "Help Parents With Housing Costs or Build Your Own Investment Portfolio First in Singapore (2026)",
+        "desc": "Help parents with housing costs or build your own investment portfolio first in Singapore: a framewo",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/increase-index-fund-investing-or-build-child-education-fund-first-singapore.html",
+        "title": "Increase Index-Fund Investing or Build a Child Education Fund First in Singapore (2026)",
+        "desc": "Increase index-fund investing or build a child education fund first in Singapore: a framework for de",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/increase-index-fund-investing-or-pay-for-after-school-care-first-singapore.html",
+        "title": "Increase Index-Fund Investing or Pay for After-School Care First in Singapore (2026)",
+        "desc": "Increase index-fund investing or pay for after-school care first in Singapore: a framework for compa",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/increase-index-fund-investing-or-pay-for-infantcare-first-singapore.html",
+        "title": "Increase Index-Fund Investing or Pay for Infantcare First in Singapore (2026)",
+        "desc": "Increase index-fund investing or pay for infantcare first in Singapore: a framework for comparing lo",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html",
+        "title": "Increase Index-Fund Investing or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+        "desc": "Increase index-fund investing or support parents\u2019 medical costs first in Singapore: a framework for ",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/save-more-vs-buy-more-insurance-singapore.html",
+        "title": "Save More vs Buy More Insurance in Singapore (2026)",
+        "desc": "Save more vs buy more insurance in Singapore: a practical framework for deciding when the next dolla",
+        "date": "2026-04-04"
+      },
+      {
+        "url": "/singapore-savings-bonds-singapore.html",
+        "title": "Singapore Savings Bonds (2026)",
+        "desc": "",
+        "date": "2026-04-04"
+      },
       {
         "url": "/dividend-investing-vs-index-fund-investing-singapore.html",
         "title": "Dividend Investing vs Index Fund Investing in Singapore (2026)",
@@ -2372,24 +2426,6 @@
         "url": "/cpf-sa-top-up-singapore.html",
         "title": "CPF SA Top-Up in Singapore (2026)",
         "desc": "",
-        "date": "2026-03-29"
-      },
-      {
-        "url": "/help-parents-with-housing-costs-or-build-your-own-investment-portfolio-first-singapore.html",
-        "title": "Help Parents With Housing Costs or Build Your Own Investment Portfolio First in Singapore (2026)",
-        "desc": "Help parents with housing costs or build your own investment portfolio first in Singapore: a framewo",
-        "date": "2026-03-29"
-      },
-      {
-        "url": "/increase-index-fund-investing-or-pay-for-after-school-care-first-singapore.html",
-        "title": "Increase Index-Fund Investing or Pay for After-School Care First in Singapore (2026)",
-        "desc": "Increase index-fund investing or pay for after-school care first in Singapore: a framework for compa",
-        "date": "2026-03-29"
-      },
-      {
-        "url": "/increase-index-fund-investing-or-pay-for-infantcare-first-singapore.html",
-        "title": "Increase Index-Fund Investing or Pay for Infantcare First in Singapore (2026)",
-        "desc": "Increase index-fund investing or pay for infantcare first in Singapore: a framework for comparing lo",
         "date": "2026-03-29"
       },
       {
@@ -2531,12 +2567,6 @@
         "date": "2026-03-23"
       },
       {
-        "url": "/singapore-savings-bonds-singapore.html",
-        "title": "Singapore Savings Bonds (2026)",
-        "desc": "",
-        "date": "2026-03-23"
-      },
-      {
         "url": "/when-to-invest-vs-build-your-emergency-fund-first-singapore.html",
         "title": "When to Invest vs Build Your Emergency Fund First in Singapore (2026)",
         "desc": "When to invest vs build your emergency fund first in Singapore (2026): a sequencing framework for de",
@@ -2579,12 +2609,6 @@
         "date": "2026-03-18"
       },
       {
-        "url": "/save-more-vs-buy-more-insurance-singapore.html",
-        "title": "Save More vs Buy More Insurance in Singapore (2026)",
-        "desc": "Save more vs buy more insurance in Singapore: a practical framework for deciding when the next dolla",
-        "date": "2026-03-18"
-      },
-      {
         "url": "/should-you-invest-part-of-your-emergency-fund-singapore.html",
         "title": "Should You Invest Part of Your Emergency Fund in Singapore? (2026)",
         "desc": "Should you invest part of your emergency fund in Singapore (2026): a practical guide to why reserve ",
@@ -2612,6 +2636,27 @@
   },
   "new": [
     {
+      "url": "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html",
+      "title": "Increase Index-Fund Investing or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+      "desc": "Increase index-fund investing or support parents\u2019 medical costs first in Singapore: a framework for ",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/increase-index-fund-investing-or-build-child-education-fund-first-singapore.html",
+      "title": "Increase Index-Fund Investing or Build a Child Education Fund First in Singapore (2026)",
+      "desc": "Increase index-fund investing or build a child education fund first in Singapore: a framework for de",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
+      "url": "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html",
+      "title": "Build a Singapore Savings Bond Ladder or Increase Term Life Insurance First in Singapore (2026)",
+      "desc": "Build a Singapore Savings Bond ladder or increase term life insurance first in Singapore: a framewor",
+      "cluster": "investing",
+      "clusterLabel": "Investing"
+    },
+    {
       "url": "/long-term-care-funding-calculator-singapore.html",
       "title": "Long-Term Care Funding Calculator Singapore (2026)",
       "desc": "",
@@ -2619,30 +2664,9 @@
       "clusterLabel": "Protection"
     },
     {
-      "url": "/robo-advisor-vs-diy-index-fund-singapore.html",
-      "title": "Robo-Advisor vs DIY Index Fund in Singapore (2026)",
-      "desc": "Robo-advisor vs DIY index fund investing in Singapore (2026): compare cost, control, rebalancing, ta",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/how-to-start-investing-singapore.html",
-      "title": "How to Start Investing in Singapore (2026)",
-      "desc": "How to start investing in Singapore (2026): a sequencing framework that tells you when readiness is ",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/etf-vs-unit-trust-singapore.html",
-      "title": "ETF vs Unit Trust in Singapore (2026)",
-      "desc": "ETF vs unit trust in Singapore (2026): compare cost structure, transparency, liquidity, minimum inve",
-      "cluster": "investing",
-      "clusterLabel": "Investing"
-    },
-    {
-      "url": "/dividend-investing-vs-index-fund-investing-singapore.html",
-      "title": "Dividend Investing vs Index Fund Investing in Singapore (2026)",
-      "desc": "Dividend investing vs index fund investing in Singapore (2026): compare total return, income reliabi",
+      "url": "/increase-index-fund-investing-or-pay-for-after-school-care-first-singapore.html",
+      "title": "Increase Index-Fund Investing or Pay for After-School Care First in Singapore (2026)",
+      "desc": "Increase index-fund investing or pay for after-school care first in Singapore: a framework for compa",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -2675,11 +2699,11 @@
       "clusterLabel": "Transport"
     },
     {
-      "url": "/upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html",
-      "title": "Upgrade Home Now or Keep More Flexibility for Aging Parents in Singapore (2026)",
-      "desc": "Upgrade home now or keep more flexibility for aging parents in Singapore: a framework for deciding w",
-      "cluster": "property",
-      "clusterLabel": "Property"
+      "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
+      "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+      "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
+      "cluster": "family",
+      "clusterLabel": "Family"
     }
   ],
   "popular": [
@@ -4547,6 +4571,30 @@
     },
     "whole-life-vs-critical-illness-insurance-singapore.html": {
       "first_seen": "2026-03-19"
+    },
+    "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "/build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "/increase-index-fund-investing-or-build-child-education-fund-first-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "build-ssb-ladder-or-increase-hospitalisation-rider-first-singapore.html": {
+      "first_seen": "2026-04-03"
+    },
+    "build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html": {
+      "first_seen": "2026-04-04"
+    },
+    "increase-index-fund-investing-or-build-child-education-fund-first-singapore.html": {
+      "first_seen": "2026-04-05"
+    },
+    "increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html": {
+      "first_seen": "2026-04-06"
     }
   }
 }
