@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-03",
+  "generated": "2026-04-05",
   "cluster_pages": {
     "transport": [
       {
@@ -2678,30 +2678,30 @@
       "clusterLabel": "Property"
     },
     {
+      "url": "/use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html",
+      "title": "Use Housing Equity vs Buy More Long-Term-Care Cover in Singapore? (2026)",
+      "desc": "Use housing equity vs buy more long-term-care cover in Singapore (2026). A practical framework for d",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html",
+      "title": "Set Aside a Care Fund vs Keep Investing for Retirement in Singapore? (2026)",
+      "desc": "Set aside a care fund vs keep investing for retirement in Singapore (2026). Use a practical framewor",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
+      "url": "/self-fund-long-term-care-vs-insure-for-it-singapore.html",
+      "title": "Self-Fund Long-Term Care vs Insure for It in Singapore? (2026)",
+      "desc": "Self-fund long-term care vs insure for it in Singapore (2026). Use a practical framework to decide w",
+      "cluster": "protection",
+      "clusterLabel": "Protection"
+    },
+    {
       "url": "/move-near-parents-or-pay-for-helper-first-singapore.html",
       "title": "Move Near Parents or Pay for a Helper First in Singapore (2026)",
       "desc": "Move near parents or pay for a helper first in Singapore: a framework for deciding whether distance ",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/pay-down-home-loan-or-build-child-education-fund-singapore.html",
-      "title": "Pay Down Home Loan or Build a Child Education Fund First in Singapore (2026)",
-      "desc": "Pay down home loan or build a child education fund first in Singapore: a practical framework for dec",
-      "cluster": "property",
-      "clusterLabel": "Property"
-    },
-    {
-      "url": "/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html",
-      "title": "Buy a Family Car or Increase Hospitalisation Rider First in Singapore (2026)",
-      "desc": "Buy a family car or increase hospitalisation rider first in Singapore: a framework for comparing tra",
-      "cluster": "transport",
-      "clusterLabel": "Transport"
-    },
-    {
-      "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
-      "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
-      "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
       "cluster": "family",
       "clusterLabel": "Family"
     }
@@ -3432,9 +3432,6 @@
     "hire-a-helper-vs-use-home-care-services-for-aging-parents-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "hire-home-care-vs-family-caregiver-time-singapore": {
-      "first_seen": "2026-03-18"
-    },
     "hire-home-care-vs-family-caregiver-time-singapore.html": {
       "first_seen": "2026-03-18"
     },
@@ -3822,9 +3819,6 @@
     "local-university-vs-overseas-university-cost-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "long-term-care-funding-calculator-singapore": {
-      "first_seen": "2026-04-03"
-    },
     "long-term-care-funding-calculator-singapore.html": {
       "first_seen": "2026-04-03"
     },
@@ -4083,9 +4077,6 @@
     "property-viewing-checklist-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "protect-caregiver-income-vs-build-bigger-care-fund-singapore": {
-      "first_seen": "2026-03-18"
-    },
     "protect-caregiver-income-vs-build-bigger-care-fund-singapore.html": {
       "first_seen": "2026-03-18"
     },
@@ -4227,11 +4218,8 @@
     "self-charging-hybrid-vs-plug-in-hybrid-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "self-fund-long-term-care-vs-insure-for-it-singapore": {
-      "first_seen": "2026-04-02"
-    },
     "self-fund-long-term-care-vs-insure-for-it-singapore.html": {
-      "first_seen": "2026-03-24"
+      "first_seen": "2026-04-02"
     },
     "sell-before-or-after-moving-out-singapore.html": {
       "first_seen": "2026-03-19"
@@ -4263,11 +4251,8 @@
     "selling-property-timeline-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "set-aside-care-fund-vs-keep-investing-for-retirement-singapore": {
-      "first_seen": "2026-04-02"
-    },
     "set-aside-care-fund-vs-keep-investing-for-retirement-singapore.html": {
-      "first_seen": "2026-03-25"
+      "first_seen": "2026-04-02"
     },
     "settle-privately-vs-insurance-claim-car-accident-singapore.html": {
       "first_seen": "2026-03-19"
@@ -4455,9 +4440,6 @@
     "upgrade-home-now-or-keep-more-flexibility-for-aging-parents-singapore.html": {
       "first_seen": "2026-04-01"
     },
-    "use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore": {
-      "first_seen": "2026-03-18"
-    },
     "use-care-insurance-payouts-vs-pay-out-of-pocket-for-home-help-singapore.html": {
       "first_seen": "2026-03-18"
     },
@@ -4467,11 +4449,8 @@
     "use-cpf-oa-vs-preserve-cash-when-supporting-aging-parents-singapore.html": {
       "first_seen": "2026-03-19"
     },
-    "use-housing-equity-vs-buy-more-long-term-care-cover-singapore": {
-      "first_seen": "2026-04-02"
-    },
     "use-housing-equity-vs-buy-more-long-term-care-cover-singapore.html": {
-      "first_seen": "2026-03-26"
+      "first_seen": "2026-04-02"
     },
     "use-housing-equity-vs-preserve-cashflow-when-supporting-aging-parents-singapore.html": {
       "first_seen": "2026-03-22"

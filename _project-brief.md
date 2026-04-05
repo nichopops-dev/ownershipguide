@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 04 Apr 2026 · Based on repo v0336
+> Last updated: 05 Apr 2026 · Based on repo v0337
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0336
-**Recent update:** v0336 hardened `featured.json` recency surfaces by removing slash/bare `page_registry` duplicates, restoring canonical bare-key entries for the four v0335 investing pages, and regenerating `featured.json` + `sitemap.xml` so `new[]` and hub recent sections surface the intended newest pages cleanly.
+**Current version:** v0337
+**Recent update:** v0337 completed the remaining `featured.json` metadata cleanup by canonicalising leftover bare-vs-`.html` `page_registry` duplicates to `.html` keys, teaching `generate-featured.py` to merge legacy bare keys automatically, and regenerating `featured.json` + `sitemap.xml` so recency surfaces stay stable on future runs.
 
 ### Version history
+- **v0337** — completed the remaining `featured.json` integrity cleanup by canonicalising seven lingering bare-vs-`.html` `page_registry` duplicates to `.html` keys, hardening `generate-featured.py` to merge legacy bare keys automatically, and regenerating `featured.json` + `sitemap.xml`.
 - **v0336** — hardened `featured.json` recency surfaces by removing slash/bare `page_registry` duplicates, canonicalising the four v0335 investing-page entries to bare keys with clean first_seen dates, and regenerating `featured.json` + `sitemap.xml`.
 - **v0335** — added four investing-led bridge pages linking SSB reserve-building to protection priorities and index-fund compounding to family-obligation trade-offs; refreshed investing/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0334** — expanded 12 remaining legacy pages above the 1,500-word floor and refreshed touched pages to the current date without adding new URLs.
@@ -49,7 +50,7 @@
 | `styles.css` | Global stylesheet |
 | `index.html` | Homepage |
 | `sitemap.xml` | 500 URLs — regenerate with `python3 generate-sitemap.py` each session |
-| `featured.json` | Hub + homepage dynamic data. Keys: `cluster_pages`, `new[]` (sorted by `first_seen` from `page_registry`, NOT last_updated), `popular[]`, `pinned` (dict keyed by cluster — NEVER flatten to list), `page_registry`. Regenerate with `python3 generate-featured.py` each session. |
+| `featured.json` | Hub + homepage dynamic data. Keys: `cluster_pages`, `new[]` (sorted by `first_seen` from `page_registry`, NOT last_updated), `popular[]`, `pinned` (dict keyed by cluster — NEVER flatten to list), `page_registry` (canonical `.html` keys only). Regenerate with `python3 generate-featured.py` each session. |
 | `generate-sitemap.py` | Regenerates sitemap.xml. Run from repo root. |
 | `generate-featured.py` | Regenerates featured.json. Preserves `pinned` dict, `page_registry`, diversity cap. Run from repo root. |
 | `_project-brief.md` | This file. Do not rename, move, delete, deploy, or add to sitemap. |

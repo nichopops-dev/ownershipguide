@@ -85,17 +85,39 @@ for cluster in CLUSTERS:
 
 # Build new[] using page_registry (first_seen dates) to avoid date-bump pollution
 # Load existing registry — tracks when each page was first added to the site
+def _parse_first_seen(value):
+    try:
+        return datetime.strptime(value, '%Y-%m-%d')
+    except Exception:
+        return None
+
+def canonicalize_registry(registry):
+    canonical = {}
+    for key, meta in registry.items():
+        if not isinstance(meta, dict):
+            continue
+        canonical_key = key if key.endswith('.html') else f'{key}.html'
+        first_seen = meta.get('first_seen')
+        if canonical_key not in canonical:
+            canonical[canonical_key] = {'first_seen': first_seen}
+            continue
+        current_dt = _parse_first_seen(canonical[canonical_key].get('first_seen'))
+        candidate_dt = _parse_first_seen(first_seen)
+        if candidate_dt and (not current_dt or candidate_dt > current_dt):
+            canonical[canonical_key] = {'first_seen': first_seen}
+    return canonical
+
 existing_registry = {}
 if os.path.exists(OUTPUT):
     try:
         existing_data = json.load(open(OUTPUT))
-        existing_registry = existing_data.get('page_registry', {})
-    except: pass
+        existing_registry = canonicalize_registry(existing_data.get('page_registry', {}))
+    except Exception:
+        pass
 
 # Update registry: add new pages with a first_seen date that is strictly newer
 # than existing pages already present in the same cluster.
 today_dt = datetime.now()
-today_iso = today_dt.strftime('%Y-%m-%d')
 page_fns = [p['url'].lstrip('/') for p in pages]
 cluster_lookup = {p['url'].lstrip('/'): p['cluster'] for p in pages}
 cluster_max = {}
@@ -103,10 +125,8 @@ for fn_existing, meta in existing_registry.items():
     cl = cluster_lookup.get(fn_existing)
     if not cl:
         continue
-    fs = meta.get('first_seen')
-    try:
-        d = datetime.strptime(fs, '%Y-%m-%d')
-    except Exception:
+    d = _parse_first_seen(meta.get('first_seen'))
+    if not d:
         continue
     if cl not in cluster_max or d > cluster_max[cl]:
         cluster_max[cl] = d
