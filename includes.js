@@ -1140,7 +1140,10 @@ decisionPathOverrides: {
         { url: "/enrichment-classes-vs-bigger-cash-buffer-after-first-child-singapore.html", title: "Enrichment Classes vs Bigger Cash Buffer After First Child in Singapore (2026): Which Should Families Strengthen First?", subtopic: "comparison" },
         { url: "/have-a-second-child-now-or-build-bigger-cash-buffer-first-singapore.html", title: "Have a Second Child Now or Build a Bigger Cash Buffer First in Singapore (2026): Which Sequencing Is Safer?", subtopic: "comparison" },
         { url: "/buy-bigger-home-or-fund-helper-first-singapore.html", title: "Buy a Bigger Home or Fund a Helper First in Singapore (2026): Which Upgrade Actually Reduces More Family Strain?", subtopic: "comparison" },
-        { url: "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html", title: "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026): Which Trade-Off Actually Makes Family Logistics Lighter?", subtopic: "comparison" }
+        { url: "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html", title: "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026): Which Trade-Off Actually Makes Family Logistics Lighter?", subtopic: "comparison" },
+        { url: "/move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html", title: "Move Near Childcare or Keep Your Home and Own a Car Cost Calculator Singapore (2026): Compare Housing Uplift Against Vehicle Control", subtopic: "calculator" },
+        { url: "/bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html", title: "Bigger Home Farther Out vs Smaller Home Near Childcare Cost Calculator Singapore (2026): Compare Space Premium Against Daily Route Relief", subtopic: "calculator" },
+        { url: "/second-car-or-childcare-near-work-cost-calculator-singapore.html", title: "Second Car or Childcare Near Work Cost Calculator Singapore (2026): Compare Vehicle Ownership Against Pickup Friction Relief", subtopic: "calculator" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },

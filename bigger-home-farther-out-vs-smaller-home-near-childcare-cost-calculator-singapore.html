@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bigger Home Farther Out vs Smaller Home Near Childcare Cost Calculator Singapore (2026): Compare Space Premium Against Daily Route Relief</title>
+<meta name="description" content="Compare the monthly burden of a bigger home farther out versus a smaller home nearer childcare in Singapore, including housing cost, transport, time, pickup friction, and spillover spend."/>
+<link rel="canonical" href="https://ownershipguide.com/bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this bigger-home versus near-childcare calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares whether paying for more space farther away creates a lower or higher monthly burden than paying for a smaller home that reduces childcare routing friction."}},{"@type":"Question","name":"Why include spillover spend for the smaller-home route?","acceptedAnswer":{"@type":"Answer","text":"Because a smaller home can create outsourced storage, weekend activity, or convenience spending that households forget to include. Those costs may be worth it, but they should be visible."}},{"@type":"Question","name":"Why include route time as part of the cost?","acceptedAnswer":{"@type":"Answer","text":"Because long detours, pickup loops, and recovery time consume real household capacity. Turning those minutes into a planning value helps stop families from treating repeated strain as free."}},{"@type":"Question","name":"Does this calculator decide whether the family should move?","acceptedAnswer":{"@type":"Answer","text":"No. It only shows the recurring burden difference between two housing-location patterns. The family still needs judgment about schools, support networks, and long-term housing fit."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Bigger Home Farther Out vs Smaller Home Near Childcare Cost Calculator (Singapore, 2026)</p>
+<h1>Bigger Home Farther Out vs Smaller Home Near Childcare Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator, not a provider quote engine. Use it when the household has already identified the real route conflict and now needs to compare the full monthly burden instead of arguing from one emotionally convenient line item.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the reasoning first, read <a href="/bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html">bigger home farther out vs smaller home near childcare</a>.</li>
+<li>If the bigger question is whether the household should relocate at all, compare <a href="/move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html">move near childcare or keep home and own a car cost calculator</a>.</li>
+<li>If transport control is the actual pressure point, also use <a href="/second-car-or-childcare-near-work-cost-calculator-singapore.html">second car or childcare near work cost calculator</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    
+    <div class="calc-row"><div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="13500"/></div><div><label for="fixed">Existing non-housing fixed commitments (SGD)</label><input id="fixed" type="number" min="0" step="100" value="4300"/></div></div>
+    <div class="calc-row"><div><label for="hourlyValue">Planning value of one adult hour (SGD)</label><input id="hourlyValue" type="number" min="0" step="1" value="20"/></div><div><label for="horizon">Months to spread one-off move/setup cost</label><input id="horizon" type="number" min="12" step="6" value="36"/></div></div>
+    <div class="divider"></div>
+    <h3>Route A — bigger home farther out</h3>
+    <div class="calc-row"><div><label for="bigHousing">Monthly housing cost (rent / mortgage / condo fees) (SGD)</label><input id="bigHousing" type="number" min="0" step="50" value="3200"/></div><div><label for="bigTransit">Transport, parking, ride-hailing, and detour spend (SGD)</label><input id="bigTransit" type="number" min="0" step="10" value="520"/></div></div>
+    <div class="calc-row"><div><label for="bigChildcare">Net childcare fee after subsidy (SGD)</label><input id="bigChildcare" type="number" min="0" step="10" value="430"/></div><div><label for="bigMinutes">Extra daily minutes created by the farther-out route</label><input id="bigMinutes" type="number" min="0" step="1" value="48"/></div></div>
+    <div class="calc-row"><div><label for="bigBackup">Late-pickup, closure top-up, and backup handoff cost (SGD)</label><input id="bigBackup" type="number" min="0" step="10" value="130"/></div><div><label for="bigOffset">Offsets or savings linked to the bigger-home route (SGD)</label><input id="bigOffset" type="number" min="0" step="10" value="0"/></div></div>
+    <div class="divider"></div>
+    <h3>Route B — smaller home near childcare</h3>
+    <div class="calc-row"><div><label for="smallHousing">Monthly housing cost (rent / mortgage / condo fees) (SGD)</label><input id="smallHousing" type="number" min="0" step="50" value="3550"/></div><div><label for="smallTransit">Transport, parking, and ride-hailing after moving (SGD)</label><input id="smallTransit" type="number" min="0" step="10" value="220"/></div></div>
+    <div class="calc-row"><div><label for="smallChildcare">Net childcare fee after subsidy (SGD)</label><input id="smallChildcare" type="number" min="0" step="10" value="420"/></div><div><label for="smallMinutes">Extra daily minutes still created after moving</label><input id="smallMinutes" type="number" min="0" step="1" value="19"/></div></div>
+    <div class="calc-row"><div><label for="smallBackup">Late-pickup, closure top-up, and backup handoff cost (SGD)</label><input id="smallBackup" type="number" min="0" step="10" value="70"/></div><div><label for="smallOneOff">One-off move and setup cost (SGD)</label><input id="smallOneOff" type="number" min="0" step="100" value="9000"/></div></div>
+    <div class="calc-row"><div><label for="smallSpill">Storage, convenience buys, or external-space spillover spend (SGD)</label><input id="smallSpill" type="number" min="0" step="10" value="80"/></div><div><label for="smallOffset">Offsets or savings linked to the smaller-home route (SGD)</label><input id="smallOffset" type="number" min="0" step="10" value="0"/></div></div>
+    
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box"><div class="muted">Route A monthly burden</div><div class="kpi" id="aMonthly">$0</div><div class="small muted" id="aBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Route B monthly burden</div><div class="kpi" id="bMonthly">$0</div><div class="small muted" id="bBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Monthly difference</div><div class="kpi" id="diff">$0</div><div class="small muted" id="diffLabel">Waiting for inputs.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Extra hours consumed each month</div><div class="kpi" id="hoursDiff">0.0h</div><div class="small muted">This compares the two route patterns over roughly 22 weekdays per month.</div></div>
+    <div class="note" style="margin-top:12px;"><strong>Planning read</strong><p id="resultNote" style="margin:8px 0 0">The cleaner option is the one that removes recurring strain without forcing a second structural commitment later.</p></div>
+    <div class="note" style="margin-top:12px;"><strong>Cash left after lower-cost route and fixed bills</strong><p style="margin:8px 0 0"><span class="kpi" id="cashLeft" style="font-size:24px;">$0</span></p><p class="small muted" id="pressure">0%</p></div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>This calculator exists because families routinely compare space against location in a sentimental way. The bigger home feels like long-term prudence: more storage, more room for a second child, fewer squeeze points at home. The smaller, better-located home feels like operational discipline: shorter pickup loops, easier weekday transitions, and less dependence on transport heroics. The mistake is acting as if one side is lifestyle and the other is logistics. Both are budget decisions. Both create recurring strain or recurring relief. The arithmetic should reflect that.</p>
+<p>The farther-out home route therefore counts housing cost, childcare cost, transport spend, and the repeated value of extra route time. A bigger home does not just cost more or less in mortgage terms. It changes how the family moves every weekday. If the larger footprint sits in a weaker location, some of its benefit gets quietly spent back through commuting, parking, detours, and pickup stress.</p>
+<p>The smaller home near childcare route counts the opposite trade-off. Housing may become more expensive per square foot, and the family may need to absorb move costs or small-space spillover spend such as storage, convenience services, or extra outings that compensate for tighter living. But the route may remove repeated daily strain. The calculator makes both sides pay for what they actually are, instead of what the household hopes they are.</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the smaller-home route is cheaper or close enough to neutral, that is a sign that the household may have been underestimating how much the farther-out lifestyle is already costing in movement friction. It does not automatically mean the family should accept less space. But it does mean the location premium is not as extravagant as it looked when the detours were treated as background noise.</p>
+<p>If the bigger-home route still wins after time and transport are priced honestly, the larger footprint may be carrying real family value. That often happens when the home solves crowding, sleep disruption, or multi-child room pressure in a way that a better location cannot. A larger home can still be the cleaner answer if the route pain is tolerable and the space relief is structurally important rather than aspirational.</p>
+<p>Watch the remaining cash figure carefully. Both choices can be technically affordable while leaving the family too little elasticity for repairs, job changes, or a second child. In practice, a route that leaves slightly more time but much less cash can still be a weak choice. The better plan is the one that improves the household system without making the financial base brittle.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<p>The first common mistake is assuming that a bigger home is always the more future-proof choice. It can be, but only if the extra space solves a real household bottleneck. If the extra room mainly supports comfort while the route keeps draining time and energy, the household may be paying twice: once for the space, and again for the movement friction that remains.</p>
+<p>The second mistake is pretending the smaller-home route has no hidden cost. Small-space living can create outsourced friction: storage rental, more weekend spending outside the home, convenience purchases, or pressure to upgrade furniture or layout faster. The route can still be better. It just should not be made to look cleaner by hiding its trade-offs.</p>
+<p>The third mistake is treating housing as irreversible identity rather than a current operating decision. Families can become attached to the idea that a bigger home signals progress even when a smaller, better-located home would make daily life markedly calmer. The useful question is not what the home says about the family. It is what the home asks the family to keep doing every week.</p>
+<h2 id="faq">FAQ</h2>
+<h3>What does this bigger-home versus near-childcare calculator compare?</h3>
+<p>It compares whether paying for more space farther away creates a lower or higher monthly burden than paying for a smaller home that reduces childcare routing friction.</p>
+<h3>Why include spillover spend for the smaller-home route?</h3>
+<p>Because a smaller home can create outsourced storage, weekend activity, or convenience spending that households forget to include. Those costs may be worth it, but they should be visible.</p>
+<h3>Why include route time as part of the cost?</h3>
+<p>Because long detours, pickup loops, and recovery time consume real household capacity. Turning those minutes into a planning value helps stop families from treating repeated strain as free.</p>
+<h3>Does this calculator decide whether the family should move?</h3>
+<p>No. It only shows the recurring burden difference between two housing-location patterns. The family still needs judgment about schools, support networks, and long-term housing fit.</p>
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html">Bigger Home Farther Out Vs Smaller Home Near Childcare</a></li>
+<li><a href="/move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html">Move Near Childcare Or Keep Home And Own A Car Cost Calculator</a></li>
+<li><a href="/childcare-near-home-vs-near-work-cost-calculator-singapore.html">Childcare Near Home Vs Near Work Cost Calculator</a></li>
+<li><a href="/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html">Move Closer To School Or Keep Home And Own A Car</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.ecda.gov.sg/" rel="nofollow noopener" target="_blank">ECDA</a></li>
+<li><a href="https://www.msf.gov.sg/" rel="nofollow noopener" target="_blank">MSF</a></li>
+<li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">HDB</a></li>
+<li><a href="https://www.ura.gov.sg/" rel="nofollow noopener" target="_blank">URA</a></li>
+<li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA</a></li>
+</ul>
+<p><strong>Last updated:</strong> 06 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  function calc() {
+    
+    const income = num('income');
+    const fixed = num('fixed');
+    const hour = num('hourlyValue');
+    const horizon = Math.max(12, num('horizon'));
+    const bigTime = (num('bigMinutes') * 22 / 60) * hour;
+    const smallTime = (num('smallMinutes') * 22 / 60) * hour;
+    const aMonthly = Math.max(0, num('bigHousing') + num('bigTransit') + num('bigChildcare') + bigTime + num('bigBackup') - num('bigOffset'));
+    const bMonthly = Math.max(0, num('smallHousing') + num('smallTransit') + num('smallChildcare') + (num('smallOneOff') / horizon) + num('smallSpill') + smallTime + num('smallBackup') - num('smallOffset'));
+    
+    const diff = aMonthly - bMonthly;
+    const cheaper = diff < 0 ? 'Route A is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : diff > 0 ? 'Route B is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : 'Both routes are currently equal on monthly burden.';
+    const lower = Math.min(aMonthly, bMonthly);
+    const hoursA = /const .*Time/.test('x') ? 0 : 0;
+    $('aMonthly').textContent = money(aMonthly);
+    $('bMonthly').textContent = money(bMonthly);
+    $('diff').textContent = money(Math.abs(diff));
+    $('diffLabel').textContent = cheaper;
+    $('cashLeft').textContent = money(Math.max(0, income - fixed - lower));
+    $('pressure').textContent = 'Lower-cost route uses ' + (income > 0 ? ((lower / income) * 100).toFixed(1) : '0.0') + '% of household net income before fixed commitments.';
+    $('aBreakdown').textContent = 'Route A burden = ' + money(aMonthly) + '.';
+    $('bBreakdown').textContent = 'Route B burden = ' + money(bMonthly) + '.';
+    $('hoursDiff').textContent = Math.abs((bigTime - smallTime) / Math.max(1, hour)).toFixed(1) + 'h';
+    $('resultNote').textContent = diff < 0 ? 'Route A currently carries less monthly burden, but check whether it also solves the underlying map problem.' : diff > 0 ? 'Route B currently carries less monthly burden, but check whether it leaves the wider household system too brittle.' : 'The numbers are close, so the deciding factor is usually resilience, not sticker price.';
+  }
+  Array.from(document.querySelectorAll('input')).forEach((el) => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

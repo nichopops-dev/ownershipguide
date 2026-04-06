@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 06 Apr 2026 · Based on repo v0340
+> Last updated: 06 Apr 2026 · Based on repo v0341
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0340
-**Recent update:** v0340 added three family cross-cluster bridge pages — `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
+**Current version:** v0341
+**Recent update:** v0341 added three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
 
 ### Version history
+- **v0341** — added three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0340** — added three family cross-cluster bridge pages — `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0339** — added three family childcare calculator pages — `childcare-vs-helper-cost-calculator-singapore.html`, `childcare-near-home-vs-near-work-cost-calculator-singapore.html`, and `grandparent-care-vs-paid-care-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0338** — added four family childcare operating-model pages — `childcare-vs-grandparent-care-singapore.html`, `childcare-vs-helper-at-home-singapore.html`, `full-day-childcare-vs-half-day-preschool-singapore.html`, and `childcare-near-home-vs-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
@@ -233,6 +234,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0324 note:** protection deepening bundle added four new comparison pages — `accident-insurance-vs-term-life-insurance-singapore.html`, `term-life-insurance-vs-hospitalisation-rider-singapore.html`, `disability-income-insurance-vs-hospitalisation-rider-singapore.html`, and `hospital-cash-vs-hospitalisation-rider-singapore.html` — and strengthened hub surfacing plus manual inbound links from adjacent protection pages.
 
 **v0334 hardening note:** strengthened `upgrade-downgrade-property-calculator-singapore.html` and `cpf-accrued-interest-singapore.html` above the floor without changing site structure.
+
+**v0341 bridge-calculator note:** added `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html`, extending the childcare location bridge branch with tool-first monthly trade-off calculators.
 
 ### Property (119 content pages) ✅ Very strong
 **v0333 repair note:** restored SITE search-index coverage for `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, refreshed `cpf-accrued-interest-calculator-singapore.html` above the content floor, and normalised property-related `page_registry` drift without touching hub dynamic logic.
