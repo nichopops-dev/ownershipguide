@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Grandparent Care vs Paid Care Cost Calculator Singapore (2026): Compare Family-Supported Care Against a Formal Paid Route</title>
+<meta name="description" content="Compare the monthly household burden of grandparent-supported care versus a paid-care route in Singapore, including support, transport, backup days, lost flexibility, and net paid-care cost."/>
+<link rel="canonical" href="https://ownershipguide.com/grandparent-care-vs-paid-care-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this grandparent care vs paid care calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares the estimated monthly household burden of a grandparent-supported care route against a paid-care route after the user enters allowances, transport, gifts, lost work flexibility, backup care, and the paid route's net fees or helper-style recurring costs."}},{"@type":"Question","name":"Why is grandparent care not treated as free?","acceptedAnswer":{"@type":"Answer","text":"Because even when no formal invoice is issued, the household often still pays through transport, groceries, cash support, duplicate items, lost flexibility, and backup paid care when grandparents are unavailable."}},{"@type":"Question","name":"Can the paid-care route represent childcare or a helper?","acceptedAnswer":{"@type":"Answer","text":"Yes. The paid-care inputs are generic on purpose. Enter the total monthly burden of the paid route you are actually considering, whether that is childcare, infantcare, a helper-led setup, or another structured arrangement."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is pricing the paid route in detail while entering zero for the grandparent route because family help feels informal. Informal does not mean costless. It usually means the cost is scattered across several adults and therefore easier to ignore."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Grandparent Care vs Paid Care Cost Calculator (Singapore, 2026)</p>
+<h1>Grandparent Care vs Paid Care Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator, not a provider quote engine. Use it when the household has already identified the childcare operating-model decision and now needs to compare the full monthly burden instead of arguing from sticker price, habit, or guilt.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the operating-model framework before the arithmetic, start with <a href="/childcare-vs-grandparent-care-singapore.html">childcare vs grandparent care</a>.</li>
+<li>If the real question is whether proximity solves enough of the childcare problem, read <a href="/move-near-grandparents-or-pay-for-infantcare-first-singapore.html">move near grandparents or pay for infantcare first</a>.</li>
+<li>If the paid route you are considering is centre care rather than family support, use the <a href="/childcare-vs-helper-cost-calculator-singapore.html">childcare vs helper cost calculator</a> as a second check.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="income">Household net monthly income (SGD)</label>
+        <input id="income" type="number" min="0" step="100" value="9800"/>
+      </div>
+      <div>
+        <label for="fixed">Existing monthly fixed commitments (SGD)</label>
+        <input id="fixed" type="number" min="0" step="100" value="4800"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — grandparent-supported care</h3>
+    <div class="calc-row">
+      <div>
+        <label for="gpSupport">Monthly allowance, groceries, or cash support to grandparents (SGD)</label>
+        <input id="gpSupport" type="number" min="0" step="10" value="250"/>
+      </div>
+      <div>
+        <label for="gpTransport">Travel, petrol, parking, or ride-hailing linked to this route (SGD)</label>
+        <input id="gpTransport" type="number" min="0" step="10" value="180"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="gpBackup">Backup paid care when grandparents are unavailable (SGD)</label>
+        <input id="gpBackup" type="number" min="0" step="10" value="200"/>
+      </div>
+      <div>
+        <label for="gpLostWork">Lost work flexibility or reduced hours caused by this route (SGD)</label>
+        <input id="gpLostWork" type="number" min="0" step="10" value="220"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="gpSetup">Duplicate household items, food, and setup spread (SGD)</label>
+        <input id="gpSetup" type="number" min="0" step="10" value="90"/>
+      </div>
+      <div>
+        <label for="gpOffset">Offsets or sharing for grandparent route (SGD)</label>
+        <input id="gpOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — paid care</h3>
+    <div class="calc-row">
+      <div>
+        <label for="paidBase">Net monthly cost of your paid-care route (SGD)</label>
+        <input id="paidBase" type="number" min="0" step="10" value="620"/>
+        <p class="small muted" style="margin:6px 0 0">This can represent childcare after subsidy, a helper-led route, or another structured paid arrangement.</p>
+      </div>
+      <div>
+        <label for="paidTransport">Transport, school bus, or route-specific travel cost (SGD)</label>
+        <input id="paidTransport" type="number" min="0" step="10" value="140"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="paidBackup">Illness-day, closure, or extra-hour top-up spending (SGD)</label>
+        <input id="paidBackup" type="number" min="0" step="10" value="120"/>
+      </div>
+      <div>
+        <label for="paidFriction">Registration spread, late fees, or schedule-friction cost (SGD)</label>
+        <input id="paidFriction" type="number" min="0" step="10" value="80"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="paidOffset">Offsets for paid-care route (CDA / levy concession / support) (SGD)</label>
+        <input id="paidOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="muted">Grandparent route net monthly burden</div>
+      <div class="kpi" id="gpMonthly">$0</div>
+      <div class="small muted" id="gpBreakdown">Includes support, travel, backup paid care, and lost-flexibility cost after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Paid-care route net monthly burden</div>
+      <div class="kpi" id="paidMonthly">$0</div>
+      <div class="small muted" id="paidBreakdown">Includes net recurring cost, transport, backup, and route friction after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Monthly difference</div>
+      <div class="kpi" id="diff">$0</div>
+      <div class="small muted" id="diffLabel">Waiting for inputs.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Hidden grandparent-route burden you can absorb before paid care is cheaper</div>
+      <div class="kpi" id="breakeven">$0</div>
+      <div class="small muted">Useful when the family still treats grandparent support as costless because the payments are informal.</div>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Relationship caution</strong>
+      <p id="resultNote" style="margin:8px 0 0">The lower-cost route is not automatically the safer family route. Grandparent-supported care fails when goodwill is carrying too much unpriced load.</p>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Cash left after lower-cost route and fixed bills</strong>
+      <p style="margin:8px 0 0"><strong id="cashLeft">$0</strong></p>
+      <p class="small muted" style="margin:6px 0 0">If the household still has too little room after the cheaper route, the real problem may be broader reserve pressure rather than care-mode choice alone.</p>
+    </div>
+  </div>
+</div>
+<h2 id="measure">What this calculator is really measuring</h2>
+<p>Grandparent-supported care is often described as free because it does not usually arrive as one invoice. That is exactly why families misprice it. The household may still be paying through petrol, car ownership, ride-hailing, groceries, cash support, duplicate items at the grandparents' home, reduced work flexibility, and paid backup on the days grandparents are unavailable. The route can still be the right choice. But it should not be treated as if the family system is absorbing no cost.</p>
+<p>The paid-care route is easier to see because the bill is explicit. That can make it look harsher than it really is. Childcare, infantcare, or helper-led care may create a clearer recurring charge, but they can also reduce the hidden strain of repeated travel, awkward favour-tracking, and one-sided family dependency. Once you model both routes honestly, the comparison often becomes less about saving every dollar and more about deciding which route produces a cleaner, more durable operating system for the adults involved.</p>
+<p>The calculator therefore prices the grandparent route as a family-supported system and the alternative as a structured paid system. The paid-care route is intentionally generic so the household can enter whichever option is actually on the table. Some families are choosing between grandparent help and childcare. Others are deciding between grandparent help and a helper-led arrangement. The planning logic is the same. The question is what the household still needs to carry after support, transport, backup, and flexibility losses are counted.</p>
+<p>This is particularly important when the family is tempted to use proximity or gratitude as a substitute for arithmetic. Gratitude matters. Relationship quality matters. But so do repeated pickup trips, reduced concentration at work, and the need to keep a polite but fragile arrangement functioning month after month. The calculator is not trying to turn family help into a transaction. It is trying to stop the household from making a long-term decision on top of numbers nobody has actually named.</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If the grandparent route comes out cheaper, the next question is whether the arrangement is genuinely sustainable or merely subsidised by silence. Is one grandparent doing most of the work? Does the route depend on their health and stamina remaining unchanged? Are the backup days now frequent enough that paid care is already creeping in around the edges? A low monthly number is useful, but only if the arrangement is not quietly being funded by unspoken resentment or depleted energy.</p>
+<p>If the paid-care route comes out cheaper, do not assume the household has to abandon family involvement. What the result may be revealing is that the informal route has become expensive precisely because the family is trying to preserve it at all costs. Repeated transport, ad-hoc meals, reduced work flexibility, and emergency backup can easily add up. In some cases, paying for a cleaner baseline route while keeping grandparents in a lighter supportive role can actually protect both cashflow and relationships.</p>
+<p>The breakeven output is especially useful when the family keeps insisting that grandparent care is the lower-cost default. It shows how much hidden monthly burden the household can absorb before the paid route becomes cheaper. If the family is already near or past that threshold, the real conversation should shift from guilt or gratitude toward system design: how much care should remain informal, and how much should be formalised so the arrangement stops breaking under the weight of its own vagueness?</p>
+<p>The cash-left figure again matters on close calls. Many family-care debates happen in households that are also carrying a mortgage, transport cost, insurance, and other child-related expenses. If both routes leave too little margin, the family may need a broader reserve or housing conversation. Care-route optimisation cannot solve a household balance sheet that is already too tight.</p>
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — grandparents are willing, nearby, and still healthy.</strong> The grandparent route can remain clearly cheaper when travel is short, support expectations are explicit, and the family still has a clean paid backup for illness or travel days. The key is that goodwill is helping an organised system, not replacing one.</p>
+<p><strong>Scenario 2 — grandparents help often, but one parent is driving back and forth constantly.</strong> This is where families start discovering that informal care is not actually cheap. Petrol, parking, duplicate meals, and reduced work flexibility accumulate even though nobody writes them on one invoice. The calculator is useful precisely because it reveals that spread-out drag.</p>
+<p><strong>Scenario 3 — the family feels guilty about considering paid care because grandparents seem available.</strong> Guilt often causes underpricing. If the paid route looks slightly more expensive but removes a large amount of travel, emergency scrambling, and implicit obligation, it may still be the stronger route. The correct goal is not to minimise formal spending at all costs. It is to build a care arrangement that can last.</p>
+<h2>What this calculator cannot decide for you</h2>
+<p>This tool cannot tell you whether grandparents actually want the role in the form the household is imagining. It cannot tell you whether their health, patience, or mobility will remain stable. It cannot tell you whether a childcare centre or helper arrangement will produce a better developmental fit for the child. It also cannot quantify relationship strain with precision.</p>
+<p>What it can do is stop the family from comparing a detailed paid-care invoice against a zero-dollar fantasy. Once both sides are modelled honestly, the household is in a much better position to decide which parts of care should remain informal and which parts should be formalised.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Entering zero for the grandparent route because no salary changes hands.</strong> Informal support still creates real recurring burden.</li>
+<li><strong>Ignoring transport and lost-flexibility cost.</strong> These are often the biggest hidden pieces of grandparent-supported care.</li>
+<li><strong>Using a vague paid-care number.</strong> Enter the route you are actually considering, not a best-case brochure rate.</li>
+<li><strong>Assuming backup days are rare.</strong> School closures, illness, travel, and caregiver fatigue all create patching cost.</li>
+<li><strong>Treating the cheaper route as morally superior.</strong> The more useful goal is a route that preserves both household capacity and family relationships.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3>What does this grandparent care vs paid care calculator compare?</h3>
+<p>It compares the estimated monthly household burden of a grandparent-supported care route against a paid-care route after the user enters allowances, transport, gifts, lost work flexibility, backup care, and the paid route's net fees or helper-style recurring costs.</p>
+<h3>Why is grandparent care not treated as free?</h3>
+<p>Because even when no formal invoice is issued, the household often still pays through transport, groceries, cash support, duplicate items, lost flexibility, and backup paid care when grandparents are unavailable.</p>
+<h3>Can the paid-care route represent childcare or a helper?</h3>
+<p>Yes. The paid-care inputs are generic on purpose. Enter the total monthly burden of the paid route you are actually considering, whether that is childcare, infantcare, a helper-led setup, or another structured arrangement.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is pricing the paid route in detail while entering zero for the grandparent route because family help feels informal. Informal does not mean costless. It usually means the cost is scattered across several adults and therefore easier to ignore.</p>
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/childcare-vs-grandparent-care-singapore.html">Childcare vs grandparent care</a></li>
+<li><a href="/move-near-grandparents-or-pay-for-infantcare-first-singapore.html">Move near grandparents or pay for infantcare first</a></li>
+<li><a href="/childcare-vs-helper-cost-calculator-singapore.html">Childcare vs helper cost calculator</a></li>
+<li><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">How much it costs to raise a child</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.ecda.gov.sg/parents/preschool-subsidies" rel="nofollow noopener" target="_blank">ECDA: Preschool subsidies</a></li>
+<li><a href="https://www.ecda.gov.sg/parents/preschool-search" rel="nofollow noopener" target="_blank">ECDA: Preschool search</a></li>
+<li><a href="https://www.ecda.gov.sg/parents/choosing-a-preschool" rel="nofollow noopener" target="_blank">ECDA: Choosing a preschool for your child</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker/foreign-domestic-worker-levy/paying-levy" rel="nofollow noopener" target="_blank">MOM: Paying levy for a migrant domestic worker</a></li>
+<li><a href="https://www.msf.gov.sg/what-we-do/swd/key-areas-of-support/recognition-support-for-caregivers" rel="nofollow noopener" target="_blank">MSF: Recognition and support for caregivers</a></li>
+<li><a href="https://www.msf.gov.sg/media-room/article/msf-committee-of-supply-2026--a-singapore-made-for-families--a-good-start-for-every-child" rel="nofollow noopener" target="_blank">MSF: Committee of Supply 2026 – A Singapore Made for Families</a></li>
+</ul>
+<p><strong>Last updated:</strong> 06 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  function calc() {
+    const income = num('income');
+    const fixed = num('fixed');
+    const gpMonthly = Math.max(0, num('gpSupport') + num('gpTransport') + num('gpBackup') + num('gpLostWork') + num('gpSetup') - num('gpOffset'));
+    const paidMonthly = Math.max(0, num('paidBase') + num('paidTransport') + num('paidBackup') + num('paidFriction') - num('paidOffset'));
+    const diff = gpMonthly - paidMonthly;
+    const cheaper = diff < 0 ? 'Grandparent-supported care is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : diff > 0 ? 'The paid-care route is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : 'Both routes are currently equal on monthly burden.';
+    const lower = Math.min(gpMonthly, paidMonthly);
+    const cashLeft = Math.max(0, income - fixed - lower);
+
+    $('gpMonthly').textContent = money(gpMonthly);
+    $('paidMonthly').textContent = money(paidMonthly);
+    $('diff').textContent = money(Math.abs(diff));
+    $('diffLabel').textContent = cheaper;
+    $('breakeven').textContent = money(Math.abs(diff));
+    $('cashLeft').textContent = money(cashLeft);
+    $('gpBreakdown').textContent = 'Support + travel + backup + lost-flexibility cost after offsets = ' + money(gpMonthly) + '.';
+    $('paidBreakdown').textContent = 'Paid route + transport + backup + friction after offsets = ' + money(paidMonthly) + '.';
+    $('resultNote').textContent = diff <= 0
+      ? 'The grandparent route is currently cheaper, but check whether that result depends on informal labour nobody has really agreed to carry for long.'
+      : 'The paid route is currently cheaper, which often means the informal route is creating more hidden travel, backup, or work-disruption cost than the household had named.';
+  }
+  Array.from(document.querySelectorAll('input')).forEach((el) => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

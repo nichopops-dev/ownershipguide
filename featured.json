@@ -1038,7 +1038,7 @@
       },
       {
         "url": "/how-much-cash-to-buy-property-calculator-singapore.html",
-        "title": "How Much Cash to Buy a Property in Singapore (2026) — Upfront Cas",
+        "title": "How Much Cash to Buy a Property in Singapore (2026) \u2014 Upfront Cas",
         "desc": "",
         "date": "2026-03-01"
       },
@@ -1086,7 +1086,7 @@
       },
       {
         "url": "/property-sell-buy-pipeline-calculator-singapore.html",
-        "title": "Sell → Buy Next Pipeline Calculator (Singapore)",
+        "title": "Sell \u2192 Buy Next Pipeline Calculator (Singapore)",
         "desc": "",
         "date": "2026-03-01"
       },
@@ -1153,6 +1153,12 @@
     ],
     "family": [
       {
+        "url": "/childcare-near-home-vs-near-work-cost-calculator-singapore.html",
+        "title": "Childcare Near Home vs Near Work Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly burden of placing childcare near home versus near work in Singapore, including f",
+        "date": "2026-04-06"
+      },
+      {
         "url": "/childcare-near-home-vs-near-work-singapore.html",
         "title": "Childcare Near Home vs Near Work in Singapore (2026)",
         "desc": "Childcare near home vs near work in Singapore in 2026: compare commute resilience, pickup stress, pa",
@@ -1171,21 +1177,27 @@
         "date": "2026-04-06"
       },
       {
+        "url": "/childcare-vs-helper-cost-calculator-singapore.html",
+        "title": "Childcare vs Helper Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly household burden of childcare versus a live-in helper in Singapore, including fe",
+        "date": "2026-04-06"
+      },
+      {
         "url": "/full-day-childcare-vs-half-day-preschool-singapore.html",
         "title": "Full-Day Childcare vs Half-Day Preschool in Singapore (2026)",
         "desc": "Full-day childcare vs half-day preschool in Singapore in 2026: compare household schedule fit, picku",
         "date": "2026-04-06"
       },
       {
-        "url": "/how-much-does-preschool-cost-singapore.html",
-        "title": "How Much Does Preschool Cost in Singapore? (2026)",
-        "desc": "How much preschool costs in Singapore in 2026: a practical framework for preschool-stage recurring f",
+        "url": "/grandparent-care-vs-paid-care-cost-calculator-singapore.html",
+        "title": "Grandparent Care vs Paid Care Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly household burden of grandparent-supported care versus a paid-care route in Singa",
         "date": "2026-04-06"
       },
       {
-        "url": "/infantcare-vs-childcare-cost-singapore.html",
-        "title": "Infantcare vs Childcare Cost in Singapore (2026)",
-        "desc": "Infantcare vs childcare cost in Singapore in 2026: a practical comparison of fees, timing, work-retu",
+        "url": "/how-much-does-preschool-cost-singapore.html",
+        "title": "How Much Does Preschool Cost in Singapore? (2026)",
+        "desc": "How much preschool costs in Singapore in 2026: a practical framework for preschool-stage recurring f",
         "date": "2026-04-06"
       },
       {
@@ -1238,8 +1250,8 @@
       },
       {
         "url": "/fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html",
-        "title": "Fund Child Enrichment or Support Parents’ Medical Costs First in Singapore (2026)",
-        "desc": "Fund child enrichment or support parents’ medical costs first in Singapore: a framework for choosing",
+        "title": "Fund Child Enrichment or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+        "desc": "Fund child enrichment or support parents\u2019 medical costs first in Singapore: a framework for choosing",
         "date": "2026-04-04"
       },
       {
@@ -2005,6 +2017,12 @@
         "date": "2026-03-19"
       },
       {
+        "url": "/infantcare-vs-childcare-cost-singapore.html",
+        "title": "Infantcare vs Childcare Cost in Singapore (2026)",
+        "desc": "Infantcare vs childcare cost in Singapore in 2026: a practical comparison of fees, timing, work-retu",
+        "date": "2026-03-16"
+      },
+      {
         "url": "/careshield-life-supplement-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html",
         "title": "CareShield Life Supplement vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026)",
         "desc": "CareShield Life supplement vs bigger cash buffer when supporting aging parents in Singapore: decide ",
@@ -2104,8 +2122,8 @@
       },
       {
         "url": "/increase-critical-illness-insurance-or-top-up-parents-cpf-first-singapore.html",
-        "title": "Increase Critical-Illness Insurance or Top Up Parents’ CPF First in Singapore (2026)",
-        "desc": "Increase critical-illness insurance or top up parents’ CPF first in Singapore: a framework for decid",
+        "title": "Increase Critical-Illness Insurance or Top Up Parents\u2019 CPF First in Singapore (2026)",
+        "desc": "Increase critical-illness insurance or top up parents\u2019 CPF first in Singapore: a framework for decid",
         "date": "2026-04-01"
       },
       {
@@ -2334,8 +2352,8 @@
       },
       {
         "url": "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html",
-        "title": "Increase Index-Fund Investing or Support Parents’ Medical Costs First in Singapore (2026)",
-        "desc": "Increase index-fund investing or support parents’ medical costs first in Singapore: a framework for ",
+        "title": "Increase Index-Fund Investing or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+        "desc": "Increase index-fund investing or support parents\u2019 medical costs first in Singapore: a framework for ",
         "date": "2026-04-04"
       },
       {
@@ -2660,6 +2678,27 @@
   },
   "new": [
     {
+      "url": "/grandparent-care-vs-paid-care-cost-calculator-singapore.html",
+      "title": "Grandparent Care vs Paid Care Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly household burden of grandparent-supported care versus a paid-care route in Singa",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/childcare-vs-helper-cost-calculator-singapore.html",
+      "title": "Childcare vs Helper Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly household burden of childcare versus a live-in helper in Singapore, including fe",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/childcare-near-home-vs-near-work-cost-calculator-singapore.html",
+      "title": "Childcare Near Home vs Near Work Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly burden of placing childcare near home versus near work in Singapore, including f",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/full-day-childcare-vs-half-day-preschool-singapore.html",
       "title": "Full-Day Childcare vs Half-Day Preschool in Singapore (2026)",
       "desc": "Full-day childcare vs half-day preschool in Singapore in 2026: compare household schedule fit, picku",
@@ -2667,30 +2706,9 @@
       "clusterLabel": "Family"
     },
     {
-      "url": "/childcare-vs-helper-at-home-singapore.html",
-      "title": "Childcare vs Helper at Home in Singapore (2026)",
-      "desc": "Childcare vs helper at home in Singapore in 2026: compare recurring cost, supervision quality, house",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/childcare-vs-grandparent-care-singapore.html",
-      "title": "Childcare vs Grandparent Care in Singapore (2026)",
-      "desc": "Childcare vs grandparent care in Singapore in 2026: compare reliability, hidden strain, family bound",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/childcare-near-home-vs-near-work-singapore.html",
-      "title": "Childcare Near Home vs Near Work in Singapore (2026)",
-      "desc": "Childcare near home vs near work in Singapore in 2026: compare commute resilience, pickup stress, pa",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
       "url": "/increase-index-fund-investing-or-support-parents-medical-costs-first-singapore.html",
-      "title": "Increase Index-Fund Investing or Support Parents’ Medical Costs First in Singapore (2026)",
-      "desc": "Increase index-fund investing or support parents’ medical costs first in Singapore: a framework for ",
+      "title": "Increase Index-Fund Investing or Support Parents\u2019 Medical Costs First in Singapore (2026)",
+      "desc": "Increase index-fund investing or support parents\u2019 medical costs first in Singapore: a framework for ",
       "cluster": "investing",
       "clusterLabel": "Investing"
     },
@@ -4598,6 +4616,15 @@
     },
     "full-day-childcare-vs-half-day-preschool-singapore.html": {
       "first_seen": "2026-04-09"
+    },
+    "childcare-near-home-vs-near-work-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-10"
+    },
+    "childcare-vs-helper-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-11"
+    },
+    "grandparent-care-vs-paid-care-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-12"
     }
   }
 }

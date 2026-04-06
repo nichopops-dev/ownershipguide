@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Childcare vs Helper Cost Calculator Singapore (2026): Compare Full-Day Centre Care Against a Live-In Helper Before the Household Commits</title>
+<meta name="description" content="Compare the monthly household burden of childcare versus a live-in helper in Singapore, including fees after subsidies, levy, agency spread, transport, closures, and backup-care cost."/>
+<link rel="canonical" href="https://ownershipguide.com/childcare-vs-helper-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this childcare vs helper calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares the estimated monthly household burden of full-day childcare against a live-in helper route after the user enters net fees, transport, after-hours top-ups, helper salary, levy, food, setup spread, and backup costs."}},{"@type":"Question","name":"Does the calculator assume childcare is always cheaper?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator is input-driven. Childcare can look cheaper if subsidies are strong and the family does not need broad household support. A helper can look cheaper if the household uses that person across childcare, chores, and schedule gaps. The point is to compare the real recurring burden, not the story each route tells."}},{"@type":"Question","name":"Should I enter subsidised or grant-adjusted numbers?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter the net amount the household still needs to carry after subsidies, Child Development Account use, levy concession, sibling cost sharing, or employer support. The tool is for household planning, not for list-price comparison."}},{"@type":"Question","name":"What is the most common mistake when using this calculator?","acceptedAnswer":{"@type":"Answer","text":"The most common mistake is treating childcare as only a school bill and a helper as only a salary. The more useful comparison includes transport, closures, late-pickup risk, food and utility cost, agency spread, and the backup spending that appears when the system is under stress."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Childcare vs Helper Cost Calculator (Singapore, 2026)</p>
+<h1>Childcare vs Helper Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator, not a provider quote engine. Use it when the household has already identified the childcare operating-model decision and now needs to compare the full monthly burden instead of arguing from sticker price, habit, or guilt.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you still need the decision frame first, start with <a href="/childcare-vs-helper-at-home-singapore.html">childcare vs helper at home</a>.</li>
+<li>If the real question is infant-stage care instead of childcare-stage care, compare <a href="/maid-vs-infantcare-cost-singapore.html">maid vs infantcare cost</a>.</li>
+<li>If location friction is distorting childcare costs, use the <a href="/childcare-near-home-vs-near-work-cost-calculator-singapore.html">childcare near home vs near work cost calculator</a>.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row">
+      <div>
+        <label for="income">Household net monthly income (SGD)</label>
+        <input id="income" type="number" min="0" step="100" value="9800"/>
+        <p class="small muted" style="margin:6px 0 0">Use take-home cashflow if the question is survivability rather than headline affordability.</p>
+      </div>
+      <div>
+        <label for="fixed">Existing monthly fixed commitments (SGD)</label>
+        <input id="fixed" type="number" min="0" step="100" value="4800"/>
+        <p class="small muted" style="margin:6px 0 0">Mortgage or rent, debt, insurance, and the rest of the household's sticky bills.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route A — childcare</h3>
+    <div class="calc-row">
+      <div>
+        <label for="ccFee">Net monthly childcare fee after subsidy (SGD)</label>
+        <input id="ccFee" type="number" min="0" step="10" value="450"/>
+        <p class="small muted" style="margin:6px 0 0">ECDA and MSF note that subsidies and government-supported fee caps can materially change out-of-pocket cost. Enter your real household burden.</p>
+      </div>
+      <div>
+        <label for="ccTransport">Transport, school bus, or regular pick-up travel cost (SGD)</label>
+        <input id="ccTransport" type="number" min="0" step="10" value="160"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="ccTopUp">After-hours, school-holiday, illness-day, and closure top-up care (SGD)</label>
+        <input id="ccTopUp" type="number" min="0" step="10" value="220"/>
+      </div>
+      <div>
+        <label for="ccLate">Late-pickup fees, emergency rides, and schedule-friction cost (SGD)</label>
+        <input id="ccLate" type="number" min="0" step="10" value="80"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="ccAddOns">Meals, enrichment, registration spread, and small add-ons (SGD)</label>
+        <input id="ccAddOns" type="number" min="0" step="10" value="120"/>
+      </div>
+      <div>
+        <label for="ccOffset">Offsets for childcare route (CDA use / sibling sharing / employer help) (SGD)</label>
+        <input id="ccOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <h3>Route B — live-in helper</h3>
+    <div class="calc-row">
+      <div>
+        <label for="helperSalary">Helper monthly salary (SGD)</label>
+        <input id="helperSalary" type="number" min="0" step="10" value="750"/>
+      </div>
+      <div>
+        <label for="helperLevy">Helper monthly levy (SGD)</label>
+        <input id="helperLevy" type="number" min="0" step="10" value="300"/>
+        <p class="small muted" style="margin:6px 0 0">MOM states the standard MDW levy is $300 per month, with concessionary rates for eligible households. Use your real rate.</p>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperFood">Food, utilities, supplies, room-use, and household running cost (SGD)</label>
+        <input id="helperFood" type="number" min="0" step="10" value="220"/>
+      </div>
+      <div>
+        <label for="helperAnnual">Insurance, medical, renewal, and admin cost per year (SGD)</label>
+        <input id="helperAnnual" type="number" min="0" step="50" value="900"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperSetup">Agency, placement, onboarding, and room-setup cost to spread (SGD)</label>
+        <input id="helperSetup" type="number" min="0" step="100" value="2600"/>
+      </div>
+      <div>
+        <label for="setupMonths">Spread helper setup over how many months?</label>
+        <input id="setupMonths" type="number" min="1" step="1" value="12"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperTopUp">Part-time classes, playgroup, or other developmental top-up spending (SGD)</label>
+        <input id="helperTopUp" type="number" min="0" step="10" value="120"/>
+      </div>
+      <div>
+        <label for="helperBackup">Rest-day replacement, leave coverage, and backup-care buffer (SGD)</label>
+        <input id="helperBackup" type="number" min="0" step="10" value="180"/>
+      </div>
+    </div>
+    <div class="calc-row">
+      <div>
+        <label for="helperOffset">Offsets for helper route (levy concession / shared support / other) (SGD)</label>
+        <input id="helperOffset" type="number" min="0" step="10" value="0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box">
+      <div class="muted">Childcare route net monthly burden</div>
+      <div class="kpi" id="ccMonthly">$0</div>
+      <div class="small muted" id="ccBreakdown">Includes fee, transport, add-ons, and top-up care after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Helper route net monthly burden</div>
+      <div class="kpi" id="helperMonthly">$0</div>
+      <div class="small muted" id="helperBreakdown">Includes salary, levy, food, annual admin spread, setup spread, and backup cost after offsets.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Monthly difference</div>
+      <div class="kpi" id="diff">$0</div>
+      <div class="small muted" id="diffLabel">Waiting for inputs.</div>
+    </div>
+    <div class="kpi-box" style="margin-top:12px;">
+      <div class="muted">Cash left after care route and fixed bills</div>
+      <div class="kpi" id="cashLeft">$0</div>
+      <div class="small muted">A route that looks slightly cheaper but leaves almost no slack can still be the weaker operating model.</div>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Hidden-cost threshold</strong>
+      <p id="threshold" style="margin:8px 0 0">If your helper route still needs large rest-day replacement, class top-ups, or turnover risk buffers, the supposed savings may disappear quickly.</p>
+    </div>
+    <div class="note" style="margin-top:12px;">
+      <strong>Pressure ratio</strong>
+      <p style="margin:8px 0 0">Care burden as a share of household net income: <strong id="pressure">0%</strong></p>
+      <p class="small muted" style="margin:6px 0 0">This is not a rule. It is a stress signal. Childcare can still be the stronger route at a higher ratio if it removes more operational fragility.</p>
+    </div>
+  </div>
+</div>
+<h2 id="measure">What this calculator is really measuring</h2>
+<p>Families often argue about childcare and a helper as if one route is a school bill and the other is a salary. That framing is too thin. A childcare route is not only monthly fees. It is also transport, pickup stress, school closure coverage, illness-day improvisation, registration fees spread across the year, and the little top-ups that appear when the centre schedule does not fully cover the family schedule. A helper route is not only salary plus levy. It is an employment system that also includes food, utilities, insurance, medical checks, agency spread, rest-day coverage, and the reality that most households still spend on developmental structure outside the home because full-day supervision is not the same thing as a clean early-years programme.</p>
+<p>The calculator is built to convert those two narratives into comparable monthly burdens. That matters because each route hides a different kind of cost. Childcare makes the care bill visible, but hides closure friction and commute complexity. A helper makes schedule coverage feel broader, but hides the cost of becoming an employer inside a family system that may already be stretched. Once you place both routes on the same page, the choice becomes less about ideology and more about which operating model the household can actually sustain.</p>
+<p>It also matters because Singapore childcare fees have changed in a way that can distort instinct. ECDA and MSF continue to publish government-supported preschool fee caps and subsidy pathways. That means one household can face a very different childcare bill from another even if both are talking about “full-day childcare.” A helper route also varies materially depending on whether the family qualifies for levy concession, needs agency placement now, or can spread setup cost over a longer period. Sticker-price arguments therefore tend to be noisy. Net monthly burden is usually the more useful planning lens.</p>
+<p>The deeper purpose of the tool is not to prove childcare or helper care is universally better. It is to stop the family from using the wrong baseline. The wrong baseline is usually “the helper does everything so it must be more efficient,” or “childcare is a school fee so it must be cleaner.” The more honest baseline is: after the unavoidable extras are counted, which route produces the lower monthly drag and the more durable daily routine?</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If childcare comes out cheaper, do not conclude that the helper route is automatically wrong. The next question is whether the childcare route still works when the centre closes, the child falls sick, one parent travels, or pickup windows start colliding with work. A childcare number can look attractive because it is clean, but the household still needs to pressure-test the exception days. What the result does tell you is that the helper route should not be treated as obviously cheaper just because the childcare invoice looks large.</p>
+<p>If the helper route comes out cheaper, do not conclude that the household has solved the problem. Check what assumptions created that result. Did you underprice agency spread because you only looked at salary? Did you price rest-day replacement at zero because grandparents will “probably help”? Did you exclude room-use or home setup because those costs feel awkward to acknowledge? A helper route with missing support assumptions is not a stable result. It is a partial result that will usually be corrected by life later.</p>
+<p>The cash-left number matters most on close calls. If one route is only slightly cheaper but leaves almost no margin after mortgage, insurance, debt, and the rest of the household system, it may still be the weaker route. That is especially true when the family is also planning for a second child, a property upgrade, or heavier transport reliance. In those cases, the route difference is less important than whether the family has room to absorb one messy month without turning every disruption into new credit-card spending.</p>
+<p>The threshold note is there to stop one very common error: pretending that helper-led care has no developmental or backup top-up cost. Many families still pay for part-time classes, playgroup, emergency holiday coverage, or short-notice replacement support. If those items keep appearing, the helper route can lose its apparent advantage quickly. Once that is visible, the decision becomes cleaner: you are not comparing a centre against a theoretical all-in-one helper. You are comparing one structured paid route against another broader but more management-heavy paid route.</p>
+<h2>Scenario examples</h2>
+<p><strong>Scenario 1 — both parents work standard office hours and can access a government-supported preschool slot.</strong> The childcare route often becomes stronger when the net fee is moderated by subsidies and the household mainly needs predictable weekday coverage. In that scenario, the hidden risks are late pickup, illness days, and school closures. If those are manageable, the centre route can be both cleaner and cheaper than expected.</p>
+<p><strong>Scenario 2 — the household needs care plus broad domestic support.</strong> The helper route can pull ahead when the family is not only paying for child supervision but also using that same capacity across meals, laundry, handoff gaps, and unpredictable schedule changes. The key question is not whether the helper covers more jobs. It is whether the household actually values and can manage that broader scope enough to justify becoming an employer.</p>
+<p><strong>Scenario 3 — one parent works shifts or travels irregularly.</strong> The calculation often gets closer here. Childcare may still look neat on paper, but once backup rides, late-fee risk, and holiday patching are counted, the clean cost advantage can shrink. That is usually the point where the family should stop asking which route is more prestigious or “normal” and focus instead on which system survives disruption with less emergency spending.</p>
+<h2>What this calculator cannot decide for you</h2>
+<p>This tool cannot tell you whether your child will settle well in a particular centre. It cannot tell you whether your home layout, privacy needs, or family dynamics make a live-in helper arrangement realistic. It cannot tell you whether a grandparent will quietly fill the gaps you left out of the inputs. It also cannot tell you whether the cheaper route on paper is the route that gives the adults in the household more emotional resilience.</p>
+<p>Those are judgment calls. But judgment improves when the arithmetic is honest. The calculator helps by putting both the visible bill and the hidden structural add-ons in one place. Once that is done, the household can stop arguing from identity and start deciding from operating reality.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+<li><strong>Using list prices instead of net out-of-pocket cost.</strong> Use the post-subsidy fee and your real levy rate, not a headline brochure number.</li>
+<li><strong>Pricing childcare but not pricing closure friction.</strong> Sick days, school holidays, and late pickup are not edge cases. They are part of the operating model.</li>
+<li><strong>Pricing helper salary but not pricing setup spread.</strong> Agency, insurance, medical, and home-setup cost are part of first-year reality.</li>
+<li><strong>Treating helper-led care as if it has zero developmental top-up cost.</strong> Many households still pay for classes, playgroup, or outside structure.</li>
+<li><strong>Using the lower number as the whole answer.</strong> The cheaper route can still be weaker if it leaves less buffer or depends on more hidden family labour.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3>What does this childcare vs helper calculator compare?</h3>
+<p>It compares the estimated monthly household burden of full-day childcare against a live-in helper route after the user enters net fees, transport, after-hours top-ups, helper salary, levy, food, setup spread, and backup costs.</p>
+<h3>Does the calculator assume childcare is always cheaper?</h3>
+<p>No. The calculator is input-driven. Childcare can look cheaper if subsidies are strong and the family does not need broad household support. A helper can look cheaper if the household uses that person across childcare, chores, and schedule gaps. The point is to compare the real recurring burden, not the story each route tells.</p>
+<h3>Should I enter subsidised or grant-adjusted numbers?</h3>
+<p>Yes. Enter the net amount the household still needs to carry after subsidies, Child Development Account use, levy concession, sibling cost sharing, or employer support. The tool is for household planning, not for list-price comparison.</p>
+<h3>What is the most common mistake when using this calculator?</h3>
+<p>The most common mistake is treating childcare as only a school bill and a helper as only a salary. The more useful comparison includes transport, closures, late-pickup risk, food and utility cost, agency spread, and the backup spending that appears when the system is under stress.</p>
+<section class="box" style="margin-top:18px"><!-- see-also-links -->
+<h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/childcare-vs-helper-at-home-singapore.html">Childcare vs helper at home</a></li>
+<li><a href="/maid-vs-infantcare-cost-singapore.html">Maid vs infantcare cost</a></li>
+<li><a href="/childcare-near-home-vs-near-work-cost-calculator-singapore.html">Childcare near home vs near work cost calculator</a></li>
+<li><a href="/grandparent-care-vs-paid-care-cost-calculator-singapore.html">Grandparent care vs paid care cost calculator</a></li>
+</ul>
+<!-- end-see-also --></section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.ecda.gov.sg/parents/preschool-subsidies" rel="nofollow noopener" target="_blank">ECDA: Preschool subsidies</a></li>
+<li><a href="https://www.ecda.gov.sg/parents/preschool-subsidies/infant-and-childcare-subsidy-scheme/overview" rel="nofollow noopener" target="_blank">ECDA: Infant and childcare subsidy scheme overview</a></li>
+<li><a href="https://www.ecda.gov.sg/parents/choosing-a-preschool/aop" rel="nofollow noopener" target="_blank">ECDA: Anchor Operator Scheme (AOP)</a></li>
+<li><a href="https://www.ecda.gov.sg/parents/choosing-a-preschool/pop/partner-operator-scheme-3" rel="nofollow noopener" target="_blank">ECDA: Partner Operator Scheme (POP)</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker/foreign-domestic-worker-levy/paying-levy" rel="nofollow noopener" target="_blank">MOM: Paying levy for a migrant domestic worker</a></li>
+<li><a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-domestic-worker/key-facts" rel="nofollow noopener" target="_blank">MOM: Key facts on Work Permit for MDW</a></li>
+</ul>
+<p><strong>Last updated:</strong> 06 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  function calc() {
+    const income = num('income');
+    const fixed = num('fixed');
+    const ccMonthly = Math.max(0, num('ccFee') + num('ccTransport') + num('ccTopUp') + num('ccLate') + num('ccAddOns') - num('ccOffset'));
+    const helperMonthly = Math.max(0,
+      num('helperSalary') + num('helperLevy') + num('helperFood') + (num('helperAnnual') / 12) + (num('helperSetup') / Math.max(1, num('setupMonths'))) + num('helperTopUp') + num('helperBackup') - num('helperOffset')
+    );
+    const diff = ccMonthly - helperMonthly;
+    const cheaper = diff < 0 ? 'Childcare is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : diff > 0 ? 'Helper-led care is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : 'Both routes are currently equal on monthly burden.';
+    const lower = Math.min(ccMonthly, helperMonthly);
+    const cashLeft = Math.max(0, income - fixed - lower);
+    const pressure = income > 0 ? (lower / income) * 100 : 0;
+    const threshold = Math.max(0, Math.abs(diff));
+
+    $('ccMonthly').textContent = money(ccMonthly);
+    $('helperMonthly').textContent = money(helperMonthly);
+    $('diff').textContent = money(Math.abs(diff));
+    $('diffLabel').textContent = cheaper;
+    $('cashLeft').textContent = money(cashLeft);
+    $('pressure').textContent = pressure.toFixed(1) + '%';
+    $('ccBreakdown').textContent = 'Fee + transport + closures + add-ons after offsets = ' + money(ccMonthly) + '.';
+    $('helperBreakdown').textContent = 'Salary + levy + food + admin spread + setup spread + top-ups after offsets = ' + money(helperMonthly) + '.';
+    $('threshold').textContent = 'If the helper route still attracts more than ' + money(threshold) + ' of extra unseen cost each month, its current price advantage disappears.';
+  }
+  Array.from(document.querySelectorAll('input')).forEach((el) => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>
