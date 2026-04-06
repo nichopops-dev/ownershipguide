@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 05 Apr 2026 · Based on repo v0337
+> Last updated: 06 Apr 2026 · Based on repo v0338
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0337
-**Recent update:** v0337 completed the remaining `featured.json` metadata cleanup by canonicalising leftover bare-vs-`.html` `page_registry` duplicates to `.html` keys, teaching `generate-featured.py` to merge legacy bare keys automatically, and regenerating `featured.json` + `sitemap.xml` so recency surfaces stay stable on future runs.
+**Current version:** v0338
+**Recent update:** v0338 added four family childcare operating-model pages covering grandparent care, helper-led care, programme shape, and centre-location trade-offs; refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 
 ### Version history
+- **v0338** — added four family childcare operating-model pages — `childcare-vs-grandparent-care-singapore.html`, `childcare-vs-helper-at-home-singapore.html`, `full-day-childcare-vs-half-day-preschool-singapore.html`, and `childcare-near-home-vs-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0337** — completed the remaining `featured.json` integrity cleanup by canonicalising seven lingering bare-vs-`.html` `page_registry` duplicates to `.html` keys, hardening `generate-featured.py` to merge legacy bare keys automatically, and regenerating `featured.json` + `sitemap.xml`.
 - **v0336** — hardened `featured.json` recency surfaces by removing slash/bare `page_registry` duplicates, canonicalising the four v0335 investing-page entries to bare keys with clean first_seen dates, and regenerating `featured.json` + `sitemap.xml`.
 - **v0335** — added four investing-led bridge pages linking SSB reserve-building to protection priorities and index-fund compounding to family-obligation trade-offs; refreshed investing/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
@@ -266,6 +267,8 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 ## 8. Cluster Status
 
 ### Family (134 content pages) ✅ Largest cluster
+
+**v0338 operating-model note:** added `childcare-vs-grandparent-care-singapore.html`, `childcare-vs-helper-at-home-singapore.html`, `full-day-childcare-vs-half-day-preschool-singapore.html`, and `childcare-near-home-vs-near-work-singapore.html` to deepen the early-years family cluster around sustainable childcare setup decisions rather than fee tables alone.
 
 **v0330 bridge note:** added `move-near-parents-or-pay-for-helper-first-singapore.html` and `fund-child-enrichment-or-support-parents-medical-costs-first-singapore.html`, extending the family cluster into parent-support location decisions and intergenerational spend sequencing.
 
