@@ -3,6 +3,18 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html",
+        "title": "Buy a Family Car or Move Closer to Work and School First in Singapore (2026)",
+        "desc": "Buy a family car or move closer to work and school first in Singapore: a framework for deciding whet",
+        "date": "2026-04-06"
+      },
+      {
+        "url": "/does-your-household-need-a-second-car-singapore.html",
+        "title": "Does Your Household Need a Second Car in Singapore? (2026 Decisio",
+        "desc": "Does your household need a second car in Singapore (2026)? A decision framework covering coordinatio",
+        "date": "2026-04-06"
+      },
+      {
         "url": "/buy-family-car-or-build-down-payment-fund-first-singapore.html",
         "title": "Buy a Family Car or Build a Down Payment Fund First in Singapore (2026)",
         "desc": "Buy a family car or build a down payment fund first in Singapore: a framework for comparing near-ter",
@@ -12,12 +24,6 @@
         "url": "/buy-family-car-or-fund-helper-first-singapore.html",
         "title": "Buy a Family Car or Fund a Helper First in Singapore (2026)",
         "desc": "Buy a family car or fund a helper first in Singapore: a framework for deciding whether the next hous",
-        "date": "2026-04-01"
-      },
-      {
-        "url": "/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html",
-        "title": "Buy a Family Car or Move Closer to Work and School First in Singapore (2026)",
-        "desc": "Buy a family car or move closer to work and school first in Singapore: a framework for deciding whet",
         "date": "2026-04-01"
       },
       {
@@ -252,12 +258,6 @@
         "url": "/car-sharing-vs-ride-hailing-singapore.html",
         "title": "Car-Sharing vs Ride-Hailing in Singapore (2026)",
         "desc": "Car-sharing vs ride-hailing in Singapore (2026): a framework for occasional-use households choosing ",
-        "date": "2026-03-18"
-      },
-      {
-        "url": "/does-your-household-need-a-second-car-singapore.html",
-        "title": "Does Your Household Need a Second Car in Singapore? (2026 Decisio",
-        "desc": "Does your household need a second car in Singapore (2026)? A decision framework covering coordinatio",
         "date": "2026-03-18"
       },
       {
@@ -1153,6 +1153,12 @@
     ],
     "family": [
       {
+        "url": "/bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html",
+        "title": "Bigger Home Farther Out vs Smaller Home Near Childcare in Singapore (2026)",
+        "desc": "Bigger home farther out or smaller home near childcare in Singapore: a practical framework for decid",
+        "date": "2026-04-06"
+      },
+      {
         "url": "/childcare-near-home-vs-near-work-cost-calculator-singapore.html",
         "title": "Childcare Near Home vs Near Work Cost Calculator Singapore (2026)",
         "desc": "Compare the monthly burden of placing childcare near home versus near work in Singapore, including f",
@@ -1207,6 +1213,18 @@
         "date": "2026-04-06"
       },
       {
+        "url": "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html",
+        "title": "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026)",
+        "desc": "Move closer to school or keep your home and own a car in Singapore: a practical framework for decidi",
+        "date": "2026-04-06"
+      },
+      {
+        "url": "/move-near-childcare-or-keep-home-and-own-a-car-singapore.html",
+        "title": "Move Near Childcare or Keep Your Home and Own a Car in Singapore (2026)",
+        "desc": "Move near childcare or keep your home and own a car in Singapore: a practical framework for deciding",
+        "date": "2026-04-06"
+      },
+      {
         "url": "/move-near-grandparents-or-pay-for-infantcare-first-singapore.html",
         "title": "Move Near Grandparents or Pay for Infantcare First in Singapore (2026)",
         "desc": "Move near grandparents or pay for infantcare first in Singapore: a framework for comparing location-",
@@ -1222,6 +1240,12 @@
         "url": "/preschool-vs-stay-at-home-parent-singapore.html",
         "title": "Preschool vs Stay-at-Home Parent in Singapore (2026)",
         "desc": "Preschool vs stay-at-home parent in Singapore in 2026: a practical comparison of direct school fees,",
+        "date": "2026-04-06"
+      },
+      {
+        "url": "/second-car-or-childcare-near-work-singapore.html",
+        "title": "Second Car or Childcare Near Work in Singapore (2026)",
+        "desc": "Second car or childcare near work in Singapore: a practical framework for deciding whether another v",
         "date": "2026-04-06"
       },
       {
@@ -1432,12 +1456,6 @@
         "url": "/move-closer-to-aging-parents-vs-keep-housing-cost-lower-singapore.html",
         "title": "Move Closer to Aging Parents vs Keep Housing Cost Lower in Singapore (2026)",
         "desc": "Move closer to aging parents vs keep housing cost lower in Singapore: decide whether proximity or lo",
-        "date": "2026-03-27"
-      },
-      {
-        "url": "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html",
-        "title": "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026)",
-        "desc": "Move closer to school or keep your home and own a car in Singapore: a practical framework for decidi",
         "date": "2026-03-27"
       },
       {
@@ -2678,30 +2696,30 @@
   },
   "new": [
     {
+      "url": "/second-car-or-childcare-near-work-singapore.html",
+      "title": "Second Car or Childcare Near Work in Singapore (2026)",
+      "desc": "Second car or childcare near work in Singapore: a practical framework for deciding whether another v",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/move-near-childcare-or-keep-home-and-own-a-car-singapore.html",
+      "title": "Move Near Childcare or Keep Your Home and Own a Car in Singapore (2026)",
+      "desc": "Move near childcare or keep your home and own a car in Singapore: a practical framework for deciding",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html",
+      "title": "Bigger Home Farther Out vs Smaller Home Near Childcare in Singapore (2026)",
+      "desc": "Bigger home farther out or smaller home near childcare in Singapore: a practical framework for decid",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/grandparent-care-vs-paid-care-cost-calculator-singapore.html",
       "title": "Grandparent Care vs Paid Care Cost Calculator Singapore (2026)",
       "desc": "Compare the monthly household burden of grandparent-supported care versus a paid-care route in Singa",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/childcare-vs-helper-cost-calculator-singapore.html",
-      "title": "Childcare vs Helper Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly household burden of childcare versus a live-in helper in Singapore, including fe",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/childcare-near-home-vs-near-work-cost-calculator-singapore.html",
-      "title": "Childcare Near Home vs Near Work Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly burden of placing childcare near home versus near work in Singapore, including f",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/full-day-childcare-vs-half-day-preschool-singapore.html",
-      "title": "Full-Day Childcare vs Half-Day Preschool in Singapore (2026)",
-      "desc": "Full-day childcare vs half-day preschool in Singapore in 2026: compare household schedule fit, picku",
       "cluster": "family",
       "clusterLabel": "Family"
     },
@@ -4625,6 +4643,15 @@
     },
     "grandparent-care-vs-paid-care-cost-calculator-singapore.html": {
       "first_seen": "2026-04-12"
+    },
+    "move-near-childcare-or-keep-home-and-own-a-car-singapore.html": {
+      "first_seen": "2026-04-13"
+    },
+    "bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html": {
+      "first_seen": "2026-04-13"
+    },
+    "second-car-or-childcare-near-work-singapore.html": {
+      "first_seen": "2026-04-13"
     }
   }
 }

@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 06 Apr 2026 · Based on repo v0339
+> Last updated: 06 Apr 2026 · Based on repo v0340
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0339
-**Recent update:** v0339 added three family childcare calculators covering childcare versus helper cost, childcare location friction, and grandparent-supported care versus a paid-care route; refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
+**Current version:** v0340
+**Recent update:** v0340 added three family cross-cluster bridge pages — `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 
 ### Version history
+- **v0340** — added three family cross-cluster bridge pages — `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0339** — added three family childcare calculator pages — `childcare-vs-helper-cost-calculator-singapore.html`, `childcare-near-home-vs-near-work-cost-calculator-singapore.html`, and `grandparent-care-vs-paid-care-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0338** — added four family childcare operating-model pages — `childcare-vs-grandparent-care-singapore.html`, `childcare-vs-helper-at-home-singapore.html`, `full-day-childcare-vs-half-day-preschool-singapore.html`, and `childcare-near-home-vs-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0337** — completed the remaining `featured.json` integrity cleanup by canonicalising seven lingering bare-vs-`.html` `page_registry` duplicates to `.html` keys, hardening `generate-featured.py` to merge legacy bare keys automatically, and regenerating `featured.json` + `sitemap.xml`.
@@ -260,14 +261,11 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 
 **v0334 hardening note:** lifted `how-much-does-preschool-cost-singapore.html` above the floor with more explicit all-in household cost framing.
 
-### Family (154 content pages) ✅ Largest cluster
-**v0333 repair note:** restored SITE search-index coverage for `buy-bigger-home-or-fund-helper-first-singapore.html` and `move-closer-to-school-or-keep-home-and-own-a-car-singapore.html`, and expanded `enrichment-classes-cost-singapore.html` plus `school-fee-sinking-fund-vs-emergency-fund-singapore.html` above the content floor.
-
-**v0321 bridge note:** added `move-near-school-or-pay-for-student-care-first-singapore.html`, a family-led bridge for households choosing between location relief and paid after-school coverage.
-
 ## 8. Cluster Status
 
-### Family (154 content pages) ✅ Largest cluster
+### Family (157 content pages) ✅ Largest cluster
+
+**v0340 bridge note:** added `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html`, a family-led bridge bundle linking childcare-location choices to housing footprint and transport-capacity trade-offs.
 
 **v0339 calculator note:** added `childcare-vs-helper-cost-calculator-singapore.html`, `childcare-near-home-vs-near-work-cost-calculator-singapore.html`, and `grandparent-care-vs-paid-care-cost-calculator-singapore.html` to convert the early-years childcare operating-model branch into tool-first monthly planning pages.
 
