@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 06 Apr 2026 · Based on repo v0341
+> Last updated: 07 Apr 2026 · Based on repo v0342
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0341
-**Recent update:** v0341 added three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
+**Current version:** v0342
+**Recent update:** v0342 expanded the three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — above the 1,500-word floor, corrected the broken route-calculation logic on the second-car calculator, and refreshed the project brief.
 
 ### Version history
+- **v0342** — expanded the three family cross-cluster bridge calculators above the 1,500-word floor, corrected the broken route-calculation logic on `second-car-or-childcare-near-work-cost-calculator-singapore.html`, and refreshed the project brief.
 - **v0341** — added three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0340** — added three family cross-cluster bridge pages — `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html` — and refreshed family/comparisons hubs, contextual inbound links, SITE index, featured data, and sitemap.
 - **v0339** — added three family childcare calculator pages — `childcare-vs-helper-cost-calculator-singapore.html`, `childcare-near-home-vs-near-work-cost-calculator-singapore.html`, and `grandparent-care-vs-paid-care-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
