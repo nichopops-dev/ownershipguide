@@ -1145,6 +1145,7 @@ decisionPathOverrides: {
         { url: "/bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html", title: "Bigger Home Farther Out vs Smaller Home Near Childcare Cost Calculator Singapore (2026): Compare Space Premium Against Daily Route Relief", subtopic: "calculator" },
         { url: "/second-car-or-childcare-near-work-cost-calculator-singapore.html", title: "Second Car or Childcare Near Work Cost Calculator Singapore (2026): Compare Vehicle Ownership Against Pickup Friction Relief", subtopic: "calculator" },
         { url: "/how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html", title: "How to Choose Childcare Location Without Overbuying Home or Second-Car Capacity in Singapore (2026)", subtopic: "planning" },
+        { url: "/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html", title: "How to Choose School Location Without Overbuying Home or Second-Car Capacity in Singapore (2026)", subtopic: "planning" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },

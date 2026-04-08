@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0343
-**Recent update:** v0343 added the family framework page `how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed the family hub and adjacent childcare-location bridge pages with explicit inbound links, and regenerated featured data plus sitemap.
+**Current version:** v0344
+**Recent update:** v0344 added the sibling family framework page `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed the family hub plus adjacent school-location bridge pages with explicit inbound links, and regenerated featured data plus sitemap.
 
 ### Version history
+- **v0344** — added the sibling family framework page `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent school-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0343** — added the family framework page `how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent childcare-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0342** — expanded the three family cross-cluster bridge calculators above the 1,500-word floor, corrected the broken route-calculation logic on `second-car-or-childcare-near-work-cost-calculator-singapore.html`, and refreshed the project brief.
 - **v0341** — added three family cross-cluster bridge calculators — `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html` — and refreshed family/calculators hubs, contextual inbound links, SITE index, featured data, and sitemap.
@@ -269,6 +270,7 @@ Full branch coverage: financing/borrowing, ownership/holding cost, sell/move/exe
 ## 8. Cluster Status
 
 ### Family (158 content pages) ✅ Largest cluster
+**v0344 framework note:** added `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, a school-stage sequencing page that sits above the family location-vs-car branch and links back into the core school bridge comparisons.
 **v0343 framework note:** added `how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html`, a top-level sequencing framework tying together childcare anchor choice, home location, space trade-offs, and second-car decisions before households commit to the wrong high-cost fix.
 
 **v0340 bridge note:** added `move-near-childcare-or-keep-home-and-own-a-car-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-singapore.html`, and `second-car-or-childcare-near-work-singapore.html`, a family-led bridge bundle linking childcare-location choices to housing footprint and transport-capacity trade-offs.
