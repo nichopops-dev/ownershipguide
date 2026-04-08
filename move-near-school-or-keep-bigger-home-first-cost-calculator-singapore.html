@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Move Near School or Keep a Bigger Home First Cost Calculator Singapore (2026): Compare Route Relief Against Space Premium</title>
+<meta name="description" content="Compare the monthly burden of moving nearer to school versus keeping a bigger home farther out in Singapore, including housing premium, transport, time loss, and support frictions."/>
+<link rel="canonical" href="https://ownershipguide.com/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this move-near-school versus keep-bigger-home calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares whether the cleaner fix is paying for a more school-proximate base or preserving more living space even if the daily route stays heavier."}},{"@type":"Question","name":"When does moving near school usually win?","acceptedAnswer":{"@type":"Answer","text":"Moving near school usually wins when repeated route strain is breaking work, pickups, and family coordination more than the current home layout is helping."}},{"@type":"Question","name":"When does the bigger-home route usually win?","acceptedAnswer":{"@type":"Answer","text":"The bigger-home route usually wins when crowding, room-sharing, work-from-home strain, or future family-stage pressure is already the sharper problem than daily travel."}},{"@type":"Question","name":"Why convert time into money here?","acceptedAnswer":{"@type":"Answer","text":"Because space and location compete through the same household resource pool. Time lost on repeated routes is one of the hidden prices families pay when they preserve more space farther away."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Move Near School or Keep a Bigger Home First Cost Calculator (Singapore, 2026)</p>
+<h1>Move Near School or Keep a Bigger Home First Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator, not a provider quote engine. Use it when the household has already identified the real route conflict and now needs to compare the full monthly burden instead of arguing from one emotionally convenient line item.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the logic first, start with <a href="/move-near-school-or-keep-bigger-home-first-singapore.html">move near school or keep a bigger home first</a>.</li>
+<li>Also use <a href="/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html">how to choose school location without overbuying home or second-car capacity</a> when that is the more precise branch.</li>
+<li>Also use <a href="/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html">move closer to school or keep home and own a car cost calculator</a> when that is the more precise branch.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row"><div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="13200"/></div><div><label for="fixed">Existing monthly fixed commitments before this choice (SGD)</label><input id="fixed" type="number" min="0" step="100" value="6100"/></div></div>
+    <div class="calc-row"><div><label for="hourlyValue">Planning value of one adult hour (SGD)</label><input id="hourlyValue" type="number" min="0" step="1" value="20"/></div><div><label for="horizon">Months to spread one-off moving cost</label><input id="horizon" type="number" min="12" step="6" value="36"/></div></div>
+    <div class="divider"></div>
+    <h3>Route A — move near school</h3>
+    <div class="calc-row"><div><label for="moveHousing">Monthly housing cost at smaller / closer home (SGD)</label><input id="moveHousing" type="number" min="0" step="50" value="2950"/></div><div><label for="moveTransit">Transport, parking, and ride-hailing after moving (SGD)</label><input id="moveTransit" type="number" min="0" step="10" value="140"/></div></div>
+    <div class="calc-row"><div><label for="moveSupport">Residual student-care, helper, or route top-up cost (SGD)</label><input id="moveSupport" type="number" min="0" step="10" value="95"/></div><div><label for="moveOneOff">One-off move cost: agent, deposits, movers, setup (SGD)</label><input id="moveOneOff" type="number" min="0" step="100" value="13500"/></div></div>
+    <div class="calc-row"><div><label for="moveMinutes">Extra daily minutes still created after moving</label><input id="moveMinutes" type="number" min="0" step="1" value="18"/></div><div><label for="moveBackup">Backup pickup, late detour, and disruption cost (SGD)</label><input id="moveBackup" type="number" min="0" step="10" value="65"/></div></div>
+    <div class="calc-row"><div><label for="moveOffset">Offsets or savings unlocked by the move (SGD)</label><input id="moveOffset" type="number" min="0" step="10" value="0"/></div></div>
+    <div class="divider"></div>
+    <h3>Route B — keep a bigger home farther out</h3>
+    <div class="calc-row"><div><label for="homeHousing">Monthly housing cost at larger / farther home (SGD)</label><input id="homeHousing" type="number" min="0" step="50" value="3250"/></div><div><label for="homeTransit">Transport, parking, school-bus, and ride-hailing spend (SGD)</label><input id="homeTransit" type="number" min="0" step="10" value="260"/></div></div>
+    <div class="calc-row"><div><label for="homeSupport">Student-care, helper detours, or route top-up cost (SGD)</label><input id="homeSupport" type="number" min="0" step="10" value="130"/></div><div><label for="homeSpaceOffset">Space-related offsets, such as reduced external study space or ad hoc storage (SGD)</label><input id="homeSpaceOffset" type="number" min="0" step="10" value="40"/></div></div>
+    <div class="calc-row"><div><label for="homeMinutes">Extra daily minutes still created by this route</label><input id="homeMinutes" type="number" min="0" step="1" value="38"/></div><div><label for="homeBackup">Backup pickup, late detour, and disruption cost (SGD)</label><input id="homeBackup" type="number" min="0" step="10" value="105"/></div></div>
+    <div class="calc-row"><div><label for="homeOffset">Other offsets or savings linked to the bigger-home route (SGD)</label><input id="homeOffset" type="number" min="0" step="10" value="0"/></div></div>
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box"><div class="muted">Route A monthly burden</div><div class="kpi" id="aMonthly">$0</div><div class="small muted" id="aBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Route B monthly burden</div><div class="kpi" id="bMonthly">$0</div><div class="small muted" id="bBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Monthly difference</div><div class="kpi" id="diff">$0</div><div class="small muted" id="diffLabel">Waiting for inputs.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Extra hours consumed each month</div><div class="kpi" id="hoursDiff">0.0h</div><div class="small muted">This compares the two route patterns over roughly 22 weekdays per month.</div></div>
+    <div class="note" style="margin-top:12px;"><strong>Planning read</strong><p id="resultNote" style="margin:8px 0 0">The cleaner option is the one that removes recurring strain without forcing a second structural commitment later.</p></div>
+    <div class="note" style="margin-top:12px;"><strong>Cash left after lower-cost route and fixed bills</strong><p style="margin:8px 0 0"><span class="kpi" id="cashLeft" style="font-size:24px;">$0</span></p><p class="small muted" id="pressure">0%</p></div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>This calculator handles a trade-off that families often narrate emotionally rather than operationally. One path says, “We should move near school because the route is wearing us down.” The other says, “We should keep or prioritise more space because the household itself needs room.” Both can be true. The problem is that one choice improves the map and the other improves the interior of the home. Unless those gains are forced onto the same monthly frame, households can end up paying permanent housing money for the wrong kind of relief.</p>
+<p>Route A prices the smaller-or-closer home as a school-operations fix. It includes the housing base, transport that still remains, support top-ups, a spread version of one-off moving cost, the time still being burned every month, and the residual disruption cost of imperfect pickup or backup coverage. Route B prices the bigger-home path just as honestly: the larger housing bill, route spend that still exists because school remains farther away, support top-ups, the monetised value of time lost on the route, and some modest space-related offsets if the larger home really reduces the need for external study space or other workaround costs.</p>
+<p>The calculator is not trying to prove that smaller and closer is always smarter. It is trying to force clarity on whether the household’s bottleneck is route strain or space strain. A bigger home is only the cleaner move when the space benefit is solving a repeated family problem that outweighs the cost of leaving school friction largely intact.</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>If Route A is lower, the school route is probably doing more damage than the extra space is compensating for. A closer base may look like a compromise in footprint, but the reduction in time loss, pickup fragility, and route recovery spend is enough to make the smaller home the more resilient operating choice. The number is especially persuasive if the closer base also improves access to support or work corridors at the same time.</p>
+<p>If Route B is lower, the household may genuinely be in a stage where interior space is the sharper bottleneck. Perhaps multiple children share rooms, work-from-home is no longer viable, or the family is already paying hidden costs because the current footprint is too tight. In that case, preserving or prioritising a bigger home can be the cleaner answer even though the school route remains heavier, because the layout itself is now a repeated drag on household function.</p>
+<p>If the two routes are close, you should read the result as a sequencing question rather than a final identity statement. Which problem is more likely to be repeated every week for the next two years: route failure or space failure? The household should fix the more repeated bottleneck first and preserve enough liquidity that the second improvement can still happen later without panic.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<p>The first mistake is counting only housing size and ignoring the ongoing transport drain. Families often overvalue square footage because the benefit is visible every day, while the route burden appears as dispersed time loss and small recovery costs. Those small costs accumulate. If they are not priced, the bigger-home path will look cleaner than it really is.</p>
+<p>The second mistake is underestimating how much the smaller-or-closer home might still need to function well. A move near school should not be treated as virtuous by default. If the smaller home creates sleep, study, or work strain that the family cannot actually absorb, the “efficient” move may become an interior-friction trap. That is why the bigger-home route includes a space-related offset field: use it honestly when the larger footprint replaces real workaround spending or conflict.</p>
+<p>The third mistake is choosing the more aspirational story. Some families want the polished answer of the better-located lifestyle. Others want the symbolic security of the bigger family home. Neither story matters. What matters is which route removes the most repeated stress while leaving the household less exposed to the next stage of school, work, and family complexity.</p>
+<h2 id="space-versus-route">Do not let the wrong kind of stress win</h2>
+<p>This calculator is useful precisely because route stress and space stress often feel equally urgent. The family is tired, so every friction feels decisive. But the more useful question is which friction repeats more often and destroys more options. A cramped home can be hard. A bad daily route can also be hard. The cleaner decision is usually the one that removes the more repeated disruption, not the one that sounds more sensible in abstract.</p>
+<p>If the bigger-home route wins, it should be because the home itself is repeatedly undermining sleep, work, study, privacy, or family coordination. If the near-school route wins, it should be because the travel pattern is repeatedly eating time, creating late pickups, and forcing expensive workarounds. Each route should earn priority by solving a real operating problem, not by flattering the household’s preferred identity.</p>
+<p>The best use of this result is to prevent double-paying. Families often try to solve route strain with more housing, then later still pay to fix the route. Or they move for convenience, then realise the family still needs more space and ends up paying the space premium later as well. Sequence the sharper constraint first, then protect enough liquidity so the second improvement remains possible if it truly proves necessary.</p>
+<h2 id="when-to-rerun">When to rerun the calculator</h2>
+<p>Rerun the numbers if a child is about to change stage, if another child is likely to share the same school corridor, or if work-from-home patterns are changing. School-location decisions age differently from housing decisions. A result that looks clean for one stage can become messy when homework, enrichment, or independence patterns change. Likewise, a home that feels just large enough now may become too tight faster than expected.</p>
+<p>That is why this tool should be used as part of a decision sequence, not as a forever answer. The number tells you which route carries less burden now. It does not remove the need to revisit the family system when the next stage changes the mix of route strain and interior strain.</p>
+<h2 id="faq">FAQ</h2>
+<h3>What does this move-near-school versus keep-bigger-home calculator compare?</h3>
+<p>It compares whether the cleaner fix is paying for a more school-proximate base or preserving more living space even if the daily route stays heavier.</p>
+<h3>When does moving near school usually win?</h3>
+<p>Moving near school usually wins when repeated route strain is breaking work, pickups, and family coordination more than the current home layout is helping.</p>
+<h3>When does the bigger-home route usually win?</h3>
+<p>The bigger-home route usually wins when crowding, room-sharing, work-from-home strain, or future family-stage pressure is already the sharper problem than daily travel.</p>
+<h3>Why convert time into money here?</h3>
+<p>Because space and location compete through the same household resource pool. Time lost on repeated routes is one of the hidden prices families pay when they preserve more space farther away.</p>
+
+<section class="box" style="margin-top:18px"><h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/move-near-school-or-keep-bigger-home-first-singapore.html">Move Near School or Keep Bigger Home First</a></li>
+<li><a href="/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html">How to Choose School Location Without Overbuying Home or Second-Car Capacity</a></li>
+<li><a href="/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html">Move Closer to School or Keep Home and Own a Car Cost Calculator</a></li>
+<li><a href="/buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html">Buy Family Car or Move Closer to Work and School First Cost Calculator</a></li>
+</ul>
+</section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.moe.gov.sg/" rel="nofollow noopener" target="_blank">Ministry of Education (MOE)</a></li>
+<li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">Housing & Development Board (HDB)</a></li>
+<li><a href="https://www.ura.gov.sg/" rel="nofollow noopener" target="_blank">Urban Redevelopment Authority (URA)</a></li>
+<li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">Land Transport Authority (LTA)</a></li>
+<li><a href="https://www.moneysense.gov.sg/" rel="nofollow noopener" target="_blank">MoneySense</a></li>
+</ul>
+<p><strong>Last updated:</strong> 08 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  function calc() {
+    const income = num('income');
+    const fixed = num('fixed');
+    const hour = num('hourlyValue');
+    const horizon = Math.max(12, num('horizon'));
+    const moveTime = (num('moveMinutes') * 22 / 60) * hour;
+    const homeTime = (num('homeMinutes') * 22 / 60) * hour;
+    const aMonthly = Math.max(0, num('moveHousing') + num('moveTransit') + num('moveSupport') + (num('moveOneOff') / horizon) + moveTime + num('moveBackup') - num('moveOffset'));
+    const bMonthly = Math.max(0, num('homeHousing') + num('homeTransit') + num('homeSupport') + homeTime + num('homeBackup') - num('homeSpaceOffset') - num('homeOffset'));
+    const diff = aMonthly - bMonthly;
+    const cheaper = diff < 0 ? 'Route A is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : diff > 0 ? 'Route B is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : 'Both routes are currently equal on monthly burden.';
+    const lower = Math.min(aMonthly, bMonthly);
+    $('aMonthly').textContent = money(aMonthly);
+    $('bMonthly').textContent = money(bMonthly);
+    $('diff').textContent = money(Math.abs(diff));
+    $('diffLabel').textContent = cheaper;
+    $('cashLeft').textContent = money(Math.max(0, income - fixed - lower));
+    $('pressure').textContent = 'Lower-cost route uses ' + (income > 0 ? ((lower / income) * 100).toFixed(1) : '0.0') + '% of household net income before fixed commitments.';
+    $('aBreakdown').textContent = 'Route A burden = ' + money(aMonthly) + '.';
+    $('bBreakdown').textContent = 'Route B burden = ' + money(bMonthly) + '.';
+    $('hoursDiff').textContent = Math.abs((diff<0? (bMonthly-aMonthly):(aMonthly-bMonthly)) / Math.max(1, hour)).toFixed(1) + 'h';
+    $('resultNote').textContent = diff < 0 ? 'Route A currently carries less monthly burden, but check whether it also solves the deeper family bottleneck.' : diff > 0 ? 'Route B currently carries less monthly burden, but check whether it leaves the wider household map too brittle.' : 'The numbers are close, so the deciding factor is usually resilience rather than sticker price.';
+  }
+  Array.from(document.querySelectorAll('input')).forEach((el) => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

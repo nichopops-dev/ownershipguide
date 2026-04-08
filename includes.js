@@ -1146,6 +1146,9 @@ decisionPathOverrides: {
         { url: "/second-car-or-childcare-near-work-cost-calculator-singapore.html", title: "Second Car or Childcare Near Work Cost Calculator Singapore (2026): Compare Vehicle Ownership Against Pickup Friction Relief", subtopic: "calculator" },
         { url: "/how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html", title: "How to Choose Childcare Location Without Overbuying Home or Second-Car Capacity in Singapore (2026)", subtopic: "planning" },
         { url: "/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html", title: "How to Choose School Location Without Overbuying Home or Second-Car Capacity in Singapore (2026)", subtopic: "planning" },
+        { url: "/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html", title: "Move Closer to School or Keep Your Home and Own a Car Cost Calculator Singapore (2026): Compare Location Uplift Against Vehicle Control", subtopic: "calculator" },
+        { url: "/buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html", title: "Buy a Family Car or Move Closer to Work and School First Cost Calculator Singapore (2026): Compare Mobility Control Against Location Relief", subtopic: "calculator" },
+        { url: "/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html", title: "Move Near School or Keep a Bigger Home First Cost Calculator Singapore (2026): Compare Route Relief Against Space Premium", subtopic: "calculator" },
       ],
       bridges: [
         { url: "/move-house-for-school-vs-stay-put-singapore.html", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", cluster: "property" },

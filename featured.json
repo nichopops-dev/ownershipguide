@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07",
+  "generated": "2026-04-08",
   "cluster_pages": {
     "transport": [
       {
@@ -1159,6 +1159,12 @@
         "date": "2026-04-08"
       },
       {
+        "url": "/buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html",
+        "title": "Buy a Family Car or Move Closer to Work and School First Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly burden of buying a family car versus moving closer to work and school in Singapo",
+        "date": "2026-04-08"
+      },
+      {
         "url": "/childcare-near-home-vs-near-work-singapore.html",
         "title": "Childcare Near Home vs Near Work in Singapore (2026)",
         "desc": "Childcare near home vs near work in Singapore in 2026: compare commute resilience, pickup stress, pa",
@@ -1177,6 +1183,12 @@
         "date": "2026-04-08"
       },
       {
+        "url": "/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html",
+        "title": "Move Closer to School or Keep Your Home and Own a Car Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly burden of moving closer to school versus staying put and adding a car in Singapo",
+        "date": "2026-04-08"
+      },
+      {
         "url": "/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html",
         "title": "Move Closer to School or Keep Your Home and Own a Car in Singapore (2026)",
         "desc": "Move closer to school or keep your home and own a car in Singapore: a practical framework for decidi",
@@ -1186,6 +1198,12 @@
         "url": "/move-near-childcare-or-keep-home-and-own-a-car-singapore.html",
         "title": "Move Near Childcare or Keep Your Home and Own a Car in Singapore (2026)",
         "desc": "Move near childcare or keep your home and own a car in Singapore: a practical framework for deciding",
+        "date": "2026-04-08"
+      },
+      {
+        "url": "/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html",
+        "title": "Move Near School or Keep a Bigger Home First Cost Calculator Singapore (2026)",
+        "desc": "Compare the monthly burden of moving nearer to school versus keeping a bigger home farther out in Si",
         "date": "2026-04-08"
       },
       {
@@ -4697,6 +4715,15 @@
     },
     "how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html": {
       "first_seen": "2026-04-16"
+    },
+    "move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-09"
+    },
+    "buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-09"
+    },
+    "move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html": {
+      "first_seen": "2026-04-09"
     }
   }
 }

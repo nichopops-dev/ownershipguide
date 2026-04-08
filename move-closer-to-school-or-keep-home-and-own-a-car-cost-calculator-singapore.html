@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Move Closer to School or Keep Your Home and Own a Car Cost Calculator Singapore (2026): Compare Location Uplift Against Vehicle Control</title>
+<meta name="description" content="Compare the monthly burden of moving closer to school versus staying put and adding a car in Singapore, including housing uplift, transport, time loss, route resilience, and backup pickup cost."/>
+<link rel="canonical" href="https://ownershipguide.com/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html"/>
+<meta name="og:cluster" content="family"/>
+<meta name="og:subtopic" content="calculator"/>
+<link rel="stylesheet" href="/styles.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does this move-closer-to-school versus own-a-car calculator compare?","acceptedAnswer":{"@type":"Answer","text":"It compares two fixes for the same school-stage logistics problem: paying more to live nearer the school anchor, or preserving the current home base and buying enough transport control to keep the route working."}},{"@type":"Question","name":"Why does the calculator spread moving cost across months?","acceptedAnswer":{"@type":"Answer","text":"Because relocation is not free. Agent fees, deposits, renovation, movers, and small setup costs still consume real family capital. Spreading them across a planning horizon stops the move route from looking artificially cheap."}},{"@type":"Question","name":"When does the car route usually win?","acceptedAnswer":{"@type":"Answer","text":"The car route usually wins when the current home is still strategically strong, the school issue is mainly a transport-control problem, and relocation would raise the housing base far more than it removes route strain."}},{"@type":"Question","name":"When does the move route usually win?","acceptedAnswer":{"@type":"Answer","text":"The move route usually wins when school friction is part of a wider location mismatch and a better base would simplify not just pickup but also work, support, and after-school coordination."}}]}</script>
+<style>
+.calc-grid { display:grid; grid-template-columns:1fr; gap:14px; }
+@media (min-width: 960px){ .calc-grid { grid-template-columns:1.02fr 0.98fr; } }
+.calc-card { border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+.calc-row { display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0; }
+@media (min-width: 760px){ .calc-row { grid-template-columns:1fr 1fr; } }
+label { font-weight:600; display:block; margin-bottom:6px; }
+input[type="number"] { width:100%; padding:10px; border:1px solid #d1d5db; border-radius:10px; font-size:16px; box-sizing:border-box; }
+.small { font-size:13px; }
+.kpi { font-size:28px; font-weight:800; margin:6px 0; }
+.kpi-box { border:1px dashed #d1d5db; border-radius:12px; padding:12px; }
+.note { background:#f9fafb; border:1px solid #e5e7eb; border-radius:12px; padding:10px; }
+.divider { height:1px; background:#e5e7eb; margin:12px 0; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="container">
+<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
+<p class="nav"><a href="/">Home</a> / <a href="/family/">Family</a> / <a href="/calculators/">Calculators</a> / Move Closer to School or Keep Your Home and Own a Car Cost Calculator (Singapore, 2026)</p>
+<h1>Move Closer to School or Keep Your Home and Own a Car Cost Calculator (Singapore, 2026)</h1>
+<p class="meta">Tool-first planning page · Family / calculator</p>
+<p class="muted">This is a planning calculator, not a provider quote engine. Use it when the household has already identified the real route conflict and now needs to compare the full monthly burden instead of arguing from one emotionally convenient line item.</p>
+<div class="box">
+<strong>Fast path</strong>
+<ul>
+<li>If you need the logic first, start with <a href="/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html">move closer to school or keep your home and own a car</a>.</li>
+<li>Also use <a href="/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html">how to choose school location without overbuying home or second-car capacity</a> when that is the more precise branch.</li>
+<li>Also use <a href="/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html">move near school or keep bigger home first cost calculator</a> when that is the more precise branch.</li>
+</ul>
+</div>
+<h2 id="jump">Jump to what you need</h2>
+<ul>
+<li><a href="#calc">Calculator</a></li>
+<li><a href="#measure">What the calculator is really measuring</a></li>
+<li><a href="#interpret">How to interpret the result properly</a></li>
+<li><a href="#mistakes">Common mistakes</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<hr/>
+<h2 id="calc">Calculator</h2>
+<div class="calc-grid">
+  <div class="calc-card">
+    <h3 style="margin-top:0">Inputs</h3>
+    <div class="calc-row"><div><label for="income">Household net monthly income (SGD)</label><input id="income" type="number" min="0" step="100" value="13200"/></div><div><label for="fixed">Existing monthly fixed commitments before this choice (SGD)</label><input id="fixed" type="number" min="0" step="100" value="6100"/></div></div>
+    <div class="calc-row"><div><label for="hourlyValue">Planning value of one adult hour (SGD)</label><input id="hourlyValue" type="number" min="0" step="1" value="20"/></div><div><label for="horizon">Months to spread one-off moving cost</label><input id="horizon" type="number" min="12" step="6" value="36"/></div></div>
+    <div class="divider"></div>
+    <h3>Route A — move closer to school</h3>
+    <div class="calc-row"><div><label for="moveHousing">Extra monthly housing cost after moving (SGD)</label><input id="moveHousing" type="number" min="0" step="50" value="950"/></div><div><label for="moveTransit">Transport, parking, and ride-hailing after moving (SGD)</label><input id="moveTransit" type="number" min="0" step="10" value="160"/></div></div>
+    <div class="calc-row"><div><label for="moveSchool">School-bus, student-care transport, or route top-up after moving (SGD)</label><input id="moveSchool" type="number" min="0" step="10" value="120"/></div><div><label for="moveOneOff">One-off move cost: agent, deposits, movers, setup (SGD)</label><input id="moveOneOff" type="number" min="0" step="100" value="14000"/></div></div>
+    <div class="calc-row"><div><label for="moveMinutes">Extra daily minutes still created after moving</label><input id="moveMinutes" type="number" min="0" step="1" value="20"/></div><div><label for="moveBackup">Late pickup, backup handoff, and closure top-up cost (SGD)</label><input id="moveBackup" type="number" min="0" step="10" value="70"/></div></div>
+    <div class="calc-row"><div><label for="moveOffset">Offsets or savings unlocked by the move (SGD)</label><input id="moveOffset" type="number" min="0" step="10" value="0"/></div></div>
+    <div class="divider"></div>
+    <h3>Route B — keep current home and own a car</h3>
+    <div class="calc-row"><div><label for="carLoan">Monthly car loan / depreciation-equivalent (SGD)</label><input id="carLoan" type="number" min="0" step="50" value="980"/></div><div><label for="carRun">Insurance, road tax, fuel, servicing, and parking (SGD)</label><input id="carRun" type="number" min="0" step="10" value="640"/></div></div>
+    <div class="calc-row"><div><label for="carSchool">School-bus, ERP, and route spend on current base (SGD)</label><input id="carSchool" type="number" min="0" step="10" value="190"/></div><div><label for="carTransit">Residual public-transport and ride-hailing spend (SGD)</label><input id="carTransit" type="number" min="0" step="10" value="90"/></div></div>
+    <div class="calc-row"><div><label for="carMinutes">Extra daily minutes still created by this route</label><input id="carMinutes" type="number" min="0" step="1" value="35"/></div><div><label for="carBackup">Late pickup, backup handoff, and closure top-up cost (SGD)</label><input id="carBackup" type="number" min="0" step="10" value="110"/></div></div>
+    <div class="calc-row"><div><label for="carOffset">Offsets or savings linked to the car route (SGD)</label><input id="carOffset" type="number" min="0" step="10" value="0"/></div></div>
+  </div>
+  <div class="calc-card">
+    <h3 style="margin-top:0">Results</h3>
+    <div class="kpi-box"><div class="muted">Route A monthly burden</div><div class="kpi" id="aMonthly">$0</div><div class="small muted" id="aBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Route B monthly burden</div><div class="kpi" id="bMonthly">$0</div><div class="small muted" id="bBreakdown">Includes direct spend, time converted into money, and backup friction after offsets.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Monthly difference</div><div class="kpi" id="diff">$0</div><div class="small muted" id="diffLabel">Waiting for inputs.</div></div>
+    <div class="kpi-box" style="margin-top:12px;"><div class="muted">Extra hours consumed each month</div><div class="kpi" id="hoursDiff">0.0h</div><div class="small muted">This compares the two route patterns over roughly 22 weekdays per month.</div></div>
+    <div class="note" style="margin-top:12px;"><strong>Planning read</strong><p id="resultNote" style="margin:8px 0 0">The cleaner option is the one that removes recurring strain without forcing a second structural commitment later.</p></div>
+    <div class="note" style="margin-top:12px;"><strong>Cash left after lower-cost route and fixed bills</strong><p style="margin:8px 0 0"><span class="kpi" id="cashLeft" style="font-size:24px;">$0</span></p><p class="small muted" id="pressure">0%</p></div>
+  </div>
+</div>
+<h2 id="measure">What the calculator is really measuring</h2>
+<p>This calculator is for households that already know the school route has become a structural issue, but are still mixing up two very different categories of fix. One fix changes the map. The other buys more mobility inside the same map. A home move alters the underlying weekday geometry by reducing distance, dependence, and backup failure points. A car leaves the map mostly unchanged and instead adds another machine that can cover for bad timing, weak transfers, or long detours. Those are not the same type of solution, so they should not be priced by intuition alone.</p>
+<p>Route A prices the move as a real household restructuring choice. It includes the extra housing base, transport that still remains after the move, school-route top-up, a spread version of one-off relocation cost, the time that still gets burned every month, and a buffer for pickup or closure friction that does not disappear just because the school is closer. Route B prices the keep-home-and-own-a-car route the same way: financing or depreciation-equivalent, running cost, school-route spend, residual transport, time cost, and the backup burden that still shows up when one adult schedule slips.</p>
+<p>The reason for putting time and backup cost into both sides is simple. Families often compare only the obvious bill. But school-stage strain rarely appears as one neat line item. It leaks into earlier wake-ups, one parent losing slack at work, extra ride-hailing on disrupted days, and repeated dependence on grandparents, helpers, or after-school care to keep the route from breaking. A lower visible bill can still be the more expensive route if it burns more time and creates more brittle handoffs.</p>
+<h2 id="interpret">How to interpret the result properly</h2>
+<p>A lower Route A number means the move is not just emotionally cleaner; it is also carrying less monthly burden once relocation cost is spread honestly. That does not mean every household should move. It means the school problem is likely broad enough that the current home base is no longer serving the family well. If the move also improves support access, work commutes, or the after-school map, then the case becomes stronger because one decision is fixing multiple daily frictions at once.</p>
+<p>A lower Route B number means the household may be facing a transport-control problem rather than a housing problem. Perhaps the home is still good, the school route is manageable with one more layer of movement flexibility, and a relocation would import a much heavier housing base than the route actually justifies. In that case, the better answer may be to preserve the home, buy cleaner route control, and keep the much bigger property decision alive for later rather than spending it now under school-run stress.</p>
+<p>If the two routes land close to each other, avoid using the calculator as permission to choose whichever option feels more prestigious. Close numbers usually mean the real decision is about durability. Which route still works if work arrangements shift? Which route still works if one adult gets sick or if school-stage demands expand into enrichment and care handoffs? The cleaner answer is the one that remains functional when one assumption breaks, not the one that merely wins on a narrow arithmetic snapshot.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<p>The first mistake is underpricing the move because the one-off cost is painful but easy to mentally hide. Families often talk about the extra monthly housing bill while ignoring agent fees, deposits, movers, reconfiguration, and the cash drag of resetting a home base. The move must still win after those costs are spread across a realistic horizon, not only in a fantasy comparison where relocation is somehow frictionless.</p>
+<p>The second mistake is treating the car as a one-dimensional transport tool. In reality, the car route only deserves priority when the current home still works well and the route problem is concentrated enough that mobility control solves it. If the home is already badly placed relative to school, work, and support, the car can simply mask a poor location fit while preserving all the detours that are draining the household.</p>
+<p>The third mistake is reading the result without reference to the family sequence. If the household is already likely to move for other reasons within one to two years, buying a car now may become an expensive bridge to a decision that was coming anyway. Likewise, if the move would wipe out too much reserve and still leave the family exposed to a probable second vehicle later, the relocation route may be too ambitious for the problem it solves right now.</p>
+<h2 id="sequence">How to use this result in the right sequence</h2>
+<p>Use this result after the household has already accepted that the school route is the real bottleneck. Do not use it as a shortcut around a broader location review. If the current home is also badly positioned for work, support, or future schooling, a narrowly cheaper car route can still be the wrong family decision because it preserves the weak base underneath the route.</p>
+<p>The cleanest workflow is to read the framework page first, then run this calculator, then inspect whether the winning route still keeps enough room for the next likely family move. In many households the hidden mistake is not choosing the wrong winner inside this calculator. It is choosing the winner and then assuming the rest of the family system no longer needs redesign.</p>
+<p>If the move route wins clearly, test whether the family can execute a smaller, cleaner move rather than using the result to justify an aspirational jump. If the car route wins clearly, ask whether that route remains acceptable when the child’s schedule becomes denser. A calculator is most useful when it narrows the decision without pretending that one number can remove all future judgment.</p>
+<h2 id="stress-test">Stress-test the result before committing</h2>
+<p>Run the inputs again under a tougher month. Increase backup cost, increase the value of adult time, and reduce the assumed offsets. This matters because family routes rarely fail on calm weeks. They fail when one adult has less slack, the school day changes shape, or support becomes unreliable. The stronger route is the one that stays acceptable when the margin of error shrinks.</p>
+<p>Also test whether one route concentrates too much dependence on a single adult. If the car route only works because one parent becomes the permanent rescue driver, the burden may be understated. If the move route only works because the family assumes a stable school placement or work arrangement that may not hold, that burden may also be understated. Better planning comes from testing fragility, not only central estimates.</p>
+<h2 id="faq">FAQ</h2>
+<h3>What does this move-closer-to-school versus own-a-car calculator compare?</h3>
+<p>It compares two fixes for the same school-stage logistics problem: paying more to live nearer the school anchor, or preserving the current home base and buying enough transport control to keep the route working.</p>
+<h3>Why does the calculator spread moving cost across months?</h3>
+<p>Because relocation is not free. Agent fees, deposits, renovation, movers, and small setup costs still consume real family capital. Spreading them across a planning horizon stops the move route from looking artificially cheap.</p>
+<h3>When does the car route usually win?</h3>
+<p>The car route usually wins when the current home is still strategically strong, the school issue is mainly a transport-control problem, and relocation would raise the housing base far more than it removes route strain.</p>
+<h3>When does the move route usually win?</h3>
+<p>The move route usually wins when school friction is part of a wider location mismatch and a better base would simplify not just pickup but also work, support, and after-school coordination.</p>
+
+<section class="box" style="margin-top:18px"><h2 style="margin-top:0">Related decisions</h2>
+<ul>
+<li><a href="/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html">Move Closer to School or Keep Home and Own a Car</a></li>
+<li><a href="/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html">How to Choose School Location Without Overbuying Home or Second-Car Capacity</a></li>
+<li><a href="/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html">Move Near School or Keep Bigger Home First Cost Calculator</a></li>
+<li><a href="/buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html">Buy Family Car or Move Closer to Work and School First Cost Calculator</a></li>
+</ul>
+</section>
+<div id="auto-related"></div>
+<h2>References</h2>
+<ul>
+<li><a href="https://www.moe.gov.sg/" rel="nofollow noopener" target="_blank">Ministry of Education (MOE)</a></li>
+<li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">Land Transport Authority (LTA)</a></li>
+<li><a href="https://www.hdb.gov.sg/" rel="nofollow noopener" target="_blank">Housing & Development Board (HDB)</a></li>
+<li><a href="https://www.moneysense.gov.sg/" rel="nofollow noopener" target="_blank">MoneySense</a></li>
+<li><a href="https://www.onemap.gov.sg/" rel="nofollow noopener" target="_blank">OneMap Singapore</a></li>
+</ul>
+<p><strong>Last updated:</strong> 08 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+</main>
+<div id="site-footer"></div>
+<script>
+(function() {
+  const $ = (id) => document.getElementById(id);
+  const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
+  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
+  function calc() {
+    const income = num('income');
+    const fixed = num('fixed');
+    const hour = num('hourlyValue');
+    const horizon = Math.max(12, num('horizon'));
+    const moveTime = (num('moveMinutes') * 22 / 60) * hour;
+    const carTime = (num('carMinutes') * 22 / 60) * hour;
+    const aMonthly = Math.max(0, num('moveHousing') + num('moveTransit') + num('moveSchool') + (num('moveOneOff') / horizon) + moveTime + num('moveBackup') - num('moveOffset'));
+    const bMonthly = Math.max(0, num('carLoan') + num('carRun') + num('carSchool') + num('carTransit') + carTime + num('carBackup') - num('carOffset'));
+    const diff = aMonthly - bMonthly;
+    const cheaper = diff < 0 ? 'Route A is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : diff > 0 ? 'Route B is currently cheaper by ' + money(Math.abs(diff)) + ' per month.' : 'Both routes are currently equal on monthly burden.';
+    const lower = Math.min(aMonthly, bMonthly);
+    $('aMonthly').textContent = money(aMonthly);
+    $('bMonthly').textContent = money(bMonthly);
+    $('diff').textContent = money(Math.abs(diff));
+    $('diffLabel').textContent = cheaper;
+    $('cashLeft').textContent = money(Math.max(0, income - fixed - lower));
+    $('pressure').textContent = 'Lower-cost route uses ' + (income > 0 ? ((lower / income) * 100).toFixed(1) : '0.0') + '% of household net income before fixed commitments.';
+    $('aBreakdown').textContent = 'Route A burden = ' + money(aMonthly) + '.';
+    $('bBreakdown').textContent = 'Route B burden = ' + money(bMonthly) + '.';
+    $('hoursDiff').textContent = Math.abs((diff<0? (bMonthly-aMonthly):(aMonthly-bMonthly)) / Math.max(1, hour)).toFixed(1) + 'h';
+    $('resultNote').textContent = diff < 0 ? 'Route A currently carries less monthly burden, but check whether it also solves the deeper family bottleneck.' : diff > 0 ? 'Route B currently carries less monthly burden, but check whether it leaves the wider household map too brittle.' : 'The numbers are close, so the deciding factor is usually resilience rather than sticker price.';
+  }
+  Array.from(document.querySelectorAll('input')).forEach((el) => el.addEventListener('input', calc));
+  calc();
+})();
+</script>
+<script src="/includes.js"></script>
+</body>
+</html>

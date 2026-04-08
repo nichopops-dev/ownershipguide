@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0344
-**Recent update:** v0344 added the sibling family framework page `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed the family hub plus adjacent school-location bridge pages with explicit inbound links, and regenerated featured data plus sitemap.
+**Current version:** v0345
+**Recent update:** v0345 added three sibling family school-location bridge calculators — `move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html`, and `move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html` — refreshed the family/calculators hubs plus adjacent school-location bridge pages with explicit inbound links, and regenerated featured data plus sitemap.
 
 ### Version history
+- **v0345** — added three sibling family school-location bridge calculators — `move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html`, and `move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html` — refreshed `family/index.html`, `calculators/index.html`, and adjacent school-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0344** — added the sibling family framework page `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent school-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0343** — added the family framework page `how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent childcare-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0342** — expanded the three family cross-cluster bridge calculators above the 1,500-word floor, corrected the broken route-calculation logic on `second-car-or-childcare-near-work-cost-calculator-singapore.html`, and refreshed the project brief.
@@ -239,6 +240,8 @@ Full branch coverage: ownership cost, purchase/financing, lifecycle/exit/COE, al
 **v0334 hardening note:** strengthened `upgrade-downgrade-property-calculator-singapore.html` and `cpf-accrued-interest-singapore.html` above the floor without changing site structure.
 
 **v0341 bridge-calculator note:** added `move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `bigger-home-farther-out-vs-smaller-home-near-childcare-cost-calculator-singapore.html`, and `second-car-or-childcare-near-work-cost-calculator-singapore.html`, extending the childcare location bridge branch with tool-first monthly trade-off calculators.
+
+**v0345 bridge-calculator note:** added `move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html`, and `move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html`, extending the sibling school-location bridge branch with tool-first monthly trade-off calculators.
 
 ### Property (119 content pages) ✅ Very strong
 **v0333 repair note:** restored SITE search-index coverage for `pay-down-home-loan-or-help-aging-parents-now-singapore.html`, refreshed `cpf-accrued-interest-calculator-singapore.html` above the content floor, and normalised property-related `page_registry` drift without touching hub dynamic logic.
