@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 08 Apr 2026 · Based on repo v0343
+> Last updated: 12 Apr 2026 · Based on repo v0343
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0345
-**Recent update:** v0345 added three sibling family school-location bridge calculators — `move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html`, and `move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html` — refreshed the family/calculators hubs plus adjacent school-location bridge pages with explicit inbound links, and regenerated featured data plus sitemap.
+**Current version:** v0346
+**Recent update:** v0346 completed a metadata integrity cleanup for the three sibling family school-location bridge calculators by raising their `featured.json` `page_registry.first_seen` dates above newer family entries already in the cluster, then regenerating `featured.json` and `sitemap.xml`.
 
 ### Version history
+- **v0346** — completed a metadata integrity cleanup for the three sibling family school-location bridge calculators by raising their `featured.json` `page_registry.first_seen` dates above newer family entries already in the cluster, then regenerating `featured.json` + `sitemap.xml`.
 - **v0345** — added three sibling family school-location bridge calculators — `move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html`, `buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html`, and `move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html` — refreshed `family/index.html`, `calculators/index.html`, and adjacent school-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0344** — added the sibling family framework page `how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent school-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.
 - **v0343** — added the family framework page `how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html`, refreshed `family/index.html` plus adjacent childcare-location bridge pages with explicit inbound links, updated touched pages to the current date, and regenerated `featured.json` + `sitemap.xml`.

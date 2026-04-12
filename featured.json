@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08",
+  "generated": "2026-04-12",
   "cluster_pages": {
     "transport": [
       {
@@ -2744,30 +2744,30 @@
   },
   "new": [
     {
+      "url": "/move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html",
+      "title": "Move Near School or Keep a Bigger Home First Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly burden of moving nearer to school versus keeping a bigger home farther out in Si",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html",
+      "title": "Move Closer to School or Keep Your Home and Own a Car Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly burden of moving closer to school versus staying put and adding a car in Singapo",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
+      "url": "/buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html",
+      "title": "Buy a Family Car or Move Closer to Work and School First Cost Calculator Singapore (2026)",
+      "desc": "Compare the monthly burden of buying a family car versus moving closer to work and school in Singapo",
+      "cluster": "family",
+      "clusterLabel": "Family"
+    },
+    {
       "url": "/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore.html",
       "title": "How to Choose School Location Without Overbuying Home or Second-C",
       "desc": "A practical Singapore framework for choosing school location without overbuying housing or second-ca",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/how-to-choose-childcare-location-without-overbuying-home-or-second-car-capacity-singapore.html",
-      "title": "How to Choose Childcare Location Without Overbuying Home or Secon",
-      "desc": "A practical Singapore framework for choosing childcare location without overbuying housing or vehicl",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/second-car-or-childcare-near-work-cost-calculator-singapore.html",
-      "title": "Second Car or Childcare Near Work Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly burden of adding a second car versus placing childcare near work in Singapore, i",
-      "cluster": "family",
-      "clusterLabel": "Family"
-    },
-    {
-      "url": "/move-near-childcare-or-keep-home-and-own-a-car-cost-calculator-singapore.html",
-      "title": "Move Near Childcare or Keep Your Home and Own a Car Cost Calculator Singapore (2026)",
-      "desc": "Compare the monthly burden of moving nearer to childcare versus staying put and adding a car in Sing",
       "cluster": "family",
       "clusterLabel": "Family"
     },
@@ -4717,13 +4717,13 @@
       "first_seen": "2026-04-16"
     },
     "move-closer-to-school-or-keep-home-and-own-a-car-cost-calculator-singapore.html": {
-      "first_seen": "2026-04-09"
+      "first_seen": "2026-04-17"
     },
     "buy-family-car-or-move-closer-to-work-and-school-first-cost-calculator-singapore.html": {
-      "first_seen": "2026-04-09"
+      "first_seen": "2026-04-17"
     },
     "move-near-school-or-keep-bigger-home-first-cost-calculator-singapore.html": {
-      "first_seen": "2026-04-09"
+      "first_seen": "2026-04-17"
     }
   }
 }
