@@ -1,6 +1,6 @@
 # Ownership Guide — Master Project Brief
 > Single source of truth for all Claude and ChatGPT sessions.
-> Last updated: 13 Apr 2026 · Based on repo v0348
+> Last updated: 14 Apr 2026 · Based on repo v0350
 
 ---
 
@@ -31,10 +31,11 @@
 
 **Stack:** Static HTML, no CMS, no React, no build pipeline. Pure HTML + CSS + vanilla JS.
 **Hosting:** GitHub Pages.
-**Current version:** v0349
-**Recent update:** v0349 major SEO enhancement bundle — strengthened the 5 transport pages closest to Google page 1 by adding headline cost figures, break-even anchors, 2026 depreciation rate tables, salary-based affordability benchmarks, and current COE premium ranges to their opening sections.
+**Current version:** v0350
+**Recent update:** v0350 "Get Indexed & Get Clicked" bundle — strengthened the 5 transport pages closest to Google page 1 by adding headline cost figures, break-even anchors, 2026 depreciation rate tables, salary-based affordability benchmarks, and current COE premium ranges to their opening sections.
 
 ### Version history
+- **v0350** — "Get Indexed & Get Clicked" bundle: (1) Added Article JSON-LD schema to 232 content pages that were missing it, with full publisher/logo/inLanguage/description/url fields. (2) Standardised 361 existing Article schemas to include missing publisher, inLanguage, description, url fields. (3) Updated "Last updated" visible date on 540 pages to 14 Apr 2026. (4) Updated dateModified in 593 Article schemas to 2026-04-14. (5) Added og:description meta tag to ~598 pages. (6) Added canonical tags to 19 pages that were missing them. (7) Regenerated sitemap.xml (606 URLs) and featured.json with fresh dates. No new URLs added. No structural changes to includes.js.
 - **v0349** — major SEO enhancement bundle: (1) Strengthened 7 more ranking pages with concrete cost figures in opening paragraphs — `bsd-absd-singapore.html` (ABSD rates table with worked example), `public-transport-cost-singapore.html` (fare ranges, monthly estimates, $128 pass), `car-subscription-vs-buying-singapore.html` (provider comparison table), `car-maintenance-repair-cost-singapore.html` (monthly buffer ranges), `used-car-vs-new-car-singapore.html` (interest rate section), `coe-renewal-worth-it-singapore.html` (2026 renewal cost ranges), `how-much-salary-to-own-a-car-singapore.html` (salary thresholds in opening). (2) Added BreadcrumbList JSON-LD schema to ~459 content pages for richer SERP display. (3) Standardised Open Graph tags (og:url, og:title, og:type) across ~607 pages. (4) Added pillar page internal linking boxes to ~451 pages across all 5 clusters, ensuring each content page links to at least 2 cluster pillar pages. (5) Regenerated sitemap.xml with 606 URLs and fresh lastmod dates. (6) Fixed double-encoded `&amp;amp;` in og:title on 13 pages. No new URLs added.
 - **v0348** — transport ranking push: strengthened 5 transport pages closest to Google page 1 based on GSC query data. `car-vs-ride-hailing-calculator.html` — rewrote opening to echo "break-even" in first 100 words with $2,000–$2,500/month anchor. `car-ownership-cost.html` — added $124k–$220k 5-year range and $2,100–$3,700/month figure in first paragraph. `car-depreciation-singapore.html` — added 2026 depreciation rate planning table by car category (Japanese, Korean, continental, used). `car-affordability-calculator-singapore.html` — rewrote meta description for intent match, added salary benchmark tiers and "Can you afford a car?" framing in opening. `coe-cost-singapore.html` — added 2026 COE premium bidding ranges by category with LTA link. No new URLs added.
 - **v0347** — SEO infrastructure bundle: added `og:image`, `og:image:width`, `og:image:height` meta tags to all 609 HTML pages with cluster-specific branded images (og-transport.png, og-property.png, og-family.png, og-protection.png, og-investing.png, og-default.png); fixed missing `defer=""` attribute on `includes.js` script tags across 257 pages that were render-blocking; added `.nojekyll` file to repo root for cleaner GitHub Pages builds. No new URLs added. No structural changes to includes.js or featured.json.
