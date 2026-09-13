@@ -1,0 +1,32 @@
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  site-checks:
+    name: site-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Check generated metadata is committed
+        run: |
+          python3 generate-featured.py
+          python3 generate-sitemap.py
+          git diff --exit-code -- featured.json sitemap.xml
+      - name: Audit the site and all local browser scripts
+        run: python3 audit-site.py
+      - name: Calculator and shared-runtime regression tests
+        run: node --test tests/*.test.mjs
+      - name: Metadata and generator regression tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
