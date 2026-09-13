@@ -6,8 +6,8 @@ Regenerates sitemap.xml from all .html files in the repo.
 Claude runs this each session before packaging the output zip.
 """
 
-import os, re
-from datetime import datetime
+import os
+from site_metadata import atomic_write, read_page
 
 BASE_URL = 'https://ownershipguide.com'
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +20,7 @@ EXCLUDE = {
 }
 
 # Directories never in sitemap
-EXCLUDE_DIRS = {'node_modules', '.git'}
+EXCLUDE_DIRS = {'node_modules', '.git', 'artifacts', 'tests'}
 
 def get_priority(path):
     fn = os.path.basename(path)
@@ -41,15 +41,7 @@ def get_changefreq(path):
     return 'monthly'
 
 def get_lastmod(filepath):
-    try:
-        content = open(filepath).read()
-        m = re.search(r'<strong>Last updated:</strong>\s*(\d{1,2}\s+\w+\s+\d{4})', content)
-        if m:
-            d = datetime.strptime(m.group(1).strip(), '%d %b %Y')
-            return d.strftime('%Y-%m-%d')
-    except:
-        pass
-    return datetime.now().strftime('%Y-%m-%d')
+    return read_page(filepath).date()
 
 urls = []
 for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
@@ -83,7 +75,7 @@ for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
 def sort_key(u):
     url = u['url']
     if url == BASE_URL + '/': return (0, url)
-    if url.endswith('/index.html'): return (1, url)
+    if url.endswith('/'): return (1, url)
     return (2, url)
 
 urls.sort(key=sort_key)
@@ -94,13 +86,13 @@ lines = ['<?xml version="1.0" encoding="UTF-8"?>',
 for u in urls:
     lines.append('  <url>')
     lines.append(f'    <loc>{u["url"]}</loc>')
-    lines.append(f'    <lastmod>{u["lastmod"]}</lastmod>')
+    if u['lastmod']:
+        lines.append(f'    <lastmod>{u["lastmod"]}</lastmod>')
     lines.append(f'    <changefreq>{u["changefreq"]}</changefreq>')
     lines.append(f'    <priority>{u["priority"]}</priority>')
     lines.append('  </url>')
 lines.append('</urlset>')
 
-with open(OUTPUT, 'w') as f:
-    f.write('\n'.join(lines) + '\n')
+atomic_write(OUTPUT, '\n'.join(lines) + '\n')
 
 print(f'sitemap.xml written: {len(urls)} URLs')

@@ -1,0 +1,9 @@
+# Local editorial context: keep out of the public repository.
+_project-brief.md
+_email-capture-setup.md
+
+# Generated local reports, packages and runtime files.
+artifacts/
+__pycache__/
+*.py[cod]
+.DS_Store

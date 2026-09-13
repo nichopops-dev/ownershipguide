@@ -6,8 +6,9 @@ Regenerates featured.json from actual page Last updated dates.
 Claude runs this each session before packaging the output zip.
 """
 
-import os, re, json
-from datetime import datetime, timedelta
+import os, json
+from datetime import datetime
+from site_metadata import atomic_write, excerpt, read_page
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 OUTPUT = os.path.join(REPO_ROOT, 'featured.json')
@@ -38,28 +39,14 @@ POPULAR = [
 ]
 
 def get_page_data(filepath):
-    try:
-        content = open(filepath, encoding='utf-8').read()
-    except:
+    page = read_page(filepath)
+    cluster = page.meta.get('og:cluster', '').strip()
+    if cluster not in CLUSTERS or not page.title.strip():
         return None
-    cluster_m = re.search(r'og:cluster[^>]+content="([^"]+)"', content)
-    title_m = re.search(r'<title>([^<]+)</title>', content)
-    date_m = re.search(r'<strong>Last updated:</strong>\s*(\d{1,2}\s+\w+\s+\d{4})', content)
-    desc_m = re.search(r'<meta[^>]+name="description"[^>]+content="([^"]+)"', content)
-    if not cluster_m or not title_m:
-        return None
-    cluster = cluster_m.group(1).strip()
-    if cluster not in CLUSTERS:
-        return None
-    title = title_m.group(1).split('|')[0].strip()
-    short_title = title.split(':')[0].strip() if ':' in title else title[:65]
-    desc = desc_m.group(1)[:100] if desc_m else ''
-    date_str = date_m.group(1).strip() if date_m else '1 Mar 2026'
-    try:
-        d = datetime.strptime(date_str, '%d %b %Y')
-        date_iso = d.strftime('%Y-%m-%d')
-    except:
-        date_iso = '2026-03-01'
+    title = page.title.split('|')[0].strip()
+    short_title = excerpt(title, 100)
+    desc = excerpt(page.meta.get('description', ''), 160)
+    date_iso = page.date() or ''
     fn = os.path.basename(filepath)
     return {'url': f'/{fn}', 'title': short_title, 'desc': desc,
             'cluster': cluster, 'date': date_iso}
@@ -96,6 +83,7 @@ def canonicalize_registry(registry):
     for key, meta in registry.items():
         if not isinstance(meta, dict):
             continue
+        key = key.lstrip('/')
         canonical_key = key if key.endswith('.html') else f'{key}.html'
         first_seen = meta.get('first_seen')
         if canonical_key not in canonical:
@@ -103,7 +91,7 @@ def canonicalize_registry(registry):
             continue
         current_dt = _parse_first_seen(canonical[canonical_key].get('first_seen'))
         candidate_dt = _parse_first_seen(first_seen)
-        if candidate_dt and (not current_dt or candidate_dt > current_dt):
+        if candidate_dt and (not current_dt or candidate_dt < current_dt):
             canonical[canonical_key] = {'first_seen': first_seen}
     return canonical
 
@@ -115,30 +103,14 @@ if os.path.exists(OUTPUT):
     except Exception:
         pass
 
-# Update registry: add new pages with a first_seen date that is strictly newer
-# than existing pages already present in the same cluster.
-today_dt = datetime.now()
+# Preserve publication history. Ties are valid; never manufacture future dates
+# to move a page higher in a listing. Recover old omissions from page metadata.
 page_fns = [p['url'].lstrip('/') for p in pages]
-cluster_lookup = {p['url'].lstrip('/'): p['cluster'] for p in pages}
-cluster_max = {}
-for fn_existing, meta in existing_registry.items():
-    cl = cluster_lookup.get(fn_existing)
-    if not cl:
-        continue
-    d = _parse_first_seen(meta.get('first_seen'))
-    if not d:
-        continue
-    if cl not in cluster_max or d > cluster_max[cl]:
-        cluster_max[cl] = d
 for fn in page_fns:
-    if fn not in existing_registry:
-        cl = cluster_lookup.get(fn)
-        candidate = today_dt
-        max_dt = cluster_max.get(cl)
-        if max_dt and candidate <= max_dt:
-            candidate = max_dt + timedelta(days=1)
-        existing_registry[fn] = {'first_seen': candidate.strftime('%Y-%m-%d')}
-        cluster_max[cl] = candidate
+    if not _parse_first_seen(existing_registry.get(fn, {}).get('first_seen')):
+        page = read_page(os.path.join(REPO_ROOT, fn))
+        first_seen = page.date('datePublished') or page.date() or datetime.now().date().isoformat()
+        existing_registry[fn] = {'first_seen': first_seen}
 
 # Sort by first_seen (not last_updated) — preserves genuine newness across sessions
 pages_with_first_seen = []
@@ -147,7 +119,7 @@ for p in pages:
     first_seen = existing_registry.get(fn, {}).get('first_seen', '2026-01-01')
     pages_with_first_seen.append({**p, 'first_seen': first_seen})
 
-registry_sorted = sorted(pages_with_first_seen, key=lambda x: (x['first_seen'], x['date'], x['title']), reverse=True)
+registry_sorted = sorted(pages_with_first_seen, key=lambda x: (x['first_seen'], x['url']), reverse=True)
 # Apply diversity cap: max 4 per cluster in new[]
 diverse_new = []
 cluster_counts_new = {}
@@ -230,8 +202,7 @@ output = {
     'page_registry': existing_registry,
 }
 
-with open(OUTPUT, 'w') as f:
-    json.dump(output, f, indent=2)
+atomic_write(OUTPUT, json.dumps(output, indent=2, ensure_ascii=False) + '\n')
 
 total = sum(len(v) for v in cluster_pages.values())
 print(f'featured.json written: {total} pages across {len(CLUSTERS)} clusters')
