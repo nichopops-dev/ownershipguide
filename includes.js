@@ -2213,9 +2213,9 @@ function buildRelatedHTML(label, links) {
   }
 
   function pickRelatedLinks({ bucket, cluster, subtopic, selfPath, isHub }) {
-    const all = dedupeByUrl(bucket.pages || []);
-    const pillars = dedupeByUrl(bucket.pillars || []);
-    const bridges = dedupeByUrl(bucket.bridges || []);
+    const all = uniqByUrl(bucket.pages || []);
+    const pillars = uniqByUrl(bucket.pillars || []);
+    const bridges = uniqByUrl(bucket.bridges || []);
 
     // normalize everything once for accurate self-exclusion + de-dupe
     const selfN = normalizePath(selfPath);
@@ -2296,7 +2296,9 @@ function buildRelatedHTML(label, links) {
     chosen = chosen.concat(bridges.slice(0, SETTINGS.relatedBridgeCount));
 
     // Final dedupe + cap
-    chosen = uniqByUrl(chosen).slice(0, SETTINGS.relatedMaxLinks);
+    chosen = uniqByUrl(chosen)
+      .filter((link) => normalizePath(link.url) !== selfN)
+      .slice(0, SETTINGS.relatedMaxLinks);
 
     // Extra guard: never show an empty module
     return chosen;
@@ -2368,6 +2370,9 @@ function buildRelatedHTML(label, links) {
   function injectPropertyCTA() {
     if (!SETTINGS.enableAutoPropertyCTA) return;
 
+    const main = getMainContainer();
+    if (!main) return;
+
     const host = document.getElementById(SETTINGS.relatedContainerId)
       || main.querySelector(".related-box")
       || main.querySelector("[data-related]")
@@ -2413,6 +2418,7 @@ function buildRelatedHTML(label, links) {
 
   function injectDecisionPathModule() {
     if (!SETTINGS.enableDecisionPathModule) return;
+    if (document.body.classList.contains("home")) return;
 
     // Anchor ALL decision-path logic to the same main container used for article content.
     const main = (typeof getMainContainer === "function" ? getMainContainer() : null)
