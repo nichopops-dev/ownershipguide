@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)</title>
-<meta content="Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans. Includes an effective-rate estimator for flat-rate quotes." name="description"/>
+<title>Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees</title>
+
 <link href="https://ownershipguide.com/car-loan-calculator-singapore.html" rel="canonical"/>
-<meta content="Car Loan Calculator Singapore (2026): Monthly Instalment + Total Interest" property="og:title"/>
-<meta content="Compute monthly instalment, total interest, and total paid. Flat-rate vs effective interest, with effective-rate estimator." property="og:description"/>
+
+
 <meta content="article" property="og:type"/>
 <meta content="transport" name="og:cluster"/>
 <meta content="calculator" name="og:subtopic"/>
@@ -16,290 +14,25 @@
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:url" content="https://ownershipguide.com/car-loan-calculator-singapore.html"/>
-<meta property="og:title" content="Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)"/>
+
 <meta property="og:type" content="article"/>
 
 <link href="/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How should I read a flat-rate car loan quote in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Read the flat-rate quote as a marketing surface, not the true borrowing cost. Use the calculator to convert it into monthly repayment, total interest, and an estimated effective annual rate so you can compare it against other loans honestly."}},{"@type":"Question","name":"What matters more: monthly instalment or total interest?","acceptedAnswer":{"@type":"Answer","text":"Monthly instalment determines cashflow stress. Total interest determines how expensive the financing decision becomes over the full holding period. In Singapore, both matter because a manageable instalment can still come with excessive total financing drag."}},{"@type":"Question","name":"When does stretching the loan tenure become dangerous?","acceptedAnswer":{"@type":"Answer","text":"It becomes dangerous when the lower instalment encourages you to buy more car than the rest of your budget can safely carry. A longer tenure can improve monthly comfort while worsening total interest, equity build-up, and exit flexibility."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)","item":"https://ownershipguide.com/car-loan-calculator-singapore.html"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)", "description": "Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans. Includes an effective-rate estimator for flat-rate quotes.", "url": "https://ownershipguide.com/car-loan-calculator-singapore.html", "datePublished": "2026-04-14", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
-</head>
-<body>
-<div id="site-header"></div>
-<main class="container">
-<nav class="breadcrumbs">
-<a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/transport/financing/">Financing</a> / Car loan calculator
-    </nav>
-<h1>Car Loan Calculator (Singapore, 2026)</h1>
-<p class="muted">
-      Use this to sanity-check a car loan quote beyond the “monthly instalment” headline.
-      Singapore car loans are often quoted as a <b>flat rate</b> (simple interest), which can look deceptively low versus an <b>effective</b> rate.
-      This calculator shows both, and estimates the equivalent effective rate for flat-rate quotes.
-    </p>
-<div class="box">
-<h2>Inputs</h2>
-<div class="og-form-grid">
-<div>
-<label for="carPrice">Car price (SGD)</label>
-<input id="carPrice" inputmode="decimal" min="0" step="1000" type="number" value="120000"/>
-</div>
-<div>
-<label for="downPct">Downpayment (%)</label>
-<input id="downPct" inputmode="decimal" max="100" min="0" step="0.5" type="number" value="30"/>
-</div>
-<div>
-<label for="tenureYears">Tenure (years)</label>
-<input id="tenureYears" inputmode="decimal" min="0.5" step="0.5" type="number" value="7"/>
-</div>
-<div>
-<label for="rateMode">Interest quote type</label>
-<select id="rateMode">
-<option selected="" value="flat">Flat rate (simple interest)</option>
-<option value="effective">Effective interest (amortized APR)</option>
-</select>
-</div>
-<div>
-<label for="ratePa">Quoted interest rate (% p.a.)</label>
-<input id="ratePa" inputmode="decimal" min="0" step="0.05" type="number" value="2.78"/>
-</div>
-<div>
-<label for="fees">Upfront fees (SGD)</label>
-<input id="fees" inputmode="decimal" min="0" step="50" type="number" value="0"/>
-</div>
-</div>
-<p class="muted" style="margin-top:10px">
-        Tip: If your quote is “flat 2.78% p.a.”, set <b>Interest quote type = Flat rate</b>.
-        If your lender provides an APR/effective rate, set it to <b>Effective</b>.
-      </p>
-<button class="btn" id="btnCalc">Calculate</button>
-</div>
-<div class="box">
-<h2>Results</h2>
-<div class="og-kpi-grid">
-<div class="kpi">
-<div class="kpi-label">Loan principal</div>
-<div class="kpi-value" id="kLoan">—</div>
-<div class="kpi-sub" id="kDown">—</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Monthly instalment</div>
-<div class="kpi-value" id="kMonthly">—</div>
-<div class="kpi-sub" id="kMonths">—</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Total interest</div>
-<div class="kpi-value" id="kInterest">—</div>
-<div class="kpi-sub" id="kType">—</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Total paid (incl. fees)</div>
-<div class="kpi-value" id="kTotal">—</div>
-<div class="kpi-sub">Principal + interest + fees</div>
-</div>
-</div>
-<div class="box" style="margin-top:14px">
-<h3>Effective-rate estimate (for flat-rate quotes)</h3>
-<p class="muted" style="margin-top:6px">
-          Flat-rate car loans charge interest on the original principal for the whole tenure.
-          The “equivalent effective rate” below is an estimate of the amortized APR that matches the same monthly instalment.
-        </p>
-<ul>
-<li><b>Equivalent effective APR:</b> <span id="kEqApr">—</span></li>
-<li><b>Note:</b> This is a numerical estimate (not a lender disclosure APR). Fees can change the true APR materially.</li>
-</ul>
-</div>
-</div>
-<hr/>
-<h2>How to interpret this</h2>
-<div class="box">
-<ol>
-<li><b>Separate “can pay” from “should pay”.</b> An instalment can be affordable while total ownership cost is still a bad trade.</li>
-<li><b>Use the stress test.</b> Pair this with the car affordability calculator (true monthly cost, not just instalment).</li>
-<li><b>Watch tenure creep.</b> A longer tenure reduces instalment but can increase your total interest exposure.</li>
-</ol>
-<div class="og-card-grid">
-<a class="og-card og-card-link" href="/car-affordability-calculator-singapore.html">
-<h3>Car affordability stress test</h3>
-<p class="muted">True monthly cost (depreciation/COE, insurance, fuel, maintenance) vs your income buffer.</p>
-</a>
-<a class="og-card og-card-link" href="/car-loan-rates-singapore.html">
-<h3>Car loan rates (flat vs effective)</h3>
-<p class="muted">Understand why a flat rate “looks low” and how to compare offers properly.</p>
-</a>
-<a class="og-card og-card-link" href="/transport/financing/">
-<h3>Transport financing hub</h3>
-<p class="muted">Decision flow: loan vs cash, balloon vs normal, leasing vs buying.</p>
-</a>
-</div>
-</div>
-<div id="next-steps"></div>
-<section class="og-editorial" id="og-editorial-car-loan">
-<h2>Car loan (flat vs effective): why this matters</h2>
-<p>Many Singapore car loans are advertised with a flat rate. Flat rates understate true cost because interest is effectively front‑loaded. Use this tool to compare loans on a like‑for‑like basis (monthly + total interest).</p>
-<h3>Quick checks</h3>
-<ul>
-<li>Compare two offers using <strong>total paid</strong>, not just rate.</li>
-<li>Include fees — they can flip the decision.</li>
-<li>Stress test your budget: what if your income dips for 3 months?</li>
-</ul>
-<h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Using the calculator step by step</h2>
-<p>Use this to estimate your <strong>monthly instalment</strong> and total interest for a Singapore car loan. Start with your best guess, then replace assumptions with your bank’s quote.</p><ol><li>Enter car price and downpayment.</li><li>Set loan tenure (months) and interest rate (% p.a.).</li><li>Compare monthly payment vs your safe budget (see Car ownership cost).</li></ol>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Scenario library (sanity checks)</h2>
-<p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
-<ul><li><strong>Example A (mass-market used car):</strong> <p>Car price: $60,000. Downpayment: $30,000. Loan: $30,000 over 60 months at 3.0% p.a. Use the output as a first-pass estimate, then sanity-check with total ownership costs (depreciation, insurance, fuel, parking).</p></li><li><strong>Example B (higher loan, longer tenure):</strong> <p>Car price: $120,000. Downpayment: $40,000. Loan: $80,000 over 84 months at 3.5% p.a. Watch how total interest grows with tenure.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
-<ul><li><strong>Interest model:</strong> Uses standard amortisation math (reducing balance). Some offers use different fee structures; verify with your lender.</li><li><strong>Excludes:</strong> dealer fees, insurance add-ons, early repayment fees, balloon/offset features.</li><li><strong>Use as planning:</strong> not financial advice; quotes vary by credit profile and promotions.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<p>Used properly, this page is less about “what is my monthly?” and more about “am I paying too much for the convenience of financing?”.</p>
-<ul>
-<li>Compare at least two lender or dealer offers on an effective basis.</li>
-<li>Check whether a small increase in downpayment improves the financing picture materially.</li>
-<li>Re-run the loan over a shorter tenure to see how much interest you are buying with the longer plan.</li>
-</ul>
-<h2>Simple sanity checks before you sign</h2>
-<p>The point is not only to know the instalment. The point is to know whether the loan still makes sense once you account for the effective cost of financing. If the effective rate is much higher than the flat-rate headline suggests, the page should prompt a second question: should you shorten tenure, increase downpayment, or reconsider the car altogether?</p>
-<h2>What the result should change in your behaviour</h2>
-<p>This calculator is most useful when you plug in numbers from an actual loan quote instead of a generic brochure rate. Many Singapore car-loan quotes are expressed in flat rates, which can make borrowing look cheaper than it feels. This page helps translate that into a more honest monthly and effective-rate perspective so you can compare offers cleanly.</p>
-<h2>How to use this page for real quotes</h2>
-<p>Before acting on the result, ask whether the output still makes sense after a conservative stress test. Good calculator use is not about precision to the last dollar; it is about avoiding decisions that only work in the optimistic case. If the answer still holds after you use harsher assumptions, that is usually a sign the decision is robust enough to move forward.</p>
-<h2>Output checklist</h2>
-<p>Re-run the calculator whenever one of the major assumptions changes meaningfully: rate, tenure, resale value, rent, energy cost, or your expected holding period. Small updates to these inputs often matter more than trying to make the original run more precise.</p><h2>When to re-run the model</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the calculator cannot decide for you</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the model leaves out</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Common interpretation mistakes</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Mistakes to avoid when reading the output</h2>
-<p>Run one optimistic case, one conservative case, and one “messy real life” case. The messy case is the most useful: slightly worse rates, slightly lower resale, slightly higher costs, and a shorter holding period than planned. If the decision still looks acceptable, you have a more resilient answer.</p>
-<h2>Quick scenario ideas</h2><p>These quick cases are useful because the “cheapest” loan on paper often changes once your own cashflow pattern enters the picture.</p><ul><li><strong>Short tenure, stronger monthly cashflow:</strong> a buyer with stable income may choose a shorter loan and accept higher instalments to reduce total interest paid.</li><li><strong>Long tenure, lower monthly strain:</strong> another buyer may prefer breathing room each month, even if the total financing cost rises, because cashflow resilience matters more than squeezing every dollar of interest.</li><li><strong>Minimal downpayment, stretched purchase:</strong> if the loan only looks manageable with a long tenure and weak buffer, the problem may be the car budget itself rather than the interest rate.</li></ul>
-<section class="box">
-<h2>How to use the result with a real dealer conversation</h2><p>Bring two outputs into the conversation, not one. First, note the monthly repayment that still leaves your budget resilient after parking, petrol or charging, insurance, and maintenance. Second, note the total interest level you are willing to tolerate. This stops the discussion from collapsing into a single instalment number that can be made to look better by stretching tenure or changing structure. It also helps you reject packages that feel “affordable” only because they hide cost in time. The calculator is most useful when it narrows your acceptable financing range before you sit down with the dealer, not after the emotional commitment to the car is already made.</p><h2 style="margin-top:0">FAQ</h2>
-<h3>How should I read a flat-rate car loan quote in Singapore?</h3><p>Read the flat-rate quote as a marketing surface, not the true borrowing cost. Use the calculator to convert it into monthly repayment, total interest, and an estimated effective annual rate so you can compare it against other loans honestly.</p>
-<h3>What matters more: monthly instalment or total interest?</h3><p>Monthly instalment determines cashflow stress. Total interest determines how expensive the financing decision becomes over the full holding period. In Singapore, both matter because a manageable instalment can still come with excessive total financing drag.</p>
-<h3>When does stretching the loan tenure become dangerous?</h3><p>It becomes dangerous when the lower instalment encourages you to buy more car than the rest of your budget can safely carry. A longer tenure can improve monthly comfort while worsening total interest, equity build-up, and exit flexibility.</p>
-</section>
-<div id="auto-related"></div>
-<h2>References</h2>
-<ul><li><a href="https://www.mas.gov.sg/" rel="nofollow noopener" target="_blank">MAS</a></li><li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><a href="/editorial-policy.html">Editorial Policy</a>, <a href="/advertising-disclosure.html">Advertising Disclosure</a>, and <a href="/corrections.html">Corrections</a>.</p>
-</section>
-<p><em>Last updated: 03 Apr 2026</em></p></main>
-<div id="site-footer"></div>
-<script defer="" src="/includes.js"></script>
-<script>
-    (function () {
-      const fmt = (n) => {
-        if (!isFinite(n)) return "—";
-        return new Intl.NumberFormat("en-SG", { style: "currency", currency: "SGD", maximumFractionDigits: 0 }).format(n);
-      };
-      const fmtPct = (x) => {
-        if (!isFinite(x)) return "—";
-        return (x).toFixed(2) + "%";
-      };
 
-      function pmt(principal, annualRatePct, months) {
-        const r = (annualRatePct / 100) / 12;
-        if (months <= 0) return NaN;
-        if (Math.abs(r) < 1e-12) return principal / months;
-        return principal * (r * Math.pow(1 + r, months)) / (Math.pow(1 + r, months) - 1);
-      }
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ownershipguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Transport", "item": "https://ownershipguide.com/transport/"}, {"@type": "ListItem", "position": 3, "name": "Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees", "item": "https://ownershipguide.com/car-loan-calculator-singapore.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees", "description": "Calculate car loan repayments, total interest and annual effective interest including fees. Compare flat-rate and annual effective-rate quotes.", "url": "https://ownershipguide.com/car-loan-calculator-singapore.html", "datePublished": "2026-04-14", "dateModified": "2026-09-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
 
-      function solveAprFromPayment(principal, payment, months) {
-        // Solve for monthly rate r in PMT formula via binary search, then convert to APR.
-        if (principal <= 0 || payment <= 0 || months <= 0) return NaN;
+<meta name="description" content="Calculate car loan repayments, total interest and annual effective interest including fees. Compare flat-rate and annual effective-rate quotes."/>
+<meta property="og:description" content="Calculate car loan repayments, total interest and annual effective interest including fees. Compare flat-rate and annual effective-rate quotes."/>
+<meta property="og:title" content="Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees"/>
 
-        // bounds: 0% to 50% APR (very wide for robustness)
-        let lo = 0.0, hi = 0.50 / 12;
-        for (let i = 0; i < 80; i++) {
-          const mid = (lo + hi) / 2;
-          let calc;
-          if (mid < 1e-12) {
-            calc = principal / months;
-          } else {
-            calc = principal * (mid * Math.pow(1 + mid, months)) / (Math.pow(1 + mid, months) - 1);
-          }
-          if (calc > payment) {
-            hi = mid;
-          } else {
-            lo = mid;
-          }
-        }
-        const r = (lo + hi) / 2;
-        return r * 12 * 100;
-      }
-
-      function calc() {
-        const carPrice = Number(document.getElementById("carPrice").value) || 0;
-        const downPct = Math.min(100, Math.max(0, Number(document.getElementById("downPct").value) || 0));
-        const tenureYears = Number(document.getElementById("tenureYears").value) || 0;
-        const rateMode = document.getElementById("rateMode").value;
-        const ratePa = Math.max(0, Number(document.getElementById("ratePa").value) || 0);
-        const fees = Math.max(0, Number(document.getElementById("fees").value) || 0);
-
-        const down = carPrice * (downPct / 100);
-        const principal = Math.max(0, carPrice - down);
-        const months = Math.max(1, Math.round(tenureYears * 12));
-
-        let monthly = NaN, totalInterest = NaN, totalPaid = NaN, eqApr = NaN;
-        if (principal <= 0 || carPrice <= 0) {
-          monthly = 0; totalInterest = 0; totalPaid = fees; eqApr = 0;
-        } else if (rateMode === "flat") {
-          // Flat rate: interest = principal * rate * years (simple interest)
-          totalInterest = principal * (ratePa / 100) * tenureYears;
-          totalPaid = principal + totalInterest + fees;
-          monthly = (principal + totalInterest) / months;
-          eqApr = solveAprFromPayment(principal, monthly, months);
-        } else {
-          // Effective (amortized): standard PMT
-          monthly = pmt(principal, ratePa, months);
-          totalPaid = monthly * months + fees;
-          totalInterest = (monthly * months) - principal;
-          eqApr = ratePa;
-        }
-
-        document.getElementById("kLoan").textContent = fmt(principal);
-        document.getElementById("kDown").textContent = "Downpayment: " + fmt(down) + " (" + downPct.toFixed(1) + "%)";
-        document.getElementById("kMonthly").textContent = fmt(monthly);
-        document.getElementById("kMonths").textContent = months + " months";
-        document.getElementById("kInterest").textContent = fmt(totalInterest);
-        document.getElementById("kType").textContent = (rateMode === "flat") ? "Flat rate simple interest" : "Effective amortized interest";
-        document.getElementById("kTotal").textContent = fmt(totalPaid);
-        document.getElementById("kEqApr").textContent = (rateMode === "flat") ? fmtPct(eqApr) : fmtPct(eqApr);
-      }
-
-      document.getElementById("btnCalc").addEventListener("click", calc);
-      ["carPrice","downPct","tenureYears","rateMode","ratePa","fees"].forEach((id) => {
-        const el = document.getElementById(id);
-        el.addEventListener("input", () => {
-          // soft live update
-          calc();
-        });
-        el.addEventListener("change", calc);
-      });
-
-      // initial
-      calc();
-    })();
-  </script>
-</body>
-</html>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does total paid include the downpayment?", "acceptedAnswer": {"@type": "Answer", "text": "The displayed loan repayments plus fees exclude the cash downpayment. Add the downpayment when budgeting the full purchase."}}, {"@type": "Question", "name": "Does the effective rate include fees?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, fees entered as paid upfront reduce net loan proceeds in the effective-rate calculation."}}, {"@type": "Question", "name": "Can this calculate an early settlement?", "acceptedAnswer": {"@type": "Answer", "text": "No. Obtain the lender’s settlement quotation, including any interest rebate and fees."}}]}</script>
+<script defer src="/scripts/finance-models.js?v=0352"></script><script defer src="/scripts/priority-calculators.js?v=0352"></script></head>
+<body><div id="site-header"></div><main class="container"><nav class="breadcrumbs"><a href="/">Home</a> / <a href="/transport/">Transport</a></nav>
+<h1>Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees</h1>
+<p>Enter a full-term loan quote to see its repayment and financing cost. A flat annual rate charges interest on the original principal; an annual effective rate reflects monthly compounding on a reducing balance. The defaults are an illustration, not a current lender offer.</p><form class="box" id="calculator" data-finance-calculator="carLoan" novalidate><h2>Calculator</h2><div class="og-form-grid"><div><label for="price">Car price (S$)</label><input id="price" name="price" type="number" inputmode="decimal" value="120000" min="0" step="any" aria-describedby="price-help"/><p class="muted" id="price-help"></p></div><div><label for="down">Cash downpayment (S$)</label><input id="down" name="down" type="number" inputmode="decimal" value="36000" min="0" step="any" aria-describedby="down-help"/><p class="muted" id="down-help"></p></div><div><label for="months">Loan tenure (months)</label><input id="months" name="months" type="number" inputmode="decimal" value="84" min="1" step="1" max="84" aria-describedby="months-help"/><p class="muted" id="months-help">Whole months; maximum 84 for this model.</p></div><div><label for="omv">Vehicle OMV band</label><select id="omv" name="omv"><option value="low">OMV S$20,000 or below</option><option value="high">OMV above S$20,000</option></select></div><div><label for="mode">Interest quote type</label><select id="mode" name="mode"><option value="flat">Flat annual rate</option><option value="effective">Annual effective rate (compounded)</option></select></div><div><label for="rate">Quoted annual interest rate (%)</label><input id="rate" name="rate" type="number" inputmode="decimal" value="2.78" min="0" step="any" max="100" aria-describedby="rate-help"/><p class="muted" id="rate-help">Confirm which rate definition the lender uses.</p></div><div><label for="fees">Loan fees paid upfront (S$)</label><input id="fees" name="fees" type="number" inputmode="decimal" value="0" min="0" step="any" aria-describedby="fees-help"/><p class="muted" id="fees-help">Fees reduce net loan proceeds when calculating effective cost.</p></div></div><button class="btn" type="submit">Calculate</button></form><p id="calculator-error" role="alert"></p><noscript><p>Enable JavaScript to use the calculator. The worked example below remains available.</p></noscript><section class="box" id="calculator-results" aria-live="polite"><h2>Results</h2><div class="og-kpi-grid"><div class="kpi"><div class="kpi-label">Loan principal</div><div class="kpi-value" id="principal-out">—</div></div><div class="kpi"><div class="kpi-label">Monthly repayment</div><div class="kpi-value" id="monthly-out">—</div></div><div class="kpi"><div class="kpi-label">Full-term interest</div><div class="kpi-value" id="interest-out">—</div></div><div class="kpi"><div class="kpi-label">Loan repayments + fees</div><div class="kpi-value" id="total-out">—</div></div><div class="kpi"><div class="kpi-label">Annual effective rate including fees</div><div class="kpi-value" id="eir-out">—</div></div></div><p id="limit-out"></p></section>
+<h2>Worked example matching the defaults</h2><p>S$120,000 price less S$36,000 downpayment leaves S$84,000 principal. At 2.78% flat for seven years, interest is S$84,000 × 2.78% × 7 = <strong>S$16,346.40</strong>. The 84 payments are <strong>S$1,194.60 each</strong>; total loan repayments are S$100,346.40. The downpayment is additional.</p>
+<h2>Rate definitions and fees</h2><p>Flat interest = principal × quoted annual rate × months ÷ 12. For annual effective-rate input, the monthly rate is (1 + annual rate)<sup>1/12</sup> − 1. The calculator then uses equal monthly amortising payments. If a quote supplies a nominal annual rate divided by 12, convert it to (1 + nominal rate ÷ 12)<sup>12</sup> − 1 before using the annual-effective option.</p><p>The fee-inclusive result solves for the monthly return on principal less upfront fees, with the scheduled monthly payments as outflows, then annualises it with compounding. Fees do not increase the monthly repayment unless they are financed; include financed fees in the actual principal separately. Fees at least as large as the principal cannot produce a meaningful positive net-loan comparison and show an input error.</p>
+<h2>Financing limits and exclusions</h2><p>MAS-regulated financial institutions generally cap motor-vehicle loans at 70% of purchase price for OMV of S$20,000 or less, and 60% above S$20,000, with a maximum seven-year tenure. OMV is not the retail purchase price. Vehicle age, financing basis and lender conditions can tighten the offer. Dealer financing arrangements may differ in regulatory treatment; do not interpret an advertised alternative as bank approval. <a href="https://www.nas.gov.sg/archivesonline/data/pdfdoc/20160526003/MAS%20Press%20Statement_MV%2026%20May%202016.pdf">MAS: motor-vehicle financing limits (archived release)</a>; <a href="https://www.mot.gov.sg/news-resources/newsroom/impact-of-defaults-and-fleet-sales-on-coe-prices-and-used-car-market-and-measures-to-control-problematic-financing-practices-in-coordination-with-mas/">MOT: regulated vehicle financing, February 2026</a>.</p>
+<p>This model has equal monthly payments starting after one month, a fixed rate and no balloon. It does not calculate early-settlement rebates, penalties, changing rates or bundled insurance. Request the lender’s settlement schedule if you may sell early. Then check the <a href="/car-affordability-calculator-singapore.html">monthly household budget</a> and <a href="/car-ownership-cost.html">total ownership cost</a>.</p>
+<section id="faq"><h2>FAQ</h2><h3>Does total paid include the downpayment?</h3><p>The displayed loan repayments plus fees exclude the cash downpayment. Add the downpayment when budgeting the full purchase.</p><h3>Does the effective rate include fees?</h3><p>Yes, fees entered as paid upfront reduce net loan proceeds in the effective-rate calculation.</p><h3>Can this calculate an early settlement?</h3><p>No. Obtain the lender’s settlement quotation, including any interest rebate and fees.</p></section><details><summary>Related guides and calculators</summary><ul><li><a href="/transport/financing/">Transport Financing in Singapore</a></li><li><a href="/car-affordability-calculator-singapore.html">Car Affordability Calculator Singapore</a></li><li><a href="/car-loan-rates-singapore.html">Car Loan Rates in Singapore</a></li></ul></details><div id="auto-related"></div><section id="references"><h2>References</h2><p>Rules and sources checked 14 September 2026. Worked budgets are illustrations unless explicitly identified otherwise.</p><ul><li><a href="https://www.nas.gov.sg/archivesonline/data/pdfdoc/20160526003/MAS%20Press%20Statement_MV%2026%20May%202016.pdf">MAS: motor-vehicle financing limits (archived release)</a></li><li><a href="https://www.mot.gov.sg/news-resources/newsroom/impact-of-defaults-and-fleet-sales-on-coe-prices-and-used-car-market-and-measures-to-control-problematic-financing-practices-in-coordination-with-mas/">MOT: regulated vehicle financing, February 2026</a></li></ul></section><p class="muted">Last updated: 14 Sep 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p></main><div id="site-footer"></div><script defer src="/includes.js"></script></body></html>

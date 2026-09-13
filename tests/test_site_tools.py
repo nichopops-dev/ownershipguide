@@ -51,6 +51,9 @@ class SiteToolsTests(unittest.TestCase):
             self.assertEqual(data['page_registry']['one.html']['first_seen'], '2026-03-01')
             self.assertEqual(data['page_registry']['two.html']['first_seen'], '2026-04-14')
             self.assertEqual(data['cluster_pages']['family'][0]['desc'], 'A useful description')
+            # A stale generation timestamp alone must not dirty an unchanged site.
+            data['generated'] = '2001-01-01'
+            (root / 'featured.json').write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
             first = (root / 'featured.json').read_bytes()
             subprocess.run(['python3', str(root / 'generate-featured.py')], check=True, capture_output=True)
             self.assertEqual((root / 'featured.json').read_bytes(), first)

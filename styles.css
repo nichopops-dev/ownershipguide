@@ -792,6 +792,17 @@ body.home .card{
 
 .og-card-wide{ grid-column: 1 / -1; }
 
+/* Keep article next-step cards and their recommended buttons within phones. */
+.og-nextsteps-grid .og-btn{
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  text-align: center;
+}
+@media (max-width: 700px){
+  .og-card-grid.three.og-nextsteps-grid{ grid-template-columns: 1fr; }
+}
+
 .og-card{
   display:block;
   padding: 14px 14px;

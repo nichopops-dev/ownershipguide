@@ -202,6 +202,14 @@ output = {
     'page_registry': existing_registry,
 }
 
+# A no-op rebuild keeps its original generated date, including across days.
+try:
+    previous = json.load(open(OUTPUT))
+except (OSError, ValueError):
+    previous = {}
+if previous.get('generated') and all(previous.get(k) == v for k, v in output.items() if k != 'generated'):
+    output['generated'] = previous['generated']
+
 atomic_write(OUTPUT, json.dumps(output, indent=2, ensure_ascii=False) + '\n')
 
 total = sum(len(v) for v in cluster_pages.values())
