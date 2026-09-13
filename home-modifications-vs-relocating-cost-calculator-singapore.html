@@ -35,7 +35,7 @@
 </style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Family","item":"https://ownershipguide.com/family/"},{"@type":"ListItem","position":3,"name":"Home Modifications vs Relocating Cost Calculator Singapore (2026): Compare Adapting the Current Home Against Moving to a Better-Fit Place Before the Household Pays Twice","item":"https://ownershipguide.com/home-modifications-vs-relocating-cost-calculator-singapore.html"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Home Modifications vs Relocating Cost Calculator Singapore (2026): Compare Adapting the Current Home Against Moving to a Better-Fit Place Before the Household Pays Twice", "description": "Compare the monthly burden of adapting the current home against relocating to a better-fit home for aging parents in Singapore after renovation spread, family handling time, transport drag, overlap cost, and offsets are counted honestly.", "url": "https://ownershipguide.com/home-modifications-vs-relocating-cost-calculator-singapore.html", "datePublished": "2026-04-14", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Home Modifications vs Relocating Cost Calculator Singapore (2026): Compare Adapting the Current Home Against Moving to a Better-Fit Place Before the Household Pays Twice", "description": "Compare the monthly burden of adapting the current home against relocating to a better-fit home for aging parents in Singapore after renovation spread, family handling time, transport drag, overlap cost, and offsets are counted honestly.", "url": "https://ownershipguide.com/home-modifications-vs-relocating-cost-calculator-singapore.html", "datePublished": "2026-04-14", "dateModified": "2026-09-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
 </head>
 <body>
 <div id="site-header"></div>
@@ -136,9 +136,9 @@
 <p class="small muted" style="margin:6px 0 0">Use any temporary double-payment, storage, or staging cost.</p>
 </div>
 <div>
-<label for="housingDelta">Monthly higher housing cost in better-fit home (SGD)</label>
-<input id="housingDelta" type="number" min="0" step="10" value="450"/>
-<p class="small muted" style="margin:6px 0 0">Use the true monthly difference after sale / purchase / rent changes.</p>
+<label for="housingDelta">Monthly housing cost change in better-fit home (SGD)</label>
+<input id="housingDelta" type="number" step="10" value="450"/>
+<p class="small muted" style="margin:6px 0 0">Enter a positive amount for higher housing costs, or a negative amount for monthly savings.</p>
 </div>
 <div>
 <label for="structuredTopUp">Monthly top-up support cost even after relocation (SGD)</label>
@@ -158,43 +158,43 @@
   </div>
   <div class="calc-card">
     <h3 style="margin-top:0">Results</h3>
+<noscript><p>Enable JavaScript to calculate these results. The formulas and examples below can also be used by hand.</p></noscript>
     <div class="kpi-box">
       <div class="muted">Route A monthly burden</div>
-      <div class="kpi" id="routeAMonthly">S$0</div>
+      <div class="kpi" id="routeAMonthly">—</div>
       <div class="small muted">Light-to-moderate modification spread + family workaround hours + extra trips + repair drag</div>
     </div>
     <div class="kpi-box" style="margin-top:12px">
       <div class="muted">Route B monthly burden</div>
-      <div class="kpi" id="routeBMonthly">S$0</div>
+      <div class="kpi" id="routeBMonthly">—</div>
       <div class="small muted">Moving spread + housing delta + top-up support + residual family hours</div>
     </div>
     <div class="kpi-box" style="margin-top:12px">
       <div class="muted">Monthly difference</div>
-      <div class="kpi" id="monthlyGap">S$0</div>
+      <div class="kpi" id="monthlyGap">—</div>
       <div class="small" id="gapLabel">—</div>
     </div>
     <div class="kpi-box" style="margin-top:12px">
       <div class="muted">Cheaper route burden as % of income</div>
-      <div class="kpi" id="pressureRatio">0%</div>
+      <div class="kpi" id="pressureRatio">—</div>
       <div class="small muted">Useful for testing whether the “cheaper” route is still heavy relative to household cashflow.</div>
     </div>
     <div class="kpi-box" style="margin-top:12px">
       <div class="muted">Break-even monthly housing delta for relocation</div>
-      <div class="kpi" id="breakevenMetric">S$0</div>
-      <div class="small muted">Approximate extra monthly housing cost relocation could absorb before the current-home route becomes cheaper again.</div>
+      <div class="kpi" id="breakevenMetric">—</div>
+      <div class="small muted">Monthly housing cost change at which the two routes match. Relocation is cheaper below this amount. A negative threshold means relocation needs that much monthly housing savings to break even.</div>
     </div>
     <div class="note" style="margin-top:12px" id="resultNote">Use the output to test system durability, not just invoice size.</div>
   </div>
 </div>
 
-<h2 id="measure">What the calculator is really measuring</h2>
-
-<p>The wrong question is usually, “How much does the renovation cost?”</p>
-<p>The real question is whether the current home can still carry the care plan without quietly eating family time, transport energy, and future flexibility. A staircase is not just a staircase once the parent needs supervision to use it. A narrow bathroom is not just an inconvenience once transfers become slower and night urgency becomes more common. A long walk from lift to unit is not a minor annoyance once fatigue and appointment recovery matter.</p>
-<p>This calculator is designed to make that hidden burden visible. Route A measures the cost of keeping the current home workable. That includes one-off works, assistive devices, recurring workaround hours, extra trips, and the small but steady repair or patching spend that appears when a home is being forced to do a job it was not designed for. Route B measures the cost of moving into a better-fit environment after transition cost, overlap pain, and residual support are counted honestly.</p>
-<p>That is why the result should not be read as a renovation quote or a property affordability tool. It is a household-friction tool. It tells you whether adaptation is still the cheaper answer after the family has priced the real operating system of the current home.</p>
-<p>In Singapore, this matters because many households delay the housing-fit question until one bad incident forces speed. By then the household is not making a clean decision. It is paying urgency pricing with less patience and worse options. The value of this calculator is that it lets the family run the numbers before the current home becomes an emergency rather than an asset.</p>
-<p>Use it when the parent’s needs are changing but the family is still deciding whether the answer is “modify and continue” or “move before the current place starts breaking the plan.”</p>
+<h2 id="measure">What the calculator measures</h2>
+<p>Route A spreads home works and equipment over the chosen months, then adds family handling time, extra trips, and repairs. Route B spreads moving and overlap costs, then adds the change in housing costs, support top-ups, and remaining family time. Each route deducts its own confirmed offsets.</p>
+<p>The monthly burden combines cash costs and an estimated value for family time. It is not a prediction of your bank balance. Enter only additional costs that are not already counted in another input.</p>
+<h3>Worked example: Adapt the current home or relocate</h3>
+<p><strong>Illustrative inputs, not quotations.</strong> With the example inputs, Route A is S$20,500 ÷ 60 + 12 × S$22 + 6 × S$24 + S$60 = <strong>about S$810/month</strong>. Route B is S$38,000 ÷ 60 + S$450 + S$180 + 4 × S$22 = <strong>about S$1,351/month</strong>. Staying and adapting is about S$542/month lighter on these assumptions.</p>
+<p>The break-even housing change is about −S$92/month. Relocation needs roughly S$92/month of housing savings to match Route A because its other costs already exceed the adaptation route. Enter negative housing changes when a move reduces monthly costs.</p>
+<p>The cost comparison does not determine whether a home or support arrangement is suitable. Consider the parent’s needs and any professional assessment separately from this budget model. One-off costs still need funding upfront even when this calculator spreads them over several years.</p>
 
 <h2 id="interpret">How to interpret the result properly</h2>
 
@@ -227,23 +227,23 @@
 <div class="box" style="margin-top:24px">
 <p><strong>Key guides in this cluster</strong></p>
 <ul>
-<li><a href="/cost-of-raising-a-child-singapore.html">Cost of Raising a Child</a></li>
-<li><a href="/childcare-cost-singapore.html">Childcare Cost Singapore</a></li>
-<li><a href="/helper-cost-singapore.html">Helper Cost Singapore</a></li>
+<li><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">Cost of Raising a Child</a></li>
+<li><a href="/infantcare-vs-childcare-cost-singapore.html">Infantcare vs Childcare Costs</a></li>
+<li><a href="/childcare-vs-helper-at-home-singapore.html">Childcare vs a Helper at Home</a></li>
 </ul>
 </div>
 <div id="auto-related"></div>
 <h2>References</h2>
 <ul><li><a href="https://www.hdb.gov.sg/residential/living-in-an-hdb-flat/for-our-seniors/ease">HDB — Enhancement for Active Seniors (EASE)</a></li><li><a href="https://www.aic.sg/financial-assistance/enhancement-active-seniors/">AIC — Enhancement for Active Seniors</a></li><li><a href="https://www.aic.sg/caregiving-support/making-your-home-safe">AIC — Making Your Home Safe</a></li><li><a href="https://www.aic.sg/caregiving-support/getting-assistive-devices">AIC — Getting Assistive Devices</a></li></ul>
-<p class="muted"><strong>Last updated:</strong> 14 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
+<p class="muted"><strong>Last updated:</strong> 14 Sep 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
 </main>
 <div id="site-footer"></div>
 <script>
 (function() {
   const $ = (id) => document.getElementById(id);
   const money = (n) => new Intl.NumberFormat('en-SG', { style:'currency', currency:'SGD', maximumFractionDigits:0 }).format(Number.isFinite(n) ? n : 0);
-  const num = (id) => Math.max(0, parseFloat($(id).value) || 0);
-  const read = () => 
+  const num = (id) => { const value = parseFloat($(id).value); return Number.isFinite(value) ? Math.max(0, value) : 0; };
+  const read = () => {
 const income = num('householdIncome');
 const fixed = num('existingCommitments');
 const works = num('worksCost');
@@ -258,7 +258,8 @@ const offsetA = num('offsetA');
 
 const moveCost = num('moveCost');
 const overlap = num('overlapCost');
-const rentDelta = num('housingDelta');
+const enteredHousingDelta = parseFloat($('housingDelta').value);
+const rentDelta = Number.isFinite(enteredHousingDelta) ? enteredHousingDelta : 0;
 const structuredTopUp = num('structuredTopUp');
 const familyHoursB = num('familyHoursB');
 const offsetB = num('offsetB');
@@ -276,27 +277,28 @@ const routeB = Math.max(0,
 );
 const gap = routeA - routeB;
 const monthlyBurden = Math.min(routeA, routeB);
-const pressureRatio = income > 0 ? (monthlyBurden / income) * 100 : 0;
+const pressureRatio = income > 0 ? (monthlyBurden / income) * 100 : null;
 const structuredFixedOther = (moveCost + overlap)/spread + structuredTopUp + (familyHoursB * hourlyValue) - offsetB;
-const breakeven = Math.max(0, routeA - structuredFixedOther);
+const breakeven = routeA - structuredFixedOther;
 return {income,fixed,routeA,routeB,gap,pressureRatio,breakeven};
-;
-  const render = () => 
+};
+  const render = () => {
 const r = read();
 $('routeAMonthly').textContent = money(r.routeA);
 $('routeBMonthly').textContent = money(r.routeB);
 const absGap = Math.abs(r.gap);
 $('monthlyGap').textContent = money(absGap);
 $('gapLabel').textContent = absGap < 1 ? 'Both routes are essentially equal on the current assumptions.' : (r.gap < 0 ? 'The lighter adaptation route is cheaper on current assumptions.' : 'The relocation route is cheaper on current assumptions.');
-$('pressureRatio').textContent = `${r.pressureRatio.toFixed(1)}%`;
+$('pressureRatio').textContent = r.pressureRatio === null ? '—' : `${r.pressureRatio.toFixed(1)}%`;
 $('breakevenMetric').textContent = money(r.breakeven);
 let note = 'Use the output to decide whether staying put still looks coherent after adaptations are counted honestly.';
 if (r.routeA + r.fixed > r.income && r.routeB + r.fixed > r.income) note = 'Both routes appear heavy relative to the current household structure. The next question may be timing, subsidy help, or whether support sharing needs to change.';
 else if (r.gap < 0) note = 'The adaptation route is cheaper on current assumptions. Now test whether the home can stay reliable as mobility, supervision, or bathroom-use needs rise further.';
 else if (r.gap > 0) note = 'The relocation route is cheaper on current assumptions. Now test whether the move also reduces transport drag, stairs exposure, and daily family handling.';
+if (r.income <= 0) note = 'Enter a positive household income to calculate the income share. Route costs can still be compared.';
 $('resultNote').textContent = note;
-;
-  document.querySelectorAll('input').forEach(el => el.addEventListener('input', render));
+};
+  document.querySelectorAll('main input').forEach(el => el.addEventListener('input', render));
   render();
 })();
 </script>
