@@ -3,6 +3,24 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/car-affordability-calculator-singapore.html",
+        "title": "Car Affordability Calculator Singapore (2026): Cashflow and Cost",
+        "desc": "Test a car against take-home income, living costs and savings. Separate monthly loan cashflow from depreciation, and include road tax and stress scenarios.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/car-loan-calculator-singapore.html",
+        "title": "Car Loan Calculator Singapore (2026): Flat Rate, EIR and Fees",
+        "desc": "Calculate car loan repayments, total interest and annual effective interest including fees. Compare flat-rate and annual effective-rate quotes.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/car-ownership-cost.html",
+        "title": "Car Ownership Cost Singapore (2026): A Five-Year Worked Budget",
+        "desc": "Build a five-year Singapore car budget from depreciation, financing, road tax and running costs, while separating ownership cost from monthly cashflow.",
+        "date": "2026-09-14"
+      },
+      {
         "url": "/10-year-coe-renewal-worth-it-singapore.html",
         "title": "Is 10-Year COE Renewal Worth It in Singapore? (2026 Financial Breakdown)",
         "desc": "Should you renew your COE for 10 years in Singapore (2026)? A clear framework comparing 10-year renewal vs 5-year renewal vs switching cars — including PARF…",
@@ -150,12 +168,6 @@
         "url": "/car-maintenance-repair-cost-singapore.html",
         "title": "Car Maintenance & Repair Cost in Singapore (2026): Realistic Monthly Buffer + 5-Year Exposure",
         "desc": "The real maintenance and repair cost of owning a car in Singapore (2026). Includes servicing, wear-and-tear, repair volatility, COE runway effects, and a…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-ownership-cost.html",
-        "title": "Cost of Owning a Car in Singapore (2026): 5-Year Depreciation & Full Breakdown",
-        "desc": "The true cost of owning a car in Singapore (2026). 5-year breakdown including COE depreciation, financing, insurance, fuel, maintenance, parking, ERP and…",
         "date": "2026-04-14"
       },
       {
@@ -789,18 +801,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/car-affordability-calculator-singapore.html",
-        "title": "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost",
-        "desc": "Can you afford a car in Singapore? Enter your income and commitments to get a stress-tested verdict: Safe, Grey Zone, or Fragile. Covers true monthly cost…",
-        "date": "2026-04-04"
-      },
-      {
-        "url": "/car-loan-calculator-singapore.html",
-        "title": "Car Loan Calculator Singapore (2026): Monthly Instalment, Total Interest (Flat vs Effective)",
-        "desc": "Singapore car loan calculator (2026): compute monthly instalment, total interest, and total paid. Supports flat-rate car loans and effective interest loans.…",
-        "date": "2026-04-03"
-      },
-      {
         "url": "/best-car-to-buy-singapore.html",
         "title": "Best Car to Buy in Singapore (2026): Cost, Value & Practicality Framework (Lowest Regret)",
         "desc": "Best car to buy in Singapore (2026) is not a brand list — it’s a lowest-regret framework. Choose based on 5-year cost exposure, COE timing risk, holding…",
@@ -908,6 +908,30 @@
         "url": "/bsd-absd-singapore.html",
         "title": "BSD & ABSD in Singapore (2026): Stamp Duty Cost, Cash Impact, and Decision Rules",
         "desc": "Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) in Singapore (2026): what they are, how they change your cash/CPF required, and the decision…",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/how-much-cash-to-buy-property-singapore.html",
+        "title": "How Much Cash to Buy Property in Singapore? (2026)",
+        "desc": "Calculate property cash and CPF needs with correct downpayment rules, BSD examples, valuation premiums and stamp-duty reimbursement timing.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/loan-to-value-ltv-singapore.html",
+        "title": "Loan-to-Value (LTV) Singapore (2026): Bank and HDB Limits",
+        "desc": "Compare Singapore bank and HDB LTV limits, minimum cash downpayments, age and tenure reductions, and valuation shortfalls.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/property-affordability-calculator-singapore.html",
+        "title": "Property Affordability Calculator Singapore (2026): TDSR, MSR and LTV",
+        "desc": "Screen a property loan against TDSR, MSR, assessment-rate floors and LTV. Compare contracted payments, stressed payments and upfront funding.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/tdsr-msr-singapore.html",
+        "title": "TDSR and MSR Singapore (2026): 55%, 30% and Assessment Rates",
+        "desc": "Understand when TDSR and MSR apply, how bank and HDB assessment rates differ, and how other debts reduce borrowing capacity.",
         "date": "2026-09-14"
       },
       {
@@ -1193,12 +1217,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/how-much-cash-to-buy-property-singapore.html",
-        "title": "How Much Cash Do You Need to Buy Property in Singapore? (2026 Real Breakdown)",
-        "desc": "How much cash do you need to buy property in Singapore (2026)? Full breakdown of downpayment, BSD, legal fees, CPF vs cash mechanics, renovation buffer…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/how-much-renovation-buffer-singapore.html",
         "title": "How Much Renovation Buffer Do You Need in Singapore? (2026): Budgeting for Overruns Without…",
         "desc": "How much renovation buffer do you need in Singapore (2026): contingency sizing, overrun risk, old-unit surprises, timeline slippage, and how to protect…",
@@ -1283,12 +1301,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/loan-to-value-ltv-singapore.html",
-        "title": "Loan-to-Value (LTV) in Singapore Property (2026): What It Really Limits",
-        "desc": "Loan-to-Value (LTV) in Singapore property for 2026: what LTV means, why max loan is not the same as affordability, how LTV affects downpayment, and how to use…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/lower-asking-price-now-vs-wait-longer-property-singapore.html",
         "title": "Lower Asking Price Now vs Wait Longer for Property in Singapore (2026): When Patience Helps and…",
         "desc": "Lower asking price now vs wait longer in Singapore (2026): stale listing risk, carrying cost, upgrade timing, and how sellers should judge whether patience is…",
@@ -1370,12 +1382,6 @@
         "url": "/progressive-payment-vs-resale-payment-timeline-singapore.html",
         "title": "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different",
         "desc": "Progressive payment vs resale payment timeline in Singapore for 2026: how staged payments differ from resale cashflow, why new-launch affordability and resale…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/property-affordability-calculator-singapore.html",
-        "title": "Property Affordability Calculator Singapore (2026): Stress-Test Your Purchase Safely",
-        "desc": "Simple property affordability stress test for Singapore (2026): estimate max loan under TDSR, monthly instalment, and upfront cash exposure. Built to avoid…",
         "date": "2026-04-14"
       },
       {
@@ -1628,12 +1634,6 @@
         "url": "/sun-heat-noise-and-road-exposure-property-singapore.html",
         "title": "Sun, Heat, Noise, and Road Exposure for Property in Singapore (2026): The Hidden Daily Friction…",
         "desc": "Sun, heat, noise, and road exposure for property in Singapore (2026): how orientation and environmental exposure affect comfort, rentability, and long-term…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/tdsr-msr-singapore.html",
-        "title": "TDSR & MSR in Singapore (2026): How Much You Can Really Borrow for Property",
-        "desc": "TDSR and MSR explained with practical borrowing power framework: how banks assess income, debts, stress rates, and what to do if your affordability is capped.",
         "date": "2026-04-14"
       },
       {
@@ -2823,6 +2823,18 @@
     ],
     "protection": [
       {
+        "url": "/how-much-life-insurance-do-you-need-singapore.html",
+        "title": "How Much Life Insurance Do You Need in Singapore? (2026)",
+        "desc": "Size a death-cover gap using surviving-household expenses, debts, available assets and existing cover, with a worked example and checks against double-counting.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/life-insurance-calculator-singapore.html",
+        "title": "Life Insurance Calculator Singapore (2026): Household Coverage Gap",
+        "desc": "Estimate a death-cover gap from household expenses, survivor income, inflation, debts, assets and existing policies, without double-counting mortgage support.",
+        "date": "2026-09-14"
+      },
+      {
         "url": "/accident-insurance-cost-singapore.html",
         "title": "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?",
         "desc": "Accident insurance cost in Singapore (2026): what accident plans actually cover, when cheap premiums fill a real gap, and when accident cover is just policy…",
@@ -3015,12 +3027,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/how-much-life-insurance-do-you-need-singapore.html",
-        "title": "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real…",
-        "desc": "How much life insurance do you need in Singapore (2026): a protection-gap framework for dependants, housing, income replacement, and the difference between…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/how-paying-off-your-home-loan-changes-your-insurance-needs-singapore.html",
         "title": "How Paying Off Your Home Loan Changes Your Insurance Needs in Singapore (2026): The Protection…",
         "desc": "How paying off your home loan changes your insurance needs in Singapore (2026): what to review once mortgage risk falls away, why HPS and term cover may no…",
@@ -3078,12 +3084,6 @@
         "url": "/life-insurance-and-home-loan-singapore.html",
         "title": "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die",
         "desc": "What happens to your home loan if you die in Singapore? How life insurance, HPS, and mortgage protection interact — and how to make sure your property does…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/life-insurance-calculator-singapore.html",
-        "title": "Life Insurance Calculator Singapore (2026): How Much Cover Does Your Household Actually Need",
-        "desc": "Life insurance calculator Singapore (2026): estimate the right sum assured based on your household's income replacement, debt obligations, dependant needs…",
         "date": "2026-04-14"
       },
       {
@@ -3164,6 +3164,12 @@
         "url": "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore.html",
         "title": "Build a Singapore Savings Bond Ladder or Increase Term Life Insurance First in Singapore (2026)…",
         "desc": "Build a Singapore Savings Bond ladder or increase term life insurance first in Singapore: a framework for choosing between conservative portfolio ballast and…",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-sa-top-up-singapore.html",
+        "title": "CPF SA Top-Up Singapore (2026): Limits, Tax Relief and Age 55",
+        "desc": "Understand the 2026 CPF SA and RA top-up limits, tax-relief conditions, current interest rates and why retirement top-ups are irreversible.",
         "date": "2026-09-14"
       },
       {
@@ -3248,12 +3254,6 @@
         "url": "/cpf-oa-investment-vs-index-fund-investing-singapore.html",
         "title": "CPF OA Investment vs Index Fund Investing in Singapore (2026): Use OA Balances or Fresh Cash?",
         "desc": "CPF OA investment vs index fund investing in Singapore (2026): compare guaranteed OA interest, property optionality, tax treatment, flexibility, and when…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/cpf-sa-top-up-singapore.html",
-        "title": "CPF SA Top-Up in Singapore (2026): Does the 4% and Tax Relief Justify Locking the Money Away",
-        "desc": "CPF SA top-up in Singapore (2026): a framework for deciding whether the 4% SA return and tax relief justify the near-permanent lock-in versus keeping cash…",
         "date": "2026-04-14"
       },
       {

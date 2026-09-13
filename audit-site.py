@@ -40,6 +40,7 @@ def main():
                         for part in path.relative_to(ROOT).parts)}
     errors = []
     scripts = []
+    external_scripts = set()
     inbound = defaultdict(set)
     titles = defaultdict(list)
     for name, page in sorted(pages.items()):
@@ -74,6 +75,10 @@ def main():
                 errors.append(f'{name}: missing title or description')
             titles[page.title.strip()].append(name)
         for attrs, script, line in page.scripts:
+            if attrs.get('src'):
+                target, _ = local_target(name, attrs['src'])
+                if target is not None and (ROOT / target).is_file():
+                    external_scripts.add(target)
             if not attrs.get('src') and attrs.get('type', '') in ('', 'text/javascript', 'application/javascript', 'module'):
                 scripts.append({'name': name, 'line': line, 'code': script})
     for names in titles.values():
@@ -126,7 +131,8 @@ def main():
         if target in pages and lastmod != pages[target].date():
             errors.append(f'sitemap.xml: lastmod differs from documented review date for {target}')
 
-    scripts.append({'name': 'includes.js', 'line': 1, 'code': (ROOT / 'includes.js').read_text()})
+    for name in sorted(external_scripts):
+        scripts.append({'name': name, 'line': 1, 'code': (ROOT / name).read_text()})
     node = os.environ.get('NODE') or shutil.which('node')
     if not node:
         errors.append('Node.js is required to check JavaScript. Install Node or set NODE to its executable.')
