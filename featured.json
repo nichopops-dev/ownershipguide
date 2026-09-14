@@ -905,9 +905,69 @@
     ],
     "property": [
       {
+        "url": "/bsd-absd-calculator-singapore.html",
+        "title": "BSD and ABSD Calculator Singapore (2026)",
+        "desc": "Calculate residential BSD and ordinary ABSD before remissions. Includes exact duty tiers, whole-dollar rounding and worked examples.",
+        "date": "2026-09-14"
+      },
+      {
         "url": "/bsd-absd-singapore.html",
-        "title": "BSD & ABSD in Singapore (2026): Stamp Duty Cost, Cash Impact, and Decision Rules",
-        "desc": "Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) in Singapore (2026): what they are, how they change your cash/CPF required, and the decision…",
+        "title": "BSD and ABSD Singapore (2026): Rates, Deadlines and Cash Planning",
+        "desc": "Singapore residential BSD tiers and ABSD rates, with worked examples, joint-buyer rules, CPF reimbursement and payment deadlines.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-accrued-interest-calculator-singapore.html",
+        "title": "CPF Accrued Interest Calculator Singapore: Lump Sum and Monthly Use",
+        "desc": "Project CPF housing withdrawals and accrued interest with monthly interest calculation and annual compounding. Supports ongoing monthly CPF use.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-accrued-interest-singapore.html",
+        "title": "CPF Accrued Interest Singapore: Housing Refunds and Sale Cash",
+        "desc": "Understand CPF housing principal and accrued interest, annual compounding, market-value shortfalls and refunds before and after age 55.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-oa-vs-cash-for-home-loan-singapore.html",
+        "title": "CPF OA vs Cash for a Home Loan: Compare Liquidity and Retirement",
+        "desc": "Compare CPF and cash mortgage servicing using cash reserves, OA availability, sale refunds and retirement needs, with a worked example.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/fixed-vs-floating-home-loan-singapore.html",
+        "title": "Fixed vs Floating Home Loans Singapore: Rate Resets and Lock-ins",
+        "desc": "Compare fixed and floating mortgage packages using reset rates, contractual spreads, exit restrictions and a worked payment stress test.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/hdb-income-ceiling-singapore.html",
+        "title": "HDB Income Ceilings (2026): August Changes and Route Eligibility",
+        "desc": "Check HDB income-ceiling changes from August 2026, including families, singles, flat types, grants, housing loans and EC transition dates.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/hdb-loan-vs-bank-loan-calculator-singapore.html",
+        "title": "HDB vs Bank Loan Calculator Singapore: Compare a Realistic Horizon",
+        "desc": "Compare HDB and bank loan payments, interest, fees and remaining balances over a chosen horizon, with separate cash and economic break-even.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/hdb-loan-vs-bank-loan-singapore.html",
+        "title": "HDB Loan vs Bank Loan Singapore (2026): Rates, Eligibility and Switching",
+        "desc": "Compare current HDB loan mechanics with bank financing: eligibility, LTV, cash downpayment, lock-ins and the one-way refinancing restriction.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/home-loan-lock-in-prepayment-penalty-singapore.html",
+        "title": "Home Loan Lock-in and Prepayment Penalties Singapore: Read the Dates",
+        "desc": "Understand mortgage lock-ins, prepayment penalties, notice periods and subsidy clawbacks, with an illustrative redemption-cost calculation.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/home-loan-refinancing-costs-singapore.html",
+        "title": "Home Loan Refinancing Costs Singapore: Fees and Real Savings",
+        "desc": "Build an itemised refinance budget covering legal costs, mortgage duty, penalties, clawbacks and savings over your actual package horizon.",
         "date": "2026-09-14"
       },
       {
@@ -923,9 +983,33 @@
         "date": "2026-09-14"
       },
       {
+        "url": "/mortgage-amortization-calculator-singapore.html",
+        "title": "Mortgage Amortisation Calculator Singapore: Schedule and Prepayments",
+        "desc": "Calculate monthly mortgage payments, interest, balances and early payoff, including recurring extra payments and a one-off repayment.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/mortgage-interest-cost-singapore.html",
+        "title": "Mortgage Interest Cost Singapore: Payments, Principal and Rate Stress",
+        "desc": "See how mortgage interest differs from principal repayment, with a S$600,000 worked example, five-year balances and interest-rate stress tests.",
+        "date": "2026-09-14"
+      },
+      {
         "url": "/property-affordability-calculator-singapore.html",
         "title": "Property Affordability Calculator Singapore (2026): TDSR, MSR and LTV",
         "desc": "Screen a property loan against TDSR, MSR, assessment-rate floors and LTV. Compare contracted payments, stressed payments and upfront funding.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/refinance-savings-calculator-singapore.html",
+        "title": "Refinance Savings Calculator Singapore: Interest, Fees and Cash Recovery",
+        "desc": "Compare refinance payments and net interest savings over a chosen horizon, with separate economic break-even and cash recovery after fees.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/refinance-vs-reprice-home-loan-singapore.html",
+        "title": "Refinance vs Reprice Singapore: Compare Fees, Balances and Flexibility",
+        "desc": "Compare staying, repricing with your bank and refinancing elsewhere using equal tenure, actual fees, loan balances and package constraints.",
         "date": "2026-09-14"
       },
       {
@@ -1037,18 +1121,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/cpf-accrued-interest-singapore.html",
-        "title": "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”",
-        "desc": "CPF accrued interest in Singapore property: how CPF refunds work at sale, why paper profit isn’t cash, and decision rules for using CPF vs cash.",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/cpf-oa-vs-cash-for-home-loan-singapore.html",
-        "title": "CPF OA vs Cash for Home Loan in Singapore (2026)",
-        "desc": "A Singapore 2026 framework for deciding whether to use CPF OA or cash for ongoing home-loan servicing, balancing liquidity, optionality, and long-run…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/defects-and-snagging-after-handover-singapore.html",
         "title": "Defects and Snagging After Handover in Singapore (2026): What to Do When the Home Is Handed Over…",
         "desc": "Defects and snagging after handover in Singapore (2026): post-handover checks, rectification realism, move-in delay, expectation management, and what to do…",
@@ -1109,12 +1181,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/fixed-vs-floating-home-loan-singapore.html",
-        "title": "Fixed vs Floating Home Loan in Singapore (2026): Which Is Safer, Cheaper, and Lower-Regret?",
-        "desc": "Fixed vs floating home loan in Singapore (2026): how to choose between payment certainty and rate flexibility, when each route tends to work better, and why…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/freehold-vs-leasehold-singapore.html",
         "title": "Freehold vs Leasehold in Singapore (2026): When Tenure Matters and When Buyers Overpay for the Story",
         "desc": "Freehold vs leasehold in Singapore (2026): how to think about tenure, holding horizon, resale perception, and when paying a premium for freehold actually…",
@@ -1136,24 +1202,6 @@
         "url": "/gross-vs-net-rental-yield-singapore.html",
         "title": "Gross vs Net Rental Yield in Singapore (2026): Why Headline Yield Misleads",
         "desc": "Gross vs net rental yield in Singapore (2026): why headline rental yield looks cleaner than reality, and how tax, maintenance, vacancy, repairs, and friction…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/hdb-income-ceiling-singapore.html",
-        "title": "HDB Income Ceiling in Singapore (2026): The Eligibility Gate Many Buyers Confuse with Affordability",
-        "desc": "HDB income ceiling in Singapore for 2026: why it is an eligibility gate, not an affordability test, and how it changes route choice and grant assumptions.",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/hdb-loan-vs-bank-loan-calculator-singapore.html",
-        "title": "HDB Loan vs Bank Loan Calculator Singapore (2026): Monthly + Total Interest",
-        "desc": "HDB loan vs bank loan calculator for Singapore (2026). Compare monthly instalment, total interest, and break-even vs fees. Useful when deciding HDB…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/hdb-loan-vs-bank-loan-singapore.html",
-        "title": "HDB Loan vs Bank Loan in Singapore (2026): Decision Framework + Worked Example",
-        "desc": "HDB loan or bank loan? A Singapore (2026) framework based on stability, buffers, eligibility constraints, and break-even after fees — with a worked example…",
         "date": "2026-04-14"
       },
       {
@@ -1184,18 +1232,6 @@
         "url": "/home-insurance-vs-fire-insurance-singapore.html",
         "title": "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know",
         "desc": "Home insurance vs fire insurance in Singapore for 2026: what each one broadly covers, why they are not interchangeable, and how homeowners should think about…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/home-loan-lock-in-prepayment-penalty-singapore.html",
-        "title": "Home Loan Lock-In Period and Prepayment Penalty in Singapore (2026): When Flexibility Matters",
-        "desc": "Home loan lock-in periods and prepayment penalties in Singapore for 2026: what they mean, how they affect refinancing and selling, and when paying for…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/home-loan-refinancing-costs-singapore.html",
-        "title": "Home Loan Refinancing Costs in Singapore (2026): Fees, Subsidies, and Break-Even Reality",
-        "desc": "Home loan refinancing costs in Singapore for 2026: legal fees, valuation, subsidies, clawbacks, lock-ins, and how to calculate whether refinancing is actually…",
         "date": "2026-04-14"
       },
       {
@@ -1316,12 +1352,6 @@
         "url": "/minimum-occupation-period-mop-singapore.html",
         "title": "Minimum Occupation Period (MOP) in Singapore (2026): The Flexibility Lock-Up Many Buyers…",
         "desc": "Minimum Occupation Period (MOP) in Singapore for 2026: what it restricts, why it matters for flexibility, and how it changes HDB route, upgrade, and…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/mortgage-interest-cost-singapore.html",
-        "title": "Mortgage Interest Cost in Singapore (2026): How Much You Really Pay Over 25–30 Years",
-        "desc": "Mortgage interest cost in Singapore (2026): how much interest you actually pay over 25–30 years, what a 0.5–1.0% rate move does, and when early repayment…",
         "date": "2026-04-14"
       },
       {
@@ -1472,12 +1502,6 @@
         "url": "/refinance-now-vs-wait-for-more-rate-clarity-singapore.html",
         "title": "Refinance Now vs Wait for More Rate Clarity in Singapore (2026): When Acting Early Beats Watching…",
         "desc": "Refinance now vs wait for more rate clarity in Singapore: decide when immediate action improves certainty and savings, and when waiting is justified by real…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/refinance-vs-reprice-home-loan-singapore.html",
-        "title": "Refinance vs Reprice Home Loan in Singapore (2026): Break-even Framework",
-        "desc": "Refinance vs reprice in Singapore? Use a simple break-even framework (all-in costs vs monthly savings), with lock-in and exit optionality checks.",
         "date": "2026-04-14"
       },
       {
@@ -1691,12 +1715,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/cpf-accrued-interest-calculator-singapore.html",
-        "title": "CPF Accrued Interest Calculator Singapore (OA): Estimate Refund on Sale",
-        "desc": "CPF accrued interest calculator for Singapore: estimate the CPF OA refund amount (principal + accrued interest) based on CPF used and holding period. Planning…",
-        "date": "2026-04-03"
-      },
-      {
         "url": "/rent-vs-buy-calculator-singapore.html",
         "title": "Rent vs Buy Calculator (Singapore, 2026): Break‑Even + Net Worth Difference",
         "desc": "Singapore rent vs buy calculator (2026): compare owning vs renting over the same horizon. Includes mortgage amortization, appreciation, rent inflation…",
@@ -1709,22 +1727,10 @@
         "date": "2026-03-28"
       },
       {
-        "url": "/mortgage-amortization-calculator-singapore.html",
-        "title": "Mortgage Amortization Calculator Singapore (2026): Monthly Payment + Total Interest",
-        "desc": "Mortgage amortization calculator for Singapore (2026): compute monthly repayment, total interest, and a simple amortization schedule. Use it to sanity-check…",
-        "date": "2026-03-26"
-      },
-      {
         "url": "/sell-property-proceeds-calculator-singapore.html",
         "title": "Sell Property Proceeds Calculator (Singapore, 2026): Cash vs CPF Reality",
         "desc": "Singapore sell property proceeds calculator (2026): estimate cash proceeds after loan redemption, CPF refund, agent fee, legal fees, SSD, and other selling…",
         "date": "2026-03-26"
-      },
-      {
-        "url": "/bsd-absd-calculator-singapore.html",
-        "title": "BSD & ABSD Calculator Singapore (2026): Buyer’s Stamp Duty + Additional Buyer’s Stamp Duty",
-        "desc": "BSD & ABSD calculator for Singapore (2026): estimate Buyer’s Stamp Duty (BSD) and Additional Buyer’s Stamp Duty (ABSD) for residential property using IRAS…",
-        "date": "2026-03-25"
       },
       {
         "url": "/how-much-cash-to-buy-property-calculator-singapore.html",
@@ -1742,12 +1748,6 @@
         "url": "/property-upgrade-ladder-calculator-singapore.html",
         "title": "Property Upgrade Ladder Calculator (Singapore, 2026): Target Price → Required Income + Cash Buffer",
         "desc": "Singapore property upgrade ladder calculator (2026): enter a target property price and see (1) required household income (TDSR/MSR) and (2) cash/CPF buffer…",
-        "date": "2026-03-25"
-      },
-      {
-        "url": "/refinance-savings-calculator-singapore.html",
-        "title": "Refinance Savings Calculator Singapore (2026): Break‑Even Months + Interest Saved",
-        "desc": "Singapore refinance savings calculator (2026): compare your current home loan vs a new rate. Estimate monthly savings, break-even months after fees, interest…",
         "date": "2026-03-25"
       },
       {
@@ -3167,6 +3167,30 @@
         "date": "2026-09-14"
       },
       {
+        "url": "/cpf-life-basic-vs-escalating-plan-singapore.html",
+        "title": "CPF LIFE Basic vs Escalating: Declining or Rising Payouts",
+        "desc": "Compare Basic’s potentially declining payments with Escalating’s 2% annual increases, including inflation, reserves and bequest limits.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-life-basic-vs-standard-plan-singapore.html",
+        "title": "CPF LIFE Basic vs Standard: Payouts, Declines and Bequests",
+        "desc": "Compare Basic and Standard CPF LIFE plans using payout mechanics, declining Basic payouts, bequest limits and retirement spending needs.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-life-standard-vs-escalating-plan-singapore.html",
+        "title": "CPF LIFE Standard vs Escalating: Starting Income and 2% Growth",
+        "desc": "Compare Standard’s higher starting payout with Escalating’s 2% annual increases, using spending gaps and a transparent crossover example.",
+        "date": "2026-09-14"
+      },
+      {
+        "url": "/cpf-oa-investment-singapore.html",
+        "title": "CPF OA Investing Singapore (2026): Limits, Fees and Housing Risk",
+        "desc": "Review CPFIS-OA eligibility, the S$20,000 reserve, stock and gold limits, investment losses, fees and near-term housing needs.",
+        "date": "2026-09-14"
+      },
+      {
         "url": "/cpf-sa-top-up-singapore.html",
         "title": "CPF SA Top-Up Singapore (2026): Limits, Tax Relief and Age 55",
         "desc": "Understand the 2026 CPF SA and RA top-up limits, tax-relief conditions, current interest rates and why retirement top-ups are irreversible.",
@@ -3215,24 +3239,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/cpf-life-basic-vs-escalating-plan-singapore.html",
-        "title": "CPF LIFE Basic vs Escalating Plan in Singapore (2026): Preserve More Legacy Shape or Build a…",
-        "desc": "CPF LIFE Basic vs Escalating in Singapore (2026): compare lower-starting-but-rising payouts against lower-payout-with-more residual-balance shape, and decide…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/cpf-life-basic-vs-standard-plan-singapore.html",
-        "title": "CPF LIFE Basic vs Standard Plan in Singapore (2026): Lower Bequest Focus or Stronger Starting…",
-        "desc": "CPF LIFE Basic vs Standard in Singapore (2026): compare starting payouts, residual balance shape, longevity risk transfer, and when retirees should value a…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/cpf-life-standard-vs-escalating-plan-singapore.html",
-        "title": "CPF LIFE Standard vs Escalating Plan in Singapore (2026): Bigger Starting Payout or Better…",
-        "desc": "CPF LIFE Standard vs Escalating Plan in Singapore (2026): compare starting payout, inflation pressure, longevity, spending floor design, and when a retiree…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/cpf-life-vs-dividend-portfolio-singapore.html",
         "title": "CPF LIFE vs Dividend Portfolio in Singapore (2026): Guaranteed Lifetime Floor or Variable Income…",
         "desc": "CPF LIFE vs dividend portfolio in Singapore (2026): compare lifetime guaranteed income, sequence risk, flexibility, estate value, reinvestment discipline, and…",
@@ -3242,12 +3248,6 @@
         "url": "/cpf-life-vs-ssb-ladder-singapore.html",
         "title": "CPF LIFE vs SSB Ladder in Singapore (2026): Lifetime Income Floor or Flexible Bond Ladder for…",
         "desc": "CPF LIFE vs SSB ladder in Singapore (2026): compare guaranteed lifetime payouts, liquidity, rollover risk, inflation, estate flexibility, and when retirement…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/cpf-oa-investment-singapore.html",
-        "title": "CPF OA Investment in Singapore (2026): When the 2.5% Floor Is Good Enough and When It Is Not",
-        "desc": "CPF OA investment in Singapore (2026): a framework for deciding whether the guaranteed 2.5% return is the right default or whether the household's time…",
         "date": "2026-04-14"
       },
       {

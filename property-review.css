@@ -1,0 +1,11 @@
+/* Scoped to the reviewed property and CPF guides. */
+.reviewed-property .review-table { max-width:100%; overflow-x:auto; margin:18px 0; }
+.reviewed-property table { width:100%; border-collapse:collapse; font-size:0.95rem; }
+.reviewed-property th, .reviewed-property td { text-align:left; padding:10px; border-bottom:1px solid #dfe3e8; vertical-align:top; }
+.reviewed-property th { background:#f4f6f8; }
+.reviewed-property .kpi-value { overflow-wrap:anywhere; }
+.reviewed-property select { min-height:44px; padding:9px; border:1px solid #cbd5e1; border-radius:8px; font:inherit; background:#fff; }
+.reviewed-property #calculator-error { color:#a61d24; }
+.reviewed-property details { margin:24px 0; }
+.reviewed-property summary { cursor:pointer; font-weight:600; }
+.reviewed-property [hidden] { display:none !important; }

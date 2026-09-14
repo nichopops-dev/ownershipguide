@@ -60,3 +60,11 @@ Local checks do not deploy the site. After a separately authorized deployment, v
 The four reviewed tools load `scripts/finance-models.js` and `scripts/priority-calculators.js`. Keep model arithmetic in the first file and UI rendering in the second. `tests/finance-models.test.mjs` reads page defaults and verifies the published worked examples, assessment floors, LTV, fees, inflation and cashflow reconciliation. The audit discovers and syntax-checks local script assets linked by pages.
 
 The ten core guides were substantively reviewed on 14 September 2026. Their references identify the relevant official rules. Other guides retain their earlier review dates and still require a separate factual review.
+
+## Property and CPF review (v0353)
+
+Nineteen existing stamp-duty, CPF and home-loan pages received a substantive review on 14 September 2026, including HDB's August 2026 income-ceiling changes. Sources and assumptions are linked in each guide. The wider library still requires separate review.
+
+Five tools now use `scripts/property-models.js` for arithmetic and `scripts/property-calculators.js` for rendering: BSD/ABSD, CPF housing interest, mortgage amortisation, HDB versus bank financing, and refinance savings. Their scoped presentation is in `property-review.css`.
+
+`tests/property-models.test.mjs` reads the actual page defaults and covers duty tiers and minimums, CPF annual compounding and withdrawal timing, partial final repayment years, lump sums, cash/balance reconciliation, horizon limits and invalid inputs. The original BSD test has moved from the inline-script harness into this suite. Browser checks must also cover reset, input errors, custom horizons and the monthly schedule toggle.
