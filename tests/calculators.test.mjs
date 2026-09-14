@@ -29,10 +29,6 @@ function loadCalculator(file) {
     nodes.set(attrs.id, node);
     if (match[1] === 'input') inputs.push(node);
   }
-  if (file.startsWith('bsd-')) {
-    nodes.get('profile').value = 'sc';
-    nodes.get('owned').value = '0';
-  }
   const document = {
     getElementById(id) { assert.ok(nodes.has(id), `Missing element: ${id}`); return nodes.get(id); },
     querySelectorAll(selector) { assert.equal(selector, 'main input'); return inputs; },
@@ -120,12 +116,5 @@ test('relocation allows savings and preserves a negative break-even threshold', 
   assert.equal(calc.number('routeBMonthly'), 50);
 });
 
-test('BSD tiers and second-property ABSD reproduce the corrected example', () => {
-  const calc = loadCalculator('bsd-absd-calculator-singapore.html');
-  for (const [value, expected] of [[180000, 1800], [360000, 5400], [1000000, 24600], [1500000, 44600], [3000000, 119600], [4000000, 179600]]) {
-    calc.set('value', value); calc.click('calcBtn');
-    assert.equal(calc.number('bsdOut'), expected);
-  }
-  calc.set('value', 1500000); calc.set('owned', '1'); calc.click('calcBtn');
-  assert.equal(calc.number('totalOut'), 344600);
-});
+// BSD now uses the shared property model. Its original tier and second-home
+// examples, plus rounding and profile cases, are in property-models.test.mjs.
