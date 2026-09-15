@@ -3,544 +3,122 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Transport Cost in Singapore (2026): Ownership vs Alternatives</title>
-<meta content="Transport cost in Singapore (2026): structured guides for car ownership, alternatives, financing, depreciation, COE renewal, and calculators that show full exposure instead of instalment-only thinking." name="description"/>
-<link href="https://ownershipguide.com/transport/" rel="canonical"/>
-<meta content="transport" name="og:cluster"/>
-<meta content="hub" name="og:subtopic"/>
-<meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
+<title>Ownership Guide | Real Cost of Ownership in Singapore</title>
+<meta content="Ownership Guide models the real cost of major decisions in Singapore — transport, property, family cost, protection decisions, investing liquidity, and capital allocation choices. Structured frameworks, monthly reality checks, and break-even tools." name="description"/>
+<link href="https://ownershipguide.com/" rel="canonical"/>
+<meta content="core" name="og:cluster"/>
+<meta content="home" name="og:subtopic"/>
+<meta content="ca-pub-8718234605112874" name="google-adsense-account"/>
+<meta property="og:image" content="https://ownershipguide.com/og-default.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<meta property="og:url" content="https://ownershipguide.com/index.html"/>
-<meta property="og:title" content="Transport Cost in Singapore (2026): Ownership vs Alternatives"/>
-<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://ownershipguide.com/"/>
+<meta property="og:title" content="Ownership Guide | Real Cost of Ownership in Singapore"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content="Ownership Guide models the real cost of major decisions in Singapore — transport, property, family cost, protection decisions, investing liquidity, and capital allocation choices. Structured frameworks, monthly reality checks, and break-even tools."/>
 
 <link href="/styles.css" rel="stylesheet"/>
-</head>
-<body>
-<div id="site-header"></div>
-<main class="container">
-<p><a class="og-chip" href="/start-here/">Back to Start Here</a></p>
-<section class="hub-hero">
-<p class="eyebrow">Transport hub</p>
-<h1>Transport Cost in Singapore (2026): Ownership vs Alternatives</h1>
-<p class="lead">The real question is rarely “Can I afford the instalment?”</p>
-<p>Transport decisions in Singapore are unusually sensitive to depreciation, COE, financing structure, and usage intensity. The useful question is what your all-in exposure looks like, what convenience you are actually buying, and how fragile the decision becomes if usage or income changes.</p>
-<p class="btn-row"><a class="button" href="/car-affordability-calculator-singapore.html">Run affordability →</a><a class="button" href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing →</a><a class="button" href="/coe-renew-vs-replace-calculator-singapore.html">Renew vs replace →</a></p>
-</section>
-
-<section class="hub-strip">
-<div>
-<div class="hub-stat-title">Ownership question</div>
-<div class="hub-stat-value">Should I own a car at all after convenience is priced against depreciation?</div>
-</div>
-<div>
-<div class="hub-stat-title">Affordability question</div>
-<div class="hub-stat-value">Can I carry the decision safely after loan, running costs, and weaker usage?</div>
-</div>
-<div>
-<div class="hub-stat-title">Structure question</div>
-<div class="hub-stat-value">What purchase path is less fragile: used, new, EV, lease, or COE renewal?</div>
-</div>
-</section>
-
-<section class="og-dynamic-section" id="og-hub-dynamic-transport" style="margin-top:18px">
-</section>
-<script>
-(function(){
-  var sec=document.getElementById('og-hub-dynamic-transport');
-  if(!sec) return;
-  var MAX=5;
-  fetch('/featured.json')
-    .then(function(r){return r.json();})
-    .catch(function(){return null;})
-    .then(function(data){
-      if(!data||!data.cluster_pages||!data.cluster_pages['transport']) return;
-      // Pages already sorted by date descending in featured.json
-      var pinned=(data.pinned&&data.pinned['transport'])||[];
-      var recent=data.cluster_pages['transport'].filter(function(p){
-        return !pinned.some(function(pin){return pin.url===p.url;});
-      }).slice(0,Math.max(0,MAX-pinned.length));
-      var items=pinned.concat(recent);
-      if(!items.length) return;
-      var html='<div class="box">';
-      html+='<p style="margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em">Where to start + recent</p>';
-      html+='<ul style="margin:0;padding-left:0;list-style:none">';
-      items.forEach(function(p){
-        html+='<li style="padding:5px 0;border-bottom:1px solid var(--border)">';
-        html+='<a href="'+p.url+'" style="font-weight:500">'+p.title+'</a>';
-        if(p.desc) html+='<span style="display:block;font-size:13px;color:var(--muted);margin-top:2px">'+p.desc+'</span>';
-        html+='</li>';
-      });
-      html+='</ul>';
-      html+='</div>';
-      sec.innerHTML=html;
-    });
-})();
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Ownership Guide",
+  "url":"https://ownershipguide.com/",
+  "description":"Structured ownership cost models for Singapore — transport, property, and capital allocation decisions."
+}
 </script>
-
-
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Start with the path that matches your decision</h2>
-<p class="section-intro">Use these three entry lanes to avoid mixing up the convenience question, the affordability question, and the vehicle-structure question.</p>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Ownership Guide",
+  "url":"https://ownershipguide.com/",
+  "logo":"https://ownershipguide.com/favicon-512x512.png"
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to read a guide before using a calculator?", "acceptedAnswer": {"@type": "Answer", "text": "No. If you know your inputs, open the calculator directly. Read its assumptions and use the linked guide when you need help interpreting the result."}}, {"@type": "Question", "name": "Does this site cover Singapore rules?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The guides focus on Singapore household decisions, including COE, CPF, property financing, family care, and insurance. Check the linked official sources before acting on a rule or rate."}}, {"@type": "Question", "name": "How should I use a result?", "acceptedAnswer": {"@type": "Answer", "text": "Use it to compare scenarios and identify the costs that matter most. Replace example inputs with your own quotations and check whether the decision still works under less favourable assumptions."}}]}</script>
+</head>
+<body class="home">
+<div id="site-header"></div>
+<main class="container" id="main-content">
+<header class="home-hero">
+<p class="eyebrow">Singapore household decisions</p>
+<h1>What will this decision really cost?</h1>
+<p class="lead">Make high-cost decisions with clarity.</p>
+<p>Compare the full cost of a car, a home, or a change in family care. See the cash you need upfront, the monthly commitment, and what happens if your plans change.</p>
+<p class="btn-row">
+<a class="button" href="#decisions">Find your decision →</a>
+<a class="button" href="/calculators/">Browse calculators →</a>
+</p>
+</header>
+<section id="decisions" class="home-decisions" aria-labelledby="decisions-heading">
+<h2 id="decisions-heading">What are you deciding?</h2>
+<p>Start with a guide to see what matters, or open the calculator if you have your numbers ready.</p>
 <div class="card-grid">
 <section class="card">
-<h3 style="margin-top:0">Should I own a car at all?</h3>
-<ul>
-<li><a href="/car-ownership-cost.html">5-year car ownership cost</a></li>
-<li><a href="/car-vs-ride-hailing-cost.html">Car vs ride-hailing</a></li>
-<li><a href="/own-car-vs-public-transport-singapore.html">Own car vs public transport</a></li>
-<li><a href="/car-sharing-vs-owning-a-car-singapore.html">Car-sharing vs owning</a></li>
-<li><a href="/car-sharing-vs-ride-hailing-singapore.html">Car-sharing vs ride-hailing</a></li>
-</ul>
+<p class="eyebrow">Transport</p>
+<h3>Can I comfortably afford a car?</h3>
+<p>Include depreciation, financing, running costs, and a repair buffer. Compare ownership with the trips you actually take.</p>
+<p><a href="/car-ownership-cost.html">Understand the full cost →</a></p>
+<p><a class="btn" href="/car-affordability-calculator-singapore.html">Check car affordability</a></p>
 </section>
 <section class="card">
-<h3 style="margin-top:0">Can I afford the commitment safely?</h3>
-<ul>
-<li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a></li>
-<li><a href="/car-ownership-cost-calculator-singapore.html">True monthly car cost</a></li>
-<li><a href="/car-loan-vs-cash-singapore.html">Car loan vs pay cash</a></li>
-</ul>
+<p class="eyebrow">Property</p>
+<h3>How much home can I afford?</h3>
+<p>Check borrowing limits, upfront cash and CPF, and the monthly commitment before stretching for a bigger property.</p>
+<p><a href="/property-ownership-cost-singapore.html">Understand the full cost →</a></p>
+<p><a class="btn" href="/property-affordability-calculator-singapore.html">Check home affordability</a></p>
 </section>
 <section class="card">
-<h3 style="margin-top:0">What kind of vehicle path makes sense?</h3>
-<ul>
-<li><a href="/used-car-vs-new-car-singapore.html">Used vs new</a></li>
-<li><a href="/used-car-inspection-checklist-singapore.html">Used-car inspection checklist</a></li>
-<li><a href="/used-car-records-checklist-singapore.html">Used-car records checklist</a></li>
-<li><a href="/used-car-dealer-warranty-singapore.html">Used-car dealer warranty</a></li>
-<li><a href="/buy-used-car-from-dealer-vs-direct-owner-singapore.html">Dealer vs direct owner</a></li>
-<li><a href="/sedan-vs-suv-singapore.html">Sedan vs SUV</a></li>
-<li><a href="/suv-vs-mpv-for-families-singapore.html">SUV vs MPV for families</a></li>
-<li><a href="/do-you-really-need-a-7-seater-singapore.html">Do you really need a 7-seater?</a></li>
-<li><a href="/small-car-vs-big-car-singapore.html">Small car vs big car</a></li>
-<li><a href="/ev-vs-petrol-cost-singapore.html">EV vs petrol</a></li>
-<li><a href="/ev-charging-cost-singapore.html">EV charging cost</a></li>
-<li><a href="/home-charging-vs-public-charging-ev-singapore.html">Home vs public EV charging</a></li>
-<li><a href="/is-an-ev-practical-without-home-charging-singapore.html">Is an EV practical without home charging?</a></li>
-<li><a href="/ev-battery-degradation-singapore.html">EV battery degradation</a></li>
-<li><a href="/ev-battery-replacement-cost-singapore.html">EV battery replacement cost</a></li>
-<li><a href="/should-you-buy-a-used-ev-singapore.html">Should you buy a used EV?</a></li>
-<li><a href="/ev-resale-value-singapore.html">EV resale value</a></li>
-<li><a href="/ev-battery-warranty-singapore.html">EV battery warranty</a></li>
-<li><a href="/hybrid-vs-petrol-singapore.html">Hybrid vs petrol</a></li>
-<li><a href="/hybrid-vs-ev-singapore.html">Hybrid vs EV</a></li>
-<li><a href="/should-you-buy-a-hybrid-car-singapore.html">Should you buy a hybrid car?</a></li>
-<li><a href="/self-charging-hybrid-vs-plug-in-hybrid-singapore.html">Self-charging hybrid vs plug-in hybrid</a></li>
-<li><a href="/coe-renew-vs-replace-singapore.html">Renew COE vs replace</a></li>
-<li><a href="/trade-in-vs-direct-sale-car-singapore.html">Trade-in vs direct sale</a></li>
-<li><a href="/consignment-vs-dealer-sale-car-singapore.html">Consignment vs dealer sale</a></li>
-<li><a href="/should-you-repair-car-before-selling-singapore.html">Repair before selling</a></li>
-<li><a href="/when-to-sell-your-car-before-coe-expiry-singapore.html">When to sell before COE expiry</a></li>
-</ul>
+<p class="eyebrow">Children</p>
+<h3>Which childcare arrangement fits us?</h3>
+<p>Compare fees, a helper's costs, and the family time each arrangement still needs.</p>
+<p><a href="/childcare-vs-helper-at-home-singapore.html">Compare the care options →</a></p>
+<p><a class="btn" href="/childcare-vs-helper-cost-calculator-singapore.html">Compare childcare costs</a></p>
+</section>
+<section class="card">
+<p class="eyebrow">Aging parents</p>
+<h3>What will supporting a parent cost?</h3>
+<p>Bring paid care, transport, home support, and family caregiving time into one monthly view.</p>
+<p><a href="/how-supporting-aging-parents-changes-your-caregiving-decision-order-singapore.html">Choose a care arrangement →</a></p>
+<p><a class="btn" href="/aging-parents-caregiving-cost-calculator-singapore.html">Estimate caregiving costs</a></p>
+</section>
+<section class="card">
+<p class="eyebrow">Protection</p>
+<h3>Would my family have enough cover?</h3>
+<p>Estimate the gap between your household's obligations and the cover and assets already available.</p>
+<p><a href="/how-much-life-insurance-do-you-need-singapore.html">Understand life insurance sizing →</a></p>
+<p><a class="btn" href="/life-insurance-calculator-singapore.html">Estimate a protection gap</a></p>
+</section>
+<section class="card">
+<p class="eyebrow">Cash and investing</p>
+<h3>Where should my next dollar go?</h3>
+<p>Weigh reserves, debt repayment, and investing against upcoming family commitments.</p>
+<p><a href="/when-to-invest-vs-build-your-emergency-fund-first-singapore.html">Compare saving and investing →</a></p>
+<p><a class="btn" href="/surplus-cash-allocation-calculator-singapore.html">Plan your monthly surplus</a></p>
 </section>
 </div>
+<p class="home-footnav">Looking for another decision? <a href="/comparisons/">Browse comparisons</a> or <a href="/start-here/">follow the 10-minute starting guide</a>.</p>
 </section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Recent transport buffer and financing bridges</h2>
-<p class="section-intro">These newer transport pages are the right follow-through if the real problem is not just whether you can buy a car, but what the car does to the rest of your cash structure.</p>
-<ul><li><a href="/buy-family-car-or-increase-term-life-insurance-first-singapore.html">Buy a family car or increase term life insurance first</a></li>
-<li><a href="/buy-family-car-or-fund-helper-first-singapore.html">Buy a family car or fund a helper first</a></li>
-<li><a href="/buy-family-car-or-move-closer-to-work-and-school-first-singapore.html">Buy a family car or move closer to work and school first</a></li>
-<li><a href="/buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore.html">Buy a family car or keep a bigger cash buffer before a second child</a></li>
-<li><a href="/should-you-build-your-emergency-fund-before-buying-a-car-singapore.html">Should you build your emergency fund before buying a car?</a></li>
-<li><a href="/car-repair-sinking-fund-vs-emergency-fund-singapore.html">Car repair sinking fund vs emergency fund</a></li>
-<li><a href="/bigger-car-down-payment-vs-larger-cash-buffer-singapore.html">Bigger car down payment vs larger cash buffer</a></li>
-<li><a href="/how-car-ownership-changes-your-cash-buffer-plan-singapore.html">How car ownership changes your cash buffer plan</a></li>
-<li><a href="/buy-family-car-or-build-down-payment-fund-first-singapore.html">Buy a family car or build a down payment fund first</a></li>
-<li><a href="/buy-family-car-or-increase-hospitalisation-rider-first-singapore.html">Buy a family car or increase hospitalisation rider first</a></li>
-</ul>
+<section class="box" aria-labelledby="models-heading">
+<h2 id="models-heading">Understand the assumptions behind the answer</h2>
+<p>Our calculators are planning models. A useful result shows what is included, what is left out, and which assumptions could change the decision. Try your expected case, then a lower income or higher cost.</p>
+<p>For rates, eligibility, and transaction rules, follow the official sources linked in each guide. A calculator result is not a bank offer, insurance quotation, or care assessment.</p>
+<p><a href="/editorial-policy.html">How we build and review models</a> · <a href="/about.html">About Ownership Guide</a> · <a href="/corrections.html">Report an error</a></p>
 </section>
-
-
-<section class="box" style="margin-top:18px"><h2 style="margin-top:0">Also in transport: aging-parents decision layer</h2><ul><li><a href="/keep-a-car-vs-use-ride-hailing-when-supporting-aging-parents-singapore.html">Keep a Car vs Use Ride-Hailing When Supporting Aging Parents</a></li><li><a href="/second-car-vs-ride-hailing-when-supporting-aging-parents-singapore.html">Second Car vs Ride-Hailing When Supporting Aging Parents</a></li><li><a href="/family-car-upgrade-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore.html">Family Car Upgrade vs Bigger Cash Buffer When Supporting Aging Parents</a></li><li><a href="/how-supporting-aging-parents-changes-your-transport-decision-order-singapore.html">How Supporting Aging Parents Changes Your Transport Decision Order</a></li><li><a href="/buy-a-car-or-upgrade-home-first-singapore.html">Buy a car or upgrade home first</a></li><li><a href="/move-closer-to-school-or-keep-home-and-own-a-car-singapore.html">Move closer to school or keep home and own a car</a></li></ul></section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Motorcycle protection and insurance-priority branch</h2>
-<p class="section-intro">If the bike decision is now colliding with insurance order rather than purchase cost alone, use this branch. It keeps motorcycle-specific protection sequencing separate from generic insurance explainers.</p>
-<ul>
-<li><a href="/accident-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html">Accident insurance vs bigger cash buffer for motorcycle riders</a></li>
-<li><a href="/disability-income-insurance-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html">Disability income insurance vs bigger cash buffer for motorcycle riders</a></li>
-<li><a href="/hospitalisation-rider-vs-bigger-cash-buffer-for-motorcycle-riders-singapore.html">Hospitalisation rider vs bigger cash buffer for motorcycle riders</a></li>
-<li><a href="/how-motorcycle-ownership-changes-your-insurance-priority-order-singapore.html">How motorcycle ownership changes your insurance priority order</a></li>
-</ul>
+<section class="box" aria-labelledby="home-faq">
+<h2 id="home-faq">Common questions</h2>
+<h3>Do I have to read a guide before using a calculator?</h3>
+<p>No. If you know your inputs, open the calculator directly. Read its assumptions and use the linked guide when you need help interpreting the result.</p>
+<h3>Does this site cover Singapore rules?</h3>
+<p>Yes. The guides focus on Singapore household decisions, including COE, CPF, property financing, family care, and insurance. Check the linked official sources before acting on a rule or rate.</p>
+<h3>How should I use a result?</h3>
+<p>Use it to compare scenarios and identify the costs that matter most. Replace example inputs with your own quotations and check whether the decision still works under less favourable assumptions.</p>
 </section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Insurance structure and policy-fit branch</h2>
-<p class="section-intro">If the live question is not what insurance costs, but what kind of insurance structure actually fits the car and your household, use this branch. It covers coverage level, excess structure, driver-flexibility setup, and when a lower premium becomes false savings rather than real efficiency.</p>
-<ul>
-<li><a href="/comprehensive-vs-third-party-car-insurance-singapore.html">Comprehensive vs Third-Party Car Insurance</a></li>
-<li><a href="/high-excess-vs-low-excess-car-insurance-singapore.html">High Excess vs Low Excess Car Insurance</a></li>
-<li><a href="/named-driver-vs-any-authorised-driver-car-insurance-singapore.html">Named Driver vs Any Authorised Driver</a></li>
-<li><a href="/when-cheap-car-insurance-becomes-false-savings-singapore.html">When Cheap Car Insurance Becomes False Savings</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Hybrid route and transition-fit branch</h2>
-<p class="section-intro">If EV is on your radar but still feels like too much change, use this branch. It covers hybrid versus petrol, hybrid versus EV, whether hybrid genuinely fits your life, and the difference between self-charging and plug-in hybrid routes.</p>
-<ul>
-<li><a href="/hybrid-vs-petrol-singapore.html">Hybrid vs Petrol</a></li>
-<li><a href="/hybrid-vs-ev-singapore.html">Hybrid vs EV</a></li>
-<li><a href="/should-you-buy-a-hybrid-car-singapore.html">Should You Buy a Hybrid Car?</a></li>
-<li><a href="/self-charging-hybrid-vs-plug-in-hybrid-singapore.html">Self-Charging Hybrid vs Plug-In Hybrid</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Used-car due diligence branch</h2>
-<p class="section-intro">If you already know the used-car route is live, move from strategy to execution: first compare <a href="/used-car-vs-new-car-singapore.html">used vs new</a>, then inspect the actual car, verify the paper trail, understand warranty, and decide whether dealer or direct-owner route fits you better.</p>
-<ul>
-<li><a href="/used-car-inspection-checklist-singapore.html">Used Car Inspection Checklist</a></li>
-<li><a href="/used-car-records-checklist-singapore.html">Used-Car Records Checklist</a></li>
-<li><a href="/used-car-dealer-warranty-singapore.html">Used-Car Dealer Warranty</a></li>
-<li><a href="/buy-used-car-from-dealer-vs-direct-owner-singapore.html">Buy Used Car From Dealer vs Direct Owner</a></li>
-</ul>
-</section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Used-car listing and deal-discipline branch</h2>
-<p class="section-intro">If the used-car route is live and the real risk is not only the car itself but the way the listing and deal are framed, use this branch. It covers age-versus-mileage interpretation, pre-viewing listing filters, the questions to answer before commitment, and how low monthly framing can hide weak total economics.</p>
-<ul>
-<li><a href="/mileage-vs-age-when-buying-used-car-singapore.html">Mileage vs Age When Buying a Used Car</a></li>
-<li><a href="/used-car-listing-red-flags-singapore.html">Used-Car Listing Red Flags</a></li>
-<li><a href="/questions-to-answer-before-you-commit-to-car-deal-singapore.html">Questions to Answer Before You Commit to a Car Deal</a></li>
-<li><a href="/low-monthly-payment-traps-when-buying-car-singapore.html">Low Monthly Payment Traps When Buying a Car</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Car selling and exit branch</h2>
-<p class="section-intro">If the purchase is already behind you and the real question is how to get out cleanly, move from exit value theory to actual seller execution: choose your route, decide what is worth fixing, and avoid letting COE timing crush your options.</p>
-<ul>
-<li><a href="/trade-in-vs-direct-sale-car-singapore.html">Trade-In vs Direct Sale</a></li>
-<li><a href="/consignment-vs-dealer-sale-car-singapore.html">Consignment vs Dealer Sale</a></li>
-<li><a href="/should-you-repair-car-before-selling-singapore.html">Should You Repair Before Selling?</a></li>
-<li><a href="/when-to-sell-your-car-before-coe-expiry-singapore.html">When to Sell Before COE Expiry</a></li>
-</ul>
-</section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Restricted ownership and flexibility branch</h2>
-<p class="section-intro">If the question is not full ownership versus no ownership, but <em>what kind</em> of lower-commitment access still fits your life, use this branch. It covers restricted ownership through the off-peak route, employment-funded mobility choices, and subscription-style access when uncertainty matters more than long-run efficiency.</p>
-<ul>
-<li><a href="/off-peak-car-vs-normal-car-singapore.html">Off-Peak Car vs Normal Car</a></li>
-<li><a href="/should-you-buy-an-off-peak-car-singapore.html">Should You Buy an Off-Peak Car?</a></li>
-<li><a href="/company-car-vs-car-allowance-singapore.html">Company Car vs Car Allowance</a></li>
-<li><a href="/car-subscription-vs-buying-singapore.html">Car Subscription vs Buying</a></li>
-</ul>
-</section>
-
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Maintenance, servicing, and repair branch</h2>
-<p class="section-intro">If you already own the car and the real question is no longer whether to buy, but how to maintain it without drifting into workshop-led overspending or avoidable neglect, use this branch. It covers workshop-route choice, servicing structure, preventive maintenance judgment, and repair urgency triage.</p>
-<ul>
-<li><a href="/authorised-dealer-vs-independent-workshop-singapore.html">Authorised Dealer vs Independent Workshop</a></li>
-<li><a href="/car-servicing-package-vs-pay-as-you-go-singapore.html">Car Servicing Package vs Pay-as-You-Go</a></li>
-<li><a href="/preventive-maintenance-vs-waiting-for-breakdown-singapore.html">Preventive Maintenance vs Waiting for Breakdown</a></li>
-<li><a href="/car-repair-urgency-guide-singapore.html">Car Repair Urgency Guide</a></li>
-<li><a href="/repair-bill-vs-replace-car-singapore.html">Repair Bill vs Replace Car</a></li>
-<li><a href="/paid-up-old-car-vs-newer-car-with-loan-singapore.html">Paid-Up Old Car vs Newer Car With Loan</a></li>
-<li><a href="/can-your-household-rely-on-an-aging-car-singapore.html">Can Your Household Rely on an Aging Car?</a></li>
-<li><a href="/when-an-old-car-becomes-false-economy-singapore.html">When an Old Car Becomes False Economy</a></li>
-</ul>
-</section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Post-incident and downtime branch</h2>
-<p class="section-intro">If the car has already been damaged and the real question is what to do next without turning a minor incident into a bigger financial mistake, use this branch. It covers settlement route choice, cosmetic-damage timing, true downtime cost, and the key questions to answer before you commit to a path.</p>
-<ul>
-<li><a href="/settle-privately-vs-insurance-claim-car-accident-singapore.html">Settle Privately vs Insurance Claim</a></li>
-<li><a href="/repair-cosmetic-car-damage-now-or-later-singapore.html">Repair Cosmetic Car Damage Now or Later</a></li>
-<li><a href="/what-car-downtime-really-costs-singapore.html">What Car Downtime Really Costs</a></li>
-<li><a href="/questions-to-answer-after-minor-car-accident-singapore.html">Questions to Answer After a Minor Car Accident</a></li>
-</ul>
-</section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Household-fit and car-type choice branch</h2>
-<p class="section-intro">If you already know a car may make sense and the real question is <em>what kind of car</em> fits your household without expensive overbuying, use this branch. It covers body-style trade-offs, family packaging, whether extra seats are solving a real problem, and how much size you actually need in Singapore.</p>
-<ul>
-<li><a href="/sedan-vs-suv-singapore.html">Sedan vs SUV</a></li>
-<li><a href="/suv-vs-mpv-for-families-singapore.html">SUV vs MPV for Families</a></li>
-<li><a href="/do-you-really-need-a-7-seater-singapore.html">Do You Really Need a 7-Seater?</a></li>
-<li><a href="/small-car-vs-big-car-singapore.html">Small Car vs Big Car</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Financed exit and upgrade-timing branch</h2>
-<p class="section-intro">If you already have a car loan and the real question is how to sell, trade in, settle early, or upgrade without letting the old financing quietly distort your next move, use this branch. It covers direct sale with a live loan, trade-in with financing attached, early-settlement judgment, and upgrade timing under loan constraints.</p>
-<ul>
-<li><a href="/sell-car-with-outstanding-loan-singapore.html">Sell a Car With an Outstanding Loan</a></li>
-<li><a href="/trade-in-car-with-outstanding-loan-singapore.html">Trade In a Car With an Outstanding Loan</a></li>
-<li><a href="/should-you-settle-car-loan-early-singapore.html">Should You Settle a Car Loan Early?</a></li>
-<li><a href="/when-to-upgrade-car-with-outstanding-loan-singapore.html">When to Upgrade a Car With an Outstanding Loan</a></li>
-</ul>
-</section>
-
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Aging-car economics and reliability branch</h2>
-<p class="section-intro">If the car is already old enough that the question is no longer “Should I buy?” but “Should I keep living with this ownership phase?”, use this branch. It covers the big-repair decision, the trade-off between a paid-up old car and a newer financed replacement, whether the household can still rely on the car, and the point where “already paid up” quietly becomes false economy.</p>
-<ul>
-<li><a href="/repair-bill-vs-replace-car-singapore.html">Repair Bill vs Replace Car</a></li>
-<li><a href="/paid-up-old-car-vs-newer-car-with-loan-singapore.html">Paid-Up Old Car vs Newer Car With Loan</a></li>
-<li><a href="/can-your-household-rely-on-an-aging-car-singapore.html">Can Your Household Rely on an Aging Car?</a></li>
-<li><a href="/when-an-old-car-becomes-false-economy-singapore.html">When an Old Car Becomes False Economy</a></li>
-</ul>
-</section>
-
-<section class="split-grid">
-<div class="route-list">
-<h3>Quick routes by decision intent</h3>
-<ol>
-<li><strong>Should I own a car?</strong> <a href="/car-ownership-cost.html">5-year car ownership cost</a> → <a href="/car-vs-ride-hailing-cost.html">car vs ride-hailing</a> → <a href="/car-sharing-vs-owning-a-car-singapore.html">car-sharing vs owning</a> → <a href="/car-sharing-vs-ride-hailing-singapore.html">car-sharing vs ride-hailing</a> → <a href="/off-peak-car-vs-normal-car-singapore.html">off-peak vs normal car</a>.</li>
-<li><strong>How much am I really paying each month?</strong> <a href="/monthly-cost-of-owning-a-car-singapore.html">true monthly car cost</a> → <a href="/car-ownership-cost-calculator-singapore.html">ownership cost calculator</a> → <a href="/fuel-cost-singapore.html">fuel</a> / <a href="/parking-cost-singapore.html">parking</a> / <a href="/erp-cost-singapore.html">ERP</a>.</li>
-<li><strong>What purchase structure is least fragile?</strong> <a href="/used-car-vs-new-car-singapore.html">used vs new</a> → <a href="/mileage-vs-age-when-buying-used-car-singapore.html">mileage vs age</a> → <a href="/used-car-listing-red-flags-singapore.html">listing red flags</a> → <a href="/used-car-inspection-checklist-singapore.html">inspection checklist</a> → <a href="/used-car-records-checklist-singapore.html">records checklist</a> → <a href="/buy-used-car-from-dealer-vs-direct-owner-singapore.html">dealer vs direct owner</a>.</li>
-<li><strong>Is hybrid the right bridge?</strong> <a href="/hybrid-vs-petrol-singapore.html">hybrid vs petrol</a> → <a href="/hybrid-vs-ev-singapore.html">hybrid vs EV</a> → <a href="/should-you-buy-a-hybrid-car-singapore.html">should you buy a hybrid?</a> → <a href="/self-charging-hybrid-vs-plug-in-hybrid-singapore.html">self-charging vs plug-in hybrid</a>.</li>
-<li><strong>Is renewal better than replacement?</strong> <a href="/coe-renew-vs-replace-singapore.html">renew COE vs replace</a> → <a href="/coe-renew-vs-replace-calculator-singapore.html">renew vs replace calculator</a> → <a href="/car-depreciation-singapore.html">depreciation</a>.</li>
-<li><strong>How should I maintain the car after I buy it?</strong> <a href="/authorised-dealer-vs-independent-workshop-singapore.html">dealer vs independent workshop</a> → <a href="/car-servicing-package-vs-pay-as-you-go-singapore.html">servicing package vs pay-as-you-go</a> → <a href="/preventive-maintenance-vs-waiting-for-breakdown-singapore.html">preventive vs reactive maintenance</a> → <a href="/car-repair-urgency-guide-singapore.html">repair urgency guide</a>.</li>
-<li><strong>What should I do after a minor accident?</strong> <a href="/questions-to-answer-after-minor-car-accident-singapore.html">decision questions</a> → <a href="/settle-privately-vs-insurance-claim-car-accident-singapore.html">settle privately vs claim</a> → <a href="/repair-cosmetic-car-damage-now-or-later-singapore.html">cosmetic damage timing</a> → <a href="/what-car-downtime-really-costs-singapore.html">downtime cost</a>.</li>
-<li><strong>How should I exit or upgrade when a loan is still live?</strong> <a href="/sell-car-with-outstanding-loan-singapore.html">sell with outstanding loan</a> → <a href="/trade-in-car-with-outstanding-loan-singapore.html">trade in with outstanding loan</a> → <a href="/should-you-settle-car-loan-early-singapore.html">settle loan early?</a> → <a href="/when-to-upgrade-car-with-outstanding-loan-singapore.html">when to upgrade with a live loan</a>.</li>
-</ol>
-</div>
-<div class="route-list">
-<h3>Top tools</h3>
-<ul>
-<li><a href="/car-affordability-calculator-singapore.html">Car affordability stress test</a></li>
-<li><a href="/car-ownership-cost-calculator-singapore.html">Car ownership cost calculator</a></li>
-<li><a href="/car-vs-ride-hailing-calculator.html">Car vs ride-hailing calculator</a></li>
-<li><a href="/used-car-vs-new-car-calculator-singapore.html">Used vs new car calculator</a></li>
-<li><a href="/car-leasing-vs-buying-calculator-singapore.html">Car leasing vs buying calculator</a></li>
-<li><a href="/coe-renew-vs-replace-calculator-singapore.html">COE renew vs replace calculator</a></li>
-</ul>
-</div>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Browse by topic</h2>
-<div class="split-grid">
-<div>
-<h3 style="margin-top:0">Ownership, entry, and financing</h3>
-<ul class="link-columns">
-<li><a href="/car-ownership-cost.html">Cost of owning a car</a></li>
-<li><a href="/monthly-cost-of-owning-a-car-singapore.html">Monthly cost of owning a car</a></li>
-<li><a href="/car-price-breakdown-singapore.html">Car price breakdown</a></li>
-<li><a href="/coe-cost-singapore.html">COE cost</a></li>
-<li><a href="/coe-bidding-strategy-singapore.html">COE bidding strategy</a></li>
-<li><a href="/how-much-cash-to-buy-car-singapore.html">How much cash to buy a car</a></li>
-<li><a href="/car-loan-rates-singapore.html">Car loan rates</a></li>
-<li><a href="/sell-car-with-outstanding-loan-singapore.html">Sell with outstanding loan</a></li>
-<li><a href="/trade-in-car-with-outstanding-loan-singapore.html">Trade in with outstanding loan</a></li>
-<li><a href="/should-you-settle-car-loan-early-singapore.html">Should you settle car loan early?</a></li>
-<li><a href="/when-to-upgrade-car-with-outstanding-loan-singapore.html">When to upgrade with outstanding loan</a></li>
-<li><a href="/car-loan-vs-cash-singapore.html">Car loan vs pay cash</a></li>
-<li><a href="/balloon-loan-vs-normal-car-loan-singapore.html">Balloon vs normal car loan</a></li>
-<li><a href="/used-car-vs-new-car-singapore.html">Used vs new car</a></li>
-<li><a href="/should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html">Build your emergency fund before buying a motorcycle?</a>
-<a href="/motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html">Motorcycle repair sinking fund vs emergency fund</a>
-<a href="/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html">Bigger motorcycle down payment vs larger cash buffer</a>
-<a href="/how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html">How motorcycle ownership changes your cash buffer plan</a>
-<a href="/motorcycle-ownership-cost-singapore.html">Motorcycle ownership cost</a></li>
-<li><a href="/how-much-salary-to-own-a-motorcycle-singapore.html">How much salary to own a motorcycle</a></li>
-<li><a href="/motorcycle-loan-vs-cash-singapore.html">Motorcycle loan vs cash</a></li>
-<li><a href="/used-motorcycle-vs-new-motorcycle-singapore.html">Used vs new motorcycle</a></li>
-<li><a href="/how-much-cash-to-buy-motorcycle-singapore.html">How much cash to buy a motorcycle</a></li>
-<li><a href="/used-motorcycle-listing-red-flags-singapore.html">Used-motorcycle listing red flags</a></li>
-<li><a href="/buy-used-motorcycle-from-dealer-vs-direct-owner-singapore.html">Buy used motorcycle: dealer vs direct owner</a></li>
-<li><a href="/used-motorcycle-inspection-checklist-singapore.html">Used-motorcycle inspection checklist</a></li>
-<li><a href="/used-motorcycle-records-checklist-singapore.html">Used-motorcycle records checklist</a></li>
-<li><a href="/questions-to-answer-before-you-commit-to-used-motorcycle-deal-singapore.html">Questions before you commit to a used-motorcycle deal</a></li>
-<li><a href="/motorcycle-depreciation-singapore.html">Motorcycle depreciation</a></li>
-<li><a href="/sell-motorcycle-with-outstanding-loan-singapore.html">Sell motorcycle with outstanding loan</a></li>
-<li><a href="/when-to-sell-motorcycle-before-coe-expiry-singapore.html">When to sell motorcycle before COE expiry</a></li>
-<li><a href="/trade-in-vs-direct-sale-motorcycle-singapore.html">Trade-in vs direct sale motorcycle</a></li>
-<li><a href="/consignment-vs-dealer-sale-motorcycle-singapore.html">Consignment vs dealer sale motorcycle</a></li>
-<li><a href="/should-you-repair-motorcycle-before-selling-singapore.html">Repair motorcycle before selling</a></li>
-<li><a href="/trade-in-vs-direct-sale-motorcycle-singapore.html">Trade-in vs direct sale motorcycle</a></li>
-<li><a href="/consignment-vs-dealer-sale-motorcycle-singapore.html">Consignment vs dealer sale motorcycle</a></li>
-<li><a href="/should-you-repair-motorcycle-before-selling-singapore.html">Repair motorcycle before selling</a></li>
-</ul>
-</div>
-<div>
-<h3 style="margin-top:0">Running cost, alternatives, and exit</h3>
-<ul class="link-columns">
-<li><a href="/fuel-cost-singapore.html">Fuel cost</a></li>
-<li><a href="/parking-cost-singapore.html">Parking cost</a></li>
-<li><a href="/erp-cost-singapore.html">ERP cost</a></li>
-<li><a href="/road-tax-cost-singapore.html">Road tax</a></li>
-<li><a href="/car-insurance-cost-singapore.html">Car insurance cost</a></li>
-<li><a href="/car-maintenance-repair-cost-singapore.html">Maintenance and repair cost</a></li>
-<li><a href="/authorised-dealer-vs-independent-workshop-singapore.html">Dealer vs independent workshop</a></li>
-<li><a href="/car-servicing-package-vs-pay-as-you-go-singapore.html">Servicing package vs pay-as-you-go</a></li>
-<li><a href="/preventive-maintenance-vs-waiting-for-breakdown-singapore.html">Preventive maintenance vs waiting for breakdown</a></li>
-<li><a href="/car-repair-urgency-guide-singapore.html">Car repair urgency guide</a></li>
-<li><a href="/public-transport-cost-singapore.html">Public transport cost</a></li>
-<li><a href="/car-sharing-vs-owning-a-car-singapore.html">Car-sharing vs owning</a></li>
-<li><a href="/weekend-car-rental-vs-owning-a-car-singapore.html">Weekend rental vs owning</a></li>
-<li><a href="/off-peak-car-vs-normal-car-singapore.html">Off-peak car vs normal car</a></li>
-<li><a href="/should-you-buy-an-off-peak-car-singapore.html">Should you buy an off-peak car?</a></li>
-<li><a href="/company-car-vs-car-allowance-singapore.html">Company car vs car allowance</a></li>
-<li><a href="/car-subscription-vs-buying-singapore.html">Car subscription vs buying</a></li>
-<li><a href="/settle-privately-vs-insurance-claim-car-accident-singapore.html">Settle privately vs insurance claim</a></li>
-<li><a href="/repair-cosmetic-car-damage-now-or-later-singapore.html">Repair cosmetic damage now or later</a></li>
-<li><a href="/what-car-downtime-really-costs-singapore.html">What car downtime really costs</a></li>
-<li><a href="/questions-to-answer-after-minor-car-accident-singapore.html">Questions to answer after a minor accident</a></li>
-<li><a href="/does-your-household-need-a-second-car-singapore.html">Does your household need a second car?</a></li>
-<li><a href="/second-car-vs-ride-hailing-singapore.html">Second car vs ride-hailing</a></li>
-<li><a href="/motorcycle-ownership-cost-singapore.html">Motorcycle ownership cost</a></li>
-<li><a href="/motorcycle-insurance-cost-singapore.html">Motorcycle insurance cost</a></li>
-<li><a href="/motorcycle-maintenance-cost-singapore.html">Motorcycle maintenance cost</a></li>
-<li><a href="/motorcycle-vs-car-cost-singapore.html">Motorcycle vs car</a></li>
-<li><a href="/motorcycle-depreciation-singapore.html">Motorcycle depreciation</a></li>
-<li><a href="/sell-motorcycle-with-outstanding-loan-singapore.html">Sell motorcycle with outstanding loan</a></li>
-<li><a href="/when-to-sell-motorcycle-before-coe-expiry-singapore.html">When to sell motorcycle before COE expiry</a></li>
-<li><a href="/ev-battery-degradation-singapore.html">EV battery degradation</a></li>
-<li><a href="/ev-battery-replacement-cost-singapore.html">EV battery replacement cost</a></li>
-<li><a href="/should-you-buy-a-used-ev-singapore.html">Should you buy a used EV?</a></li>
-<li><a href="/ev-resale-value-singapore.html">EV resale value</a></li>
-<li><a href="/ev-battery-warranty-singapore.html">EV battery warranty</a></li>
-<li><a href="/hybrid-vs-petrol-singapore.html">Hybrid vs petrol</a></li>
-<li><a href="/hybrid-vs-ev-singapore.html">Hybrid vs EV</a></li>
-<li><a href="/should-you-buy-a-hybrid-car-singapore.html">Should you buy a hybrid car?</a></li>
-<li><a href="/self-charging-hybrid-vs-plug-in-hybrid-singapore.html">Self-charging hybrid vs plug-in hybrid</a></li>
-<li><a href="/coe-renewal-worth-it-singapore.html">COE renewal worth it?</a></li>
-<li><a href="/parf-paper-value-deregistration-singapore.html">PARF and paper value</a></li>
-<li><a href="/trade-in-vs-direct-sale-car-singapore.html">Trade-in vs direct sale</a></li>
-<li><a href="/consignment-vs-dealer-sale-car-singapore.html">Consignment vs dealer sale</a></li>
-<li><a href="/should-you-repair-car-before-selling-singapore.html">Repair before selling</a></li>
-<li><a href="/when-to-sell-your-car-before-coe-expiry-singapore.html">When to sell before COE expiry</a></li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Decision frameworks that change the answer</h2>
-<div class="compact-links">
-<a href="/car-vs-ride-hailing-cost.html">Car vs ride-hailing</a>
-<a href="/own-car-vs-public-transport-singapore.html">Own car vs public transport</a>
-<a href="/car-leasing-vs-buying-singapore.html">Leasing vs buying</a>
-<a href="/car-sharing-vs-owning-a-car-singapore.html">Car-sharing vs owning</a>
-<a href="/weekend-car-rental-vs-owning-a-car-singapore.html">Weekend rental vs owning</a>
-<a href="/off-peak-car-vs-normal-car-singapore.html">Off-peak vs normal car</a>
-<a href="/should-you-buy-an-off-peak-car-singapore.html">Should you buy an off-peak car?</a>
-<a href="/company-car-vs-car-allowance-singapore.html">Company car vs allowance</a>
-<a href="/car-subscription-vs-buying-singapore.html">Car subscription vs buying</a>
-<a href="/does-your-household-need-a-second-car-singapore.html">Need a second car?</a>
-<a href="/second-car-vs-ride-hailing-singapore.html">Second car vs ride-hailing</a>
-<a href="/car-sharing-vs-ride-hailing-singapore.html">Car-sharing vs ride-hailing</a>
-<a href="/car-loan-vs-cash-singapore.html">Car loan vs cash</a>
-<a href="/balloon-loan-vs-normal-car-loan-singapore.html">Balloon vs normal loan</a>
-<a href="/used-car-vs-new-car-singapore.html">Used vs new</a>
-<a href="/ev-vs-petrol-cost-singapore.html">EV vs petrol</a>
-<a href="/ev-charging-cost-singapore.html">EV charging cost</a>
-<a href="/home-charging-vs-public-charging-ev-singapore.html">Home vs public EV charging</a>
-<a href="/is-an-ev-practical-without-home-charging-singapore.html">EV without home charging</a>
-<a href="/ev-battery-degradation-singapore.html">EV battery degradation</a>
-<a href="/ev-battery-replacement-cost-singapore.html">EV battery replacement cost</a>
-<a href="/should-you-buy-a-used-ev-singapore.html">Should you buy a used EV?</a>
-<a href="/ev-resale-value-singapore.html">EV resale value</a>
-<a href="/ev-battery-warranty-singapore.html">EV battery warranty</a>
-<a href="/motorcycle-ownership-cost-singapore.html">Motorcycle ownership cost</a>
-<a href="/motorcycle-insurance-cost-singapore.html">Motorcycle insurance cost</a>
-<a href="/motorcycle-maintenance-cost-singapore.html">Motorcycle maintenance cost</a>
-<a href="/how-much-salary-to-own-a-motorcycle-singapore.html">Motorcycle salary guide</a>
-<a href="/motorcycle-loan-vs-cash-singapore.html">Motorcycle loan vs cash</a>
-<a href="/used-motorcycle-vs-new-motorcycle-singapore.html">Used vs new motorcycle</a>
-<a href="/how-much-cash-to-buy-motorcycle-singapore.html">Motorcycle cash guide</a>
-<a href="/used-motorcycle-listing-red-flags-singapore.html">Motorcycle listing red flags</a>
-<a href="/buy-used-motorcycle-from-dealer-vs-direct-owner-singapore.html">Dealer vs direct owner (motorcycle)</a>
-<a href="/used-motorcycle-inspection-checklist-singapore.html">Motorcycle inspection checklist</a>
-<a href="/used-motorcycle-records-checklist-singapore.html">Motorcycle records checklist</a>
-<a href="/questions-to-answer-before-you-commit-to-used-motorcycle-deal-singapore.html">Motorcycle commit filter</a>
-<a href="/motorcycle-depreciation-singapore.html">Motorcycle depreciation</a>
-<a href="/sell-motorcycle-with-outstanding-loan-singapore.html">Motorcycle sell with loan</a>
-<a href="/when-to-sell-motorcycle-before-coe-expiry-singapore.html">Motorcycle COE timing</a>
-<a href="/motorcycle-coe-renewal-worth-it-singapore.html">Motorcycle COE renewal worth it</a>
-<a href="/5-year-vs-10-year-motorcycle-coe-renewal-singapore.html">5-year vs 10-year motorcycle renewal</a>
-<a href="/motorcycle-coe-renew-vs-replace-singapore.html">Motorcycle COE renew vs replace</a>
-<a href="/trade-in-vs-direct-sale-motorcycle-singapore.html">Motorcycle trade-in vs direct sale</a>
-<a href="/consignment-vs-dealer-sale-motorcycle-singapore.html">Motorcycle consignment vs dealer sale</a>
-<a href="/should-you-repair-motorcycle-before-selling-singapore.html">Repair motorcycle before selling</a>
-<a href="/coe-renew-vs-replace-singapore.html">COE renew vs replace</a>
-</div>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Motorcycle ownership and liquidity</h2>
-<p>The motorcycle branch now also covers liquidity sequencing. Use these when the bike decision is colliding with reserves, not just transport preference.</p>
-<ul>
-<li><a href="/should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore.html">Should you build your emergency fund before buying a motorcycle?</a></li>
-<li><a href="/motorcycle-repair-sinking-fund-vs-emergency-fund-singapore.html">Motorcycle repair sinking fund vs emergency fund</a></li>
-<li><a href="/bigger-motorcycle-down-payment-vs-larger-cash-buffer-singapore.html">Bigger motorcycle down payment vs larger cash buffer</a></li>
-<li><a href="/how-motorcycle-ownership-changes-your-cash-buffer-plan-singapore.html">How motorcycle ownership changes your cash-buffer plan</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">How to use this section</h2>
-<p>The best sequence for most visitors is <strong>framework → calculator → mechanics</strong>. Start with whether the car should exist in your life at all, then stress-test affordability, then use detailed cost pages only if the decision is close.</p>
-<ul>
-<li><strong>Ownership decision first:</strong> compare car ownership against alternatives before optimising a loan.</li>
-<li><strong>Affordability second:</strong> use realistic monthly cost, not instalments alone.</li>
-<li><strong>Structure third:</strong> only then compare used vs new, EV vs petrol, charging setup, or renew vs replace.</li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">High-intent car deal decisions</h2>
-<p class="section-intro">Use these when the transport question has moved beyond general affordability and into commitment structure, acquisition route, or exit execution.</p>
-<ul>
-<li><strong>Structure risk:</strong> <a href="/balloon-loan-vs-normal-car-loan-singapore.html">balloon loan vs normal car loan</a> → <a href="/car-loan-vs-cash-singapore.html">car loan vs cash</a></li>
-<li><strong>Acquisition route:</strong> <a href="/buy-used-car-from-dealer-vs-direct-owner-singapore.html">buy used car from dealer vs direct owner</a></li>
-<li><strong>Exit route:</strong> <a href="/trade-in-vs-direct-sale-car-singapore.html">trade-in vs direct sale</a> → <a href="/consignment-vs-dealer-sale-car-singapore.html">consignment vs dealer sale</a></li>
-</ul>
-<p class="muted" style="margin-bottom:0">These look similar at a glance, but each one solves a different failure point in the purchase-to-exit chain.</p>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">How we build this hub</h2>
-<p>This transport hub is built to separate the three different questions that visitors often mix up: whether to own a car, whether the commitment is safe, and what type of vehicle path is least fragile.</p>
-<ul>
-<li><strong>All-in exposure over instalments:</strong> depreciation, COE, and running costs matter as much as financing.</li>
-<li><strong>Alternatives are part of the answer:</strong> ride-hailing and public transport are not side notes; they are the real baseline.</li>
-<li><strong>Renewal gets separate treatment:</strong> COE renewal and paper value change the decision path enough to justify dedicated pages.</li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Family-cost links that change transport decisions</h2>
-<p class="section-intro">If the transport question is being shaped by a growing family rather than by the asset alone, use the new <a href="/family/">family hub</a> alongside this cluster.</p>
-<ul>
-<li><a href="/cost-of-having-a-baby-singapore.html">Cost of having a baby</a></li>
-<li><a href="/infantcare-vs-childcare-cost-singapore.html">Infantcare vs childcare cost</a></li>
-<li><a href="/how-much-does-it-cost-to-raise-a-child-singapore.html">How much it costs to raise a child</a></li>
-</ul>
-</section>
-
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">References</h2>
-<ul>
-<li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">Land Transport Authority (LTA)</a></li>
-<li><a href="https://onemotoring.lta.gov.sg/" rel="nofollow noopener" target="_blank">OneMotoring</a></li>
-<li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">Inland Revenue Authority of Singapore (IRAS)</a></li>
-</ul>
-<p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 14 Apr 2026 · <a href="/editorial-policy.html">Editorial Policy</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a> · <a href="/corrections.html">Corrections</a></p>
-</section>
+<p class="muted"><strong>Last updated:</strong> 14 Sep 2026</p>
 </main>
 <div id="site-footer"></div>
 <script defer="" src="/includes.js"></script>
