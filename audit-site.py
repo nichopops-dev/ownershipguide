@@ -31,6 +31,10 @@ def local_target(source, url):
                              posixpath.join(posixpath.dirname(source), raw)) if raw else source
     if (ROOT / path).is_dir():
         path = posixpath.normpath(posixpath.join(path, 'index.html'))
+    elif not (ROOT / path).exists() and not Path(path).suffix:
+        html_path = path + '.html'
+        if (ROOT / html_path).is_file():
+            path = html_path
     return path, unquote(parsed.fragment)
 
 
@@ -53,6 +57,8 @@ def main():
             target, fragment = local_target(name, url)
             if target is None:
                 continue
+            if tag == 'a' and urlsplit(url).path.endswith('.html'):
+                errors.append(f'{name}:{line}: public link should be extensionless: {url}')
             if not (ROOT / target).is_file():
                 errors.append(f'{name}:{line}: missing target {url}')
             elif tag == 'a':
@@ -69,6 +75,8 @@ def main():
             expected = 'https://ownershipguide.com' + page_url(name)
             if page.canonicals != [expected]:
                 errors.append(f'{name}: expected one canonical URL: {expected}')
+            if page.meta.get('og:url') != expected:
+                errors.append(f'{name}: expected og:url: {expected}')
             if page.h1_count != 1:
                 errors.append(f'{name}: expected one h1; found {page.h1_count}')
             if not page.title.strip() or not page.meta.get('description', '').strip():
@@ -94,7 +102,7 @@ def main():
     actual_pages = []
     for cluster, entries in featured['cluster_pages'].items():
         for entry in entries:
-            name = entry['url'].lstrip('/')
+            name, _ = local_target('index.html', entry['url'])
             actual_pages.append(name)
             if name in pages and pages[name].meta.get('og:cluster') != cluster:
                 errors.append(f'featured.json: wrong cluster for {name}')
@@ -130,6 +138,25 @@ def main():
         lastmod = item.findtext('s:lastmod', namespaces=ns)
         if target in pages and lastmod != pages[target].date():
             errors.append(f'sitemap.xml: lastmod differs from documented review date for {target}')
+
+    redirects_path = ROOT / '_redirects'
+    if redirects_path.exists():
+        for line_number, raw in enumerate(redirects_path.read_text().splitlines(), 1):
+            line = raw.strip()
+            if not line or line.startswith('#'):
+                continue
+            fields = line.split()
+            if len(fields) != 3 or fields[2] not in ('301', '302'):
+                errors.append(f'_redirects:{line_number}: expected source destination 301|302')
+                continue
+            source, destination, _ = fields
+            target, _ = local_target('index.html', destination)
+            if target is None or not (ROOT / target).is_file():
+                errors.append(f'_redirects:{line_number}: missing destination {destination}')
+            if destination.endswith('.html'):
+                errors.append(f'_redirects:{line_number}: destination should be extensionless')
+            if source == destination:
+                errors.append(f'_redirects:{line_number}: redirect loop {source}')
 
     for name in sorted(external_scripts):
         scripts.append({'name': name, 'line': 1, 'code': (ROOT / name).read_text()})

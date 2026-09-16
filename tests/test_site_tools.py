@@ -6,7 +6,7 @@ import subprocess
 import tempfile
 import unittest
 
-from site_metadata import SitePage, excerpt
+from site_metadata import SitePage, excerpt, page_url
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,6 +29,11 @@ class SiteToolsTests(unittest.TestCase):
     def test_excerpt_ends_at_a_word(self):
         self.assertEqual(excerpt('A useful childcare comparison', 15), 'A useful…')
 
+    def test_page_url_uses_extensionless_public_paths(self):
+        self.assertEqual(page_url('index.html'), '/')
+        self.assertEqual(page_url('family/index.html'), '/family/')
+        self.assertEqual(page_url('guide.html'), '/guide')
+
     def test_generators_preserve_history_and_accept_both_attribute_orders(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -47,7 +52,7 @@ class SiteToolsTests(unittest.TestCase):
                 subprocess.run(['python3', str(root / command)], check=True, capture_output=True)
             data = json.loads((root / 'featured.json').read_text())
             self.assertEqual(len(data['cluster_pages']['family']), 2)
-            self.assertEqual(data['pinned'], pinned)
+            self.assertEqual(data['pinned'], {'family': [{'url': '/one', 'title': 'Pinned'}]})
             self.assertEqual(data['page_registry']['one.html']['first_seen'], '2026-03-01')
             self.assertEqual(data['page_registry']['two.html']['first_seen'], '2026-04-14')
             self.assertEqual(data['cluster_pages']['family'][0]['desc'], 'A useful description')
@@ -60,7 +65,7 @@ class SiteToolsTests(unittest.TestCase):
             import xml.etree.ElementTree as ET
             ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
             for entry in ET.parse(root / 'sitemap.xml').getroot():
-                if entry.findtext('s:loc', namespaces=ns).endswith('/undated.html'):
+                if entry.findtext('s:loc', namespaces=ns).endswith('/undated'):
                     self.assertIsNone(entry.find('s:lastmod', ns))
 
 

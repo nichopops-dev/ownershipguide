@@ -102,6 +102,8 @@ def page_url(relative_path):
         return '/'
     if path.endswith('/index.html'):
         return '/' + path[:-len('index.html')]
+    if path.endswith('.html'):
+        path = path[:-len('.html')]
     return '/' + path
 
 
