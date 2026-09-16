@@ -8,7 +8,7 @@ Claude runs this each session before packaging the output zip.
 
 import os, json
 from datetime import datetime
-from site_metadata import atomic_write, excerpt, read_page
+from site_metadata import atomic_write, excerpt, page_url, read_page
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 OUTPUT = os.path.join(REPO_ROOT, 'featured.json')
@@ -48,8 +48,19 @@ def get_page_data(filepath):
     desc = excerpt(page.meta.get('description', ''), 160)
     date_iso = page.date() or ''
     fn = os.path.basename(filepath)
-    return {'url': f'/{fn}', 'title': short_title, 'desc': desc,
+    return {'file': fn, 'url': page_url(fn), 'title': short_title, 'desc': desc,
             'cluster': cluster, 'date': date_iso}
+
+def public_urls(value):
+    """Return a copy with public URL fields normalized to extensionless paths."""
+    if isinstance(value, dict):
+        result = {key: public_urls(child) for key, child in value.items()}
+        if isinstance(result.get('url'), str):
+            result['url'] = result['url'][:-5] if result['url'].endswith('.html') else result['url']
+        return result
+    if isinstance(value, list):
+        return [public_urls(child) for child in value]
+    return value
 
 # Collect all pages
 pages = []
@@ -105,7 +116,7 @@ if os.path.exists(OUTPUT):
 
 # Preserve publication history. Ties are valid; never manufacture future dates
 # to move a page higher in a listing. Recover old omissions from page metadata.
-page_fns = [p['url'].lstrip('/') for p in pages]
+page_fns = [p['file'] for p in pages]
 for fn in page_fns:
     if not _parse_first_seen(existing_registry.get(fn, {}).get('first_seen')):
         page = read_page(os.path.join(REPO_ROOT, fn))
@@ -115,7 +126,7 @@ for fn in page_fns:
 # Sort by first_seen (not last_updated) — preserves genuine newness across sessions
 pages_with_first_seen = []
 for p in pages:
-    fn = p['url'].lstrip('/')
+    fn = p['file']
     first_seen = existing_registry.get(fn, {}).get('first_seen', '2026-01-01')
     pages_with_first_seen.append({**p, 'first_seen': first_seen})
 
@@ -197,8 +208,8 @@ output = {
     'generated': datetime.now().strftime('%Y-%m-%d'),
     'cluster_pages': cluster_pages,
     'new': new_list,
-    'popular': POPULAR,
-    'pinned': existing_pinned,
+    'popular': public_urls(POPULAR),
+    'pinned': public_urls(existing_pinned),
     'page_registry': existing_registry,
 }
 

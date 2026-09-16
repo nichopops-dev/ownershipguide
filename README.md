@@ -4,10 +4,11 @@ Static HTML, CSS and JavaScript for ownershipguide.com. There is no npm install 
 
 ## Preview locally
 
-Serve the project root over HTTP so shared header, footer and featured-data requests work:
+Serve the project root over HTTP so shared header, footer, featured data and
+Cloudflare-style extensionless page routes work:
 
 ```sh
-python3 -m http.server 8765 --bind 127.0.0.1
+python3 preview-server.py --port 8765
 ```
 
 Open `http://127.0.0.1:8765/`. After editing, reload the page; if an older script remains cached, use a fresh preview port. Stop the server with Ctrl-C when finished.
@@ -42,6 +43,7 @@ Passing these checks does not verify every external source, every calculator mod
 
 - Make small edits to `includes.js`; preserve its six SITE clusters, search scoring and service settings. Never regenerate it wholesale.
 - Use real HTML attributes for metadata. Both `name`/`property` and either attribute order are supported by `site_metadata.py`.
+- Use extensionless public URLs for root HTML pages (`/guide`, not `/guide.html`). Directory hubs retain their trailing slash. Physical source filenames still end in `.html`.
 - Update visible review dates and `dateModified` for substantive content/model changes. Link repairs and generator runs do not make an article newly reviewed.
 - Preserve `page_registry.first_seen` and the cluster-keyed `pinned` dictionary in `featured.json`. Do not invent future dates to promote a page. Newly discovered older pages use their documented publication date when available.
 - Do not pad articles to a word count. Explain the decision, inputs, assumptions and worked arithmetic as clearly as needed. Label examples and quotations accurately.

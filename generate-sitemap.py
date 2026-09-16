@@ -7,7 +7,7 @@ Claude runs this each session before packaging the output zip.
 """
 
 import os
-from site_metadata import atomic_write, read_page
+from site_metadata import atomic_write, page_url, read_page
 
 BASE_URL = 'https://ownershipguide.com'
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -56,13 +56,7 @@ for dirpath, dirnames, filenames in os.walk(REPO_ROOT):
         filepath = os.path.join(dirpath, fn)
         rel = os.path.relpath(filepath, REPO_ROOT).replace('\\', '/')
         
-        # Build URL
-        if rel == 'index.html':
-            url = BASE_URL + '/'
-        elif rel.endswith('/index.html'):
-            url = BASE_URL + '/' + rel[:-len('index.html')]
-        else:
-            url = BASE_URL + '/' + rel
+        url = BASE_URL + page_url(rel)
         
         urls.append({
             'url': url,
