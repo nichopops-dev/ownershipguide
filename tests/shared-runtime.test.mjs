@@ -20,6 +20,8 @@ test('related links render for every cluster, exclude self and respect the cap',
   const app = await loadShared();
   assert.deepEqual(Object.keys(app.SITE).sort(), ['family','financing','investing','property','protection','transport']);
   for (const [cluster, bucket] of Object.entries(app.SITE)) {
+    assert.equal(typeof bucket.label, 'string', `${cluster} is missing its related-links label`);
+    assert.ok(bucket.label.trim(), `${cluster} has an empty related-links label`);
     for (const self of [...(bucket.pages || []), ...(bucket.pillars || [])]) {
       const links = app.pickRelatedLinks({ bucket, cluster, subtopic: self.subtopic,
         selfPath: self.url, isHub: false });
@@ -27,7 +29,9 @@ test('related links render for every cluster, exclude self and respect the cap',
       const urls = links.map(link => app.normalizePath(link.url));
       assert.equal(new Set(urls).size, urls.length);
       assert.ok(!urls.includes(app.normalizePath(self.url)), self.url);
-      assert.equal(typeof app.buildRelatedHTML(bucket.label, links), 'string');
+      const html = app.buildRelatedHTML(bucket.label, links);
+      assert.equal(typeof html, 'string');
+      assert.doesNotMatch(html, /<h3>undefined<\/h3>/);
     }
   }
 });
