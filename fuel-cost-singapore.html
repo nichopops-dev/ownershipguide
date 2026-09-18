@@ -1,262 +1,136 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios</title>
-<meta content="Fuel cost in Singapore (2026): how to estimate petrol spend using mileage, km/L and pump price; realistic monthly budgeting bands, cost-per-km model, and scenario tables so you can plug fuel into your true car ownership cost." name="description"/>
-<link href="https://ownershipguide.com/fuel-cost-singapore" rel="canonical"/>
-<meta content="transport" name="og:cluster"/>
-<meta content="variable-cost" name="og:subtopic"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Petrol &amp; Fuel Cost Singapore 2026: Monthly Calculator</title>
+<meta name="description" content="Calculate monthly petrol cost in Singapore using distance, real-world fuel economy and pump price. Includes cost-per-km formulas and worked examples."/>
+<link rel="canonical" href="https://ownershipguide.com/fuel-cost-singapore"/>
+<meta name="og:cluster" content="transport"/>
+<meta name="og:subtopic" content="variable-cost"/>
 <meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:url" content="https://ownershipguide.com/fuel-cost-singapore"/>
-<meta property="og:title" content="Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios"/>
+<meta property="og:title" content="Petrol &amp; Fuel Cost Singapore 2026: Monthly Calculator"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Fuel cost in Singapore (2026): how to estimate petrol spend using mileage, km/L and pump price; realistic monthly budgeting bands, cost-per-km model, and scenario tables so you can plug fuel into your true car ownership cost."/>
-
+<meta property="og:description" content="Estimate monthly fuel cost from your distance, real-world fuel economy and current pump price, with Singapore driving examples."/>
 <link href="/styles.css" rel="stylesheet"/>
-<!-- FAQ Schema -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much can driving style change fuel cost?","acceptedAnswer":{"@type":"Answer","text":"For some drivers, it can be a noticeable difference. Smooth acceleration and better route planning can reduce wasted consumption."}},{"@type":"Question","name":"Does premium fuel save money?","acceptedAnswer":{"@type":"Answer","text":"Only if your engine benefits materially in efficiency or performance. For many cars, it\u2019s not cost-saving. Start here (fast path) Fuel is a variable cost . If your fuel spend is high, your affordability buffer needs to be higher too. See also parking and ERP . Comparing EV vs petrol for running costs? See EV vs Petrol Cost in Singapore . If you just want a planning band first, most private drivers roughly fall into: These are budgeting ranges, not promises. Your number is driven mainly by (1) mo"}},{"@type":"Question","name":"Step 1: Estimate fuel cost per kilometre","acceptedAnswer":{"@type":"Answer","text":"Fuel cost per km = pump price per litre \u00f7 (km per litre) Example: pump price $2.70/L and fuel efficiency 12 km/L \u2192 fuel cost \u2248 $0.225 per km."}},{"@type":"Question","name":"Step 2: Convert to a monthly fuel budget","acceptedAnswer":{"@type":"Answer","text":"Monthly fuel = monthly distance (km) \u00d7 fuel cost per km Example: 1,200 km/month \u00d7 $0.225/km \u2248 $270/month. Use this as a fast sanity check. If your actual driving pattern is different, treat this as a starting point and adjust mileage. People underestimate fuel because they budget based on \u201ctypical weeks\u201d and ignore: If you want a conservative budget that won\u2019t surprise you, take your estimated number and add a 15\u201325% buffer. Fuel is not the biggest line item (COE and depreciation dominate), but "}},{"@type":"Question","name":"How many km do most drivers clock per month?","acceptedAnswer":{"@type":"Answer","text":"It varies massively by lifestyle. The fastest way to ground yourself is to check your last 2\u20133 fuel receipts or odometer logs and back-calculate. If you don\u2019t have data, use 800 / 1,200 / 1,800 km as light / typical / heavy planning points."}},{"@type":"Question","name":"Should I model fuel using L/100km or km/L?","acceptedAnswer":{"@type":"Answer","text":"Either works. This page uses km/L because many owners think in that direction. If you have L/100km, convert by: km/L = 100 \u00f7 (L/100km). This page is a decision helper. Use it to get a first-pass estimate and compare options. If you\u2019re making a high-stakes decision (loan, property purchase, vehicle purchase), treat results as directional and verify with official sources and your provider."}},{"@type":"Question","name":"Assumptions and limitations","acceptedAnswer":{"@type":"Answer","text":"That said, for high-mileage drivers, fuel becomes meaningful. In that case, the best levers are often: choosing a more efficient drivetrain, reducing unnecessary trips, and keeping the vehicle well-maintained. Driving style matters, but route choice (avoiding heavy congestion) can matter even more. Fuel is one of the few costs you can influence month-to-month, but it is rarely the biggest cost of owning a car in Singapore. Depreciation and insurance often dominate. This matters because it preven"}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios","item":"https://ownershipguide.com/fuel-cost-singapore"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios", "description": "Fuel cost in Singapore (2026): how to estimate petrol spend using mileage, km/L and pump price; realistic monthly budgeting bands, cost-per-km model, and scenario tables so you can plug fuel into your true car ownership cost.", "url": "https://ownershipguide.com/fuel-cost-singapore", "datePublished": "2026-04-14", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate monthly petrol cost in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Divide monthly distance by real-world fuel economy in kilometres per litre, then multiply by the effective price paid per litre. For example, 1,200 km divided by 12 km/L and multiplied by $3.40/L equals $340 a month before rebates or discounts."}},{"@type":"Question","name":"How much petrol does a car use per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Divide the price per litre by the vehicle’s real-world kilometres per litre. At $3.40 per litre and 12 km/L, fuel costs about 28.3 cents per kilometre."}},{"@type":"Question","name":"Should I use the brochure fuel economy in my budget?","acceptedAnswer":{"@type":"Answer","text":"Use your own tank-to-tank result where possible. LTA notes that actual values vary with driving pattern and vehicle load, so a brochure or label figure is better used for comparison than as a guaranteed real-world result."}},{"@type":"Question","name":"Does premium petrol reduce total fuel cost?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. Use the minimum octane grade specified by the vehicle manufacturer. A higher-priced grade only lowers total cost if it produces enough of a real efficiency benefit to offset its higher price."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"Petrol & Fuel Cost Singapore 2026","item":"https://ownershipguide.com/fuel-cost-singapore"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Petrol & Fuel Cost Singapore 2026: Monthly Calculator","description":"Calculate monthly petrol cost in Singapore using distance, real-world fuel economy and pump price. Includes cost-per-km formulas and worked examples.","url":"https://ownershipguide.com/fuel-cost-singapore","datePublished":"2026-04-14","dateModified":"2026-09-19","publisher":{"@type":"Organization","name":"Ownership Guide","url":"https://ownershipguide.com","logo":{"@type":"ImageObject","url":"https://ownershipguide.com/favicon-512x512.png"}},"inLanguage":"en-SG"}</script>
 </head>
 <body>
 <div id="site-header"></div>
-<main class="container"><h1>Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios</h1>
-<p>
-    Fuel is one of the few parts of car ownership in Singapore that scales almost directly with how you live.
-    Drive more, queue more, detour more — you pay more.
-    This page gives you a clean way to budget fuel in <strong>60 seconds</strong>, plus realistic monthly ranges you can plug into your
-    <a href="/monthly-cost-of-owning-a-car-singapore">true monthly ownership cost</a>.
-  </p>
-<h2>What this guide helps you decide</h2>
-<p>Fuel is one of the most visible running costs for drivers in Singapore, but it’s also one of the easiest to mis-estimate. This guide helps you calculate realistic monthly fuel spend based on mileage and fuel efficiency, compare petrol grades, and understand how driving patterns (traffic, short trips) change consumption.</p>
-<h2>Fuel cost in one paragraph</h2>
-<p>Monthly fuel spend is roughly: <strong>(km driven ÷ km per litre) × fuel price per litre</strong>. The difficulty is that “km per litre” varies by traffic conditions, driving style, and vehicle condition. A conservative estimate plus a buffer is usually more accurate than a single brochure number.</p>
-<h2>Step 1: Estimate your mileage correctly</h2>
-<ul>
-<li>Work commute round-trip × workdays</li>
-<li>Weekend errands and family trips</li>
-<li>Occasional long drives</li>
-</ul>
-<h2>Step 2: Use realistic fuel efficiency</h2>
-<ul>
-<li><strong>City traffic</strong>: lower efficiency due to idling and stop-start.</li>
-<li><strong>Highway</strong>: better efficiency, steady speeds.</li>
-<li><strong>Short trips</strong>: often worst due to cold starts.</li>
-</ul>
-<h2>Step 3: Compare petrol grades and habits</h2>
-<ul>
-<li>Higher octane doesn’t always mean better efficiency for every engine.</li>
-<li>Tyre pressure and maintenance matter more than most people think.</li>
-<li>Driving smoothness (gentle acceleration) can reduce consumption.</li>
-</ul>
-<h2>Scenario library</h2>
-<ul>
-<li><strong>Scenario A: Low mileage driver</strong> — fuel is small relative to depreciation/insurance; don’t over-optimise.</li>
-<li><strong>Scenario B: High mileage commuter</strong> — fuel becomes meaningful; efficiency matters more.</li>
-<li><strong>Scenario C: Heavy traffic routes</strong> — assume worse fuel efficiency than brochure numbers.</li>
-</ul>
-<h2>Common mistakes</h2>
-<ul>
-<li>Using manufacturer fuel economy numbers without adjusting for local traffic.</li>
-<li>Ignoring maintenance issues that increase fuel consumption.</li>
-<li>Optimising fuel while ignoring bigger costs like depreciation.</li>
-</ul>
-<h2 id="faq">FAQ</h2>
-<h3>How much can driving style change fuel cost?</h3>
-<p>For some drivers, it can be a noticeable difference. Smooth acceleration and better route planning can reduce wasted consumption.</p>
-<h3>Does premium fuel save money?</h3>
-<p>Only if your engine benefits materially in efficiency or performance. For many cars, it’s not cost-saving.</p>
-<h2 id="reduce">How to reduce fuel cost without suffering</h2>
-<ul>
-<li>Combine errands and avoid repeated short cold-start trips.</li>
-<li>Maintain tyre pressure and servicing schedule.</li>
-<li>Drive smoothly; avoid aggressive acceleration in traffic.</li>
-</ul>
+<main class="container">
+<p><a href="/">← Back to Ownership Guide</a> ← <a href="/transport/">Back to Transport</a></p>
+<h1>Petrol &amp; Fuel Cost Singapore 2026: Monthly Calculator</h1>
+<p><strong>Monthly petrol cost equals distance driven ÷ real-world fuel economy × the effective price per litre.</strong> A driver covering 1,200 km a month in a car that achieves 12 km/L uses about 100 litres. At an example price of $3.40 per litre before discounts, that is about <strong>$340 a month</strong>.</p>
+<p>Replace all three inputs with your own numbers. Pump prices and card discounts change, and your actual fuel economy may differ substantially from the label result.</p>
 <div class="box">
-<p><strong>Start here (fast path)</strong></p>
-<ul>
-<li><strong>1)</strong> Anchor to the full 5-year exposure model:
-        <a href="/car-ownership-cost">Cost of Owning a Car in Singapore (5-Year Breakdown)</a>
-</li>
-<li><strong>2)</strong> Convert it into a monthly cashflow view:
-        <a href="/monthly-cost-of-owning-a-car-singapore">True Monthly Cost of Owning a Car</a>
-</li>
-<li><strong>3)</strong> If your decision is “car vs not car”, run:
-        <a href="/car-vs-ride-hailing-calculator">Car vs Ride-Hailing Break-Even Calculator</a>
-</li>
-</ul>
-<p class="muted">
-      Fuel is a <strong>variable cost</strong>. If your fuel spend is high, your affordability buffer needs to be higher too.
-      See also <a href="/parking-cost-singapore">parking</a> and <a href="/erp-cost-singapore">ERP</a>.
-    </p>
+<p><strong>Fuel cost formulas</strong></p>
+<p><strong>Monthly cost</strong> = monthly km ÷ km/L × price per litre</p>
+<p><strong>Cost per km</strong> = price per litre ÷ km/L</p>
+<p><strong>Convert L/100 km to km/L</strong> = 100 ÷ L/100 km</p>
 </div>
-<h2>Jump to What You Need</h2>
-<ul>
-<li><a href="#quick-model">Quick model</a></li>
-<li><a href="#scenarios">Common scenarios</a></li>
-<li><a href="#reduce">How to reduce fuel cost</a></li>
-<li><a href="#faq">FAQ</a></li>
-</ul>
-<p class="muted">Comparing EV vs petrol for running costs? See <a href="/ev-vs-petrol-cost-singapore">EV vs Petrol Cost in Singapore</a>.</p>
-<h2 id="quick">Quick answer (realistic monthly ranges)</h2>
-<p>
-    If you just want a planning band first, most private drivers roughly fall into:
-  </p>
-<ul>
-<li><strong>Light usage:</strong> ~$150–$250/month</li>
-<li><strong>Typical usage:</strong> ~$250–$450/month</li>
-<li><strong>Heavy usage:</strong> ~$450–$700+/month</li>
-</ul>
-<p class="muted">
-    These are budgeting ranges, not promises. Your number is driven mainly by (1) monthly mileage, (2) fuel efficiency, and (3) pump prices.
-  </p>
-<h2 id="quick-model">The 60-second fuel model</h2>
-<p>
-    You only need two steps.
-  </p>
-<h3>Step 1: Estimate fuel cost per kilometre</h3>
-<p>
-<strong>Fuel cost per km</strong> = pump price per litre ÷ (km per litre)
-  </p>
-<p class="muted">
-    Example: pump price $2.70/L and fuel efficiency 12 km/L → fuel cost ≈ $0.225 per km.
-  </p>
-<h3>Step 2: Convert to a monthly fuel budget</h3>
-<p>
-<strong>Monthly fuel</strong> = monthly distance (km) × fuel cost per km
-  </p>
-<p class="muted">
-    Example: 1,200 km/month × $0.225/km ≈ $270/month.
-  </p>
-<h2 id="scenarios">Scenario table (plug-and-play)</h2>
-<p>
-    Use this as a fast sanity check. If your actual driving pattern is different, treat this as a starting point and adjust mileage.
-  </p>
+
+<h2>Monthly petrol cost examples</h2>
+<p>The table uses $3.40 per litre as a transparent planning input, not a live price quote. Enter the price you actually pay after any station, membership and card discounts.</p>
 <table>
-<thead>
-<tr>
-<th>Driver profile</th>
-<th>Monthly distance</th>
-<th>Efficiency (km/L)</th>
-<th>Pump price</th>
-<th>Estimated fuel / month</th>
-</tr>
-</thead>
+<thead><tr><th>Driving pattern</th><th>Distance</th><th>Real-world economy</th><th>Litres used</th><th>Monthly cost</th></tr></thead>
 <tbody>
-<tr>
-<td>Light commuter (mostly off-peak)</td>
-<td>800 km</td>
-<td>13 km/L</td>
-<td>$2.70/L</td>
-<td>~$166</td>
-</tr>
-<tr>
-<td>Typical commuter + weekends</td>
-<td>1,200 km</td>
-<td>12 km/L</td>
-<td>$2.70/L</td>
-<td>~$270</td>
-</tr>
-<tr>
-<td>Heavy usage (family + frequent trips)</td>
-<td>1,800 km</td>
-<td>11 km/L</td>
-<td>$2.70/L</td>
-<td>~$442</td>
-</tr>
-<tr>
-<td>Same as above, price spike scenario</td>
-<td>1,800 km</td>
-<td>11 km/L</td>
-<td>$3.10/L</td>
-<td>~$508</td>
-</tr>
+<tr><td>Light use</td><td>800 km</td><td>14 km/L</td><td>57.1 L</td><td>$194</td></tr>
+<tr><td>Typical commute and weekends</td><td>1,200 km</td><td>12 km/L</td><td>100 L</td><td>$340</td></tr>
+<tr><td>Heavy use in mixed traffic</td><td>1,800 km</td><td>10 km/L</td><td>180 L</td><td>$612</td></tr>
 </tbody>
 </table>
-<h2 id="mistakes">The common budgeting mistake</h2>
-<p>
-    People underestimate fuel because they budget based on “typical weeks” and ignore:
-  </p>
+<p>These are worked examples, not estimates of what every Singapore driver spends. Mileage, vehicle type, traffic, load and fuel grade all change the result.</p>
+
+<h2>Calculate your real fuel economy</h2>
+<p>The most useful input comes from your own car. Use a tank-to-tank calculation:</p>
+<ol>
+<li>Fill the tank and reset the trip meter.</li>
+<li>Drive normally until the next fill.</li>
+<li>Record the kilometres travelled and litres added.</li>
+<li>Divide kilometres by litres to get km/L.</li>
+<li>Repeat for three fills and average the results.</li>
+</ol>
+<p>For example, 540 km divided by 45 litres is 12 km/L. If your dashboard uses L/100 km, 8.3 L/100 km is about 12 km/L because 100 ÷ 8.3 is approximately 12.</p>
+
+<h2>Cost per kilometre</h2>
+<p>Cost per km makes vehicle and travel comparisons easier. At $3.40 per litre:</p>
+<table>
+<thead><tr><th>Real-world economy</th><th>Fuel cost per km</th><th>Fuel cost per 10,000 km</th></tr></thead>
+<tbody>
+<tr><td>9 km/L</td><td>37.8¢</td><td>$3,778</td></tr>
+<tr><td>12 km/L</td><td>28.3¢</td><td>$2,833</td></tr>
+<tr><td>15 km/L</td><td>22.7¢</td><td>$2,267</td></tr>
+<tr><td>18 km/L</td><td>18.9¢</td><td>$1,889</td></tr>
+</tbody>
+</table>
+<p>The difference between 9 km/L and 15 km/L is about $1,511 over 10,000 km at this example price. Compare that saving with the purchase price, depreciation, financing and insurance difference before changing cars purely for fuel economy.</p>
+
+<h2>Use the effective pump price</h2>
+<p>Published station prices are only the starting point. The effective price is what appears after the discounts you can reliably obtain. Avoid building a budget around a temporary promotion or a card you would not otherwise use.</p>
+<ol>
+<li>Check the grade required by your vehicle manual.</li>
+<li>Compare current prices using station websites or the Price Kaki app linked by LTA.</li>
+<li>Apply only recurring discounts you qualify for.</li>
+<li>Keep a higher-price case in your budget.</li>
+</ol>
+<p>A useful stress test is to add 30 cents per litre. For the 1,200 km, 12 km/L example, each 30-cent increase adds $30 a month.</p>
+
+<h2>Why your result differs from the fuel label</h2>
+<p>LTA’s fuel-cost calculator lets buyers compare models and expected yearly fuel costs, while warning that actual values vary with driving patterns and vehicle load. Real-world economy can be affected by:</p>
 <ul>
-<li>school drop-offs, errands, and detours that add 5–15 km per day</li>
-<li>idling and congestion (your real-world efficiency drops)</li>
-<li>weekend spikes (family outings + multiple short trips)</li>
+<li>stop-start traffic and idling;</li>
+<li>short trips and repeated cold starts;</li>
+<li>passengers, luggage and accessories;</li>
+<li>tyre pressure and maintenance;</li>
+<li>air-conditioning demand;</li>
+<li>acceleration, speed and route choice.</li>
 </ul>
-<p>
-    If you want a conservative budget that won’t surprise you, take your estimated number and add a <strong>15–25%</strong> buffer.
-  </p>
-<h2 id="ownership">How fuel fits into your total car cost</h2>
-<p>
-    Fuel is not the biggest line item (COE and depreciation dominate), but it is one of the most controllable.
-    In cashflow terms, it often sits next to <a href="/parking-cost-singapore">parking</a> and <a href="/erp-cost-singapore">ERP</a> as the “monthly pain” category.
-  </p>
-<p>
-    If your fuel band is consistently heavy usage, treat that as a signal to:
-  </p>
+<p>Use the label to compare vehicles under a consistent test. Use your own tank-to-tank record for the household budget.</p>
+
+<h2>Petrol grade: 92, 95, 98 or premium?</h2>
+<p>Follow the minimum octane requirement in the vehicle manual. A higher octane number is not a universal measure of better fuel economy. If the manufacturer does not require premium fuel, compare its extra cost with any measured improvement rather than assuming it saves money.</p>
+<p>Example: if 98-octane petrol costs 50 cents more per litre, a car using 100 litres a month needs to save more than $50 in fuel consumption for the switch to reduce total spend.</p>
+
+<h2>How fuel fits into total car cost</h2>
+<p>Fuel is visible because it is paid frequently, but it is only one part of ownership. Add it to <a href="/parking-cost-singapore">parking</a>, <a href="/erp-cost-singapore">ERP</a>, road tax, insurance, servicing, financing and depreciation. Use the <a href="/monthly-cost-of-owning-a-car-singapore">true monthly cost of owning a car</a> for the full cashflow view.</p>
+<p>For a car-versus-alternative decision, combine fuel with every fixed cost. Saving $80 a month at the pump does not compensate for hundreds of dollars of additional monthly depreciation.</p>
+
+<h2>Ways to reduce fuel cost</h2>
 <ul>
-<li>stress-test affordability (monthly cashflow, not just “can get loan”)</li>
-<li>re-check whether ride-hailing is cheaper for your pattern</li>
+<li>Combine errands and remove avoidable trips.</li>
+<li>Keep tyres at the manufacturer’s recommended pressure.</li>
+<li>Maintain the car and investigate a sudden fall in km/L.</li>
+<li>Accelerate smoothly and anticipate traffic flow.</li>
+<li>Track cost per km monthly instead of relying on memory.</li>
+<li>Use the required fuel grade and compare repeatable discounts.</li>
 </ul>
-<h3>How many km do most drivers clock per month?</h3>
-<p>
-    It varies massively by lifestyle. The fastest way to ground yourself is to check your last 2–3 fuel receipts or odometer logs and back-calculate.
-    If you don’t have data, use 800 / 1,200 / 1,800 km as light / typical / heavy planning points.
-  </p>
-<h3>Should I model fuel using L/100km or km/L?</h3>
-<p>
-    Either works. This page uses km/L because many owners think in that direction.
-    If you have L/100km, convert by: km/L = 100 ÷ (L/100km).
-  </p>
-<section class="og-editorial-note" style="margin-top:2rem; padding:1.25rem; border:1px solid #e5e7eb; border-radius:12px; background:#fff;">
-<h2 style="margin-top:0;">How to use this page</h2>
-<p>This page is a decision helper. Use it to get a first-pass estimate and compare options. If you’re making a high-stakes decision (loan, property purchase, vehicle purchase), treat results as directional and verify with official sources and your provider.</p>
-<h3>Assumptions and limitations</h3>
+
+<h2>FAQ</h2>
+<h3>How do I calculate monthly petrol cost in Singapore?</h3>
+<p>Divide monthly distance by real-world km/L, then multiply by the effective price per litre. At 1,200 km, 12 km/L and $3.40/L, the result is $340 a month.</p>
+<h3>How much petrol does a car use per kilometre?</h3>
+<p>Divide price per litre by km/L. At $3.40/L and 12 km/L, fuel costs about 28.3 cents per km.</p>
+<h3>Should I use the brochure fuel economy?</h3>
+<p>Use it for comparing models. For budgeting, your own tank-to-tank average is better because traffic, load and driving patterns affect actual consumption.</p>
+<h3>Does premium petrol reduce total fuel cost?</h3>
+<p>Not automatically. Use the minimum grade specified by the manufacturer and measure whether any efficiency gain outweighs the higher price.</p>
+
+<div id="auto-related"></div>
+<h2>References</h2>
 <ul>
-<li>Figures are simplified to keep the model usable. Real-world quotes vary by provider, profile, timing, and eligibility.</li>
-<li>Taxes, fees, incentives, and rules can change. Check the latest references below before acting.</li>
-<li>This is not financial, legal, or tax advice.</li>
+<li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/owning/ongoing-car-costs/fuel.html" target="_blank" rel="nofollow noopener">LTA OneMotoring: Fuel, Labels and Fuel Cost Calculator</a></li>
+<li><a href="https://datamall.lta.gov.sg/content/datamall/en/static-data.html" target="_blank" rel="nofollow noopener">LTA DataMall: Static Transport Data</a></li>
+<li><a href="/monthly-cost-of-owning-a-car-singapore">True Monthly Cost of Owning a Car</a></li>
+<li><a href="/ev-vs-petrol-cost-singapore">EV vs Petrol Cost in Singapore</a></li>
 </ul>
-</section>
-<ul>
-<li>Write your assumptions (rates, tenure, holding period) in one place.</li>
-<li>Stress test with a conservative scenario (+1–2% rates, worse resale, higher repairs).</li>
-<li>Choose the option that still works under stress, not only under optimistic assumptions.</li>
-<li>Prefer clarity: if you can’t explain the model, don’t commit money to it.</li>
-</ul>
-<h2>Decision checklist (quick)</h2>
-<p>That said, for high-mileage drivers, fuel becomes meaningful. In that case, the best levers are often: choosing a more efficient drivetrain, reducing unnecessary trips, and keeping the vehicle well-maintained. Driving style matters, but route choice (avoiding heavy congestion) can matter even more.</p>
-<p>Fuel is one of the few costs you can influence month-to-month, but it is rarely the biggest cost of owning a car in Singapore. Depreciation and insurance often dominate. This matters because it prevents over-optimising fuel choices while ignoring bigger structural costs like depreciation band, COE cycle, and financing.</p>
-<h2>Deeper dive: fuel cost vs the “big costs” of driving</h2>
-<ul>
-<li>Use conservative assumptions and avoid decisions that only work in the optimistic case.</li>
-<li>Prefer clarity and optionality: decisions that keep future options open reduce regret.</li>
-<li>Revisit big decisions when your life situation changes (income, family needs, rates).</li>
-</ul>
-<h2>Key takeaways</h2>
-<p>Finally, prefer decisions that keep options open. Optionality is underrated. A slightly more expensive choice that lets you change course later can be superior to a cheaper choice that traps you.</p>
-<p>Another useful technique is to define your “no-regret constraints”: the decision must keep a minimum cash buffer, must not rely on refinancing approval as the only exit, and must not assume best-case market conditions. If a plan violates your constraints, it’s not a plan — it’s a bet.</p>
-<p>When you’re unsure, write down three scenarios: conservative, base, and optimistic. For each scenario, list the few variables that matter most (interest rate, resale value, repair costs, rent, fees). You don’t need perfect accuracy — you need a decision that still makes sense when reality isn’t perfect.</p>
-<h2>More practical guidance</h2>
-<ul><li>Optimism bias: using best-case numbers.</li><li>Ignoring fees and one-off costs.</li><li>Forgetting time/effort costs.</li><li>Changing scope mid-way.</li></ul><h2>Common decision traps</h2>
-<p>Small data beats guesswork. The goal is not to predict the future perfectly — it’s to make a decision that keeps you financially safe while meeting your lifestyle needs.</p>
-<p>If you’re still uncertain after modelling, take the next step that reduces uncertainty the most. For loans, that usually means getting two competing offers and comparing effective rate, fees, and repayment schedule. For property decisions, it means shortlisting a few realistic units and stress-testing your cashflow under conservative rates. For transport decisions, it means tracking your actual travel spend and time for a month.</p>
-<h2>Implementation checklist</h2>
-<ul>
-<li><strong>Track a real month:</strong> record distance, pump price, and any charging or parking adjustments before deciding that fuel is your main problem.</li>
-<li><strong>Stress-test the commute:</strong> ask whether a change in route, trip frequency, or vehicle efficiency matters more than chasing the cheapest pump every week.</li>
-<li><strong>Compare against larger costs:</strong> if depreciation, insurance, or financing already dominate, treat fuel savings as a supporting optimisation rather than the whole strategy.</li>
-</ul>
-<p>A good fuel decision is usually boring and repeatable: use realistic mileage, assume non-ideal traffic, and avoid buying a whole new vehicle just to solve a modest monthly fuel problem. The checklist above keeps the page practical and prevents a recurring-cost discussion from turning into an expensive identity purchase.</p>
-<div id="auto-related"></div><h2>References</h2><ul><li><a href="https://www.ema.gov.sg/" rel="nofollow">Energy Market Authority</a></li><li><a href="https://www.lta.gov.sg/" rel="nofollow">LTA</a></li></ul>
-<p class="muted"><strong>Last updated:</strong> 14 Apr 2026</p>
-<p class="muted"><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="/advertising-disclosure">Ads Disclosure</a></p>
+<p class="muted"><strong>Last updated:</strong> 19 Sep 2026</p>
 </main>
 <div id="site-footer"></div>
-<script defer="" src="/includes.js"></script>
+<script defer src="/includes.js"></script>
 </body>
 </html>
