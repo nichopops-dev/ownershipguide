@@ -1235,6 +1235,7 @@ decisionPathOverrides: {
     },
 
     investing: {
+      label: "Related Singapore Investing & Liquidity Guides",
       pillar: "/how-much-emergency-fund-do-you-need-singapore",
       pages: [
         { url: "/top-up-cpf-sa-or-pay-for-after-school-care-first-singapore", title: "Top Up CPF SA or Pay for After-School Care First in Singapore (2026): Which Use of Surplus Solves the More Time-Sensitive Problem?", subtopic: "bridge" },

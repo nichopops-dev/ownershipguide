@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16",
+  "generated": "2026-09-18",
   "cluster_pages": {
     "transport": [
       {
@@ -905,6 +905,12 @@
     ],
     "property": [
       {
+        "url": "/home-protection-scheme-hps-singapore",
+        "title": "Home Protection Scheme (HPS) Singapore: HDB Mortgage Insurance (2026)",
+        "desc": "Understand Singapore's Home Protection Scheme: who needs HPS, what HDB mortgage insurance covers, coverage shares, claims, exclusions and exemptions.",
+        "date": "2026-09-18"
+      },
+      {
         "url": "/bsd-absd-calculator-singapore",
         "title": "BSD and ABSD Calculator Singapore (2026)",
         "desc": "Calculate residential BSD and ordinary ABSD before remissions. Includes exact duty tiers, whole-dollar rounding and worked examples.",
@@ -1238,12 +1244,6 @@
         "url": "/home-maintenance-cost-singapore",
         "title": "Home Maintenance Cost in Singapore (2026): Repairs, Replacements, and the Real Upkeep Budget",
         "desc": "Home maintenance cost in Singapore for 2026: how to think about repairs, replacements, and recurring upkeep realistically, and why homeowners should budget…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/home-protection-scheme-hps-singapore",
-        "title": "Home Protection Scheme (HPS) in Singapore (2026): What It Protects, What It Does Not, and Why HDB…",
-        "desc": "Home Protection Scheme (HPS) in Singapore for 2026: what it protects, what it does not, and how HDB owners should place it alongside home insurance and loan…",
         "date": "2026-04-14"
       },
       {
@@ -3161,6 +3161,18 @@
     ],
     "investing": [
       {
+        "url": "/cpf-oa-investment-singapore",
+        "title": "CPF OA Investment Singapore (2026): How to Invest, Limits & Risks",
+        "desc": "Learn how to invest CPF OA savings in 2026, including the S$20,000 reserve, CPFIS steps, stock and gold limits, fees, housing risk and return hurdle.",
+        "date": "2026-09-18"
+      },
+      {
+        "url": "/cpf-sa-top-up-singapore",
+        "title": "CPF SA Top-Up Singapore (2026): Limit, Tax Relief & How It Works",
+        "desc": "CPF SA top-up limits and tax relief in Singapore for 2026, including the S$8,000 caps, age-55 RA rules, eligibility and a worked example.",
+        "date": "2026-09-18"
+      },
+      {
         "url": "/build-ssb-ladder-or-increase-term-life-insurance-first-singapore",
         "title": "Build a Singapore Savings Bond Ladder or Increase Term Life Insurance First in Singapore (2026)…",
         "desc": "Build a Singapore Savings Bond ladder or increase term life insurance first in Singapore: a framework for choosing between conservative portfolio ballast and…",
@@ -3182,18 +3194,6 @@
         "url": "/cpf-life-standard-vs-escalating-plan-singapore",
         "title": "CPF LIFE Standard vs Escalating: Starting Income and 2% Growth",
         "desc": "Compare Standard’s higher starting payout with Escalating’s 2% annual increases, using spending gaps and a transparent crossover example.",
-        "date": "2026-09-14"
-      },
-      {
-        "url": "/cpf-oa-investment-singapore",
-        "title": "CPF OA Investing Singapore (2026): Limits, Fees and Housing Risk",
-        "desc": "Review CPFIS-OA eligibility, the S$20,000 reserve, stock and gold limits, investment losses, fees and near-term housing needs.",
-        "date": "2026-09-14"
-      },
-      {
-        "url": "/cpf-sa-top-up-singapore",
-        "title": "CPF SA Top-Up Singapore (2026): Limits, Tax Relief and Age 55",
-        "desc": "Understand the 2026 CPF SA and RA top-up limits, tax-relief conditions, current interest rates and why retirement top-ups are irreversible.",
         "date": "2026-09-14"
       },
       {
