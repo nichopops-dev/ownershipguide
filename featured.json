@@ -1,7 +1,13 @@
 {
-  "generated": "2026-09-18",
+  "generated": "2026-09-19",
   "cluster_pages": {
     "transport": [
+      {
+        "url": "/fuel-cost-singapore",
+        "title": "Petrol & Fuel Cost Singapore 2026: Monthly Calculator",
+        "desc": "Calculate monthly petrol cost in Singapore using distance, real-world fuel economy and pump price. Includes cost-per-km formulas and worked examples.",
+        "date": "2026-09-19"
+      },
       {
         "url": "/car-affordability-calculator-singapore",
         "title": "Car Affordability Calculator Singapore (2026): Cashflow and Cost",
@@ -402,12 +408,6 @@
         "url": "/family-car-upgrade-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore",
         "title": "Family Car Upgrade vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which…",
         "desc": "Family car upgrade vs bigger cash buffer when supporting aging parents in Singapore: decide whether a more capable vehicle really solves elder-support strain…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/fuel-cost-singapore",
-        "title": "Fuel Cost in Singapore (2026): Monthly Budget, Cost Per Km + Realistic Scenarios",
-        "desc": "Fuel cost in Singapore (2026): how to estimate petrol spend using mileage, km/L and pump price; realistic monthly budgeting bands, cost-per-km model, and…",
         "date": "2026-04-14"
       },
       {
@@ -905,6 +905,18 @@
     ],
     "property": [
       {
+        "url": "/buying-property-with-parents-or-family-singapore",
+        "title": "Buying Property With Parents or Family in Singapore (2026)",
+        "desc": "Buying property with parents or family in Singapore: compare HDB owner and occupier roles, CPF rules, co-ownership structures, grants and exit risks.",
+        "date": "2026-09-19"
+      },
+      {
+        "url": "/deferred-income-assessment-singapore",
+        "title": "HDB Deferred Income Assessment (DIA) 2026: Eligibility & How It Works",
+        "desc": "HDB Deferred Income Assessment (DIA) explained: 2026 eligibility, when income is assessed, what it covers, and how it affects your EHG, loan and downpayment.",
+        "date": "2026-09-19"
+      },
+      {
         "url": "/home-protection-scheme-hps-singapore",
         "title": "Home Protection Scheme (HPS) Singapore: HDB Mortgage Insurance (2026)",
         "desc": "Understand Singapore's Home Protection Scheme: who needs HPS, what HDB mortgage insurance covers, coverage shares, claims, exclusions and exemptions.",
@@ -1103,12 +1115,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/buying-property-with-parents-or-family-singapore",
-        "title": "Buying Property With Parents or Family in Singapore (2026): When Co-Ownership Helps and When It…",
-        "desc": "Buying property with parents or family in Singapore for 2026: when co-ownership can help, what it complicates later, and how to avoid solving affordability by…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/cash-over-valuation-cov-singapore",
         "title": "Cash Over Valuation (COV) in Singapore (2026): Why Resale Deals Can Still Fail",
         "desc": "Cash Over Valuation (COV) in Singapore for 2026: what COV means, why it matters for HDB resale buyers, how it affects cash needed, and why affordability on…",
@@ -1136,12 +1142,6 @@
         "url": "/defects-and-snagging-after-handover-singapore",
         "title": "Defects and Snagging After Handover in Singapore (2026): What to Do When the Home Is Handed Over…",
         "desc": "Defects and snagging after handover in Singapore (2026): post-handover checks, rectification realism, move-in delay, expectation management, and what to do…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/deferred-income-assessment-singapore",
-        "title": "Deferred Income Assessment in Singapore (2026): When Young Buyers Should Delay the HDB Income Test",
-        "desc": "Deferred Income Assessment in Singapore for 2026: what it is, who it may help, and why it matters for young couples choosing between BTO timing, grants, and…",
         "date": "2026-04-14"
       },
       {
