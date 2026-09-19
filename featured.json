@@ -9,9 +9,21 @@
         "date": "2026-09-19"
       },
       {
+        "url": "/erp-cost-singapore",
+        "title": "ERP Price Singapore 2026: Rates, Cost & Monthly Calculator",
+        "desc": "Estimate ERP cost in Singapore using current LTA rates, a simple monthly formula, worked commute examples, ERP 2.0 details and missed-payment rules.",
+        "date": "2026-09-19"
+      },
+      {
         "url": "/fuel-cost-singapore",
         "title": "Petrol & Fuel Cost Singapore 2026: Monthly Calculator",
         "desc": "Calculate monthly petrol cost in Singapore using distance, real-world fuel economy and pump price. Includes cost-per-km formulas and worked examples.",
+        "date": "2026-09-19"
+      },
+      {
+        "url": "/no-claim-discount-ncd-singapore",
+        "title": "NCD Protection Singapore 2026: No-Claim Discount Guide",
+        "desc": "NCD protection in Singapore explained: current no-claim discount levels, what happens after a claim, transfer rules, and when a protector may pay off.",
         "date": "2026-09-19"
       },
       {
@@ -351,12 +363,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/erp-cost-singapore",
-        "title": "ERP Cost in Singapore (2026): How Much You’ll Pay Per Day + Monthly Budget Model",
-        "desc": "ERP cost in Singapore (2026): how ERP charges work, realistic daily and monthly ERP spending scenarios, peak vs off-peak budgeting, and how to factor ERP into…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/ev-battery-degradation-singapore",
         "title": "EV Battery Degradation in Singapore (2026): What Matters, What Doesn't, and When to Worry",
         "desc": "EV battery degradation in Singapore (2026): what actually affects battery health, what buyers exaggerate, and when degradation should change your EV decision…",
@@ -582,12 +588,6 @@
         "url": "/named-driver-vs-any-authorised-driver-car-insurance-singapore",
         "title": "Named Driver vs Any Authorised Driver Car Insurance in Singapore (2026): Are You Saving Money or…",
         "desc": "Named driver vs any authorised driver car insurance in Singapore (2026): compare premium savings, household flexibility, spouse and family use, and when a…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/no-claim-discount-ncd-singapore",
-        "title": "No-Claim Discount (NCD) in Singapore Car Insurance (2026): Why One Claim Can Echo for Years",
-        "desc": "No-Claim Discount (NCD) in Singapore car insurance explained properly: why claims-free years matter, how one claim can affect future premiums, and how to…",
         "date": "2026-04-14"
       },
       {
@@ -1759,6 +1759,12 @@
     ],
     "family": [
       {
+        "url": "/infantcare-vs-childcare-cost-singapore",
+        "title": "Infant Care Fees Singapore 2026: Infantcare vs Childcare",
+        "desc": "Compare infant care and childcare fees in Singapore, including AOP and POP fee caps, ECDA subsidies, worked monthly costs and the transition at 18 months.",
+        "date": "2026-09-19"
+      },
+      {
         "url": "/hearing-vision-home-adjustment-cost-calculator-singapore",
         "title": "Hearing and Vision Home-Adjustment Cost Calculator Singapore (2026): Compare Ad-Hoc Prompting…",
         "desc": "Compare the monthly burden of ad-hoc hearing and vision support against a more structured home-adjustment route for aging parents in Singapore after device…",
@@ -2362,12 +2368,6 @@
         "url": "/how-to-choose-school-location-without-overbuying-home-or-second-car-capacity-singapore",
         "title": "How to Choose School Location Without Overbuying Home or Second-Car Capacity in Singapore (2026)",
         "desc": "A practical Singapore framework for choosing school location without overbuying housing or second-car capacity. Use route strain, stage duration, and…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/infantcare-vs-childcare-cost-singapore",
-        "title": "Infantcare vs Childcare Cost in Singapore (2026): The Recurring Cost Difference Parents Feel Most",
-        "desc": "Infantcare vs childcare cost in Singapore in 2026: a practical comparison of fees, timing, work-return implications, and how formal care changes household…",
         "date": "2026-04-14"
       },
       {
