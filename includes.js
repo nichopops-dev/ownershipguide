@@ -966,7 +966,7 @@ decisionPathOverrides: {
       label: "Related Singapore Family Cost Guides",
       pillars: [
         { url: "/how-much-does-it-cost-to-raise-a-child-singapore", title: "How Much Does It Cost to Raise a Child in Singapore? (2026): A Long-Horizon Planning Framework", subtopic: "core" },
-        { url: "/cost-of-having-a-baby-singapore", title: "Cost of Having a Baby in Singapore (2026): Pregnancy, Delivery, and First-Year Reality", subtopic: "baby" },
+        { url: "/cost-of-having-a-baby-singapore", title: "Cost of Having a Baby Singapore (2026): First-Year Budget & Support", subtopic: "baby" },
         { url: "/cost-of-having-a-second-child-singapore", title: "Cost of Having a Second Child in Singapore (2026): The Step-Change Families Often Underestimate", subtopic: "planning" }
       ],
       pages: [
@@ -980,7 +980,7 @@ decisionPathOverrides: {
         { url: "/stay-at-home-parent-vs-infantcare-cost-singapore", title: "Stay-at-Home Parent vs Infantcare Cost in Singapore (2026): The Economic Trade-off Households Misread", subtopic: "comparison" },
         { url: "/childcare-vs-grandparent-care-singapore", title: "Childcare vs Grandparent Care in Singapore (2026): Which Family Operating Model Actually Holds Up?", subtopic: "comparison" },
         { url: "/childcare-vs-helper-at-home-singapore", title: "Childcare vs Helper at Home in Singapore (2026): Which Care Setup Actually Reduces Family Strain?", subtopic: "comparison" },
-        { url: "/full-day-childcare-vs-half-day-preschool-singapore", title: "Full-Day Childcare vs Half-Day Preschool in Singapore (2026): Which Schedule Actually Fits the Household?", subtopic: "comparison" },
+        { url: "/full-day-childcare-vs-half-day-preschool-singapore", title: "Full-Day Childcare vs Half-Day Preschool Singapore: Fees & Care Hours", subtopic: "comparison" },
         { url: "/childcare-near-home-vs-near-work-singapore", title: "Childcare Near Home vs Near Work in Singapore (2026): Which Location Reduces More Family Friction?", subtopic: "comparison" },
         { url: "/childcare-vs-helper-cost-calculator-singapore", title: "Childcare vs Helper Cost Calculator Singapore (2026): Compare Full-Day Centre Care Against a Live-In Helper Before the Household Commits", subtopic: "calculator" },
         { url: "/childcare-near-home-vs-near-work-cost-calculator-singapore", title: "Childcare Near Home vs Near Work Cost Calculator Singapore (2026): Compare Fees, Transport, Lost Time, and Pickup Risk", subtopic: "calculator" },
