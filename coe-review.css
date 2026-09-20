@@ -12,3 +12,9 @@
 .coe-table th,.coe-table td { overflow-wrap:anywhere; }
 #calculator-results[hidden] { display:none !important; }
 @media(max-width:680px) { .coe-fields,.coe-metrics { grid-template-columns:1fr; } }
+
+/* Keep generated next-step cards within article pages on phones. */
+@media(max-width:700px) {
+  .og-card-grid.three.og-nextsteps-grid { grid-template-columns:1fr; }
+  .og-nextsteps-grid .og-btn { max-width:100%; box-sizing:border-box; flex-wrap:wrap; text-align:center; }
+}
