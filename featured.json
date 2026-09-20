@@ -3,6 +3,12 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/coe-cost-singapore",
+        "title": "COE Cost Singapore (2026): Prices, Renewal PQP & Ownership Cost",
+        "desc": "See dated LTA COE results, correct category limits, renewal PQP and rebate mechanics. Work through a five-year ownership example without counting COE twice.",
+        "date": "2026-09-20"
+      },
+      {
         "url": "/motorcycle-coe-renew-vs-replace-singapore",
         "title": "Motorcycle COE Renewal Singapore (2026): Renew or Replace?",
         "desc": "Renew or replace a motorcycle in Singapore? Compare 5-year and 10-year COE rules, PQP, condition, maintenance, downtime and replacement cost with a practical…",
@@ -294,12 +300,6 @@
         "url": "/coe-bidding-strategy-singapore",
         "title": "COE Bidding Strategy in Singapore (2026): Timing, Tactics, and Total Exposure",
         "desc": "COE bidding strategy in Singapore (2026): how the system works, what moves COE premiums, practical tactics, and how COE decisions change your total car…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/coe-cost-singapore",
-        "title": "COE Cost in Singapore (2026): Depreciation, Cycle Risk & 5-Year Exposure",
-        "desc": "COE cost in Singapore (2026): understand 10-year pricing, 5-year exposure, cycle volatility, and how COE drives true car ownership cost and depreciation risk.",
         "date": "2026-04-14"
       },
       {
