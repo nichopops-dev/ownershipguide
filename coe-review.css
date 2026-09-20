@@ -1,0 +1,14 @@
+.coe-fields,.coe-metrics { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.coe-fields label { display:block; font-weight:600; margin-bottom:6px; }
+.coe-fields input,.coe-fields select { width:100%; box-sizing:border-box; min-height:44px; border:1px solid #b8c3d1; border-radius:8px; background:#fff; color:#172132; padding:10px; font:inherit; }
+.coe-fields small { display:block; margin-top:6px; color:#536173; }
+.coe-metrics .box { margin:0; min-width:0; }
+.coe-metrics strong { font-size:1.4rem; }
+.coe-actions { display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; }
+.coe-actions button { min-height:44px; padding:10px 18px; font:inherit; cursor:pointer; border:1px solid #b8c3d1; border-radius:8px; }
+.coe-error { color:#a21e25; font-weight:600; }
+.coe-fields input:focus-visible,.coe-fields select:focus-visible,.coe-actions button:focus-visible { outline:3px solid #1761ac; outline-offset:3px; }
+.coe-table { width:100%; table-layout:fixed; }
+.coe-table th,.coe-table td { overflow-wrap:anywhere; }
+#calculator-results[hidden] { display:none !important; }
+@media(max-width:680px) { .coe-fields,.coe-metrics { grid-template-columns:1fr; } }
