@@ -1,321 +1,75 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>COE Renew vs Replace Calculator (Singapore, 2026): Which Costs Less?</title>
-<meta content="Singapore COE renew vs replace calculator (2026): compare total cost and monthly equivalent over a 5–10 year horizon. Includes renewal premium, expected resale, maintenance uplift, replacement car price/resale, and optional financing." name="description"/>
-<link href="https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore" rel="canonical"/>
-<meta content="transport" name="og:cluster"/>
-<meta content="calculator" name="og:subtopic"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>COE Renew vs Replace Calculator: Total Cost, Cash &amp; Exit Debt</title>
+<meta name="description" content="Compare COE renewal and replacement with current car value, total cost, upfront cash and exit debt. Set holding period and loan term separately and stress-test inputs."/>
+<link rel="canonical" href="https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore"/>
+<meta name="og:cluster" content="transport"/>
+<meta name="og:subtopic" content="calculator"/>
 <meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:url" content="https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore"/>
-<meta property="og:title" content="COE Renew vs Replace Calculator (Singapore, 2026): Which Costs Less?"/>
+<meta property="og:title" content="COE Renew vs Replace Calculator: Total Cost, Cash &amp; Exit Debt"/>
+<meta property="og:description" content="Compare COE renewal and replacement with current car value, total cost, upfront cash and exit debt. Set holding period and loan term separately and stress-test inputs."/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Singapore COE renew vs replace calculator (2026): compare total cost and monthly equivalent over a 5–10 year horizon. Includes renewal premium, expected resale, maintenance uplift, replacement car price/resale, and optional financing."/>
-
 <link href="/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I use flat or effective rate?","acceptedAnswer":{"@type":"Answer","text":"Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison."}},{"@type":"Question","name":"Why do my numbers differ from the bank’s quote?","acceptedAnswer":{"@type":"Answer","text":"Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model."}},{"@type":"Question","name":"What horizon should I use?","acceptedAnswer":{"@type":"Answer","text":"Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity."}},{"@type":"Question","name":"What’s the best way to decide?","acceptedAnswer":{"@type":"Answer","text":"Run a conservative scenario. If the decision still holds, it’s likely robust."}}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"COE Renew vs Replace Calculator (Singapore, 2026): Which Costs Less?","item":"https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "COE Renew vs Replace Calculator (Singapore, 2026): Which Costs Less?", "description": "Singapore COE renew vs replace calculator (2026): compare total cost and monthly equivalent over a 5\u201310 year horizon. Includes renewal premium, expected resale, maintenance uplift, replacement car price/resale, and optional financing.", "url": "https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore", "datePublished": "2026-04-14", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
+<link href="/coe-review.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "COE Renew vs Replace Calculator: Total Cost, Cash & Exit Debt", "name": "COE Renew vs Replace Calculator: Total Cost, Cash & Exit Debt", "description": "Compare COE renewal and replacement with current car value, total cost, upfront cash and exit debt. Set holding period and loan term separately and stress-test inputs.", "url": "https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore", "dateModified": "2026-09-20", "inLanguage": "en-SG", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "datePublished": "2026-04-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I enter a flat-rate car-loan quote in the interest field?", "acceptedAnswer": {"@type": "Answer", "text": "No. This model uses a reducing balance and a monthly rate equal to the annual input divided by 12. Use a lender schedule or a tool designed for flat-rate loans."}}, {"@type": "Question", "name": "Why does a shorter holding period leave a loan balance?", "acceptedAnswer": {"@type": "Answer", "text": "The loan term is separate from the time you keep the car. The remaining balance reduces exit cash; principal is not counted again as an ownership cost."}}, {"@type": "Question", "name": "Does the renewal premium need to match the selected term?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Enter the actual premium for that term. The calculator does not fetch PQP or automatically halve a ten-year amount."}}, {"@type": "Question", "name": "Can this model compare a car that already has an outstanding loan?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. It assumes the current car is debt-free. Add the actual settlement and any continuing debt costs to a separate cash and cost plan."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ownershipguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Transport", "item": "https://ownershipguide.com/transport/"}, {"@type": "ListItem", "position": 3, "name": "COE Renew vs Replace Calculator: Total Cost, Cash & Exit Debt", "item": "https://ownershipguide.com/coe-renew-vs-replace-calculator-singapore"}]}</script>
+
 </head>
 <body>
 <div id="site-header"></div>
 <main class="container">
-<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-<nav class="breadcrumbs">
-<a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/calculators/">Calculators</a>
-</nav>
-<h1>COE Renew vs Replace Calculator (Singapore, 2026)</h1>
-<p class="muted">
-      Planning model to compare <strong>renewing your current car’s COE</strong> vs <strong>replacing with another car</strong>
-      over the same holding period. This is cost-only (not comfort/peace-of-mind). Real outcomes depend on breakdown risk and resale markets.
-    </p>
-<section class="card">
-<h2>Inputs</h2>
-<div class="og-form-grid">
-<div>
-<label for="years">Holding period (years)</label>
-<input id="years" min="1" step="1" type="number" value="5"/>
-</div>
-<div>
-<label for="annualRunning">Base running costs (insurance/road tax/parking/fuel, SGD/year)</label>
-<input id="annualRunning" step="100" type="number" value="9000"/>
-</div>
-<div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
-<div>
-<label for="renewPremium">COE renewal premium (SGD)</label>
-<input id="renewPremium" step="500" type="number" value="60000"/>
-</div>
-<div>
-<label for="renewResale">Expected resale at end if you renew (SGD)</label>
-<input id="renewResale" step="500" type="number" value="5000"/>
-</div>
-<div>
-<label for="renewMaintUplift">Extra maintenance risk if you renew (SGD/year)</label>
-<input id="renewMaintUplift" step="100" type="number" value="1200"/>
-</div>
-<div>
-<label for="renewOneOff">One‑off repair buffer (renew, SGD)</label>
-<input id="renewOneOff" step="200" type="number" value="1000"/>
-</div>
-<div style="grid-column:1/-1"><hr style="border:none;border-top:1px solid var(--border);margin:8px 0"/></div>
-<div>
-<label for="replacePrice">Replacement car on‑road price (SGD)</label>
-<input id="replacePrice" step="1000" type="number" value="90000"/>
-</div>
-<div>
-<label for="replaceResale">Expected resale at end (replacement, SGD)</label>
-<input id="replaceResale" step="500" type="number" value="45000"/>
-</div>
-<div>
-<label for="replaceMaintDelta">Running cost difference (replacement − current, SGD/year)</label>
-<input id="replaceMaintDelta" step="100" type="number" value="-400"/>
-</div>
-<div>
-<label for="fees">Upfront fees (loan/transfer/inspection, SGD)</label>
-<input id="fees" step="50" type="number" value="1200"/>
-</div>
-<div>
-<label for="downPct">Downpayment (% of replacement price)</label>
-<input id="downPct" max="100" min="0" step="1" type="number" value="30"/>
-</div>
-<div>
-<label for="apr">Loan effective APR (%/year)</label>
-<input id="apr" min="0" step="0.1" type="number" value="3.0"/>
-</div>
-</div>
-<p class="muted" style="margin-top:10px">
-        If you’re paying cash for the replacement car, set downpayment to 100%.
-      </p>
-<div class="btn-row">
-<button class="btn btn-primary" id="btnCalc">Calculate</button>
-<button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
-</div>
+<p><a href="/transport/">Back to Transport</a></p><h1>COE Renew vs Replace Calculator</h1>
+<p>Compare ownership cost and cash needs over the same period. This model includes the value of the current car and separates replacement loan term from holding period.</p>
+<p><strong>Scope:</strong> current car is debt-free; renewal is paid in cash. Replacement financing is a fixed reducing-balance illustration. It does not reproduce flat-rate contracts, settlement penalties, future interest changes or lender eligibility. If funding renewal with a loan, add its costs separately before comparing.</p>
+<form class="box" data-coe-renew-calculator novalidate><h2>Inputs</h2><p>Defaults are hypothetical, not current PQP, resale or loan quotes. All amounts are Singapore dollars.</p><div class="coe-fields"><div><label for="renewYears">Renewal term</label><select id="renewYears" name="renewYears"><option value="5" selected>5 years</option><option value="10">10 years</option></select><small>The selected term must cover the holding period.</small></div><div><label for="years">Holding period (years)</label><input type="number" step="any" id="years" name="years" value="5" aria-describedby="years-help"/><small id="years-help">Use a period corresponding to whole months.</small></div><div><label for="replacementCOEYears">Replacement COE remaining (years)</label><input type="number" step="any" id="replacementCOEYears" name="replacementCOEYears" value="7" aria-describedby="replacementCOEYears-help"/><small id="replacementCOEYears-help">The holding period cannot exceed this.</small></div><div><label for="currentValue">Current car sale or disposal value (S$)</label><input type="number" step="any" id="currentValue" name="currentValue" value="12000" aria-describedby="currentValue-help"/><small id="currentValue-help">Debt-free car; include any rebate and body value already in the quote.</small></div><div><label for="annualRunning">Base running costs (S$ per year)</label><input type="number" step="any" id="annualRunning" name="annualRunning" value="9000" aria-describedby="annualRunning-help"/><small id="annualRunning-help">Insurance, road tax, fuel, parking, ERP and routine maintenance.</small></div><div><label for="renewPremium">COE renewal premium (S$)</label><input type="number" step="any" id="renewPremium" name="renewPremium" value="60000" aria-describedby="renewPremium-help"/><small id="renewPremium-help">Enter the payment for the selected renewal term, not a current auction bid.</small></div><div><label for="renewResale">Total exit value if renewed (S$)</label><input type="number" step="any" id="renewResale" name="renewResale" value="5000" aria-describedby="renewResale-help"/><small id="renewResale-help">Include unused COE and body value once. At expiry there is no unused COE.</small></div><div><label for="renewMaintUplift">Extra renewal running costs (S$ per year)</label><input type="number" step="any" id="renewMaintUplift" name="renewMaintUplift" value="1200" aria-describedby="renewMaintUplift-help"/><small id="renewMaintUplift-help">Average additional repairs, road-tax uplift and backup transport beyond the base.</small></div><div><label for="renewOneOff">Immediate renewal repairs (S$)</label><input type="number" step="any" id="renewOneOff" name="renewOneOff" value="1000" aria-describedby="renewOneOff-help"/><small id="renewOneOff-help">Cash paid upfront, not also included in annual costs.</small></div><div><label for="replacePrice">Replacement on-road price (S$)</label><input type="number" step="any" id="replacePrice" name="replacePrice" value="90000" aria-describedby="replacePrice-help"/><small id="replacePrice-help">Price includes its existing COE.</small></div><div><label for="replaceResale">Replacement gross exit value (S$)</label><input type="number" step="any" id="replaceResale" name="replaceResale" value="45000" aria-describedby="replaceResale-help"/><small id="replaceResale-help">Before loan settlement; include rebates already in the value.</small></div><div><label for="replaceMaintDelta">Replacement running-cost difference (S$ per year)</label><input type="number" step="any" id="replaceMaintDelta" name="replaceMaintDelta" value="-400" aria-describedby="replaceMaintDelta-help"/><small id="replaceMaintDelta-help">Replacement minus base: negative means cheaper running costs.</small></div><div><label for="fees">Replacement upfront fees (S$)</label><input type="number" step="any" id="fees" name="fees" value="1200" aria-describedby="fees-help"/><small id="fees-help">Inspection, transfer and finance fees excluded from the price.</small></div><div><label for="downPct">Replacement downpayment (%)</label><input type="number" step="any" id="downPct" name="downPct" value="30" aria-describedby="downPct-help"/><small id="downPct-help">Use 100 for cash purchase; this is not an eligibility check.</small></div><div><label for="apr">Annual reducing-balance interest rate (%)</label><input type="number" step="any" id="apr" name="apr" value="3" aria-describedby="apr-help"/><small id="apr-help">Monthly interest rate = annual rate ÷ 12. Do not enter a flat-rate quote.</small></div><div><label for="loanYears">Replacement loan term (years)</label><input type="number" step="any" id="loanYears" name="loanYears" value="7" aria-describedby="loanYears-help"/><small id="loanYears-help">Independent of the holding period; 1–84 whole months.</small></div>
+</div><div class="coe-actions"><button type="submit" id="btnCalc">Calculate</button><button type="reset" id="btnReset">Reset defaults</button></div></form>
+<p class="coe-error" id="calculator-error" role="alert"></p>
+<section id="calculator-results" aria-live="polite" aria-atomic="false" hidden><h2>Cost over your holding period</h2>
+<div class="coe-metrics"><div class="box"><h3>Renew: monthly cost equivalent</h3><strong id="renewMonthly">—</strong></div><div class="box"><h3>Replace: monthly cost equivalent</h3><strong id="replaceMonthly">—</strong></div></div>
+<p><strong id="winner">—</strong></p><p id="deltaSub"></p><p id="headroom"></p>
+<table class="coe-table"><caption>Resource cost: the current car’s value is not a new cash payment</caption><thead><tr><th scope="col">Component</th><th scope="col">Renew</th><th scope="col">Replace</th></tr></thead><tbody id="tbody"></tbody></table>
+<h2>Cash and replacement financing</h2>
+<dl><dt>Renewal upfront cash</dt><dd id="renewUpfront">—</dd><dt>Replacement upfront cash before selling the old car</dt><dd id="replaceGrossUpfront">—</dd><dt>Replacement net upfront cash after old-car proceeds</dt><dd id="replaceNetUpfront">—</dd><dt>Replacement modelled monthly loan payment</dt><dd id="loanMonthly">—</dd><dt>Replacement modelled loan balance at exit</dt><dd id="loanBalance">—</dd><dt>Replacement exit value after modelled debt</dt><dd id="replaceExitNet">—</dd><dt>Renewal net cash outflow over the holding period</dt><dd id="renewNetCash">—</dd><dt>Replacement net cash outflow over the holding period</dt><dd id="replaceNetCash">—</dd></dl>
+<p>A negative net cash amount represents a net inflow under your assumptions. A negative exit value after debt means additional settlement cash is needed. Actual settlement can differ from the modelled loan balance.</p></section>
+<noscript><p>Enable JavaScript to calculate. The formulas and worked example below remain available.</p></noscript>
+<section class="box" id="og-editorial-coe-renew"><h2>How the comparison works</h2>
+<p><strong>Renewal cost:</strong> current car value + premium + immediate repairs + running costs − exit value.</p>
+<p><strong>Replacement cost:</strong> price + upfront fees + interest paid within the holding period + running costs − gross exit value.</p>
+<p>Monthly equivalents divide these costs by the months held. They are not instalments. The current car’s value is counted once: as an asset used by renewal, or as sale proceeds in the replacement cash plan. For both routes, resource cost minus current car value equals net cash outflow in this model.</p>
+<p>The loan pays monthly over its own term. If the holding period ends earlier, only interest incurred to then is counted, and the outstanding principal is deducted from exit cash. If it ends later, loan payments and interest stop when the term ends. The model uses unrounded payments internally and displays cents; lender rounding may differ.</p>
 </section>
-<section class="card">
-<h2>Results</h2>
-<div class="og-kpi-grid">
-<div class="kpi">
-<div class="kpi-label">Renew: monthly equivalent</div>
-<div class="kpi-value" id="renewMonthly">—</div>
-<div class="kpi-sub">all-in over holding period</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Replace: monthly equivalent</div>
-<div class="kpi-value" id="replaceMonthly">—</div>
-<div class="kpi-sub">all-in over holding period</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Cheaper option</div>
-<div class="kpi-value" id="winner">—</div>
-<div class="kpi-sub" id="deltaSub">—</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Assumed loan monthly (replacement)</div>
-<div class="kpi-value" id="loanMonthly">—</div>
-<div class="kpi-sub">for planning only</div>
-</div>
-</div>
-<div class="table-wrap">
-<table class="table">
-<thead>
-<tr>
-<th>Component</th>
-<th class="right">Renew (SGD)</th>
-<th class="right">Replace (SGD)</th>
-</tr>
-</thead>
-<tbody id="tbody">
-<tr><td class="muted" colspan="3">Enter inputs and click Calculate.</td></tr>
-</tbody>
-</table>
-</div>
+<h2>Worked default example</h2>
+<p>Over five years, renewal totals S$119,000, or S$1,983.33 a month. Replacement totals S$95,513.76, or S$1,591.90 a month, using the seven-year 3% reducing-balance assumption. The replacement loan payment is S$832.44, and S$19,367.48 remains at the five-year exit. See <a href="/coe-renew-vs-replace-singapore">the full cost and cash reconciliation</a>.</p>
+<h2>Before changing a scenario</h2>
+<ul><li>If changing the holding period, update each car’s exit value and average running costs.</li><li>Do not add a COE or PARF rebate to a total resale/disposal estimate that already includes it.</li><li>Allow for road-tax changes, repairs and backup travel. The annual inputs are averages across the period.</li><li>The current-car value assumes net disposal/sale expenses have been allowed for and no existing debt. Get a settlement quote if that assumption is wrong.</li><li>A lower cost does not establish reliability, safety, future resale or finance eligibility.</li></ul>
+<p>For renewal rules and unused-COE examples, read <a href="/coe-renewal-worth-it-singapore">Should You Renew COE?</a>. <a href="https://www.moneysense.gov.sg/costs-of-borrowing-flat-rate-monthly-rest-and-effective-interest-rate/" target="_blank" rel="noopener">MoneySense explains why flat and reducing-balance rates differ</a>. For a flat-rate offer, use <a href="/car-loan-calculator-singapore">the car-loan calculator</a> and the lender’s actual settlement schedule.</p>
+<section class="box" id="faq"><h2>Frequently asked questions</h2>
+<h3>Can I enter a flat-rate car-loan quote in the interest field?</h3><p>No. This model uses a reducing balance and a monthly rate equal to the annual input divided by 12. Use a lender schedule or a tool designed for flat-rate loans.</p>
+<h3>Why does a shorter holding period leave a loan balance?</h3><p>The loan term is separate from the time you keep the car. The remaining balance reduces exit cash; principal is not counted again as an ownership cost.</p>
+<h3>Does the renewal premium need to match the selected term?</h3><p>Yes. Enter the actual premium for that term. The calculator does not fetch PQP or automatically halve a ten-year amount.</p>
+<h3>Can this model compare a car that already has an outstanding loan?</h3><p>Not directly. It assumes the current car is debt-free. Add the actual settlement and any continuing debt costs to a separate cash and cost plan.</p>
 </section>
-<section class="card">
-<h2>Next steps</h2>
-<ul>
-<li><a href="/coe-renew-vs-replace-singapore">COE renew vs replace guide</a> (framework + traps)</li>
-<li><a href="/car-ownership-cost-calculator-singapore">All‑in monthly ownership cost calculator</a></li>
-<li><a href="/transport/financing/">Transport financing hub</a></li>
-</ul>
-</section>
-<section class="og-editorial" id="og-editorial-coe-renew">
-<h2>COE renew vs replace: what this calculator answers</h2>
-<p>This tool compares the <strong>monthly equivalent cost</strong> of renewing your COE versus replacing your car, over the same horizon. The “right” answer depends on (1) how much you trust the car’s condition, and (2) the replacement car’s depreciation profile.</p>
-<h3>Use it like a decision test</h3>
-<ul>
-<li>Run one conservative scenario (higher maintenance, lower resale).</li>
-<li>Run one optimistic scenario (lower maintenance, better resale).</li>
-<li>If both scenarios point the same way, you have a robust decision.</li>
-</ul>
-<h3>Common mistakes</h3>
-<ul>
-<li>Ignoring maintenance uplift after renewal.</li>
-<li>Assuming replacement resale is guaranteed.</li>
-<li>Comparing renewal premium to replacement downpayment only (apples vs oranges).</li>
-</ul>
-<h3>FAQ</h3><div class="og-faq"><details><p>Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison.</p></details><details><p>Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model.</p></details><details><p>Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity.</p></details><details><p>Run a conservative scenario. If the decision still holds, it’s likely robust.</p></details></div><h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Using the calculator step by step</h2>
-<p>Use this to compare <strong>renewing COE</strong> vs <strong>replacing the car</strong>. The decision usually hinges on depreciation, remaining lifespan, and repair risk — not just the one-time COE cost.</p><ol><li>Enter expected renewal cost (5-year or 10-year) and assumptions.</li><li>Enter replacement car costs and expected depreciation.</li><li>Compare monthly total cost and test repair/maintenance risk.</li></ol>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Scenario library (sanity checks)</h2>
-<p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
-<ul><li><strong>Example A (renew 5-year):</strong> <p>Renew 5-year COE for an older car. Compare monthly cost vs buying another used car with lower repair uncertainty.</p></li><li><strong>Example B (replace):</strong> <p>Replace with a newer used car. Compare higher depreciation vs lower repair volatility and better usability.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
-<ul><li>COE and resale values move with market cycles; test conservative resale.</li><li>Repair risk is uncertain — add a buffer for older cars.</li><li>Planning model; not advice.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<ul>
-<li>Do your maintenance assumptions match the last 12–24 months?</li>
-<li>Are you comparing against a realistic replacement car, not an upgrade?</li>
-<li>Does your result still hold if downtime costs are a bit higher?</li>
-</ul>
-<h2>What to sense-check manually</h2>
-<p>Renewal can appear attractive simply because you are underestimating repairs or treating the replacement option unrealistically harshly. Likewise, replacement can look attractive if you assume the current car will suddenly become unreliable without evidence. The best way to use this page is to anchor both sides to plausible, not heroic, assumptions.</p>
-<h2>When renewal wins for the wrong reason</h2>
-<p>This calculator is not trying to predict the future perfectly. It is trying to show whether renewing COE still looks sensible after you account for realistic running costs and replacement alternatives. If the result is strongly in favour of one option under conservative assumptions, that is usually enough. If the result is very close, you should shift your attention to softer but still important factors: downtime risk, workshop tolerance, and how much you dislike decision churn.</p>
-<h2>What result is “good enough”</h2>
-<p>Before acting on the result, ask whether the output still makes sense after a conservative stress test. Good calculator use is not about precision to the last dollar; it is about avoiding decisions that only work in the optimistic case. If the answer still holds after you use harsher assumptions, that is usually a sign the decision is robust enough to move forward.</p>
-<h2>Output checklist</h2>
-<p>Re-run the calculator whenever one of the major assumptions changes meaningfully: rate, tenure, resale value, rent, energy cost, or your expected holding period. Small updates to these inputs often matter more than trying to make the original run more precise.</p><h2>When to re-run the model</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the calculator cannot decide for you</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the model leaves out</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>How to use the result when the answer is close</h2>
-<p>Close outputs should not be treated as a command to optimise the spreadsheet harder. They usually mean the decision is no longer dominated by pure dollars. If renewing is only slightly cheaper, but the car is becoming less reliable and downtime would be disruptive, replacement may still be the better real-life answer. If replacing is only slightly cheaper, but it requires more cash commitment or pushes you into a riskier financing shape, renewal may still be the calmer choice.</p>
-<p>That is why this calculator works best as a narrowing tool. It tells you whether one route is clearly superior under reasonable assumptions. If the result is marginal, shift from “Which row is lower?” to “Which mistake is easier to live with?”. The wrong renewal decision usually shows up as repairs, inconvenience, and forced replacement later. The wrong replacement decision usually shows up as a heavier monthly burn and weaker liquidity. Read the output with those two failure modes in mind, then cross-check it against the broader <a href="/coe-renewal-worth-it-singapore">COE renewal framework</a> and the simpler <a href="/10-year-coe-renewal-worth-it-singapore">10-year renewal lens</a>.</p>
-<h2>What usually decides the tie-break</h2><p>When the numbers are close, the tie-break is often not purchase price but disruption tolerance. A household that can absorb occasional workshop time, has another transport fallback, and already knows the current car well may rationally lean toward renewal even with only a modest cost advantage. A household that depends on the car every day and cannot tolerate uncertainty may rationally pay more for replacement if that reduces operational stress.</p>
-<p>That is why the best use of this calculator is not to remove judgement, but to place judgement in the right spot. Let the model tell you whether the economics are clearly one-sided. If they are not, use reliability, downtime, and liquidity resilience as the deciding variables instead of pretending one extra decimal place will solve the problem.</p>
-<h2>Common interpretation mistakes</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Mistakes to avoid when reading the output</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Where assumptions usually go wrong</h2>
-<p>Run one optimistic case, one conservative case, and one “messy real life” case. The messy case is the most useful: slightly worse rates, slightly lower resale, slightly higher costs, and a shorter holding period than planned. If the decision still looks acceptable, you have a more resilient answer.</p>
-<h2>Quick scenario ideas</h2><p>Use scenario runs to test whether the answer survives the parts of ownership that usually get hand-waved.</p><ul><li><strong>Lower-usage household with a car in decent condition:</strong> renewal can still work if the vehicle is reliable, your annual mileage is modest, and you are not about to face large repair bills.</li><li><strong>Heavy-usage family with rising maintenance risk:</strong> replacing may be cleaner when downtime, workshop visits, and repair volatility are starting to eat into the apparent savings from renewal.</li><li><strong>Owner choosing between a 5-year extension and a replacement:</strong> run both the optimistic and conservative cases. If renewal only wins under perfect assumptions, the replacement option may actually be safer.</li></ul>
 <div id="auto-related"></div>
-<h2>References</h2>
-<ul><li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><a href="/editorial-policy">Editorial Policy</a>, <a href="/advertising-disclosure">Advertising Disclosure</a>, and <a href="/corrections">Corrections</a>.</p>
+<section class="box" id="references"><h2>Sources &amp; references</h2>
+<ul><li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/owning/coe-renewal.html" target="_blank" rel="noopener">LTA — Check permitted renewal term and premium</a></li>
+<li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/rebates/parf-coe-rebate.html" target="_blank" rel="noopener">LTA — Verify rebates within exit values</a></li>
+<li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/owning/ongoing-car-costs/road-tax.html" target="_blank" rel="noopener">LTA — Road-tax costs</a></li>
+<li><a href="https://www.moneysense.gov.sg/costs-of-borrowing-flat-rate-monthly-rest-and-effective-interest-rate/" target="_blank" rel="noopener">MoneySense — Loan structures and fees</a></li>
+</ul>
+<p class="muted"><strong>Last updated:</strong> 20 Sep 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p>
 </section>
-<p><strong>Last updated:</strong> 14 Apr 2026</p></main>
+
+</main>
 <div id="site-footer"></div>
 <script defer="" src="/includes.js"></script>
-<script>
-    const $ = (id) => document.getElementById(id);
-    function n(x){ return Number.isFinite(x) ? x : 0; }
-    function fmt(x){ const v=Number(x); return Number.isFinite(v) ? ("S$ "+v.toLocaleString(undefined,{maximumFractionDigits:0})) : "—"; }
-    function pmt(ratePerMonth, nper, pv){
-      if (ratePerMonth === 0) return pv / nper;
-      const r = ratePerMonth;
-      return (r*pv) / (1 - Math.pow(1+r, -nper));
-    }
-    function calc(){
-      const years = Math.max(1, n(parseFloat($("years").value)));
-      const annualRunning = n(parseFloat($("annualRunning").value));
-
-      const renewPremium = n(parseFloat($("renewPremium").value));
-      const renewResale = n(parseFloat($("renewResale").value));
-      const renewMaintUplift = n(parseFloat($("renewMaintUplift").value));
-      const renewOneOff = n(parseFloat($("renewOneOff").value));
-
-      const replacePrice = n(parseFloat($("replacePrice").value));
-      const replaceResale = n(parseFloat($("replaceResale").value));
-      const replaceMaintDelta = n(parseFloat($("replaceMaintDelta").value));
-      const fees = n(parseFloat($("fees").value));
-      const downPct = Math.min(100, Math.max(0, n(parseFloat($("downPct").value))));
-      const apr = Math.max(0, n(parseFloat($("apr").value)));
-
-      // Renew total cost over horizon (costs minus resale)
-      const renewRunningTotal = years * (annualRunning + renewMaintUplift);
-      const renewTotal = renewPremium + renewOneOff + renewRunningTotal - renewResale;
-
-      // Replace: loan model (planning)
-      const down = replacePrice * (downPct/100);
-      const loanPrincipal = Math.max(0, replacePrice - down);
-      const nper = years * 12;
-      const r = apr/100/12;
-      const loanMonthly = (loanPrincipal>0 && nper>0) ? pmt(r,nper,loanPrincipal) : 0;
-      const loanTotalPaid = loanMonthly * nper;
-      const loanInterest = Math.max(0, loanTotalPaid - loanPrincipal);
-
-      const replaceRunningTotal = years * (annualRunning + replaceMaintDelta);
-      const replaceTotal = down + loanPrincipal + loanInterest + fees + replaceRunningTotal - replaceResale;
-
-      $("renewMonthly").textContent = fmt(renewTotal/(years*12));
-      $("replaceMonthly").textContent = fmt(replaceTotal/(years*12));
-      $("loanMonthly").textContent = fmt(loanMonthly);
-
-      const delta = replaceTotal - renewTotal; // positive => renew cheaper
-      if (Math.abs(delta) < 1){
-        $("winner").textContent = "Tie";
-        $("deltaSub").textContent = "Costs are similar under these assumptions.";
-      } else if (delta > 0){
-        $("winner").textContent = "Renew";
-        $("deltaSub").textContent = `Renew is cheaper by ${fmt(delta)} over ${years}y.`;
-      } else {
-        $("winner").textContent = "Replace";
-        $("deltaSub").textContent = `Replace is cheaper by ${fmt(-delta)} over ${years}y.`;
-      }
-
-      const rows = [
-        ["Upfront / premium", renewPremium, down + loanPrincipal + loanInterest + fees],
-        ["Running costs (incl. deltas)", renewRunningTotal + renewOneOff, replaceRunningTotal],
-        ["Resale at end (subtract)", -renewResale, -replaceResale],
-        ["Total over holding period", renewTotal, replaceTotal],
-      ];
-      $("tbody").innerHTML = rows.map(r=>`
-        <tr>
-          <td>${r[0]}</td>
-          <td class="right">${fmt(r[1])}</td>
-          <td class="right">${fmt(r[2])}</td>
-        </tr>`).join("");
-    }
-
-    function reset(){
-      $("years").value = 5;
-      $("annualRunning").value = 9000;
-      $("renewPremium").value = 60000;
-      $("renewResale").value = 5000;
-      $("renewMaintUplift").value = 1200;
-      $("renewOneOff").value = 1000;
-      $("replacePrice").value = 90000;
-      $("replaceResale").value = 45000;
-      $("replaceMaintDelta").value = -400;
-      $("fees").value = 1200;
-      $("downPct").value = 30;
-      $("apr").value = 3.0;
-      calc();
-    }
-
-    $("btnCalc").addEventListener("click", calc);
-    $("btnReset").addEventListener("click", reset);
-    reset();
-  </script>
+<script defer="" src="/scripts/coe-renew-model.js"></script>
+<script defer="" src="/scripts/coe-renew-calculator.js"></script>
 </body>
 </html>
