@@ -407,25 +407,25 @@ decisionPathOverrides: {
     protection: {
       label: "Related Singapore Protection & Insurance Guides",
       pillars: [
-        { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
+        { url: "/protection/", title: "Insurance Planning Singapore (2026): Life, Health & Home Cover", cluster: "protection", subtopic: "hub" },
         { url: "/how-much-life-insurance-do-you-need-singapore", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
         { url: "/term-life-vs-whole-life-cost-singapore", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
         { url: "/disability-income-insurance-cost-singapore", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", cluster: "protection", subtopic: "income-protection" },
         { url: "/critical-illness-insurance-cost-singapore", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", cluster: "protection", subtopic: "ci" },
         { url: "/term-life-vs-critical-illness-insurance-singapore", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", cluster: "protection", subtopic: "comparison" },
-        { url: "/accident-insurance-cost-singapore", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
+        { url: "/accident-insurance-cost-singapore", title: "Personal Accident Insurance Cost Singapore (2026): Prices & Cover", cluster: "protection", subtopic: "accident" },
         { url: "/hospital-cash-insurance-worth-it-singapore", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" },
         { url: "/early-critical-illness-vs-critical-illness-singapore", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", cluster: "protection", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-accident-insurance-singapore", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", cluster: "protection", subtopic: "comparison" },
         { url: "/whole-life-vs-critical-illness-insurance-singapore", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", cluster: "protection", subtopic: "comparison" },
-        { url: "/accident-insurance-cost-singapore", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", cluster: "protection", subtopic: "accident" },
+        { url: "/accident-insurance-cost-singapore", title: "Personal Accident Insurance Cost Singapore (2026): Prices & Cover", cluster: "protection", subtopic: "accident" },
         { url: "/hospital-cash-insurance-worth-it-singapore", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", cluster: "protection", subtopic: "decision" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", cluster: "protection", subtopic: "comparison" }
       ],
       pages: [
-        { url: "/protection/", title: "Protection & Insurance Hub in Singapore (2026)", cluster: "protection", subtopic: "hub" },
+        { url: "/protection/", title: "Insurance Planning Singapore (2026): Life, Health & Home Cover", cluster: "protection", subtopic: "hub" },
         { url: "/how-much-life-insurance-do-you-need-singapore", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", cluster: "protection", subtopic: "planning" },
         { url: "/term-life-vs-whole-life-cost-singapore", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", cluster: "protection", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-rider-cost-singapore", title: "Hospitalisation Insurance vs Rider Cost in Singapore (2026): When Extra Premium Really Changes the Risk You Keep", cluster: "protection", subtopic: "comparison" },
@@ -751,7 +751,7 @@ decisionPathOverrides: {
         { url: "/move-house-for-school-vs-stay-put-singapore", title: "Move House for School vs Stay Put in Singapore (2026): When a School-Driven Move Actually Improves Family Fit", subtopic: "planning" },
         { url: "/live-near-parents-vs-live-near-school-singapore", title: "Live Near Parents vs Live Near School in Singapore (2026): Which Location Advantage Actually Makes Family Life Easier?", subtopic: "planning" },
         { url: "/pay-down-home-loan-or-keep-bigger-cash-buffer-before-second-child-singapore", title: "Pay Down Home Loan or Keep a Bigger Cash Buffer Before a Second Child in Singapore (2026): Which Move Better Protects the Household?", subtopic: "bridge" },
-        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" },
+        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Cover & Costs", subtopic: "protection" },
         { url: "/progressive-payment-vs-resale-payment-timeline-singapore", title: "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different", subtopic: "mechanics" },
         { url: "/cpf-accrued-interest-singapore", title: "CPF Accrued Interest in Singapore Property (2026): Why Your Sale Proceeds “Disappear”", subtopic: "cpf" },
         { url: "/cpf-accrued-interest-calculator-singapore", title: "CPF Accrued Interest Calculator Singapore (OA): Estimate Refund on Sale", subtopic: "cpf" },
@@ -784,7 +784,7 @@ decisionPathOverrides: {
         { url: "/bto-vs-resale-cost", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" },
         { url: "/property-tax-singapore", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
         { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
-        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
+        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Cover & Costs", subtopic: "protection" }
       ],
       pages: [
         { url: "/increase-critical-illness-insurance-or-build-down-payment-fund-first-singapore", title: "Increase Critical Illness Insurance or Build a Down Payment Fund First in Singapore (2026): Which Gap Is More Dangerous To Leave Open?", cluster: "property", subtopic: "bridge" },
@@ -835,7 +835,7 @@ decisionPathOverrides: {
         { url: "/critical-illness-insurance-vs-bigger-cash-buffer-with-mortgage-singapore", title: "Critical Illness Insurance vs Bigger Cash Buffer With a Mortgage in Singapore (2026): Which Layer Actually Buys More Breathing Room?", subtopic: "bridge" },
         { url: "/hospitalisation-rider-vs-bigger-cash-buffer-with-mortgage-singapore", title: "Hospitalisation Rider vs Bigger Cash Buffer With a Mortgage in Singapore (2026): Which Layer Actually Reduces More Fragility?", subtopic: "bridge" },
         { url: "/term-life-vs-cash-buffer-for-single-income-mortgage-singapore", title: "Term Life vs Cash Buffer for a Single-Income Mortgage in Singapore (2026): Which Missing Layer Is More Dangerous Right Now?", subtopic: "bridge" },
-        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" },
+        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Cover & Costs", subtopic: "protection" },
         { url: "/progressive-payment-vs-resale-payment-timeline-singapore", title: "Progressive Payment vs Resale Payment Timeline in Singapore (2026): Why Cashflow Feels Different", subtopic: "mechanics" },
         { url: "/how-much-cash-to-buy-property-calculator-singapore", title: "Upfront Cash to Buy Property Calculator (Singapore, 2026): Cash + CPF Split", subtopic: "calculator" },
         { url: "/upgrade-downgrade-property-calculator-singapore", title: "Upgrade / Downgrade Property Calculator (Singapore, 2026): Sell → Buy Next, Cash + CPF", subtopic: "calculator" },
@@ -846,7 +846,7 @@ decisionPathOverrides: {
         { url: "/bto-vs-resale-cost", title: "BTO vs Resale in Singapore: The Full Cost Comparison (2026)", subtopic: "hdb" },
         { url: "/property-tax-singapore", title: "Property Tax in Singapore (2026): How It Changes the Real Cost of Holding a Home", subtopic: "holding-cost" },
         { url: "/condo-maintenance-fees-mcst-sinking-fund-singapore", title: "Condo Maintenance Fees in Singapore (2026): MCST, Sinking Funds, and the Real Monthly Carrying Cost", subtopic: "holding-cost" },
-        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance in Singapore (2026): What Homeowners Actually Need to Know", subtopic: "protection" }
+        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Cover & Costs", subtopic: "protection" }
       ,
         { url: "/2-bedroom-vs-3-bedroom-condo-singapore", title: "2-Bedroom vs 3-Bedroom Condo in Singapore (2026): Which Size Actually Fits Your ", cluster: "property", subtopic: "comparison" },
         { url: "/4-room-vs-5-room-hdb-singapore", title: "4-Room vs 5-Room HDB in Singapore (2026): Which Size Actually Fits the Household", cluster: "property", subtopic: "comparison" },
@@ -1175,8 +1175,8 @@ decisionPathOverrides: {
         { url: "/term-life-vs-critical-illness-insurance-singapore", title: "Term Life vs Critical Illness Insurance in Singapore (2026): Why Households Compare the Wrong Things and Still End Up Under-Protected", subtopic: "comparison" },
         { url: "/disability-income-insurance-cost-singapore", title: "Disability Income Insurance Cost in Singapore (2026): The Protection Layer Households Overlook Until Income Is the Thing That Breaks", subtopic: "planning" },
         { url: "/home-protection-scheme-hps-singapore", title: "Home Protection Scheme (HPS) Singapore (2026): The Compulsory HDB Mortgage Insurance Most Buyers Underread", subtopic: "planning" },
-        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Coverage Gap, Structural Risk, and What Actually Protects Your Asset", subtopic: "comparison" },
-        { url: "/accident-insurance-cost-singapore", title: "Accident Insurance Cost in Singapore (2026): Cheap Premium, Real Gap, or Just Another Add-On?", subtopic: "comparison" },
+        { url: "/home-insurance-vs-fire-insurance-singapore", title: "Home Insurance vs Fire Insurance Singapore (2026): Cover & Costs", subtopic: "comparison" },
+        { url: "/accident-insurance-cost-singapore", title: "Personal Accident Insurance Cost Singapore (2026): Prices & Cover", subtopic: "comparison" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", subtopic: "comparison" },
         { url: "/hospital-cash-insurance-worth-it-singapore", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", subtopic: "comparison" },
         { url: "/early-critical-illness-vs-critical-illness-singapore", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
@@ -1534,7 +1534,7 @@ decisionPathOverrides: {
       { url: "/should-you-build-your-emergency-fund-before-having-a-baby-singapore", title: "Should You Build Your Emergency Fund Before Having a Baby in Singapore? (2026): The Reserve Question Most Couples Leave Too Late", cluster: "family", subtopic: "planning" },
       { url: "/student-care-vs-tuition-cost-singapore", title: "Student Care vs Tuition Cost in Singapore (2026): Solve the Supervision Problem or the Academic Problem First", cluster: "family", subtopic: "education" },
       { url: "/tuition-vs-enrichment-classes-cost-singapore", title: "Tuition vs Enrichment Classes Cost in Singapore (2026): The Academic Spend and Development Spend Families Should Stop Mixing", cluster: "family", subtopic: "education" },
-            { url: "/protection/", title: "Protection Hub", cluster: "protection", subtopic: "start" },
+            { url: "/protection/", title: "Insurance Planning Singapore (2026): Life, Health & Home Cover", cluster: "protection", subtopic: "start" },
       { url: "/investing/", title: "Investing Hub", cluster: "investing", subtopic: "start" },
       { url: "/calculators/", title: "Calculators Hub", cluster: "calculators", subtopic: "numbers" },
       { url: "/comparisons/", title: "Decision Comparisons Hub", cluster: "comparisons", subtopic: "decisions" }
