@@ -475,7 +475,7 @@ decisionPathOverrides: {
         { url: "/car-loan-calculator-singapore", title: "Car Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/coe-loan-calculator-singapore", title: "COE Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/car-leasing-vs-buying-calculator-singapore", title: "Car Leasing vs Buying Calculator (Singapore, 2026): Which Is Cheaper?", subtopic: "calculator" },
-        { url: "/used-car-vs-new-car-calculator-singapore", title: "Used vs New Car Calculator (Singapore, 2026): All‑In Cost Over Your Holding Period", subtopic: "calculator" },
+        { url: "/used-car-vs-new-car-calculator-singapore", title: "Used vs New Car Calculator Singapore: Cost, Cash & Exit Debt", subtopic: "calculator" },
         { url: "/ev-vs-petrol-calculator-singapore", title: "EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost", subtopic: "calculator" },
         { url: "/coe-renew-vs-replace-calculator-singapore", title: "COE Renew vs Replace Calculator: Total Cost, Cash & Exit Debt", subtopic: "calculator" },
 
