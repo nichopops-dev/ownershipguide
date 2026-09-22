@@ -1,7 +1,31 @@
 {
-  "generated": "2026-09-21",
+  "generated": "2026-09-22",
   "cluster_pages": {
     "transport": [
+      {
+        "url": "/comprehensive-vs-third-party-car-insurance-singapore",
+        "title": "Comprehensive vs Third-Party Car Insurance Singapore",
+        "desc": "Compare comprehensive, third-party fire and theft, and third-party car insurance in Singapore with a cover matrix, financing checks, and a worked loss stress…",
+        "date": "2026-09-22"
+      },
+      {
+        "url": "/high-excess-vs-low-excess-car-insurance-singapore",
+        "title": "High vs Low Car Insurance Excess Singapore: Compare Cash Risk",
+        "desc": "Compare high and low car-insurance excess in Singapore with a three-year worked example, stacked-excess check, and cash-buffer test.",
+        "date": "2026-09-22"
+      },
+      {
+        "url": "/named-driver-vs-any-authorised-driver-car-insurance-singapore",
+        "title": "Named vs Authorised Driver Car Insurance Singapore",
+        "desc": "Compare named and authorised-driver car-insurance terms in Singapore with a household driver matrix, excess example, and endorsement checklist.",
+        "date": "2026-09-22"
+      },
+      {
+        "url": "/when-cheap-car-insurance-becomes-false-savings-singapore",
+        "title": "Compare Car Insurance Quotes Singapore: Normalize the Contract",
+        "desc": "Compare car-insurance quotes in Singapore on equivalent terms with a contract-normalisation worksheet and worked premium-versus-excess example.",
+        "date": "2026-09-22"
+      },
       {
         "url": "/10-year-coe-renewal-worth-it-singapore",
         "title": "10-Year COE Renewal Singapore: Five-Year Comparison & Early Exit",
@@ -15,9 +39,39 @@
         "date": "2026-09-21"
       },
       {
+        "url": "/balloon-loan-vs-normal-car-loan-singapore",
+        "title": "Balloon Car Loan Singapore: Compare the Final Payment",
+        "desc": "Compare a Singapore car quote with a large final balloon against standard instalments using total repayment, exit settlement and resale stress tests.",
+        "date": "2026-09-21"
+      },
+      {
         "url": "/buy-used-car-from-dealer-vs-direct-owner-singapore",
         "title": "Dealer vs Direct Owner Used Car Singapore: Price, Protection & Steps",
         "desc": "Compare dealer and direct-owner used-car purchases in Singapore using all-in price, liquidity, Lemon Law boundaries, independent checks and transfer steps.",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/car-loan-vs-cash-singapore",
+        "title": "Car Loan vs Cash Singapore: Cost, Liquidity & Exit Debt",
+        "desc": "Compare paying cash with a Singapore car loan using finance cost, reserve liquidity, monthly stress and debt at exit with a reconciled worked example.",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/car-maintenance-repair-cost-singapore",
+        "title": "Car Maintenance Cost Singapore: Service Plan & Repair Reserve",
+        "desc": "Build a Singapore car maintenance budget from the service schedule, wear items and a separate repair reserve. Includes a dated dealer-package example.",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/car-ownership-cost-per-year-singapore",
+        "title": "Car Ownership Cost Per Year Singapore: Cost vs Cash Flow",
+        "desc": "Build a yearly Singapore car budget without double-counting depreciation and loan principal. Includes a reconciled annual cost and cash-flow example.",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/car-price-breakdown-singapore",
+        "title": "Car Price Breakdown Singapore: Compare an Itemised Quote",
+        "desc": "Turn a Singapore car quote into comparable lines for delivered price, mandatory fees, extras, rebates, trade-in and financing with a worked two-dealer example.",
         "date": "2026-09-21"
       },
       {
@@ -39,9 +93,21 @@
         "date": "2026-09-21"
       },
       {
+        "url": "/parking-cost-singapore",
+        "title": "Parking Cost Singapore: Build a Route-Based Monthly Budget",
+        "desc": "Calculate Singapore parking from home season parking, workplace days and short-term stops. Includes current HDB and URA rates and a worked monthly route.",
+        "date": "2026-09-21"
+      },
+      {
         "url": "/questions-to-answer-before-you-commit-to-car-deal-singapore",
         "title": "Before You Commit to a Car Deal Singapore: Final Evidence Gate",
         "desc": "Use a final evidence gate before a Singapore car deposit: verify seller and vehicle, reconcile inspection and records, audit financing, and stage payment and…",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/road-tax-cost-singapore",
+        "title": "Road Tax Singapore: Calculate, Renew & Budget It",
+        "desc": "Calculate Singapore road tax from the current LTA formula, account for EV and older-car surcharges, and prepare the insurance, inspection and fines…",
         "date": "2026-09-21"
       },
       {
@@ -54,6 +120,12 @@
         "url": "/should-you-repair-car-before-selling-singapore",
         "title": "Repair a Car Before Selling Singapore? Quote the Net Uplift",
         "desc": "Decide whether to repair a car before sale in Singapore using written as-is and after-repair offers, net-uplift examples, delay costs and inspection checks.",
+        "date": "2026-09-21"
+      },
+      {
+        "url": "/should-you-settle-car-loan-early-singapore",
+        "title": "Settle a Car Loan Early Singapore: Savings vs Liquidity",
+        "desc": "Compare a Singapore car-loan settlement quote with remaining instalments, contractual rebates, fees, liquidity and sale timing using a worked ABS example.",
         "date": "2026-09-21"
       },
       {
@@ -189,12 +261,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/balloon-loan-vs-normal-car-loan-singapore",
-        "title": "Balloon Loan vs Normal Car Loan in Singapore (2026): Decision Framework + Worked Example",
-        "desc": "Balloon loan vs normal car loan in Singapore: when the lower instalment is a trap, how to compare true cost and exit risk, and the decision rules to avoid…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/best-car-to-buy-singapore",
         "title": "Best Car to Buy in Singapore (2026): Cost, Value & Practicality Framework (Lowest Regret)",
         "desc": "Best car to buy in Singapore (2026) is not a brand list — it’s a lowest-regret framework. Choose based on 5-year cost exposure, COE timing risk, holding…",
@@ -309,33 +375,9 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/car-loan-vs-cash-singapore",
-        "title": "Car Loan vs Pay Cash in Singapore (2026): Decision Rules + Worked Example",
-        "desc": "Car loan or pay cash? A Singapore decision framework: compare interest cost vs liquidity risk, and when borrowing is rational.",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-maintenance-repair-cost-singapore",
-        "title": "Car Maintenance & Repair Cost in Singapore (2026): Realistic Monthly Buffer + 5-Year Exposure",
-        "desc": "The real maintenance and repair cost of owning a car in Singapore (2026). Includes servicing, wear-and-tear, repair volatility, COE runway effects, and a…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/car-ownership-cost-calculator-singapore",
         "title": "Car Ownership Cost Calculator Singapore (2026): True All‑In Monthly Cost (5‑Year TCO)",
         "desc": "Singapore car ownership cost calculator (2026): model true all‑in monthly cost over 1–10 years. Includes depreciation (purchase vs resale), loan interest…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-ownership-cost-per-year-singapore",
-        "title": "How Much Does It Cost to Own a Car in Singapore Per Year? (2026 Annual Breakdown)",
-        "desc": "How much does it cost to own a car in Singapore per year in 2026? Annual breakdown including depreciation/COE impact, insurance, fuel, parking, ERP and…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-price-breakdown-singapore",
-        "title": "Car Price Breakdown in Singapore (2026): What You’re Actually Paying For",
-        "desc": "How to read a car quote in Singapore in 2026: what on-the-road price usually includes, how dealer fees and bundled items distort comparisons, and how to…",
         "date": "2026-04-14"
       },
       {
@@ -408,12 +450,6 @@
         "url": "/company-car-vs-car-allowance-singapore",
         "title": "Company Car vs Car Allowance in Singapore (2026): Which Mobility Benefit Actually Leaves You…",
         "desc": "Company car vs car allowance in Singapore (2026): compare convenience, taxable benefits, control, cash flexibility, personal usage, and which…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/comprehensive-vs-third-party-car-insurance-singapore",
-        "title": "Comprehensive vs Third-Party Car Insurance in Singapore (2026): Which Policy Structure Actually…",
-        "desc": "Comprehensive vs third-party car insurance in Singapore (2026): when fuller cover is worth paying for, when lighter cover is rational, and how car value…",
         "date": "2026-04-14"
       },
       {
@@ -492,12 +528,6 @@
         "url": "/family-car-upgrade-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore",
         "title": "Family Car Upgrade vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which…",
         "desc": "Family car upgrade vs bigger cash buffer when supporting aging parents in Singapore: decide whether a more capable vehicle really solves elder-support strain…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/high-excess-vs-low-excess-car-insurance-singapore",
-        "title": "High Excess vs Low Excess Car Insurance in Singapore (2026): Which Trade-Off Actually Fits Your…",
-        "desc": "High excess vs low excess car insurance in Singapore (2026): compare lower premiums, claim pain, household cash buffers, and when a cheaper policy creates the…",
         "date": "2026-04-14"
       },
       {
@@ -645,12 +675,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/named-driver-vs-any-authorised-driver-car-insurance-singapore",
-        "title": "Named Driver vs Any Authorised Driver Car Insurance in Singapore (2026): Are You Saving Money or…",
-        "desc": "Named driver vs any authorised driver car insurance in Singapore (2026): compare premium savings, household flexibility, spouse and family use, and when a…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/off-peak-car-vs-normal-car-singapore",
         "title": "Off-Peak Car vs Normal Car in Singapore (2026): Are the Savings Worth the Restrictions?",
         "desc": "Off-peak car vs normal car in Singapore (2026): compare savings, usage restrictions, e-Day licence friction, family-lifestyle fit, and when restricted…",
@@ -678,12 +702,6 @@
         "url": "/parf-paper-value-deregistration-singapore",
         "title": "PARF, Paper Value, and Deregistration in Singapore (2026): What Exit Value Really Means",
         "desc": "PARF, paper value, and deregistration in Singapore for 2026: what they mean, how to think about exit value, and why these mechanics matter for depreciation…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/parking-cost-singapore",
-        "title": "Parking Cost in Singapore (2026): Season Parking, Office, Mall Rates + Real Monthly Budget",
-        "desc": "Parking cost in Singapore (2026): realistic monthly budgeting for HDB/condo season parking, office parking, mall parking, and ad-hoc fees. Includes scenario…",
         "date": "2026-04-14"
       },
       {
@@ -720,12 +738,6 @@
         "url": "/repair-cosmetic-car-damage-now-or-later-singapore",
         "title": "Repair Cosmetic Car Damage Now or Later in Singapore (2026): When Waiting Is Fine and When It…",
         "desc": "Repair cosmetic car damage now or later in Singapore (2026): how to think about scratches, dents, bumper scuffs, rust risk, pride of use, resale, and when…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/road-tax-cost-singapore",
-        "title": "Road Tax Cost in Singapore (2026): How to Budget It Properly for Car Ownership",
-        "desc": "Road tax cost in Singapore for 2026: how to think about it, what drives it, why it matters in monthly car ownership budgets, and how to compare it across car…",
         "date": "2026-04-14"
       },
       {
@@ -807,12 +819,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/should-you-settle-car-loan-early-singapore",
-        "title": "Should You Settle a Car Loan Early in Singapore? (2026): Real Savings, Better Optionality, or Just…",
-        "desc": "Should you settle a car loan early in Singapore (2026): compare interest savings, liquidity loss, flexibility, future upgrade plans, and when early repayment…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/small-car-vs-big-car-singapore",
         "title": "Small Car vs Big Car in Singapore (2026): Which Everyday Size Actually Fits Better?",
         "desc": "Small car vs big car in Singapore (2026): compare parking ease, family fit, manoeuvrability, luggage reality, cost drag, and when bigger creates more daily…",
@@ -882,12 +888,6 @@
         "url": "/when-an-old-car-becomes-false-economy-singapore",
         "title": "When an Old Car Becomes False Economy in Singapore (2026): It’s Already Paid Up, but Is It Still…",
         "desc": "When an old car becomes false economy in Singapore (2026): identify when “already paid up” stops being a strong argument because repair volatility, downtime…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/when-cheap-car-insurance-becomes-false-savings-singapore",
-        "title": "When Cheap Car Insurance Becomes False Savings in Singapore (2026): The Premium Is Lower, but Is…",
-        "desc": "When cheap car insurance becomes false savings in Singapore (2026): understand when lower premium hides weak cover, wrong excess, restrictive drivers, and a…",
         "date": "2026-04-14"
       },
       {
