@@ -3,153 +3,134 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget</title>
-<meta name="description" content="EV charging cost in Singapore (2026): home, condo, HDB, public AC, and fast DC charging explained. Learn how charging pattern changes your real running cost and monthly EV budget."/>
+<title>EV Charging Cost Singapore: Price Every Delivered kWh</title>
+<meta name="description" content="Calculate EV charging cost in Singapore from delivered kWh, charging losses, home and public price mix, parking fees and charging time."/>
 <link rel="canonical" href="https://ownershipguide.com/ev-charging-cost-singapore"/>
-<meta name="robots" content="index,follow"/>
-<meta name="og:cluster" content="transport"/>
-<meta name="og:subtopic" content="variable-cost"/>
+<meta content="transport" name="og:cluster"/>
+<meta content="variable-cost" name="og:subtopic"/>
 <meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:url" content="https://ownershipguide.com/ev-charging-cost-singapore"/>
-<meta property="og:title" content="EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget"/>
+<meta property="og:title" content="EV Charging Cost Singapore: Price Every Delivered kWh"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="EV charging cost in Singapore (2026): home, condo, HDB, public AC, and fast DC charging explained. Learn how charging pattern changes your real running cost and monthly EV budget."/>
-
-<link rel="stylesheet" href="/styles.css"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is EV charging cost in Singapore mainly about electricity price?","acceptedAnswer":{"@type":"Answer","text":"No. Electricity price matters, but charging pattern matters just as much. Two owners with the same car can experience very different running costs if one charges mainly in a low-friction routine and the other relies on higher-friction public or fast charging."}},{"@type":"Question","name":"Should I model fast charging as my normal EV cost?","acceptedAnswer":{"@type":"Answer","text":"Usually no. Fast charging is better treated as an exception or overflow layer unless you already know it will be your main pattern. Building the EV case on emergency-style charging can make the ownership decision look weaker than it needs to be."}},{"@type":"Question","name":"What is the biggest mistake when budgeting EV charging?","acceptedAnswer":{"@type":"Answer","text":"Assuming your cheapest charging situation is the one you will use almost all the time. The safer model is to budget using a mixed real-life charging pattern."}},{"@type":"Question","name":"Does better public infrastructure automatically solve EV charging cost concerns?","acceptedAnswer":{"@type":"Answer","text":"It improves the landscape, but it does not erase the difference between convenient charging and merely available charging. Access quality still matters."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget", "description": "EV charging cost in Singapore (2026): home, condo, HDB, public AC, and fast DC charging explained. Learn how charging pattern changes your real running cost and monthly EV budget.", "dateModified": "2026-04-14", "datePublished": "2026-03-19", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com"}, "inLanguage": "en-SG", "url": "https://ownershipguide.com/ev-charging-cost-singapore"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget","item":"https://ownershipguide.com/ev-charging-cost-singapore"}]}</script>
+<meta property="og:description" content="Build a monthly EV charging budget from the electricity you pay for and the chargers you can actually use."/>
+<link href="/styles.css" rel="stylesheet"/>
+<link href="/coe-review.css?v=0381" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate monthly EV charging cost?","acceptedAnswer":{"@type":"Answer","text":"Multiply annual kilometres by delivered kWh per 100 km, divide by 100, multiply by the weighted charging price, add charging-specific fees, then divide by 12."}},{"@type":"Question","name":"Should I use the household electricity tariff for all EV charging?","acceptedAnswer":{"@type":"Answer","text":"Only for the share actually billed under that arrangement. Public and shared-residential chargers can have operator tariffs, parking charges, subscriptions or idle fees, so each share needs its own rate."}},{"@type":"Question","name":"Why is delivered electricity higher than dashboard consumption?","acceptedAnswer":{"@type":"Answer","text":"Energy can be lost between the meter and battery through the charging equipment and vehicle systems. Use metered or billed kWh when available, or state a loss assumption rather than ignoring it."}},{"@type":"Question","name":"Does a faster charger always reduce charging cost?","acceptedAnswer":{"@type":"Answer","text":"No. Power affects connected time, while the tariff and fees determine cash cost. The car may also accept less than the charger's maximum rating and reduce power as the battery fills."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EV Charging Cost Singapore: Price Every Delivered kWh","description":"Calculate EV charging cost in Singapore from delivered kWh, charging losses, home and public price mix, parking fees and charging time.","datePublished":"2026-03-19","dateModified":"2026-09-25","publisher":{"@type":"Organization","name":"Ownership Guide","url":"https://ownershipguide.com","logo":{"@type":"ImageObject","url":"https://ownershipguide.com/favicon-512x512.png"}},"inLanguage":"en-SG","url":"https://ownershipguide.com/ev-charging-cost-singapore"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"EV Charging Cost Singapore: Price Every Delivered kWh","item":"https://ownershipguide.com/ev-charging-cost-singapore"}]}</script>
 </head>
 <body>
 <div id="site-header"></div>
 <main class="container">
-<p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-<nav class="breadcrumbs"><a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/comparisons/">Comparisons</a></nav>
-<h1>EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget</h1>
-<div class="box" style="margin-top:14px">
-  <strong>Fast path</strong>
-  <div style="margin-top:6px">Start with <a href="/ev-vs-petrol-cost-singapore">EV vs petrol cost</a> if you are still deciding between drivetrains. Use this page when the EV case already looks plausible and you want to understand <strong>how charging pattern changes your real running cost</strong>.</div>
-</div>
-<div class="og-card og-card--hero">
-  <p><strong>TL;DR:</strong> EV charging cost in Singapore is not one number. The same car can look very cheap when most charging is predictable and low-friction, then much less compelling when the owner relies heavily on public or fast charging. The right question is not just <em>“what is the tariff?”</em> but <strong>“what charging pattern will I actually live with?”</strong></p>
-  <div class="og-cta-row">
-    <a class="btn btn-primary" href="/ev-vs-petrol-calculator-singapore">Run EV vs petrol calculator →</a>
-    <a class="btn btn-secondary" href="/transport/">Open transport hub</a>
-  </div>
-</div>
-<p>Many EV discussions in Singapore become distorted because people quote a single charging rate as if it settles the economics. It does not. EV charging cost is a <strong>pattern problem</strong>, not just a tariff problem. The same owner may charge at home some nights, top up in a public carpark when convenient, and occasionally use faster charging because life gets messy. Those layers together determine what the EV really costs to run.</p>
-<p>That is why the practical EV question is different from the simple EV-vs-petrol question. A broad EV comparison asks whether electricity can beat petrol on operating cost. A charging-cost page asks <strong>which charging setup you will actually use consistently enough for the EV promise to hold</strong>.</p>
-<p>In Singapore, that matters more than many people expect. Public infrastructure is improving, more HDB carparks have chargers, and non-landed private residences can install shared chargers in common areas, but that does not automatically mean every driver experiences charging the same way. Your home situation, workplace access, route pattern, and willingness to charge off-schedule all change the answer.</p>
-<p>This page focuses on one job only: <strong>understanding how EV charging cost behaves in real life</strong>. It does not replace total ownership analysis. It helps you avoid the most common EV spreadsheet mistake: assuming your best-case charging pattern is the one you will live with every week.</p>
-<hr/>
-<h2>Quick answer</h2>
-<div class="og-checklist">
-  <ul>
-    <li><strong>Cheapest EV ownership experience:</strong> usually comes from predictable charging that fits your routine rather than from occasionally hunting the lowest possible rate.</li>
-    <li><strong>Most fragile EV economics:</strong> usually happen when the owner relies heavily on public or fast charging without enough buffer in time, location, or monthly mileage.</li>
-    <li><strong>Right mental model:</strong> charging cost is not just cost per kWh. It is cost per kWh <em>plus</em> charging convenience, charger access, waiting, and how often you are forced into suboptimal charging choices.</li>
-  </ul>
-</div>
-<p class="muted">Useful anchors: <a href="/home-charging-vs-public-charging-ev-singapore">home vs public charging</a> · <a href="/is-an-ev-practical-without-home-charging-singapore">EV without home charging</a> · <a href="/ev-battery-degradation-singapore">battery degradation</a> · <a href="/car-ownership-cost">all-in car ownership cost</a></p>
-<hr/>
-<h2>Scenario library</h2>
-<table class="og-table">
-  <thead>
-    <tr><th>Charging pattern</th><th>What usually helps</th><th>Where cost creeps up</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Mainly home or workplace charging</td><td>Predictable routine, lower stress, easier overnight or parked-time charging.</td><td>Installation limits, charger sharing, or weak access discipline in the building.</td></tr>
-    <tr><td>Mixed public AC charging</td><td>Can still work if chargers are near home or daily destinations.</td><td>Detours, availability uncertainty, and more planning load.</td></tr>
-    <tr><td>Frequent fast charging</td><td>Useful for top-ups and exceptions.</td><td>Higher charging cost and more time spent solving energy gaps reactively.</td></tr>
-    <tr><td>No reliable regular charger</td><td>Possible only for some drivers with light mileage and flexible routines.</td><td>The EV case weakens fast because charging becomes another recurring errand.</td></tr>
-  </tbody>
+<p><a href="/">← Back to Ownership Guide</a> ← <a href="/transport/">Back to Transport</a></p>
+<h1>Build the Charging Budget From Your Real Mix</h1>
+<p>EV charging cost is not one electricity rate. It is the amount of electricity billed at home, shared-residential, public AC and fast DC chargers, plus any charging-specific parking, access, subscription or idle fees.</p>
+<p>Start with delivered electricity—the kWh you pay for—rather than a brochure range or battery size.</p>
+
+<section class="box">
+<p><strong>Monthly budget formula</strong></p>
+<p><strong>(Annual km × delivered kWh/100 km ÷ 100 × weighted S$/kWh + annual charging fees) ÷ 12.</strong></p>
+</section>
+
+<h2 id="why-not-one-number">1) Separate vehicle use from delivered electricity</h2>
+<p>Assume an EV reports 16.5 kWh/100 km at the vehicle but charging records show 18.2 kWh/100 km billed at the electricity boundary. The difference represents a hypothetical 10.3% uplift from vehicle use to delivered energy:</p>
+<p><strong>18.2 ÷ 16.5 − 1 = 10.3%.</strong></p>
+<p>This is an example, not a universal loss rate. Temperature, charging power, battery conditioning and how each system measures energy can change it. Use billed or metered kWh divided by kilometres whenever you have several weeks of records.</p>
+
+<h2 id="main-patterns">2) Record every charging channel</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Channel</th><th>Price evidence</th><th>Extra cost to check</th></tr></thead>
+<tbody>
+<tr><td>Household supply</td><td>Electricity bill or retail plan</td><td>Charger installation, registration, inspection and maintenance</td></tr>
+<tr><td>Shared residential</td><td>Operator app or MCST arrangement</td><td>Subscription, access rules and idle fees</td></tr>
+<tr><td>Public AC</td><td>Operator's displayed tariff</td><td>Parking paid only because of charging</td></tr>
+<tr><td>Fast DC</td><td>Operator's displayed tariff</td><td>Idle fees, detour and deliberate waiting time</td></tr>
+</tbody>
 </table>
-<hr/>
-<h2>Jump to the section you need</h2>
-<ul>
-  <li><a href="#why-not-one-number">1) Why EV charging cost is not one number</a></li>
-  <li><a href="#main-patterns">2) The main charging patterns that matter</a></li>
-  <li><a href="#monthly-budget">3) Building a realistic monthly charging budget</a></li>
-  <li><a href="#when-cheap-is-false">4) When “EV is cheap to charge” becomes misleading</a></li>
-  <li><a href="#time-cost">5) The time and convenience layer most buyers ignore</a></li>
-  <li><a href="#decision-framework">6) A decision framework you can actually use</a></li>
-  <li><a href="#faq">FAQ</a></li>
-</ul>
-<hr/>
-<h2 id="why-not-one-number">1) Why EV charging cost is not one number</h2>
-<p>Petrol is easy to conceptualise because drivers intuitively understand pump prices and fuel efficiency. Electricity feels more abstract, so many buyers try to reduce EV charging to a single neat number. That is where many bad assumptions begin.</p>
-<p>The cost to charge an EV depends on at least four moving parts: <strong>where you charge, how efficient the car is, how much of your charging is done in higher-friction environments, and how much mileage you actually do</strong>. If you mostly charge while the car is already parked for the night or during the workday, EV running cost often looks compelling. If you end up chasing public chargers and using faster charging reactively, the economics become less flattering.</p>
-<p>That does not mean EVs stop making sense. It means the ownership case becomes more dependent on behaviour and infrastructure fit than many first-time buyers realise.</p>
-<hr/>
-<h2 id="main-patterns">2) The main charging patterns that matter</h2>
-<p><strong>Home charging</strong> is the benchmark setup because it usually turns charging into a background task. The car charges while you are already parked. That changes not just cost but also how the owner experiences the vehicle. It feels closer to passive refuelling than active fuel shopping.</p>
-<p><strong>Workplace charging</strong> can create a similar advantage when it is truly reliable. If the car is already sitting there for hours, the time cost is close to zero. But it only remains a strong pillar if access is stable and not dependent on constant competition for limited points.</p>
-<p><strong>Public AC charging</strong> can still support EV ownership, especially when chargers are near home or near repeated destinations. The issue is not that public charging is inherently bad. The issue is that it turns charging into something that often requires planning, availability luck, or a willingness to plug in whenever a useful slot appears.</p>
-<p><strong>Fast charging</strong> is the backup tool, not the ideal base case. It is valuable when time matters or the driver genuinely needs a quick top-up, but frequent reliance can push EV economics and owner experience away from the calm “charge while parked” model that makes EV ownership attractive in the first place.</p>
-<hr/>
-<h2 id="monthly-budget">3) Building a realistic monthly charging budget</h2>
-<p>The simplest budgeting mistake is to multiply one charging rate by your annual mileage and call it done. A better model is to split your charging into categories:</p>
-<ul>
-  <li><strong>Base charging:</strong> the charging pattern you expect to use most often.</li>
-  <li><strong>Overflow charging:</strong> occasional public or faster charging when routine breaks.</li>
-  <li><strong>Stress charging:</strong> the situations where you pay more because the car needs energy on your schedule, not on the cheapest schedule.</li>
-</ul>
-<p>This gives you a more honest monthly picture. Many EV owners do not fail because the headline numbers were wrong. They fail because they assumed every charging session would happen under their most efficient routine, then real life introduced overtime, family detours, school runs, longer trips, or charger unavailability.</p>
-<p>The good budgeting rule is: <strong>build your EV case on a mixed charging pattern, not on a perfect charging pattern</strong>. If the economics still look good under that assumption, the EV decision becomes much more robust.</p>
-<hr/>
-<h2 id="when-cheap-is-false">4) When “EV is cheap to charge” becomes misleading</h2>
-<p>The phrase “EVs are cheap to charge” is directionally true in some contexts, but dangerously incomplete in others. It becomes misleading when it hides the difference between <strong>energy cost</strong> and <strong>ownership fit</strong>.</p>
-<p>An EV can still be cheaper per kilometre than a petrol car even if the owner feels constant charging friction. That sounds contradictory, but it is common. The spreadsheet says the energy is cheaper. The owner still feels unhappy because charging has turned into a recurring logistical task. A good decision needs both pieces to work.</p>
-<p>It also becomes misleading when the buyer ignores the share of charging done in higher-friction settings. Public charging availability is improving across Singapore, and the government’s EV roadmap has pushed deployment widely, including HDB carparks and non-landed private residences. But infrastructure growth does not erase the difference between convenient charging and merely possible charging.</p>
-<p>Finally, it becomes misleading when buyers compare a best-case EV charging pattern against a realistic petrol routine. A fair comparison is not “EV if everything goes right” versus “petrol in normal life”. It is “EV in my actual likely routine” versus “petrol in my actual likely routine”.</p>
-<hr/>
-<h2 id="time-cost">5) The time and convenience layer most buyers ignore</h2>
-<p>Many ownership mistakes come from valuing time only when money is involved. But charging convenience has economic value too. If charging fits naturally into your existing parking habits, the time burden is low. If it requires detours, planning, queue anxiety, or repeated top-up behaviour, the EV running-cost story gets weaker even before you calculate the monetary side.</p>
-<p>This is why some owners love their EVs while others feel quietly trapped by them. The difference is often not the car. It is whether the charging pattern integrates smoothly into the owner’s life. An EV can be financially attractive and still be a poor practical fit if the charging routine keeps demanding attention.</p>
-<p>That does not mean buyers should overreact and reject EVs unless charging is perfect. It means they should ask a harder question: <strong>how much inconvenience am I really prepared to absorb in exchange for lower energy cost?</strong></p>
-<hr/>
-<h2 id="decision-framework">6) A decision framework you can actually use</h2>
-<p>If you have reliable low-friction charging access most of the time, EV charging cost usually becomes a genuine strength rather than a fragile assumption. If you do not, then the EV case becomes more conditional: it may still work, but only if your mileage is low enough, your routes are predictable enough, or your tolerance for charging management is higher than average.</p>
-<p>Use this simple decision stack:</p>
-<ol>
-  <li><strong>Can I charge regularly without turning it into another recurring errand?</strong></li>
-  <li><strong>Will most of my charging happen in my strongest setup, or in my emergency setup?</strong></li>
-  <li><strong>If charging convenience worsens, does the EV still make sense for me?</strong></li>
-</ol>
-<p>If the answer to the third question is no, then the EV case is more fragile than it first looked. If the answer is still yes, then your decision is probably grounded enough to survive real ownership rather than just a showroom spreadsheet.</p>
-<hr/>
-<h2 id="faq">FAQ</h2>
-<h3>Is EV charging cost in Singapore mainly about electricity price?</h3>
-<p>No. Electricity price matters, but charging pattern matters just as much. Two owners with the same car can experience very different running costs if one charges mainly in a low-friction routine and the other relies on higher-friction public or fast charging.</p>
-<h3>Should I model fast charging as my normal EV cost?</h3>
-<p>Usually no. Fast charging is better treated as an exception or overflow layer unless you already know it will be your main pattern. Building the EV case on emergency-style charging can make the ownership decision look weaker than it needs to be.</p>
-<h3>What is the biggest mistake when budgeting EV charging?</h3>
-<p>Assuming your cheapest charging situation is the one you will use almost all the time. The safer model is to budget using a mixed real-life charging pattern.</p>
-<h3>Does better public infrastructure automatically solve EV charging cost concerns?</h3>
-<p>It improves the landscape, but it does not erase the difference between convenient charging and merely available charging. Access quality still matters.</p>
-<hr/>
-<div class="box" style="margin-top:24px">
-<p><strong>Key guides in this cluster</strong></p>
-<ul>
-<li><a href="/monthly-cost-of-owning-a-car-singapore">Monthly Cost of Owning a Car</a></li>
-<li><a href="/car-depreciation-singapore">Car Depreciation in Singapore</a></li>
-<li><a href="/coe-cost-singapore">COE Cost Singapore</a></li>
-</ul>
 </div>
-<div id="auto-related"></div>
-<h2>References</h2>
+<p>MyTransport.SG provides publicly accessible charging locations, real-time availability and charger information. Check the operator's current terms before using a displayed rate in a long-term budget.</p>
+
+<h2 id="monthly-budget">3) Work a monthly mixed-charging example</h2>
+<p>Assume 16,000 km a year and 18.2 delivered kWh/100 km. Annual delivered electricity is:</p>
+<p><strong>16,000 × 18.2 ÷ 100 = 2,912 kWh.</strong></p>
+<p>Use this hypothetical mix:</p>
 <ul>
-  <li><a href="https://www.lta.gov.sg/content/ltagov/en/industry_innovations/technologies/electric_vehicles/our_ev_roadmap.html" target="_blank" rel="nofollow noopener">LTA: Our EV Roadmap</a></li>
-  <li><a href="https://www.mot.gov.sg/what-we-do/green-transport/electric-vehicles/" target="_blank" rel="nofollow noopener">Ministry of Transport: Electric Vehicles</a></li>
-  <li><a href="https://www.powereverymove.gov.sg/ev-charging-101/" target="_blank" rel="nofollow noopener">Power Every Move: EV Charging 101</a></li>
-  <li><a href="https://www.lta.gov.sg/content/ltagov/en/industry_innovations/technologies/electric_vehicles/charger_grants.html" target="_blank" rel="nofollow noopener">LTA: Charger Grants</a></li>
-  <li><a href="https://www.lta.gov.sg/content/ltagov/en/industry_innovations/technologies/electric_vehicles/regulating_safety_of_ev_chargers.html" target="_blank" rel="nofollow noopener">LTA: Regulating the Safety of EV Chargers</a></li>
+<li>60% at home at S$0.3478/kWh, the EMA regulated household tariff including GST for July–September 2026;</li>
+<li>30% at public AC charging at an example S$0.55/kWh; and</li>
+<li>10% at fast DC charging at an example S$0.75/kWh.</li>
 </ul>
-<p class="muted"><strong>Last updated:</strong> 14 Apr 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p>
+<p><strong>Weighted rate = (60% × S$0.3478) + (30% × S$0.55) + (10% × S$0.75) = S$0.44868/kWh.</strong></p>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Mixed budget</th><th>Calculation</th><th>Amount</th></tr></thead>
+<tbody>
+<tr><td>Annual electricity</td><td>2,912 × S$0.44868</td><td>S$1,306.56</td></tr>
+<tr><td>Charging-specific fees</td><td>Example access and parking</td><td>S$120/year</td></tr>
+<tr><td><strong>Annual charging budget</strong></td><td>S$1,306.56 + S$120</td><td><strong>S$1,426.56</strong></td></tr>
+<tr><td><strong>Monthly charging budget</strong></td><td>S$1,426.56 ÷ 12</td><td><strong>S$118.88</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>The household tariff changes quarterly, and the two public rates are hypothetical. Replace all three with rates you can document on the same date.</p>
+
+<h2 id="when-cheap-is-false">4) Compare charging patterns on the same energy</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Illustrative pattern</th><th>Energy rate</th><th>Annual energy</th><th>Monthly energy</th></tr></thead>
+<tbody>
+<tr><td>All household supply</td><td>S$0.3478/kWh</td><td>S$1,012.79</td><td>S$84.40</td></tr>
+<tr><td>Mixed case above</td><td>S$0.44868/kWh</td><td>S$1,306.56</td><td>S$108.88</td></tr>
+<tr><td>All public AC example</td><td>S$0.55/kWh</td><td>S$1,601.60</td><td>S$133.47</td></tr>
+<tr><td>All fast DC example</td><td>S$0.75/kWh</td><td>S$2,184</td><td>S$182</td></tr>
+</tbody>
+</table>
+</div>
+<p>These rows exclude setup, subscriptions, parking and idle fees. They show why “EV electricity is cheap” is incomplete unless the price mix is named.</p>
+
+<h2 id="time-cost">5) Price connected time and deliberate time separately</h2>
+<p>The example EV needs 2,912 kWh a year, or 56 kWh in an average week. At a constant 7.4 kW, that energy has a theoretical minimum of about 7.6 connected hours. At 50 kW, the theoretical minimum is about 1.1 hours. Actual charging can take longer because the vehicle may accept less than the charger's rating and power can taper.</p>
+<p>Connected time is often harmless when the car is parked anyway. Deliberate time is different: detouring, waiting for a bay, returning to move the car or ending an idle-fee window. Record the minutes that would not exist without charging.</p>
+
+<h2 id="decision-framework">6) Keep a four-week charging ledger</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Record after every session</th><th>Why it matters</th></tr></thead>
+<tbody>
+<tr><td>Delivered kWh and amount paid</td><td>Produces the effective S$/kWh</td></tr>
+<tr><td>Odometer distance since the prior session</td><td>Produces delivered kWh/100 km</td></tr>
+<tr><td>Charger type, rated power and location</td><td>Shows the actual channel mix</td></tr>
+<tr><td>Parking, access, subscription and idle fees</td><td>Captures costs outside the energy tariff</td></tr>
+<tr><td>Deliberate detour and waiting minutes</td><td>Separates background charging from a new errand</td></tr>
+<tr><td>Failed or unavailable sessions</td><td>Tests whether the routine needs a stronger fallback</td></tr>
+</tbody>
+</table>
+</div>
+<p>Use the ledger in the <a href="/ev-vs-petrol-cost-singapore">five-year EV-versus-petrol comparison</a>. If the mix depends on public access, compare <a href="/home-charging-vs-public-charging-ev-singapore">cash and time together</a>.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>How do I calculate monthly EV charging cost?</h3>
+<p>Multiply annual kilometres by delivered kWh per 100 km, divide by 100, multiply by the weighted charging price, add charging-specific fees, then divide by 12.</p>
+<h3>Should I use the household electricity tariff for all EV charging?</h3>
+<p>Only for the share actually billed that way. Public and shared-residential chargers can have operator tariffs, parking charges, subscriptions or idle fees.</p>
+<h3>Why is delivered electricity higher than dashboard consumption?</h3>
+<p>Energy can be lost between the meter and battery through the charging equipment and vehicle systems. Use metered or billed kWh where available, or state a loss assumption.</p>
+<h3>Does a faster charger always reduce charging cost?</h3>
+<p>No. Power affects connected time, while the tariff and fees determine cash cost. The car may also accept less than the charger's maximum rating and reduce power as the battery fills.</p>
+
+<div id="auto-related"></div>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.ema.gov.sg/consumer-information/electricity/buying-electricity/buying-at-regulated-tariff">Energy Market Authority — Regulated household electricity tariff</a></li>
+<li><a href="https://www.lta.gov.sg/content/ltagov/en/industry_innovations/technologies/electric_vehicles/transitioning_to_evs.html">Land Transport Authority — Charging availability and EV transition</a></li>
+<li><a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2022/3/news-releases/ramping_up_charging_infrastructure.html">Land Transport Authority — MyTransport.SG charger information</a></li>
+<li><a href="https://www.lta.gov.sg/content/ltagov/en/newsroom/2026/3/news-releases/singapore-elevates-national-standard-ev-charging-systems.html">Land Transport Authority and Enterprise Singapore — SS 722 charging standard</a></li>
+</ul>
+<p class="muted"><strong>Last updated:</strong> 25 Sep 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p>
 </main>
 <div id="site-footer"></div>
-<script defer="" src="/includes.js"></script>
+<script defer src="/includes.js?v=0381"></script>
 </body>
 </html>

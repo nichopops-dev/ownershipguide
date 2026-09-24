@@ -1,7 +1,31 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "cluster_pages": {
     "transport": [
+      {
+        "url": "/ev-charging-cost-singapore",
+        "title": "EV Charging Cost Singapore: Price Every Delivered kWh",
+        "desc": "Calculate EV charging cost in Singapore from delivered kWh, charging losses, home and public price mix, parking fees and charging time.",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/ev-vs-petrol-cost-singapore",
+        "title": "EV vs Petrol Cost Singapore: Compare Five-Year Ownership",
+        "desc": "Compare EV and petrol car cost in Singapore across five-year value loss, energy, road tax, insurance, maintenance and charging access.",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/home-charging-vs-public-charging-ev-singapore",
+        "title": "Home vs Public EV Charging Singapore: Compare Cost and Time",
+        "desc": "Compare home and public EV charging in Singapore across five-year electricity, setup cost, deliberate time, access reliability and fallback options.",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/is-an-ev-practical-without-home-charging-singapore",
+        "title": "EV Without Home Charging Singapore: Run a Four-Week Test",
+        "desc": "Test whether an EV works without home charging in Singapore by mapping weekly energy, observing charger availability, timing fallbacks and setting failure…",
+        "date": "2026-09-25"
+      },
       {
         "url": "/authorised-dealer-vs-independent-workshop-singapore",
         "title": "Authorised Dealer vs Independent Workshop Singapore",
@@ -561,12 +585,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/ev-charging-cost-singapore",
-        "title": "EV Charging Cost in Singapore (2026): Home, Public, Fast Charging + Real Monthly Budget",
-        "desc": "EV charging cost in Singapore (2026): home, condo, HDB, public AC, and fast DC charging explained. Learn how charging pattern changes your real running cost…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/ev-resale-value-singapore",
         "title": "EV Resale Value in Singapore (2026): What Actually Matters",
         "desc": "EV resale value in Singapore (2026): what really shapes resale confidence, how battery fear fits into the picture, and when resale anxiety should change your…",
@@ -579,12 +597,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/ev-vs-petrol-cost-singapore",
-        "title": "EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even",
-        "desc": "EV vs petrol cost in Singapore (2026): realistic monthly running costs, charging vs petrol, road tax, servicing, and when an EV becomes cheaper. Includes…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/family-car-decision-after-baby-singapore",
         "title": "Family Car Decision After Baby in Singapore (2026): Does a Child Change Whether You Need a Car?",
         "desc": "Does having a baby mean you need a car in Singapore? A cost framework for transport decisions after a child arrives — including childcare logistics…",
@@ -594,12 +606,6 @@
         "url": "/family-car-upgrade-vs-bigger-cash-buffer-when-supporting-aging-parents-singapore",
         "title": "Family Car Upgrade vs Bigger Cash Buffer When Supporting Aging Parents in Singapore (2026): Which…",
         "desc": "Family car upgrade vs bigger cash buffer when supporting aging parents in Singapore: decide whether a more capable vehicle really solves elder-support strain…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/home-charging-vs-public-charging-ev-singapore",
-        "title": "Home Charging vs Public Charging for EVs in Singapore (2026): Cost, Convenience, and Daily Friction",
-        "desc": "Home charging vs public charging for EVs in Singapore (2026): compare cost, convenience, reliability, and daily friction. Learn when public charging is good…",
         "date": "2026-04-14"
       },
       {
@@ -654,12 +660,6 @@
         "url": "/how-supporting-aging-parents-changes-your-transport-decision-order-singapore",
         "title": "How Supporting Aging Parents Changes Your Transport Decision Order in Singapore (2026): What…",
         "desc": "How supporting aging parents changes your transport decision order in Singapore: a practical framework for re-sequencing car ownership, ride-hailing, vehicle…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/is-an-ev-practical-without-home-charging-singapore",
-        "title": "Is an EV Practical Without Home Charging in Singapore? (2026 Decision Framework)",
-        "desc": "Is an EV practical without home charging in Singapore (2026)? A realistic decision framework for HDB and condo drivers relying on public charging, workplace…",
         "date": "2026-04-14"
       },
       {
