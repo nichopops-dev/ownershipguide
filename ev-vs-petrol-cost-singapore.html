@@ -1,140 +1,139 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even</title>
-<meta content="EV vs petrol cost in Singapore (2026): realistic monthly running costs, charging vs petrol, road tax, servicing, and when an EV becomes cheaper. Includes simple break-even logic for typical mileage." name="description"/>
-<link href="https://ownershipguide.com/ev-vs-petrol-cost-singapore" rel="canonical"/>
-<meta content="EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even" property="og:title"/>
-<meta content="A practical, Singapore-specific EV vs petrol cost breakdown: charging vs petrol, road tax, servicing, and realistic monthly budgets (with break-even logic)." property="og:description"/>
-<meta content="article" property="og:type"/>
-<meta content="https://ownershipguide.com/ev-vs-petrol-cost-singapore" property="og:url"/>
-<!-- Cluster meta (used by includes.js for related links) -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EV vs Petrol Cost Singapore: Compare Five-Year Ownership</title>
+<meta name="description" content="Compare EV and petrol car cost in Singapore across five-year value loss, energy, road tax, insurance, maintenance and charging access."/>
+<link rel="canonical" href="https://ownershipguide.com/ev-vs-petrol-cost-singapore"/>
 <meta content="transport" name="og:cluster"/>
 <meta content="variable-cost" name="og:subtopic"/>
 <meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://ownershipguide.com/ev-vs-petrol-cost-singapore"/>
+<meta property="og:title" content="EV vs Petrol Cost Singapore: Compare Five-Year Ownership"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Put both cars on one ledger before deciding whether cheaper energy recovers the EV's other cost differences."/>
 <link href="/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is EV charging always cheaper than petrol in Singapore?","acceptedAnswer":{"@type":"Answer","text":"Not always. It depends on the charging price you have access to and how often you rely on fast chargers. Treat \u201ccheap charging\u201d as an assumption you must verify, not a guarantee."}},{"@type":"Question","name":"Should I choose EV just to save money?","acceptedAnswer":{"@type":"Answer","text":"Choose EV for cost reasons only if your numbers work in your actual driving pattern and charging access. If you\u2019re doing it for convenience or preference, that\u2019s valid \u2014 just budget honestly. Separate the EV decision into two questions: \u201cDo I want the EV ownership experience?\u201d and \u201cDoes this specific EV beat the petrol alternative I would realistically buy?\u201d That avoids comparing a premium EV to a budget petrol car and drawing the wrong conclusion. There is also a behavioural effect: if charging"}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even", "description": "EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even", "url": "https://ownershipguide.com/ev-vs-petrol-cost-singapore", "datePublished": "2026-03-22", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"EV vs Petrol Cost in Singapore (2026): Running Costs, Charging, Road Tax + Break-even","item":"https://ownershipguide.com/ev-vs-petrol-cost-singapore"}]}</script>
+<link href="/coe-review.css?v=0381" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is an EV cheaper than a petrol car in Singapore?","acceptedAnswer":{"@type":"Answer","text":"It depends on the exact all-in prices, exit values, distance, charging-price mix, road tax, insurance, maintenance and charging-access costs. Cheaper energy per kilometre does not by itself prove a lower five-year total."}},{"@type":"Question","name":"How do I find the EV break-even mileage?","acceptedAnswer":{"@type":"Answer","text":"Calculate the EV's non-energy cost disadvantage across the holding period, then divide it by the energy saving per kilometre. Divide again by the holding years to obtain the annual break-even distance."}},{"@type":"Question","name":"How should I include 2026 EV incentives?","acceptedAnswer":{"@type":"Answer","text":"Use a final all-in purchase quote after applicable EEAI and VES benefits. Do not subtract the incentives again. Record net ARF separately because rebates can affect later PARF proceeds."}},{"@type":"Question","name":"Should I use dashboard EV consumption in the comparison?","acceptedAnswer":{"@type":"Answer","text":"Use electricity measured at the charging-payment boundary where possible, because that is what you pay for. If only vehicle consumption is available, add a stated charging-loss assumption and test a weaker case."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EV vs Petrol Cost Singapore: Compare Five-Year Ownership","description":"Compare EV and petrol car cost in Singapore across five-year value loss, energy, road tax, insurance, maintenance and charging access.","url":"https://ownershipguide.com/ev-vs-petrol-cost-singapore","datePublished":"2026-03-22","dateModified":"2026-09-25","publisher":{"@type":"Organization","name":"Ownership Guide","url":"https://ownershipguide.com","logo":{"@type":"ImageObject","url":"https://ownershipguide.com/favicon-512x512.png"}},"inLanguage":"en-SG"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ownershipguide.com/"},{"@type":"ListItem","position":2,"name":"Transport","item":"https://ownershipguide.com/transport/"},{"@type":"ListItem","position":3,"name":"EV vs Petrol Cost Singapore: Compare Five-Year Ownership","item":"https://ownershipguide.com/ev-vs-petrol-cost-singapore"}]}</script>
 </head>
 <body>
 <div id="site-header"></div>
-<main class="container"><!-- Back to Ownership Guide link (standard) --><p class="nav"><a href="/">← Back to Ownership Guide</a></p><h1>EV vs Petrol Cost in Singapore (2026): What You’ll Actually Pay</h1><div class="box" style="margin-top:12px">
-<strong>Fast path:</strong> <a href="/ev-vs-petrol-calculator-singapore">Run the EV vs petrol calculator (break‑even mileage + running cost)</a>
-</div><p>
-      “Are EVs cheaper than petrol cars?” In Singapore, the honest answer is: <strong>it depends on how you drive and where you can charge</strong>.
-      EVs can be cheaper per kilometre, but you still need to budget for the Singapore-specific realities:
-      charging access, road tax structure, and whether you’re comparing like-for-like vehicle sizes.
-    </p><div class="box">
-<p><strong>Start here (fast path)</strong></p>
-<ul>
-<li><strong>1)</strong> Anchor to the full 5-year exposure: <a href="/car-ownership-cost">Real cost of owning a car in Singapore</a></li>
-<li><strong>2)</strong> Budget monthly (cashflow reality): <a href="/monthly-cost-of-owning-a-car-singapore">True monthly cost model</a></li>
-<li><strong>3)</strong> Understand variable costs together: <a href="/fuel-cost-singapore">Fuel cost</a> · <a href="/parking-cost-singapore">Parking</a> · <a href="/erp-cost-singapore">ERP</a></li>
-<li><strong>4)</strong> If you’re not sure you can afford the total package: <a href="/car-affordability-calculator-singapore">Car affordability stress test</a></li>
-</ul>
-</div><h2>What “cost” should you compare?</h2><p>
-      For most Singapore drivers, the cleanest EV vs petrol comparison is to split costs into:
-    </p><ul>
-<li><strong>Usage-based running costs</strong>: charging / petrol + (some) wear items.</li>
-<li><strong>Ownership-type recurring costs</strong>: road tax differences, servicing patterns, and (sometimes) tyre costs.</li>
-<li><strong>Everything else</strong> (COE, depreciation, loan, insurance) which can dwarf running costs if you buy the “wrong” car.</li>
-</ul><p class="muted">
-      This page focuses on the EV vs petrol <em>running-cost</em> side. For the full “Singapore car ownership” picture, use the 5-year pillar above.
-    </p><div class="box"><p><strong>If EV looks plausible, go one level deeper:</strong></p><ul><li><a href="/ev-charging-cost-singapore">EV charging cost</a> — the real cost of home, public, and fast charging.</li><li><a href="/home-charging-vs-public-charging-ev-singapore">Home charging vs public charging</a> — why two EV owners can have very different experiences.</li><li><a href="/is-an-ev-practical-without-home-charging-singapore">Is an EV practical without home charging?</a> — the high-intent viability question many buyers actually mean.</li><li><a href="/ev-battery-degradation-singapore">EV battery degradation</a> — what matters, what is overblown, and when to care.</li><li><a href="/ev-battery-replacement-cost-singapore">EV battery replacement cost</a> — how to think about tail-risk economics.</li><li><a href="/should-you-buy-a-used-ev-singapore">Should you buy a used EV?</a> — EV-specific used-car confidence framework.</li></ul></div><h2>1) Charging vs petrol: cost per kilometre (intuitive model)</h2><p>
-      You don’t need perfect precision to make a good decision — you need a realistic range.
-      A simple way to think about it:
-    </p><ul>
-<li><strong>Petrol</strong>: pump price × your fuel efficiency (km per litre).</li>
-<li><strong>EV</strong>: charging price × your energy consumption (kWh per 100 km).</li>
-</ul><p>
-      In practice, EV charging costs swing wildly based on where you charge (home, workplace, public fast chargers) and how often you use fast charging.
-      If you mostly rely on public fast chargers, your EV running cost can look much closer to petrol than you expected.
-    </p><h2>2) Road tax and recurring differences</h2><p>
-      Road tax in Singapore is not “one number”. It depends on the vehicle’s specifications and the prevailing framework.
-      EVs may look attractive on running cost but can surprise you on recurring charges depending on the model and category.
-    </p><p class="muted">
-      Practical budgeting rule: treat road tax as a <strong>fixed monthly line item</strong> (annual road tax ÷ 12) so you don’t ignore it in your cashflow model.
-    </p><h2>3) Servicing, tyres, and maintenance reality</h2><p>
-      EVs generally have fewer moving parts and can reduce some maintenance items — but they are not “maintenance free”.
-      In Singapore, the bigger driver of maintenance cost is often:
-      <strong>age, mileage, tyres, and repair events</strong> rather than whether the drivetrain is EV or petrol.
-    </p><p>
-      If you’re comparing a new EV against an older used petrol car, you might be accidentally comparing “new vs old” rather than “EV vs petrol”.
-    </p><p class="muted">
-      For a realistic buffer model, see: <a href="/car-maintenance-repair-cost-singapore">Maintenance &amp; repair cost in Singapore</a>.
-    </p><h2>4) Monthly budget scenarios (what you should actually set aside)</h2><p>
-      A clean way to budget is to split your monthly running costs into:
-    </p><ul>
-<li><strong>Energy</strong>: charging / petrol</li>
-<li><strong>Road tax</strong>: annual ÷ 12</li>
-<li><strong>Maintenance buffer</strong>: a “just in case” monthly amount (especially important after warranty)</li>
-</ul><p>
-      If you want a quick fuel-side model (cost per km × mileage), use the fuel guide:
-      <a href="/fuel-cost-singapore">Fuel cost in Singapore (cost per km + scenarios)</a>.
-      For EVs, you can mirror the same approach using your charging cost and typical consumption.
-    </p><h2>5) Break-even thinking: when does EV become cheaper?</h2><p>
-      In Singapore, EVs become financially compelling when two conditions are true:
-    </p><ol>
-<li>You can charge at a <strong>reasonable and consistent rate</strong> (home/workplace charging or reliable low-cost options).</li>
-<li>You drive enough mileage that “per km savings” actually accumulates meaningfully over time.</li>
-</ol><p>
-      If your monthly mileage is low, you might not realise enough running-cost savings to offset higher purchase/depreciation costs (if any).
-      That’s why the correct way to decide is to run both:
-      <strong>running cost</strong> and <strong>total ownership cost</strong>.
-    </p><h2>6) The practical EV layer most buyers miss</h2><p>Once the EV looks cheaper on paper, the next question is no longer “EV or petrol?” but “what charging life am I actually buying?” That is why the next layer of analysis matters:</p><ul><li><a href="/ev-charging-cost-singapore">EV charging cost</a> if you want the economics of mixed charging patterns.</li><li><a href="/home-charging-vs-public-charging-ev-singapore">Home vs public charging</a> if you want to compare ownership friction.</li><li><a href="/is-an-ev-practical-without-home-charging-singapore">EV without home charging</a> if you need a yes-or-no practicality framework.</li><li><a href="/ev-battery-degradation-singapore">EV battery degradation</a> if you want the ownership-confidence layer.</li><li><a href="/ev-battery-replacement-cost-singapore">EV battery replacement cost</a> if headline battery fear is blocking the decision.</li></ul><h2>FAQ</h2><h3>Is EV charging always cheaper than petrol in Singapore?</h3><p>
-      Not always. It depends on the charging price you have access to and how often you rely on fast chargers.
-      Treat “cheap charging” as an assumption you must verify, not a guarantee.
-    </p><h3>Should I choose EV just to save money?</h3><p>
-      Choose EV for cost reasons only if your numbers work in your actual driving pattern and charging access.
-      If you’re doing it for convenience or preference, that’s valid — just budget honestly.
-    </p><hr/>
-<p>Separate the EV decision into two questions: “Do I want the EV ownership experience?” and “Does this specific EV beat the petrol alternative I would realistically buy?” That avoids comparing a premium EV to a budget petrol car and drawing the wrong conclusion.</p>
-<h2>Useful rule of thumb</h2>
-<ul>
-<li><strong>Charging access:</strong> If charging is frictionless for you, EV economics improve materially.</li>
-<li><strong>Mileage:</strong> High mileage makes operating-cost savings more meaningful.</li>
-<li><strong>Holding period:</strong> The longer you hold, the more recurring savings matter relative to upfront pricing.</li>
-<li><strong>Alternative vehicle choices:</strong> A cheaper petrol or hybrid car may still beat a more expensive EV on total cost depending on entry price.</li>
-</ul>
-<h2>How to decide if EV economics fit your life</h2>
-<p>There is also a behavioural effect: if charging feels cheap, some drivers use the car more. That can reduce the headline savings. The better mindset is to compare the transport solution you would realistically use, not the one that looks best on paper.</p>
-<p>The strongest EV cost advantage usually comes from lower “energy per kilometre” and, in some cases, lower routine servicing intensity. The weakest part of the EV argument is when people assume every charger is equally convenient and every owner can charge cheaply all the time. In reality, your charging pattern matters a lot. Home charging, workplace charging, public charging, and time spent waiting each change the economics.</p>
-<h2>Where EV savings are real — and where they are overstated</h2>
-<ul>
-<li>Do I have convenient charging most of the time?</li>
-<li>Am I comparing against the petrol car I would realistically buy, not a strawman?</li>
-<li>Is my holding horizon long enough for recurring savings to matter?</li>
-</ul>
-<h2>Questions to ask yourself</h2>
-<p>Some buyers worry about EV battery degradation and future resale. These concerns are not irrational, but they should be kept in proportion. The bigger practical question is whether the total ownership package fits your needs: charging access, daily mileage, and how long you plan to hold the car. If those conditions are favourable, EV economics become easier to justify. If not, a conventional petrol or hybrid option may be more resilient even if charging costs look attractive on paper.</p>
-<h2>Battery, resale, and the non-cash side of the decision</h2>
-<p>If charging is easy, mileage is meaningful, and the EV you want is not massively more expensive than the petrol alternative, EV economics often improve. If charging is inconvenient or the price premium is large, the “savings story” becomes weaker.</p>
-<h2>Simple decision rule</h2>
+<main class="container">
+<p><a href="/">← Back to Ownership Guide</a> ← <a href="/transport/">Back to Transport</a></p>
+<h1>Put Both Cars on One Five-Year Ledger</h1>
+<p>An EV can cost less per kilometre and more over the full holding period. A petrol car can cost less upfront and lose after enough driving. The answer comes from one ledger with the same purchase date, sale date, annual distance and cost boundary.</p>
+<p><a href="/ev-vs-petrol-calculator-singapore">Use the EV-versus-petrol calculator</a> for your own inputs. This guide shows what each input means and how the result should reconcile.</p>
 
-<p>Imagine two drivers with the same monthly mileage. One has convenient charging and mostly predictable commuting, while the other relies on less convenient public charging and irregular trips. On paper, both “own an EV”, but their real experience and savings are not the same. The first driver may enjoy most of the operating-cost benefit. The second driver may still prefer the EV, but should be honest that convenience friction reduces the practical advantage.</p>
-<h2>Worked scenario</h2>
-<p>Imagine two households looking at the same EV and petrol shortlist. One has reliable home or workplace charging, drives enough each month to benefit from lower running costs, and expects to keep the car long enough for the operational savings to matter. The other has weaker charging access, lower mileage, and would be paying a noticeable purchase premium mainly for the idea of going electric rather than for a proven usage fit.</p>
-<div class="box" style="margin-top:18px">
-<strong>Related next reads</strong>
-<div style="margin-top:8px"><a href="/ev-charging-cost-singapore">EV charging cost</a> · <a href="/ev-resale-value-singapore">EV resale value</a> · <a href="/ev-battery-warranty-singapore">EV battery warranty</a> · <a href="/hybrid-vs-petrol-singapore">hybrid vs petrol</a> · <a href="/hybrid-vs-ev-singapore">hybrid vs EV</a></div>
+<section class="box">
+<p><strong>Cost rule</strong></p>
+<p><strong>Do not call the EV cheaper until its energy saving recovers its value-loss, road-tax, insurance, maintenance and charging-access differences under a realistic charging mix.</strong></p>
+</section>
+
+<h2>Use one ownership-cost equation</h2>
+<p><strong>Five-year ownership cost = all-in purchase price − exit proceeds + energy + road tax and insurance + maintenance + charging-access costs.</strong></p>
+<p>Add financing when loan amounts or terms differ. Keep parking and ERP out only when they are genuinely identical. Compare value loss rather than price alone so a higher purchase price and higher exit value are both represented once.</p>
+
+<h2>Worked example: 16,000 km a year</h2>
+<p>The figures below are hypothetical and illustrate the method. Both purchase prices are final drive-away amounts after any applicable incentive or surcharge.</p>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Input</th><th>Petrol car</th><th>EV</th></tr></thead>
+<tbody>
+<tr><td>All-in purchase price</td><td>S$128,000</td><td>S$142,000</td></tr>
+<tr><td>Exit proceeds after five years</td><td>S$44,000</td><td>S$50,000</td></tr>
+<tr><td><strong>Five-year value loss</strong></td><td><strong>S$84,000</strong></td><td><strong>S$92,000</strong></td></tr>
+<tr><td>Annual distance</td><td colspan="2">16,000 km</td></tr>
+<tr><td>Energy use</td><td>6.8 L/100 km</td><td>18.2 delivered kWh/100 km</td></tr>
+<tr><td>Energy price</td><td>S$2.80/L</td><td>S$0.44/kWh weighted charging mix</td></tr>
+</tbody>
+</table>
 </div>
-<section class="og-card">
-<h2>Quick decision framework</h2>
-<p>If you have reliable charging access, meaningful monthly mileage, and the EV you are considering is not carrying a huge purchase-premium penalty, the EV case usually gets stronger. If charging is inconvenient, mileage is low, or the purchase price gap is wide, petrol or hybrid options often remain the cleaner answer even before you get into resale uncertainty.</p>
-<h2>How to use this page</h2>
-<p>Use this page to compare EV vs petrol total cost over your holding period. Focus on depreciation, mileage, and charging access.</p><ol><li>Pick an annual mileage band.</li><li>Compare depreciation scenarios (EV resale uncertainty can dominate).</li><li>Run charging vs fuel cost sensitivity.</li></ol>
-<h2>Scenario library (sanity checks)</h2>
-<ul><li><strong>Low mileage:</strong> running savings small; depreciation dominates.</li><li><strong>High mileage:</strong> charging savings add up; compare with battery/resale risk.</li><li><strong>No home charging:</strong> pricing/convenience can change the math.</li></ul>
-<h2>Common mistakes</h2>
-<ul><li>Assuming EV depreciation is always lower.</li><li>Ignoring charging access/time costs.</li><li>Not comparing on same horizon/mileage.</li></ul>
-</section><section class="box"><div id="auto-related"></div><h2 style="margin-top:0">References</h2><ul><li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">Land Transport Authority (LTA)</a></li><li><a href="https://onemotoring.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA OneMotoring</a></li><li><a href="https://www.iras.gov.sg/" rel="nofollow noopener" target="_blank">Inland Revenue Authority of Singapore (IRAS)</a></li></ul><p class="muted" style="margin-bottom:0"><strong>Last updated:</strong> 14 Apr 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p></section></main>
+
+<h2>Calculate the energy bill</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Energy calculation</th><th>Petrol car</th><th>EV</th></tr></thead>
+<tbody>
+<tr><td>Annual energy</td><td>16,000 × 6.8 ÷ 100 = 1,088 L</td><td>16,000 × 18.2 ÷ 100 = 2,912 kWh</td></tr>
+<tr><td>Annual cost</td><td>1,088 × S$2.80 = S$3,046.40</td><td>2,912 × S$0.44 = S$1,281.28</td></tr>
+<tr><td>Five-year cost</td><td>S$15,232</td><td>S$6,406.40</td></tr>
+<tr><td><strong>EV energy saving</strong></td><td colspan="2"><strong>S$8,825.60 over five years</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>The petrol energy cost is S$0.1904/km. The EV cost is S$0.08008/km. At this mix, the EV saves <strong>S$0.11032/km</strong>.</p>
+
+<h2>Complete the five-year total</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Five-year item</th><th>Petrol car</th><th>EV</th></tr></thead>
+<tbody>
+<tr><td>Value loss</td><td>S$84,000</td><td>S$92,000</td></tr>
+<tr><td>Petrol or electricity</td><td>S$15,232</td><td>S$6,406.40</td></tr>
+<tr><td>Road tax and insurance</td><td>S$12,500</td><td>S$17,980</td></tr>
+<tr><td>Maintenance allowance</td><td>S$5,000</td><td>S$2,500</td></tr>
+<tr><td>Charging access or subscription</td><td>S$0</td><td>S$600</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>S$116,732</strong></td><td><strong>S$119,486.40</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p>At 16,000 km a year, the petrol car costs <strong>S$2,754.40 less</strong>. The EV's cheaper energy and maintenance do not yet recover its S$11,580 non-energy disadvantage.</p>
+
+<h2>Find the annual break-even distance</h2>
+<p><strong>Annual break-even distance = S$11,580 ÷ S$0.11032 ÷ 5 = 20,993 km a year, rounded.</strong></p>
+<p>At 21,000 km a year, five-year energy saving is S$11,583.60, leaving the EV only S$3.60 ahead. Treat that as a tie, because a small change in consumption, charging price, insurance or exit value reverses it.</p>
+
+<h2>Change the charging mix before trusting the threshold</h2>
+<p>If all charging costs S$0.65/kWh, EV energy rises to S$0.1183/km. The energy advantage over petrol falls to S$0.0721/km, and break-even increases to about <strong>32,122 km a year</strong>. Build the actual mix with the <a href="/ev-charging-cost-singapore">delivered-kWh charging worksheet</a>.</p>
+
+<h2>Apply 2026 Singapore incentives and tax once</h2>
+<p>For an eligible fully electric car registered in 2026, NEA and LTA state that EEAI provides a 45% ARF rebate capped at S$7,500 and the VES A-band rebate is S$22,500, for a stated combined maximum of S$30,000. EEAI ceases from 1 January 2027.</p>
+<p>Use the seller's final all-in price rather than subtracting these amounts again. Record net ARF because VES and EEAI rebates can affect later PARF proceeds. LTA calculates electric-car road tax from power rating and applies an Additional Flat Component, currently S$700 a year. Use the exact vehicle lookup and an actual insurance quote.</p>
+
+<h2>Pressure-test the costs that can reverse the result</h2>
+<div class="car-compare-table-wrap">
+<table class="coe-table">
+<thead><tr><th>Input</th><th>Base evidence</th><th>Weak case</th></tr></thead>
+<tbody>
+<tr><td>Exit proceeds</td><td>Comparable listings and dealer offers</td><td>Reduce the EV estimate before reducing both equally</td></tr>
+<tr><td>Delivered EV consumption</td><td>Metered kWh ÷ kilometres</td><td>Add charging loss and less efficient usage</td></tr>
+<tr><td>Charging price</td><td>Share of kWh at each accessible tariff</td><td>Increase the public and fast-charging share</td></tr>
+<tr><td>Annual distance</td><td>Past odometer records</td><td>Use a lower-distance year</td></tr>
+<tr><td>Insurance and tyres</td><td>Variant-specific written quotes</td><td>Use the higher credible renewal or replacement cost</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Write the decision sentence</h2>
+<p><strong>“We choose the EV only if the all-in price stays below S$[amount], its weak-case exit proceeds stay above S$[amount], charging averages no more than S$[rate]/kWh, and annual distance remains above [break-even] km.”</strong></p>
+<p>If cost passes, test whether access is workable with <a href="/home-charging-vs-public-charging-ev-singapore">home versus public charging</a> and the <a href="/is-an-ev-practical-without-home-charging-singapore">four-week no-home-charging trial</a>.</p>
+
+<h2>FAQ</h2>
+<h3>Is an EV cheaper than a petrol car in Singapore?</h3>
+<p>It depends on the exact all-in prices, exit values, distance, charging-price mix, road tax, insurance, maintenance and charging-access costs. Cheaper energy per kilometre does not prove a lower five-year total.</p>
+<h3>How do I find the EV break-even mileage?</h3>
+<p>Calculate the EV's non-energy cost disadvantage across the holding period, then divide it by the energy saving per kilometre. Divide again by the holding years.</p>
+<h3>How should I include 2026 EV incentives?</h3>
+<p>Use a final all-in purchase quote after applicable EEAI and VES benefits. Do not subtract them again. Record net ARF separately because rebates can affect later PARF proceeds.</p>
+<h3>Should I use dashboard EV consumption?</h3>
+<p>Use electricity measured at the charging-payment boundary where possible, because that is what you pay for. If only vehicle consumption is available, add a stated charging-loss assumption and test a weaker case.</p>
+
+<div id="auto-related"></div>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.nea.gov.sg/media/news/news/index/extension-of-vehicular-emissions-scheme-%28ves%29-and-ev-early-adoption-incentive-%28eeai%29-to-support-vehicle-electrification">NEA and LTA — 2026–2027 VES and EEAI changes</a></li>
+<li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/upfront-vehicle-costs/emissions-charges.html">Land Transport Authority — Vehicle emission schemes and net ARF treatment</a></li>
+<li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/upfront-vehicle-costs/tax-structure.html">Land Transport Authority — Electric-car road tax</a></li>
+<li><a href="https://www.lta.gov.sg/content/ltagov/en/industry_innovations/technologies/electric_vehicles/transitioning_to_evs.html">Land Transport Authority — Transitioning to EVs</a></li>
+</ul>
+<p class="muted"><strong>Last updated:</strong> 25 Sep 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p>
+</main>
 <div id="site-footer"></div>
-<script defer="" src="/includes.js"></script>
+<script defer src="/includes.js?v=0381"></script>
 </body>
 </html>
