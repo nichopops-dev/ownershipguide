@@ -9,9 +9,27 @@
         "date": "2026-09-24"
       },
       {
+        "url": "/can-your-household-rely-on-an-aging-car-singapore",
+        "title": "Aging Car Reliability Singapore: Test the Household Fit",
+        "desc": "Test whether an aging car still fits a Singapore household using critical trips, repair history, roadworthiness, backup transport and an explicit exit trigger.",
+        "date": "2026-09-24"
+      },
+      {
         "url": "/car-repair-urgency-guide-singapore",
         "title": "Car Repair Urgency Singapore: Stop, Diagnose or Schedule",
         "desc": "Triage a car repair in Singapore into stop driving, diagnose promptly or schedule and monitor, with an evidence file and a worked repair-budget example.",
+        "date": "2026-09-24"
+      },
+      {
+        "url": "/paid-up-old-car-vs-newer-car-with-loan-singapore",
+        "title": "Paid-Up Old Car vs Car Loan Singapore: Cost and Cash Test",
+        "desc": "Compare a paid-up old car with a newer financed car in Singapore over five years using opportunity cost, loan interest, ownership cost, cash flow and exit…",
+        "date": "2026-09-24"
+      },
+      {
+        "url": "/repair-bill-vs-replace-car-singapore",
+        "title": "Repair or Replace Car Singapore: Compare the Next 24 Months",
+        "desc": "Compare a major car repair with replacement in Singapore over the same 24-month horizon using current value, repair scope, downtime, exit value and…",
         "date": "2026-09-24"
       },
       {
@@ -24,6 +42,12 @@
         "url": "/what-car-downtime-really-costs-singapore",
         "title": "Car Downtime Cost Singapore: Price the Days Off-Road",
         "desc": "Calculate car downtime cost in Singapore from replacement transport, extra household spending, time, savings and delay risk before choosing a repair route.",
+        "date": "2026-09-24"
+      },
+      {
+        "url": "/when-an-old-car-becomes-false-economy-singapore",
+        "title": "Old Car False Economy Singapore: Build a 12-Month Ledger",
+        "desc": "Test whether a paid-up old car in Singapore is becoming false economy using current value, forward repairs, maintenance, downtime, exit value and volatility.",
         "date": "2026-09-24"
       },
       {
@@ -375,12 +399,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/can-your-household-rely-on-an-aging-car-singapore",
-        "title": "Can Your Household Rely on an Aging Car in Singapore? (2026): When “Still Running” Is No Longer…",
-        "desc": "Can your household rely on an aging car in Singapore (2026): assess reliability fit against school runs, work, caregiving, and daily logistics before an older…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/car-depreciation-singapore",
         "title": "Car Depreciation in Singapore (2026): How It Works + What It Really Costs Per Month",
         "desc": "Car depreciation in Singapore (2026) explained: why it’s the biggest cost, how to estimate depreciation per month, used vs new, COE effects, and a simple…",
@@ -717,12 +735,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/paid-up-old-car-vs-newer-car-with-loan-singapore",
-        "title": "Paid-Up Old Car vs Newer Car With Loan in Singapore (2026): Is “No Instalment” Still the Smarter…",
-        "desc": "Paid-up old car vs newer car with loan in Singapore (2026): compare no-instalment comfort against reliability, downtime, maintenance drift, and the real cost…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/parf-paper-value-deregistration-singapore",
         "title": "PARF, Paper Value, and Deregistration in Singapore (2026): What Exit Value Really Means",
         "desc": "PARF, paper value, and deregistration in Singapore for 2026: what they mean, how to think about exit value, and why these mechanics matter for depreciation…",
@@ -744,12 +756,6 @@
         "url": "/questions-to-answer-before-you-commit-to-used-motorcycle-deal-singapore",
         "title": "Questions to Answer Before You Commit to a Used-Motorcycle Deal in Singapore (2026): A Final…",
         "desc": "Questions to answer before you commit to a used-motorcycle deal in Singapore (2026): a final decision filter covering listing quality, records, inspection…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/repair-bill-vs-replace-car-singapore",
-        "title": "Repair Bill vs Replace Car in Singapore (2026): When a Big Repair Should Change the Decision",
-        "desc": "Repair bill vs replace car in Singapore (2026): decide when a major repair is still rational, when it is just delaying a replacement, and how to judge an…",
         "date": "2026-04-14"
       },
       {
@@ -882,12 +888,6 @@
         "url": "/weekend-car-rental-vs-owning-a-car-singapore",
         "title": "Weekend Car Rental vs Owning a Car in Singapore (2026): Which Makes More Sense?",
         "desc": "Weekend car rental vs owning a car in Singapore (2026): a framework for occasional-use households comparing fixed ownership drag against ad hoc access, family…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/when-an-old-car-becomes-false-economy-singapore",
-        "title": "When an Old Car Becomes False Economy in Singapore (2026): It’s Already Paid Up, but Is It Still…",
-        "desc": "When an old car becomes false economy in Singapore (2026): identify when “already paid up” stops being a strong argument because repair volatility, downtime…",
         "date": "2026-04-14"
       },
       {
