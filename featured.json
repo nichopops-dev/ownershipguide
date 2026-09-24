@@ -3,6 +3,24 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/ev-battery-degradation-singapore",
+        "title": "EV Battery Degradation Singapore: Check Range and Evidence",
+        "desc": "How to assess used-EV battery degradation in Singapore: read a dated health report, translate usable capacity into route range, and decide when uncertainty…",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/ev-battery-replacement-cost-singapore",
+        "title": "EV Battery Replacement Cost Singapore: Price the Repair Risk",
+        "desc": "How to evaluate EV battery replacement cost in Singapore: diagnose the fault, confirm warranty, get a written repair quote and compare repair value with the…",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/ev-battery-warranty-singapore",
+        "title": "EV Battery Warranty Singapore: Verify Remaining Cover",
+        "desc": "Check a used EV battery warranty in Singapore: confirm the VIN's terms, time and mileage limits, capacity threshold, transferability and claim path before…",
+        "date": "2026-09-25"
+      },
+      {
         "url": "/ev-charging-cost-singapore",
         "title": "EV Charging Cost Singapore: Price Every Delivered kWh",
         "desc": "Calculate EV charging cost in Singapore from delivered kWh, charging losses, home and public price mix, parking fees and charging time.",
@@ -24,6 +42,12 @@
         "url": "/is-an-ev-practical-without-home-charging-singapore",
         "title": "EV Without Home Charging Singapore: Run a Four-Week Test",
         "desc": "Test whether an EV works without home charging in Singapore by mapping weekly energy, observing charger availability, timing fallbacks and setting failure…",
+        "date": "2026-09-25"
+      },
+      {
+        "url": "/should-you-buy-a-used-ev-singapore",
+        "title": "Used EV Singapore: Pass the Battery and Purchase Gates",
+        "desc": "A used-EV buying decision in Singapore: verify LTA vehicle facts, battery condition and warranty, test charging, compare 36-month costs and make a written…",
         "date": "2026-09-25"
       },
       {
@@ -567,24 +591,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/ev-battery-degradation-singapore",
-        "title": "EV Battery Degradation in Singapore (2026): What Matters, What Doesn't, and When to Worry",
-        "desc": "EV battery degradation in Singapore (2026): what actually affects battery health, what buyers exaggerate, and when degradation should change your EV decision…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/ev-battery-replacement-cost-singapore",
-        "title": "EV Battery Replacement Cost in Singapore (2026): Real Risk, Warranty Buffer, and When It Matters",
-        "desc": "EV battery replacement cost in Singapore (2026): when replacement risk really matters, how warranty changes the decision, and why headline battery prices can…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/ev-battery-warranty-singapore",
-        "title": "EV Battery Warranty in Singapore (2026): Why It Matters More Than Buyers Think",
-        "desc": "EV battery warranty in Singapore (2026): why warranty matters, how it changes used-EV confidence and resale comfort, and what buyers should think about beyond…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/ev-resale-value-singapore",
         "title": "EV Resale Value in Singapore (2026): What Actually Matters",
         "desc": "EV resale value in Singapore (2026): what really shapes resale confidence, how battery fear fits into the picture, and when resale anxiety should change your…",
@@ -810,12 +816,6 @@
         "url": "/should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore",
         "title": "Should You Build Your Emergency Fund Before Buying a Motorcycle in Singapore? (2026): The Buffer…",
         "desc": "Should you build your emergency fund before buying a motorcycle in Singapore? Use a practical 2026 framework to decide whether liquidity should come before…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/should-you-buy-a-used-ev-singapore",
-        "title": "Should You Buy a Used EV in Singapore? (2026 Decision Framework)",
-        "desc": "Should you buy a used EV in Singapore (2026)? Learn when a used EV is a smart buy, when battery or charging risk becomes too high, and how to compare it…",
         "date": "2026-04-14"
       },
       {
