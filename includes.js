@@ -476,7 +476,7 @@ decisionPathOverrides: {
         { url: "/coe-loan-calculator-singapore", title: "COE Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/car-leasing-vs-buying-calculator-singapore", title: "Car Leasing vs Buying Calculator (Singapore, 2026): Which Is Cheaper?", subtopic: "calculator" },
         { url: "/used-car-vs-new-car-calculator-singapore", title: "Used vs New Car Calculator Singapore: Cost, Cash & Exit Debt", subtopic: "calculator" },
-        { url: "/ev-vs-petrol-calculator-singapore", title: "EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost", subtopic: "calculator" },
+        { url: "/ev-vs-petrol-calculator-singapore", title: "EV vs Petrol Calculator Singapore: Compare Cost and Mileage", subtopic: "calculator" },
         { url: "/coe-renew-vs-replace-calculator-singapore", title: "COE Renew vs Replace Calculator: Total Cost, Cash & Exit Debt", subtopic: "calculator" },
 
         { url: "/car-loan-rates-singapore", title: "Car Loan Rates in Singapore (2026): Flat Rate vs Effective Interest Explained", subtopic: "financing" },
@@ -529,7 +529,7 @@ decisionPathOverrides: {
         { url: "/ev-battery-degradation-singapore", title: "EV Battery Degradation Singapore: Check Range and Evidence", subtopic: "ownership-risk" },
         { url: "/ev-battery-replacement-cost-singapore", title: "EV Battery Replacement Cost Singapore: Price the Repair Risk", subtopic: "ownership-risk" },
         { url: "/should-you-buy-a-used-ev-singapore", title: "Used EV Singapore: Pass the Battery and Purchase Gates", subtopic: "decision" },
-        { url: "/ev-resale-value-singapore", title: "EV Resale Value in Singapore (2026): What Actually Matters", subtopic: "ownership-risk" },
+        { url: "/ev-resale-value-singapore", title: "EV Resale Value Singapore: Build an Exit-Price Range", subtopic: "ownership-risk" },
         { url: "/ev-battery-warranty-singapore", title: "EV Battery Warranty Singapore: Verify Remaining Cover", subtopic: "ownership-risk" },
         { url: "/hybrid-vs-petrol-singapore", title: "Hybrid vs Petrol Singapore: Calculate the Five-Year Break-Even", subtopic: "comparison" },
         { url: "/hybrid-vs-ev-singapore", title: "Hybrid vs EV Singapore: Compare Cost and Charging Fit", subtopic: "comparison" },
