@@ -1,317 +1,93 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost</title>
-<meta content="Singapore EV vs petrol calculator (2026): compare running costs and total cost over your holding period. Includes mileage-based fuel vs electricity, maintenance/road tax differences, upfront price premium, and a break-even estimate." name="description"/>
-<link href="https://ownershipguide.com/ev-vs-petrol-calculator-singapore" rel="canonical"/>
-<meta content="transport" name="og:cluster"/>
-<meta content="calculator" name="og:subtopic"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EV vs Petrol Calculator Singapore: Compare Cost and Mileage</title>
+<meta name="description" content="Compare an EV and petrol car over the same holding period using purchase premium, exit value, delivered electricity, fuel and annual cost differences; test the mileage threshold."/>
+<link rel="canonical" href="https://ownershipguide.com/ev-vs-petrol-calculator-singapore"/>
+<meta name="robots" content="index,follow"/>
+<meta name="og:cluster" content="transport"/>
+<meta name="og:subtopic" content="calculator"/>
 <meta property="og:image" content="https://ownershipguide.com/og-transport.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:url" content="https://ownershipguide.com/ev-vs-petrol-calculator-singapore"/>
-<meta property="og:title" content="EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost"/>
+<meta property="og:title" content="EV vs Petrol Calculator Singapore: Compare Cost and Mileage"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Singapore EV vs petrol calculator (2026): compare running costs and total cost over your holding period. Includes mileage-based fuel vs electricity, maintenance/road tax differences, upfront price premium, and a break-even estimate."/>
-
+<meta property="og:description" content="Compare an EV and petrol car over the same holding period using purchase premium, exit value, delivered electricity, fuel and annual cost differences; test the mileage threshold."/>
 <link href="/styles.css" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I use flat or effective rate?","acceptedAnswer":{"@type":"Answer","text":"Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison."}},{"@type":"Question","name":"Why do my numbers differ from the bank’s quote?","acceptedAnswer":{"@type":"Answer","text":"Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model."}},{"@type":"Question","name":"What horizon should I use?","acceptedAnswer":{"@type":"Answer","text":"Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity."}},{"@type":"Question","name":"What’s the best way to decide?","acceptedAnswer":{"@type":"Answer","text":"Run a conservative scenario. If the decision still holds, it’s likely robust."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "EV vs Petrol Cost Calculator (Singapore, 2026): Break\u2011Even Mileage + Total Cost", "description": "Singapore EV vs petrol calculator (2026): compare running costs and total cost over your holding period. Includes mileage-based fuel vs electricity, maintenance/road tax differences, upfront price premium, and a break-even estimate.", "url": "https://ownershipguide.com/ev-vs-petrol-calculator-singapore", "datePublished": "2026-04-14", "dateModified": "2026-04-14", "publisher": {"@type": "Organization", "name": "Ownership Guide", "url": "https://ownershipguide.com", "logo": {"@type": "ImageObject", "url": "https://ownershipguide.com/favicon-512x512.png"}}, "inLanguage": "en-SG"}</script>
+<link href="/coe-review.css?v=0383" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the result include?","acceptedAnswer":{"@type":"Answer","text":"It compares the cost difference between two specified cars, including purchase and resale differences, energy, road tax, maintenance, insurance, charging access and setup. Shared costs cancel out."}},{"@type":"Question","name":"What does the mileage threshold mean?","acceptedAnswer":{"@type":"Answer","text":"It is the annual distance where the two options tie under the entered holding period and exit values. The result may say above, below, every mileage or none."}},{"@type":"Question","name":"Is a projected resale value a rebate?","acceptedAnswer":{"@type":"Answer","text":"No. Enter a realistic sale value difference for each car. If you plan to deregister, check the vehicle-specific PARF and COE rebate instead of assuming a fixed amount."}},{"@type":"Question","name":"How do I use charging overhead?","acceptedAnswer":{"@type":"Answer","text":"Enter vehicle consumption in kWh per 100 km and an estimated percentage uplift to billed delivered energy. If consumption is already measured at the meter, set overhead to zero."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"EV vs Petrol Calculator Singapore: Compare Cost and Mileage","description":"Compare an EV and petrol car over the same holding period using purchase premium, exit value, delivered electricity, fuel and annual cost differences; test the mileage threshold.","url":"https://ownershipguide.com/ev-vs-petrol-calculator-singapore","datePublished":"2026-04-14","dateModified":"2026-09-26","publisher":{"@type":"Organization","name":"Ownership Guide","url":"https://ownershipguide.com"},"inLanguage":"en-SG"}</script>
 </head>
 <body>
 <div id="site-header"></div>
 <main class="container">
 <p class="nav"><a href="/">← Back to Ownership Guide</a></p>
-<nav class="breadcrumbs">
-<a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/calculators/">Calculators</a>
-</nav>
-<h1>EV vs Petrol Cost Calculator (Singapore, 2026)</h1>
-<p class="muted">
-      This model answers: <strong>“At my mileage, is an EV cheaper than a petrol car — and when does it break even?”</strong>
-      It’s a planning model (good for first-pass decisions). Real ownership varies by COE cycle, insurance, charging access, and resale.
-    </p>
-<section class="card">
-<h2>Inputs</h2>
+<nav class="breadcrumbs"><a href="/">Home</a> / <a href="/transport/">Transport</a> / <a href="/calculators/">Calculators</a></nav>
+<h1>Compare an EV and Petrol Car Over the Same Hold</h1>
+<div class="og-card og-card--hero"><p><strong>Use this calculator for a real pair of cars.</strong> Enter the EV's purchase-price premium and its expected resale advantage or shortfall, then add differences in energy and annual costs. Positive net savings means the EV is cheaper. The mileage threshold is conditional on those exit values.</p><div class="og-cta-row"><a class="btn btn-primary" href="/ev-resale-value-singapore">Build an exit-value range →</a><a class="btn btn-secondary" href="/ev-vs-petrol-cost-singapore">Read the full cost guide</a></div></div>
+<p>This is a <strong>difference model</strong>, so shared costs cancel. It does not report each car's full running cost. It omits finance interest, parking/ERP shared by both, tax changes after purchase, and repairs unless you add a justified cost difference. Compare quotes for the same holding period and COE position. The figures below are illustrative defaults; replace them before relying on the result.</p>
+<form id="evPetrolForm" class="card" novalidate>
+<h2>Usage and energy</h2>
 <div class="og-form-grid">
-<div>
-<label for="annualKm">Annual mileage (km/year)</label>
-<input id="annualKm" min="0" step="100" type="number" value="15000"/>
+<div><label for="annualKm">Annual distance (km)</label><input id="annualKm" type="number" min="0" max="100000" step="100" value="15000"/></div>
+<div><label for="years">Holding period (years)</label><input id="years" type="number" min="0.1" max="10" step="0.1" value="5"/></div>
+<div><label for="petrolKml">Petrol efficiency (km/L)</label><input id="petrolKml" type="number" min="0.1" step="0.1" value="12"/></div>
+<div><label for="petrolPrice">Petrol price (S$/L)</label><input id="petrolPrice" type="number" min="0" step="0.01" value="2.80"/></div>
+<div><label for="evKwhPer100">EV vehicle use (kWh/100 km)</label><input id="evKwhPer100" type="number" min="0.1" step="0.1" value="18"/></div>
+<div><label for="chargingLossPct">Billed-energy uplift over vehicle use (%)</label><input id="chargingLossPct" type="number" min="0" max="99" step="1" value="10"/></div>
+<div><label for="elecPrice">Blended delivered-electricity price (S$/kWh)</label><input id="elecPrice" type="number" min="0" step="0.01" value="0.35"/></div>
 </div>
-<div>
-<label for="years">Holding period (years)</label>
-<input id="years" min="1" step="1" type="number" value="5"/>
+<p class="muted">The uplift converts vehicle-displayed kWh to a planning estimate of billed kWh. If your energy figure is already measured at the charger, set it to 0%. Build the blended price from actual home/public use and fees with the <a href="/ev-charging-cost-singapore">charging guide</a>.</p>
+<h2>Price, exit and other differences</h2>
+<div class="og-form-grid">
+<div><label for="evUpfront">EV purchase premium (EV − petrol, S$)</label><input id="evUpfront" type="number" step="100" value="15000"/></div>
+<div><label for="resaleDelta">Exit sale-value difference (EV − petrol, S$)</label><input id="resaleDelta" type="number" step="100" value="0"/></div>
+<div><label for="evRoadTaxDelta">Annual road-tax difference (EV − petrol, S$)</label><input id="evRoadTaxDelta" type="number" step="50" value="200"/></div>
+<div><label for="evMaintDelta">Annual maintenance difference (EV − petrol, S$)</label><input id="evMaintDelta" type="number" step="50" value="-300"/></div>
+<div><label for="evInsuranceDelta">Annual insurance difference (EV − petrol, S$)</label><input id="evInsuranceDelta" type="number" step="50" value="0"/></div>
+<div><label for="evAccessAnnual">Annual EV-only charging access/parking (S$)</label><input id="evAccessAnnual" type="number" min="0" step="50" value="0"/></div>
+<div><label for="evSetup">EV-only one-time charging setup (S$)</label><input id="evSetup" type="number" min="0" step="100" value="0"/></div>
 </div>
-<div>
-<label for="petrolKml">Petrol efficiency (km/L)</label>
-<input id="petrolKml" min="1" step="0.1" type="number" value="12"/>
-</div>
-<div>
-<label for="petrolPrice">Petrol price (SGD/L)</label>
-<input id="petrolPrice" min="0" step="0.01" type="number" value="2.80"/>
-</div>
-<div>
-<label for="evKwhPer100">EV energy use (kWh/100km)</label>
-<input id="evKwhPer100" min="1" step="0.1" type="number" value="18"/>
-</div>
-<div>
-<label for="elecPrice">Electricity price (SGD/kWh)</label>
-<input id="elecPrice" min="0" step="0.01" type="number" value="0.35"/>
-</div>
-<div>
-<label for="evUpfront">EV upfront premium vs petrol (SGD)</label>
-<input id="evUpfront" step="100" type="number" value="15000"/>
-</div>
-<div>
-<label for="evRoadTaxDelta">EV road tax difference (EV − petrol, SGD/year)</label>
-<input id="evRoadTaxDelta" step="50" type="number" value="200"/>
-</div>
-<div>
-<label for="evMaintDelta">EV maintenance difference (EV − petrol, SGD/year)</label>
-<input id="evMaintDelta" step="50" type="number" value="-300"/>
-</div>
-<div>
-<label for="resaleDelta">Resale difference at end (EV − petrol, SGD)</label>
-<input id="resaleDelta" step="200" type="number" value="0"/>
-</div>
-</div>
-<div class="btn-row">
-<button class="btn btn-primary" id="btnCalc">Calculate</button>
-<button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button>
-</div>
-</section>
-<section class="card">
+<p class="muted">A negative purchase premium means the EV costs less to buy. A negative resale difference means it sells for less. Use actual road-tax and insurance quotes. Count an EV-only parking charge here only when the petrol option would avoid it.</p>
+<div class="btn-row"><button class="btn btn-primary" id="btnCalc" type="submit">Calculate</button><button class="btn btn-secondary" id="btnReset" type="button">Reset defaults</button></div>
+</form>
+<section class="card" aria-live="polite">
 <h2>Results</h2>
+<p id="calcError" role="alert"></p>
 <div class="og-kpi-grid">
-<div class="kpi">
-<div class="kpi-label">EV running cost</div>
-<div class="kpi-value" id="evRunMonthly">—</div>
-<div class="kpi-sub">electricity + road tax + maintenance (monthly)</div>
+<div class="kpi"><div class="kpi-label">EV electricity per month</div><div class="kpi-value" id="evRunMonthly">—</div><div class="kpi-sub">Billed-energy estimate only</div></div>
+<div class="kpi"><div class="kpi-label">Petrol fuel per month</div><div class="kpi-value" id="petrolRunMonthly">—</div><div class="kpi-sub">Fuel only</div></div>
+<div class="kpi"><div class="kpi-label">EV mileage threshold</div><div class="kpi-value" id="breakeven">—</div><div class="kpi-sub">At this holding period and exit assumption</div></div>
+<div class="kpi"><div class="kpi-label">EV net saving over hold</div><div class="kpi-value" id="netDiff">—</div><div class="kpi-sub">Positive = EV cheaper; negative = petrol cheaper</div></div>
 </div>
-<div class="kpi">
-<div class="kpi-label">Petrol running cost</div>
-<div class="kpi-value" id="petrolRunMonthly">—</div>
-<div class="kpi-sub">fuel + road tax + maintenance (monthly)</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Break‑even</div>
-<div class="kpi-value" id="breakeven">—</div>
-<div class="kpi-sub">years to recover EV premium</div>
-</div>
-<div class="kpi">
-<div class="kpi-label">Net difference over holding period</div>
-<div class="kpi-value" id="netDiff">—</div>
-<div class="kpi-sub">positive = EV cheaper</div>
-</div>
-</div>
-<div class="table-wrap">
-<table class="table">
-<thead>
-<tr>
-<th>Component</th>
-<th class="right">EV (SGD)</th>
-<th class="right">Petrol (SGD)</th>
-</tr>
-</thead>
-<tbody id="tbody">
-<tr><td class="muted" colspan="3">Enter inputs and click Calculate.</td></tr>
-</tbody>
-</table>
-</div>
-<p class="muted" style="margin-top:10px">
-        Tip: if your charging is mostly public fast charging, your electricity price may be higher. If you mostly charge at home, it may be lower.
-      </p>
-</section>
-<section class="card">
-<h2>Next steps</h2>
-<ul>
-<li><a href="/car-ownership-cost-calculator-singapore">All‑in monthly car ownership cost calculator</a> (adds depreciation + financing)</li>
-<li><a href="/used-car-vs-new-car-calculator-singapore">Used vs new car calculator</a></li>
-<li><a href="/ev-charging-cost-singapore">EV charging cost guide</a></li>
-<li><a href="/home-charging-vs-public-charging-ev-singapore">Home charging vs public charging</a></li>
-<li><a href="/is-an-ev-practical-without-home-charging-singapore">Is an EV practical without home charging?</a></li>
-<li><a href="/transport/financing/">Transport financing hub</a></li>
-</ul>
+<table class="og-table"><thead><tr><th>Component</th><th>EV − petrol</th><th>Basis</th></tr></thead><tbody id="tbody"></tbody></table>
+<p class="muted">The difference rows reconcile to net extra EV cost. A negative row helps the EV. This compares economic ownership cost, not a loan cash-flow schedule. If you finance either car, compare the actual interest and exit debt separately.</p>
 </section>
 <section class="og-editorial" id="og-editorial-ev-petrol">
-<h2>EV vs petrol: use break‑even properly</h2>
-<p>This calculator answers: <strong>at your mileage</strong>, when does an EV’s higher upfront cost get offset by lower running cost? The result is sensitive to charging cost assumptions, efficiency, and resale value.</p>
-<h3>Best practice</h3>
-<ul>
-<li>Run two electricity price scenarios (home charging vs public charging).</li>
-<li>Use a conservative resale delta (EV resale is still evolving).</li>
-<li>If your mileage is low, break‑even may never happen — that’s still a valid result.</li>
-</ul>
-<h3>FAQ</h3><div class="og-faq"><details><p>Use flat only if your quote is explicitly a flat rate. If you have an APR/effective rate, use effective for a more direct comparison.</p></details><details><p>Banks may include fees differently, round instalments, or use different compounding conventions. Treat this as a planning model.</p></details><details><p>Use the period you realistically expect to hold the asset. If unsure, test 3, 5 and 10 years to see sensitivity.</p></details><details><p>Run a conservative scenario. If the decision still holds, it’s likely robust.</p></details></div><h3>Worked example</h3><p>Run one base case and one conservative case. For example, increase the key cost (rate/maintenance/vacancy) by 20% and reduce resale by 10%. If the winner stays the same, your decision is robust.</p></section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Using the calculator step by step</h2>
-<p>Use this to compare total running cost of an EV vs petrol car based on your mileage, energy prices, and maintenance assumptions.</p><ol><li>Enter monthly mileage.</li><li>Enter electricity vs petrol cost assumptions.</li><li>Compare monthly running cost difference; then consider depreciation separately.</li></ol>
+<h2>What the mileage threshold means</h2>
+<p>The result solves for annual distance at which the two choices tie <em>over your entered holding period</em>. It includes your purchase and exit-value difference. It is not a prediction that a future resale price arrives gradually each year. If electricity is cheaper per kilometre but the EV has more fixed cost, it says the EV wins <strong>above</strong> the threshold. If electricity is dearer but the EV has less fixed cost, the EV may win <strong>below</strong> it. Some input combinations favour one car at every distance.</p>
+<h2>Make the exit assumption defensible</h2>
+<p>Obtain current dealer trade-in and direct-sale ranges for comparable cars, then adjust for the expected sale date, COE life and battery-warranty runway. Do not treat today's quote as a guaranteed future bid. Enter the <strong>difference between the two forecast sale prices</strong>, not a full car price. If you expect to deregister instead of sell, use <a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/digitalservices/Enquire_PARF_COE_Rebate_for_Vehicles_Not_Yet_Deregistered.html" target="_blank" rel="nofollow noopener">LTA's vehicle-specific rebate enquiry</a> for the relevant date and keep sale value and rebate mutually exclusive.</p>
+<h2>Run three scenarios</h2>
+<ol><li><strong>Base:</strong> realistic tariff mix and documented exit estimates.</li><li><strong>Weak EV exit:</strong> lower the EV resale difference by S$5,000 or by a range justified by bids. This changes EV net savings by exactly the same amount.</li><li><strong>Public-charging stress:</strong> use the delivered tariff you would actually face and include access/parking fees. If the winner flips, investigate charging access before paying a deposit.</li></ol>
+<p>Read <a href="/ev-resale-value-singapore">the resale worksheet</a>, <a href="/ev-battery-degradation-singapore">battery evidence guide</a> and <a href="/ev-battery-warranty-singapore">warranty guide</a> before assuming that a used EV will retain a particular value. The <a href="/should-you-buy-a-used-ev-singapore">used-EV purchase gates</a> combine these checks.</p>
+<h2>FAQ</h2>
+<h3>Does this show each car's full cost?</h3><p>No. It shows their difference; costs common to both cancel.</p>
+<h3>Does mileage threshold mean a year of payback?</h3><p>No. It is annual distance needed to tie over the entered hold and exit values.</p>
+<h3>Can I enter an EV resale shortfall?</h3><p>Yes. Enter a negative EV-minus-petrol sale-value difference.</p>
+<h3>What if there is no home charging?</h3><p>Use a realistic blended public price, any access charges and a separate <a href="/is-an-ev-practical-without-home-charging-singapore">practicality test</a>.</p>
 </section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Scenario library (sanity checks)</h2>
-<p>Use these simplified scenarios as sanity checks. Replace the numbers with your own situation.</p>
-<ul><li><strong>Example A (low mileage):</strong> <p>800 km/month. If usage is low, fuel savings may be small; depreciation and upfront price matter more.</p></li><li><strong>Example B (high mileage):</strong> <p>2,000 km/month. Higher mileage makes energy cost differences more meaningful. Test electricity tariff changes.</p></li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<h2 style="margin-top:0">Methodology &amp; assumptions</h2>
-<ul><li>Energy prices change; test ranges.</li><li>Excludes depreciation differences; use a full ownership cost model for final decision.</li><li>Planning model; not advice.</li></ul>
-</section>
-<section class="box" style="margin-top:18px">
-<p>After you run the numbers, ask a second question: “If the cost difference is smaller than expected, which option still fits my lifestyle better?” This page is strongest when you combine the result with practical factors like charging convenience, route pattern, and whether you value simplicity over experimentation.</p>
-<h2>How to turn the result into a decision</h2>
-<ul>
-<li><strong>Annual mileage</strong>: the single biggest swing factor for the running-cost story.</li>
-<li><strong>Home charging reality</strong>: if you cannot charge cheaply and conveniently, the EV case changes.</li>
-<li><strong>Ownership period</strong>: the longer you hold, the more running-cost differences compound.</li>
-<li><strong>Depreciation expectations</strong>: never assume the energy-cost advantage alone determines total value.</li>
-</ul>
-<h2>Inputs that deserve a second look</h2>
-<p>This is why break-even matters. A break-even is not just a neat number; it tells you how much usage you need before the efficiency advantage overcomes the rest of the cost stack. If you drive very little, a theoretical EV advantage may never show up in your actual ownership period.</p>
-<p>The most common mistake is to compare only one cost line — usually charging versus petrol — and ignore the bigger ownership stack. The right way to use this page is to treat energy cost as one layer inside a broader ownership decision. If an EV saves on running cost but carries a much higher upfront or financing burden, the “cheaper per km” story can be true and yet incomplete. Likewise, if your mileage is low, the energy-cost advantage may take much longer to matter than people expect.</p>
-<h2>Where EV vs petrol comparisons usually go wrong</h2>
-<p>Before acting on the result, ask whether the output still makes sense after a conservative stress test. Good calculator use is not about precision to the last dollar; it is about avoiding decisions that only work in the optimistic case. If the answer still holds after you use harsher assumptions, that is usually a sign the decision is robust enough to move forward.</p>
-<h2>Output checklist</h2>
-<p>Re-run the calculator whenever one of the major assumptions changes meaningfully: rate, tenure, resale value, rent, energy cost, or your expected holding period. Small updates to these inputs often matter more than trying to make the original run more precise.</p><h2>When to re-run the model</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the calculator cannot decide for you</h2>
-<p>Use the model to see which assumptions matter most. Then spend your energy validating those assumptions rather than polishing less important inputs.</p>
-<p>Even a good calculator cannot fully price convenience, stress, optionality, or the value of keeping your finances simple. That is why the best use of a tool like this is to narrow the range of sensible choices, not to pretend it can replace judgement. When the result is close, qualitative factors deserve more weight.</p>
-<h2>What the model leaves out</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Common interpretation mistakes</h2>
-<ul>
-<li>Reading one “base case” as a certainty.</li>
-<li>Forgetting fees, taxes, or frictional costs that sit outside the neat formula.</li>
-<li>Using unrealistic tenure or holding-period assumptions.</li>
-<li>Comparing options that are not truly substitutes.</li>
-</ul>
-<h2>Mistakes to avoid when reading the output</h2>
-<p>Run one optimistic case, one conservative case, and one “messy real life” case. The messy case is the most useful: slightly worse rates, slightly lower resale, slightly higher costs, and a shorter holding period than planned. If the decision still looks acceptable, you have a more resilient answer.</p>
-<h2>Quick scenario ideas</h2><p>These scenarios help separate genuine EV economics from headline enthusiasm.</p><ul><li><strong>Driver with reliable charging access:</strong> an owner with home or regular workplace charging usually gets a cleaner EV case because charging cost and convenience are more predictable.</li><li><strong>High-mileage driver without convenient charging:</strong> EV ownership can still work, but time friction and charging access may narrow the apparent cost advantage.</li><li><strong>Low-mileage buyer tempted by the EV story:</strong> if you drive very little, the fuel savings may simply take too long to recover a higher purchase premium.</li></ul>
-<h2>When the EV advantage usually holds up</h2>
-<p>The EV case is strongest when your pattern is boring in a good way. You drive regularly enough for lower running cost to matter. You have reliable access to charging at home or at work. You are not forced to rely on inconvenient public charging as your main routine. And you are willing to hold the car long enough for the purchase decision to be judged over several years instead of a short, speculative window.</p>
-<p>That matters because EV economics in Singapore are rarely decided by one dramatic line item. They are decided by whether the ownership pattern is stable enough for smaller recurring advantages to compound. If charging is predictable, downtime is low, and your mileage is not trivial, the lower running-cost logic has room to work. If those conditions are weak, the spreadsheet may still show a paper advantage, but the lived experience may narrow or erase it.</p>
-<p>A useful stress test is to ask: if charging becomes slightly less convenient, electricity slightly more expensive, and resale slightly softer than expected, does the EV still look acceptable? If yes, the decision is probably being carried by real economics rather than optimism. If no, the result was fragile to begin with.</p>
-<h2>What often makes petrol look cheaper than it really is</h2>
-<p>Petrol cars can feel easier to understand because the workflow is familiar. That familiarity often makes buyers under-model the recurring burden. People remember headline purchase price and maybe fuel, but fail to treat maintenance, wear-related repairs, and stop-start urban driving patterns as part of the ownership picture. A cheaper entry number is not the same as a cheaper multi-year decision.</p>
-<p>This is why the model should be used alongside pages such as <a href="/car-maintenance-repair-cost-singapore">car maintenance and repair cost in Singapore</a> and the <a href="/car-ownership-cost-calculator-singapore">car ownership cost calculator</a>. The question is not whether petrol is simpler. The question is whether the simpler routine actually produces a better total outcome after usage, maintenance, and replacement risk are treated honestly.</p>
+<div class="box"><strong>Next steps</strong><p><a href="/ev-vs-petrol-cost-singapore">Full five-year ledger</a> · <a href="/ev-resale-value-singapore">Build an exit range</a> · <a href="/ev-charging-cost-singapore">Price delivered kWh</a></p></div>
 <div id="auto-related"></div>
 <h2>References</h2>
-<ul><li><a href="https://www.lta.gov.sg/" rel="nofollow noopener" target="_blank">LTA</a></li></ul><p class="muted" style="margin-top:12px;margin-bottom:0"><a href="/editorial-policy">Editorial Policy</a>, <a href="/advertising-disclosure">Advertising Disclosure</a>, and <a href="/corrections">Corrections</a>.</p>
-</section>
-<p><strong>Last updated:</strong> 14 Apr 2026</p></main>
+<ul><li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/rebates/parf-coe-rebate.html" target="_blank" rel="nofollow noopener">LTA: PARF/COE rebate rules</a></li><li><a href="https://onemotoring.lta.gov.sg/content/onemotoring/home/digitalservices/Enquire_PARF_COE_Rebate_for_Vehicles_Not_Yet_Deregistered.html" target="_blank" rel="nofollow noopener">LTA: vehicle-specific rebate enquiry</a></li><li><a href="https://www.ema.gov.sg/consumer-information/electricity/buying-electricity/buying-at-regulated-tariff" target="_blank" rel="nofollow noopener">EMA: current regulated electricity tariff</a></li></ul>
+<p class="muted"><strong>Last updated:</strong> 26 Sep 2026 · <a href="/editorial-policy">Editorial Policy</a> · <a href="/advertising-disclosure">Advertising Disclosure</a> · <a href="/corrections">Corrections</a></p>
+</main>
 <div id="site-footer"></div>
-<script defer="" src="/includes.js"></script>
-<script>
-    const $ = (id) => document.getElementById(id);
-
-    function n(x){ return Number.isFinite(x) ? x : 0; }
-    function fmtMoney(x){
-      const v = Number(x);
-      if(!Number.isFinite(v)) return "—";
-      return "S$ " + v.toLocaleString(undefined,{maximumFractionDigits:0});
-    }
-    function fmtMoney2(x){
-      const v = Number(x);
-      if(!Number.isFinite(v)) return "—";
-      return "S$ " + v.toLocaleString(undefined,{maximumFractionDigits:2});
-    }
-
-    function calc(){
-      const annualKm = n(parseFloat($("annualKm").value));
-      const years = Math.max(1, n(parseFloat($("years").value)));
-      const petrolKml = Math.max(1e-6, n(parseFloat($("petrolKml").value)));
-      const petrolPrice = n(parseFloat($("petrolPrice").value));
-      const evKwhPer100 = Math.max(1e-6, n(parseFloat($("evKwhPer100").value)));
-      const elecPrice = n(parseFloat($("elecPrice").value));
-      const evUpfront = n(parseFloat($("evUpfront").value));
-      const evRoadTaxDelta = n(parseFloat($("evRoadTaxDelta").value)); // EV - petrol
-      const evMaintDelta = n(parseFloat($("evMaintDelta").value));     // EV - petrol
-      const resaleDelta = n(parseFloat($("resaleDelta").value));       // EV - petrol at end
-
-      const annualFuelLitres = annualKm / petrolKml;
-      const petrolFuelCostY = annualFuelLitres * petrolPrice;
-
-      const evKwhY = (annualKm/100) * evKwhPer100;
-      const evElecCostY = evKwhY * elecPrice;
-
-      // Differences EV - Petrol (positive means EV costs more)
-      const roadTaxDeltaY = evRoadTaxDelta;
-      const maintDeltaY = evMaintDelta;
-
-      const evRunY = evElecCostY + roadTaxDeltaY + maintDeltaY;
-      const petrolRunY = petrolFuelCostY;
-
-      // For table clarity, build both sides with deltas
-      const petrolRoadTaxY = 0;
-      const petrolMaintY = 0;
-
-      const evRunMonthly = evRunY/12;
-      const petrolRunMonthly = (petrolFuelCostY + petrolRoadTaxY + petrolMaintY)/12;
-
-      $("evRunMonthly").textContent = fmtMoney(evRunMonthly);
-      $("petrolRunMonthly").textContent = fmtMoney(petrolRunMonthly);
-
-      // Total cost over horizon
-      const petrolTotal = years * (petrolFuelCostY + petrolRoadTaxY + petrolMaintY);
-      const evTotal = evUpfront + years * (evElecCostY + (petrolRoadTaxY+roadTaxDeltaY) + (petrolMaintY+maintDeltaY)) - resaleDelta;
-
-      const net = petrolTotal - evTotal; // positive => EV cheaper (lower total)
-
-      // Break-even (years)
-      const annualSavings = (petrolFuelCostY + petrolRoadTaxY + petrolMaintY) - (evElecCostY + (petrolRoadTaxY+roadTaxDeltaY) + (petrolMaintY+maintDeltaY));
-      let be = "No break‑even";
-      if (annualSavings > 0){
-        const beYears = Math.max(0, (evUpfront - resaleDelta) / annualSavings);
-        be = beYears === 0 ? "Immediate" : (beYears.toFixed(1) + " years");
-      }
-
-      $("breakeven").textContent = be;
-      $("netDiff").textContent = (net>=0? fmtMoney(net) : "− " + fmtMoney(Math.abs(net)).replace("S$ ","S$ "));
-
-      const rows = [
-        ["Energy cost / year", years*evElecCostY, years*petrolFuelCostY],
-        ["Road tax difference (EV − petrol) / year", years*roadTaxDeltaY, 0],
-        ["Maintenance difference (EV − petrol) / year", years*maintDeltaY, 0],
-        ["Upfront premium (EV − petrol)", evUpfront, 0],
-        ["Resale difference at end (EV − petrol)", -resaleDelta, 0],
-        ["Total over holding period", evTotal, petrolTotal],
-      ];
-
-      const tbody = $("tbody");
-      tbody.innerHTML = rows.map(r=>{
-        return `<tr>
-          <td>${r[0]}</td>
-          <td class="right">${fmtMoney2(r[1])}</td>
-          <td class="right">${fmtMoney2(r[2])}</td>
-        </tr>`;
-      }).join("");
-    }
-
-    function reset(){
-      $("annualKm").value = 15000;
-      $("years").value = 5;
-      $("petrolKml").value = 12;
-      $("petrolPrice").value = 2.80;
-      $("evKwhPer100").value = 18;
-      $("elecPrice").value = 0.35;
-      $("evUpfront").value = 15000;
-      $("evRoadTaxDelta").value = 200;
-      $("evMaintDelta").value = -300;
-      $("resaleDelta").value = 0;
-      calc();
-    }
-
-    $("btnCalc").addEventListener("click", calc);
-    $("btnReset").addEventListener("click", reset);
-    reset();
-  </script>
+<script defer src="/includes.js?v=0383"></script>
+<script defer src="/ev-petrol-model.js?v=0383"></script>
 </body>
 </html>

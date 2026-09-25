@@ -1,7 +1,19 @@
 {
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "cluster_pages": {
     "transport": [
+      {
+        "url": "/ev-resale-value-singapore",
+        "title": "EV Resale Value Singapore: Build an Exit-Price Range",
+        "desc": "Estimate an EV resale range in Singapore using comparable bids, COE life, battery and warranty evidence, then stress-test its effect on total ownership cost.",
+        "date": "2026-09-26"
+      },
+      {
+        "url": "/ev-vs-petrol-calculator-singapore",
+        "title": "EV vs Petrol Calculator Singapore: Compare Cost and Mileage",
+        "desc": "Compare an EV and petrol car over the same holding period using purchase premium, exit value, delivered electricity, fuel and annual cost differences; test…",
+        "date": "2026-09-26"
+      },
       {
         "url": "/ev-battery-degradation-singapore",
         "title": "EV Battery Degradation Singapore: Check Range and Evidence",
@@ -588,18 +600,6 @@
         "url": "/does-your-household-need-a-second-car-singapore",
         "title": "Does Your Household Need a Second Car in Singapore? (2026 Decision Framework)",
         "desc": "Does your household need a second car in Singapore (2026)? A decision framework covering coordination pain, marginal convenience, parking and affordability…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/ev-resale-value-singapore",
-        "title": "EV Resale Value in Singapore (2026): What Actually Matters",
-        "desc": "EV resale value in Singapore (2026): what really shapes resale confidence, how battery fear fits into the picture, and when resale anxiety should change your…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/ev-vs-petrol-calculator-singapore",
-        "title": "EV vs Petrol Cost Calculator (Singapore, 2026): Break‑Even Mileage + Total Cost",
-        "desc": "Singapore EV vs petrol calculator (2026): compare running costs and total cost over your holding period. Includes mileage-based fuel vs electricity…",
         "date": "2026-04-14"
       },
       {
