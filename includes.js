@@ -466,12 +466,12 @@ decisionPathOverrides: {
         { url: "/high-excess-vs-low-excess-car-insurance-singapore", title: "High vs Low Car Insurance Excess Singapore: Compare Cash Risk", subtopic: "insurance" },
         { url: "/named-driver-vs-any-authorised-driver-car-insurance-singapore", title: "Named vs Authorised Driver Car Insurance Singapore", subtopic: "insurance" },
         { url: "/when-cheap-car-insurance-becomes-false-savings-singapore", title: "Compare Car Insurance Quotes Singapore: Normalize the Contract", subtopic: "insurance" },
-        { url: "/car-vs-ride-hailing-cost", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
+        { url: "/car-vs-ride-hailing-cost", title: "Car vs Ride-Hailing Singapore: Find Your Break-Even", subtopic: "ridehailing" },
         { url: "/buy-family-car-or-keep-bigger-cash-buffer-before-second-child-singapore", title: "Buy a Family Car or Keep a Bigger Cash Buffer Before a Second Child in Singapore (2026): Which Choice Creates More Stability?", subtopic: "bridge" },
         { url: "/car-affordability-calculator-singapore", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
         { url: "/car-ownership-cost-calculator-singapore", title: "Car Ownership Cost Calculator (Singapore, 2026): True All-In Monthly Cost (5-Year TCO)", subtopic: "calculator" },
         
-        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
+        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Calculator Singapore: Price Both Routes", subtopic: "calculator" },
         { url: "/car-loan-calculator-singapore", title: "Car Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/coe-loan-calculator-singapore", title: "COE Loan Calculator (Singapore): Monthly Instalment + Total Interest (Flat vs Effective)", subtopic: "calculator" },
         { url: "/car-leasing-vs-buying-calculator-singapore", title: "Car Leasing vs Buying Calculator (Singapore, 2026): Which Is Cheaper?", subtopic: "calculator" },
@@ -609,9 +609,9 @@ decisionPathOverrides: {
         { url: "/second-car-vs-ride-hailing-singapore", title: "Second Car vs Ride-Hailing in Singapore (2026): Which Is Smarter for a One-Car Household?", subtopic: "comparison" },
         { url: "/car-sharing-vs-ride-hailing-singapore", title: "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?", subtopic: "comparison" },
         { url: "/coe-renew-vs-replace-singapore", title: "Renew COE vs Replace Car Singapore: Total Cost & Upfront Cash", subtopic: "comparison" },
-        { url: "/car-vs-ride-hailing-cost", title: "Car vs Ride-Hailing in Singapore: Which Is Cheaper?", subtopic: "ridehailing" },
+        { url: "/car-vs-ride-hailing-cost", title: "Car vs Ride-Hailing Singapore: Find Your Break-Even", subtopic: "ridehailing" },
         { url: "/car-affordability-calculator-singapore", title: "Car Affordability Calculator Singapore (2026): Stress-Tested True Monthly Cost", subtopic: "calculator" },
-        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Break-Even Calculator", subtopic: "calculator" },
+        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Calculator Singapore: Price Both Routes", subtopic: "calculator" },
         { url: "/is-it-worth-owning-a-car-singapore", title: "Is It Worth Owning a Car in Singapore? (2026 Decision Framework)", subtopic: "decision" },
         { url: "/cheapest-car-to-own-singapore", title: "Cheapest Car to Own in Singapore (2026): What “Cheap” Actually Means", subtopic: "affordability" },
         { url: "/how-much-salary-to-own-a-car-singapore", title: "How Much Salary Do You Need to Own a Car in Singapore? (2026 Reality Check)", subtopic: "affordability" },
@@ -920,7 +920,7 @@ decisionPathOverrides: {
         { url: "/pay-down-home-loan-or-help-aging-parents-now-singapore", title: "Pay Down Home Loan or Help Aging Parents Now in Singapore (2026): Which Obligation Should Get the Next Dollar First?", subtopic: "comparison" }
       ],
       bridges: [
-        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Break-Even Calculator", cluster: "transport" },
+        { url: "/car-vs-ride-hailing-calculator", title: "Car vs Ride-Hailing Calculator Singapore: Price Both Routes", cluster: "transport" },
         { url: "/car-ownership-cost", title: "The Real Cost of Owning a Car in Singapore (5-Year Breakdown)", cluster: "transport" },
         { url: "/bigger-home-vs-education-budget-singapore", title: "Bigger Home vs Education Budget in Singapore (2026): Which Family Upgrade Actually Improves the Next 10 Years?", cluster: "family" },
         { url: "/pay-down-mortgage-vs-save-for-university-singapore", title: "Pay Down Mortgage vs Save for University in Singapore (2026): Which Future Obligation Should Get the Next Dollar?", cluster: "family" }
