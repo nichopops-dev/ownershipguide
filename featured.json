@@ -3,6 +3,18 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/car-vs-ride-hailing-calculator",
+        "title": "Car vs Ride-Hailing Calculator Singapore: Price Both Routes",
+        "desc": "Compare car ownership with ride-hailing in Singapore using vehicle value loss, operating costs, finance interest and transport still needed under each route.",
+        "date": "2026-09-26"
+      },
+      {
+        "url": "/car-vs-ride-hailing-cost",
+        "title": "Car vs Ride-Hailing Singapore: Find Your Break-Even",
+        "desc": "Compare car ownership and ride-hailing in Singapore over the same holding period. Count vehicle value loss, operating costs, borrowing, and transport still…",
+        "date": "2026-09-26"
+      },
+      {
         "url": "/ev-resale-value-singapore",
         "title": "EV Resale Value Singapore: Build an Exit-Price Range",
         "desc": "Estimate an EV resale range in Singapore using comparable bids, COE life, battery and warranty evidence, then stress-test its effect on total ownership cost.",
@@ -540,18 +552,6 @@
         "url": "/car-subscription-vs-buying-singapore",
         "title": "Car Subscription vs Buying in Singapore (2026): When Paying More for Flexibility Is Actually…",
         "desc": "Car subscription vs buying in Singapore (2026): compare flexibility premium, uncertainty, included-cost convenience, timeline risk, and when subscription is…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-vs-ride-hailing-calculator",
-        "title": "Car vs Ride-Hailing Break-Even Calculator (Singapore, 2026)",
-        "desc": "Calculate your 5-year break-even point: car ownership vs ride-hailing in Singapore (2026). Choose a transparent benchmark profile and see what shifts the…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-vs-ride-hailing-cost",
-        "title": "Car vs Ride-Hailing in Singapore (2026): Which Is Actually Cheaper?",
-        "desc": "Car vs ride-hailing in Singapore (2026): a 5-year break-even framework, why instalments mislead, how COE/depreciation shifts outcomes, and a clean decision…",
         "date": "2026-04-14"
       },
       {
