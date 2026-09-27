@@ -3,6 +3,18 @@
   "cluster_pages": {
     "transport": [
       {
+        "url": "/car-sharing-vs-owning-a-car-singapore",
+        "title": "Car-Sharing vs Owning a Car Singapore: Compare Full Costs",
+        "desc": "Compare car-sharing with car ownership in Singapore using complete household transport costs, a five-year worked example, an access test and a break-even for…",
+        "date": "2026-09-26"
+      },
+      {
+        "url": "/car-sharing-vs-ride-hailing-singapore",
+        "title": "Car-Sharing vs Ride-Hailing Singapore: Price Each Trip",
+        "desc": "Compare a shared-car booking with ride-hailing for a direct return trip or multi-stop day in Singapore. Count time, distance, fees, parking, pickup and a…",
+        "date": "2026-09-26"
+      },
+      {
         "url": "/car-vs-ride-hailing-calculator",
         "title": "Car vs Ride-Hailing Calculator Singapore: Price Both Routes",
         "desc": "Compare car ownership with ride-hailing in Singapore using vehicle value loss, operating costs, finance interest and transport still needed under each route.",
@@ -24,6 +36,18 @@
         "url": "/ev-vs-petrol-calculator-singapore",
         "title": "EV vs Petrol Calculator Singapore: Compare Cost and Mileage",
         "desc": "Compare an EV and petrol car over the same holding period using purchase premium, exit value, delivered electricity, fuel and annual cost differences; test…",
+        "date": "2026-09-26"
+      },
+      {
+        "url": "/own-car-vs-public-transport-singapore",
+        "title": "Car vs Public Transport Singapore: Compare Complete Routes",
+        "desc": "Compare car ownership with a realistic Singapore public-transport mix: bus and rail, rides and rental backups. Reconcile full cost, time, access and cash flow.",
+        "date": "2026-09-26"
+      },
+      {
+        "url": "/weekend-car-rental-vs-owning-a-car-singapore",
+        "title": "Weekend Car Rental vs Owning Singapore: Price the Days",
+        "desc": "Compare weekend car rental with ownership in Singapore using rental days, complete daily charges, weekday transport and an owned car's full five-year cost.",
         "date": "2026-09-26"
       },
       {
@@ -537,18 +561,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/car-sharing-vs-owning-a-car-singapore",
-        "title": "Car-Sharing vs Owning a Car in Singapore (2026): Which Makes More Sense?",
-        "desc": "Car-sharing vs owning a car in Singapore (2026): a decision framework for low-to-medium usage households, covering convenience, availability risk, hidden time…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/car-sharing-vs-ride-hailing-singapore",
-        "title": "Car-Sharing vs Ride-Hailing in Singapore (2026): Which Access Model Fits Better?",
-        "desc": "Car-sharing vs ride-hailing in Singapore (2026): a framework for occasional-use households choosing between self-drive access and point-to-point transport…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/car-subscription-vs-buying-singapore",
         "title": "Car Subscription vs Buying in Singapore (2026): When Paying More for Flexibility Is Actually…",
         "desc": "Car subscription vs buying in Singapore (2026): compare flexibility premium, uncertainty, included-cost convenience, timeline risk, and when subscription is…",
@@ -747,12 +759,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/own-car-vs-public-transport-singapore",
-        "title": "Own a Car vs Public Transport in Singapore (2026): The Real Decision",
-        "desc": "Own a car or take public transport in Singapore? A 2026 decision framework using 5-year exposure, time value, logistics certainty, and fragility risk — plus…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/parf-paper-value-deregistration-singapore",
         "title": "PARF, Paper Value, and Deregistration in Singapore (2026): What Exit Value Really Means",
         "desc": "PARF, paper value, and deregistration in Singapore for 2026: what they mean, how to think about exit value, and why these mechanics matter for depreciation…",
@@ -882,12 +888,6 @@
         "url": "/used-motorcycle-vs-new-motorcycle-singapore",
         "title": "Used vs New Motorcycle in Singapore (2026): Which Choice Actually Holds Up Better?",
         "desc": "Used vs new motorcycle in Singapore in 2026: compare entry price, repair uncertainty, depreciation, liquidity, and rider fit so you can choose the route that…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/weekend-car-rental-vs-owning-a-car-singapore",
-        "title": "Weekend Car Rental vs Owning a Car in Singapore (2026): Which Makes More Sense?",
-        "desc": "Weekend car rental vs owning a car in Singapore (2026): a framework for occasional-use households comparing fixed ownership drag against ad hoc access, family…",
         "date": "2026-04-14"
       },
       {
