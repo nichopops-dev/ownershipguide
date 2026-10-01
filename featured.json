@@ -1,7 +1,25 @@
 {
-  "generated": "2026-09-26",
+  "generated": "2026-09-28",
   "cluster_pages": {
     "transport": [
+      {
+        "url": "/off-peak-car-vs-normal-car-singapore",
+        "title": "Off-Peak Car vs Normal Car in Singapore (2026): A Worked Cost Comparison",
+        "desc": "Compare Singapore off-peak and normal cars using actual restricted hours, e-Day licences, purchase and exit values, road tax, and backup travel costs.",
+        "date": "2026-09-28"
+      },
+      {
+        "url": "/public-transport-cost-singapore",
+        "title": "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Models",
+        "desc": "Build a Singapore MRT and bus budget from real trips, compare pay-as-you-go fares with the $122 adult monthly pass, and add occasional transport without…",
+        "date": "2026-09-28"
+      },
+      {
+        "url": "/should-you-buy-an-off-peak-car-singapore",
+        "title": "Should You Buy an Off-Peak Car in Singapore? (2026): A Six-Week Fit Test",
+        "desc": "Test whether an off-peak car fits your household with a six-week trip calendar, scheme-specific restricted hours, e-Day costs, and a fallback plan.",
+        "date": "2026-09-28"
+      },
       {
         "url": "/car-sharing-vs-owning-a-car-singapore",
         "title": "Car-Sharing vs Owning a Car Singapore: Compare Full Costs",
@@ -747,12 +765,6 @@
         "date": "2026-04-14"
       },
       {
-        "url": "/off-peak-car-vs-normal-car-singapore",
-        "title": "Off-Peak Car vs Normal Car in Singapore (2026): Are the Savings Worth the Restrictions?",
-        "desc": "Off-peak car vs normal car in Singapore (2026): compare savings, usage restrictions, e-Day licence friction, family-lifestyle fit, and when restricted…",
-        "date": "2026-04-14"
-      },
-      {
         "url": "/omv-arf-car-taxes-singapore",
         "title": "OMV, ARF, and Car Taxes in Singapore (2026): How Car Prices Are Built",
         "desc": "What OMV, ARF, and car taxes mean in Singapore in 2026, how they shape car prices before dealer packaging and financing, and why understanding the tax stack…",
@@ -768,12 +780,6 @@
         "url": "/preventive-maintenance-vs-waiting-for-breakdown-singapore",
         "title": "Preventive Maintenance vs Waiting for Breakdown in Singapore (2026): When Early Action Saves You…",
         "desc": "Preventive maintenance vs waiting for breakdown in Singapore (2026): compare early intervention, false savings from delay, uncertainty, inconvenience, and how…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/public-transport-cost-singapore",
-        "title": "Public Transport Cost in Singapore (2026): MRT + Bus Monthly Budget Model",
-        "desc": "Public transport cost in Singapore (2026): MRT and bus adult fares, realistic monthly budgeting scenarios, when the $122 Adult Monthly Travel Pass makes…",
         "date": "2026-04-14"
       },
       {
@@ -822,12 +828,6 @@
         "url": "/should-you-build-your-emergency-fund-before-buying-a-motorcycle-singapore",
         "title": "Should You Build Your Emergency Fund Before Buying a Motorcycle in Singapore? (2026): The Buffer…",
         "desc": "Should you build your emergency fund before buying a motorcycle in Singapore? Use a practical 2026 framework to decide whether liquidity should come before…",
-        "date": "2026-04-14"
-      },
-      {
-        "url": "/should-you-buy-an-off-peak-car-singapore",
-        "title": "Should You Buy an Off-Peak Car in Singapore? (2026): Who It Fits, When It Works, and When It…",
-        "desc": "Should you buy an off-peak car in Singapore (2026)? Use this fit-and-regret framework to judge lifestyle match, weekday restriction pain, family logistics…",
         "date": "2026-04-14"
       },
       {
