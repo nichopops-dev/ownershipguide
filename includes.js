@@ -1162,7 +1162,7 @@ decisionPathOverrides: {
       pillars: [
         { url: "/how-much-life-insurance-do-you-need-singapore", title: "How Much Life Insurance Do You Need in Singapore? (2026): A Protection-Gap Framework for Real Household Obligations", subtopic: "planning" },
         { url: "/term-life-vs-whole-life-cost-singapore", title: "Term Life vs Whole Life Cost in Singapore (2026): The Protection Decision That Usually Starts with the Wrong Question", subtopic: "comparison" },
-        { url: "/critical-illness-insurance-cost-singapore", title: "Critical Illness Insurance Cost in Singapore (2026): The Lump-Sum Protection Layer Families Misunderstand Most", subtopic: "planning" }
+        { url: "/critical-illness-insurance-cost-singapore", title: "Critical Illness Insurance Cost in Singapore: Compare Premiums", subtopic: "planning" }
       ],
       pages: [
         { url: "/accident-insurance-vs-term-life-insurance-singapore", title: "Accident Insurance vs Term Life Insurance in Singapore (2026): Cheap Event Cover vs Family Income Protection", subtopic: "comparison" },
@@ -1179,7 +1179,7 @@ decisionPathOverrides: {
         { url: "/accident-insurance-cost-singapore", title: "Personal Accident Insurance Cost Singapore (2026): Prices & Cover", subtopic: "comparison" },
         { url: "/critical-illness-vs-hospitalisation-insurance-singapore", title: "Critical Illness vs Hospitalisation Insurance in Singapore (2026): Why Households Confuse These Protection Layers", subtopic: "comparison" },
         { url: "/hospital-cash-insurance-worth-it-singapore", title: "Is Hospital Cash Insurance Worth It in Singapore? (2026): Cheap Add-On or Useful Buffer?", subtopic: "comparison" },
-        { url: "/early-critical-illness-vs-critical-illness-singapore", title: "Early Critical Illness vs Critical Illness in Singapore (2026): Same Category, Very Different Trigger Timing", subtopic: "comparison" },
+        { url: "/early-critical-illness-vs-critical-illness-singapore", title: "Early vs Severe Critical Illness Insurance in Singapore", subtopic: "comparison" },
         { url: "/hospitalisation-insurance-vs-accident-insurance-singapore", title: "Hospitalisation Insurance vs Accident Insurance in Singapore (2026): Why Medical Cover and Accident Cover Are Not the Same Thing", subtopic: "comparison" },
         { url: "/whole-life-vs-critical-illness-insurance-singapore", title: "Whole Life vs Critical Illness Insurance in Singapore (2026): Why a Permanent Life Policy and an Illness Payout Should Not Be Compared Lazily", subtopic: "comparison" },
         { url: "/life-insurance-and-home-loan-singapore", title: "Life Insurance and Your Home Loan in Singapore (2026): What Happens to Your Property If You Die", subtopic: "planning" },
@@ -1202,7 +1202,7 @@ decisionPathOverrides: {
         { url: "/critical-illness-vs-disability-income-insurance-singapore", title: "Critical Illness vs Disability Income Singapore: Compare Triggers and Cash", subtopic: "comparison" },
         { url: "/home-protection-scheme-vs-term-life-insurance-singapore", title: "Home Protection Scheme vs Term Life Insurance in Singapore (2026): Mortgage Cover Is Not Full Family Protection", subtopic: "comparison" },
         { url: "/hospital-cash-vs-critical-illness-insurance-singapore", title: "Hospital Cash vs Critical Illness Insurance in Singapore (2026): Cheap Add-On or Real Illness Protection?", subtopic: "comparison" },
-        { url: "/how-much-critical-illness-insurance-do-you-need-singapore", title: "How Much Critical Illness Insurance Do You Need in Singapore? (2026): Sizing the Lump-Sum Buffer Without Guessing", subtopic: "planning" },
+        { url: "/how-much-critical-illness-insurance-do-you-need-singapore", title: "How Much Critical Illness Cover Do You Need in Singapore?", subtopic: "planning" },
         { url: "/how-much-disability-income-insurance-do-you-need-singapore", title: "How Much Disability Income Cover Do You Need in Singapore?", subtopic: "planning" },
         { url: "/emergency-fund-vs-term-life-insurance-first-singapore", title: "Emergency Fund vs Term Life Insurance First in Singapore (2026): Which Protection Layer Comes First When Budget Is Tight?", subtopic: "bridge" },
         { url: "/emergency-fund-vs-hospitalisation-rider-first-singapore", title: "Emergency Fund vs Hospitalisation Rider First in Singapore (2026): Which Medical-Risk Decision Deserves the Next Dollar?", subtopic: "bridge" },
